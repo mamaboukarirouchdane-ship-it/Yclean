@@ -1,0 +1,235 @@
+{
+  "lessonId": "L6.06",
+  "title": "Quiz — Volatilité et événements",
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L6.06-Q1",
+      "type": "mcq",
+      "prompt": "Quelle volatilité est déduite de prix d'options ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Historique"
+        },
+        {
+          "id": "b",
+          "text": "Réalisée"
+        },
+        {
+          "id": "c",
+          "text": "Implicite"
+        },
+        {
+          "id": "d",
+          "text": "Annualisée"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La volatilité implicite se lit dans les prix d'options et contient des primes de risque ; elle n'est pas une prévision exacte.",
+      "tags": [
+        "types"
+      ]
+    },
+    {
+      "id": "L6.06-Q2",
+      "type": "mcq",
+      "prompt": "Dix rendements journaliers ont un écart-type de 0,517 %. Volatilité annualisée (convention √252) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 8,2 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ 0,5 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ 130 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ 2,6 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "0,517 × √252 ≈ 0,517 × 15,87 ≈ 8,2 % ; la convention suppose l'indépendance des rendements.",
+      "tags": [
+        "annualisation"
+      ]
+    },
+    {
+      "id": "L6.06-Q3",
+      "type": "mcq",
+      "prompt": "Pourquoi faut-il publier la fenêtre de calcul d'une volatilité ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pour allonger le rapport"
+        },
+        {
+          "id": "b",
+          "text": "Parce que la fenêtre n'a aucun effet"
+        },
+        {
+          "id": "c",
+          "text": "Parce que la loi l'exige"
+        },
+        {
+          "id": "d",
+          "text": "Le même actif donne des valeurs différentes selon la fenêtre (ici 9,35 % ou 7,89 %)"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Cinq premiers jours et cinq derniers jours de la même série donnent des volatilités annualisées différentes.",
+      "tags": [
+        "fenetre"
+      ]
+    },
+    {
+      "id": "L6.06-Q4",
+      "type": "mcq",
+      "prompt": "Référence 0,8 %/jour, mouvement de −2,0 % : ratio Z ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+2,5"
+        },
+        {
+          "id": "b",
+          "text": "−2,5"
+        },
+        {
+          "id": "c",
+          "text": "−1,6"
+        },
+        {
+          "id": "d",
+          "text": "−0,4"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Z = −2,0 ÷ 0,8 = −2,5 : mouvement inhabituel pour cet actif, sans information sur sa persistance.",
+      "tags": [
+        "z"
+      ]
+    },
+    {
+      "id": "L6.06-Q5",
+      "type": "mcq",
+      "prompt": "Une forte volatilité signifie-t-elle une tendance ou une opportunité ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui, une opportunité de vente"
+        },
+        {
+          "id": "b",
+          "text": "Oui, toujours une tendance"
+        },
+        {
+          "id": "c",
+          "text": "Oui, une opportunité d'achat"
+        },
+        {
+          "id": "d",
+          "text": "Non : elle mesure l'amplitude habituelle, pas la direction ni l'avantage"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Volatilité, direction et tendance sont distinctes ; une séance très volatile peut se terminer sans mouvement net.",
+      "tags": [
+        "confusion"
+      ]
+    },
+    {
+      "id": "L6.06-Q6",
+      "type": "mcq",
+      "prompt": "GVZ hypothétique de 20 : mouvement quotidien attendu (un écart-type) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 0,2 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ 20 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ 1,26 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ 5 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "20 ÷ √252 ≈ 1,26 % par jour ; c'est un ordre de grandeur, et le niveau de 20 est une hypothèse de la leçon.",
+      "tags": [
+        "implicite"
+      ]
+    },
+    {
+      "id": "L6.06-Q7",
+      "type": "mcq",
+      "prompt": "Capital 10 000 $, risque 1 %, arrêt 10 $ puis 16 $ avec slippage : tailles ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "10 onces puis 6,25 onces"
+        },
+        {
+          "id": "b",
+          "text": "10 onces puis 10 onces"
+        },
+        {
+          "id": "c",
+          "text": "100 onces puis 62,5 onces"
+        },
+        {
+          "id": "d",
+          "text": "6,25 onces puis 10 onces"
+        }
+      ],
+      "correct": "a",
+      "explanation": "100 ÷ 10 = 10 onces ; 100 ÷ 16 = 6,25 onces ; la réduction répond à l'incertitude d'exécution, pas à une opinion directionnelle.",
+      "tags": [
+        "taille"
+      ]
+    },
+    {
+      "id": "L6.06-Q8",
+      "type": "mcq",
+      "prompt": "Que montre le cas d'août 2024 décrit par la BRI ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que l'emploi du 2/08 est la cause unique du 5/08"
+        },
+        {
+          "id": "b",
+          "text": "Une amplitude exceptionnelle (VIX > 60 puis < 40) suivie d'un retour rapide, sans tendance durable"
+        },
+        {
+          "id": "c",
+          "text": "Que l'or a monté chaque fois"
+        },
+        {
+          "id": "d",
+          "text": "Que le VIX ne bouge jamais"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La BRI décrit un choc d'amplitude suivi d'une récupération en moins d'une semaine, et ne désigne pas une cause unique.",
+      "tags": [
+        "cas"
+      ]
+    }
+  ],
+  "revision": 1
+}

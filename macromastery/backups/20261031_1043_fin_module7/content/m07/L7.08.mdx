@@ -1,0 +1,266 @@
+---
+id: L7.08
+module: 7
+order: 8
+title: "Atelier : un indicateur COT — du rapport brut au diagnostic de positionnement sur l'or, avec une fenêtre explicite, des extrêmes qui ne sont pas des signaux et des conditions d'invalidation"
+title_initial: "Atelier : un indicateur COT"
+level: "avancé"
+duration_hours: 3.5
+prerequisites: ["L7.01", "L7.02", "L7.03", "L7.07", "L6.01", "L6.05"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L7.08.quiz.json"
+sources: ["S-CFTC-19", "S-CFTC-20", "S-CFTC-21", "S-CFTC-08", "S-CFTC-09", "S-CFTC-10", "S-CFTC-11", "S-CFTC-12", "S-CFTC-13", "S-CFTC-06", "S-CFTC-02", "S-KIT-05", "S-KIT-08", "S-KIT-04"]
+---
+
+# L7.08 — Atelier : un indicateur COT
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée ; **[Réemploi]** = lu dans une leçon précédente (L7.03, L7.07) ; **[Reconstitué]** = déduit d'une lecture par différence, **jamais lu directement** ; **[Calcul de l'auteur]** ; **[Interprétation]** ; **[Hypothèse]** ; **[SIMULATION]** = données fictives. **Nouvelle lecture de cette leçon** : le rapport désagrégé du **27/10/2026** sur la page courante de la CFTC (S-CFTC-19, pied de page « Updated October 30, 2026 »), lu en résumé automatique sur ses 100 000 premiers caractères, et le même contrat sur la page « CMX (Futures Only) ». **Révision 2 : le 27/10 est très probablement un rapport Futures Only, alors que les archives du 08/09 au 13/10 sont Combined ; les deux ne sont pas chaînées.** **Le rapport du 20/10 et la série longue ne sont pas lus.** **Une bonne analyse fondamentale ne garantit pas une transaction gagnante ; un indicateur COT décrit une exposition, il ne prédit pas un prix.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. identifier les catégories du rapport désagrégé (Producer/Merchant, Swap Dealers, Managed Money, Other Reportables, Nonreportable) et ce que chacune représente ;
+2. calculer positions nettes, variations hebdomadaires et parts de l'intérêt ouvert, et expliquer l'**effet de dénominateur** et l'**effet de périmètre** (Futures Only / Combined) ;
+3. définir **par écrit** une fenêtre, un percentile et un écart standardisé (z-score), et refuser de les calculer quand la fenêtre est trop courte ;
+4. repérer un niveau extrême sans en faire un signal automatique ;
+5. confronter un positionnement à un prix en reconnaissant ce qu'une comparaison à deux points ne prouve pas ;
+6. produire un diagnostic, un scénario haussier, un scénario baissier, un scénario neutre et des conditions d'invalidation ;
+7. distinguer la **date de référence (mardi)** de la **date de publication (généralement vendredi)** et dater l'âge de la donnée.
+
+## 2. Prérequis
+
+- **L6.01 et L6.05** (raisonnement conditionnel, faits/anticipations) ; **L7.01 à L7.03** (fiche de positionnement, COT en série, TFF) ; **L7.07** (matrice, niveaux A/B/C, thèse réfutable).
+- **Non repris ici** : lecture d'une ligne COT et conventions de base (L7.01), conversions en tonnes (L7.06), matrice et fiche de thèse (L7.07). On les **applique** à un indicateur.
+
+## 3. Explication intuitive
+
+Un indicateur COT est comme un thermomètre à la qualité de mesure connue mais au délai fixe : il dit **qui porte quelle exposition le mardi**, pas ce qui se passe vendredi, ni pourquoi. Pour qu'un thermomètre serve, il faut savoir (a) quel instrument, (b) quelle échelle, (c) par rapport à quelle histoire. Sans histoire, « 105 562 contrats » ne veut rien dire ; avec une histoire trop courte, « le plus bas depuis six semaines » non plus. L'atelier consiste à **construire l'indicateur étape par étape et à s'arrêter là où les données ne permettent plus de conclure**.
+
+## 4. Développement technique
+
+### 4.1 Les catégories (S-CFTC-06, S-CFTC-19)
+
+| Catégorie | Qui | Net typique (27/10) | Lecture prudente |
+|---|---|---|---|
+| **Producer/Merchant/Processor/User** | producteurs, négociants, utilisateurs physiques | −9 574 | couverture d'activité physique ; ne renseigne pas sur une opinion de prix |
+| **Swap Dealers** | intermédiaires qui couvrent leurs swaps par des contrats à terme | −206 050 | souvent contrepartie de la demande de clients ; le net négatif n'est pas un pari baissier |
+| **Managed Money** | CTA, CPO enregistrés, fonds non enregistrés identifiés | +105 562 | catégorie la plus utilisée comme proxy de l'exposition spéculative ; ni tout le spéculatif, ni toute l'intention |
+| **Other Reportables** | autres grands opérateurs | +80 889 | catégorie résiduelle hétérogène |
+| **Nonreportable** | petits opérateurs (intérêt ouvert − positions rapportables) | +29 173 *[Reconstitué]* | **non lu dans le texte** ; calculé par différence |
+
+Le spreading (positions en écart) est publié pour Swap Dealers, Managed Money et Other Reportables, **pas pour Producer/Merchant dans le bloc lu**. **Net = long − short, spreading exclu.** Un opérateur est classé selon son activité principale, pas selon chaque transaction.
+
+### 4.2 Les cinq calculs de l'indicateur
+
+1. **Net** : long − short.
+2. **Variation hebdomadaire** : net(t) − net(t−1).
+3. **Part de l'intérêt ouvert (OI)** : net ÷ OI. **Effet de dénominateur** : si l'OI chute, le ratio monte même si le net baisse (voir 6.2). **Un ratio ne se compare qu'à l'intérieur d'un même périmètre.**
+4. **Percentile** : part des observations de la fenêtre inférieures ou égales à la valeur courante (définition de cours).
+5. **Écart standardisé (z)** : (valeur − moyenne de la fenêtre) ÷ écart-type d'échantillon (n − 1).
+
+### 4.3 La fenêtre : à décider avant de calculer
+
+**[Définition de cours]** Fenêtre minimale pour parler de percentile ou d'extrême : **52 observations hebdomadaires** (un an) ; **156 observations** (trois ans) préférable pour comparer des phases. Ces seuils sont des **conventions** à écrire avant de regarder les données. En dessous : **calcul descriptif possible, conclusion d'extrême interdite**. Le percentile et le z-score répondent à des questions différentes : le premier ne suppose aucune forme de distribution, le second suppose un niveau et une dispersion stables, ce qui est discutable pour une série qui dérive.
+
+### 4.4 Extrême ≠ signal
+
+Un niveau élevé dans la fenêtre dit que la **position est inhabituellement garnie par rapport à l'histoire retenue**. Il ne dit ni quand elle se dénouera, ni si elle se dénouera, ni si le prix baissera. Un extrême bas ne dit pas qu'un rebond est proche. L'usage correct est conditionnel : **identifier un risque de dénouement ou un espace de rachat**, puis chercher ce qui le déclencherait ou le démentirait.
+
+### 4.5 Date de référence et publication
+
+Positions **au mardi** ; publication **généralement le vendredi à 15 h 30 (heure de l'Est)**. Observé : 13/10 → publié le 16/10 (3 jours) ; 27/10 → page mise à jour le 30/10 (3 jours, déduit du pied de page de la page courante). **Avant de lire un rapport, on vérifie : instrument (code 088691, 100 oz), périmètre (Futures Only ou Combined), unités et traitement du spreading.** **L'âge de la donnée au moment de la décision** se calcule depuis la **date de référence**. Précaution : la CFTC a annoncé le 27/10/2026 le **plan** d'une publication deux fois par semaine d'ici fin 2026 (S-CFTC-02) : le calendrier doit être revérifié à chaque lecture.
+
+## 5. Définitions essentielles
+
+- **Position nette / brute** : long − short / long + short.
+- **Intérêt ouvert** : nombre total de contrats en cours.
+- **Spreading** : positions en écart (calendaires), exclues du net.
+- **Fenêtre** : période d'observations retenue pour percentile et z ; fixée avant le calcul.
+- **Percentile** : rang relatif de la valeur dans la fenêtre.
+- **Écart standardisé (z)** : distance à la moyenne en écarts-types.
+- **Effet de dénominateur** : variation d'un ratio due à celle de son dénominateur.
+- **Futures Only / Futures and Options Combined** : les deux périmètres de publication de la CFTC (dossiers `/dea/futures/` et `/dea/options/`) ; les valeurs de l'un ne se comparent pas directement à celles de l'autre.
+- **Donnée reconstituée** : obtenue par différence (valeur publiée − variation publiée), jamais lue.
+
+## 6. Exemples chiffrés
+
+### 6.1 Deux périmètres, deux tableaux — à ne pas chaîner
+
+**Règle de la révision 2.** La CFTC publie deux familles de rapports : **Futures Only** (dossier `/dea/futures/`) et **Futures-and-Options Combined** (dossier `/dea/options/`) (page d'index CFTC, lue en résumé automatique le 31/10). Les rapports du 08/09 au 13/10 (S-CFTC-13 à S-CFTC-08) sont des **archives Combined** (fichiers `other_sof`). Le rapport du 27/10 (S-CFTC-19) est lu sur la page courante `/dea/futures/other_sf.htm`, dont le même contrat figure aussi sur la page « CMX (**Futures Only**) » avec **le même intérêt ouvert (396 810) et le même nombre d'opérateurs (287)** : le 27/10 est donc très probablement un rapport **Futures Only**. L'en-tête du rapport désagrégé, lu en résumé automatique, indiquait « All Futures Combined », libellé que la page d'index de la CFTC ne confirme pas : la nature exacte du périmètre du 27/10 reste donc **à confirmer** par la lecture directe de l'en-tête. **Tant que ce point n'est pas levé, aucune différence n'est calculée entre une valeur Combined et une valeur du 27/10.**
+
+**Tableau A — Futures and Options Combined (Managed Money, or COMEX, 100 oz).** **[Réemploi]** S-CFTC-13, 12, 11, 10, 09, 08.
+
+| Date (mardi) | Long | Short | Net | Spreading | OI | Net/OI | Variation du net |
+|---|---|---|---|---|---|---|---|
+| 08/09 | 148 982 | 9 434 | 139 548 | 50 953 | 582 664 | 23,95 % | — |
+| 15/09 | 145 837 | 8 777 | 137 060 | 51 931 | 577 454 | 23,74 % | −2 488 |
+| 22/09 | 139 307 | 7 973 | 131 334 | 50 737 | 571 291 | 22,99 % | −5 726 |
+| 29/09 | 134 658 | 10 240 | 124 418 | 50 677 | 541 982 | 22,96 % | −6 916 |
+| 06/10 | 130 247 | 15 427 | 114 820 | 44 742 | 527 641 | 21,76 % | −9 598 |
+| 13/10 | 128 542 | 17 463 | 111 079 | 45 810 | 526 276 | 21,11 % | −3 741 |
+
+Somme des variations : −28 469 = 111 079 − 139 548 ✓. Net du 13/10 en tonnes : 111 079 × 100 ÷ 32 150,7466 = **345,5 t** (434,0 t le 08/09).
+
+**Tableau B — dernier rapport lu, 27/10 (périmètre très probablement Futures Only).** **[Fait]** S-CFTC-19.
+
+| Date | Long | Short | Net | Spreading | OI | Net/OI | Variation publiée du net (vs 20/10, même périmètre) |
+|---|---|---|---|---|---|---|---|
+| 27/10 | 122 508 | 16 946 | 105 562 | 40 502 | 396 810 | 26,60 % | +1 356 |
+
+La variation publiée (longs +1 538, courts +182) donne le net du 20/10 **sur ce périmètre** : **[Reconstitué]** 104 206 (120 970 − 16 764). Net du 27/10 : 328,3 t. **Le tableau B ne prolonge pas le tableau A.**
+
+### 6.2 L'effet de périmètre et l'effet de dénominateur
+
+**Effet de périmètre (observé).** Intérêt ouvert COMEX or : 526 276 (13/10, Combined) et 396 810 (27/10, très probablement Futures Only). L'écart apparent de **129 466 contrats (−24,6 %)** ne mesure **aucune variation de marché** tant que les périmètres ne sont pas établis comme identiques. La page d'index de la CFTC précise que les positions sur options s'estiment par différence entre Combined et Futures Only, avec une perte d'information sur le spreading : c'est cohérent avec les écarts de spreading observés, **sans le démontrer**. **[Hypothèse]** : l'écart provient du périmètre ; **non vérifié**, faute du rapport Combined du 27/10 ou du Futures Only du 13/10.
+
+**Effet de dénominateur (principe).** **[SIMULATION]** Net 100 000 contrats pour un OI de 500 000 : part de **20,0 %**. Le net baisse de 5 % (95 000) mais l'OI baisse de 25 % (375 000) : part de **25,3 %**. La part a monté alors que le net a baissé : **c'est le dénominateur**. Le même raisonnement interdit de comparer 21,11 % (Combined) à 26,60 % (27/10).
+
+### 6.3 Autres catégories (deux lectures séparées)
+
+**[Fait]** S-CFTC-08 (13/10, Combined) ; S-CFTC-19 (27/10) ; **[Calcul de l'auteur]** nets ; Nonreportable **[Reconstitué]** (OI − longs rapportables − spreading).
+
+| Catégorie | Net 13/10 (Combined) | Net 27/10 (probable Futures Only) |
+|---|---|---|
+| Producer/Merchant | −17 681 | −9 574 |
+| Swap Dealers | −218 483 | −206 050 |
+| Managed Money | +111 079 | +105 562 |
+| Other Reportables | +88 655 | +80 889 |
+| Nonreportable *[Reconstitué]* | +36 430 | +29 173 |
+| **Somme** | **0** | **0** |
+
+Chaque colonne se lit seule. Une somme nulle est attendue : c'est un contrôle de cohérence, **pas une preuve de qualité**, puisque le Nonreportable est calculé par différence. Les écarts entre colonnes ne sont **pas** des variations hebdomadaires.
+
+### 6.4 Percentile et z-score sur la série réelle : calcul faisable, conclusion interdite
+
+Sur les **6 observations Combined** (08/09 → 13/10) : moyenne 126 376,5 ; écart-type d'échantillon 11 692,8 ; z du 13/10 = **−1,31** (valeur de L7.03) ; percentile = 1 observation sur 6 ≤ 111 079 = **16,7 %**. **Ces chiffres n'ont aucun sens statistique** : fenêtre de 6 semaines (convention : 52), série à pente descendante (le z mesure la pente), et un seul périmètre. Le 27/10 est exclu de la fenêtre (autre périmètre probable).
+
+### 6.5 Cas historique documenté — le repli du net Managed Money, septembre-octobre 2026
+
+**[Fait]** (périmètre Combined) Du 08/09 au 13/10, le net Managed Money du contrat COMEX or passe de 139 548 à 111 079 : **−28 469 contrats (−20,4 %, ≈ −88,5 t)**, avec cinq variations hebdomadaires toutes négatives. Les deux jambes bougent : longs −20 440 (148 982 → 128 542), courts +8 029 (9 434 → 17 463) ; 20 440 + 8 029 = 28 469. La baisse du net vient surtout de la réduction des longs ; ce sont des positions sur contrats, pas des ventes d'or physique. **[Fait]** (27/10, probable Futures Only) net 105 562, variation publiée **+1 356** sur la semaine, soit une semaine de hausse du net dans un périmètre différent de la série.
+
+**Prix de l'or.** ≈ 4 310 $ (16/09, S-KIT-08, titre de dépêche) et 4 137,94 $ (21/10, S-KIT-04, cours comptant en séance 14 h 12 HAE) : **−4,0 %** ; ≈ 4 035 $ le 28/10 (S-KIT-05, titre de dépêche). Net Combined du 15/09 au 13/10 : 137 060 → 111 079, **−19,0 %**. **Les dates ne sont pas alignées** (prix du 21/10 contre positions du 13/10) et les prix sont des valeurs rapportées : on constate une **co-direction**, on ne mesure ni corrélation ni relation, et −19,0 % et −4,0 % ne se comparent pas en rapport.
+
+**Ce que le tableau montre.** Cinq semaines de repli du net en Combined, puis une lecture du 27/10 dont la variation hebdomadaire (+1 356) est positive mais **non chaînée**. **Ce qu'il suggère.** Un repli de l'exposition nette des Managed Money jusqu'au 13/10. **Ce qu'il ne permet pas de conclure.** (i) La causalité et le sens avec le prix ; (ii) les motifs ; (iii) la fin du repli ; (iv) un niveau extrême (6 semaines) ; (v) l'écart d'OI du 27/10 (périmètre).
+
+**Anomalie ouverte.** Écart d'OI entre le 13/10 (526 276, Combined) et le 27/10 (396 810) avec baisse apparente du spreading : **cause probable = différence de périmètre, non confirmée** ; à lever par la lecture de l'en-tête du rapport du 27/10, du rapport Combined du 27/10 ou du Futures Only du 13/10 ; vérifications à faire : même instrument (code 088691, 100 oz), même périmètre, mêmes unités, même traitement du spreading. Tant qu'elles manquent, **aucune comparaison directe**.
+
+
+### 6.6 (SIMULATION) — percentile et z sur une année complète
+
+**[SIMULATION]** Série fictive de net spéculatif sur 52 semaines (contrats ; générée par l'auteur, graine 708 ; **aucun lien avec le marché réel**) : 162 300 ; 174 300 ; 180 200 ; 168 300 ; 165 800 ; 173 600 ; 183 800 ; 177 300 ; 167 900 ; 175 900 ; 172 700 ; 178 500 ; 197 900 ; 202 200 ; 204 300 ; 212 700 ; 222 400 ; 214 100 ; 197 800 ; 208 300 ; 212 800 ; 216 200 ; 211 900 ; 214 100 ; 226 700 ; 234 200 ; 227 600 ; 217 200 ; 219 200 ; 221 600 ; 220 000 ; 202 800 ; 213 600 ; 210 700 ; 224 100 ; 213 000 ; 214 900 ; 213 600 ; 222 900 ; 233 700 ; 227 700 ; 229 200 ; 240 600 ; 234 500 ; 239 600 ; 256 100 ; 260 000 ; 260 200 ; 249 300 ; 259 400 ; 256 100 ; **249 700** (dernière).
+
+Moyenne **212 952** ; écart-type d'échantillon **27 016** ; z = (249 700 − 212 952) ÷ 27 016 = **+1,36** ; percentile = 47 sur 52 ≤ 249 700 = **90,4 %**. Lecture : niveau **haut mais non extrême** (le maximum de la fenêtre est 260 200) ; **seuils de 90 % / 10 % = conventions de cours**.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]** **Or.** Le COT donne l'exposition de grands opérateurs sur un contrat ; avec un net MM de 105 562 sur le dernier rapport lu, on décrit une exposition, pas un flux d'ETF ni un achat physique. **Forex.** Même méthode sur un contrat de change (Euro FX, 125 000 EUR) : **la paire EUR/USD n'est pas l'indice du dollar**, et la lecture requiert les mêmes cinq calculs, la même fenêtre explicite et la même prudence (L7.03). L'indicateur n'est jamais un déclencheur.
+
+## 8. Erreurs courantes
+
+1. Confondre le mardi de référence et le vendredi de publication ; présenter un rapport de 4 jours ou de 18 jours comme « actuel ».
+2. Calculer un percentile sur 6 semaines et parler d'extrême.
+3. Lire une hausse de la part de l'OI comme un achat sans regarder le dénominateur, ou **comparer deux rapports de périmètres différents**.
+4. Confondre net et brut ; oublier que le spreading est exclu du net.
+5. Traiter un reconstitué (20/10, Nonreportable) comme une lecture.
+6. Assimiler un niveau extrême à un signal de retournement.
+7. Conclure d'une comparaison à deux points entre net et prix.
+8. Présenter une hypothèse (prise de bénéfices) comme un fait.
+9. Oublier qu'un changement de calendrier de publication est annoncé (S-CFTC-02).
+10. Construire une lecture sans condition d'invalidation.
+
+## 9. Limites de l'interprétation
+
+- Six semaines Combined et une lecture isolée du 27/10 (périmètre probablement différent) : pas de percentile exploitable.
+- Périmètre du 27/10 non confirmé par l'en-tête lu ; source du 27/10 = page courante, lue en résumé automatique sur 100 000 caractères.
+- Prix = titres de dépêches secondaires, non des clôtures.
+- Managed Money ≠ tous les spéculateurs ; COMEX seulement.
+- Les contrôles automatiques de la leçon ne sont pas une validation scientifique.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Calcul : nets et contrôle (27/10).** À partir de la table 6.3 pour le 27/10 (longs et courts : PM 20 487 / 30 061 ; SD 20 230 / 226 280 ; MM 122 508 / 16 946 ; OR 101 216 / 20 327), calcule les nets, puis le net Nonreportable sachant que l'OI est 396 810, que les spreadings sont SD 23 392, MM 40 502, OR 19 853, et que les shorts Nonreportable valent 19 449 (reconstitué). Vérifie que la somme est nulle et explique pourquoi ce contrôle est faible.
+
+<details>
+<summary>Correction 1</summary>
+
+Nets : PM −9 574 ; SD −206 050 ; MM +105 562 ; OR +80 889. Longs rapportables : 264 441 ; spreading : 83 747 ; longs NR = 396 810 − 264 441 − 83 747 = **48 622** ; net NR = 48 622 − 19 449 = **+29 173**. Somme : **0**. Contrôle faible : le NR est obtenu par différence, la somme nulle est donc construite et ne valide pas les lectures. Résultat valable pour le périmètre du rapport du 27/10, à confirmer.
+</details>
+
+**Exercice 2 — Calcul : variations, parts d'OI, tonnes (Combined).** Sur le tableau A, calcule les variations hebdomadaires du 06/10 et du 13/10, les parts de l'OI du 08/09 et du 13/10, la variation totale en contrats, en % et en tonnes. Puis, sur l'exemple SIMULATION de 6.2, calcule la part de l'OI avant et après et dis pourquoi elle monte.
+
+<details>
+<summary>Correction 2</summary>
+
+114 820 − 124 418 = **−9 598** ; 111 079 − 114 820 = **−3 741**. Parts : 139 548 ÷ 582 664 = **23,95 %** ; 111 079 ÷ 526 276 = **21,11 %**. Total : −28 469 contrats, **−20,4 %**, 28 469 × 100 ÷ 32 150,7466 = **88,5 t**. Simulation : 100 000 ÷ 500 000 = **20,0 %** ; 95 000 ÷ 375 000 = **25,3 %** : le dénominateur a baissé de 25 %, plus que le numérateur (5 %).
+</details>
+
+**Exercice 3 — Calcul : percentile et z (SIMULATION).** Avec la série fictive de 6.6, vérifie la moyenne, le z-score de la dernière valeur et son percentile ; puis explique pourquoi on ne peut pas faire de même sur les 6 observations réelles du tableau A.
+
+<details>
+<summary>Correction 3</summary>
+
+Moyenne 212 952 ; écart-type 27 016 ; z = **+1,36** ; percentile = 47/52 = **90,4 %**. Sur les 6 observations réelles (moyenne 126 376,5 ; écart-type 11 692,8 ; z = −1,31 ; percentile 16,7 %), la fenêtre est très inférieure au minimum de 52, la série est de plus monotone (le z mesure la pente) : **aucune conclusion d'extrême**.
+</details>
+
+**Exercice 4 — Étude de cas réelle.** Rédige le diagnostic de positionnement au 31/10/2026 (âge de chaque donnée, périmètre, tendance, composition longs/courts, ratio à l'OI, anomalie de périmètre, comparaison au prix) en séparant constat, interprétation, hypothèse.
+
+<details>
+<summary>Correction 4</summary>
+
+Constat : Combined, net MM −20,4 % du 08/09 au 13/10 (5 variations négatives ; longs −20 440, courts +8 029) ; données de 18 jours. Rapport du 27/10 (4 jours) : net 105 562, variation publiée +1 356 sur son périmètre, non chaînable. Interprétation : réduction de l'exposition nette jusqu'au 13/10 ; une semaine de variation positive ensuite, non extrapolable. Hypothèses (non observées) : prise de bénéfices ; réduction du risque ; anticipation moins favorable ; écart d'OI = périmètre. Impossibles : extrême (6 semaines), causalité avec le prix (dates non alignées, prix rapportés), cause de l'écart d'OI. Diagnostic : « repli jusqu'au 13/10, niveau non évaluable, lecture récente non chaînable ».
+</details>
+
+**Exercice 5 — Interprétation complète.** Construis trois lectures (haussière, baissière, neutre) à partir du diagnostic, puis cinq conditions d'invalidation mesurables et les données à surveiller.
+
+<details>
+<summary>Correction 5</summary>
+
+*Haussière (hypothèse)* : la réduction des longs a déjà purgé une partie des positions, la dernière variation publiée est positive ; si le net remonte plusieurs semaines dans un périmètre constant sans nouveau repli du prix, la pression de vente s'atténue. *Baissière (hypothèse)* : le repli est une tendance, les courts MM ont presque doublé (9 434 → 17 463) ; si le net rebaisse deux semaines de suite à périmètre constant avec un prix en recul, la pression se prolonge. *Neutre* : une semaine de hausse non chaînée, six semaines de série, périmètre à confirmer : ne pas conclure. Invalidations (conventions) : (1) net en hausse deux rapports consécutifs à périmètre constant invalide la lecture baissière ; (2) deux baisses consécutives invalident la lecture haussière ; (3) un rapport Combined du 27/10 (ou Futures Only du 13/10) permettant de comparer invalide ou confirme l'hypothèse de périmètre ; (4) une série de 52 semaines avec percentile > 90 % ou < 10 % change la lecture de niveau ; (5) un changement de calendrier CFTC (S-CFTC-02) change la lecture du délai.
+</details>
+
+**Exercice 6 — Dates.** Les positions du 27/10 sont connues le 30/10. Calcule l'âge de la donnée au 31/10, puis l'âge des positions du 03/11 au moment de leur publication si elle a lieu le vendredi 06/11 ; que change l'annonce du 27/10 ?
+
+<details>
+<summary>Correction 6</summary>
+
+Au 31/10 : 4 jours depuis la référence (27/10), 1 jour depuis la publication. Au 06/11, la donnée du 03/11 aura 3 jours (calendrier actuel) ; si le plan semi-hebdomadaire de S-CFTC-02 est mis en œuvre, un jeu de données du lundi serait publié le mercredi et un jeu du mercredi le vendredi (délai de 2 jours) : le « mardi / vendredi » de la leçon n'est alors plus valable, à revérifier à chaque lecture.
+</details>
+
+
+## 11. Quiz
+
+Le quiz (10 questions) est dans `quiz/L7.08.quiz.json`. Seuil : **80 %**, soit au moins 8 bonnes réponses sur 10.
+
+## 12. Résumé
+
+- Cinq catégories, cinq calculs (net, variation, part de l'OI, percentile, z) ; Managed Money ≠ tous les spéculateurs.
+- Le ratio net/OI dépend aussi de l'OI : une chute de l'OI peut faire monter le ratio quand le net baisse ; et il ne se compare que dans un même périmètre (Futures Only / Combined).
+- Percentile et z-score exigent une fenêtre écrite d'avance (52 semaines minimum) ; en dessous, pas de conclusion d'extrême.
+- Un extrême n'est pas un signal ; un positionnement ne prédit pas un prix.
+- Une comparaison net/prix à deux points constate une direction, ne démontre aucune relation.
+- Toujours dater : mardi de référence, publication, âge au moment de lire.
+
+## 13. Critères de maîtrise
+
+- [ ] Nommer les catégories et dire ce que chacune ne prouve pas.
+- [ ] Calculer nets, variations, parts d'OI et tonnes, et vérifier instrument et périmètre avant toute comparaison (Exercices 1–2).
+- [ ] Définir et calculer percentile et z sur une fenêtre explicite, et refuser de le faire sur une fenêtre trop courte (Exercice 3).
+- [ ] Rédiger un diagnostic en séparant constat, interprétation, hypothèse (Exercice 4).
+- [ ] Produire trois lectures et des invalidations mesurables (Exercice 5).
+- [ ] Dater correctement une donnée (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. **Révision 2 (31/10/2026)** : correction du mélange de périmètres ; version 1 conservée dans `backups/_revisions_m7/L7.08.rev1.mdx`. Sources consultées le **31 octobre 2026** (résumés automatiques) :
+
+- **S-CFTC-19** — CFTC, *Disaggregated Commitments of Traders — All Futures Combined, positions as of October 27, 2026* (page courante, mise à jour le 30 octobre 2026) : https://www.cftc.gov/dea/futures/other_sf.htm
+- **S-CFTC-20** — CFTC, *Commitments of Traders Report — CMX (Futures Only)*, bloc GOLD, positions au 27/10/2026 (pied de page « Updated October 30, 2026 ») : https://www.cftc.gov/dea/futures/deacmxsf.htm
+- **S-CFTC-21** — CFTC, page d'index des Commitments of Traders (Futures Only / Combined, conventions de dossiers) : https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm
+- **S-CFTC-06** — CFTC, notes explicatives du rapport désagrégé.
+- **S-CFTC-02** — CFTC, communiqué n° 9316-26 du 27/10/2026 (plan de publication deux fois par semaine).
+- **S-KIT-05, S-KIT-08** — Kitco (secondaire), titres de dépêches (≈ 4 035 $ le 28/10 ; ≈ 4 310 $ le 16/09).
+- **Réemplois** : S-CFTC-08 à S-CFTC-13 (archives Combined du 08/09 au 13/10), S-KIT-04 (4 137,94 $ le 21/10).
+
+**Définitions de cours non rattachées à une source lue :** fenêtre minimale (52/156 semaines), seuils de 90 % / 10 %, définition du percentile, effet de dénominateur, scénarios et invalidations. **Points non vérifiés :** périmètre exact du rapport du 27/10 (en-tête) ; rapport du 20/10 (reconstitué sur son périmètre) ; rapport Combined du 27/10 ; série longue du contrat ; prix de clôture.

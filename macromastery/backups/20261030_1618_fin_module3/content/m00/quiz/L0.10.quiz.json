@@ -1,0 +1,236 @@
+{
+  "lessonId": "L0.10",
+  "title": "Quiz — Risque, rendement et probabilité",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Données : exemples fictifs (SIMULATION) et discours BNS du 15/01/2015.",
+  "questions": [
+    {
+      "id": "L0.10-Q1",
+      "type": "mcq",
+      "prompt": "Une transaction gagne 300 avec une probabilité de 40 % et perd 100 avec une probabilité de 60 %. Quelle est son espérance ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−60"
+        },
+        {
+          "id": "b",
+          "text": "+200"
+        },
+        {
+          "id": "c",
+          "text": "+60"
+        },
+        {
+          "id": "d",
+          "text": "+120"
+        }
+      ],
+      "correct": "c",
+      "explanation": "E = 0,40 × 300 − 0,60 × 100 = 120 − 60 = +60 par transaction en moyenne, sur un grand nombre de répétitions (hors coûts).",
+      "tags": [
+        "esperance"
+      ]
+    },
+    {
+      "id": "L0.10-Q2",
+      "type": "mcq",
+      "prompt": "Avec un gain de 300 et une perte de 100, quel taux de réussite rend l'espérance nulle ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "25 %"
+        },
+        {
+          "id": "b",
+          "text": "33 %"
+        },
+        {
+          "id": "c",
+          "text": "50 %"
+        },
+        {
+          "id": "d",
+          "text": "10 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "p = L ÷ (G + L) = 100 ÷ 400 = 25 %. Plus le gain est grand par rapport à la perte, plus le taux de réussite d'équilibre est bas.",
+      "tags": [
+        "equilibre"
+      ]
+    },
+    {
+      "id": "L0.10-Q3",
+      "type": "mcq",
+      "prompt": "Deux placements ont la même espérance (+2 %) ; l'un a un écart-type de 12 %, l'autre de 3 %. Quelle affirmation est correcte ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ils ont le même risque puisque la moyenne est identique"
+        },
+        {
+          "id": "b",
+          "text": "L'écart-type ne mesure rien d'utile"
+        },
+        {
+          "id": "c",
+          "text": "Le second est forcément meilleur"
+        },
+        {
+          "id": "d",
+          "text": "Le premier est beaucoup plus dispersé donc plus risqué au sens de la dispersion"
+        }
+      ],
+      "correct": "d",
+      "explanation": "L'écart-type mesure la dispersion autour de la moyenne : 12 % contre 3 %, soit quatre fois plus de dispersion. « Meilleur » dépend de la tolérance au risque, pas de la seule dispersion.",
+      "tags": [
+        "ecart-type"
+      ]
+    },
+    {
+      "id": "L0.10-Q4",
+      "type": "mcq",
+      "prompt": "Un écart-type journalier de 0,383 % correspond, avec la règle en racine du temps et 252 jours, à une volatilité annuelle d'environ :",
+      "options": [
+        {
+          "id": "a",
+          "text": "96,5 %"
+        },
+        {
+          "id": "b",
+          "text": "6,08 %"
+        },
+        {
+          "id": "c",
+          "text": "0,383 %"
+        },
+        {
+          "id": "d",
+          "text": "1,52 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "0,383 % × √252 ≈ 0,383 × 15,87 = 6,08 %. La règle suppose rendements indépendants et volatilité constante : c'est un ordre de grandeur.",
+      "tags": [
+        "annualisation"
+      ]
+    },
+    {
+      "id": "L0.10-Q5",
+      "type": "mcq",
+      "prompt": "Un compte passe par 100, 104, 101, 107, 103, 99, 105, 110. Quelle est la baisse maximale ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−2,88 %"
+        },
+        {
+          "id": "b",
+          "text": "−4,67 %"
+        },
+        {
+          "id": "c",
+          "text": "−10 %"
+        },
+        {
+          "id": "d",
+          "text": "−7,48 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le plus grand recul depuis un sommet est 107 → 99, soit 99 ÷ 107 − 1 = −7,48 %.",
+      "tags": [
+        "drawdown"
+      ]
+    },
+    {
+      "id": "L0.10-Q6",
+      "type": "mcq",
+      "prompt": "Après une perte de 50 % du capital, quel gain faut-il pour revenir au point de départ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+50 %"
+        },
+        {
+          "id": "b",
+          "text": "+75 %"
+        },
+        {
+          "id": "c",
+          "text": "+100 %"
+        },
+        {
+          "id": "d",
+          "text": "+25 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "1 ÷ 0,50 − 1 = +100 %. L'asymétrie des pourcentages rend les pertes profondes très difficiles à effacer.",
+      "tags": [
+        "drawdown",
+        "asymetrie"
+      ]
+    },
+    {
+      "id": "L0.10-Q7",
+      "type": "mcq",
+      "prompt": "Que dit, pour une loi normale, la règle 68-95-99,7 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "68 % des valeurs sont à moins de 1 σ, 95,45 % à moins de 2 σ, 99,73 % à moins de 3 σ"
+        },
+        {
+          "id": "b",
+          "text": "99 % des valeurs sont à moins de 1 σ"
+        },
+        {
+          "id": "c",
+          "text": "Les mouvements de plus de 3 σ sont impossibles"
+        },
+        {
+          "id": "d",
+          "text": "Elle s'applique exactement aux rendements financiers réels"
+        }
+      ],
+      "correct": "a",
+      "explanation": "C'est une propriété de la loi normale (68,27 / 95,45 / 99,73 %). Les rendements réels peuvent s'en écarter, notamment par des extrêmes plus fréquents (constat non démontré dans la leçon).",
+      "tags": [
+        "normale",
+        "queues"
+      ]
+    },
+    {
+      "id": "L0.10-Q8",
+      "type": "mcq",
+      "prompt": "Selon le texte de la BNS lu dans la leçon (15 janvier 2015), qu'est-ce qui est affirmé ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le franc a chuté de 30 % en une journée"
+        },
+        {
+          "id": "b",
+          "text": "La BNS a abandonné le cours plancher de 1,20 franc par euro avec effet immédiat"
+        },
+        {
+          "id": "c",
+          "text": "La BNS a relevé son taux à +0,75 %"
+        },
+        {
+          "id": "d",
+          "text": "La BNS a acheté davantage de devises"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le texte lu indique l'abandon du plancher de 1,20 CHF par euro avec effet immédiat, l'arrêt des achats de devises et un taux de −0,75 % à partir du 22 janvier. Il ne donne aucun chiffre sur l'ampleur du mouvement du franc.",
+      "tags": [
+        "cas-bns",
+        "donnees-observees"
+      ]
+    }
+  ],
+  "revision": 1
+}

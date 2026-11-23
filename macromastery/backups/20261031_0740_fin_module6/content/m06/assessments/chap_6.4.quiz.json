@@ -1,0 +1,178 @@
+{
+  "chapterId": "6.4",
+  "module": 6,
+  "title": "Quiz de chapitre 6.4 — Études de cas et atelier (L6.07–L6.08)",
+  "passThreshold": 0.8,
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C6.4-Q1",
+      "type": "mcq",
+      "prompt": "Hausse de 25 pb quand le marché la prévoyait à 92 % : surprise ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−2,0 pb"
+        },
+        {
+          "id": "b",
+          "text": "+25 pb"
+        },
+        {
+          "id": "c",
+          "text": "+23 pb"
+        },
+        {
+          "id": "d",
+          "text": "+2,0 pb"
+        }
+      ],
+      "correct": "d",
+      "explanation": "25 − 0,92 × 25 = 2,0 pb : la hausse était presque entièrement anticipée.",
+      "tags": [
+        "surprise"
+      ]
+    },
+    {
+      "id": "C6.4-Q2",
+      "type": "mcq",
+      "prompt": "Même hausse avec la probabilité plus ancienne de 66,4 % : surprise ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+16,6 pb"
+        },
+        {
+          "id": "b",
+          "text": "+2,0 pb"
+        },
+        {
+          "id": "c",
+          "text": "+8,4 pb"
+        },
+        {
+          "id": "d",
+          "text": "−8,4 pb"
+        }
+      ],
+      "correct": "c",
+      "explanation": "25 − 0,664 × 25 = 8,4 pb : le choix de la probabilité de référence change la conclusion ; on retient la plus proche de la décision.",
+      "tags": [
+        "reference"
+      ]
+    },
+    {
+      "id": "C6.4-Q3",
+      "type": "mcq",
+      "prompt": "Une probabilité publiée après la décision peut-elle décrire ce que le marché savait avant ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Non : la chronologie stricte l'interdit"
+        },
+        {
+          "id": "b",
+          "text": "Oui si elle est précise"
+        },
+        {
+          "id": "c",
+          "text": "Oui si elle vient d'un courtier"
+        },
+        {
+          "id": "d",
+          "text": "Oui si elle est de 100 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Utiliser une information postérieure est un biais rétrospectif.",
+      "tags": [
+        "chronologie"
+      ]
+    },
+    {
+      "id": "C6.4-Q4",
+      "type": "mcq",
+      "prompt": "Probabilités de scénarios 50, 20, 25 et 8 %. Que faire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les garder"
+        },
+        {
+          "id": "b",
+          "text": "Les corriger : la somme est 103 %"
+        },
+        {
+          "id": "c",
+          "text": "Diviser par 4"
+        },
+        {
+          "id": "d",
+          "text": "Ajouter un scénario de 3 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Des scénarios exclusifs et exhaustifs doivent totaliser exactement 100 % ; l'erreur révèle un manque de discipline.",
+      "tags": [
+        "somme"
+      ]
+    },
+    {
+      "id": "C6.4-Q5",
+      "type": "mcq",
+      "prompt": "Rendements +0,3 ; −2,0 ; +1,8 ; −0,5 % avec probabilités 55/15/22/8 % : espérance brute ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+0,55 %"
+        },
+        {
+          "id": "b",
+          "text": "−0,221 %"
+        },
+        {
+          "id": "c",
+          "text": "+0,221 %"
+        },
+        {
+          "id": "d",
+          "text": "+1,0 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "0,165 − 0,300 + 0,396 − 0,040 = 0,221 % ; elle tombe à +0,021 % après des coûts de 0,2 %.",
+      "tags": [
+        "ev"
+      ]
+    },
+    {
+      "id": "C6.4-Q6",
+      "type": "mcq",
+      "prompt": "Pourquoi la direction de l'or ne rapporte-t-elle aucun point dans la grille de l'atelier ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La grille note le raisonnement, pas la devinette"
+        },
+        {
+          "id": "b",
+          "text": "Parce que l'or est stable"
+        },
+        {
+          "id": "c",
+          "text": "Parce que la direction est interdite"
+        },
+        {
+          "id": "d",
+          "text": "Parce que c'est un détail"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Une note qui devine la direction sans méthode de probabilité ni chronologie plafonne à 50/100, sous le seuil de 70.",
+      "tags": [
+        "grille"
+      ]
+    }
+  ],
+  "revision": 1
+}

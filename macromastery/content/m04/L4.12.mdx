@@ -1,0 +1,256 @@
+---
+id: L4.12
+module: 4
+order: 12
+title: "Thèse guidée sur l'EUR/USD : construire, dater, noter une thèse fondamentale"
+title_initial: "Thèse guidée sur EUR/USD"
+level: "avancé"
+duration_hours: 3.5
+prerequisites: ["L4.01", "L4.02", "L4.03", "L4.04", "L4.06", "L4.07", "L4.10"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L4.12.quiz.json"
+sources: ["S-TRN-01", "S-ADM-02", "S-ECB-04", "S-ECB-06", "S-FED-11", "S-EUN-01", "S-EUS-01", "S-BLS-14", "S-TST-01", "S-BCFH-01"]
+---
+
+# L4.12 — Thèse guidée sur l'EUR/USD
+
+> **Convention de lecture.** **[Fait]** = énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**, la plupart sont **secondaires** (voir L4.02 à L4.07). **Les probabilités et scénarios de cette leçon sont rédigés après coup : ils servent à apprendre la méthode, ce ne sont pas des prévisions faites à l'époque.** **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. rédiger une **thèse fondamentale** sur l'EUR/USD avec question, horizon, état du monde daté, facteurs, scénarios et invalidations ;
+2. séparer ce qui est **connu à la date de la thèse** de ce qui arrive **après** ;
+3. calculer une **espérance de variation** à partir de scénarios probabilisés ;
+4. noter une thèse avec le **score de Brier** et comprendre pourquoi un seul résultat prouve peu ;
+5. repérer les **biais** (rétrospection, confirmation, causalité hâtive) ;
+6. préparer le **projet P4** : thèse EUR/USD sur une période passée comparée au résultat réel.
+
+## 2. Prérequis
+
+- Les onze leçons précédentes du module 4, notamment parité des taux (L4.01), anticipations (L4.02), taux réels (L4.03), balance des paiements (L4.04), dollar (L4.06), euro (L4.07), carry trade (L4.10).
+
+## 3. Explication intuitive
+
+Une thèse n'est pas une opinion sur la direction d'un cours : c'est un **raisonnement daté et falsifiable**. On écrit, avant que l'avenir ne se produise, ce qu'on sait, ce qu'on suppose, ce qui ferait changer d'avis, et à quelle probabilité on croit à chaque issue. Ensuite seulement on compare au résultat. Faire l'inverse, c'est-à-dire expliquer un mouvement une fois qu'il a eu lieu, est facile et trompeur : on trouve toujours une cause. L'exercice de cette leçon force donc trois disciplines : **dater** chaque information, **chiffrer** chaque scénario, **noter** honnêtement le résultat, sachant qu'un seul résultat ne prouve ni talent ni erreur.
+
+## 4. Développement technique
+
+### 4.1 L'anatomie d'une thèse
+
+**[Définition]** Une thèse fondamentale contient huit éléments :
+1. **Question et horizon** (par exemple : « où sera l'EUR/USD le 29 octobre, vu du 25 septembre ? ») ;
+2. **État du monde daté** : données connues à la date de la thèse, avec source et statut (primaire, secondaire) ;
+3. **Facteurs** : taux et trajectoire, inflation, termes de l'échange, balance des paiements, risque, politique (L4.01 à L4.11) ;
+4. **Anticipations déjà dans les prix** : ce que le marché attend (L4.02) ;
+5. **Scénarios** : au moins trois issues mutuellement exclusives avec **probabilités** et **variation attendue** ;
+6. **Déclencheurs et invalidations** : événements datés qui renforcent ou affaiblissent la thèse ;
+7. **Limites** : données manquantes, hypothèses ;
+8. **Évaluation prévue** : critère de réussite fixé **avant** de regarder le résultat.
+
+### 4.2 L'état du monde au 25 septembre 2026
+
+**[Fait]** (sources lues dans les leçons précédentes, **secondaires pour la plupart**) :
+- **EUR/USD** : **1,1400** le 25 septembre (creux de 1,1367, plus bas de deux mois) ; indice dollar d'environ 100,70–100,85 (S-TRN-01) ;
+- **Fed** : fourchette **3,75–4,00 %** depuis le 16 septembre ; hausse de 25 pb à l'unanimité (12–0) ; probabilité de hausse en octobre de **66–71 %** selon le marché (S-TRN-01) ;
+- **BCE** : dépôt **2,50 %** depuis le 16 septembre (hausse annoncée le 10 septembre) ; environ **60 %** de chances d'une hausse à 2,75 % le 29 octobre selon le marché au 24 septembre (S-ADM-02, S-ECB-06) ;
+- **Inflation de la zone euro** : 3,2 % en août (S-ADM-02) ;
+- **Rendements** : UST à 10 ans environ 5,17–5,21 % ; Bund à 10 ans 3,57 % le 23 septembre (S-TRN-01).
+
+**[Calcul de l'auteur]** Différentiel de milieu de fourchette : (3,75 + 4,00) ÷ 2 − 2,50 = **1,375** point ; espérance de hausse de la Fed en octobre : 0,685 × 25 = **17,1** pb (milieu de 66–71 %) ; de la BCE : 0,60 × 25 = **15,0** pb ; écart attendu : 17,1 − 15,0 = **+2,1** pb en faveur du dollar.
+
+**[Interprétation]** Au 25 septembre, le marché attendait **à peu près autant** de resserrement des deux côtés pour octobre : l'écart de trajectoire de court terme, à lui seul, ne désignait pas une direction forte pour l'EUR/USD.
+
+### 4.3 Ce qui arrive après la date de la thèse
+
+**[Fait]** (sources citées) :
+- **2 octobre** : estimation rapide de l'inflation de septembre de la zone euro, **3,8 %** (S-EUS-01) ; probabilité d'une hausse de la Fed en octobre ramenée à environ **18 %** (S-TST-01) ;
+- **16 octobre** : prix à l'importation américains de septembre, **+8,1 %** sur 12 mois (carburants +34,5 %) (S-BLS-14) ;
+- **semaine du 19 octobre environ** : rendement français à 10 ans au-dessus de **5 %** pour la première fois depuis 2002 (S-EUN-01) ;
+- **28 octobre** : Fed **maintient** 3,75–4,00 % ; vote **10 contre 2** (deux voix pour une hausse) (S-FED-11) ;
+- **29 octobre** : BCE **maintient** le dépôt à 2,50 % (presse, non lu à la source) ; annonce du départ de la présidente en février 2027 (S-EUN-01) ; EUR/USD de référence **1,1130** (S-ECB-04, lecture de tableau non confirmée).
+
+**[Calcul de l'auteur]** Horizon : du 25 septembre au 29 octobre, **34** jours ; variation de l'EUR/USD : 1,1130 ÷ 1,1400 − 1 = **−2,37 %** ; différentiel au 29 octobre : **1,375** (inchangé) ; écart réalisé de trajectoire d'octobre : 0 − 0 = **0** pb contre +2,1 pb attendu.
+
+**[Interprétation]** Plusieurs informations **nouvelles** (inflation de septembre, énergie, tensions françaises, probabilité de hausse de la Fed qui baisse) sont **postérieures** à la thèse : une thèse du 25 septembre ne pouvait pas les connaître. Les noter comme « erreurs » serait injuste ; les noter comme « chocs » est exact. Cela **ne prouve pas** qu'elles aient causé le mouvement.
+
+### 4.4 Des scénarios chiffrés
+
+**[Définition]** Un scénario est une plage de résultats, une **probabilité** et une **variation attendue**. Les scénarios doivent être **exclusifs et exhaustifs** : leurs probabilités somment à 1.
+
+**[SIMULATION]** (reconstruction **après coup**, non prévision d'époque) : trois issues à 34 jours :
+- **baisse** (EUR/USD < 1,12) : probabilité 0,25 ; variation attendue −2,5 % ;
+- **stabilité** (1,12 à 1,16) : probabilité 0,50 ; variation 0 % ;
+- **hausse** (> 1,16) : probabilité 0,25 ; variation +2,5 %.
+
+**[Calcul de l'auteur]** Somme des probabilités : 0,25 + 0,50 + 0,25 = **1,00** ; espérance de variation : 0,25 × (−2,5) + 0,50 × 0 + 0,25 × 2,5 = **0,00 %** ; avec une version orientée à la baisse (0,50 ; 0,30 ; 0,20) : 0,50 × (−2,5) + 0 + 0,20 × 2,5 = **−0,75 %**.
+
+**[Interprétation]** Les **seuils** (1,12 et 1,16) sont **arbitraires** et doivent être fixés avant de regarder le résultat ; le résultat réel de **1,1130** tombe dans « baisse », mais un seuil de 1,11 l'aurait classé en « stabilité » : la conclusion dépend du choix.
+
+### 4.5 Noter une thèse : le score de Brier
+
+**[Définition]** Pour des scénarios exclusifs, **score de Brier** = somme des carrés des écarts entre la probabilité attribuée et le résultat (1 pour le scénario réalisé, 0 pour les autres). Plus il est **bas**, mieux c'est ; la valeur de référence « sans compétence » avec des probabilités égales (1/3 chacune) est **0,667**.
+
+**[Calcul de l'auteur]** Résultat : « baisse » réalisée. Version centrée (0,25 ; 0,50 ; 0,25) : (0,25 − 1)² + 0,50² + 0,25² = 0,5625 + 0,25 + 0,0625 = **0,875** ; version orientée à la baisse (0,50 ; 0,30 ; 0,20) : 0,25 + 0,09 + 0,04 = **0,38** ; référence uniforme : (2/3)² + (1/3)² + (1/3)² = **0,667**.
+
+**[Interprétation]** La version orientée à la baisse obtient un meilleur score **parce qu'elle a mis plus de poids sur l'issue réalisée**, ce qui ne dit rien de sa qualité *ex ante* : sur **un seul** résultat, un bon score peut être de la chance. Il faut **de nombreuses thèses** pour distinguer compétence et hasard ; aucune estimation de cette taille n'est faite ici.
+
+### 4.6 Les biais à surveiller
+
+**[Définition]** (liste de cours, non sourcée) :
+- **biais de rétrospection** : croire après coup que le résultat était évident ;
+- **biais de confirmation** : ne retenir que les données qui soutiennent la thèse ;
+- **causalité hâtive** : attribuer un mouvement à un seul événement ;
+- **ancrage sur des seuils ronds** : choisir 1,12 parce que le cours s'est arrêté près de là ;
+- **information postérieure** : utiliser une donnée publiée après la date de la thèse.
+
+**[Interprétation]** La protection principale est **procédurale** : dater la thèse, enregistrer scénarios et seuils avant le résultat, et noter la même thèse avec la même règle quel que soit le résultat.
+
+### 4.7 Relier les facteurs de la leçon 1 à 11
+
+**[Interprétation]** Grille de lecture (sens **conditionnel**, non établi) :
+
+| Facteur | Leçon | Donnée à dater | Statut dans ce module |
+|---|---|---|---|
+| Différentiel et trajectoire | L4.02 | taux directeurs, probabilités | secondaires |
+| Taux réels | L4.03 | rendements, points morts | secondaires |
+| Balance des paiements | L4.04 | compte courant, flux | primaires (BCE reproduite, BEA) |
+| Termes de l'échange | L4.05 | prix à l'import, énergie | BLS (primaire par résumé) |
+| Dollar | L4.06 | indice large, poids | Réserve fédérale (primaire) |
+| BCE et inflation | L4.07 | décision, IPCH | presse et Eurostat reproduit |
+| Carry trade | L4.10 | volatilité, positions | non lus en 2026 |
+| Interventions | L4.11 | montants, niveaux | tertiaire et secondaire |
+
+**Limite** : le tableau décrit des **sources de données**, pas des poids ; aucun modèle chiffré reliant ces facteurs à l'EUR/USD n'est estimé ici.
+
+## 5. Définitions essentielles
+
+- **Thèse fondamentale** : raisonnement daté, chiffré et falsifiable sur un cours.
+- **Horizon** : durée entre la date de la thèse et la date d'évaluation.
+- **Scénario** : issue possible avec probabilité et variation attendue.
+- **Espérance de variation** : somme des probabilités × variations.
+- **Invalidation** : événement qui contredit la thèse.
+- **Score de Brier** : somme des carrés des écarts probabilité-résultat ; plus bas, meilleur.
+- **Biais de rétrospection** : impression que le résultat était prévisible.
+
+## 6. Exemples chiffrés
+
+**6.1 Espérance.** 0,25 × (−2,5) + 0,50 × 0 + 0,25 × 2,5 = 0 ; version baissière : −0,75 %.
+**6.2 Variation.** 1,1130 ÷ 1,1400 − 1 = −2,37 %.
+**6.3 Brier.** 0,5625 + 0,25 + 0,0625 = 0,875 ; 0,25 + 0,09 + 0,04 = 0,38 ; référence 0,667.
+**6.4 Trajectoire.** 0,685 × 25 − 0,60 × 25 = 2,1 pb attendus ; 0 réalisé.
+
+### 6.5 Cas historique documenté — la thèse du 25 septembre relue au 29 octobre 2026
+
+**[Fait]** (S-TRN-01, S-ADM-02, S-ECB-06, S-EUS-01, S-TST-01, S-BLS-14, S-EUN-01, S-FED-11, S-ECB-04) : voir 4.2 et 4.3.
+
+**[Calcul de l'auteur]** EUR/USD −2,37 % en 34 jours ; différentiel de milieu de fourchette inchangé à 1,375 ; trajectoire d'octobre : 0 pb réalisé contre +2,1 pb attendu ; Brier de 0,875 (centrée) et 0,38 (baissière) pour un résultat « baisse ».
+
+**[Interprétation]** Le marché attendait peu de différence de trajectoire pour octobre ; l'euro a pourtant baissé de 2,37 % alors que **les deux banques centrales ont maintenu leurs taux**. Des **chocs postérieurs** à la date (inflation de septembre, tensions sur la dette française, baisse de la probabilité de hausse de la Fed) sont des **candidats**, aucun n'est démontré. **Ce qu'on ne peut pas conclure** : la cause du mouvement ; la qualité d'une thèse à partir d'un seul résultat ; la direction suivante. **Limites** : sources secondaires non synchrones ; niveau de l'EUR/USD du 29/10 lu dans un tableau non confirmé ; scénarios rédigés après coup ; rendements à deux ans non lus.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **EUR/USD** : rédiger la thèse **avant** d'ouvrir un graphique de résultat ; exiger pour chaque donnée une date, une source et un statut.
+- **Autres paires** : la même structure s'applique (USD/JPY, GBP/USD, USD/CHF) en adaptant les facteurs (L4.08, L4.09).
+- **Or (XAU/USD)** : la même discipline (date, scénarios, notation) s'appliquera au module 5 ; aucune thèse sur l'or n'est formulée ici.
+- **Méthode** : fixer seuils, probabilités et critère de notation avant le résultat ; conserver toutes les thèses, y compris les erreurs.
+- **Prudence** : un bon score sur une thèse ne garantit pas la suivante ; la gestion du risque est traitée au module 11.
+
+## 8. Erreurs courantes
+
+1. Rédiger la thèse après avoir vu le résultat.
+2. Utiliser une donnée publiée après la date de la thèse.
+3. Choisir les seuils après coup.
+4. Donner des probabilités qui ne somment pas à 1.
+5. Juger une thèse sur un seul résultat.
+6. Attribuer le mouvement à une seule cause.
+7. Oublier de dater et de sourcer chaque donnée.
+
+## 9. Limites de l'interprétation
+
+- Les scénarios et probabilités de la leçon sont rédigés après le résultat : ils illustrent la méthode.
+- Les données de la période viennent de sources secondaires non synchrones ; l'EUR/USD du 29 octobre est une lecture de tableau non confirmée.
+- Aucun modèle quantitatif reliant les facteurs à l'EUR/USD n'est estimé.
+- Un seul résultat ne permet aucune conclusion statistique sur la qualité d'une thèse.
+- Les rendements à deux ans et les positions ne sont pas lus.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Trajectoire.** Probabilité de hausse de la Fed : 68,5 % ; de la BCE : 60 % (hausses de 25 pb). Espérances et écart ?
+
+<details>
+<summary>Correction 1</summary>
+
+0,685 × 25 = **17,1** pb ; 0,60 × 25 = **15,0** pb ; écart **+2,1** pb (en faveur du dollar).
+</details>
+
+**Exercice 2 — Variation.** EUR/USD de 1,1400 à 1,1130 en 34 jours. Variation ?
+
+<details>
+<summary>Correction 2</summary>
+
+1,1130 ÷ 1,1400 − 1 = **−2,37 %**.
+</details>
+
+**Exercice 3 — Espérance.** Scénarios : baisse 0,50 (−2,5 %), stabilité 0,30 (0 %), hausse 0,20 (+2,5 %). Somme des probabilités et espérance ?
+
+<details>
+<summary>Correction 3</summary>
+
+0,50 + 0,30 + 0,20 = **1,00** ; 0,50 × (−2,5) + 0 + 0,20 × 2,5 = **−0,75 %**.
+</details>
+
+**Exercice 4 — Brier.** Probabilités (0,25 ; 0,50 ; 0,25) ; la « baisse » se réalise. Score ? Comparer à la référence uniforme.
+
+<details>
+<summary>Correction 4</summary>
+
+(0,25 − 1)² + 0,50² + 0,25² = **0,875** ; référence : (2/3)² + 2 × (1/3)² = **0,667** : la thèse centrée fait **moins bien** que l'uniforme sur ce résultat.
+</details>
+
+**Exercice 5 — Seuils.** Résultat 1,1130. Classer avec les seuils 1,12 / 1,16, puis 1,11 / 1,16. Que conclure ?
+
+<details>
+<summary>Correction 5</summary>
+
+Seuil 1,12 : « baisse » (1,1130 < 1,12) ; seuil 1,11 : « stabilité » (1,11 ≤ 1,1130 ≤ 1,16). Les seuils doivent être fixés **avant** le résultat, car la notation en dépend.
+</details>
+
+**Exercice 6 — Projet P4 (préparation).** Choisis une période passée de 30 à 60 jours sur l'EUR/USD ; liste cinq données **datées avant** le début, trois scénarios probabilisés, deux invalidations, le critère de notation. Quelles vérifications avant de regarder le résultat ?
+
+<details>
+<summary>Correction 6</summary>
+
+Réponse type : (1) dates et sources de chaque donnée ; (2) probabilités sommant à 1 ; (3) seuils fixés ; (4) invalidations datées ; (5) critère de notation écrit ; (6) aucune donnée postérieure à la date de la thèse ; (7) conserver la thèse sans modification. Le barème détaillé est dans la grille du projet P4.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L4.12.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Une thèse est datée, chiffrée et falsifiable ; huit éléments, de la question aux invalidations.
+- Au 25 septembre 2026 : EUR/USD 1,1400 ; différentiel de milieu de fourchette 1,375 ; trajectoire d'octobre peu différente entre Fed et BCE.
+- Au 29 octobre : EUR/USD 1,1130 (−2,37 %), deux banques centrales en maintien ; chocs postérieurs identifiés mais causalité non démontrée.
+- Score de Brier : 0,875 (centrée) contre 0,38 (baissière) et 0,667 (référence) pour une issue « baisse ».
+- Un seul résultat ne permet pas de juger une thèse.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer une espérance de trajectoire (Exercice 1).
+- [ ] Calculer une variation et une espérance de scénarios (Exercices 2 et 3).
+- [ ] Calculer et interpréter un score de Brier (Exercice 4).
+- [ ] Voir l'effet des seuils sur la notation (Exercice 5).
+- [ ] Préparer une thèse datée pour le projet P4 (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026**, toutes réutilisées des leçons L4.02 à L4.11 :
+
+- **S-TRN-01**, **S-TST-01**, **S-ECB-04** — L4.02 ; **S-ADM-02**, **S-EUN-01**, **S-EUS-01**, **S-ECB-06** — L4.07 ; **S-FED-11** — communiqué du FOMC du 28 octobre 2026 (L2.03) ; **S-BLS-14** — BLS (L4.05) ; **S-BCFH-01** — Chinn et autres (L4.01).
+
+**Définitions de cours non rattachées à une source officielle lue :** anatomie d'une thèse, score de Brier appliqué à des scénarios de change, liste des biais. **Points non vérifiés :** données de la période (voir leçons citées), scénarios rédigés après coup.

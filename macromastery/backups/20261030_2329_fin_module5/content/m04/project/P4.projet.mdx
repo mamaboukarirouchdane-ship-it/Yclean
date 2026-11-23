@@ -1,0 +1,73 @@
+---
+id: P4
+module: 4
+title: "Projet du module 4 — Thèse fondamentale datée sur l'EUR/USD, comparée au résultat réel"
+duration_hours: 8
+prerequisites: ["L4.01", "L4.02", "L4.03", "L4.04", "L4.05", "L4.06", "L4.07", "L4.08", "L4.09", "L4.10", "L4.11", "L4.12"]
+status: "Rédigé"   # statut officiel dans registry/lessons.json
+---
+
+# P4 — Thèse fondamentale datée sur l'EUR/USD, comparée au résultat réel
+
+> **Convention.** [Fait] = vérifié dans une source citée ; [Calcul de l'auteur] ; [Interprétation] ; [SIMULATION]. Ce projet ne demande **aucune prévision du futur** : tu travailles sur une **période passée**, en te plaçant à sa date de départ. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante** ; ce projet note la **méthode**, pas le résultat.
+
+## 1. Consigne
+
+**Partie A — Choix de la période et gel de l'information.** Choisis une période passée de **30 à 60 jours** sur l'EUR/USD, **antérieure à 2026**, de sorte que des sources primaires datées soient accessibles. Écris la **date de la thèse** et **gèle** l'information : seules les données publiées **avant** cette date sont autorisées.
+
+**Partie B — Thèse datée.** Rédige les huit éléments de L4.12 : question et horizon ; état du monde daté (au moins **cinq** données avec source, date de publication, période concernée, valeur et statut) ; facteurs (au moins **quatre** parmi taux et trajectoire, taux réels, balance des paiements, termes de l'échange, dollar, banque centrale, carry trade, interventions) ; anticipations déjà dans les prix ; **trois scénarios** exclusifs avec probabilités sommant à 1, seuils fixés et variation attendue ; déclencheurs et invalidations datés ; limites ; critère de notation.
+
+**Partie C — Comparaison avec le résultat.** **Après** avoir figé la thèse, relève le cours réel à la date d'évaluation (source et heure), calcule la variation, l'espérance de ta thèse, le **score de Brier** et la **référence uniforme**. Liste les informations **postérieures** à la thèse qui ont pu intervenir, **sans** leur attribuer de causalité non démontrée.
+
+**Partie D — Retour critique.** Identifie un biais possible (rétrospection, confirmation, causalité hâtive, seuils), une donnée à améliorer et une limite de la méthode.
+
+## 2. Contenu obligatoire
+
+1. **Date de la thèse** et **date d'évaluation** explicites ; durée calculée.
+2. **Tableau de données datées** : donnée, valeur, période concernée, date de publication, source, statut (primaire lu, secondaire, non vérifié).
+3. **Trois scénarios** : intervalles, probabilités, variations ; somme des probabilités = 1.
+4. **Calculs** : différentiel de taux et trajectoire (L4.02), un taux réel (L4.03), un point mort ou un cours à terme implicite (L4.01, L4.10), la variation réelle du cours, l'espérance, le score de Brier.
+5. **Information postérieure** : liste des événements survenus après la date de la thèse.
+6. **Rubrique « inconnues »** non vide ; **limites** explicites.
+
+## 3. Règles de rigueur
+
+- Chaque donnée porte **sa source, sa date de publication, sa période et son unité**.
+- Aucune donnée **postérieure** à la date de la thèse dans les Parties A et B.
+- Les valeurs fictives sont marquées **SIMULATION** ; ne pas inventer de consensus : écrire **« à définir »** si non accessible.
+- Les probabilités et seuils sont **enregistrés avant** la Partie C et **non modifiés** après.
+- Distinguer **fait**, **calcul**, **interprétation**, **hypothèse**.
+- Aucune phrase du type « l'euro va monter » ; une thèse est une probabilité, pas une certitude.
+- Ne pas présenter une corrélation comme une causalité.
+
+## 4. Grille de notation (40 points ; réussite : 28)
+
+| Critère | Points | Niveau attendu |
+|---|---|---|
+| Gel de l'information et datation (Partie A) | 5 | Dates de thèse et d'évaluation claires ; aucune donnée postérieure ; durée correcte. |
+| État du monde et sources (Partie B, données) | 8 | Au moins cinq données avec source, date de publication, période, valeur et statut ; primaire et secondaire distingués. |
+| Facteurs et raisonnement (Partie B, facteurs) | 8 | Au moins quatre facteurs liés à des leçons du module ; anticipations déjà dans les prix ; invalidations datées. |
+| Scénarios et calculs | 8 | Trois scénarios exclusifs, probabilités = 1, seuils fixés ; calculs exacts (différentiel, taux réel, point mort ou terme, espérance). |
+| Comparaison et score (Partie C) | 6 | Variation réelle, Brier et référence uniforme corrects ; information postérieure listée sans causalité non démontrée. |
+| Rigueur, limites et retour critique (Parties C–D) | 5 | Inconnues non vides ; biais identifié ; aucune invention ; faits, calculs, interprétations distingués. |
+
+**Pénalités :** donnée sans source (−2 chacune, maximum −8) ; donnée postérieure à la date de thèse utilisée (−4) ; probabilités qui ne somment pas à 1 (−2) ; seuils ou probabilités modifiés après le résultat (−6) ; causalité affirmée sans démonstration (−3).
+
+## 5. Critères de maîtrise du module 4
+
+- [ ] Parité couverte et non couverte appliquées avec leurs limites.
+- [ ] Niveau et trajectoire d'un différentiel distingués ; surprise mesurée sur l'anticipation de la veille.
+- [ ] Taux réel et point mort calculés correctement.
+- [ ] Balance des paiements lue par composante, avec l'identité vérifiée.
+- [ ] Termes de l'échange calculés comme un rapport.
+- [ ] Indice du dollar compris par son panier et sa pondération.
+- [ ] Carry trade évalué par son point mort et son risque.
+- [ ] Au moins **28/40** au projet, **42/60** à l'examen EX4 et 80 % aux quiz de chapitre.
+
+## 6. Auto-évaluation
+
+Relis ton travail en cherchant : (a) une donnée sans date de publication ; (b) une information postérieure à ta date de thèse ; (c) des probabilités qui ne somment pas à 1 ; (d) un seuil ajusté après coup ; (e) un récit causal non démontré. Si tu en trouves un, corrige-le **et note-le** dans le retour critique.
+
+## 7. Sources et références
+
+Voir `content/sources.md` pour les sources du module (Réserve fédérale, BCE, Eurostat, BLS, BEA, BRI, BNS, Banque du Japon). **Définitions de cours non rattachées à une source officielle :** anatomie d'une thèse, score de Brier appliqué aux scénarios de change, notion de point mort. Les leçons du module 4 s'appuient en partie sur des sources **secondaires ou tertiaires** (voir `registry/POINTS_A_VERIFIER.md`) : pour le projet, privilégie les **publications officielles** des périodes passées.

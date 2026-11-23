@@ -1,0 +1,233 @@
+{
+  "lessonId": "L2.12",
+  "title": "Quiz — Politique monétaire, change et or",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : CNBC (2013), WGC via Nasdaq/INN, Crux Investor (opinion), Trésor américain (en cache), Fed.",
+  "questions": [
+    {
+      "id": "L2.12-Q1",
+      "type": "mcq",
+      "prompt": "Combien de canaux de transmission la leçon distingue-t-elle entre politique monétaire, change et or ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Deux"
+        },
+        {
+          "id": "b",
+          "text": "Un seul"
+        },
+        {
+          "id": "c",
+          "text": "Cinq"
+        },
+        {
+          "id": "d",
+          "text": "Dix"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Taux et anticipations, taux réels, prime de risque et crédibilité, bilan et liquidité, aversion au risque ; ils peuvent se contredire.",
+      "tags": [
+        "canaux"
+      ]
+    },
+    {
+      "id": "L2.12-Q2",
+      "type": "mcq",
+      "prompt": "Quel est le coût d'opportunité annuel d'une once à 4 000 $ avec un rendement sans risque de 4,0 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "160 $"
+        },
+        {
+          "id": "b",
+          "text": "40 $"
+        },
+        {
+          "id": "c",
+          "text": "400 $"
+        },
+        {
+          "id": "d",
+          "text": "1 600 $"
+        }
+      ],
+      "correct": "a",
+      "explanation": "4 000 × 0,04 = 160 $ de revenu renoncé par an ; ce calcul ne prédit pas le prix futur.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L2.12-Q3",
+      "type": "mcq",
+      "prompt": "Si le rendement passe de 4,0 % à 4,5 % pour une once à 4 000 $, de combien augmente le coût d'opportunité ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0 $"
+        },
+        {
+          "id": "b",
+          "text": "2 $"
+        },
+        {
+          "id": "c",
+          "text": "200 $"
+        },
+        {
+          "id": "d",
+          "text": "20 $ (+12,5 %)"
+        }
+      ],
+      "correct": "d",
+      "explanation": "4 000 × 0,045 = 180 $ contre 160 $, soit 20 $ de plus, une hausse de 12,5 %.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L2.12-Q4",
+      "type": "mcq",
+      "prompt": "Que montre le rapport relayé sur les perspectives du World Gold Council pour le premier semestre 2026 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que les taux réels expliquent tout"
+        },
+        {
+          "id": "b",
+          "text": "Une faible part de variabilité attribuée aux anticipations de taux (3 %) et une plus grande au change (15 %)"
+        },
+        {
+          "id": "c",
+          "text": "Que l'or ne dépend d'aucune variable"
+        },
+        {
+          "id": "d",
+          "text": "Que les achats officiels n'ont aucun effet"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le lien taux réels – or reste une hypothèse ; la méthode de décomposition n'est pas décrite dans le résumé.",
+      "tags": [
+        "wgc"
+      ]
+    },
+    {
+      "id": "L2.12-Q5",
+      "type": "mcq",
+      "prompt": "Scénario central de 4 100 $ avec une fourchette de ±5 % : quel est le haut de la fourchette ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "4 100 $"
+        },
+        {
+          "id": "b",
+          "text": "4 500 $"
+        },
+        {
+          "id": "c",
+          "text": "4 205 $"
+        },
+        {
+          "id": "d",
+          "text": "4 305 $"
+        }
+      ],
+      "correct": "d",
+      "explanation": "4 100 × 1,05 = 4 305 $ ; le cours du 22 septembre 2026 (4 344,29 $) l'a dépassé.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L2.12-Q6",
+      "type": "mcq",
+      "prompt": "Que montre le cas du 18 décembre 2013 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que les taux réels sont observés dans l'article"
+        },
+        {
+          "id": "b",
+          "text": "Que l'or monte à chaque annonce de la Fed"
+        },
+        {
+          "id": "c",
+          "text": "Une forte baisse de l'or le jour du premier ralentissement des achats d'actifs, sans preuve de causalité"
+        },
+        {
+          "id": "d",
+          "text": "Que la Fed a augmenté ses achats"
+        }
+      ],
+      "correct": "c",
+      "explanation": "L'or a perdu 1,8 % au comptant et plus de 25 % sur l'année ; l'article ne donne pas les taux réels, donc la causalité n'est pas démontrée.",
+      "tags": [
+        "cas"
+      ]
+    },
+    {
+      "id": "L2.12-Q7",
+      "type": "mcq",
+      "prompt": "Quel statut donner à l'article de Crux Investor du 22 septembre 2026 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Opinion et source secondaire, sans chiffres de taux réels ni de dollar"
+        },
+        {
+          "id": "b",
+          "text": "Source primaire officielle"
+        },
+        {
+          "id": "c",
+          "text": "Décision de la Fed"
+        },
+        {
+          "id": "d",
+          "text": "Donnée de la Réserve fédérale"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Il donne des prix de l'or et un argumentaire, mais pas de taux réels ni de dollar ; il doit être étiqueté comme opinion.",
+      "tags": [
+        "sources"
+      ]
+    },
+    {
+      "id": "L2.12-Q8",
+      "type": "mcq",
+      "prompt": "Pourquoi faut-il éviter de mélanger un prix de septembre et un rendement de juin dans un calcul ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que c'est interdit par la loi"
+        },
+        {
+          "id": "b",
+          "text": "Parce que les dates diffèrent et que le résultat peut être trompeur ; il faut le signaler"
+        },
+        {
+          "id": "c",
+          "text": "Parce que les rendements ne changent jamais"
+        },
+        {
+          "id": "d",
+          "text": "Parce que les prix de l'or sont secrets"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Les rendements disponibles s'arrêtent au 30 juin 2026 ; mélanger des dates sans le dire fausse l'interprétation.",
+      "tags": [
+        "methode"
+      ]
+    }
+  ],
+  "revision": 1
+}

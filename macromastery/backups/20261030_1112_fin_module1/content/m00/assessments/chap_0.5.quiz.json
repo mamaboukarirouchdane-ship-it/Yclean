@@ -1,0 +1,178 @@
+{
+  "chapterId": "0.5",
+  "module": 0,
+  "title": "Quiz de chapitre 0.5 — Lire un marché et mesurer le risque (L0.09–L0.10)",
+  "passThreshold": 0.8,
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C0.5-Q1",
+      "type": "mcq",
+      "prompt": "EUR/USD : O 1,0800, H 1,0850, L 1,0780, C 1,0830. Quel est le corps de la bougie ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "70 pips"
+        },
+        {
+          "id": "b",
+          "text": "20 pips"
+        },
+        {
+          "id": "c",
+          "text": "30 pips"
+        },
+        {
+          "id": "d",
+          "text": "50 pips"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Corps = 1,0830 − 1,0800 = 30 pips (haussier) ; l'amplitude est de 70 pips.",
+      "tags": [
+        "bougie"
+      ]
+    },
+    {
+      "id": "C0.5-Q2",
+      "type": "mcq",
+      "prompt": "Pour comparer deux paires, il faut utiliser :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Des rendements en pourcentage"
+        },
+        {
+          "id": "b",
+          "text": "Des variations en pips"
+        },
+        {
+          "id": "c",
+          "text": "Les niveaux bruts"
+        },
+        {
+          "id": "d",
+          "text": "La couleur des bougies"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Les pips ne sont pas comparables d'une paire à l'autre ; les rendements le sont.",
+      "tags": [
+        "rendement"
+      ]
+    },
+    {
+      "id": "C0.5-Q3",
+      "type": "mcq",
+      "prompt": "Quel graphique exagère les différences ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Axe démarrant à zéro"
+        },
+        {
+          "id": "b",
+          "text": "Axe tronqué"
+        },
+        {
+          "id": "c",
+          "text": "Échelle linéaire sur courte période"
+        },
+        {
+          "id": "d",
+          "text": "Aucun"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Un axe tronqué rend visuellement grande une très petite variation relative.",
+      "tags": [
+        "biais"
+      ]
+    },
+    {
+      "id": "C0.5-Q4",
+      "type": "mcq",
+      "prompt": "Une transaction : +300 (40 %) / −100 (60 %). Espérance ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−60"
+        },
+        {
+          "id": "b",
+          "text": "+120"
+        },
+        {
+          "id": "c",
+          "text": "+60"
+        },
+        {
+          "id": "d",
+          "text": "0"
+        }
+      ],
+      "correct": "c",
+      "explanation": "0,4 × 300 − 0,6 × 100 = +60.",
+      "tags": [
+        "esperance"
+      ]
+    },
+    {
+      "id": "C0.5-Q5",
+      "type": "mcq",
+      "prompt": "Un compte passe de 100 à 107 puis 99. Baisse maximale ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−7,48 %"
+        },
+        {
+          "id": "b",
+          "text": "−1 %"
+        },
+        {
+          "id": "c",
+          "text": "−7 %"
+        },
+        {
+          "id": "d",
+          "text": "−8 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "99 ÷ 107 − 1 = −7,48 %.",
+      "tags": [
+        "drawdown"
+      ]
+    },
+    {
+      "id": "C0.5-Q6",
+      "type": "mcq",
+      "prompt": "L'écart-type des rendements indique :",
+      "options": [
+        {
+          "id": "a",
+          "text": "La perte maximale possible"
+        },
+        {
+          "id": "b",
+          "text": "La probabilité de gain"
+        },
+        {
+          "id": "c",
+          "text": "La tendance future"
+        },
+        {
+          "id": "d",
+          "text": "La dispersion autour de la moyenne"
+        }
+      ],
+      "correct": "d",
+      "explanation": "L'écart-type mesure la dispersion ; il ne borne pas la perte maximale.",
+      "tags": [
+        "ecart-type"
+      ]
+    }
+  ],
+  "revision": 1
+}

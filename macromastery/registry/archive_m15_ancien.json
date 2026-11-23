@@ -1,0 +1,132 @@
+{
+ "note": "Archive de l'ancienne version du module 15 (3 parcours, 14 leçons). Conservée sans suppression (décision utilisateur du 30/10/2026). Les 6 leçons obligatoires de cette version étaient L15.01, L15.02 et les 4 leçons du parcours choisi ; les 8 autres étaient facultatives. Hors parcours obligatoire actuel.",
+ "meta": {
+  "prerequis_module_texte": "modules 12 à 14",
+  "niveau": "C",
+  "duree_texte": "20,5 h sur le parcours obligatoire (socle commun plus un parcours au choix) ; 50,5 h pour les 14 leçons du catalogue.",
+  "objectif_module": "approfondir une spécialité utile à ton projet (hedge fund, investissement), puis produire un dossier de recherche original.",
+  "chapitres_texte": "15.1 Socle commun (L15.01 à L15.02) · 15.2 Parcours A, macro globale (L15.03 à L15.06) · 15.3 Parcours B, taux et courbes (L15.07 à L15.10) · 15.4 Parcours C, matières premières et or (L15.11 à L15.14). Tu choisis **un** parcours ; les deux autres restent disponibles en option.",
+  "exercices_evaluations_initiaux": "exercices propres à chaque leçon ; examen de 2 h sur le parcours choisi ; **projet de clôture (12 h, hors leçons) :** dossier de recherche original, soumis à la grille du module 12 et à une relecture critique.",
+  "familles_sources_initiales": "FMI ; BIS ; CFTC ; EIA ; World Gold Council ; banques centrales ; articles académiques sélectionnés et vérifiés.",
+  "criteres_validation_module": [
+   "Dossier de clôture noté à 75 % ou plus sur la grille.",
+   "Reproductibilité : un tiers peut refaire l'analyse à partir du dossier.",
+   "Limites et incertitudes explicitement chiffrées ou décrites."
+  ]
+ },
+ "lessons": [
+  {
+   "id_ancien": "L15.01",
+   "title": "Choisir sa spécialisation",
+   "objective": "Comparer styles et métiers (hedge fund, investissement) et fixer un plan d'étude.",
+   "duration_hours": 2.5,
+   "status": "Planifiée",
+   "mandatory_in_old_version": true
+  },
+  {
+   "id_ancien": "L15.02",
+   "title": "Un processus de recherche reproductible",
+   "objective": "Documenter données, hypothèses et décisions pour qu'un tiers refasse l'analyse.",
+   "duration_hours": 3.0,
+   "status": "Planifiée",
+   "mandatory_in_old_version": true
+  },
+  {
+   "id_ancien": "L15.03",
+   "title": "A1. Macro discrétionnaire",
+   "objective": "Passer d'une thèse à son expression et à sa taille.",
+   "duration_hours": 3.5,
+   "status": "Planifiée",
+   "mandatory_in_old_version": null
+  },
+  {
+   "id_ancien": "L15.04",
+   "title": "A2. Balance des paiements et crises de change",
+   "objective": "Identifier vulnérabilités et déclencheurs.",
+   "duration_hours": 3.5,
+   "status": "Planifiée",
+   "mandatory_in_old_version": null
+  },
+  {
+   "id_ancien": "L15.05",
+   "title": "A3. Marchés émergents",
+   "objective": "Analyser vulnérabilités et crises.",
+   "duration_hours": 3.5,
+   "status": "Planifiée",
+   "mandatory_in_old_version": null
+  },
+  {
+   "id_ancien": "L15.06",
+   "title": "A4. Un portefeuille de thèses macro",
+   "objective": "Combiner plusieurs thèses et leurs corrélations.",
+   "duration_hours": 4.0,
+   "status": "Planifiée",
+   "mandatory_in_old_version": null
+  },
+  {
+   "id_ancien": "L15.07",
+   "title": "B1. Structure par terme",
+   "objective": "Comprendre les modèles de courbe et la prime de terme.",
+   "duration_hours": 4.0,
+   "status": "Planifiée",
+   "mandatory_in_old_version": null
+  },
+  {
+   "id_ancien": "L15.08",
+   "title": "B2. Swaps, OIS et dérivés de taux",
+   "objective": "Lire ces instruments pour l'analyse macro.",
+   "duration_hours": 4.0,
+   "status": "Planifiée",
+   "mandatory_in_old_version": null
+  },
+  {
+   "id_ancien": "L15.09",
+   "title": "B3. Inflation de marché",
+   "objective": "Lire points morts d'inflation, swaps d'inflation et TIPS.",
+   "duration_hours": 4.0,
+   "status": "Planifiée",
+   "mandatory_in_old_version": null
+  },
+  {
+   "id_ancien": "L15.10",
+   "title": "B4. Politique non conventionnelle et stabilité financière",
+   "objective": "Analyser ses effets et ses risques.",
+   "duration_hours": 3.5,
+   "status": "Planifiée",
+   "mandatory_in_old_version": null
+  },
+  {
+   "id_ancien": "L15.11",
+   "title": "C1. Structure des marchés à terme",
+   "objective": "Expliquer report, déport et rendement de convenance.",
+   "duration_hours": 4.0,
+   "status": "Planifiée",
+   "mandatory_in_old_version": null
+  },
+  {
+   "id_ancien": "L15.12",
+   "title": "C2. Énergie et effets macro",
+   "objective": "Relier énergie, inflation et devises.",
+   "duration_hours": 3.5,
+   "status": "Planifiée",
+   "mandatory_in_old_version": null
+  },
+  {
+   "id_ancien": "L15.13",
+   "title": "C3. Le marché de l'or institutionnel",
+   "objective": "Décrire LBMA, COMEX, location d'or et ETF.",
+   "duration_hours": 3.5,
+   "status": "Planifiée",
+   "mandatory_in_old_version": null
+  },
+  {
+   "id_ancien": "L15.14",
+   "title": "C4. Valoriser l'or",
+   "objective": "Comparer modèles de valorisation et leurs limites.",
+   "duration_hours": 4.0,
+   "status": "Planifiée",
+   "mandatory_in_old_version": null
+  }
+ ],
+ "hours_total_14": 50.5
+}

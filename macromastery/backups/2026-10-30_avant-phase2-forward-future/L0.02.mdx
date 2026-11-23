@@ -1,0 +1,271 @@
+---
+id: L0.02
+module: 0
+order: 2
+title: "Les acteurs des marchés et leurs motivations"
+level: débutant
+duration_hours: 2.5
+prerequisites: ["L0.01"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L0.02.quiz.json"
+sources: ["S-BIS-02", "S-BIS-03", "S-FXC-01", "S-CFTC-01", "S-CFTC-02", "S-CFTC-03", "S-UST-01", "S-CLE-01"]
+---
+
+# L0.02 — Les acteurs des marchés et leurs motivations
+
+> **Convention de lecture.** **[Fait]** = vérifié dans une source citée ; **[Définition]** = vocabulaire du cours ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les lecteurs de L0.01 connaissent déjà bid, ask, spread, liquidité, marché primaire et secondaire : ils ne sont pas réexpliqués ici.
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. citer les grandes familles de participants du marché des changes et dire ce que chacune cherche ;
+2. distinguer **couverture**, **spéculation**, **allocation d'investissement**, **tenue de marché** et **besoin de transaction** ;
+3. calculer l'effet d'une variation de taux de change sur un flux en devise, avec et sans couverture ;
+4. lire une répartition par type de contrepartie (données de la BRI) sans en tirer de conclusion abusive ;
+5. expliquer pourquoi la **catégorie** d'un acteur dans un rapport officiel (CFTC) ne révèle pas sa **motivation** ;
+6. expliquer en quoi l'objectif d'un acteur officiel (Trésor, banque centrale) diffère de celui d'un acteur privé.
+
+## 2. Prérequis
+
+L0.01 (marché, bid/ask, spread, liquidité). Savoir calculer un pourcentage et diviser un montant par un taux.
+
+## 3. Explication intuitive
+
+Pense à un grand port. Des bateaux très différents y entrent : un cargo qui doit livrer des marchandises dans un mois, un pêcheur qui vend sa prise, un négociant qui parie sur la hausse du blé, un remorqueur qui gagne sa vie en rendant le service de manœuvre à tous, et l'autorité portuaire qui surveille l'ensemble.
+
+Sur un marché financier, c'est pareil. Tous les acteurs voient le même prix, mais ils ne l'utilisent pas pour la même raison :
+
+- certains veulent **se protéger** d'un risque qu'ils ne souhaitent pas porter ;
+- d'autres veulent **prendre un risque** dans l'espoir d'un gain ;
+- d'autres **rendent le service** d'être toujours prêts à acheter et à vendre ;
+- d'autres encore ont un **besoin pratique** (payer un fournisseur, voyager) ;
+- d'autres enfin poursuivent un **objectif public** et non un profit.
+
+Comprendre un marché, c'est d'abord comprendre qui s'y trouve et pourquoi. Deux ordres de même taille n'ont pas le même sens selon la personne qui les passe.
+
+## 4. Développement technique
+
+### 4.1 Les cinq motivations
+
+| Motivation | Idée | Exemple |
+|---|---|---|
+| **Couverture** (*hedging*) | Réduire ou supprimer un risque existant | un exportateur qui fixe d'avance le taux de ses futures recettes |
+| **Spéculation** | Prendre un risque pour un gain espéré | un fonds qui achète une monnaie car il anticipe sa hausse |
+| **Investissement / allocation** | Répartir un portefeuille à moyen ou long terme | un fonds de pension qui achète des actifs étrangers |
+| **Tenue de marché** (*market making*) | Afficher en continu un prix d'achat et un prix de vente | une banque qui cote un bid et un ask à ses clients |
+| **Besoin de transaction** | Payer, recevoir, voyager | un particulier ou une entreprise qui change de l'argent |
+
+**[Définition]** Un même acteur peut combiner plusieurs motivations. Une grande banque peut tenir le marché pour ses clients et prendre en parallèle des positions pour son compte.
+
+### 4.2 Les familles de participants
+
+- **Banques / teneurs de marché (*dealers*)** : cotent des prix, exécutent les ordres de leurs clients, se couvrent entre elles.
+- **Autres institutions financières** : gestionnaires d'actifs, fonds de pension, assureurs, fonds spéculatifs (*hedge funds*), etc.
+- **Clients non financiers** : entreprises industrielles et commerciales qui échangent des devises pour leurs activités.
+- **Particuliers** : traders individuels, voyageurs, personnes qui envoient de l'argent à l'étranger.
+- **Secteur officiel** : banques centrales, Trésors et institutions publiques.
+
+### 4.3 Ce que mesure la BRI
+
+**[Fait]** L'enquête triennale 2025 de la BRI donne pour avril 2025 un volume quotidien moyen de **9 510 milliards de dollars** sur le marché des changes de gré à gré (base « net-net »), selon la publication de décembre 2025 (S-BIS-03, tableau A.2). Les chiffres préliminaires publiés le 30 septembre 2025 (9 600 milliards ; parts de 46 %, 50 % et 5 % ; S-BIS-02) sont remplacés par ceux de décembre. Selon la contrepartie, le tableau A.2 indique :
+
+| Contrepartie | Part publiée | Montant publié |
+|---|---|---|
+| Teneurs de marché déclarants (*reporting dealers*) | 47 % | 4 443 milliards de dollars |
+| Autres institutions financières | 49 % | 4 627 milliards de dollars |
+| Clients non financiers | 5 % | 441 milliards de dollars |
+
+**[Fait]** La part des clients non financiers est en baisse de 1 point par rapport à 2022 (tableau A.2). La page préliminaire de septembre 2025 donnait 6 % pour 2022 et 7 % pour 2019 (S-BIS-02).
+
+**[Interprétation]** Une grande partie des échanges se fait donc entre institutions financières, et non pour payer des biens ou des services. Cette remarque ne dit pas que ces échanges sont « spéculatifs » : une institution financière peut très bien se couvrir ou rééquilibrer un portefeuille.
+
+**Attention à la lecture.** Deux contrôles distincts, à ne pas confondre.
+
+- **Les montants.** *Calcul de l'auteur sur des montants publiés :* 4 443 + 4 627 = 9 070, et 9 510 − 9 070 = 440, soit les clients non financiers publiés (441). L'écart d'une unité tient aux arrondis : les trois montants totalisent 9 511 contre un total publié de 9 510, et la BRI indique sous le tableau « Turnover and absolute change rounded ». Les trois catégories expliquent donc le total ; il n'y a pas d'anomalie.
+- **Les parts.** 47 % + 49 % + 5 % = 101 %. *Calcul de l'auteur :* sur les montants, les parts exactes sont 46,7 %, 48,7 % et 4,6 % (total 100,0 %). Arrondies à l'unité, les trois sont arrondies **vers le haut** (d'environ 0,3 à 0,4 point chacune), ce qui donne 101 %. La BRI ne commente pas ce 101 % dans les documents lus : ce mécanisme est une déduction de l'auteur à partir des montants publiés, et non une explication méthodologique de la BRI.
+
+### 4.4 Tenue de marché : comment un teneur de marché gagne sa vie
+
+Un teneur de marché affiche un prix auquel il achète (bid) et un prix auquel il vend (ask). Son revenu de base est le **spread** (L0.01) sur le volume qu'il traite. Son risque : garder en stock une devise dont le prix bouge avant qu'il puisse la revendre. Il gère donc son stock en se couvrant auprès d'autres teneurs de marché. Le revenu du spread est un revenu **brut** : il ne tient pas compte des coûts éventuels de l'activité ni des pertes que peut causer une variation de prix (voir l'Exemple C).
+
+### 4.5 Les règles du jeu : le FX Global Code
+
+**[Fait]** Le Code mondial du marché des changes (*FX Global Code*) est un recueil de bonnes pratiques. Il compte **55 principes**, s'applique aux participants du marché des changes quelle que soit leur taille, **ne crée aucune obligation légale ou réglementaire** et complète les règles locales ; la version actuelle date de **décembre 2024** (S-FXC-01).
+
+### 4.6 Les acteurs dans les statistiques officielles : l'exemple de la CFTC
+
+**[Fait]** Le rapport *Commitments of Traders* (COT) de la CFTC décrit, chaque semaine, les positions sur les marchés à terme (futures) et d'options sur futures (S-CFTC-01). Pour les contrats financiers (rapport « Traders in Financial Futures »), les catégories sont : *Dealer/Intermediary*, *Asset Manager/Institutional*, *Leveraged Funds* et *Other Reportables*.
+
+**[Fait] — calendrier traditionnel.** Les données sont arrêtées au **mardi** et **généralement publiées le vendredi à 15 h 30, heure de l'Est** (trois jours de traitement). La page officielle de description des rapports décrit ce calendrier et précise que la CFTC ne peut actuellement publier ce rapport qu'**une fois par semaine** (S-CFTC-01, S-CFTC-03).
+
+**[Fait] — évolution annoncée, non encore en vigueur d'après les pages consultées.** Le 27 octobre 2026 (communiqué n° 9316-26, S-CFTC-02), la CFTC a annoncé un **plan** de publication du COT **deux fois par semaine d'ici la fin de 2026** : les données du lundi seraient publiées le mercredi et celles du mercredi le vendredi, à 15 h 30 (heure de l'Est), avec un délai ramené de trois à deux jours. Le communiqué ne donne pas de date de début précise.
+
+**Calendrier en vigueur à la date de rédaction (29 octobre 2026).** Je n'ai trouvé **aucune preuve officielle** que le nouveau calendrier soit déjà appliqué : la page de description des rapports, consultée le même jour, décrit encore la publication hebdomadaire du vendredi. Cette consultation est ponctuelle (la page « Release Schedule » n'a pas été lue) : avant d'utiliser la leçon plus tard, vérifie le calendrier effectif sur le site de la CFTC.
+
+**[Fait] — la limite essentielle.** Le classement d'un acteur repose sur son **activité principale** déclarée à la CFTC. La CFTC écrit que son personnel ne connaît pas les raisons précises des positions des acteurs et que les catégories ne disent pas si une position relève de la couverture ou de la spéculation. Un acteur peut aussi avoir des classifications différentes selon les contrats (S-CFTC-01). Cette limite vaut quel que soit le calendrier de publication.
+
+**[Interprétation]** Retiens : la **catégorie** (qui est l'acteur) n'est pas la **motivation** (pourquoi il agit). Cette distinction sera utilisée en profondeur au module 7.
+
+### 4.7 L'acteur officiel : l'exemple du Fonds de stabilisation des changes américain
+
+**[Fait]** Le *Exchange Stabilization Fund* (ESF), compte du Trésor américain, a été créé en **1934**, financé par **2 milliards de dollars** issus d'une hausse du prix de l'or. Son but affiché était de « stabiliser la valeur d'échange du dollar » en achetant et vendant des devises et de l'or (S-CLE-01, Fed de Cleveland).
+
+**[Fait]** Le site du Trésor indique que l'ESF a mené des interventions sur le marché des changes en 1934-1935, que ses ressources seules étaient jugées trop faibles pour des opérations de grande ampleur, et que la **Réserve fédérale a rejoint les interventions en 1962** ; elles sont depuis financées conjointement par l'ESF et par le compte du système de la Fed (S-UST-01). La Fed de Cleveland précise que la plupart des observateurs voient le Trésor comme le principal responsable de ces opérations (S-CLE-01).
+
+**[Interprétation]** Un acteur officiel poursuit un **objectif de politique publique** (stabilité, ordre du marché, cohérence avec la politique monétaire) et non un profit. Cela rend son comportement difficile à lire avec les outils qui valent pour un acteur privé. Ce cas historique n'établit rien sur l'**efficacité** de telles interventions, qui est un sujet distinct traité au module 2.
+
+## 5. Définitions essentielles
+
+| Terme | Définition |
+|---|---|
+| Couverture (*hedging*) | Opération qui réduit un risque existant, en échange de la renonciation à un gain possible. |
+| Spéculation | Prise de risque dans l'espoir d'un gain. |
+| Teneur de marché (*market maker*, *dealer*) | Acteur qui cote en continu un prix d'achat et un prix de vente. |
+| Contrepartie | L'autre partie d'une transaction. |
+| Gestionnaire d'actifs | Institution qui investit l'argent de clients (fonds, retraite, assurance). |
+| Fonds spéculatif (*hedge fund*) | Fonds gérant des stratégies diverses, souvent avec des positions à levier. Le levier est expliqué plus tard (module 11). |
+| Client non financier | Entreprise dont l'activité principale n'est pas financière. |
+| Secteur officiel | Banques centrales, Trésors et autres institutions publiques. |
+| Contrat à terme (*forward*) | Contrat qui fixe dès aujourd'hui le taux d'un échange futur. Détaillé en L0.03. |
+
+## 6. Exemples chiffrés
+
+> Section entièrement en **[SIMULATION]**. Pour ne pas anticiper L0.03, les taux sont écrits en toutes lettres : « 1 euro = 1,0800 dollar ».
+
+**Exemple A — Couverture d'un exportateur.** Une entreprise européenne fictive va recevoir **2 000 000 de dollars** dans trois mois et dépense en euros. Aujourd'hui, 1 euro = 1,0800 dollar.
+
+- Valeur actuelle en euros : 2 000 000 / 1,0800 = **1 851 851,85 €**.
+- Si dans trois mois 1 euro = 1,1200 dollar : 2 000 000 / 1,1200 = **1 785 714,29 €**. Perte par rapport à aujourd'hui : environ 66 137,57 € (calcul sur valeurs non arrondies).
+- Si 1 euro = 1,0400 dollar : 2 000 000 / 1,0400 = **1 923 076,92 €**. Gain : 71 225,07 €.
+- Si l'entreprise fixe aujourd'hui un taux avec un contrat à terme (taux **fictif** : 1 euro = 1,0820 dollar), elle recevra 2 000 000 / 1,0820 = **1 848 428,84 €**, quelle que soit l'évolution. Elle renonce au gain possible et élimine la perte possible.
+- **Hypothèses de la couverture.** On suppose que le contrat porte exactement sur 2 000 000 de dollars et que son échéance coïncide avec la date de réception. Une couverture réelle peut laisser subsister des risques si le flux effectif diffère du flux prévu (montant reçu différent, paiement retardé ou annulé).
+
+**Exemple B — Spéculation.** Un fonds fictif achète **1 000 000 d'euros** à 1,0800 : il paie 1 080 000 dollars.
+
+- Il revend à 1,0900 : il reçoit 1 090 000 dollars. Gain = **10 000 dollars**, soit environ 0,93 % de 1 080 000.
+- Il revend à 1,0700 : il reçoit 1 070 000 dollars. Perte = **10 000 dollars**.
+- Le même écart de 0,0100 donne un gain ou une perte symétrique. Rien dans le calcul ne dit lequel arrivera.
+
+**Exemple C — Revenu d'un teneur de marché.** Une banque fictive cote l'euro : elle achète à 1,0798 et vend à 1,0802 (spread de 0,0004 dollar).
+
+- Un client lui achète 1 000 000 d'euros : il paie 1 000 000 × 1,0802 = 1 080 200 dollars.
+- La banque rachète 1 000 000 d'euros à un autre client à 1,0798 : elle paie 1 079 800 dollars.
+- Revenu = 1 080 200 − 1 079 800 = **400 dollars**, soit 1 000 000 × 0,0004.
+- **Portée de ce chiffre.** Il s'agit d'un résultat **brut, obtenu sous les hypothèses de la simulation** : deux opérations de même taille aux prix indiqués, sans variation de prix entre elles. Il est exprimé **avant** les coûts éventuels de l'activité et sans tenir compte des risques liés aux variations de prix. Si le prix bouge entre les deux opérations, ce revenu peut être effacé : c'est le risque de la tenue de marché.
+
+## 7. Application au Forex et à l'or
+
+**Forex.** Une même hausse de l'euro pèse différemment selon l'acteur : mauvaise nouvelle pour l'exportateur de l'Exemple A, source de gain pour le fonds de l'Exemple B qui a acheté des euros, indifférente au teneur de marché de l'Exemple C s'il est couvert. En analyse fondamentale, savoir **qui** a besoin d'acheter ou de vendre une monnaie aide à comprendre pourquoi un flux apparaît ; cette idée sera prolongée aux modules 4, 7 et 9.
+
+**Or.** **[Fait]** L'ESF a été créé en 1934 avec un financement lié à la hausse du prix de l'or et pouvait acheter et vendre de l'or (S-CLE-01). Cela montre que des acteurs officiels ont historiquement acheté et vendu de l'or dans un but de politique publique. Les banques centrales actuelles comme détentrices d'or seront étudiées au module 5 ; aucune donnée récente n'est avancée ici.
+
+**[Interprétation] Transition.** Pour l'or comme pour les devises, identifier les catégories d'acheteurs et de vendeurs (acteurs officiels, institutions financières, entreprises utilisatrices, particuliers) aide à construire des **hypothèses de marché** : qui pourrait avoir besoin d'acheter ou de vendre, et pourquoi. Cela ne suffit pas à prévoir le prix : une catégorie n'indique ni la motivation ni la taille des flux à venir, et d'autres facteurs interviennent. Ces hypothèses seront testées aux modules 5 et 7.
+
+## 8. Erreurs courantes
+
+1. **Assimiler une catégorie à une intention.** « Fonds à effet de levier » ne veut pas dire « spéculateur » (CFTC).
+2. **Croire que tout flux important est spéculatif.** Une grande partie des flux est de la couverture ou de l'allocation.
+3. **Confondre couverture et gain.** Une couverture réduit le risque, y compris la possibilité de gain (Exemple A).
+4. **Additionner des parts arrondies sans vérifier leur base.** 47 + 49 + 5 = 101 (section 4.3).
+5. **Traiter un acteur officiel comme un acteur privé.** Son objectif n'est pas un profit.
+
+## 9. Limites de l'interprétation
+
+- Les parts de la BRI portent sur **avril 2025** et sur le marché de gré à gré ; elles ne donnent ni la tendance ni la composition d'un jour donné.
+- Les données de la CFTC concernent les **marchés à terme** réglementés, pas l'ensemble du marché des changes de gré à gré. De plus, avec le calendrier traditionnel, elles sont arrêtées le mardi et publiées le vendredi ; même avec le calendrier annoncé (lundi/mercredi, publication deux jours après), elles ne décrivent pas la situation du moment.
+- Le cas de l'ESF est un exemple historique et américain : il n'est pas représentatif de toutes les banques centrales.
+- Savoir qui participe ne permet pas, à lui seul, de prédire le sens d'un prix.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Reconnaître la motivation.** Pour chaque acteur, donne la motivation principale parmi : couverture, spéculation, allocation, tenue de marché, besoin de transaction.
+(a) Un exportateur qui fixe d'avance le taux de ses recettes futures en dollars.
+(b) Un fonds qui achète des euros uniquement parce qu'il anticipe leur hausse.
+(c) Un fonds de pension qui achète des obligations étrangères pour diversifier son portefeuille.
+(d) Une banque qui affiche un prix d'achat et un prix de vente à ses clients.
+(e) Une touriste qui change des euros avant un voyage.
+
+<details>
+<summary>Correction 1</summary>
+
+(a) **Couverture.** (b) **Spéculation.** (c) **Allocation / investissement** : la décision vient d'un objectif de portefeuille, pas d'un pari de court terme. (d) **Tenue de marché.** (e) **Besoin de transaction.**
+
+Remarque : (c) nécessite aussi d'échanger des devises, mais l'acteur n'achète pas de devise pour elle-même ; c'est la conséquence d'un choix d'actifs. La motivation est donc l'allocation.
+</details>
+
+**Exercice 2 — Couverture d'un importateur.** Une entreprise européenne fictive doit payer **500 000 dollars** dans deux mois. Aujourd'hui, 1 euro = 1,0800 dollar. Calcule son coût en euros (a) aujourd'hui ; (b) si 1 euro = 1,0400 dollar ; (c) si 1 euro = 1,1200 dollar. (d) Qu'est-ce qu'une couverture supprimerait ?
+
+<details>
+<summary>Correction 2</summary>
+
+(a) 500 000 / 1,0800 = **462 962,96 €**.
+(b) 500 000 / 1,0400 = **480 769,23 €** → coût supplémentaire = 17 806,27 €. L'euro s'est affaibli : il faut plus d'euros pour obtenir les mêmes dollars.
+(c) 500 000 / 1,1200 = **446 428,57 €** → économie = 16 534,39 €.
+(d) La couverture fixe le coût dès aujourd'hui. Elle supprime à la fois le surcoût du (b) et l'économie du (c) : l'entreprise renonce à un gain possible pour obtenir une certitude. C'est un choix de gestion, pas une prédiction.
+</details>
+
+**Exercice 3 — Lire les parts de la BRI.** Les parts par contrepartie en avril 2025 sont 47 %, 49 % et 5 %, pour des montants publiés de 4 443, 4 627 et 441 milliards de dollars (total publié : 9 510). (a) Quelle est la somme des parts ? (b) À partir des montants, calcule les parts exactes et explique le mécanisme qui conduit à ce total. (c) Peut-on conclure que 49 % du marché est spéculatif ? Justifie.
+
+<details>
+<summary>Correction 3</summary>
+
+(a) 47 + 49 + 5 = **101 %**.
+(b) 4 443 / 9 510 ≈ 46,7 % ; 4 627 / 9 510 ≈ 48,7 % ; 441 / 9 510 ≈ 4,6 % ; total ≈ 100,0 %. Arrondies à l'unité, les trois parts sont arrondies vers le haut (47, 49, 5), d'où 101 %. C'est un calcul de l'auteur sur des montants publiés ; la BRI ne commente pas ce point dans les documents lus.
+(c) **Non.** « Autres institutions financières » est une catégorie d'**acteurs**, pas de **motivations**. Ces institutions peuvent se couvrir, rééquilibrer un portefeuille ou tenir le marché. Le même raisonnement vaut pour les données de la CFTC.
+</details>
+
+**Exercice 4 — Lire une catégorie CFTC.** Un rapport COT classe un acteur dans « Leveraged Funds » avec une grande position acheteuse sur des contrats à terme sur l'euro. (a) Peut-on affirmer qu'il spécule ? (b) Avec le calendrier traditionnel (données arrêtées le mardi, publiées le vendredi), combien de jours séparent la date des données de leur publication ? (c) Une nouvelle importante tombe le mercredi : le rapport en tient-il compte ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) **Non.** Le classement repose sur l'activité principale déclarée ; la CFTC dit ne pas connaître les raisons des positions. Le fonds peut avoir une position qui en couvre une autre ailleurs.
+(b) Du mardi au vendredi : **3 jours**.
+(c) **Non** : les positions sont arrêtées au mardi. Toute décision prise après n'apparaît pas dans ce rapport. (Cette réponse vaut pour le calendrier traditionnel. Le calendrier annoncé le 27 octobre 2026, non encore en vigueur d'après les pages consultées, prévoirait aussi une date d'arrêt le mercredi : la réponse devrait alors être rediscutée.)
+</details>
+
+**Exercice 5 — L'acteur officiel.** (a) Qui a créé l'ESF, en quelle année et avec quelle dotation ? (b) Pourquoi la Fed a-t-elle rejoint les interventions, et à quelle date ? (c) En quoi l'objectif de l'ESF diffère-t-il de celui d'un fonds spéculatif ? (d) Ce cas prouve-t-il que les interventions sont efficaces ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) Le Congrès et l'administration Roosevelt, en **1934**, sous la forme d'un compte du Trésor américain, avec **2 milliards de dollars** issus d'une hausse du prix de l'or.
+(b) Parce que les ressources de l'ESF seules étaient jugées trop faibles pour des opérations de l'ampleur nécessaire ; la Fed a rejoint en **1962**.
+(c) L'ESF vise la stabilité de la valeur d'échange du dollar (objectif public) ; un fonds spéculatif vise un profit.
+(d) **Non.** La source décrit l'existence, l'origine et le financement de l'outil ; elle ne mesure pas son efficacité. Conclure à l'efficacité serait une extrapolation non démontrée.
+</details>
+
+## 11. Quiz
+
+Le quiz (10 questions) est dans `quiz/L0.02.quiz.json`. Seuil : **80 %**, soit au moins 8 bonnes réponses sur 10. La question 6 porte sur le calendrier traditionnel de la CFTC et sera actualisée lorsque le nouveau calendrier annoncé sera effectivement appliqué.
+
+## 12. Résumé
+
+- Cinq motivations structurent les comportements : couverture, spéculation, allocation, tenue de marché, besoin de transaction.
+- Un même acteur peut en combiner plusieurs.
+- En avril 2025, d'après la BRI, les échanges de change (publication de décembre 2025) se font surtout entre teneurs de marché (47 %) et autres institutions financières (49 %) ; les clients non financiers pèsent 5 %. Ces parts publiées totalisent 101 % à cause des arrondis.
+- La catégorie d'un acteur (CFTC) ne révèle pas sa motivation. Calendrier traditionnel : données du mardi, publiées le vendredi ; un passage à deux publications hebdomadaires est annoncé pour la fin de 2026 (plan, non encore en vigueur d'après les pages consultées).
+- Les acteurs officiels poursuivent des objectifs publics ; l'ESF américain date de 1934 et la Fed a rejoint les interventions en 1962.
+- Le FX Global Code est un code de bonne pratique non contraignant (55 principes).
+
+## 13. Critères de maîtrise
+
+- [ ] Classer 5 acteurs selon leur motivation (Exercice 1).
+- [ ] Calculer l'effet d'une variation de taux sur un flux en devise avec et sans couverture (Exercice 2).
+- [ ] Expliquer pourquoi une catégorie d'acteur ne dit pas une intention (Exercices 3 et 4).
+- [ ] Citer deux faits vérifiés sur l'ESF et dire ce qu'ils ne prouvent pas (Exercice 5).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Consultées les **29 et 30 octobre 2026** :
+
+- **S-BIS-03** — BRI, *BIS Quarterly Review*, décembre 2025 (publié le 8 décembre 2025), article sur le marché des changes « Global FX markets: when hedging takes centre stage » (Huang, Krohn, Sushko), tableau A.2 : https://www.bis.org/publications/global-fx-markets-when-hedging-takes-centre-stage_1.pdf
+- **S-BIS-02** — BRI, « OTC foreign exchange turnover in April 2025 » (30 septembre 2025, chiffres **préliminaires**, remplacés par S-BIS-03) : https://www.bis.org/statistics/rpfx25_fx.htm
+- **S-FXC-01** — Foreign Exchange Committee (Fed de New York), « FX Global Code » : https://www.newyorkfed.org/fxc/fx-global-code
+- **S-CFTC-01** — CFTC, « Commitments of Traders (COT) Reports Descriptions » : https://cftc.gov/node/128971
+- **S-CFTC-02** — CFTC, communiqué n° 9316-26 du 27 octobre 2026, « CFTC Announces Semiweekly Publication of the COT Report » : https://www.cftc.gov/PressRoom/PressReleases/9316-26
+- **S-CFTC-03** — CFTC, « Commitments of Traders » (page de description des rapports) : https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm
+- **S-UST-01** — US Treasury, « Exchange Stabilization Fund History » : https://home.treasury.gov/policy-issues/international/exchange-stabilization-fund/exchange-stabilization-fund-history
+- **S-CLE-01** — Federal Reserve Bank of Cleveland, « A New Role for the Exchange Stabilization Fund » (Economic Commentary, 2008) : https://www.clevelandfed.org/publications/economic-commentary/2008/ec-20080801-a-new-role-for-the-exchange-stabilization-fund

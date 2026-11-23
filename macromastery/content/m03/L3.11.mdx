@@ -1,0 +1,239 @@
+---
+id: L3.11
+module: 3
+order: 11
+title: "Reconstituer une réaction de marché : méthode, fenêtres et honnêteté sur les données"
+title_initial: "Reconstituer une réaction de marché"
+level: "intermédiaire"
+duration_hours: 3
+prerequisites: ["L3.02", "L3.05", "L3.07"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L3.11.quiz.json"
+sources: ["S-YHF-01", "S-TST-01", "S-FXM-01", "S-BLS-04", "S-FDS-01"]
+---
+
+# L3.11 — Reconstituer une réaction de marché : méthode, fenêtres et honnêteté sur les données
+
+> **Convention de lecture.** **[Fait]** = énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. définir une **fenêtre d'événement** (avant, pendant, après) et des **instruments** ;
+2. construire une **fiche de reconstitution** avec niveaux, variations, source, heure et fiabilité ;
+3. **recouper** des chiffres de marché issus de sources différentes (cohérence, dates, horaires) ;
+4. séparer **réaction** et **cause** : autres nouvelles, effet des attentes déjà intégrées ;
+5. reconnaître quand les données disponibles **ne permettent pas** de conclure ;
+6. rédiger une conclusion **prudente**, sans récit causal artificiel.
+
+## 2. Prérequis
+
+- Surprise (L3.02, L3.03) ; fiche de lecture (L3.05) ; PCE et attentes (L3.07).
+
+## 3. Explication intuitive
+
+Après chaque publication, les commentaires fusent : « les rendements chutent », « le dollar monte », « l'or recule ». Mais **à quelle heure ?** Par rapport à **quel niveau ?** Avec **quelle source ?** Un rendement peut chuter en dix minutes puis remonter avant la clôture ; deux articles écrits à des heures différentes semblent alors se contredire sans que l'un ait tort. Reconstituer une réaction, c'est fixer une horloge, des instruments et un point de départ, puis ne rien écrire que les données lues permettent de dire. Avec des sources gratuites, on ne dispose que de bribes : la méthode consiste à le reconnaître et à ne combler les trous par aucun récit.
+
+## 4. Développement technique
+
+### 4.1 La fenêtre d'événement
+
+**[Définition]** (convention de cours)
+- **t₀** : heure officielle de publication (8 h 30, heure de l'Est, pour les rapports du BLS, L3.01).
+- **Fenêtre courte** : de t₀ − 5 minutes à t₀ + 5 minutes (réaction immédiate).
+- **Fenêtre moyenne** : jusqu'à t₀ + 60 minutes.
+- **Fenêtre de séance** : de la clôture précédente à la clôture du jour.
+- **Instruments** : rendement à 2 ans (anticipations de politique monétaire), rendement à 10 ans, indice dollar ou paire de devises, or, pétrole (si l'énergie est en cause), actions.
+- **Contrôle** : autres nouvelles du même créneau (pétrole, géopolitique, banque centrale).
+
+**[Interprétation]** La fenêtre courte isole le mieux l'effet d'une publication ; la séance entière mélange l'événement et tout le reste.
+
+### 4.2 La fiche de reconstitution
+
+**[Définition]** Pour chaque instrument : niveau avant ; niveau après ; variation ; **heure** ; **source** ; **fiabilité** (primaire, secondaire, tertiaire) ; **commentaire** (cohérence). Une case vide est une réponse légitime.
+
+### 4.3 Cas : le rapport sur l'emploi du 2 octobre 2026
+
+**Faits de la publication** — **[Fait]** (S-BLS-04, L3.05) : emploi +29 000 ; chômage 4,2 % ; révisions −60 000. Consensus : **84 000** (enquête Dow Jones, citée par S-YHF-01 et S-TST-01) ou **90 000** (FactSet, S-FDS-01) ; chômage attendu **4,1 %**.
+
+**[Calcul de l'auteur]**
+- surprise : 29 000 − 84 000 = **−55 000** (Dow Jones) ou 29 000 − 90 000 = **−61 000** (FactSet) : l'écart entre consensus est de **6 000** ;
+- surprise sur le chômage : 4,2 − 4,1 = **+0,1 point**.
+
+**Contexte de politique monétaire** — **[Fait]** (S-TST-01, CME FedWatch, 14 h 51 heure de l'Est) : probabilité d'une hausse à la réunion des **27–28 octobre** tombée à environ **18 %**, probabilité de maintien de la fourchette de 3,75–4,00 % d'environ **81 %** ; **[Fait]** (S-FXM-01, tertiaire) : le FOMC a relevé la fourchette de 25 points de base le 16 septembre. **[Interprétation]** Dans ce contexte, une hausse supplémentaire était en discussion : un emploi faible réduit sa probabilité. La probabilité avant la publication n'est pas lue.
+
+**[Calcul de l'auteur]** espérance de hausse (pour un pas supposé de 25 points de base) : 0,18 × 25 = **4,5 points de base** ; 0,81 + 0,18 = 0,99 (arrondis).
+
+**Niveaux et variations** :
+
+| Instrument | Donnée lue | Source | Heure / nature | Fiabilité |
+|---|---|---|---|---|
+| Rendement 10 ans | **5,28 %, +0,04 point** (+0,76 %) | S-YHF-01 | bandeau du site, libellé « marchés fermés » mais article rédigé en séance | secondaire ; **à vérifier** |
+| Rendement 10 ans | « chute » après le rapport | S-YHF-01, S-TST-01 | 9 h 54 / séance | secondaire, **sans niveau** |
+| Rendement 2 ans | **4,83 %, +5 points de base** sur la journée ; environ +50 sur septembre | S-FXM-01 | clôture du 2 octobre | tertiaire |
+| Euro-dollar | **−0,65 %** | S-FXM-01 | « séance couverte par le résumé du 3 octobre » | tertiaire |
+| Or | contrats à terme **4 214,30 $, +0,29 %** | S-TST-01 | 7 h 36 (avant le rapport) | secondaire |
+| Or | **4 162,30 $, −40,00 (−0,95 %)** | S-YHF-01 | bandeau ; instrument et heure non précisés | secondaire |
+| Pétrole WTI | **89,39 $, −3,75 %** (début de séance) ; **91,11 $, −1,90 %** (bandeau) | S-TST-01 ; S-YHF-01 | heures différentes | secondaire |
+| S&P 500 | **7 722,72, +0,73 %** | S-YHF-01 | bandeau | secondaire |
+| Dollar (indice) | **non lu** | — | — | — |
+
+**[Calcul de l'auteur]** (contrôles de cohérence)
+- 10 ans : 5,28 − 0,04 = **5,24** ; 0,04 ÷ 5,24 = **0,76 %** ✓ ;
+- or (bandeau) : 4 162,30 + 40,00 = **4 202,30** ; 40 ÷ 4 202,30 = **0,95 %** ✓ ; contrats à terme de 7 h 36 : 4 214,30 ÷ 1,0029 = **4 202,1** (même clôture précédente, à l'arrondi près) ✓ ;
+- écart entre les deux cotations de l'or : (4 162,30 − 4 214,30) ÷ 4 214,30 = **−1,23 %** (instruments et heures différents : **non comparables**) ;
+- WTI : 91,11 + 1,76 = **92,87** ; 89,39 ÷ 92,87 − 1 = **−3,75 %** ✓ (même clôture précédente) ; le pétrole a **remonté** au cours de la séance (de −3,75 % à −1,90 %) ;
+- S&P 500 : 7 722,72 − 56,27 = **7 666,45** ; 56,27 ÷ 7 666,45 = **0,73 %** ✓.
+
+**[Interprétation]**
+1. **Les récits se contredisent en apparence** : des titres parlent d'un rendement qui « chute », d'autres d'un 10 ans qui « monte malgré » un rapport faible. Les deux sont compatibles avec une **chute immédiate puis un retour** (fenêtre courte contre séance), mais **les niveaux intermédiaires n'ont pas été lus** : on ne peut pas le démontrer.
+2. Le **2 ans à +5 points de base** et l'euro-dollar à −0,65 % sur la séance (tertiaire) indiquent une séance finale **dans le sens d'un dollar plus ferme**, pas faible : l'inverse du schéma classique, **à vérifier avec une source primaire de marché**.
+3. Le **pétrole** en forte baisse (−1,9 % à −3,75 %) est un facteur concurrent pour les rendements, les anticipations d'inflation et l'or : **la réaction ne peut pas être attribuée au seul rapport sur l'emploi**.
+4. **Conclusion prudente** : les données gratuites lues ne permettent pas d'établir la réaction du dollar ni de l'or à la publication ; elles montrent que le marché a d'abord réduit la probabilité d'une hausse (18 % pour octobre à 14 h 51), puis que les clôtures n'ont pas suivi un schéma simple.
+
+### 4.4 Ce que la méthode refuse de faire
+
+**[Définition]** (convention de cours)
+- Ne pas écrire « le dollar a baissé à cause de l'emploi » sans fenêtre ni série.
+- Ne pas comparer des cotations d'heures ou d'instruments différents.
+- Ne pas utiliser un titre sans niveau comme une donnée.
+- Ne pas retenir un seul jour comme une loi.
+
+### 4.5 Quand la reconstitution est possible
+
+**[Interprétation]** Elle est possible avec des séries intrajournalières officielles ou sous licence : cours à la minute du pétrole, du dollar, des rendements ; contrats à terme sur les taux directeurs ; et consensus horodaté. Ces séries ne sont pas disponibles gratuitement ici : **c'est la limite structurelle de l'exercice** (voir la limite sur les consensus dans le programme du module).
+
+## 5. Définitions essentielles
+
+- **Fenêtre d'événement** : intervalle de temps autour d'une publication.
+- **t₀** : heure de publication.
+- **Fiche de reconstitution** : tableau instrument / niveau / heure / source / fiabilité.
+- **Fiabilité** : primaire (organisme ou bourse), secondaire (presse spécialisée), tertiaire (agrégateur, site non vérifié).
+- **Facteur concurrent** : autre nouvelle susceptible d'expliquer le même mouvement.
+- **Attente intégrée** : part de l'information déjà reflétée avant la publication.
+
+## 6. Exemples chiffrés
+
+**6.1 Surprise.** 29 000 − 84 000 = −55 000.
+**6.2 Cohérence du 10 ans.** 5,28 − 0,04 = 5,24 ; 0,04 ÷ 5,24 = 0,76 %.
+**6.3 Espérance de hausse.** 0,18 × 25 = 4,5 points de base.
+**6.4 Fenêtre courte (SIMULATION).** Euro-dollar fictif : 1,1650 à 8 h 25 ; 1,1590 à 8 h 35 : variation (1,1590 ÷ 1,1650 − 1) = −0,515 % (60 pips).
+
+### 6.5 Cas historique documenté — le 2 octobre 2026
+
+**[Fait]** : voir 4.3 (S-BLS-04, S-FDS-01, S-YHF-01, S-TST-01, S-FXM-01).
+
+**[Calcul de l'auteur]** Surprise de −55 000 à −61 000 ; probabilité de hausse d'octobre à 18 % ; contrôles de cohérence des cotations satisfaits.
+
+**[Interprétation]** Le cas illustre la difficulté d'une reconstitution avec des sources gratuites : horaires flous, instruments mélangés, facteur pétrole. **Limites** : aucun niveau intermédiaire ; aucun indice dollar ; probabilité avant publication non lue ; articles CNBC et Quartz vus par leur titre seulement (pages inaccessibles) ; l'horaire de publication cité par un site (8 h 23) diffère de 8 h 30 (**à vérifier**).
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Méthode d'entraînement** : après chaque publication majeure, remplir la fiche avec trois instruments (2 ans, dollar ou paire, or) et noter les cases vides.
+- **Dollar** : ne conclure que sur la fenêtre courte et avec le niveau de départ.
+- **Or** : surveiller l'effet des rendements réels ; un pétrole en forte baisse peut jouer sur les anticipations d'inflation (hypothèse).
+- **Attentes** : un chiffre faible peut ne pas affaiblir le dollar si le marché avait déjà intégré la faiblesse ou si d'autres nouvelles dominent.
+- **Prudence** : aucune reconstitution ne garantit la reproductibilité de la réaction.
+
+## 8. Erreurs courantes
+
+1. Comparer des cotations d'heures ou d'instruments différents.
+2. Prendre un titre de presse pour une donnée.
+3. Attribuer toute la séance à la publication.
+4. Ignorer les facteurs concurrents (pétrole).
+5. Ne pas préciser le fuseau horaire.
+6. Combler les cases manquantes par un récit.
+7. Conclure d'un jour à une règle.
+
+## 9. Limites de l'interprétation
+
+- Données de marché issues de sources secondaires et tertiaires, lues par résumé.
+- Aucune série intrajournalière ; niveaux avant publication non lus.
+- Le fuseau horaire de la fiche est celui de l'Est des États-Unis ; l'heure du site (8 h 23) est signalée comme anormale.
+- Deux consensus (Dow Jones 84 000 et FactSet 90 000) coexistent ; aucun n'est vérifié sur un document primaire.
+- Le dollar (indice) n'a pas été lu.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Surprises.** Publié : +29 000. Consensus : 84 000 (A), 90 000 (B). Calcule les deux surprises et leur écart.
+
+<details>
+<summary>Correction 1</summary>
+
+−55 000 ; −61 000 ; écart de consensus **6 000**.
+</details>
+
+**Exercice 2 — Cohérence.** Le 10 ans cote 5,28 %, +0,04 point. Quel était le niveau précédent ? Quelle variation en % ?
+
+<details>
+<summary>Correction 2</summary>
+
+5,28 − 0,04 = **5,24** ; 0,04 ÷ 5,24 = **0,76 %**.
+</details>
+
+**Exercice 3 — Probabilités.** Probabilité de hausse de 25 points de base : 35 % avant, 18 % après. Calcule les espérances de hausse et leur variation (SIMULATION sur la probabilité avant).
+
+<details>
+<summary>Correction 3</summary>
+
+0,35 × 25 = **8,75** ; 0,18 × 25 = **4,5** ; variation **−4,25 points de base**.
+</details>
+
+**Exercice 4 — Fenêtre courte (SIMULATION).** Euro-dollar : 1,1650 avant, 1,1590 après. Variation ?
+
+<details>
+<summary>Correction 4</summary>
+
+1,1590 ÷ 1,1650 − 1 = **−0,515 %** (60 pips).
+</details>
+
+**Exercice 5 — Or.** Cotation A (7 h 36, contrats à terme) 4 214,30 ; cotation B (bandeau, heure inconnue) 4 162,30. Peut-on en déduire la réaction de l'or au rapport ?
+
+<details>
+<summary>Correction 5</summary>
+
+L'écart est de −1,23 %, mais **non**, car les instruments (contrats à terme et probable cours au comptant) et les heures sont différents, et le pétrole a aussi bougé.
+</details>
+
+**Exercice 6 — Critique.** « Le rapport faible a fait chuter le dollar et monter l'or, preuve du schéma classique. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) Aucun niveau de l'indice dollar n'est lu. (2) Le 2 ans a fini en hausse (+5 points de base, tertiaire) et l'euro-dollar en baisse. (3) L'or est coté en baisse sur le bandeau. (4) Le pétrole, facteur concurrent, a chuté. (5) Un seul jour.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L3.11.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Une reconstitution fixe t₀, des fenêtres, des instruments et une fiabilité par source.
+- Les chiffres de marché se recoupent par des contrôles de cohérence.
+- Le 2 octobre 2026 : surprise −55 000 à −61 000 ; probabilité de hausse d'octobre ≈ 18 % ; clôtures sans schéma simple.
+- Les données gratuites ne permettent pas de conclure sur le dollar et l'or ; il faut le dire.
+- Réaction ≠ cause : le pétrole est un facteur concurrent.
+
+## 13. Critères de maîtrise
+
+- [ ] Définir t₀ et des fenêtres.
+- [ ] Remplir une fiche avec fiabilité (Exercice 1 à 3).
+- [ ] Faire un contrôle de cohérence (Exercice 2).
+- [ ] Refuser une conclusion non permise (Exercices 5 et 6).
+- [ ] Rédiger une conclusion prudente.
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-YHF-01** — Yahoo Finance, Stock Market Today (2 oct. 2026) : https://finance.yahoo.com/markets/stocks/articles/stock-market-today-oct-2-135416764.html
+- **S-TST-01** — TheStreet, Stock Market Today (2 oct. 2026) : https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-02-2026
+- **S-FXM-01** — FX Macro Data (tertiaire) : https://fxmacrodata.com/articles/september-2026-nfp-jobs-report-why-it-matters
+- **S-BLS-04** — BLS, The Employment Situation, septembre 2026.
+- **S-FDS-01** — FactSet Insight (consensus).
+
+**Définitions de cours non rattachées à une source officielle lue :** fenêtres d'événement, fiche de reconstitution, niveaux de fiabilité. **Points non vérifiés :** niveaux intermédiaires, indice dollar, probabilité avant publication, heure de publication citée par un site.

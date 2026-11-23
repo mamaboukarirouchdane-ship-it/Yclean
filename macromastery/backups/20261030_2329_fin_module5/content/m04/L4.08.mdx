@@ -1,0 +1,219 @@
+---
+id: L4.08
+module: 4
+order: 8
+title: "Yen, livre sterling et franc suisse : trois devises, trois logiques"
+title_initial: "Yen, livre, franc suisse"
+level: "intermédiaire à avancé"
+duration_hours: 3
+prerequisites: ["L2.03", "L4.01", "L4.02", "L4.06", "L4.07"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L4.08.quiz.json"
+sources: ["S-NTH-01", "S-MUF-01", "S-BOJ-03", "S-BOE-02", "S-BOE-03", "S-ADM-03", "S-SNB-02"]
+---
+
+# L4.08 — Yen, livre sterling et franc suisse
+
+> **Convention de lecture.** **[Fait]** = énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique** ; la plupart des décisions de banques centrales de cette leçon sont lues par des **sources secondaires**, sauf mention contraire. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. décrire pour chacune des trois devises le **facteur dominant** de la politique monétaire (sortie de taux très bas, inflation d'énergie, taux nul et intervention) ;
+2. calculer des **différentiels** avec la Fed et des **taux réels** de politique monétaire ;
+3. lire un **vote partagé** de comité de politique monétaire et son lien avec la réaction du marché ;
+4. exprimer un mouvement de change **dans les deux sens** (USD/JPY et valeur du yen) ;
+5. calculer un cours à terme implicite à partir d'un différentiel de taux (rappel de L4.01) ;
+6. distinguer ce qui est **lu à la source** de ce qui est **rapporté** par un tiers.
+
+## 2. Prérequis
+
+- Banques centrales (L2.03) ; parité des taux et différentiels (L4.01, L4.02) ; dollar et euro (L4.06, L4.07).
+
+## 3. Explication intuitive
+
+Ces trois devises ne se lisent pas avec la même grille. Le **yen** est la devise d'un pays qui sort de longues années de taux quasi nuls : chaque relèvement compte, et les surprises sur le **rythme** futur comptent encore plus que le niveau. La **livre sterling** est la devise d'une économie confrontée à une inflation que l'énergie a ravivée, avec une banque centrale **divisée** sur la réponse. Le **franc suisse** est la devise d'une banque centrale qui garde son taux à **zéro**, parce que l'inflation est très basse, et qui se dit prête à **intervenir** sur le marché des changes. La même question vaut pour les trois : **qu'est-ce qui était déjà dans les prix** quand la décision est tombée ?
+
+## 4. Développement technique
+
+### 4.1 Le yen : la fin des taux très bas
+
+**[Fait]** (S-NTH-01, Nation Thailand, vote du 18 septembre 2026, **source secondaire**, résumé automatique) : la Banque du Japon relève son taux directeur de 0,25 point, de **1,00 %** à **1,25 %**, le plus haut niveau depuis 1995 ; vote **7 contre 2** ; la banque indique que les pressions inflationnistes se répercutent sur les prix à la consommation, que les anticipations d'inflation à moyen et long terme continuent de monter et que les taux réels restent bas ; l'article ne donne ni l'indice des prix actuel ni le niveau du change.
+
+**[Fait]** (S-BOJ-03, déclaration de politique monétaire de la Banque du Japon du 31 juillet 2026, **source primaire**, résumé automatique) : vote **8 contre 1** pour maintenir un taux « autour de 1,0 % » ; un membre propose environ 1,25 %.
+
+**[Fait]** (S-MUF-01, MUFG Research, 24 septembre 2026, secondaire, résumé automatique) : l'USD/JPY est passé d'un point bas de semaine à **153,41** à plus de **157** après le vote partagé de la Banque du Japon, puis à plus de **157,50** après la conférence de presse du gouverneur, qui n'a pas inversé la baisse du yen ; le CPI d'août, publié le 18 septembre, était inférieur aux attentes (aucun chiffre donné) ; la page ne cite aucune intervention du ministère des Finances.
+
+**[Calcul de l'auteur]** Passage de 153,41 à 157,50 : **+2,67 %** pour l'USD/JPY ; la **valeur du yen** en dollars varie de 153,41 ÷ 157,50 − 1 = **−2,60 %** (les deux mesures décrivent le même mouvement). Part des voix pour la hausse : 7 ÷ 9 = **77,8 %** ; différentiel avec la Fed (milieu de fourchette 3,875) : 3,875 − 1,25 = **2,625** points.
+
+**[Interprétation]** Le yen a baissé **après une hausse de taux** : la hausse était attendue (MUFG), le vote partagé a pesé sur la perspective de nouvelles hausses, et le différentiel avec le dollar reste large. **Cela ne prouve pas** que les deux dissidents expliquent l'ensemble du mouvement, car la Fed avait relevé ses taux deux jours plus tôt (L4.02). **Limite** : la réunion d'octobre de la Banque du Japon n'est pas lue ; l'indice des prix japonais n'est pas lu ; le taux réel japonais n'est donc pas calculé.
+
+### 4.2 Un cours à terme implicite pour l'USD/JPY
+
+**[Définition]** Rappel de L4.01 : avec les taux directeurs comme **substituts** de taux d'intérêt (approximation grossière), le cours à terme à un an = comptant × (1 + taux du yen) ÷ (1 + taux du dollar).
+
+**[Calcul de l'auteur]** 157,50 × 1,0125 ÷ 1,03875 ≈ **153,52** ; décote à terme du dollar contre yen : 153,52 ÷ 157,50 − 1 ≈ **−2,53 %**.
+
+**[Interprétation]** Le dollar se traite à terme **en dessous** du comptant parce que son taux est plus élevé ; ce n'est **pas une prévision** de la baisse de l'USD/JPY (L4.01).
+
+### 4.3 La livre sterling : inflation d'énergie, comité divisé
+
+**[Fait]** (S-BOE-02, MTS Insights, résumé de la décision du 17 septembre 2026, secondaire ; S-BOE-03, ForexCracked, secondaire) : taux directeur maintenu à **3,75 %** ; vote **6 contre 3**, les trois dissidents voulant 4,00 % ; IPC de **3,1 %** sur un an en août, soit 1,1 point au-dessus de la cible de 2 %, dont environ 0,7 point attribué directement à l'énergie (carburants) ; inflation des services **3,4 %** (4,5 % en mars) ; salaires privés réguliers **2,9 %** (3,3 % début 2026) ; chômage **4,9 %** ; IPC attendu autour de **3,75 %** au quatrième trimestre 2026 ; **aucune orientation explicite** ; le risque d'effets de second tour aurait augmenté. Brent à 106 $ le 14 septembre, en hausse de 36 % depuis le rapport de juillet ; gaz de gros britannique à 207 pence par therm, en hausse de 78 %. (Les éléments sur le portefeuille d'obligations d'État ne sont pas retenus car non recoupés.)
+
+**[Calcul de l'auteur]** Écart d'inflation : 3,1 − 2 = **1,1** ; part de l'énergie : 0,7 ÷ 1,1 = **63,6 %** ; hausse du taux à 4,00 % : +**0,25** ; taux réel de politique (ex post, inflation d'août) : 3,75 − 3,1 = **+0,65** point ; différentiel avec la Fed : 3,875 − 3,75 = **0,125** point ; baisse de l'inflation des services : 4,5 − 3,4 = **−1,1** point ; part des dissidents : 3 ÷ 9 = **33,3 %** ; niveau implicite du Brent avant la hausse : 106 ÷ 1,36 ≈ **77,9 $** ; gaz : 207 ÷ 1,78 ≈ **116,3** pence.
+
+**[Interprétation]** La BoE fait face à un choc d'énergie (inflation d'ensemble en hausse) alors que l'inflation des services et les salaires **ralentissent** : un tiers du comité veut resserrer, les deux tiers attendent. C'est la **répartition des votes** qui informe le marché sur la prochaine décision, pas le niveau du taux. **Limite** : la réaction de la livre n'est pas documentée ; la réunion de novembre n'est pas lue ; le taux réel n'utilise pas l'inflation de septembre.
+
+### 4.4 Le franc suisse : taux nul et intervention possible
+
+**[Fait]** (S-ADM-03, Admiral Markets, décision du 24 septembre 2026, secondaire, qui cite les publications de la BNS sans les avoir vérifiées) : taux directeur maintenu à **0 %** pour la cinquième réunion consécutive ; prévision d'inflation moyenne : **0,7 %** (2026), **0,8 %** (2027), **0,8 %** (2028), à taux inchangé ; IPC de **0,8 %** en août ; la BNS se dit « prête à être active sur le marché des changes si nécessaire » ; l'article rappelle que les taux négatifs ne sont pas exclus, mais que le seuil pour y revenir est jugé « très élevé » ; USD/CHF à environ **0,827** après l'annonce ; prochaine réunion le **10 décembre 2026**.
+
+**[Fait]** (S-SNB-02, résumé de la discussion de la BNS du 22 octobre 2026, **source primaire**, résumé automatique) : taux 0 % ; inflation 0,8 % ; le franc se serait déprécié d'environ 3 % en termes pondérés depuis juin ; le portage est mentionné ; une intervention reste possible.
+
+**[Calcul de l'auteur]** Taux réel (ex post) : 0 − 0,8 = **−0,80** point ; différentiel avec la Fed : 3,875 − 0 = **3,875** points ; USD/CHF 0,827 correspond à 1 ÷ 0,827 ≈ **1,209** dollar par franc ; différentiel avec l'euro (taux de dépôt 2,50 %) : 2,50 − 0 = **2,50** points.
+
+**[Interprétation]** Avec un taux nul et un différentiel large, le franc est une devise de **financement** possible (L4.10) ; le franc s'est affaibli sur la période, ce qui est cohérent avec un différentiel de taux élevé, **sans que le lien soit prouvé**. La désignation « valeur refuge » est une convention d'usage non sourcée ici.
+
+### 4.5 Comparer les trois banques centrales
+
+**[Calcul de l'auteur]** Taux directeurs et différentiels avec la Fed (3,875) : Banque du Japon 1,25 (2,625) ; BoE 3,75 (0,125) ; BCE 2,50 (1,375, L4.07) ; BNS 0,00 (3,875). Taux réels ex post : BoE +0,65 ; BCE −1,30 ; BNS −0,80 ; Japon non calculé.
+
+**[Interprétation]** Les différentiels de niveau classent les devises, mais la **trajectoire** (hausses attendues) et la **surprise** par rapport aux anticipations de la veille comptent davantage (L4.02).
+
+## 5. Définitions essentielles
+
+- **Vote partagé** : décision prise avec des voix dissidentes ; indice sur la trajectoire.
+- **Taux réel ex post** : taux directeur moins inflation observée.
+- **Effets de second tour** : transmission d'un choc de prix aux salaires et aux prix.
+- **Intervention de change** : achat ou vente de devises par une banque centrale ou un ministère.
+- **Devise de financement** : devise à taux bas dans laquelle on emprunte (L4.10).
+- **Cours à terme implicite** : comptant ajusté du différentiel de taux (L4.01).
+- **Valeur pondérée d'une devise** : valeur contre un panier de partenaires.
+
+## 6. Exemples chiffrés
+
+**6.1 Yen.** USD/JPY 153,41 → 157,50 : +2,67 % ; valeur du yen −2,60 %.
+**6.2 À terme.** 157,50 × 1,0125 ÷ 1,03875 ≈ 153,52.
+**6.3 Livre.** 3,75 − 3,1 = +0,65 ; 0,7 ÷ 1,1 = 63,6 %.
+**6.4 Franc.** 0 − 0,8 = −0,80 ; 1 ÷ 0,827 ≈ 1,209.
+
+### 6.5 Cas historique documenté — septembre 2026 : hausse japonaise, pause britannique, taux nul suisse
+
+**[Fait]** (S-NTH-01, S-MUF-01, S-BOE-02, S-BOE-03, S-ADM-03, S-SNB-02) : voir 4.1 à 4.4.
+
+**[Calcul de l'auteur]** Banque du Japon : 1,00 → 1,25 %, vote 7–2 ; BoE : 3,75 %, vote 6–3 ; BNS : 0 % ; USD/JPY +2,67 % entre le point bas de semaine et la fin de la conférence de presse.
+
+**[Interprétation]** Trois banques centrales, trois situations, et un **dollar qui monte** dans les trois cas, en lien possible avec la hausse de la Fed du 16 septembre (L4.02). **Ce qu'on ne peut pas conclure** : la part de chaque décision dans le mouvement ; les niveaux de la livre ; la réunion d'octobre de la Banque du Japon ; l'état du marché après le 24 septembre. **Limites** : sources secondaires pour la Banque du Japon, la BoE et la BNS de septembre ; données non synchrones.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **USD/JPY** : lire le différentiel, mais surtout le **rythme** attendu des hausses et les votes ; une hausse de taux peut accompagner un yen plus faible.
+- **GBP/USD** : séparer l'inflation d'énergie de l'inflation des services ; suivre la répartition du comité.
+- **USD/CHF** : tenir compte de l'orientation de la BNS et de la possibilité d'intervention ; vérifier les déclarations officielles.
+- **Or** : coté en dollars, il se compare aussi en yen, en livres et en francs ; ces liens ne sont pas étudiés ici (module 5).
+- **Méthode** : comparer des devises sur une même date et un même instrument ; écrire les anticipations de la veille.
+- **Prudence** : un différentiel élevé ne garantit ni la hausse ni la baisse d'une devise.
+
+## 8. Erreurs courantes
+
+1. Croire qu'une hausse de taux renforce toujours la devise.
+2. Ne regarder que le niveau du taux et non les votes et la trajectoire.
+3. Oublier l'inversion de l'USD/JPY (hausse = yen plus faible).
+4. Comparer des taux réels calculés avec des inflations de dates différentes.
+5. Prendre le cours à terme pour une prévision.
+6. Considérer comme vérifiée une décision lue par la presse.
+7. Attribuer un mouvement à un seul événement alors que la Fed avait agi deux jours plus tôt.
+
+## 9. Limites de l'interprétation
+
+- Les décisions de la Banque du Japon (septembre), de la BoE et de la BNS (septembre) sont lues par des sources secondaires ; seule la déclaration du 31 juillet de la Banque du Japon et le résumé de la discussion de la BNS (22 octobre) sont des sources primaires.
+- La réunion d'octobre de la Banque du Japon et celle de novembre de la BoE ne sont pas lues.
+- Aucun indice des prix japonais n'est lu ; le taux réel du yen n'est pas calculé.
+- Aucun niveau de la livre n'est lu ; la réaction de chaque devise n'est pas isolée.
+- Les taux directeurs sont des substituts imparfaits des taux d'intérêt pour le cours à terme.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Yen dans les deux sens.** USD/JPY de 153,41 à 157,50. Variation de l'USD/JPY et de la valeur du yen ?
+
+<details>
+<summary>Correction 1</summary>
+
+157,50 ÷ 153,41 − 1 = **+2,67 %** ; 153,41 ÷ 157,50 − 1 = **−2,60 %**.
+</details>
+
+**Exercice 2 — Différentiels.** Fed (milieu) 3,875 ; Japon 1,25 ; BoE 3,75 ; BNS 0. Différentiels avec la Fed ?
+
+<details>
+<summary>Correction 2</summary>
+
+Japon **2,625** ; BoE **0,125** ; BNS **3,875**.
+</details>
+
+**Exercice 3 — Cours à terme.** USD/JPY 157,50 ; taux du yen 1,25 % ; taux du dollar 3,875 %. Cours à terme à un an (substituts) et décote ?
+
+<details>
+<summary>Correction 3</summary>
+
+157,50 × 1,0125 ÷ 1,03875 ≈ **153,52** ; 153,52 ÷ 157,50 − 1 ≈ **−2,53 %**.
+</details>
+
+**Exercice 4 — Livre.** Bank Rate 3,75 % ; IPC d'août 3,1 % dont 0,7 point d'énergie ; cible 2 %. Taux réel ? Part de l'énergie dans l'écart à la cible ?
+
+<details>
+<summary>Correction 4</summary>
+
+3,75 − 3,1 = **+0,65** ; écart 1,1 ; 0,7 ÷ 1,1 = **63,6 %**.
+</details>
+
+**Exercice 5 — Votes.** Banque du Japon 7–2 ; BoE 6–3. Part de voix minoritaires ? Que conclure ?
+
+<details>
+<summary>Correction 5</summary>
+
+2 ÷ 9 = **22,2 %** ; 3 ÷ 9 = **33,3 %**. Plus la minorité est forte, plus la trajectoire est incertaine, sans que le sens soit donné : la minorité britannique voulait resserrer, la minorité japonaise (au vu de la réaction du marché) a été lue comme un frein, ce qui reste une interprétation.
+</details>
+
+**Exercice 6 — Critique.** « La Banque du Japon relève ses taux : le yen doit monter. » Donne quatre objections à partir des faits de la leçon.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) Le yen a baissé après la hausse (USD/JPY de 153,41 à plus de 157,50). (2) La hausse était attendue. (3) Le vote 7–2 a pesé sur la trajectoire. (4) La Fed avait relevé ses taux deux jours plus tôt. (5) Le différentiel avec le dollar reste de 2,625 points. (6) Les sources sont secondaires.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L4.08.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Banque du Japon : taux de 1,00 à 1,25 % le 18 septembre 2026 (vote 7–2) ; l'USD/JPY est monté de 153,41 à plus de 157,50.
+- BoE : 3,75 % maintenu (6–3) ; IPC 3,1 % dont environ 0,7 point d'énergie ; services en baisse.
+- BNS : 0 % ; inflation 0,8 % ; intervention possible ; différentiel avec la Fed 3,875 points.
+- Un même mouvement se décrit dans les deux sens ; une hausse de taux peut accompagner une devise plus faible.
+- La plupart des décisions sont lues par des sources secondaires : à confirmer.
+
+## 13. Critères de maîtrise
+
+- [ ] Exprimer un mouvement dans les deux sens (Exercice 1).
+- [ ] Calculer des différentiels (Exercice 2).
+- [ ] Calculer un cours à terme implicite (Exercice 3).
+- [ ] Calculer un taux réel et une part d'énergie (Exercice 4).
+- [ ] Lire des votes partagés et critiquer une conclusion (Exercices 5 et 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-NTH-01** — Nation Thailand (secondaire), « Bank of Japan lifts rate to 31-year high of 1.25 % on Sept 18 » : https://www.nationthailand.com/news/40071184
+- **S-MUF-01** — MUFG Research (secondaire), « USD/JPY: Watch for volatility over Japan's autumn holidays » (24 septembre 2026) : https://mufgresearch.com/fx/jpy-weekly-24-september-2026/
+- **S-BOJ-03** — Banque du Japon (primaire), déclaration du 31 juillet 2026 : https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260731a.pdf
+- **S-BOE-02**, **S-BOE-03** — MTS Insights et ForexCracked (secondaires), décision de la BoE du 17 septembre 2026 (voir L2.03).
+- **S-ADM-03** — Admiral Markets (secondaire), décision de la BNS du 24 septembre 2026 : https://admiralmarkets.com/analytics/traders-blog/snb-rate-decision-september-2026
+- **S-SNB-02** — Banque nationale suisse (primaire), résumé de la discussion du 22 octobre 2026 : https://www.snb.ch/en/publications/communication/summaries/zus_20261022
+
+**Définitions de cours non rattachées à une source officielle lue :** taux réel ex post, cours à terme avec taux directeurs, désignation de valeur refuge. **Points non vérifiés :** décision de la Banque du Japon du 18/09/2026 à la source, décision de la BoE à la source, réunion d'octobre de la Banque du Japon, niveaux de la livre, indice des prix japonais.

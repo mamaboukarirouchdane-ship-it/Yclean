@@ -1,0 +1,235 @@
+{
+  "lessonId": "L2.11",
+  "title": "Quiz — Lire un communiqué et une conférence de presse",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : Fed (communiqués 16/09 et 28/10/2026), minutes, sources secondaires signalées (Admiral, StoneX).",
+  "questions": [
+    {
+      "id": "L2.11-Q1",
+      "type": "mcq",
+      "prompt": "Quel est le changement le plus informatif entre les communiqués de septembre et d'octobre 2026 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La date de publication"
+        },
+        {
+          "id": "b",
+          "text": "L'ordre des paragraphes"
+        },
+        {
+          "id": "c",
+          "text": "Le vote passe de 12–0 à 10–2, avec deux voix pour une hausse"
+        },
+        {
+          "id": "d",
+          "text": "Le logo de la Fed"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Deux membres voulaient resserrer immédiatement : le vote est un signal sur le biais du Comité, plus informatif que des variations de formulation.",
+      "tags": [
+        "vote"
+      ]
+    },
+    {
+      "id": "L2.11-Q2",
+      "type": "mcq",
+      "prompt": "Pourquoi faut-il être prudent sur la comparaison « solide » → « forte » dans cette leçon ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce qu'elle repose sur des résumés et un commentaire de marché, non sur le texte original"
+        },
+        {
+          "id": "b",
+          "text": "Parce que la Fed n'emploie jamais d'adjectifs"
+        },
+        {
+          "id": "c",
+          "text": "Parce que le mot « forte » n'existe pas"
+        },
+        {
+          "id": "d",
+          "text": "Parce que la comparaison est interdite"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Une comparaison de mots exige le texte original ; la leçon signale cette limite.",
+      "tags": [
+        "methode"
+      ]
+    },
+    {
+      "id": "L2.11-Q3",
+      "type": "mcq",
+      "prompt": "Que signifie noter « refusé » dans l'analyse d'une conférence de presse ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un journaliste exclu"
+        },
+        {
+          "id": "b",
+          "text": "Une décision rejetée par le vote"
+        },
+        {
+          "id": "c",
+          "text": "Une erreur de transcription"
+        },
+        {
+          "id": "d",
+          "text": "Une question écartée ou un sujet sur lequel le président ne s'engage pas"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Ce qui est refusé (par exemple un engagement sur une décision future) est une information en soi.",
+      "tags": [
+        "conference"
+      ]
+    },
+    {
+      "id": "L2.11-Q4",
+      "type": "mcq",
+      "prompt": "Probabilité de hausse de 25 pb : 85 %. Quelle est la variation attendue ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "25 pb"
+        },
+        {
+          "id": "b",
+          "text": "21,25 pb"
+        },
+        {
+          "id": "c",
+          "text": "15 pb"
+        },
+        {
+          "id": "d",
+          "text": "85 pb"
+        }
+      ],
+      "correct": "b",
+      "explanation": "0,85 × 25 = 21,25 pb : c'est l'espérance de la variation selon les probabilités de marché.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L2.11-Q5",
+      "type": "mcq",
+      "prompt": "Avec 85 % de probabilité, quelle est la surprise si la Fed maintient ses taux ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−25 pb"
+        },
+        {
+          "id": "b",
+          "text": "+3,75 pb"
+        },
+        {
+          "id": "c",
+          "text": "0 pb"
+        },
+        {
+          "id": "d",
+          "text": "−21,25 pb"
+        }
+      ],
+      "correct": "d",
+      "explanation": "0 − 21,25 = −21,25 pb : le maintien est nettement moins restrictif que le prix.",
+      "tags": [
+        "calcul",
+        "surprise"
+      ]
+    },
+    {
+      "id": "L2.11-Q6",
+      "type": "mcq",
+      "prompt": "Avec 85 % de probabilité, quelle est la surprise si la Fed relève de 25 pb ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−3,75 pb"
+        },
+        {
+          "id": "b",
+          "text": "+25 pb"
+        },
+        {
+          "id": "c",
+          "text": "+3,75 pb"
+        },
+        {
+          "id": "d",
+          "text": "0 pb"
+        }
+      ],
+      "correct": "c",
+      "explanation": "25 − 21,25 = +3,75 pb : l'issue la plus probable n'est que légèrement plus restrictive que le prix.",
+      "tags": [
+        "calcul",
+        "surprise"
+      ]
+    },
+    {
+      "id": "L2.11-Q7",
+      "type": "mcq",
+      "prompt": "Quel statut donner à la probabilité de 85 % de hausse en décembre ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une estimation de marché citée par une source secondaire, non une décision de la Fed"
+        },
+        {
+          "id": "b",
+          "text": "Une décision de la Fed"
+        },
+        {
+          "id": "c",
+          "text": "Une prévision officielle du FOMC"
+        },
+        {
+          "id": "d",
+          "text": "Un fait établi par le communiqué"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Elle provient d'un article de presse citant des données de marché ; elle ne doit pas être présentée comme un fait de la Fed.",
+      "tags": [
+        "sources"
+      ]
+    },
+    {
+      "id": "L2.11-Q8",
+      "type": "mcq",
+      "prompt": "Quelle est la bonne lecture du refus du président de s'engager sur décembre ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La hausse est exclue"
+        },
+        {
+          "id": "b",
+          "text": "La décision dépend des données à venir, ce qui n'exclut ni une hausse ni un maintien"
+        },
+        {
+          "id": "c",
+          "text": "La hausse est certaine"
+        },
+        {
+          "id": "d",
+          "text": "La Fed ne se réunira pas"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Refuser de s'engager laisse la décision ouverte ; la valeur informative des publications avant la réunion augmente.",
+      "tags": [
+        "interpretation"
+      ]
+    }
+  ],
+  "revision": 1
+}

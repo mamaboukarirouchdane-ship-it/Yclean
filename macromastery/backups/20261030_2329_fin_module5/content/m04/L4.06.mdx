@@ -1,0 +1,217 @@
+---
+id: L4.06
+module: 4
+order: 6
+title: "Le dollar américain : monnaie de réserve, de financement et indice de référence"
+title_initial: "Le dollar"
+level: "intermédiaire à avancé"
+duration_hours: 3
+prerequisites: ["L4.02", "L4.04", "L4.05"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L4.06.quiz.json"
+sources: ["S-BIS-08", "S-FED-25", "S-TRN-01", "S-VBZ-01", "S-ECB-04"]
+---
+
+# L4.06 — Le dollar américain
+
+> **Convention de lecture.** **[Fait]** = énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. expliquer la place du dollar dans le marché des changes et dans le financement international ;
+2. distinguer un indice **étroit** (type DXY) d'un indice **large pondéré par les échanges** (Réserve fédérale) ;
+3. calculer la **contribution** d'un mouvement de change à la variation d'un indice du dollar ;
+4. énumérer les grands **canaux** qui font bouger le dollar (taux, risque, flux, termes de l'échange) ;
+5. éviter de **conclure à une cause** à partir d'un mouvement du dollar ;
+6. dire ce que les indices du dollar **permettent** et **ne permettent pas** de conclure.
+
+## 2. Prérequis
+
+- Différentiels et trajectoire de taux (L4.02) ; balance des paiements (L4.04) ; termes de l'échange (L4.05).
+
+## 3. Explication intuitive
+
+Le dollar n'est pas une devise comme les autres : c'est la **monnaie pivot** du marché des changes. Pour échanger deux devises peu liquides, on passe souvent par le dollar. Il sert aussi de monnaie de facturation, de réserve et de financement. Conséquence : quand l'environnement mondial se tend ou se détend, le dollar est souvent **l'un des premiers actifs** sur lesquels les investisseurs agissent. Mais « le dollar » n'est pas un chiffre unique : il se mesure par un **indice**, et selon le panier de devises choisi, on ne lit pas la même chose. Un indice centré sur l'euro raconte surtout la paire EUR/USD ; un indice large pondéré par les échanges accorde un poids important au Mexique, au Canada et à la Chine.
+
+## 4. Développement technique
+
+### 4.1 Le dollar dans le marché des changes
+
+**[Fait]** (S-BIS-08, communiqué de presse de la Banque des règlements internationaux sur l'enquête triennale d'avril 2025, publié le 30 septembre 2025 ; résumé automatique de la page de presse, pas du rapport complet) :
+- chiffre d'affaires quotidien moyen sur le marché des changes : **9 600 milliards de dollars** en avril 2025 (arrondi publié), en hausse de **28 %** par rapport à 2022 ;
+- le dollar est d'un côté de **89 %** des transactions ;
+- euro : **28,9 %** ; yen : **16,8 %** ; livre sterling : **10,2 %** ;
+- 52 juridictions ont participé ; plus de 1 100 banques et autres opérateurs.
+
+**[Définition]** Une transaction de change implique deux devises ; on additionne donc les parts de chaque devise, et le total est de **200 %** (convention de présentation de l'enquête ; la page lue ne l'énonce pas explicitement).
+
+**[Calcul de l'auteur]** Chiffre de 2022 implicite : 9,6 ÷ 1,28 ≈ **7,5** mille milliards ; volume quotidien impliquant le dollar : 0,89 × 9,6 ≈ **8,5** mille milliards (approximation : la part est une part de transactions) ; parts des quatre devises citées : 89 + 28,9 + 16,8 + 10,2 = **144,9 %**, soit environ **55,1 %** pour toutes les autres devises réunies (si le total est de 200 %).
+
+**[Interprétation]** La profondeur du marché explique la place du dollar comme monnaie pivot, mais elle ne dit rien de sa direction.
+
+### 4.2 Deux façons de mesurer le dollar
+
+**[Définition]** Un **indice étroit** (par exemple l'indice dollar dit DXY, dont la composition n'est pas lue ici) compare le dollar à un petit panier de devises avancées. Un **indice large** pondéré par les échanges compare le dollar à un grand nombre de partenaires commerciaux.
+
+**[Fait]** (S-FED-25, page des pondérations de la Réserve fédérale, mise à jour le 2 février 2026, lue par résumé automatique) : l'indice large du dollar utilise des pondérations d'échanges ; 26 économies ; zone euro **21,007 %** ; Mexique **14,801 %** ; Canada **12,769 %** ; Chine **10,891 %** ; Royaume-Uni 5,246 % ; Japon 5,182 % ; Corée 3,621 % ; Inde 3,351 % ; Taïwan 2,983 % ; Suisse 2,975 % ; Australie 1,436 % ; total **100 %**. La page n'indique pas la période de base ; elle renvoie à une note de méthode non lue.
+
+**[Calcul de l'auteur]** Les sept économies avancées marquées d'un astérisque sur la page (zone euro, Canada, Japon, Royaume-Uni, Suisse, Australie, Suède) pèsent **49,24 %** ; les autres économies **50,76 %**. Zone euro + Mexique + Canada + Chine : **59,47 %**.
+
+**[Interprétation]** Dans l'indice large, **plus de la moitié** du poids concerne des économies émergentes ; le mouvement de l'EUR/USD n'y compte que pour un cinquième.
+
+### 4.3 Contribution d'un mouvement de change
+
+**[Définition]** Au premier ordre, la variation de l'indice large ≈ somme des **poids × variation de chaque devise** contre dollar (en sens dollar). Exemple **[SIMULATION]** : l'euro perd 2,37 % contre dollar, les autres devises sont stables : contribution = 0,21007 × 2,37 ≈ **+0,50 %** pour l'indice. Si le peso mexicain perd 3 % et le dollar canadien 1 % : 0,14801 × 3 ≈ 0,44 et 0,12769 × 1 ≈ 0,13, soit **+0,57** point supplémentaire.
+
+### 4.4 Le dollar de fin septembre à fin octobre 2026
+
+**[Fait]** (S-TRN-01, TradingNews, 25 septembre 2026, secondaire) : EUR/USD 1,1400 ; indice dollar d'environ 100,70–100,85. (S-ECB-04, lecture de tableau non confirmée) : EUR/USD de référence 1,1130 le 29 octobre 2026. (S-VBZ-01, secondaire, autour du 14 octobre 2026) : indice dollar 102,75.
+
+**[Calcul de l'auteur]** EUR/USD : 1,1130 ÷ 1,1400 − 1 = **−2,37 %** ; indice dollar : 102,75 ÷ 100,775 − 1 = **+1,96 %** (sources, dates et instruments différents).
+
+**[Interprétation]** Le dollar s'est renforcé sur la période, **en même temps que** : des anticipations de taux de la Fed (L4.02), un choc pétrolier (L4.05) et un contexte géopolitique tendu (WorldOil, 10 septembre). Les données lues **ne permettent pas** de répartir le mouvement entre ces facteurs, et l'indice large n'est pas lu pour octobre.
+
+### 4.5 Les canaux
+
+**[Interprétation]** Cinq canaux à examiner, sans hiérarchie fixée à l'avance :
+1. **Taux** : écart de rendements et trajectoire de la Fed (L4.02, L4.03) ;
+2. **Risque** : recherche de liquidité en période de tension ; hypothèse à tester (parfois nommée « sourire du dollar »), non sourcée ici ;
+3. **Flux** : entrées de capitaux finançant le déficit (L4.04) ;
+4. **Termes de l'échange** : choc de matières premières (L4.05) ;
+5. **Politique** : décisions et communication de la Fed et des autres banques centrales.
+
+## 5. Définitions essentielles
+
+- **Monnaie pivot** : devise présente dans la majorité des transactions de change.
+- **Indice étroit** : indice du dollar contre un petit panier de devises avancées.
+- **Indice large** : indice pondéré par les échanges avec de nombreux partenaires.
+- **Pondération** : poids d'une devise dans un indice.
+- **Contribution** : poids × variation d'une devise (au premier ordre).
+- **Chiffre d'affaires du marché des changes** : volume quotidien moyen mesuré par l'enquête de la BRI.
+- **Économies avancées / émergentes** : classement utilisé par la Réserve fédérale dans ses indices.
+
+## 6. Exemples chiffrés
+
+**6.1 Parts.** 89 + 28,9 + 16,8 + 10,2 = 144,9 % ; reste ≈ 55,1 %.
+**6.2 Volume.** 0,89 × 9,6 ≈ 8,5 mille milliards de dollars.
+**6.3 Contribution (SIMULATION).** 0,21007 × 2,37 ≈ 0,50 %.
+**6.4 Indice et paire.** EUR/USD −2,37 % ; indice dollar +1,96 % : le même mouvement n'a pas la même amplitude selon l'instrument.
+
+### 6.5 Cas historique documenté — la place du dollar en 2025 et son indice en 2026
+
+**[Fait]** (S-BIS-08, S-FED-25, S-TRN-01, S-VBZ-01, S-ECB-04) : voir 4.1 à 4.4.
+
+**[Calcul de l'auteur]** Dollar d'un côté de 89 % des transactions ; zone euro 21,0 % de l'indice large contre 59,5 % pour zone euro, Mexique, Canada et Chine ; EUR/USD −2,37 % et indice dollar +1,96 % entre le 25 septembre et fin octobre 2026.
+
+**[Interprétation]** La dominance du dollar est documentée pour avril 2025 ; le renforcement de septembre-octobre 2026 est **cohérent** avec plusieurs explications (Fed, énergie, tension géopolitique). **Ce qu'on ne peut pas conclure** : la part de chaque cause ; la direction future ; le comportement de l'indice large. **Limites** : sources secondaires pour les niveaux ; composition du DXY non lue ; données non synchrones.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Avant d'attribuer un mouvement au « dollar »**, identifier l'instrument : une paire (EUR/USD) ou un indice, et sa composition.
+- **EUR/USD** : le dollar compte pour une moitié de la paire ; vérifier si le mouvement vient de l'euro ou du dollar.
+- **Devises émergentes** : l'indice large les pondère fortement ; un indice étroit les ignore.
+- **Or (XAU/USD)** : coté en dollars, il est sensible à la monnaie dans laquelle il est exprimé ; le lien est étudié au module 5 et **n'est pas établi ici**.
+- **Méthode** : écrire les anticipations préalables, les autres facteurs, et séparer fait, calcul et hypothèse.
+- **Prudence** : un dollar « fort » ne garantit pas la poursuite du mouvement.
+
+## 8. Erreurs courantes
+
+1. Assimiler « le dollar » à un indice unique.
+2. Prendre l'indice étroit pour une mesure du dollar contre tous les partenaires.
+3. Additionner des parts du marché des changes en oubliant le total de 200 %.
+4. Confondre variation d'une paire et variation d'un indice.
+5. Attribuer un mouvement à une seule cause.
+6. Comparer des niveaux d'indice de sources et de dates différentes.
+7. Ignorer la composition du panier.
+
+## 9. Limites de l'interprétation
+
+- La BRI est lue par son communiqué de presse (résumé), pas par le rapport complet ; le total de 200 % et la part de la paire EUR/USD ne sont pas lus.
+- La composition du DXY n'est pas lue ; aucune pondération du DXY n'est donnée.
+- L'indice large n'est pas lu pour octobre 2026 ; la période de base est inconnue.
+- Les niveaux d'EUR/USD et de l'indice dollar viennent de sources secondaires non synchrones.
+- Aucune causalité n'est établie entre le dollar et ses facteurs.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Parts.** Dollar 89 %, euro 28,9 %, yen 16,8 %, sterling 10,2 %. Somme et reste pour les autres devises (total 200 %) ?
+
+<details>
+<summary>Correction 1</summary>
+
+89 + 28,9 + 16,8 + 10,2 = **144,9 %** ; 200 − 144,9 = **55,1 %**.
+</details>
+
+**Exercice 2 — Volume.** Chiffre d'affaires quotidien de 9,6 mille milliards ; dollar dans 89 % des transactions. Volume approximatif impliquant le dollar ? Chiffre implicite de 2022 (+28 %) ?
+
+<details>
+<summary>Correction 2</summary>
+
+0,89 × 9,6 ≈ **8,5** ; 9,6 ÷ 1,28 ≈ **7,5** mille milliards.
+</details>
+
+**Exercice 3 — Poids.** Zone euro 21,007 %, Mexique 14,801 %, Canada 12,769 %, Chine 10,891 %. Somme ?
+
+<details>
+<summary>Correction 3</summary>
+
+21,007 + 14,801 + 12,769 + 10,891 = **59,468 %** ≈ 59,47 %.
+</details>
+
+**Exercice 4 — Contribution (SIMULATION).** L'euro perd 2,37 % ; les autres devises sont stables. Contribution à l'indice large ?
+
+<details>
+<summary>Correction 4</summary>
+
+0,21007 × 2,37 ≈ **+0,50 %** (premier ordre).
+</details>
+
+**Exercice 5 — Instruments.** EUR/USD de 1,1400 à 1,1130 ; indice dollar de 100,775 à 102,75. Variations ? Pourquoi diffèrent-elles ?
+
+<details>
+<summary>Correction 5</summary>
+
+**−2,37 %** et **+1,96 %**. Elles diffèrent parce que l'indice contient d'autres devises, que les sources, dates et instruments ne sont pas identiques, et que l'EUR/USD mesure le prix de l'euro, non du dollar seul.
+</details>
+
+**Exercice 6 — Critique.** « Le dollar monte : c'est à cause de la Fed. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) Corrélation n'est pas causalité. (2) Choc pétrolier et tension géopolitique coïncident. (3) Les anticipations préalables comptent. (4) L'instrument et sa composition changent la lecture. (5) Les niveaux viennent de sources secondaires non synchrones.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L4.06.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Dollar d'un côté de 89 % des transactions de change (BRI, avril 2025) ; chiffre d'affaires de 9,6 mille milliards par jour.
+- Indice large de la Réserve fédérale : zone euro 21 %, Mexique 14,8 %, Canada 12,8 %, Chine 10,9 %.
+- La contribution d'une devise est poids × variation.
+- Septembre-octobre 2026 : EUR/USD −2,37 %, indice dollar +1,96 % (sources non synchrones), causes non séparables.
+- Un indice n'est pas une cause ; toujours vérifier le panier.
+
+## 13. Critères de maîtrise
+
+- [ ] Additionner des parts de marché avec le total de 200 % (Exercice 1).
+- [ ] Estimer un volume (Exercice 2).
+- [ ] Lire des pondérations (Exercice 3).
+- [ ] Calculer une contribution (Exercice 4).
+- [ ] Comparer paire et indice et critiquer une attribution causale (Exercices 5 et 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-BIS-08** — BRI, communiqué sur l'enquête triennale d'avril 2025 (30 septembre 2025) : https://www.bis.org/media-releases/20250930-global-fx-trading-hits-96-trillion-day-april-2025-and-otc-interest-rate-derivatives-surge-79
+- **S-FED-25** — Réserve fédérale, H.10, pondérations de l'indice large du dollar (2 février 2026) : https://www.federalreserve.gov/releases/h10/weights/
+- **S-TRN-01**, **S-VBZ-01**, **S-ECB-04** — voir L4.02 (secondaires, lecture de tableau non confirmée pour S-ECB-04).
+
+**Définitions de cours non rattachées à une source officielle lue :** total de 200 %, contribution au premier ordre, canaux du dollar. **Points non vérifiés :** composition du DXY, valeurs d'octobre 2026 de l'indice large, rapport complet de la BRI.

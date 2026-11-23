@@ -1,0 +1,825 @@
+{
+  "examId": "EX7",
+  "module": 7,
+  "title": "Examen du module 7 — Positionnement et flux",
+  "durationMinutes": 120,
+  "passThreshold": 0.7,
+  "note": "25 QCM (1 point) + 5 calculs (3 points) + 2 cas fictifs à analyser (10 points chacun) = 60 points ; seuil de réussite 42/60. Les données sont fictives (SIMULATION) sauf mention contraire.",
+  "questions": [
+    {
+      "id": "EX7-Q1",
+      "type": "mcq",
+      "prompt": "Un net négatif des Swap Dealers est-il un pari baissier sur l'or ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui, mais seulement en octobre"
+        },
+        {
+          "id": "b",
+          "text": "Oui, toujours"
+        },
+        {
+          "id": "c",
+          "text": "Non : ils couvrent souvent des swaps de clients, leur position est une contrepartie"
+        },
+        {
+          "id": "d",
+          "text": "Cela n'a aucun sens statistique"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Selon les notes explicatives de la CFTC, les Swap Dealers couvrent leurs swaps par des contrats à terme ; leur net n'est pas une opinion.",
+      "tags": [
+        "categories"
+      ]
+    },
+    {
+      "id": "EX7-Q2",
+      "type": "mcq",
+      "prompt": "Managed Money (SIMULATION) : longs 150 000, courts 20 000, spreading 40 000. Le net est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "130 000"
+        },
+        {
+          "id": "b",
+          "text": "170 000"
+        },
+        {
+          "id": "c",
+          "text": "190 000"
+        },
+        {
+          "id": "d",
+          "text": "110 000"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Net = 150 000 − 20 000 = 130 000 ; le spreading n'entre pas dans le net.",
+      "tags": [
+        "net"
+      ]
+    },
+    {
+      "id": "EX7-Q3",
+      "type": "mcq",
+      "prompt": "Net de 130 000 contrats et OI de 650 000 (SIMULATION). Part de l'intérêt ouvert ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "130 %"
+        },
+        {
+          "id": "b",
+          "text": "5,0 %"
+        },
+        {
+          "id": "c",
+          "text": "50,0 %"
+        },
+        {
+          "id": "d",
+          "text": "20,0 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "130 000 ÷ 650 000 = 0,20.",
+      "tags": [
+        "part_oi"
+      ]
+    },
+    {
+      "id": "EX7-Q4",
+      "type": "mcq",
+      "prompt": "Net de 130 000 contrats de 100 onces : combien de tonnes (arrondi) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 4 043 t"
+        },
+        {
+          "id": "b",
+          "text": "≈ 404 t"
+        },
+        {
+          "id": "c",
+          "text": "≈ 40 t"
+        },
+        {
+          "id": "d",
+          "text": "≈ 130 t"
+        }
+      ],
+      "correct": "b",
+      "explanation": "130 000 × 100 ÷ 32 150,7466 = 404,3 t.",
+      "tags": [
+        "tonnes"
+      ]
+    },
+    {
+      "id": "EX7-Q5",
+      "type": "mcq",
+      "prompt": "Valeur courante 180, moyenne 150, écart-type d'échantillon 20 sur 104 semaines. Le z-score vaut :",
+      "options": [
+        {
+          "id": "a",
+          "text": "6,0"
+        },
+        {
+          "id": "b",
+          "text": "0,15"
+        },
+        {
+          "id": "c",
+          "text": "30"
+        },
+        {
+          "id": "d",
+          "text": "1,5"
+        }
+      ],
+      "correct": "d",
+      "explanation": "(180 − 150) ÷ 20 = 1,5 écart-type ; un z élevé n'est pas un signal de retournement.",
+      "tags": [
+        "z"
+      ]
+    },
+    {
+      "id": "EX7-Q6",
+      "type": "mcq",
+      "prompt": "Les positions du mardi 03/11 sont publiées le vendredi 06/11. Quel est leur âge le lundi 09/11 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "9 jours"
+        },
+        {
+          "id": "b",
+          "text": "3 jours"
+        },
+        {
+          "id": "c",
+          "text": "6 jours"
+        },
+        {
+          "id": "d",
+          "text": "1 jour"
+        }
+      ],
+      "correct": "c",
+      "explanation": "03/11 → 09/11 = 6 jours depuis la date de référence.",
+      "tags": [
+        "age"
+      ]
+    },
+    {
+      "id": "EX7-Q7",
+      "type": "mcq",
+      "prompt": "Un rapport de 18 jours est utilisé pour une thèse datée du 31/10. Que faire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Classer le pilier positionnement en « données trop anciennes » et le dire"
+        },
+        {
+          "id": "b",
+          "text": "L'utiliser comme actuel"
+        },
+        {
+          "id": "c",
+          "text": "Le supprimer sans le dire"
+        },
+        {
+          "id": "d",
+          "text": "Le remplacer par une estimation"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Une donnée périmée au regard d'un critère écrit d'avance ne soutient plus la thèse : on le signale (situation 6 de la matrice).",
+      "tags": [
+        "peremption"
+      ]
+    },
+    {
+      "id": "EX7-Q8",
+      "type": "mcq",
+      "prompt": "Le net MM et le prix de l'or baissent tous deux sur la période observée. Que conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que le net cause la baisse"
+        },
+        {
+          "id": "b",
+          "text": "Une co-direction ; ni corrélation ni causalité n'est démontrée par deux points"
+        },
+        {
+          "id": "c",
+          "text": "Que le prix cause la baisse du net"
+        },
+        {
+          "id": "d",
+          "text": "Que l'or va rebondir"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Deux points, dates non alignées et prix rapportés ne mesurent aucune relation.",
+      "tags": [
+        "prix"
+      ]
+    },
+    {
+      "id": "EX7-Q9",
+      "type": "mcq",
+      "prompt": "Encours 600 → 560 Md$ et flux net +10 Md$ (SIMULATION). Le résidu de valorisation est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "+10 Md$"
+        },
+        {
+          "id": "b",
+          "text": "−40 Md$"
+        },
+        {
+          "id": "c",
+          "text": "−50 Md$"
+        },
+        {
+          "id": "d",
+          "text": "−30 Md$"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Variation −40 ; flux +10 ; résidu = −40 − 10 = −50 Md$, effet de valorisation estimé et non prix mesuré.",
+      "tags": [
+        "residu"
+      ]
+    },
+    {
+      "id": "EX7-Q10",
+      "type": "mcq",
+      "prompt": "Encours de 574 Md$ et avoirs de 4 256 t : le prix implicite est environ :",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 4 195 $/oz"
+        },
+        {
+          "id": "b",
+          "text": "≈ 574 $/oz"
+        },
+        {
+          "id": "c",
+          "text": "≈ 135 $/oz"
+        },
+        {
+          "id": "d",
+          "text": "≈ 42 560 $/oz"
+        }
+      ],
+      "correct": "a",
+      "explanation": "574 e9 ÷ (4 256 × 32 150,7466) ≈ 4 195 $/oz ; c'est un prix dérivé, qui ne remplace pas une cotation de marché.",
+      "tags": [
+        "prix_implicite"
+      ]
+    },
+    {
+      "id": "EX7-Q11",
+      "type": "mcq",
+      "prompt": "Un effet de rééquilibrage de fin de trimestre sur l'or est-il démontré par un seul jour de forte hausse ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui si le prix est un record"
+        },
+        {
+          "id": "b",
+          "text": "Oui"
+        },
+        {
+          "id": "c",
+          "text": "Oui si le volume est élevé"
+        },
+        {
+          "id": "d",
+          "text": "Non : conclusion permise = effet probable, non démontré ou données insuffisantes, jamais une preuve par un jour"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Un jour isolé est compatible avec plusieurs mécanismes ; il faut un protocole défini d'avance et un échantillon suffisant.",
+      "tags": [
+        "calendrier"
+      ]
+    },
+    {
+      "id": "EX7-Q12",
+      "type": "mcq",
+      "prompt": "Quelle est la différence entre horizon d'analyse et fréquence de publication ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aucune"
+        },
+        {
+          "id": "b",
+          "text": "L'horizon est le choix du lecteur ; la fréquence est une propriété de la donnée"
+        },
+        {
+          "id": "c",
+          "text": "La fréquence décide de l'horizon"
+        },
+        {
+          "id": "d",
+          "text": "L'horizon est le délai"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Une donnée mensuelle peut servir une lecture de court ou de moyen terme ; l'horizon est la durée sur laquelle l'information doit compter.",
+      "tags": [
+        "horizons"
+      ]
+    },
+    {
+      "id": "EX7-Q13",
+      "type": "mcq",
+      "prompt": "Les achats officiels du T2 sont publiés le 30/07. Quel délai depuis la fin du trimestre (30/06) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "60 jours"
+        },
+        {
+          "id": "b",
+          "text": "3 jours"
+        },
+        {
+          "id": "c",
+          "text": "7 jours"
+        },
+        {
+          "id": "d",
+          "text": "30 jours"
+        }
+      ],
+      "correct": "d",
+      "explanation": "30/06 → 30/07 = 30 jours : une donnée trimestrielle tardive décrit le passé avec retard.",
+      "tags": [
+        "delai"
+      ]
+    },
+    {
+      "id": "EX7-Q14",
+      "type": "mcq",
+      "prompt": "Pourquoi ne faut-il pas additionner 244 t (première estimation du T1) et 288,9 t (T2) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que le T2 est faux"
+        },
+        {
+          "id": "b",
+          "text": "Parce que 244 est impair"
+        },
+        {
+          "id": "c",
+          "text": "Parce que le T1 a été révisé à 57 t : la première estimation est remplacée par la version révisée"
+        },
+        {
+          "id": "d",
+          "text": "Parce que les trimestres s'excluent"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Toute donnée a une version : on cite la version consultée et ses révisions (S1 ≈ 345 t en additionnant la version révisée du T1, 56,5 t, et 288,9 t ; valeurs arrondies).",
+      "tags": [
+        "revision"
+      ]
+    },
+    {
+      "id": "EX7-Q15",
+      "type": "mcq",
+      "prompt": "Positionnement baissier et fondamentaux favorables : lecture ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Divergence et potentiel de retournement, sans garantie"
+        },
+        {
+          "id": "b",
+          "text": "Convergence baissière"
+        },
+        {
+          "id": "c",
+          "text": "Signal d'achat"
+        },
+        {
+          "id": "d",
+          "text": "Convergence haussière"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Situation 3 de la matrice : une tension entre éléments, non un retournement assuré.",
+      "tags": [
+        "matrice"
+      ]
+    },
+    {
+      "id": "EX7-Q16",
+      "type": "mcq",
+      "prompt": "Positionnement neutre et fondamentaux contradictoires : lecture ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Convergence haussière"
+        },
+        {
+          "id": "b",
+          "text": "Pas de lecture directionnelle ; thèse conditionnelle ou abstention"
+        },
+        {
+          "id": "c",
+          "text": "Convergence baissière"
+        },
+        {
+          "id": "d",
+          "text": "Signal de vente"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Situation 5 : la contradiction n'est pas résolue par un tirage ; on documente les conditions.",
+      "tags": [
+        "matrice"
+      ]
+    },
+    {
+      "id": "EX7-Q17",
+      "type": "mcq",
+      "prompt": "Quelles situations de la matrice s'ajoutent aux quatre croisements positionnement/fondamentaux ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Prix haut ; prix bas"
+        },
+        {
+          "id": "b",
+          "text": "Positionnement extrême ; positionnement faible"
+        },
+        {
+          "id": "c",
+          "text": "Positionnement neutre avec fondamentaux contradictoires ; données insuffisantes ou trop anciennes"
+        },
+        {
+          "id": "d",
+          "text": "Aucune"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Les deux situations ajoutées évitent de forcer une lecture directionnelle quand les données ne le permettent pas.",
+      "tags": [
+        "matrice"
+      ]
+    },
+    {
+      "id": "EX7-Q18",
+      "type": "mcq",
+      "prompt": "« Le net MM a baissé cinq semaines de suite » est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un constat (niveau A)"
+        },
+        {
+          "id": "b",
+          "text": "Une hypothèse (niveau C)"
+        },
+        {
+          "id": "c",
+          "text": "Une prévision"
+        },
+        {
+          "id": "d",
+          "text": "Une interprétation causale"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Un constat est une donnée datée, chiffrée, sourcée, vérifiable par un tiers.",
+      "tags": [
+        "niveaux"
+      ]
+    },
+    {
+      "id": "EX7-Q19",
+      "type": "mcq",
+      "prompt": "Une thèse ne comporte aucune condition d'invalidation. Elle est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une prévision de prix"
+        },
+        {
+          "id": "b",
+          "text": "Plus robuste"
+        },
+        {
+          "id": "c",
+          "text": "Valide par défaut"
+        },
+        {
+          "id": "d",
+          "text": "Non réfutable : aucune observation ne peut la contredire"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Une bonne thèse précise soutiens, contradictions, conditions nécessaires, indicateurs et événements invalidants.",
+      "tags": [
+        "these"
+      ]
+    },
+    {
+      "id": "EX7-Q20",
+      "type": "mcq",
+      "prompt": "Pourquoi horodater une fiche de thèse ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pour faire joli"
+        },
+        {
+          "id": "b",
+          "text": "Pour empêcher la reconstruction a posteriori : seules les données déjà publiées à cette date y figurent"
+        },
+        {
+          "id": "c",
+          "text": "Pour ralentir l'analyse"
+        },
+        {
+          "id": "d",
+          "text": "Parce que la loi l'exige"
+        }
+      ],
+      "correct": "b",
+      "explanation": "On ne corrige jamais une fiche : on en écrit une nouvelle qui référence la précédente.",
+      "tags": [
+        "horodatage"
+      ]
+    },
+    {
+      "id": "EX7-Q21",
+      "type": "mcq",
+      "prompt": "Rendement réel du 10 ans : moyenne mensuelle 2,40 % en août et 2,64 % en septembre. Variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−24 points de base"
+        },
+        {
+          "id": "b",
+          "text": "+0,24 point de base"
+        },
+        {
+          "id": "c",
+          "text": "+240 points de base"
+        },
+        {
+          "id": "d",
+          "text": "+24 points de base"
+        }
+      ],
+      "correct": "d",
+      "explanation": "2,64 − 2,40 = 0,24 point = 24 pb ; moyennes mensuelles, non des clôtures.",
+      "tags": [
+        "taux_reels"
+      ]
+    },
+    {
+      "id": "EX7-Q22",
+      "type": "mcq",
+      "prompt": "Cinq observations de l'indice du dollar large (19–23/10) suffisent-elles pour parler d'une tendance de plusieurs semaines ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui si elles sont plates"
+        },
+        {
+          "id": "b",
+          "text": "Oui"
+        },
+        {
+          "id": "c",
+          "text": "Non : la fenêtre est trop courte"
+        },
+        {
+          "id": "d",
+          "text": "Oui si l'euro monte"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Une tendance multi-semaines requiert une série plus longue ; l'absence de données est consignée, non comblée.",
+      "tags": [
+        "dollar"
+      ]
+    },
+    {
+      "id": "EX7-Q23",
+      "type": "mcq",
+      "prompt": "Le relais de presse du Rapport économique annuel 2026 de la BRI mentionne-t-il l'or ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Non ; il ne faut donc pas le présenter comme un soutien ou une pression spécifique sur l'or"
+        },
+        {
+          "id": "b",
+          "text": "Oui, comme soutien"
+        },
+        {
+          "id": "c",
+          "text": "Oui, comme pression"
+        },
+        {
+          "id": "d",
+          "text": "Il mentionne l'or deux fois"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le contenu lu cite des risques généraux (IA, finances publiques, inflation) sans lien avec l'or ; la page BRI primaire n'a pas été lue.",
+      "tags": [
+        "bri"
+      ]
+    },
+    {
+      "id": "EX7-Q24",
+      "type": "mcq",
+      "prompt": "Une convergence haussière de tous les piliers garantit-elle une hausse de l'or ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui"
+        },
+        {
+          "id": "b",
+          "text": "Non : elle indique seulement que plusieurs éléments vont dans une direction compatible"
+        },
+        {
+          "id": "c",
+          "text": "Oui sous trois jours"
+        },
+        {
+          "id": "d",
+          "text": "Oui si le dollar baisse"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Une bonne analyse fondamentale ne garantit pas une transaction gagnante ; les éléments peuvent déjà être dans le prix.",
+      "tags": [
+        "convergence"
+      ]
+    },
+    {
+      "id": "EX7-Q25",
+      "type": "mcq",
+      "prompt": "Managed Money (SIMULATION) : longs 150 000 et courts 20 000. Quelle est la position brute, à ne pas confondre avec le net ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "150 000"
+        },
+        {
+          "id": "b",
+          "text": "130 000"
+        },
+        {
+          "id": "c",
+          "text": "170 000"
+        },
+        {
+          "id": "d",
+          "text": "20 000"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Brut = long + short = 170 000 ; net = long − short = 130 000. Le brut renseigne sur l'ampleur, le net sur la direction.",
+      "tags": [
+        "brut"
+      ]
+    }
+  ],
+  "calculations": [
+    {
+      "id": "EX7-K1",
+      "type": "calc",
+      "prompt": "Part de l'OI (SIMULATION). Managed Money : longs 142 000, courts 22 000 ; intérêt ouvert 600 000. Part du net dans l'OI en % (1 décimale) ?",
+      "answer": 20.0,
+      "tolerance": 0.05,
+      "unit": "%",
+      "solution": "Net = 142 000 − 22 000 = 120 000 ; 120 000 ÷ 600 000 = 20,0 %.",
+      "tags": [
+        "part_oi"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX7-K2",
+      "type": "calc",
+      "prompt": "Conversion (SIMULATION). Net de 120 000 contrats de 100 onces. Équivalent en tonnes (1 décimale) ?",
+      "answer": 373.2,
+      "tolerance": 0.05,
+      "unit": "t",
+      "solution": "120 000 × 100 ÷ 32 150,7466 = 373,2 t ; unité commune, nature différente d'un achat.",
+      "tags": [
+        "tonnes"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX7-K3",
+      "type": "calc",
+      "prompt": "Résidu de valorisation (SIMULATION). Encours d'un ETF 480 puis 515 Md$ ; flux net +6 Md$. Résidu en Md$ (entier) ?",
+      "answer": 29,
+      "tolerance": 0.5,
+      "unit": "Md$",
+      "solution": "Variation 35 ; flux 6 ; résidu = 35 − 6 = 29 Md$ (estimé, non un prix mesuré).",
+      "tags": [
+        "residu"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX7-K4",
+      "type": "calc",
+      "prompt": "Écart standardisé (SIMULATION). Valeur courante 87 000, moyenne de la fenêtre 70 000, écart-type d'échantillon 8 500. Z-score (1 décimale) ?",
+      "answer": 2.0,
+      "tolerance": 0.05,
+      "unit": "",
+      "solution": "(87 000 − 70 000) ÷ 8 500 = 2,0 ; un z élevé n'est pas un signal.",
+      "tags": [
+        "z"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX7-K5",
+      "type": "calc",
+      "prompt": "Prix implicite (SIMULATION). Encours 250 Md$ ; avoirs 1 800 t. Prix implicite en $/oz (entier) ?",
+      "answer": 4320,
+      "tolerance": 1,
+      "unit": "$/oz",
+      "solution": "250 e9 ÷ (1 800 × 32 150,7466) ≈ 4 320 $/oz ; prix dérivé, qui ne remplace pas une cotation.",
+      "tags": [
+        "prix_implicite"
+      ],
+      "points": 3
+    }
+  ],
+  "analyses": [
+    {
+      "id": "EX7-A1",
+      "type": "analysis",
+      "title": "Fiche de thèse sur un marché fictif « Aurum-Y » (SIMULATION)",
+      "material": "Date de référence de la fiche : 2 mars, 9 h (année fictive). Tous les chiffres sont fictifs. Net spéculatif : 135 000 contrats (4 semaines plus tôt) puis 99 000 ; intérêt ouvert 600 000 puis 560 000 (même périmètre, dernier rapport vieux de 3 jours). Fonds cotés : encours 400 puis 412 Md$ ; flux net du mois +8 Md$. Rendement réel du 10 ans : 1,9 % puis 1,6 %. Dollar fictif : −1,0 % sur quatre semaines. Achats officiels : 55 t par trimestre depuis quatre trimestres. Prix : 4 000 $ puis 3 880 $.",
+      "tasks": [
+        "Calcule la variation du net (contrats et %) et la part de l'intérêt ouvert avant et après.",
+        "Calcule le résidu de valorisation des fonds cotés.",
+        "Calcule la variation du rendement réel (pb) et du prix (en $ et en %).",
+        "Classe les éléments en constat, interprétation, hypothèse ; place la situation dans la matrice.",
+        "Formule deux hypothèses concurrentes, une thèse conditionnelle et trois conditions d'invalidation mesurables.",
+        "Dis ce que les données ne permettent pas de conclure."
+      ],
+      "expectedElements": [
+        "Variation du net : 99 000 − 135 000 = −36 000 contrats, soit −26,7 % ; part de l'OI : 135 000 ÷ 600 000 = 22,5 % puis 99 000 ÷ 560 000 = 17,7 %",
+        "Résidu de valorisation : (412 − 400) − 8 = +4 Md$",
+        "Rendement réel : 1,6 − 1,9 = −0,3 point, soit −30 pb ; prix : 3 880 − 4 000 = −120 $, soit −3,0 %",
+        "Constats : repli du net, flux positifs, rendement réel et dollar en baisse, achats officiels ; hypothèses (prise de bénéfices, réduction du risque) ; positionnement baissier avec fondamentaux favorables : situation 3, divergence et potentiel de retournement, sans garantie",
+        "Deux hypothèses compatibles avec les mêmes faits (par exemple prise de bénéfices contre anticipation d'un changement de politique) ; thèse conditionnelle datée ; invalidations mesurables et écrites d'avance (par exemple rendement réel > 1,9 % pendant cinq séances, flux négatifs deux mois de suite, arrêt des achats officiels)",
+        "Non permis : causalité entre rendement réel et prix, durée du repli, intentions des acteurs, direction future ; données manquantes : positions brutes, volumes, composition des acheteurs"
+      ],
+      "points": 10
+    },
+    {
+      "id": "EX7-A2",
+      "type": "analysis",
+      "title": "Audit d'une note de positionnement (SIMULATION)",
+      "material": "Note fictive datée du 31 octobre (année fictive). « Le net Managed Money est au plus bas de l'année (percentile 12,5 % sur 8 semaines). L'intérêt ouvert a chuté de 520 000 à 390 000 contrats : les spéculateurs ont fui le marché, ce qui annonce une baisse de l'or. Les flux d'ETF confirment ». Le rapport cité porte sur les positions du 13 octobre, le premier chiffre d'OI vient d'un rapport Futures and Options Combined, le second d'un rapport Futures Only. Aucune condition d'invalidation n'est indiquée.",
+      "tasks": [
+        "Calcule l'âge de la donnée COT à la date de la note.",
+        "Calcule la variation apparente de l'intérêt ouvert et dis pourquoi elle est invalide.",
+        "Dis pourquoi le percentile de 12,5 % (une observation sur huit) ne permet pas d'affirmer « au plus bas de l'année ».",
+        "Identifie les affirmations qui sont des hypothèses présentées comme des faits.",
+        "Réécris la conclusion de manière réfutable avec deux conditions d'invalidation."
+      ],
+      "expectedElements": [
+        "Âge : du 13 au 31 octobre = 18 jours",
+        "Variation apparente : 390 000 − 520 000 = −130 000, soit −25,0 % ; invalide car les périmètres (Combined contre Futures Only) ne se comparent pas directement",
+        "Une observation sur huit ≤ valeur courante donne 12,5 % ; la fenêtre de huit semaines est très inférieure à 52 et ne couvre pas l'année",
+        "« Les spéculateurs ont fui le marché » et « annonce une baisse » sont des hypothèses ou prévisions présentées comme des faits ; « les flux d'ETF confirment » mélange des natures (avoirs physiques et positions sur contrats)",
+        "Conclusion réfutable : le net MM a baissé jusqu'au 13 octobre (donnée de 18 jours, périmètre à confirmer) ; lecture conditionnelle ; invalidations mesurables (par exemple deux rapports consécutifs à périmètre constant avec net en hausse ; flux d'ETF négatifs deux mois de suite) ; aucune prévision de prix"
+      ],
+      "points": 10
+    }
+  ],
+  "totalPoints": 60,
+  "revision": 1
+}

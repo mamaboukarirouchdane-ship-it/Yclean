@@ -1,0 +1,234 @@
+{
+  "lessonId": "L8.01",
+  "title": "Quiz — Cadre d'analyse du risque géopolitique",
+  "passThreshold": 0.875,
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L8.01-Q1",
+      "type": "mcq",
+      "prompt": "Quelle information relève d'un « événement confirmé » ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un blocus maritime est évoqué comme une option que plusieurs capitales n'excluent pas"
+        },
+        {
+          "id": "b",
+          "text": "Un gouvernement affirme publiquement que de nouvelles sanctions seront prises dans les prochaines semaines"
+        },
+        {
+          "id": "c",
+          "text": "L'OFAC a publié une directive de sanctions à une date donnée, document officiel à l'appui"
+        },
+        {
+          "id": "d",
+          "text": "Plusieurs analystes estiment que la guerre durera des années, ce que le marché semble déjà intégrer"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Un événement confirmé est un fait daté, établi par une source primaire ; une déclaration, un risque possible et une hypothèse ne sont pas des faits confirmés.",
+      "tags": [
+        "statuts"
+      ]
+    },
+    {
+      "id": "L8.01-Q2",
+      "type": "mcq",
+      "prompt": "Événement A : probabilité 5 %, impact +40 % ; événement B : probabilité 40 %, impact +5 %. Les produits sont égaux (2,0). Que faut-il en conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les profils restent différents (risque de queue contre événement fréquent) : le produit ne remplace pas l'analyse"
+        },
+        {
+          "id": "b",
+          "text": "Les deux événements sont équivalents, car la perte attendue est identique dans les deux cas"
+        },
+        {
+          "id": "c",
+          "text": "L'événement A est plus dangereux, car son ampleur est huit fois supérieure à celle de B"
+        },
+        {
+          "id": "d",
+          "text": "L'événement B est sans importance, car son ampleur est faible et son produit se compense"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le produit probabilité × ampleur est un repère de comparaison, non une prévision ; il ne dit rien des canaux ni de la durée.",
+      "tags": [
+        "probabilite"
+      ]
+    },
+    {
+      "id": "L8.01-Q3",
+      "type": "mcq",
+      "prompt": "L'or a gagné « 6 % » en février 2022 et clôturé à 1 910 $. Quelle est la base implicite approximative et sa nature ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 1 804 $/oz, cotation LBMA officielle du 31/01/2022 confirmée par l'arrondi"
+        },
+        {
+          "id": "b",
+          "text": "≈ 1 910 $/oz, cotation exacte de fin janvier, puisque le rendement est calculé sur la clôture"
+        },
+        {
+          "id": "c",
+          "text": "≈ 2 025 $/oz, cotation exacte obtenue en appliquant le rendement de 6 % à la clôture"
+        },
+        {
+          "id": "d",
+          "text": "≈ 1 802 $/oz, valeur dérivée qui ne remplace pas la cotation du 31/01"
+        }
+      ],
+      "correct": "d",
+      "explanation": "1 910 ÷ 1,06 = 1 802 ; avec l'arrondi du rendement la fourchette est 1 793 à 1 810 : c'est un calcul de l'auteur, non une lecture de cotation.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L8.01-Q4",
+      "type": "mcq",
+      "prompt": "Que mesure l'indice de risque géopolitique de Caldara et Iacoviello ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La probabilité qu'une guerre éclate dans les douze prochains mois, estimée à partir des articles"
+        },
+        {
+          "id": "b",
+          "text": "La part d'articles de presse consacrés à des événements géopolitiques défavorables : un thermomètre d'attention"
+        },
+        {
+          "id": "c",
+          "text": "Le prix de l'or exprimé en points d'indice, calculé à partir du volume d'articles publiés"
+        },
+        {
+          "id": "d",
+          "text": "L'ampleur économique d'un choc géopolitique, mesurée par l'écart avec la moyenne des articles"
+        }
+      ],
+      "correct": "b",
+      "explanation": "L'indice compte des articles ; il ne donne ni probabilité d'événement, ni ampleur, ni effet sur l'or.",
+      "tags": [
+        "gpr"
+      ]
+    },
+    {
+      "id": "L8.01-Q5",
+      "type": "mcq",
+      "prompt": "En février 2022 les ETF d'or ont reçu 35 t ; en octobre 2023 ils ont perdu 38 t alors que l'or a monté dans les deux cas. Qu'en conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les événements géopolitiques font toujours monter les ETF dans les semaines qui suivent"
+        },
+        {
+          "id": "b",
+          "text": "L'or ne réagit jamais aux flux des ETF, puisque le prix a monté dans les deux situations"
+        },
+        {
+          "id": "c",
+          "text": "Les données sont contradictoires et doivent être écartées avant toute interprétation"
+        },
+        {
+          "id": "d",
+          "text": "Même direction du prix, canaux différents : on ne peut pas extraire une règle unique"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Les deux épisodes montrent des hausses comparables avec des configurations de canaux différentes (ETF entrants contre sortants, rendement à 5 % en 2023).",
+      "tags": [
+        "canaux"
+      ]
+    },
+    {
+      "id": "L8.01-Q6",
+      "type": "mcq",
+      "prompt": "La « part inexpliquée » du modèle du WGC, que le commentaire relie « probablement » aux tensions géopolitiques, est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un fait confirmé par le WGC, dès lors que le commentaire le mentionne"
+        },
+        {
+          "id": "b",
+          "text": "Une mesure exacte de l'effet de l'événement géopolitique sur le prix de l'or"
+        },
+        {
+          "id": "c",
+          "text": "Un résidu de modèle, donc une hypothèse et non une mesure directe de l'effet de l'événement"
+        },
+        {
+          "id": "d",
+          "text": "Une donnée publiée par l'OFAC dans ses communiqués de sanctions"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Un résidu agrège tout ce que le modèle ne capte pas ; l'attribuer à la géopolitique est une hypothèse.",
+      "tags": [
+        "residu"
+      ]
+    },
+    {
+      "id": "L8.01-Q7",
+      "type": "mcq",
+      "prompt": "À quelles conditions peut-on attribuer un mouvement de l'or à un événement ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Canal identifié dans les données, facteurs simultanés examinés, attentes comparées, explications concurrentes mentionnées"
+        },
+        {
+          "id": "b",
+          "text": "Dès que les deux se produisent à la même date et que le sens du mouvement paraît cohérent"
+        },
+        {
+          "id": "c",
+          "text": "Dès qu'un journal financier de référence relie explicitement l'événement au mouvement de l'or"
+        },
+        {
+          "id": "d",
+          "text": "Jamais : aucune attribution n'est permise, même avec des canaux vérifiés et des données complètes sur l'épisode"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La règle d'attribution exige un canal vérifié, l'examen des facteurs simultanés et des explications concurrentes ; la coïncidence seule ne suffit pas.",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "id": "L8.01-Q8",
+      "type": "mcq",
+      "prompt": "Le Brent a été en moyenne de 100 $ en 2022, avec un point bas à 75 $ le 8/12. Que dit cela de la durée de l'effet sur l'or ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que l'or a baissé en décembre 2022, puisque le pétrole a baissé à cette date"
+        },
+        {
+          "id": "b",
+          "text": "Rien directement : cela documente la durée du choc énergétique ; celle de l'effet sur l'or n'est pas évaluable ici"
+        },
+        {
+          "id": "c",
+          "text": "Que l'effet du choc sur l'or est devenu structurel, puisque la moyenne annuelle est restée élevée"
+        },
+        {
+          "id": "d",
+          "text": "Que l'effet du choc sur l'or a disparu en décembre, au moment du point bas du Brent"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La durée se prouve canal par canal avec des données ; les mois suivants du prix de l'or n'ont pas été lus.",
+      "tags": [
+        "duree"
+      ]
+    }
+  ],
+  "revision": 2,
+  "passRule": "7 bonnes réponses sur 8 (seuil pédagogique provisoire)"
+}

@@ -1,0 +1,255 @@
+---
+id: L7.08
+module: 7
+order: 8
+title: "Atelier : un indicateur COT — du rapport brut au diagnostic de positionnement sur l'or, avec une fenêtre explicite, des extrêmes qui ne sont pas des signaux et des conditions d'invalidation"
+title_initial: "Atelier : un indicateur COT"
+level: "avancé"
+duration_hours: 3.5
+prerequisites: ["L7.01", "L7.02", "L7.03", "L7.07", "L6.01", "L6.05"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L7.08.quiz.json"
+sources: ["S-CFTC-19", "S-CFTC-08", "S-CFTC-09", "S-CFTC-10", "S-CFTC-11", "S-CFTC-12", "S-CFTC-13", "S-CFTC-06", "S-CFTC-02", "S-KIT-05", "S-KIT-08", "S-KIT-04"]
+---
+
+# L7.08 — Atelier : un indicateur COT
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée ; **[Réemploi]** = lu dans une leçon précédente (L7.03, L7.07) ; **[Reconstitué]** = déduit d'une lecture par différence, **jamais lu directement** ; **[Calcul de l'auteur]** ; **[Interprétation]** ; **[Hypothèse]** ; **[SIMULATION]** = données fictives. **Nouvelle lecture de cette leçon** : le rapport désagrégé du **27/10/2026** sur la page courante de la CFTC (S-CFTC-19, pied de page « Updated October 30, 2026 »), lu en résumé automatique sur ses 100 000 premiers caractères. **Les rapports du 20/10 et de la série longue ne sont pas lus.** **Une bonne analyse fondamentale ne garantit pas une transaction gagnante ; un indicateur COT décrit une exposition, il ne prédit pas un prix.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. identifier les catégories du rapport désagrégé (Producer/Merchant, Swap Dealers, Managed Money, Other Reportables, Nonreportable) et ce que chacune représente ;
+2. calculer positions nettes, variations hebdomadaires et parts de l'intérêt ouvert, et expliquer l'**effet de dénominateur** ;
+3. définir **par écrit** une fenêtre, un percentile et un écart standardisé (z-score), et refuser de les calculer quand la fenêtre est trop courte ;
+4. repérer un niveau extrême sans en faire un signal automatique ;
+5. confronter un positionnement à un prix en reconnaissant ce qu'une comparaison à deux points ne prouve pas ;
+6. produire un diagnostic, un scénario haussier, un scénario baissier, un scénario neutre et des conditions d'invalidation ;
+7. distinguer la **date de référence (mardi)** de la **date de publication (généralement vendredi)** et dater l'âge de la donnée.
+
+## 2. Prérequis
+
+- **L6.01 et L6.05** (raisonnement conditionnel, faits/anticipations) ; **L7.01 à L7.03** (fiche de positionnement, COT en série, TFF) ; **L7.07** (matrice, niveaux A/B/C, thèse réfutable).
+- **Non repris ici** : lecture d'une ligne COT et conventions de base (L7.01), conversions en tonnes (L7.06), matrice et fiche de thèse (L7.07). On les **applique** à un indicateur.
+
+## 3. Explication intuitive
+
+Un indicateur COT est comme un thermomètre à la qualité de mesure connue mais au délai fixe : il dit **qui porte quelle exposition le mardi**, pas ce qui se passe vendredi, ni pourquoi. Pour qu'un thermomètre serve, il faut savoir (a) quel instrument, (b) quelle échelle, (c) par rapport à quelle histoire. Sans histoire, « 105 562 contrats » ne veut rien dire ; avec une histoire trop courte, « le plus bas depuis huit semaines » non plus. L'atelier consiste à **construire l'indicateur étape par étape et à s'arrêter là où les données ne permettent plus de conclure**.
+
+## 4. Développement technique
+
+### 4.1 Les catégories (S-CFTC-06, S-CFTC-19)
+
+| Catégorie | Qui | Net typique (27/10) | Lecture prudente |
+|---|---|---|---|
+| **Producer/Merchant/Processor/User** | producteurs, négociants, utilisateurs physiques | −9 574 | couverture d'activité physique ; ne renseigne pas sur une opinion de prix |
+| **Swap Dealers** | intermédiaires qui couvrent leurs swaps par des contrats à terme | −206 050 | souvent contrepartie de la demande de clients ; le net négatif n'est pas un pari baissier |
+| **Managed Money** | CTA, CPO enregistrés, fonds non enregistrés identifiés | +105 562 | catégorie la plus utilisée comme proxy de l'exposition spéculative ; ni tout le spéculatif, ni toute l'intention |
+| **Other Reportables** | autres grands opérateurs | +80 889 | catégorie résiduelle hétérogène |
+| **Nonreportable** | petits opérateurs (intérêt ouvert − positions rapportables) | +29 173 *[Reconstitué]* | **non lu dans le texte** ; calculé par différence |
+
+Le spreading (positions en écart) est publié pour Swap Dealers, Managed Money et Other Reportables, **pas pour Producer/Merchant dans le bloc lu**. **Net = long − short, spreading exclu.** Un opérateur est classé selon son activité principale, pas selon chaque transaction.
+
+### 4.2 Les cinq calculs de l'indicateur
+
+1. **Net** : long − short.
+2. **Variation hebdomadaire** : net(t) − net(t−1).
+3. **Part de l'intérêt ouvert (OI)** : net ÷ OI. **Effet de dénominateur** : si l'OI chute, le ratio monte même si le net baisse (voir 6.2).
+4. **Percentile** : part des observations de la fenêtre inférieures ou égales à la valeur courante (définition de cours).
+5. **Écart standardisé (z)** : (valeur − moyenne de la fenêtre) ÷ écart-type d'échantillon (n − 1).
+
+### 4.3 La fenêtre : à décider avant de calculer
+
+**[Définition de cours]** Fenêtre minimale pour parler de percentile ou d'extrême : **52 observations hebdomadaires** (un an) ; **156 observations** (trois ans) préférable pour comparer des phases. Ces seuils sont des **conventions** à écrire avant de regarder les données. En dessous : **calcul descriptif possible, conclusion d'extrême interdite**. Le percentile et le z-score répondent à des questions différentes : le premier ne suppose aucune forme de distribution, le second suppose un niveau et une dispersion stables, ce qui est discutable pour une série qui dérive.
+
+### 4.4 Extrême ≠ signal
+
+Un niveau élevé dans la fenêtre dit que la **position est inhabituellement garnie par rapport à l'histoire retenue**. Il ne dit ni quand elle se dénouera, ni si elle se dénouera, ni si le prix baissera. Un extrême bas ne dit pas qu'un rebond est proche. L'usage correct est conditionnel : **identifier un risque de dénouement ou un espace de rachat**, puis chercher ce qui le déclencherait ou le démentirait.
+
+### 4.5 Date de référence et publication
+
+Positions **au mardi** ; publication **généralement le vendredi à 15 h 30 (heure de l'Est)**. Observé : 13/10 → publié le 16/10 (3 jours) ; 27/10 → page mise à jour le 30/10 (3 jours, déduit du pied de page de la page courante). **L'âge de la donnée au moment de la décision** se calcule depuis la **date de référence**. Précaution : la CFTC a annoncé le 27/10/2026 le **plan** d'une publication deux fois par semaine d'ici fin 2026 (S-CFTC-02) : le calendrier doit être revérifié à chaque lecture.
+
+## 5. Définitions essentielles
+
+- **Position nette / brute** : long − short / long + short.
+- **Intérêt ouvert** : nombre total de contrats en cours.
+- **Spreading** : positions en écart (calendaires), exclues du net.
+- **Fenêtre** : période d'observations retenue pour percentile et z ; fixée avant le calcul.
+- **Percentile** : rang relatif de la valeur dans la fenêtre.
+- **Écart standardisé (z)** : distance à la moyenne en écarts-types.
+- **Effet de dénominateur** : variation d'un ratio due à celle de son dénominateur.
+- **Donnée reconstituée** : obtenue par différence (valeur publiée − variation publiée), jamais lue.
+
+## 6. Exemples chiffrés
+
+### 6.1 Le tableau de positionnement (Managed Money, or COMEX, 100 oz)
+
+**[Réemploi]** S-CFTC-13, 12, 11, 10, 09, 08 ; **[Fait]** S-CFTC-19 (27/10) ; **[Reconstitué]** 20/10 = valeur du 27/10 moins la variation publiée.
+
+| Date (mardi) | Long | Short | Net | Spreading | OI | Net/OI | Variation du net |
+|---|---|---|---|---|---|---|---|
+| 08/09 | 148 982 | 9 434 | 139 548 | 50 953 | 582 664 | 23,95 % | — |
+| 15/09 | 145 837 | 8 777 | 137 060 | 51 931 | 577 454 | 23,74 % | −2 488 |
+| 22/09 | 139 307 | 7 973 | 131 334 | 50 737 | 571 291 | 22,99 % | −5 726 |
+| 29/09 | 134 658 | 10 240 | 124 418 | 50 677 | 541 982 | 22,96 % | −6 916 |
+| 06/10 | 130 247 | 15 427 | 114 820 | 44 742 | 527 641 | 21,76 % | −9 598 |
+| 13/10 | 128 542 | 17 463 | 111 079 | 45 810 | 526 276 | 21,11 % | −3 741 |
+| 20/10 *[Reconstitué]* | 120 970 | 16 764 | 104 206 | 38 634 | **non lu** | non calculable | −6 873 |
+| 27/10 | 122 508 | 16 946 | 105 562 | 40 502 | 396 810 | **26,60 %** | **+1 356** |
+
+Somme des variations : −33 986 = 105 562 − 139 548 ✓. Net du 27/10 en tonnes : 105 562 × 100 ÷ 32 150,7466 = **328,3 t** (contre 434,0 t le 08/09).
+
+### 6.2 L'effet de dénominateur
+
+L'intérêt ouvert passe de 526 276 (13/10) à 396 810 (27/10) : **−24,6 %**. Le net baisse de 111 079 à 105 562 (**−5,0 %**), pourtant la part de l'OI **monte** de 21,11 % à 26,60 %. À OI constant (526 276), la part du 27/10 aurait été de **20,06 %**. **Lire « la part de l'OI a augmenté » comme « les spéculateurs ont acheté » serait une erreur** : c'est le dénominateur.
+
+### 6.3 Autres catégories (13/10 et 27/10)
+
+**[Fait]** S-CFTC-08, S-CFTC-19 ; **[Calcul de l'auteur]** nets ; Nonreportable **[Reconstitué]** (OI − somme des longs rapportables − spreading).
+
+| Catégorie | Net 13/10 | Net 27/10 |
+|---|---|---|
+| Producer/Merchant | −17 681 | −9 574 |
+| Swap Dealers | −218 483 | −206 050 |
+| Managed Money | +111 079 | +105 562 |
+| Other Reportables | +88 655 | +80 889 |
+| Nonreportable *[Reconstitué]* | +36 430 | +29 173 |
+| **Somme** | **0** | **0** |
+
+Une somme nulle est attendue (chaque contrat a un long et un court) : c'est un contrôle de cohérence, **pas une preuve de qualité**, puisque le Nonreportable est calculé par différence.
+
+### 6.4 Percentile et z-score sur la série réelle : calcul faisable, conclusion interdite
+
+Sur les 8 observations réelles : moyenne 121 003 ; écart-type d'échantillon 14 028 ; z du 27/10 = **−1,10** ; percentile = 2 observations sur 8 ≤ 105 562 = **25 %**. **Ces chiffres n'ont aucun sens statistique** : la fenêtre est de 8 semaines (convention : 52), la série est une pente descendante, et le z-score mesure alors la pente plus que l'extrême.
+
+### 6.5 Cas historique documenté — le repli du net Managed Money, septembre-octobre 2026
+
+**[Fait]** Sur le contrat COMEX or, le net Managed Money passe de 139 548 (08/09) à 105 562 (27/10) : **−33 986 contrats (−24,4 %, ≈ −105,7 t)**, avec sept variations hebdomadaires dont une seule positive (+1 356, 27/10). Prix de l'or : ≈ 4 310 $ (16/09, S-KIT-08) et ≈ 4 035 $ (28/10, S-KIT-05), valeurs de **titres de dépêches** décalées d'un jour de la date des positions, soit ≈ −6,4 %.
+
+**Ce que le tableau montre.** Un repli du net presque ininterrompu sur sept semaines, d'ampleur −24,4 %, portant sur les deux jambes : les longs diminuent de 26 474 contrats (148 982 → 122 508) et les courts augmentent de 7 512 (9 434 → 16 946), soit 26 474 + 7 512 = 33 986. La baisse du net vient donc surtout de la réduction des longs ; ce sont des positions sur contrats, pas des ventes d'or physique.
+
+**Ce qu'il suggère.** Les Managed Money ont réduit leur exposition nette pendant que le prix reculait ; la seule semaine de hausse du net (27/10) est trop isolée pour parler d'inflexion.
+
+**Ce qu'il ne permet pas de conclure.** (i) La causalité (le net a-t-il suivi le prix ou l'inverse ?) ; (ii) les motifs ; (iii) la fin du repli ; (iv) le caractère extrême (fenêtre de 8 semaines) ; (v) la signification de l'effondrement de l'OI.
+
+**Comparaison avec le prix.** 15/09 → 27/10 : net −23,0 %, prix ≈ −6,4 %. Deux points, dates décalées, prix de dépêches : on constate une **co-direction**, on ne mesure ni corrélation ni relation. Les −23 % et −6,4 % ne se comparent pas en rapport.
+
+**Anomalie ouverte.** L'intérêt ouvert tombe de 526 276 à 396 810 entre le 13 et le 27/10 et le spreading des Swap Dealers (54 517 → 23 392) et des Other Reportables (99 475 → 19 853) chute aussi. Le rapport du 20/10 n'étant pas lu et la page courante n'étant pas la même pièce que l'archive, **on ne sait pas si c'est un mouvement de marché ou une différence de présentation**. Aucune cause n'est attribuée.
+
+### 6.6 (SIMULATION) — percentile et z sur une année complète
+
+**[SIMULATION]** Série fictive de net spéculatif sur 52 semaines (contrats ; générée par l'auteur, graine 708 ; **aucun lien avec le marché réel**) : 162 300 ; 174 300 ; 180 200 ; 168 300 ; 165 800 ; 173 600 ; 183 800 ; 177 300 ; 167 900 ; 175 900 ; 172 700 ; 178 500 ; 197 900 ; 202 200 ; 204 300 ; 212 700 ; 222 400 ; 214 100 ; 197 800 ; 208 300 ; 212 800 ; 216 200 ; 211 900 ; 214 100 ; 226 700 ; 234 200 ; 227 600 ; 217 200 ; 219 200 ; 221 600 ; 220 000 ; 202 800 ; 213 600 ; 210 700 ; 224 100 ; 213 000 ; 214 900 ; 213 600 ; 222 900 ; 233 700 ; 227 700 ; 229 200 ; 240 600 ; 234 500 ; 239 600 ; 256 100 ; 260 000 ; 260 200 ; 249 300 ; 259 400 ; 256 100 ; **249 700** (dernière).
+
+Moyenne **212 952** ; écart-type d'échantillon **27 016** ; z = (249 700 − 212 952) ÷ 27 016 = **+1,36** ; percentile = 47 sur 52 ≤ 249 700 = **90,4 %**. Lecture : niveau **haut mais non extrême** (le maximum de la fenêtre est 260 200) ; **seuils de 90 % / 10 % = conventions de cours**.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]** **Or.** Le COT donne l'exposition de grands opérateurs sur un contrat ; avec un OI de 396 810 et un net MM de 105 562, on décrit une exposition, pas un flux d'ETF ni un achat physique. **Forex.** Même méthode sur un contrat de change (Euro FX, 125 000 EUR) : **la paire EUR/USD n'est pas l'indice du dollar**, et la lecture requiert les mêmes cinq calculs, la même fenêtre explicite et la même prudence (L7.03). L'indicateur n'est jamais un déclencheur.
+
+## 8. Erreurs courantes
+
+1. Confondre le mardi de référence et le vendredi de publication ; présenter un rapport de 4 jours ou de 18 jours comme « actuel ».
+2. Calculer un percentile sur 8 semaines et parler d'extrême.
+3. Lire une hausse de la part de l'OI comme un achat sans regarder le dénominateur.
+4. Confondre net et brut ; oublier que le spreading est exclu du net.
+5. Traiter un reconstitué (20/10, Nonreportable) comme une lecture.
+6. Assimiler un niveau extrême à un signal de retournement.
+7. Conclure d'une comparaison à deux points entre net et prix.
+8. Présenter une hypothèse (prise de bénéfices) comme un fait.
+9. Oublier qu'un changement de calendrier de publication est annoncé (S-CFTC-02).
+10. Construire une lecture sans condition d'invalidation.
+
+## 9. Limites de l'interprétation
+
+- Huit semaines (dont une reconstituée) : pas de percentile exploitable.
+- OI de 396 810 au 27/10 non expliqué ; source du 27/10 = page courante, lue en résumé automatique sur 100 000 caractères.
+- Prix = titres de dépêches secondaires, non des clôtures.
+- Managed Money ≠ tous les spéculateurs ; COMEX seulement.
+- Les contrôles automatiques de la leçon ne sont pas une validation scientifique.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Calcul : nets et contrôle.** À partir de la table 6.3 pour le 27/10 (longs et courts : PM 20 487 / 30 061 ; SD 20 230 / 226 280 ; MM 122 508 / 16 946 ; OR 101 216 / 20 327), calcule les nets, puis le net Nonreportable sachant que l'OI est 396 810 et que les spreadings sont SD 23 392, MM 40 502, OR 19 853, et que les shorts Nonreportable valent 19 449 (reconstitué). Vérifie que la somme est nulle et explique pourquoi ce contrôle est faible.
+
+<details>
+<summary>Correction 1</summary>
+
+Nets : PM −9 574 ; SD −206 050 ; MM +105 562 ; OR +80 889. Longs rapportables : 264 441 ; spreading : 83 747 ; longs NR = 396 810 − 264 441 − 83 747 = **48 622** ; net NR = 48 622 − 19 449 = **+29 173**. Somme : −9 574 − 206 050 + 105 562 + 80 889 + 29 173 = **0**. Contrôle faible : le NR est obtenu par différence, la somme nulle est donc construite et ne valide pas les lectures.
+</details>
+
+**Exercice 2 — Calcul : variations et dénominateur.** Calcule les variations hebdomadaires du net MM du 13/10 au 27/10, les parts de l'OI aux deux dates, la part du 27/10 à OI constant, et la conversion en tonnes du net du 27/10.
+
+<details>
+<summary>Correction 2</summary>
+
+13/10 → 20/10 : 104 206 − 111 079 = **−6 873** (reconstitué) ; 20/10 → 27/10 : 105 562 − 104 206 = **+1 356** ; cumul −5 517 (**−5,0 %**). Parts : 111 079 ÷ 526 276 = **21,11 %** ; 105 562 ÷ 396 810 = **26,60 %** ; à OI constant : 105 562 ÷ 526 276 = **20,06 %**. Tonnes : 105 562 × 100 ÷ 32 150,7466 = **328,3 t**.
+</details>
+
+**Exercice 3 — Calcul : percentile et z (SIMULATION).** Avec la série fictive de 6.6, vérifie la moyenne, le z-score de la dernière valeur et son percentile ; puis explique pourquoi on ne peut pas faire la même chose sur les 8 observations réelles.
+
+<details>
+<summary>Correction 3</summary>
+
+Moyenne 212 952 ; écart-type 27 016 ; z = **+1,36** ; percentile = 47/52 = **90,4 %**. Sur les 8 observations réelles (moyenne 121 003, écart-type 14 028, z = −1,10, percentile 25 %), la fenêtre est inférieure au minimum de 52 ; la série est de plus monotone, le z mesure la pente ; **aucune conclusion d'extrême** n'est permise.
+</details>
+
+**Exercice 4 — Étude de cas réelle.** Rédige le diagnostic de positionnement au 31/10/2026 (âge de la donnée, tendance, niveau, composition longs/courts, ratio à l'OI, anomalie de l'OI, comparaison au prix) en séparant constat, interprétation, hypothèse.
+
+<details>
+<summary>Correction 4</summary>
+
+Constat : net MM −24,4 % entre le 08/09 et le 27/10, 7 variations dont 1 positive ; longs −26 474, courts +7 512 ; OI −24,6 % entre le 13 et le 27/10 ; donnée de 4 jours. Interprétation : réduction de l'exposition nette, ralentie la dernière semaine. Hypothèses (non observées) : prise de bénéfices ; réduction du risque ; anticipation moins favorable. Ce que les données ne permettent pas : extrême (fenêtre), causalité avec le prix (deux points, dates décalées, prix secondaires), signification de la chute de l'OI. Diagnostic : « repli en cours, niveau non évaluable, donnée récente mais série trop courte ».
+</details>
+
+**Exercice 5 — Interprétation complète.** Construis trois lectures (haussière, baissière, neutre) à partir du diagnostic, puis cinq conditions d'invalidation mesurables et les données à surveiller.
+
+<details>
+<summary>Correction 5</summary>
+
+*Haussière (hypothèse)* : le repli a déjà purgé une partie des longs, la dernière variation est positive ; si le net remonte plusieurs semaines sans nouveau repli du prix, la pression de vente s'atténue. *Baissière (hypothèse)* : le repli est une tendance, les courts MM augmentent (9 434 → 16 946) ; si le net rebaisse sous 104 206 avec un prix en recul, la pression se prolonge. *Neutre* : une seule semaine de hausse, une série de 8 semaines, un OI anormal : ne pas conclure. Invalidations (conventions) : (1) net MM en hausse deux rapports consécutifs invalide la lecture baissière ; (2) net < 104 206 invalide la lecture neutre de stabilisation ; (3) OI retrouvant ≈ 500 000 sans variation du net invalide l'hypothèse que l'OI soit un mouvement structurel ; (4) série de 52 semaines montrant un percentile > 90 % ou < 10 % change la lecture de niveau ; (5) changement de calendrier CFTC (S-CFTC-02) change la lecture du délai. Données : prochains rapports (publication à vérifier), prix de clôture.
+</details>
+
+**Exercice 6 — Dates.** Les positions du 27/10 sont connues le 30/10. Calcule l'âge de la donnée au 31/10, puis l'âge des positions du 03/11 au moment de leur publication si elle a lieu le vendredi 06/11 ; que change l'annonce du 27/10 ?
+
+<details>
+<summary>Correction 6</summary>
+
+Au 31/10 : 4 jours depuis la référence (27/10), 1 jour depuis la publication. Au 06/11, la donnée du 03/11 aura 3 jours (calendrier actuel) ; si le plan semi-hebdomadaire de S-CFTC-02 est mis en œuvre, un jeu de données du lundi serait publié le mercredi et un jeu du mercredi le vendredi (délai de 2 jours) : le « mardi / vendredi » de la leçon n'est alors plus valable, à revérifier à chaque lecture.
+</details>
+
+## 11. Quiz
+
+Le quiz (10 questions) est dans `quiz/L7.08.quiz.json`. Seuil : **80 %**, soit au moins 8 bonnes réponses sur 10.
+
+## 12. Résumé
+
+- Cinq catégories, cinq calculs (net, variation, part de l'OI, percentile, z) ; Managed Money ≠ tous les spéculateurs.
+- Le ratio net/OI dépend aussi de l'OI : une chute de l'OI peut faire monter le ratio quand le net baisse.
+- Percentile et z-score exigent une fenêtre écrite d'avance (52 semaines minimum) ; en dessous, pas de conclusion d'extrême.
+- Un extrême n'est pas un signal ; un positionnement ne prédit pas un prix.
+- Une comparaison net/prix à deux points constate une direction, ne démontre aucune relation.
+- Toujours dater : mardi de référence, publication, âge au moment de lire.
+
+## 13. Critères de maîtrise
+
+- [ ] Nommer les catégories et dire ce que chacune ne prouve pas.
+- [ ] Calculer nets, variations, parts d'OI et tonnes (Exercices 1–2).
+- [ ] Définir et calculer percentile et z sur une fenêtre explicite, et refuser de le faire sur une fenêtre trop courte (Exercice 3).
+- [ ] Rédiger un diagnostic en séparant constat, interprétation, hypothèse (Exercice 4).
+- [ ] Produire trois lectures et des invalidations mesurables (Exercice 5).
+- [ ] Dater correctement une donnée (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **31 octobre 2026** (résumés automatiques) :
+
+- **S-CFTC-19** — CFTC, *Disaggregated Commitments of Traders — All Futures Combined, positions as of October 27, 2026* (page courante, mise à jour le 30 octobre 2026) : https://www.cftc.gov/dea/futures/other_sf.htm
+- **S-CFTC-06** — CFTC, notes explicatives du rapport désagrégé.
+- **S-CFTC-02** — CFTC, communiqué n° 9316-26 du 27/10/2026 (plan de publication deux fois par semaine).
+- **S-KIT-05, S-KIT-08** — Kitco (secondaire), titres de dépêches (≈ 4 035 $ le 28/10 ; ≈ 4 310 $ le 16/09).
+- **Réemplois** : S-CFTC-08 à S-CFTC-13 (positions du 08/09 au 13/10), S-KIT-04.
+
+**Définitions de cours non rattachées à une source lue :** fenêtre minimale (52/156 semaines), seuils de 90 % / 10 %, définition du percentile, effet de dénominateur, scénarios et invalidations. **Points non vérifiés :** rapport du 20/10 (reconstitué) ; cause de la chute de l'intérêt ouvert ; série longue du contrat ; prix de clôture.

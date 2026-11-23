@@ -1,0 +1,178 @@
+{
+  "chapterId": "5.4",
+  "module": 5,
+  "title": "Quiz de chapitre 5.4 — Régimes de crise, contrats à terme et coût de portage (L5.08–L5.09)",
+  "passThreshold": 0.8,
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C5.4-Q1",
+      "type": "mcq",
+      "prompt": "Un contrat COMEX porte sur 100 onces. À 4 060 $, quelle valeur notionnelle ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "4,06 M$"
+        },
+        {
+          "id": "b",
+          "text": "40 600 $"
+        },
+        {
+          "id": "c",
+          "text": "4 060 $"
+        },
+        {
+          "id": "d",
+          "text": "406 000 $"
+        }
+      ],
+      "correct": "d",
+      "explanation": "100 × 4 060 = 406 000 $ ; une variation minimale de 0,10 $ vaut 10 $ par contrat.",
+      "tags": [
+        "contrat"
+      ]
+    },
+    {
+      "id": "C5.4-Q2",
+      "type": "mcq",
+      "prompt": "Comptant 4 081,65 $ ; contrat d'août 4 103,80 $. Quelle base (terme − comptant) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0 $"
+        },
+        {
+          "id": "b",
+          "text": "−22,15 $ (backwardation)"
+        },
+        {
+          "id": "c",
+          "text": "+22,15 $ (contango)"
+        },
+        {
+          "id": "d",
+          "text": "+4 103,80 $"
+        }
+      ],
+      "correct": "c",
+      "explanation": "4 103,80 − 4 081,65 = 22,15 $ : le terme est au-dessus du comptant, situation dite de contango.",
+      "tags": [
+        "base"
+      ]
+    },
+    {
+      "id": "C5.4-Q3",
+      "type": "mcq",
+      "prompt": "Contrat à terme à 4 100 $ remplacé par le suivant à 4 141 $ : coût de roulement ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+41 $ (≈ +1,00 %)"
+        },
+        {
+          "id": "b",
+          "text": "−41 $"
+        },
+        {
+          "id": "c",
+          "text": "+4,1 $"
+        },
+        {
+          "id": "d",
+          "text": "0 $"
+        }
+      ],
+      "correct": "a",
+      "explanation": "4 141 − 4 100 = 41 $ ; en pourcentage, 41 ÷ 4 100 = 1,00 % ; répété, il pèse sur un contrat continu.",
+      "tags": [
+        "roulement"
+      ]
+    },
+    {
+      "id": "C5.4-Q4",
+      "type": "mcq",
+      "prompt": "Or de 5 400 $ (02/03) à 5 182,40 $ (11/03) : variation (deux sources différentes) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ −14 %, établie"
+        },
+        {
+          "id": "b",
+          "text": "≈ −4,0 %, comparaison indicative"
+        },
+        {
+          "id": "c",
+          "text": "≈ +4 %"
+        },
+        {
+          "id": "d",
+          "text": "0 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "5 182,40 ÷ 5 400 − 1 = −4,0 % ; l'or de 5 400 est un cours approximatif d'une autre source : indicatif seulement.",
+      "tags": [
+        "crise"
+      ]
+    },
+    {
+      "id": "C5.4-Q5",
+      "type": "mcq",
+      "prompt": "Dollar de 96 à 100,50 dans l'article d'opinion lu : variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ −4,5 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ +4,5 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ +4,7 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ +0,5 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "100,5 ÷ 96 − 1 = 4,7 % ; la source est une opinion et la nature de l'indice (DXY ?) n'est pas précisée.",
+      "tags": [
+        "dollar"
+      ]
+    },
+    {
+      "id": "C5.4-Q6",
+      "type": "mcq",
+      "prompt": "Pourquoi une crise ne se résume-t-elle pas à « refuge » ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Plusieurs canaux agissent à la fois, parfois en sens opposés (refuge, taux réels, dollar, liquidation)"
+        },
+        {
+          "id": "b",
+          "text": "Le refuge ne joue jamais"
+        },
+        {
+          "id": "c",
+          "text": "L'or ne réagit pas aux crises"
+        },
+        {
+          "id": "d",
+          "text": "Un seul canal existe"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Dans une crise, des canaux opposés se combinent ; l'attribution à un seul est une simplification.",
+      "tags": [
+        "canaux"
+      ]
+    }
+  ],
+  "revision": 1
+}

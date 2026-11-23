@@ -1,0 +1,179 @@
+{
+  "chapterId": "2.4",
+  "module": 2,
+  "title": "Quiz de chapitre 2.4 — Les grandes banques centrales : Fed, BCE, BoJ, BoE, BNS (L2.08–L2.10)",
+  "passThreshold": 0.8,
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C2.4-Q1",
+      "type": "mcq",
+      "prompt": "Quelle est la durée d'un mandat complet de gouverneur de la Fed ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "6 ans"
+        },
+        {
+          "id": "b",
+          "text": "4 ans"
+        },
+        {
+          "id": "c",
+          "text": "8 ans"
+        },
+        {
+          "id": "d",
+          "text": "14 ans, avec un mandat qui commence tous les deux ans"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Un mandat commence le 1er février des années paires (7 sièges × 2 ans = 14 ans) ; le mandat de président est de 4 ans.",
+      "tags": [
+        "fed"
+      ]
+    },
+    {
+      "id": "C2.4-Q2",
+      "type": "mcq",
+      "prompt": "Quelle est la composition des votants de la BCE à chaque réunion ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "12 : comme le FOMC"
+        },
+        {
+          "id": "b",
+          "text": "27 : tous les membres"
+        },
+        {
+          "id": "c",
+          "text": "21 : 6 membres du directoire, 4 droits du groupe 1 et 11 droits du groupe 2"
+        },
+        {
+          "id": "d",
+          "text": "6 : le directoire seul"
+        }
+      ],
+      "correct": "c",
+      "explanation": "6 + 4 + 11 = 21 votants sur 27 membres ; la BCE décide en général par consensus.",
+      "tags": [
+        "bce"
+      ]
+    },
+    {
+      "id": "C2.4-Q3",
+      "type": "mcq",
+      "prompt": "Groupe 2 de la BCE : 16 gouverneurs partagent 11 droits de vote. Quelle fréquence de vote pour un gouverneur ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "68,75 %"
+        },
+        {
+          "id": "b",
+          "text": "100 %"
+        },
+        {
+          "id": "c",
+          "text": "80 %"
+        },
+        {
+          "id": "d",
+          "text": "11 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "11 ÷ 16 = 0,6875 ; le groupe 1 vote 4/5, soit 80 % des mois.",
+      "tags": [
+        "bce",
+        "rotation"
+      ]
+    },
+    {
+      "id": "C2.4-Q4",
+      "type": "mcq",
+      "prompt": "DFR = 2,50 %, écart MLF − DFR = 40 pb. Quel est le taux de la facilité de prêt marginal ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2,65 %"
+        },
+        {
+          "id": "b",
+          "text": "2,90 %"
+        },
+        {
+          "id": "c",
+          "text": "3,15 %"
+        },
+        {
+          "id": "d",
+          "text": "2,40 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "2,50 + 0,40 = 2,90 %, niveau de septembre 2026.",
+      "tags": [
+        "corridor"
+      ]
+    },
+    {
+      "id": "C2.4-Q5",
+      "type": "mcq",
+      "prompt": "Le 31 juillet 2026, que décide la BoJ selon son communiqué ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le ramener à 0 %"
+        },
+        {
+          "id": "b",
+          "text": "Le relever à 1,25 % à l'unanimité"
+        },
+        {
+          "id": "c",
+          "text": "Maintenir le taux au jour le jour à environ 1,0 % par 8 voix contre 1"
+        },
+        {
+          "id": "d",
+          "text": "Ne pas se prononcer"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le dissident Takata proposait environ 1,25 % ; sa proposition a été rejetée.",
+      "tags": [
+        "boj"
+      ]
+    },
+    {
+      "id": "C2.4-Q6",
+      "type": "mcq",
+      "prompt": "Selon le résumé de la BNS (évaluation de septembre 2026), quel est le lien entre franc et portage ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le franc s'est déprécié d'environ 3 % en phase avec des écarts de taux élargis, devenant monnaie de financement"
+        },
+        {
+          "id": "b",
+          "text": "Le franc s'est apprécié de 3 % par demande de valeur refuge"
+        },
+        {
+          "id": "c",
+          "text": "Le portage n'a aucun lien avec le franc"
+        },
+        {
+          "id": "d",
+          "text": "La BNS a relevé son taux à 2 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le taux de la BNS reste à 0 % ; les conditions monétaires se sont assouplies ; la demande de valeur refuge était limitée.",
+      "tags": [
+        "bns"
+      ]
+    }
+  ],
+  "revision": 1
+}

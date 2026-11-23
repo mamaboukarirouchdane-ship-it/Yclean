@@ -1,0 +1,321 @@
+---
+id: L7.04
+module: 7
+order: 4
+title: "Flux d'ETF et d'investisseurs : créations et rachats, tonnes, encours — séparer le flux de l'effet de prix, et ne pas lire une intention"
+title_initial: "Flux d'ETF et d'investisseurs"
+level: "avancé"
+duration_hours: 3.0
+prerequisites: ["L5.06", "L5.07", "L7.01", "L7.03"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L7.04.quiz.json"
+sources: ["S-WGC-10", "S-WGC-11", "S-WGC-16", "S-WGC-17", "S-WGC-18", "S-WGC-19", "S-WGC-20", "S-IAU-01", "S-GLD-01", "S-INV-02", "S-WGC-05", "S-WGC-01"]
+---
+
+# L7.04 — Flux d'ETF et d'investisseurs
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée, avec sa date ; **[Calcul de l'auteur]** ; **[Définition]** ; **[Interprétation]** ; **[Hypothèse]** ; **[SIMULATION]** = données fictives. **Données consultées** : sept pages mensuelles du World Gold Council (mars à septembre 2026), la fiche de l'iShares Gold Trust (IAU, données au 26/10/2026) et celle de SPDR Gold Shares (GLD, données au 29/10/2026), lues par **résumé automatique** ; la page *Gold ETF flows* de la rubrique « data » du WGC et le site de SPDR Gold Shares (adresse recommandée) **n'ont pas pu être ouverts** depuis cette session. Les charts et fichiers téléchargeables du WGC ne sont pas lisibles. **Aucun cours de marché de l'or n'a été lu** : les « prix implicites » ci-dessous sont **dérivés** (encours ÷ avoirs) et ne sont pas des cotations. **Cette leçon approfondit L5.06 et L5.07 sans les reprendre : la mécanique de base et les chiffres de 2025 y sont déjà traités. Une entrée importante dans les ETF ne garantit pas une hausse du cours, et une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. décrire ce qui, dans la vie d'un ETF d'or, modifie réellement les **avoirs** (créations/rachats) et ce qui ne les modifie pas (échanges sur le marché secondaire) ;
+2. convertir **tonnes ↔ onces troy ↔ valeur** et calculer variation d'avoirs, flux net en monnaie et variation d'encours ;
+3. **décomposer** une variation d'encours en flux et effet de valorisation, et expliquer pourquoi l'encours peut monter pendant des retraits ;
+4. distinguer ETF physiques et autres produits indexés sur l'or, et dire **ce que les statistiques de flux couvrent ou non** ;
+5. distinguer flux régionaux et mondiaux, données quotidiennes, hebdomadaires et mensuelles, demande d'investissement et demande physique ;
+6. construire un **diagnostic** sur une période documentée (flux, avoirs, prix aligné, divergences) et énoncer **ce que les données ne permettent pas de conclure**.
+
+## 2. Prérequis
+
+- Banques centrales acheteuses (L5.06) et ETF d'or et flux (L5.07) : mécanique, identité AUM = avoirs × prix, données 2025 et septembre 2026. Positionnement et COT (L7.01 à L7.03) : dates d'observation, normalisation, limites de comparaison.
+
+## 3. Explication intuitive
+
+Un ETF d'or est un **réservoir** : de l'or y entre ou en sort quand des participants autorisés créent ou rachètent des parts. Tout le reste — des milliards de dollars de parts qui changent de mains chaque jour — se passe *sans* modifier le réservoir. Le **flux** est donc le mouvement du niveau d'eau ; l'**encours** est la valeur de l'eau, qui dépend aussi du prix auquel on la mesure. Un réservoir peut se vider de 5 % pendant que sa valeur monte de 9 %, parce que chaque tonne vaut plus. Confondre les deux, c'est lire une revalorisation comme un afflux de capitaux.
+
+Deuxième difficulté : le réservoir ne mesure qu'une partie des investisseurs (ceux qui passent par ces produits) et ne dit rien de leurs motifs. Un flux est un **fait**, une intention est une **hypothèse**.
+
+## 4. Développement technique
+
+### 4.1 Ce que L5.07 a établi, et ce que L7.04 ajoute
+
+L5.07 a posé : création/rachat par participants autorisés, flux ≠ avoirs ≠ encours, identité AUM = avoirs × 32 150,7 oz/t × prix, données de 2025 et de septembre 2026, lecture « momentum ». L7.04 ajoute le **niveau opérationnel et quantitatif** : unités et conversions, décomposition flux / valorisation sur une série mensuelle, portée exacte des statistiques, granularité des données, et un diagnostic complet.
+
+### 4.2 Qu'est-ce qui modifie les avoirs ? Le fonds vu de l'intérieur
+
+**[Définition de cours, cohérente avec les pages lues]** Les avoirs d'un ETF physique ne changent que par **créations** (le participant autorisé livre de l'or, reçoit des parts) et **rachats** (il rend des parts, reçoit de l'or). Les achats et ventes de parts **entre investisseurs** sur le marché boursier laissent les avoirs inchangés. Un jour de gros volume n'est donc pas un jour de gros flux.
+
+**[Fait]** Deux fonds, données de fin octobre 2026 (résumés automatiques) :
+
+| | iShares Gold Trust (IAU) — S-IAU-01 | SPDR Gold Shares (GLD) — S-GLD-01 |
+|---|---|---|
+| Date des données | 26/10/2026 (cours de clôture : 23/10) | NAV et encours : 29/10/2026 |
+| Encours | 59 864 555 134 $ | 134 723,34 M$ |
+| Parts en circulation | 791 700 000 | 365,10 M |
+| Or détenu | 14 880 715,81 oz (462,84 t) | **non affiché** sur la page lue |
+| Valeur liquidative par part | 75,6252 $ | 369,00 $ |
+| Prime/décote | −0,36 % (23/10) | −0,04 % (29/10) |
+| Frais | 0,25 % (frais du promoteur) | 0,40 % (frais bruts, « au 31/10/2026 ») |
+| Référence de valorisation | LBMA Gold Price PM | non lue |
+| Parts d'une création | « Basket Amount » 939,62 (unité non indiquée) | taille non indiquée (≈ 100 000 parts par inférence, non publiée) |
+| Statut | non enregistré comme société d'investissement (loi de 1940) ; fiduciaire/dépositaires non lus | non enregistré (loi de 1940) ; fiduciaire BNY Mellon ; dépositaires HSBC et JPMorgan |
+
+**[Calculs de l'auteur]** IAU : 14 880 715,81 ÷ 32 150,7466 = **462,84 t** (concorde avec la page) ; or par part = 14 880 715,81 ÷ 791 700 000 = **0,018796 oz** ; encours ÷ onces = **4 023 $/oz** (prix implicite du fonds) ; VL × parts = 59 872 M$ contre 59 865 M$ publiés (écart de 0,013 %, valeurs d'une même date mais d'heures de calcul différentes : hypothèse). GLD : 369,00 × 365,10 M = **134 722 M$** pour 134 723 M$ publiés.
+
+**Prime et décote.** GLD : jours de prime/décote en 2025 : 78 / 170 ; T1 2026 : 20 / 41 ; T2 : 24 / 38 ; T3 : 33 / 31. **[Interprétation]** Une prime ou décote durable signale un écart entre le prix de la part et la valeur de l'or détenu ; le mécanisme de création/rachat est ce qui tend à le refermer. Un écart de −0,04 % à −0,36 % est de l'ordre de grandeur de la précision de l'horodatage : on ne l'interprète pas comme un signal.
+
+### 4.3 Quels produits répliquent l'or ? Et que mesurent les statistiques de flux ?
+
+**[Fait]** (S-INV-02, glossaire d'Investor.gov, page sans date) : les ETF « classiques » sont enregistrés selon la loi de 1940 ; les **fonds cotés de matières premières** détiennent des matières premières, des devises ou des dérivés sur celles-ci et **ne sont pas** enregistrés comme sociétés d'investissement, « même s'ils sont appelés ETF » ; les **ETN** sont des **créances non garanties** d'établissements financiers, liées à un indice, et peuvent entraîner la perte de la totalité de l'investissement. La page ne parle pas de contrats à terme.
+
+**[Fait]** (S-WGC-20, définition du WGC dans ses pages mensuelles) : les « gold ETFs » comptés sont des **titres réglementés qui détiennent de l'or physique** (fonds ouverts, fermés, OPC). La *demande* est la variation des avoirs ; les *flux* sont les montants nets en dollars entrant ou sortant. Les « entrées globales » additionnent les fonds dont les avoirs ont augmenté, les « sorties » ceux dont ils ont baissé.
+
+| Produit | Détient | Risque principal propre au produit | Compté dans les flux du WGC ? |
+|---|---|---|---|
+| ETF/fonds d'or physique | lingots (via dépositaires) | écart prime/décote, risque de conservation | **oui** (portée du WGC) |
+| ETN lié à l'or | rien : créance sur l'émetteur | risque de crédit de l'émetteur (S-INV-02) | non, par définition de la portée |
+| Fonds fondé sur des contrats à terme | dérivés | roulement des contrats (définition de cours, **non sourcée ici**) | non, par définition de la portée |
+| Barres et pièces | métal détenu en direct | stockage, écart de prix détail/gros | non (autre ligne de la demande d'investissement) |
+
+**Conséquence.** Le flux d'ETF est un **sous-ensemble** de la demande d'investissement : en 2025, 801,2 t pour les ETF contre 1 374,1 t de barres et pièces (S-WGC-05, déjà lue en L5.02). Écrire « la demande d'investissement baisse » à partir des seuls flux d'ETF est une extrapolation.
+
+**Fonds en devises couvertes.** **[Fait]** (S-WGC-10) : les fonds suisses ont perdu 1 t en septembre 2026 « à cause de la mécanique des produits couverts en change » : des avoirs peuvent bouger sans décision d'investissement sur l'or.
+
+### 4.4 Décomposer une variation d'encours
+
+**[Définitions]** H = avoirs (t) ; P = prix ($/oz) ; A = H × 32 150,7466 × P ; flux F = montant net en dollars des créations moins rachats.
+
+**Décomposition exacte en trois termes** (à partir de A = H × k × P, k = 32 150,7466) :
+ΔA = k·P₀·ΔH  +  k·H₀·ΔP  +  k·ΔH·ΔP
+ flux valorisé au prix d'ouverture  |  effet de prix sur les avoirs d'ouverture  |  terme croisé
+
+**Décomposition « résiduelle » utilisée avec les données du WGC** : ΔA = F + effet de valorisation, d'où effet de valorisation = ΔA − F. Elle suppose que F est le montant publié, valorisé aux prix de transaction du mois. **L'effet de valorisation absorbe aussi les arrondis** (encours à ±0,5 Md$, flux à ±0,05 Md$) : un résidu de quelques milliards est du bruit, pas une information.
+
+### 4.5 La série de sept fins de mois (mars à septembre 2026)
+
+**[Fait]** (S-WGC-16 à S-WGC-20, S-WGC-11 et S-WGC-10 ; résumés automatiques) : flux net du mois (Md$), avoirs de fin de mois (t), encours de fin de mois (Md$).
+
+| Mois | Flux (Md$) | Avoirs (t) | Encours (Md$) |
+|---|---|---|---|
+| mars | −12 | 4 092 * | 606 |
+| avril | +6,6 | 4 137 | 615 |
+| mai | −2 | 4 121 | 604 |
+| juin | −8,9 | 4 047 | 526 |
+| juillet | +3 | 4 068 | 530 |
+| août | +18 | 4 189 | 615 |
+| septembre | +10 | 4 256 | 574 |
+
+\* **[Reconstitué]** avril : 4 137 t « +45 t sur le mois » ⇒ mars ≈ 4 092 t. La page de mars ne donne pas les avoirs, seulement +62 t sur le trimestre et l'encours de 606 Md$ (+9 % sur 2025).
+
+**[Calculs de l'auteur]** — prix implicite = encours ÷ (avoirs × 32 150,7466), valeur **dérivée et arrondie** :
+
+| Mois | Δ encours | Flux | Effet de valorisation (Δ encours − flux) | Δ avoirs | Δ avoirs % | Prix implicite ($/oz) | Variation du prix implicite |
+|---|---|---|---|---|---|---|---|
+| mars | — | −12 | — | — | — | 4 606 | — |
+| avril | +9 | +6,6 | +2,4 | +45 t | +1,1 % | 4 624 | +0,4 % |
+| mai | −11 | −2 | −9 | −16 t | −0,4 % | 4 559 | −1,4 % |
+| juin | −78 | −8,9 | −69,1 | −74 t | −1,8 % | 4 043 | −11,3 % |
+| juillet | +4 | +3 | +1 | +21 t | +0,5 % | 4 052 | +0,2 % |
+| août | +85 | +18 | +67 | +121 t | +3,0 % | 4 566 | +12,7 % |
+| septembre | −41 | +10 | −51 | +67 t | +1,6 % | 4 195 | −8,1 % |
+
+**Lecture.** En août, l'encours gagne 85 Md$ dont 18 seulement viennent des flux ; en septembre, les investisseurs *ajoutent* 10 Md$ et l'encours *recule* de 41 Md$. **La colonne « effet de valorisation » est un résidu estimé** (Δ encours − flux, deux nombres arrondis) : elle contient aussi les écarts de dates de valorisation, les arrondis et les avoirs reconstitués ; elle n'est pas une mesure du prix de l'or.
+
+### 4.6 Contrôles de cohérence
+
+**[Calculs de l'auteur]**
+- **Régions contre mondial** : août 7,7 + 7,9 + 2 + 0,234 = **17,8** (pour 18) ; juillet 0,071 + 2 + 0,616 + 0,14 = **2,8** (pour 3) ; mai −1,1 + 0,334 − 1,2 − 0,014 = **−1,98** (pour −2) ; avril 1 + 3,7 + 1,8 + 0,106 = **6,6** ; **mars** −13 − 0,154 + 2 − 0,027 = **−11,2** pour −12 publié : **écart de 0,8 Md$**, non élucidé.
+- **Avoirs** : juin 4 121 − 74 = 4 047 (concorde) ; juillet 4 047 + 23 = 4 070 contre 4 068 lu : **écart de 2 t** (+21 t par différence contre +23 t annoncé) ; août 4 068 + 121 = 4 189 ; septembre 4 189 + 67 = 4 256.
+- **Cumuls** : avril+mai+juin : 6,6 − 2 − 8,9 = −4,3 ; cumul de début d'année en mai « près de 17 », juin +8, juillet +11, août +29, septembre +39 (=29+10) : concordent aux arrondis.
+- **Encours d'août** : 615 Md$ lu en S-WGC-20 ; L5.07 déduisait ≈ 617 Md$ de « −7 % » : écart de 2 Md$ dû à l'arrondi du pourcentage.
+- **Prix implicite et texte** : juillet, le WGC écrit que l'or « a gagné environ 2 % » alors que le prix implicite de fin de mois ne bouge que de +0,2 % : **écart non résolu** (moyenne mensuelle contre fin de mois, arrondi des encours, ou définition : hypothèses).
+- **Dates** : toutes les pages WGC lues affichent une section « Data as of 23 October, 2026 » alors que leur publication est de mars à septembre ; les notes de graphique citent les fins de mois. **On retient les dates des notes de graphique** et on signale l'anomalie.
+
+### 4.7 Le piège du rapport « flux en dollars ÷ tonnes »
+
+**[Calcul de l'auteur]** Valeur de flux par once (flux ÷ Δavoirs ÷ 32 150,7466) : avril 4 562 ; mai 3 888 ; juin 3 741 ; juillet 4 443 ; août 4 627 ; septembre 4 642 $/oz. Sur des mois à gros flux, le résultat est proche des prix implicites. Mais : cumul de début d'année à fin juillet : 11 Md$ ÷ 39 t = **8 772 $/oz** ; premier semestre : 8 Md$ ÷ 18 t = **13 823 $/oz** ; T3 : 31 Md$ ÷ 211 t = 4 570 $/oz.
+
+**Pourquoi ?** Si des achats ont lieu à un prix et des ventes à un autre, flux net en dollars et variation nette en tonnes ne se divisent pas en un prix de marché. Et quand la variation nette en tonnes est proche de zéro, le rapport explose. **Ce ratio n'est donc ni un prix ni une preuve d'erreur** ; au-dessus de quelques semaines ou à variation d'avoirs faible, on ne l'utilise pas. (Exercice 5 : cas fictif.)
+
+### 4.8 Quotidien, hebdomadaire, mensuel ; régional, mondial
+
+| Fréquence | Source lue | Ce qu'elle apporte | Piège |
+|---|---|---|---|
+| Quotidienne | fiches des fonds (IAU, GLD) | encours, parts, onces, VL, prime/décote d'un fonds | un seul fonds ; l'avoir quotidien n'est pas toujours affiché (GLD) |
+| Hebdomadaire | rapport COT (L7.01) ; note du WGC sur « la semaine du 17 août » | repère d'un pic d'entrées (environ 4 Md$ en Amérique du Nord) | semaines de dates différentes entre sources |
+| Mensuelle | WGC | flux, avoirs, encours, régions | arrondis ; publication en début de mois suivant ; fichiers non lisibles |
+| Trimestrielle | WGC *Gold Demand Trends* (L5.02) | ETF dans la demande totale | révisions |
+
+**Régional contre mondial.** Août 2026 : Amérique du Nord +7,7 Md$ (« troisième plus forte entrée mensuelle »), Europe +7,9 Md$ (« meilleur mois de la région »), Asie +2 Md$ ; juin 2026 : Asie −2,3 Md$ (pire mois), Amérique du Nord −5,5 (L5.07). Un total mondial positif peut cacher des signes opposés selon les régions ; il faut lire les régions avant le total.
+
+### 4.9 Flux observé et intention supposée
+
+**[Interprétation]** Un flux net est une **différence** : il ne dit pas combien d'investisseurs achètent et vendent en même temps, ni pourquoi. Les raisons énoncées par le WGC (momentum, point d'entrée « près de 4 000 $ » en juillet) sont des **explications proposées**, pas des mesures. Le momentum est une hypothèse, que les flux de mai et de juin (sorties quand le prix recule) et d'août (entrées quand il monte) soutiennent sans l'établir ; septembre (entrées avec prix en baisse) la contredit sur un mois.
+
+## 5. Définitions essentielles
+
+- **Avoirs** : tonnes d'or détenues par les fonds à une date.
+- **Flux net** : montant en dollars (ou variation en tonnes) des créations moins rachats sur une période.
+- **Encours (AUM)** : valeur des avoirs au prix de la date.
+- **Effet de valorisation** : variation d'encours due à la variation du prix.
+- **Prix implicite** : encours ÷ (avoirs × 32 150,7466) ; valeur dérivée, non cotation.
+- **Prime/décote** : écart entre le prix de la part en bourse et sa valeur liquidative.
+- **Marché secondaire** : échanges de parts entre investisseurs, sans effet sur les avoirs.
+- **Once troy** : 31,1034768 g ; 1 t = 1 000 000 g = 32 150,7466 oz.
+
+## 6. Exemples chiffrés
+
+### 6.1 Conversion
+
+1 000 000 g ÷ 31,1034768 = **32 150,7466 oz/t**. IAU : 14 880 715,81 oz ÷ 32 150,7466 = **462,84 t**.
+
+### 6.2 Flux valorisé
+
+Août 2026 : +121 t × 32 150,7466 × 4 566 $/oz ≈ **17,8 Md$** (publié : 18 Md$).
+
+### 6.3 Variation d'encours
+
+Septembre 2026 : 574 − 615 = **−41 Md$** (−6,7 %), dont flux +10 Md$ et **résidu de valorisation estimé −51 Md$** (différence entre deux valeurs arrondies ; non une mesure exacte de la variation du prix de l'or, car les dates de valorisation, les avoirs et les flux ne sont pas démontrés comparables).
+
+### 6.4 Prix implicite
+
+Fin septembre : 574 e9 ÷ (4 256 × 32 150,7466) = **4 195 $/oz**.
+
+### 6.5 Cas historique documenté — septembre 2026 : des entrées nettes, un encours en baisse
+
+**[Fait]** (S-WGC-10, WGC, publié le 7 octobre 2026, résumé automatique) : en septembre 2026, flux net **+10 Md$** ; avoirs **+67 t à 4 256 t (record)** ; encours **−7 % à 574 Md$**. La page attribue le mouvement à un prix « plus bas » et mentionne une hausse de 25 points de base de la Fed, sous forme d'explications hypothétiques.
+
+**[Calcul de l'auteur]** Prix implicite : 4 566 → 4 195 $/oz (**−8,1 %**) ; avoirs +1,6 % ; encours : (1,016) × (0,919) − 1 = **−6,6 %**. Le mois combine des **entrées** (+10 Md$, +67 t) et un **résidu de valorisation estimé** de −51 Md$ (non une mesure exacte). **Ce que les données permettent** : constater que les flux ont été positifs alors que le prix baissait ; ce qu'elles **ne permettent pas** : dire pourquoi, ni si les acheteurs ont « acheté la baisse » (hypothèse du WGC), ni que ces entrées empêcheront ou provoqueront une hausse.
+
+### 6.6 (SIMULATION) — un encours qui monte alors que les investisseurs se retirent
+
+**[SIMULATION]** Début du mois : 1 000 t, prix 4 000 $/oz. Encours = 1 000 × 32 150,7466 × 4 000 = **128,60 Md$**. Pendant le mois, les investisseurs retirent **50 t**, vendues en moyenne à 4 200 $/oz. Fin du mois : prix **4 600 $/oz**, avoirs **950 t**. Encours final = 950 × 32 150,7466 × 4 600 = **140,50 Md$**.
+- Flux net : −50 × 32 150,7466 × 4 200 = **−6,75 Md$** ; avoirs : **−5,0 %** ;
+- Encours : **+11,9 Md$ (+9,3 %)** ; effet de valorisation = 11,9 − (−6,75) = **+18,6 Md$**.
+Un tableau de bord qui n'afficherait que l'encours conclurait à un afflux ; les avoirs montrent des retraits.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Fiche de flux** (suite de la fiche de positionnement, L7.01) : produit exact et portée de la statistique, flux net (monnaie et tonnes), avoirs, encours, décomposition flux / valorisation, régions, fréquence et date, prix aligné, « divergence : oui / non ».
+- **XAU/USD** : un flux d'ETF est une information sur un canal d'investissement, à confronter aux taux réels, au dollar, aux achats officiels (L5.06) et au positionnement (L7.02, L7.03). Il ne fournit ni cible ni signal.
+- **Dollar** : les ETF cotés aux États-Unis sont valorisés en dollars ; le flux en dollars d'un fonds couvert en change n'a pas la même signification que celui d'un fonds non couvert.
+- **Risque** : des sorties concentrées peuvent amplifier un repli (hypothèse non testée ici).
+
+## 8. Erreurs courantes
+
+1. Lire une hausse d'encours comme une entrée de capitaux.
+2. Confondre volume de négociation des parts et flux.
+3. Considérer les flux d'ETF comme la demande d'investissement totale.
+4. Dire « ETF » pour un ETN, un produit à terme ou un fonds non couvert par la statistique.
+5. Diviser un flux net en dollars par une variation d'avoirs et y voir un prix.
+6. Prendre un prix implicite pour une cotation.
+7. Écrire qu'une grosse entrée fera monter l'or.
+8. Déduire une intention d'un flux net.
+9. Mélanger des dates (29/10 pour un fonds, 30/09 pour le total mondial) pour calculer une part de marché.
+
+## 9. Limites de l'interprétation
+
+- Sources lues par résumé automatique ; charts et fichiers du WGC non lisibles ; page *Gold ETF flows* (data) et site de SPDR non ouverts.
+- Aucun cours de marché de l'or ; prix dérivés des encours, avec arrondis.
+- Avoirs de mars reconstitués ; flux en tonnes non publiés mois par mois dans les pages lues.
+- Anomalie de date « Data as of 23 October, 2026 » sur toutes les pages WGC lues.
+- Sept mois seulement : aucune inférence statistique.
+- Méthode du WGC (conversion des flux, traitement des fonds couverts) non lue.
+- Part de GLD + IAU dans l'encours mondial non calculée de façon valide (dates différentes).
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Conversions (obligatoire).** (a) Convertis 4 256 t en onces troy. (b) Un fonds détient 14 880 715,81 oz : combien de tonnes ? (c) Calcule la valeur de 67 t à 4 195 $/oz.
+
+<details>
+<summary>Correction 1</summary>
+
+(a) 4 256 × 32 150,7466 = **136 833 000 oz** (≈ 1,368 × 10⁸). (b) 14 880 715,81 ÷ 32 150,7466 = **462,84 t**. (c) 67 × 32 150,7466 × 4 195 = **9,04 Md$** (≈ 9,0 Md$).
+</details>
+
+**Exercice 2 — Variation des avoirs et flux.** Avoirs fin août 4 189 t, fin septembre 4 256 t ; flux de septembre +10 Md$. Calcule la variation en tonnes et en %, le prix de transaction implicite du flux et compare avec le prix implicite de fin de mois (4 195 $/oz).
+
+<details>
+<summary>Correction 2</summary>
+
+Δ = +67 t (+1,6 %). Prix implicite du flux = 10 e9 ÷ (67 × 32 150,7466) = **4 642 $/oz**, supérieur de 10,7 % au prix implicite de fin de mois (4 195) : cohérent avec des entrées pendant un mois où le prix moyen était plus élevé qu'en fin de mois (hypothèse) et avec les arrondis (10 Md$ à ±0,5, 67 t à ±0,5).
+</details>
+
+**Exercice 3 — Décomposition.** Juin : encours 604 → 526 Md$ ; flux −8,9 Md$. Donne la variation, l'effet de valorisation et le poids du flux dans la baisse.
+
+<details>
+<summary>Correction 3</summary>
+
+Δ encours = −78 Md$ ; valorisation = −78 − (−8,9) = **−69,1 Md$** ; poids du flux = 8,9 ÷ 78 = **11,4 %**, de la valorisation 88,6 %. Le résidu inclut les arrondis (±1 Md$).
+</details>
+
+**Exercice 4 — Cohérence régionale.** Août : Amérique du Nord 7,7 ; Europe 7,9 ; Asie 2 ; autres 0,234. Somme et écart au total mondial (18). Même contrôle pour mars (−13 ; −0,154 ; +2 ; −0,027 ; total −12).
+
+<details>
+<summary>Correction 4</summary>
+
+Août : **17,834**, écart −0,17 (arrondi). Mars : **−11,181**, écart de **0,8 Md$** par rapport à −12 : à signaler, non corrigé (arrondis des régions ou périmètre : hypothèses).
+</details>
+
+**Exercice 5 — Piège du ratio (SIMULATION).** Un fonds fictif achète 100 t à 4 500 $/oz puis vend 60 t à 4 000 $/oz. Calcule le flux net en dollars, la variation d'avoirs et le « prix » flux ÷ tonnes. Que conclus-tu ?
+
+<details>
+<summary>Correction 5</summary>
+
+Flux = 100 × 32 150,7466 × 4 500 − 60 × 32 150,7466 × 4 000 = 14,468 − 7,716 = **6,752 Md$** ; Δavoirs = **+40 t** ; ratio = 6,752 e9 ÷ (40 × 32 150,7466) = **5 250 $/oz**, qui n'est **ni 4 500 ni 4 000**. Il ne faut pas lire ce ratio comme un prix de marché.
+</details>
+
+**Exercice 6 — SIMULATION de valorisation.** Reprends le § 6.6 avec un prix final de 3 800 $/oz et des retraits de 50 t vendues à 3 900 $/oz en moyenne. L'encours monte-t-il ?
+
+<details>
+<summary>Correction 6</summary>
+
+Encours initial 128,60 Md$ ; final = 950 × 32 150,7466 × 3 800 = **116,06 Md$** (−9,75 %). Flux = −50 × 32 150,7466 × 3 900 = **−6,27 Md$**. Valorisation = −12,54 − (−6,27) = **−6,27 Md$**. Ici l'encours baisse et les retraits expliquent la moitié de la baisse.
+</details>
+
+**Exercice 7 — Atelier : diagnostic avril–septembre 2026.** (1) Mesure les flux nets cumulés avril–septembre. (2) Observe l'évolution des avoirs. (3) Compare, mois par mois, le signe du flux et le signe de la variation du prix implicite. (4) Identifie les périodes de divergence. (5) Rédige ce que les données permettent et ne permettent pas de conclure.
+
+<details>
+<summary>Correction 7</summary>
+
+(1) 6,6 − 2 − 8,9 + 3 + 18 + 10 = **+26,7 Md$**. (2) Avoirs 4 092 (mars, reconstitué) → 4 256 (septembre) : **+164 t** (+4,0 %), avec un creux à 4 047 en juin. (3) Mêmes signes en avril (+ / +0,4 %), mai (− / −1,4 %), juin (− / −11,3 %), juillet (+ / +0,2 %), août (+ / +12,7 %) : **5 mois sur 6** ; **septembre diverge** (+ / −8,1 %). Test décalé (flux du mois contre prix du mois suivant) : mêmes signes sur 2 couples sur 5, donc aucun avantage de « prévision » apparent. (4) Divergence : septembre ; un doute pour juillet (le WGC parle de +2 %, le prix implicite +0,2 %). (5) **Permis** : les flux ont été de même sens que le prix dans cinq mois sur six ; l'encours a été dominé par l'effet de valorisation les mois de forte variation (juin, août, septembre). **Interdit** : en déduire un lien causal, une prévision ou une intention ; six points, prix dérivés, aucune cotation de marché ni série quotidienne. Conclusion générale : **indéterminée** sur la causalité, établie sur les états.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L7.04.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Seuls créations et rachats modifient les avoirs ; le volume en bourse n'est pas un flux.
+- Encours = avoirs × prix : une variation d'encours se décompose en flux et valorisation ; en septembre 2026, +10 Md$ de flux pour −41 Md$ d'encours (résidu de valorisation estimé : −51 Md$).
+- Les statistiques du WGC couvrent des fonds d'or physique : ni ETN, ni fonds à terme, ni barres et pièces.
+- Le ratio flux en dollars ÷ tonnes n'est pas un prix.
+- Régions avant total ; fréquences et dates à aligner ; prix implicite ≠ cotation.
+- Un flux est un fait ; l'intention est une hypothèse ; une entrée n'annonce pas une hausse.
+
+## 13. Critères de maîtrise
+
+- [ ] Convertir tonnes, onces et valeur (Exercice 1).
+- [ ] Calculer variation d'avoirs et valeur d'un flux (Exercice 2).
+- [ ] Décomposer une variation d'encours (Exercices 3 et 6).
+- [ ] Contrôler la cohérence régionale (Exercice 4).
+- [ ] Éviter le piège du ratio flux ÷ tonnes (Exercice 5).
+- [ ] Mener un diagnostic en cinq étapes, avec limites (Exercice 7).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **31 octobre 2026** :
+
+- **S-WGC-16** à **S-WGC-20** — World Gold Council, *Gold ETF Flows* de mars, avril, mai, juillet et août 2026 (industrie, résumés automatiques) : https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/04 (et suffixes 05, 06, 08, 09).
+- **S-WGC-10**, **S-WGC-11** — idem, septembre et juin 2026 (déjà lues en L5.07).
+- **S-IAU-01** — iShares Gold Trust (IAU), page du fonds, données au 26/10/2026 : https://www.ishares.com/us/products/239561/ishares-gold-trust-fund
+- **S-GLD-01** — SPDR Gold Shares (GLD), page SSGA, données au 29/10/2026 : https://www.ssga.com/us/en/individual/etfs/spdr-gold-shares-gld
+- **S-INV-02** — Investor.gov (SEC), glossaire « Exchange-Traded Products » : https://www.investor.gov/introduction-investing/investing-basics/glossary/exchange-traded-products-etps
+- **S-WGC-05**, **S-WGC-01** — déjà lues.
+
+**Définitions de cours non rattachées à une source lue :** décomposition en trois termes, effet de valorisation résiduel, prix implicite, mécanique des produits à terme. **Points non vérifiés :** page *Gold ETF flows* (WGC, data), site SPDR, cours de marché de l'or, méthode du WGC, avoirs en tonnes de GLD, pages de janvier, février et août (fonds couverts), taille des *baskets*.

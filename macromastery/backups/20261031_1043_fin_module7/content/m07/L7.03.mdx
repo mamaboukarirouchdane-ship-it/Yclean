@@ -1,0 +1,315 @@
+---
+id: L7.03
+module: 7
+order: 3
+title: "COT sur l'or et le dollar : comparer deux marchés sans les confondre — et savoir quand la comparaison ne dit rien"
+title_initial: "COT sur l'or et le dollar"
+level: "avancé"
+duration_hours: 3.0
+prerequisites: ["L7.01", "L7.02", "L6.04"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L7.03.quiz.json"
+sources: ["S-CFTC-08", "S-CFTC-13", "S-CFTC-14", "S-CFTC-15", "S-CFTC-16", "S-CFTC-17", "S-CFTC-18", "S-CME-01", "S-SAN-01", "S-WNG-01", "S-CFTC-06"]
+---
+
+# L7.03 — COT sur l'or et le dollar
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée, avec sa date ; **[Calcul de l'auteur]** ; **[Reconstitué]** = valeur déduite par différence, non lue ; **[Définition]** ; **[Interprétation]** ; **[Hypothèse]** ; **[SIMULATION]** = données fictives. **Instruments exacts.** Or : *COMEX gold futures* (code CFTC 088691, contrat de 100 onces), rapport *désagrégé*, catégorie **Managed Money**. « Dollar » : **il n'existe pas de contrat « dollar » unique**. L'instrument effectivement lu ici est le **Euro FX du CME** (code CFTC 099741, contrat de 125 000 euros), rapport *Traders in Financial Futures* (TFF), catégories **Leveraged Funds** et **Asset Manager/Institutional**. Le bloc « USD INDEX » (ICE Futures U.S., code 098662) n'a **pas pu être localisé** dans les pages lues : il est inscrit au registre des données indisponibles. **Données officielles consultées** : cinq rapports TFF (positions aux 8/9, 15/9, 22/9, 29/9 et 13/10/2026, lus par résumé automatique) et les rapports désagrégés sur l'or de L7.02. **Le rapport TFF du 6/10 n'a pas été lu** ; ses valeurs sont déduites des variations publiées le 13/10. **Aucun prix n'est utilisé.** **Une bonne analyse fondamentale ne garantit pas une transaction gagnante ; rien ici ne prédit une direction.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. nommer **l'instrument exact** de chaque côté de la comparaison et expliquer pourquoi « le dollar » n'est pas un actif unique ;
+2. calculer, pour deux marchés, le net, sa variation, sa part de l'intérêt ouvert et son écart standardisé **sur la même fenêtre** ;
+3. refuser de comparer des **nombres de contrats bruts** entre marchés (100 onces contre 125 000 euros) ;
+4. lire un tableau à **quatre situations** (or net acheteur/vendeur × dollar net acheteur/vendeur) sans en tirer de règle mécanique ;
+5. repérer des **changements de composition** (reclassements, échéances, non rapportables) qui faussent une série ;
+6. décider, selon un critère fixé d'avance, si une **corrélation** est calculable — et conclure « indéterminée » quand les données ne suffisent pas.
+
+## 2. Prérequis
+
+- Lecture d'un rapport COT, net, intérêt ouvert, chronologie (L7.01) ; fenêtre, percentile, z-score, extrême (L7.02) ; régimes et seuils (L6.04).
+
+## 3. Explication intuitive
+
+Mettre côte à côte « les fonds sont acheteurs d'or » et « les fonds sont vendeurs d'euros » donne envie d'écrire une histoire : *les fonds parient sur un dollar fort qui devrait peser sur l'or*, ou l'inverse. Trois obstacles rendent l'histoire fragile. Le premier : **le dollar n'est pas un contrat**. Le Euro FX décrit le couple euro/dollar, pas « le dollar » ; l'indice du dollar est un autre contrat. Le deuxième : **les catégories ne sont pas les mêmes** d'un rapport à l'autre, et deux catégories du *même* contrat peuvent être de signes opposés (c'est le cas ci-dessous). Le troisième : **on dispose de quelques semaines**, pas d'une histoire ; deux séries qui baissent ensemble ont toujours l'air liées.
+
+La bonne attitude est donc de décrire chaque marché proprement, de les comparer par des grandeurs **normalisées et alignées dans le temps**, et d'accepter, quand le test échoue, d'écrire « indéterminée ».
+
+## 4. Développement technique
+
+### 4.1 Deux instruments, deux rapports, deux jeux de catégories
+
+| | Or | « Dollar » (instrument lu) |
+|---|---|---|
+| Contrat | COMEX gold (GC), 100 onces | Euro FX (CME), 125 000 EUR (S-CME-01) |
+| Code CFTC | 088691 | 099741 |
+| Rapport | Désagrégé (futures et options combinés) | TFF (futures et options combinés) |
+| Catégories | Producer/Merchant, Swap Dealers, **Managed Money**, Other Reportables | Dealer/Intermediary, **Asset Manager/Institutional**, **Leveraged Funds**, Other Reportables |
+| Ce que mesure une unité | 100 onces d'or | 125 000 euros |
+
+**[Définition de cours]** *Managed Money* et *Leveraged Funds* ne sont **pas** présumés équivalents : leurs règles de classification relèvent de deux rapports distincts. Les **noms** des catégories TFF figurent dans les rapports lus ; leurs **définitions officielles** n'ont pas été lues ici (point ouvert). On ne parle donc pas de « spéculateurs » pour l'une ou l'autre.
+
+**Le dollar n'est pas un actif unique.** Un net vendeur de Euro FX est une exposition à un euro plus faible *contre le dollar* ; ce n'est pas une position « acheteuse de dollar » contre toutes les monnaies. Le poids de l'euro dans l'indice du dollar n'a pas été lu dans une source de cette leçon : on s'interdit de le chiffrer. Les blocs du yen (open interest 404 924 au 13/10) et de la livre (289 928 au 13/10) existent dans le même rapport ; ils ne sont pas exploités ici.
+
+### 4.2 Le tableau COT du Euro FX (cinq dates lues, une reconstituée)
+
+**[Fait]** pour les lignes sans astérisque (S-CFTC-14 à S-CFTC-18). Positions en contrats de 125 000 EUR ; *DI* = Dealer/Intermediary, *AM* = Asset Manager/Institutional, *LF* = Leveraged Funds, *OR* = Other Reportables, *NR* = non rapportables.
+
+| Date | Intérêt ouvert | AM long | AM court | LF long | LF court | DI long | DI court | OR long | OR court | NR long | NR court |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 08/09 | 1 056 521 | 510 186 | 233 715 | 81 335 | 127 716 | 56 634 | 331 393 | 24 699 | 16 791 | 96 362 | 59 600 |
+| 15/09 | 1 040 974 | 509 328 | 233 763 | 84 559 | 135 914 | 45 755 | 305 209 | 24 911 | 17 600 | 192 148 | 164 214 |
+| 22/09 | 960 048 | 506 882 | 262 209 | 86 745 | 145 550 | 54 554 | 271 334 | 25 759 | 18 598 | 84 213 | 60 462 |
+| 29/09 | 1 014 581 | 519 140 | 273 980 | 87 616 | 170 061 | 54 677 | 248 005 | 27 314 | 19 761 | 84 941 | 61 882 |
+| 06/10 * | 1 051 111 | 521 458 | 302 755 | 93 645 | 178 421 | 55 400 | 220 270 | 25 310 | 22 221 | 89 272 | 61 421 |
+| 13/10 | 1 011 324 | 516 511 | 302 504 | 92 912 | 185 745 | 61 338 | 215 512 | 26 846 | 20 872 | 89 025 | 62 001 |
+
+\* **[Reconstitué]** 06/10 = valeur du 13/10 moins la variation publiée le 13/10 (colonne « Change »). Ce n'est **pas** une lecture du rapport du 6/10 ; elle hérite de toute erreur de la ligne du 13/10.
+
+### 4.3 Tableau de contrôle de l'or (rappel de L7.02)
+
+Net *Managed Money* (longs − courts, hors *spreading*) et intérêt ouvert (IO) de l'or COMEX : 8/9 : 139 548 (IO 582 664) ; 15/9 : 137 060 (577 454) ; 22/9 : 131 334 (571 291) ; 29/9 : 124 418 (541 982) ; 6/10 : 114 820 (527 641) ; 13/10 : 111 079 (526 276). **[Fait]** pour les positions (S-CFTC-08, S-CFTC-13, et les rapports de L7.02) ; **[Calcul de l'auteur]** pour les nets.
+
+### 4.4 Calculs alignés : net, variation, part de l'intérêt ouvert
+
+**[Calcul de l'auteur]** — net = longs − courts, *spreading* exclu.
+
+| Date | Or MM net | Or MM ÷ IO | Euro LF net | Euro LF ÷ IO | Euro AM net | Euro AM ÷ IO |
+|---|---|---|---|---|---|---|
+| 08/09 | 139 548 | 23,95 % | −46 381 | −4,39 % | +276 471 | 26,17 % |
+| 15/09 | 137 060 | 23,74 % | −51 355 | −4,93 % | +275 565 | 26,47 % |
+| 22/09 | 131 334 | 22,99 % | −58 805 | −6,13 % | +244 673 | 25,49 % |
+| 29/09 | 124 418 | 22,96 % | −82 445 | −8,13 % | +245 160 | 24,16 % |
+| 06/10 * | 114 820 | 21,76 % | −84 776 | −8,07 % | +218 703 | 20,81 % |
+| 13/10 | 111 079 | 21,11 % | −92 833 | −9,18 % | +214 007 | 21,16 % |
+
+Variations hebdomadaires du net (contrats ; les valeurs marquées * dépendent de la ligne reconstituée du 6/10) :
+
+| Semaine se terminant | Or MM | Euro LF | Euro AM |
+|---|---|---|---|
+| 15/09 | −2 488 | −4 974 | −906 |
+| 22/09 | −5 726 | −7 450 | −30 892 |
+| 29/09 | −6 916 | −23 640 | +487 |
+| 06/10 * | −9 598 | −2 331 * | −26 457 * |
+| 13/10 | −3 741 | −8 057 * | −4 696 * |
+
+**Les contrats bruts ne se comparent pas** : −9 598 contrats d'or (≈ 959 800 onces) et −23 640 contrats de Euro FX (≈ 2,95 milliards d'euros de nominal) sont des quantités sans commune mesure ; on compare des **parts de l'intérêt ouvert** ou des **écarts standardisés**. Le rapport TFF et le rapport désagrégé ont chacun leur propre intérêt ouvert ; la part du net dans l'intérêt ouvert **de son propre marché** est la seule normalisation commune qu'on retienne ici.
+
+### 4.5 Écart standardisé sur une fenêtre commune
+
+**[Définition de cours]** Fenêtre commune fixée d'avance : les **cinq dates lues** (8/9, 15/9, 22/9, 29/9, 13/10) pour les trois séries, afin de ne mélanger aucune valeur reconstituée. z = (net − moyenne) ÷ écart-type, avec l'écart-type d'échantillon (dénominateur n − 1).
+
+| Série (moyenne ; écart-type) | 8/9 | 15/9 | 22/9 | 29/9 | 13/10 |
+|---|---|---|---|---|---|
+| Or MM net (128 688 ; 11 438) | +0,95 | +0,73 | +0,23 | −0,37 | −1,54 |
+| Euro LF net (−66 364 ; 20 254) | +0,99 | +0,74 | +0,37 | −0,79 | −1,31 |
+| Euro AM net (251 175 ; 25 955) | +0,97 | +0,94 | −0,25 | −0,23 | −1,43 |
+
+**[Interprétation]** Sur cinq points, les trois séries partent de valeurs hautes et finissent au plus bas de la fenêtre : mécaniquement, **toute série qui baisse de façon à peu près continue produit ce profil**. Cela ne démontre ni lien entre séries ni « extrême » : avec cinq points, le dernier est le minimum de la fenêtre par construction (percentile ≈ 20 % = 1 observation sur 5). Le statut « extrême » reste **non évaluable** (L7.02 : fenêtre insuffisante).
+
+### 4.6 Décomposition : qui a bougé, longs ou courts ?
+
+Du 8/9 au 13/10 **[Calcul de l'auteur]** : net = Δlongs − Δcourts.
+
+- **Or, Managed Money** : longs −20 440, courts +8 029 → net −28 469 (la baisse vient à 71,8 % des longs).
+- **Euro, Leveraged Funds** : longs +11 577, courts +58 029 → net −46 452. Le net court **double** (de −46 381 à −92 833) **parce que les courts augmentent**, malgré des longs en hausse.
+- **Euro, Asset Manager** : longs +6 325, courts +68 789 → net −62 464. Les gérants d'actifs restent **nets acheteurs** (+214 007) mais moins qu'avant.
+
+Les deux jambes ont des natures différentes : l'or se désengage surtout par ses longs ; l'euro se « charge » en courts. **Même signe de variation du net ≠ même mécanisme.**
+
+### 4.7 Le tableau à quatre situations (jamais mécanique)
+
+Chaque case décrit un **état**, puis ce qu'on peut en dire, ce qu'on ne peut pas en dire, et quelle information supplémentaire manque. Aucune case ne contient de signal.
+
+| | **Euro : net court (catégorie retenue)** | **Euro : net long** |
+|---|---|---|
+| **Or MM : net long** | *Situation A.* **Compatible avec** : un or soutenu par des facteurs autres que le dollar (taux réels, achats officiels, risque) alors que l'euro est sous pression ; ou deux paris distincts. **Non démontrable** : que l'un cause l'autre. **Manque** : prix alignés, taux réels, flux officiels. | *Situation B.* **Compatible avec** : un thème commun d'« affaiblissement du dollar » (hypothèse) ; ou un encombrement des mêmes investisseurs. **Non démontrable** : que le thème existe. **Manque** : composition des détenteurs des deux positions. |
+| **Or MM : net court** | *Situation C.* **Compatible avec** : un récit de dollar et de taux réels élevés (hypothèse). **Non démontrable** : que le récit explique les positions. **Manque** : prix, taux. | *Situation D.* **Compatible avec** : un or délaissé pour des raisons propres au métal pendant que l'euro est recherché. **Non démontrable** : toute relation. **Manque** : flux ETF, calendrier. |
+
+**Où tombe l'observation du 13/10 ?** Cela **dépend de la catégorie** :
+- avec *Leveraged Funds* (net −92 833) : **situation A** (or net acheteur, euro net vendeur) ;
+- avec *Asset Manager* (net +214 007) : **situation B** (or net acheteur, euro net acheteur).
+
+**Deux lectures opposées pour le même contrat à la même date** : la case dépend d'un choix de catégorie que rien n'impose. C'est la première raison de ne pas lire ce tableau comme une règle.
+
+### 4.8 Contrôler les données : positions, variations, somme des nets
+
+**Contrôle 1 — positions publiées contre variations publiées** (comme en L7.02) **[Calcul de l'auteur]** : pour les dates du 15/9, 22/9 et 29/9, chaque position de chaque catégorie (14 par date) est comparée à la position précédente plus la variation publiée. **Résultat : 35 sur 42 concordent exactement ; 7 écarts de 1 contrat** : 2 au 15/9 (AM long, LF *spreading*) et 5 au 29/9 (AM long et court, LF court, OR long et court). Ils sont **signalés, non corrigés** (résumé automatique, arrondi ou révision possibles).
+
+**Contrôle 2 — intérêt ouvert contre somme des longs.** L'intérêt ouvert doit être égal à la somme des longs de toutes les catégories (*spreading* compris, non rapportables compris). **Ici le test est indépendant**, car les non rapportables sont **publiés** : 8/9 : 1 056 522 contre 1 056 521 publié (écart de 1). C'est le contraire de la situation de L7.01, où la somme nulle était une identité par construction.
+
+**Contrôle 3 — somme des nets.** La somme des nets des cinq groupes (DI, AM, LF, OR, NR) doit être nulle à l'arrondi : valeurs obtenues +1 (8/9), +1 (15/9), 0 (22/9), −1 (29/9), −2 (13/10). **Écarts de quelques contrats, acceptés comme bruit de lecture**, non expliqués.
+
+### 4.9 Changements de composition : le 15 et le 22 septembre
+
+**[Fait]** Le 15/9, les non rapportables passent de 96 362 / 59 600 à 192 148 / 164 214 (variations publiées +95 786 / +104 614) ; la même semaine, le *spreading* des Dealers tombe de 111 746 à 44 277 (−67 469) et celui des Leveraged Funds de 121 459 à 89 479 (−31 979). Le 22/9, les non rapportables retombent à 84 213 / 60 462 (−107 935 / −103 752) et l'intérêt ouvert baisse de 80 926 (960 048).
+
+**[Hypothèse, non vérifiée]** Un effet d'échéance trimestrielle (roulement des contrats de septembre) pourrait expliquer ces mouvements simultanés ; aucune source lue ne le confirme ici, et un reclassement d'opérateurs entre catégories reste possible. **Conséquence pratique** : les variations hebdomadaires autour du 15 et du 22/9 mélangent un vrai changement de position et un changement de périmètre. L'intérêt ouvert du Euro FX a aussi varié de −4,3 % entre le 8/9 et le 13/10, contre −9,7 % pour l'or.
+
+### 4.10 La corrélation : un critère fixé d'avance
+
+**[Définition de cours]** On ne calcule une corrélation **que si** (i) les deux séries sont observées aux **mêmes dates** ; (ii) on utilise des **variations homogènes** (ici : hebdomadaires de mardi à mardi), pas des niveaux qui tendent ; (iii) on dispose d'**au moins huit paires de variations hebdomadaires lues** (seuil de cours, arbitraire mais fixé avant de regarder). Sinon : « **non calculable** ».
+
+**État des lieux.** Paires hebdomadaires *homogènes et lues* : 8/9→15/9, 15/9→22/9, 22/9→29/9 = **3** (29/9→13/10 couvre deux semaines ; les deux semaines intermédiaires reposent sur une valeur reconstituée). Avec la ligne reconstituée : 5, toujours inférieur à 8. **Conclusion : corrélation non calculable.**
+
+**Pourquoi ne pas « calculer quand même » ?** Parce que la corrélation de **niveaux** entre deux séries qui baissent est quasi automatique : sur les cinq dates lues, la corrélation de Pearson entre le net de l'or et le net court de Leveraged Funds (euro) vaut 0,97 — **résultat sans valeur** (deux tendances, cinq points, aucune variation homogène). On le présente comme **piège**, pas comme mesure. En outre, les cinq variations hebdomadaires disponibles de l'or et de Leveraged Funds (deux de ces cinq reposent sur la ligne reconstituée) sont **toutes négatives** : la concordance de signes (5 sur 5) ne distingue pas un lien d'une tendance commune.
+
+## 5. Définitions essentielles
+
+- **Instrument exact** : contrat, bourse, code CFTC, taille de contrat, type de rapport.
+- **Net** : longs − courts, *spreading* exclu.
+- **Part de l'intérêt ouvert** : net ÷ intérêt ouvert **du même contrat**, même date.
+- **Fenêtre commune** : mêmes dates, même longueur, fixées avant le calcul.
+- **Écart standardisé** : (valeur − moyenne de la fenêtre) ÷ écart-type de la fenêtre.
+- **Changement de composition** : variation du périmètre ou du classement qui n'est pas un changement de position.
+- **Corrélation non calculable** : critère de données non satisfait ; ce n'est pas « corrélation nulle ».
+
+## 6. Exemples chiffrés
+
+### 6.1 Contrats bruts, pourquoi non
+
+Or : 9 598 contrats × 100 oz = 959 800 oz. Euro : 23 640 contrats × 125 000 EUR = 2 955 000 000 EUR. Ces deux nombres n'ont ni la même unité ni le même ordre de grandeur ; seule leur part de l'intérêt ouvert **de leur propre marché** est comparable.
+
+### 6.2 Part de l'intérêt ouvert (13/10)
+
+Or MM : 111 079 ÷ 526 276 = **21,11 %**. Euro LF : −92 833 ÷ 1 011 324 = **−9,18 %**. Euro AM : 214 007 ÷ 1 011 324 = **21,16 %**.
+
+### 6.3 Écart standardisé
+
+Euro LF, 13/10 : (−92 833 − (−66 364)) ÷ 20 254 = **−1,31**.
+
+### 6.4 Décomposition du net court des Leveraged Funds
+
+Δlongs = 92 912 − 81 335 = +11 577 ; Δcourts = 185 745 − 127 716 = +58 029 ; Δnet = 11 577 − 58 029 = **−46 452**.
+
+### 6.5 Cas historique documenté — l'or et le Euro FX, 8 septembre – 13 octobre 2026
+
+**[Fait]** (CFTC, S-CFTC-08 à S-CFTC-18, résumés automatiques). Entre les positions du 8/9 et du 13/10/2026 : net long *Managed Money* de l'or **139 548 → 111 079** (−20,4 %, part de l'intérêt ouvert 23,95 % → 21,11 %) ; net des *Leveraged Funds* sur le Euro FX **−46 381 → −92 833** (le net court double ; −4,39 % → −9,18 % de l'intérêt ouvert) ; net des *Asset Managers* **+276 471 → +214 007** (−22,6 %).
+
+**[Interprétation, prudente]** Les trois séries baissent sur la période. Les données **ne permettent pas** d'affirmer que les mêmes acteurs, ni la même motivation, sont à l'œuvre ; elles ne contiennent **aucun prix** ; la période est courte (cinq dates lues) ; deux changements de composition (15/9, 22/9) la traversent ; les deux études lues (S-SAN-01, S-WNG-01) portent sur d'autres marchés et suggèrent plutôt que les positions réagissent aux prix qu'elles ne les prédisent. **Conclusion retenue : indéterminée.** Ce qui est établi : l'état de chaque position à chaque date, et son évolution.
+
+### 6.6 (SIMULATION) — petite série, grande illusion
+
+**[SIMULATION]** Variations hebdomadaires fictives de deux séries de positions sur 12 semaines — A : −2, 0, −3, 5, −1, −3, 1, −4, −5, 6, −3, 3 ; B : −3, 3, −4, 5, 0, −3, 0, −2, 3, −6, −5, −5. Corrélation sur les **5 premières** semaines : **0,90** ; sur les **5 dernières** : **−0,73** ; sur les **12** : **0,00**. Même couple de séries, trois réponses : la corrélation calculée sur peu de points dit surtout la fenêtre choisie.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Fiche comparative** (L7.01, L7.02) : pour chaque marché, instrument exact, catégorie, net, part de l'intérêt ouvert, écart standardisé sur fenêtre commune, composition, et une mention « corrélation : calculable / non calculable ».
+- **XAU/USD et EUR/USD** : les deux positionnements décrivent des états de marché ; ils ne remplacent ni l'analyse des taux réels (module 5) ni les scénarios (module 6).
+- **Choix de catégorie** : annoncer **avant** l'analyse quelle catégorie représente quoi ; changer de catégorie après coup pour obtenir la case voulue du tableau à quatre situations est une erreur de méthode.
+- **Risque** : un encombrement de positions peut amplifier un dénouement (hypothèse non testée ici).
+
+## 8. Erreurs courantes
+
+1. Écrire « le dollar » à propos d'un seul contrat de change.
+2. Comparer des contrats d'or et des contrats d'euro en valeur brute.
+3. Supposer que *Managed Money* et *Leveraged Funds* sont la même chose.
+4. Ignorer que deux catégories d'un même contrat peuvent avoir des signes opposés.
+5. Lire le tableau à quatre situations comme un signal.
+6. Calculer une corrélation de niveaux sur quelques points qui tendent.
+7. Prendre une valeur reconstituée pour une lecture.
+8. Attribuer à des acheteurs ou à des vendeurs une variation qui vient d'un changement de composition.
+
+## 9. Limites de l'interprétation
+
+- Un seul contrat de change lu ; l'indice du dollar (ICE) n'a pas été localisé.
+- Cinq rapports TFF lus par résumé automatique ; le 6/10 est reconstitué ; les rapports du 20/10 et du 27/10 ne sont pas lus.
+- Aucun prix aligné ; aucune histoire de plus de six semaines.
+- Définitions des catégories TFF non lues.
+- Sept écarts de 1 contrat, non élucidés.
+- Les positions sont des états du mardi publiés avec retard (L7.01) ; elles ne disent rien de ce qui s'est passé depuis.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Tableau comparatif (obligatoire).** À partir du § 4.2, calcule pour *Leveraged Funds* et *Asset Manager* sur le Euro FX, aux 8/9, 15/9, 22/9, 29/9 et 13/10 : le net, la part de l'intérêt ouvert et la variation hebdomadaire entre dates consécutives lues.
+
+<details>
+<summary>Correction 1</summary>
+
+LF : −46 381 (−4,39 %), −51 355 (−4,93 %), −58 805 (−6,13 %), −82 445 (−8,13 %), −92 833 (−9,18 %). Variations des trois paires consécutives lues : −4 974 ; −7 450 ; −23 640. AM : +276 471 (26,17 %), +275 565 (26,47 %), +244 673 (25,49 %), +245 160 (24,16 %), +214 007 (21,16 %) ; variations : −906 ; −30 892 ; +487. Le pas 29/9→13/10 (−10 388 pour LF ; −31 153 pour AM) couvre **deux semaines** et ne se compare pas aux pas hebdomadaires.
+</details>
+
+**Exercice 2 — Instrument.** Un collègue écrit « les fonds sont vendeurs de dollars car le net Euro FX des Asset Managers est positif ». Relève les trois erreurs.
+
+<details>
+<summary>Correction 2</summary>
+
+(1) Le Euro FX n'est pas « le dollar » (un contrat de change euro/dollar ; l'indice du dollar est un autre contrat). (2) Un net long euro n'est pas une vente de dollars généralisée. (3) La catégorie *Asset Manager* n'est pas « les fonds » : dans le même contrat, *Leveraged Funds* est net vendeur d'euros (−92 833). Reformulation autorisée : « au 13/10, les Asset Managers sont nets acheteurs de Euro FX (+214 007), les Leveraged Funds nets vendeurs (−92 833) ».
+</details>
+
+**Exercice 3 — Quatre situations.** Place l'observation du 13/10 dans le tableau du § 4.7 avec (a) Leveraged Funds, (b) Asset Manager. Que conclus-tu sur la valeur du tableau ?
+
+<details>
+<summary>Correction 3</summary>
+
+(a) Or net acheteur, euro net vendeur : **situation A**. (b) Or net acheteur, euro net acheteur : **situation B**. Le même jour et le même contrat donnent deux cases opposées selon la catégorie : le tableau est un outil de **description et de questions**, pas de décision.
+</details>
+
+**Exercice 4 — Corrélation : calculable ou non ?** On te donne 3 paires hebdomadaires lues et 2 reconstituées. Le critère du § 4.10 est-il satisfait ? Qu'écris-tu ?
+
+<details>
+<summary>Correction 4</summary>
+
+Non : 3 paires lues (5 avec reconstitution) pour un seuil de 8. Écriture correcte : « corrélation **non calculable** au sens du cours ; état : tendances baissières concomitantes, sans relation établie ». On n'écrit pas « corrélation faible » ni « corrélation élevée ».
+</details>
+
+**Exercice 5 — SIMULATION de fenêtre.** Avec les séries fictives du § 6.6, la corrélation vaut 0,90 sur les 5 premières semaines, −0,73 sur les 5 dernières, 0,00 sur 12. Que montres-tu ?
+
+<details>
+<summary>Correction 5</summary>
+
+Que la corrélation sur peu de points est instable : mêmes séries, signes opposés selon la fenêtre. Sur douze points seulement, elle serait déjà fragile ; sur cinq, elle est presque sans information. C'est précisément pourquoi le seuil est fixé **avant** le calcul.
+</details>
+
+**Exercice 6 — Composition.** Le 15/9 les non rapportables du Euro FX passent de 96 362 à 192 148 en long. Un analyste dit : « les petits spéculateurs sont massivement acheteurs ». Que réponds-tu ?
+
+<details>
+<summary>Correction 6</summary>
+
+Le même rapport montre simultanément un *spreading* des Dealers qui chute de 67 469, et une retombée à 84 213 la semaine suivante (−107 935) : le mouvement est **annulé en une semaine**, ce qui évoque un changement de périmètre (échéance, reclassement — hypothèse non vérifiée) plutôt qu'un comportement durable. On suspend la conclusion et on signale le point.
+</details>
+
+**Exercice 7 — Conclusion.** Rédige la conclusion de la fiche comparative or / Euro FX au 13/10 en trois niveaux : **observé**, **compatible avec**, **non démontrable**.
+
+<details>
+<summary>Correction 7</summary>
+
+*Observé* : net MM or −20,4 % entre le 8/9 et le 13/10 ; net LF Euro FX doublé en short ; net AM Euro FX −22,6 % mais toujours positif. *Compatible avec* : un repli simultané de positionnement sur l'or et un positionnement vendeur d'euros chez les fonds à effet de levier. *Non démontrable* : un lien entre les deux, une influence sur les prix, une anticipation de direction. **Conclusion globale : indéterminée** — et c'est une conclusion acceptable.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L7.03.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- « Le dollar » n'est pas un contrat : on nomme l'instrument (ici Euro FX, CME) ; l'indice du dollar (ICE) n'a pas été localisé.
+- On compare des **parts de l'intérêt ouvert** et des écarts standardisés sur une fenêtre commune, jamais des contrats bruts.
+- Les catégories des deux rapports ne sont pas équivalentes ; deux catégories d'un même contrat peuvent diverger (LF −92 833, AM +214 007 au 13/10).
+- Le tableau à quatre situations décrit ; il ne prescrit pas.
+- Des changements de composition (15 et 22/9) altèrent les variations hebdomadaires.
+- Corrélation : critère de huit paires lues non atteint → **non calculable** ; conclusion générale **indéterminée**.
+
+## 13. Critères de maîtrise
+
+- [ ] Nommer l'instrument exact de chaque marché (Exercice 2).
+- [ ] Calculer un tableau comparatif normalisé (Exercice 1).
+- [ ] Placer une observation dans le tableau à quatre situations et en dire les limites (Exercice 3).
+- [ ] Décider d'après un critère fixé d'avance si une corrélation est calculable (Exercices 4 et 5).
+- [ ] Repérer un changement de composition (Exercice 6).
+- [ ] Rédiger une conclusion à trois niveaux, y compris « indéterminée » (Exercice 7).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **31 octobre 2026** :
+
+- **S-CFTC-14** à **S-CFTC-18** — CFTC, *Traders in Financial Futures – Options and Futures Combined*, positions aux 8/9, 15/9, 22/9, 29/9 et 13/10/2026 (primaires, résumés automatiques) : https://www.cftc.gov/files/dea/cotarchives/2026/options/financial_lof090826.htm (et suffixes 091526, 092226, 092926, 101326).
+- **S-CFTC-08**, **S-CFTC-13** — CFTC, désagrégé or COMEX, 13/10 et 8/9/2026 (déjà lus en L7.01 et L7.02).
+- **S-CME-01** — CME Group, spécifications du Euro FX (125 000 EUR) : https://cmegroup.com/education/fx-monthly-futures-contract-specifications.html
+- **S-SAN-01**, **S-WNG-01**, **S-CFTC-06** — déjà lues.
+
+**Définitions de cours non rattachées à une source lue :** fenêtre commune de cinq dates, seuil de huit paires, écart standardisé, tableau à quatre situations. **Points non vérifiés :** indice du dollar (ICE), rapport TFF du 6/10 (reconstitué), rapports du 20/10 et du 27/10, définitions officielles des catégories TFF, cause des mouvements des 15 et 22/9, prix aux dates des positions.

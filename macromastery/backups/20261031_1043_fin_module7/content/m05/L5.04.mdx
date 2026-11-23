@@ -1,0 +1,234 @@
+---
+id: L5.04
+module: 5
+order: 4
+title: "L'or et le dollar : monnaie de cotation, indices, facteurs communs et exceptions"
+title_initial: "L'or et le dollar"
+level: "intermédiaire"
+duration_hours: 3.0
+prerequisites: ["L4.01", "L5.01", "L5.03"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L5.04.quiz.json"
+sources: ["S-FRD-02", "S-PNV-01", "S-TOT-01", "S-ISA-01", "S-MTL-01", "S-FED-25"]
+---
+
+# L5.04 — L'or et le dollar
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Statut des sources : la série FRED de l'indice large du dollar est **primaire** (Réserve fédérale, publication H.10), lue par **résumé automatique** ; l'article sur le DXY et l'or est **secondaire** (courtier) ; les prix de l'or sont **secondaires**. **Une relation observée n'est pas une loi, et une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. expliquer pourquoi l'or est **coté en dollars** et ce que cela implique pour un acheteur qui détient une autre monnaie ;
+2. distinguer l'**indice DXY** (six monnaies) d'un **indice large** pondéré par les échanges ;
+3. calculer le prix de l'or **dans une autre monnaie** (XAU/EUR, par exemple) et en décomposer la variation ;
+4. séparer **effet direct du dollar** et **facteurs communs** (taux réels, Fed, aversion au risque) ;
+5. citer des **exceptions** documentées (or et dollar qui montent ensemble, or qui monte avec un dollar en baisse mais pas partout) ;
+6. construire un scénario conditionnel qui n'attribue pas à tort un mouvement de l'or au dollar.
+
+## 2. Prérequis
+
+- Paires de devises et cotation (L4.01) ; histoire monétaire de l'or (L5.01) ; or et taux réels (L5.03).
+
+## 3. Explication intuitive
+
+Le prix de l'or que tu vois (XAU/USD) est un prix **en dollars**. Si le dollar perd de la valeur face aux autres monnaies, un acheteur européen ou japonais paie moins cher **dans sa monnaie** pour le même nombre de dollars-or : sa demande peut augmenter, et l'or tend à monter en dollars. Si le dollar gagne de la valeur, l'effet inverse existe. Mais ce lien n'est pas mécanique : le dollar et l'or réagissent aussi aux **mêmes causes** (taux, anticipations de la Fed, craintes), et à certaines périodes (début de la pandémie, mars 2020) ils ont monté ensemble. La bonne question n'est donc pas « le dollar explique-t-il l'or ? » mais « **quelle part du mouvement est directe, quelle part vient d'un facteur commun ?** ».
+
+## 4. Développement technique
+
+### 4.1 L'or est coté en dollars : mécanisme direct
+
+**[Fait]** (S-PNV-01, Phillip Nova, 22 juillet 2025, secondaire, résumé automatique) : l'or est coté en dollars sur les marchés internationaux ; lorsque le dollar se renforce, l'or coûte plus cher aux acheteurs non américains, ce qui tend à réduire la demande et à faire baisser les prix ; l'inverse lorsque le dollar s'affaiblit. L'article décrit la relation comme **négative** et précise : « The gold–USD inverse relation is not ironclad » (la relation inverse n'est pas absolue). Il ne donne **aucun coefficient** de corrélation.
+
+**[Définition]** **Prix de l'or dans une monnaie X** : XAU/X = XAU/USD × USD/X = XAU/USD ÷ X/USD. Pour l'euro : XAU/EUR = XAU/USD ÷ EUR/USD.
+
+**[Calcul de l'auteur]** Variation logarithmique : Δln(XAU/EUR) = Δln(XAU/USD) − Δln(EUR/USD). Pour de petites variations, la variation en pourcentage de l'or en euros ≈ celle en dollars **moins** celle de l'euro contre dollar.
+
+**[SIMULATION]** (chiffres fictifs) : XAU/USD passe de 4 000 à 4 100 (**+2,5 %**) ; EUR/USD passe de 1,10 à 1,15 (**+4,55 %**, dollar plus faible). Or en euros : 4 000 ÷ 1,10 = **3 636,36 €** → 4 100 ÷ 1,15 = **3 565,22 €**, soit **−1,96 %** (log : 2,50 % − 4,55 % ≈ −2,0 %).
+
+**[Interprétation]** Un dollar plus faible a fait monter l'or **en dollars** mais a baissé l'or **en euros**. L'effet « sur la demande de l'acheteur européen » dépend donc de la variation de l'or **dans sa propre monnaie**. **Ce qu'on ne peut pas conclure** de l'exemple : que la demande européenne baisse ou monte, car la demande dépend aussi du revenu, des anticipations et des autres actifs.
+
+### 4.2 Quel « dollar » ? DXY contre indice large
+
+**[Fait]** (S-PNV-01) : le DXY est une moyenne géométrique pondérée de **six** monnaies : euro (environ **57,6 %**), yen, livre, dollar canadien, couronne suédoise, franc suisse (poids individuels non donnés pour les cinq autres).
+
+**[Fait]** (S-FRD-02, FRED, série DTWEXBGS « Nominal Broad U.S. Dollar Index », quotidienne, base janvier 2006 = 100, source : Conseil des gouverneurs de la Réserve fédérale, publication H.10, couverture du 2 janvier 2006 au 23 octobre 2026, mise à jour du 26 octobre 2026, résumé automatique) : 19/10/2026 : **121,3248** ; 20/10 : **121,1160** ; 21/10 : **121,3422** ; 22/10 : **121,3531** ; 23/10 : **121,3202**. La page lue de la série ne décrit pas les pondérations ; celles-ci figurent dans la source déjà lue en L4.06 (S-FED-25, page des pondérations de la Réserve fédérale au 2 février 2026, 26 économies, résumé automatique) : zone euro **21,007 %**, Mexique **14,801 %**, Canada **12,769 %**, Chine **10,891 %**, Royaume-Uni 5,246 %, Japon 5,182 %. **Une autre vue du même identifiant** (graphique FRED) affichait **+1,1** au 2 octobre 2026, apparemment en variation sur un an, avec une unité ambiguë : **non retenu comme donnée établie**.
+
+**[Calcul de l'auteur]** Poids de l'euro : **21,0 %** dans l'indice large (S-FED-25) contre environ **57,6 %** dans le DXY (S-PNV-01, secondaire) ; les quatre premières économies de l'indice large (zone euro, Mexique, Canada, Chine) pèsent 21,007 + 14,801 + 12,769 + 10,891 = **59,468 %**. Du 19 au 23 octobre : 121,3202 ÷ 121,3248 − 1 = **−0,004 %** (indice quasi inchangé) ; plus bas (121,1160, le 20/10) à plus haut (121,3531, le 22/10) : **+0,196 %**.
+
+**[Interprétation]** Pendant la semaine du 19 au 23 octobre 2026, l'indice large a **peu bougé**. Les prix de l'or de cette semaine n'ont pas été lus ; aucun lien entre le dollar et l'or sur ces jours ne peut donc être affirmé. **Ce qu'on ne peut pas conclure** : le niveau du dollar en janvier (record de l'or) ou en mai-juin (baisse de l'or), faute de valeurs lues pour ces dates (la table FRED lue s'arrêtait en 2012).
+
+**[Définition de cours]** Un indice **large** pondère par les échanges commerciaux et inclut des économies émergentes ; le DXY est dominé par l'euro. Pour l'or, la question utile est de savoir **quelle monnaie compte pour les acheteurs marginaux** (Chine, Inde, Turquie, banques centrales émergentes : L5.02, L5.06), un point que ni l'un ni l'autre indice ne mesure.
+
+### 4.3 Preuves historiques lues : 2022 et premier semestre 2025
+
+**[Fait]** (S-PNV-01) : en 2022, les hausses de taux de la Fed ont poussé le DXY à ses plus hauts en vingt ans et l'or a **perdu du terrain** (ampleur non donnée) ; au premier semestre 2025, le DXY a baissé d'environ **10,8 %** tandis que l'or atteignait de nouveaux records, avec l'appui des achats des banques centrales ; en mars 2020, au début de la pandémie, l'or et le dollar ont monté brièvement ensemble, par recherche de refuge.
+
+**[Calcul de l'auteur]** Une baisse de 10,8 % d'un indice du dollar correspond, pour une monnaie unique, à une hausse de cette monnaie de 1 ÷ (1 − 0,108) − 1 = **+12,1 %** en dollars (approximation pour un panier, car l'indice est une moyenne géométrique). Une baisse du dollar de 10,8 % n'est donc pas une hausse de 10,8 % des autres monnaies.
+
+**[Fait]** (S-TOT-01, 28/10/2025, secondaire) : parmi les éléments du contexte de 2025 : un dollar « latéral » (sideways) sur la période étudiée, des déficits américains supérieurs à 6 % du PIB, un débat sur l'indépendance de la Fed, des achats officiels d'environ 290 t au deuxième trimestre 2025.
+
+**[Interprétation]** Trois épisodes, trois configurations : (1) **dollar en hausse, or en baisse** (2022, cohérent avec la relation inverse) ; (2) **dollar en baisse, or en hausse** (premier semestre 2025, cohérent) ; (3) **dollar et or en hausse** (mars 2020, refuge). Un quatrième cas, **dollar stable et or en forte hausse** (S-TOT-01 décrit un dollar « latéral » en 2025), montre que le dollar n'explique pas à lui seul l'or. **Ce qu'on ne peut pas conclure** : le poids du dollar dans chaque épisode, ni que l'ordre soit causal (les deux peuvent dépendre des mêmes taux).
+
+### 4.4 Facteur commun : taux, Fed, aversion au risque
+
+**[Définition]** Un **facteur commun** agit simultanément sur deux variables. Les **taux réels américains** (L5.03) peuvent faire monter le dollar (rendement plus attractif) **et** baisser l'or (coût d'opportunité) : la corrélation négative dollar-or reflète alors en partie la même cause. L'**aversion au risque** peut faire monter le dollar (refuge) **et** l'or (refuge) : la corrélation devient positive.
+
+**[Interprétation]** Pour attribuer un mouvement, trois questions : (1) **quel choc** (surprise de taux réels, de Fed, de risque, de dollar « pur ») ; (2) l'or **et** le dollar bougent-ils dans le sens prédit par ce choc ; (3) un autre actif (rendement réel, actions, pétrole) confirme-t-il. Un « dollar pur » (flux de capitaux, rééquilibrage de réserves) est plus rare que ce que les commentaires suggèrent.
+
+**[Fait]** (S-ISA-01, 28/10/2026, secondaire) : l'article associe, dans l'explication de la séance, taux plus élevés, dollar plus fort et coût d'opportunité ; il ne les distingue pas. **[Calcul de l'auteur]** Aucun calcul de partage entre ces trois explications n'est possible avec ces données.
+
+### 4.5 Quand le lien se brise : demande insensible au change
+
+**[Interprétation]** Trois mécanismes plausibles (non testés par les sources lues) : (1) les **banques centrales** achètent selon des objectifs de diversification, peu sensibles au prix en dollars (L5.06) ; (2) les **flux d'ETF** suivent surtout le prix et le momentum (L5.07) ; (3) les **monnaies locales** peuvent se déprécier pour des raisons propres : un acheteur turc ou indien peut voir l'or monter dans sa monnaie même si le dollar baisse face à l'euro. Au T2 2026, les achats officiels sont de 288,9 t (S-WGC-07, L5.02) alors que les sorties d'ETF atteignent 44,8 t : ces flux ne sont pas expliqués par le dollar dans les sources lues.
+
+### 4.6 Application : un scénario conditionnel dollar–or
+
+**[SIMULATION]** (chiffres fictifs) : XAU/USD = 4 050 ; indice large du dollar = 121,3 ; rendement réel à 10 ans = 2,60 %.
+
+| Scénario | Choc | Dollar | Or (en $) | Probabilité (fictive) | Invalidation |
+|---|---|---|---|---|---|
+| A | Surprise de taux réels vers le haut | Plus fort (+0,8 %) | −1,5 % | 35 % | Or stable : demande officielle compense |
+| B | Tension géopolitique, refuge | Plus fort (+0,4 %) | +1,0 % | 25 % | Dollar monte et or baisse |
+| C | Fed moins ferme, taux réels en baisse | Plus faible (−0,8 %) | +1,5 % | 25 % | Or ne réagit pas |
+| D | Pas de choc | Stable | 0 % | 15 % | Sortie de ±1 % |
+
+**[Calcul de l'auteur]** Somme des probabilités : 35 + 25 + 25 + 15 = **100 %**. Espérance de l'or : 0,35 × (−1,5) + 0,25 × 1,0 + 0,25 × 1,5 + 0,15 × 0 = −0,525 + 0,25 + 0,375 = **+0,10 %** (≈ +4 $). Espérance du dollar : 0,35 × 0,8 + 0,25 × 0,4 + 0,25 × (−0,8) + 0 = 0,28 + 0,10 − 0,20 = **+0,18 %**.
+
+**[Interprétation]** Dans les scénarios A et B, **dollar et or réagissent à des chocs différents** et la relation or-dollar change de signe (négatif en A et en C, positif en B) : le signe dépend du **choc**, non d'une règle fixe. La valeur de l'exercice est de nommer le choc avant de regarder le dollar. **Ce qu'on ne peut pas conclure** : des probabilités ou des amplitudes réelles.
+
+## 5. Définitions essentielles
+
+- **XAU/USD** : prix d'une once troy d'or en dollars.
+- **DXY** : indice du dollar contre six monnaies, moyenne géométrique pondérée (euro ≈ 57,6 %, selon une source secondaire).
+- **Indice large (DTWEXBGS)** : indice du dollar pondéré par les échanges, base 100 en janvier 2006, publié par la Réserve fédérale.
+- **Or en monnaie locale** : XAU/USD ÷ (monnaie/USD).
+- **Facteur commun** : cause unique agissant sur deux séries.
+- **Refuge** : actif demandé en période d'aversion au risque.
+
+## 6. Exemples chiffrés
+
+**6.1 Or en euros.** 4 000 ÷ 1,10 = 3 636,36 € ; 4 100 ÷ 1,15 = 3 565,22 € ; −1,96 %.
+**6.2 Indice large.** 121,3202 ÷ 121,3248 − 1 = −0,004 % (19→23/10/2026).
+**6.3 Inversion.** Baisse de 10,8 % du dollar → +12,1 % pour une monnaie unique.
+**6.4 Scénarios.** Espérance +0,10 % de l'or, +0,18 % du dollar (SIMULATION).
+
+### 6.5 Cas historique documenté — premier semestre 2025 : dollar en baisse d'environ 10,8 %, or en records
+
+**[Fait]** (S-PNV-01, secondaire, 22 juillet 2025) : DXY ≈ −10,8 % au premier semestre 2025 ; or à de nouveaux records ; achats officiels cités. (S-TOT-01, 28/10/2025) : record à 4 010 $ avec un rendement réel > 2 % ; dollar « latéral » sur la période de l'article.
+
+**[Calcul de l'auteur]** Baisse du dollar de 10,8 % ↔ +12,1 % pour une monnaie unique ; prix de 5 595 $ en janvier 2026 contre 4 010 $ en octobre 2025 : 5 595 ÷ 4 010 − 1 = **+39,5 %** (deux sources secondaires de natures différentes).
+
+**[Interprétation]** L'épisode 2025 est cohérent avec la relation inverse, mais deux autres facteurs sont cités dans la même source (achats officiels, incertitude budgétaire), et l'épisode « dollar latéral » (S-TOT-01) montre que le dollar n'a pas été nécessaire à la hausse. En 2022, la relation inverse est aussi cohérente, mais le même facteur (taux de la Fed) explique **les deux** mouvements : la situation ne distingue pas un effet direct du dollar d'un facteur commun. **Ce qu'on ne peut pas conclure** : une causalité ; le poids du dollar ; l'ampleur de la baisse de l'or en 2022 (non donnée). **Limites** : article de courtier, secondaire, sans méthode ; chiffres de 2025 non recoupés avec la série FRED (table lue tronquée) ; aucune série de prix de l'or lue.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **XAU/USD** : toujours se demander si le dollar agit comme **cause**, **conséquence** ou **compagnon** du mouvement de l'or.
+- **EUR/USD et XAU/USD** : les deux sont des expressions du dollar ; un EUR/USD en hausse de 4,5 % peut coexister avec un or en euros en baisse (4.1).
+- **Calendrier** : emploi, inflation, Fed (L3, L4.06) : un même chiffre peut déplacer le dollar et l'or dans le même sens ou en sens opposé selon le choc.
+- **Indices** : suivre l'indice large pour le dollar « global » et le DXY pour l'euro ; ne pas les confondre.
+- **Prudence** : une corrélation constatée sur un épisode ne garantit pas la suivante.
+
+## 8. Erreurs courantes
+
+1. Dire « le dollar baisse donc l'or monte » sans nommer le choc.
+2. Confondre DXY (six monnaies) et indice large.
+3. Oublier que l'or en euros peut baisser quand l'or en dollars monte.
+4. Traiter une corrélation de période comme une loi.
+5. Ignorer les facteurs communs (taux réels, risque).
+6. Lire une baisse de x % du dollar comme une hausse de x % des autres monnaies.
+7. Appliquer l'argument aux banques centrales sans vérifier leurs objectifs.
+
+## 9. Limites de l'interprétation
+
+- Indice large : cinq valeurs d'octobre 2026 seulement, par résumé ; la table lue s'arrêtait en 2012 ; une vue du graphique, d'unité ambiguë, non retenue.
+- DXY et épisodes historiques (2020, 2022, 2025) : un seul article de courtier, secondaire, sans coefficient ni méthode.
+- Prix de l'or secondaires ; aucun rapprochement de dates entre dollar et or pour 2026.
+- Pondérations de l'indice large du 2 février 2026 lues par résumé (S-FED-25, L4.06) ; période de base et note de méthode non lues ; pondérations du DXY hors euro non lues.
+- Scénarios et probabilités fictifs.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Or en euros.** XAU/USD 4 000 → 4 100 ; EUR/USD 1,10 → 1,15. Calcule l'or en euros et sa variation.
+
+<details>
+<summary>Correction 1</summary>
+
+4 000 ÷ 1,10 = **3 636,36 €** ; 4 100 ÷ 1,15 = **3 565,22 €** ; variation **−1,96 %**. L'or monte de 2,5 % en dollars mais baisse en euros, car l'euro gagne 4,55 % contre dollar.
+</details>
+
+**Exercice 2 — Inversion.** Le DXY baisse de 10,8 %. De combien monte, en dollars, une monnaie unique qui représenterait tout l'indice ?
+
+<details>
+<summary>Correction 2</summary>
+
+1 ÷ (1 − 0,108) − 1 = **+12,1 %**. Une baisse de 10,8 % du dollar correspond à une hausse de 12,1 % de la monnaie opposée, non de 10,8 %.
+</details>
+
+**Exercice 3 — Indice large.** Valeurs : 19/10 = 121,3248 ; 20/10 = 121,1160 ; 22/10 = 121,3531 ; 23/10 = 121,3202. Variation du 19 au 23 ; amplitude du plus bas au plus haut.
+
+<details>
+<summary>Correction 3</summary>
+
+121,3202 ÷ 121,3248 − 1 = **−0,004 %** ; 121,3531 ÷ 121,1160 − 1 = **+0,196 %**. L'indice est quasi inchangé sur la semaine.
+</details>
+
+**Exercice 4 — Lecture.** Que peut-on dire et que ne peut-on pas dire du lien or-dollar à partir de 2022 (dollar fort, or en baisse) et du premier semestre 2025 (dollar −10,8 %, or en records) ?
+
+<details>
+<summary>Correction 4</summary>
+
+On peut dire que les deux épisodes sont **cohérents** avec une relation inverse. On ne peut pas dire que le dollar **cause** l'or : les taux de la Fed expliquent les deux en 2022, les achats officiels sont cités en 2025, et le dollar latéral décrit par S-TOT-01 montre que l'or a monté sans lui. Source secondaire, sans coefficient.
+</details>
+
+**Exercice 5 — Scénario.** Reprends 4.6 avec des probabilités 30 %, 20 %, 30 %, 20 % (A, B, C, D). Espérance de l'or ?
+
+<details>
+<summary>Correction 5</summary>
+
+0,30 × (−1,5) + 0,20 × 1,0 + 0,30 × 1,5 + 0,20 × 0 = −0,45 + 0,20 + 0,45 = **+0,20 %** (≈ +8 $ sur 4 050). SIMULATION : cet écart est inférieur au bruit hebdomadaire ; l'intérêt est de nommer chocs et invalidations.
+</details>
+
+**Exercice 6 — Critique.** « Le dollar baisse, donc l'or monte. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) Le choc qui fait baisser le dollar peut aussi faire baisser l'or (surprise de taux). (2) Mars 2020 : dollar et or ont monté ensemble. (3) L'or en monnaie locale peut baisser (4.1). (4) Des achats officiels ou des flux d'ETF peuvent dominer. (5) La corrélation d'une période n'est pas une loi.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L5.04.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- L'or est coté en dollars ; un dollar plus fort renchérit l'or pour les non-Américains, un dollar plus faible l'allège : effet direct possible, jamais mécanique.
+- Prix en monnaie locale = XAU/USD ÷ (monnaie/USD) ; l'or peut monter en dollars et baisser en euros.
+- DXY = six monnaies (euro ≈ 57,6 %) ; indice large = pondération par les échanges (121,32 le 23/10/2026).
+- Épisodes lus : 2022 et premier semestre 2025 cohérents avec la relation inverse ; mars 2020 et le dollar « latéral » de 2025 en montrent les limites.
+- Distinguer effet direct, facteur commun (taux réels, Fed) et refuge ; nommer le choc avant d'attribuer.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer l'or dans une autre monnaie (Exercice 1).
+- [ ] Convertir une baisse d'indice en hausse de la monnaie opposée (Exercice 2).
+- [ ] Mesurer une variation d'indice (Exercice 3).
+- [ ] Distinguer « cohérent avec » et « causé par » (Exercice 4).
+- [ ] Construire et évaluer un scénario conditionnel (Exercice 5).
+- [ ] Critiquer un raisonnement « dollar → or » (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-FRD-02** — FRED (Réserve fédérale de Saint-Louis), Nominal Broad U.S. Dollar Index (DTWEXBGS), publication H.10 : https://fred.stlouisfed.org/series/DTWEXBGS
+- **S-PNV-01** — Phillip Nova (secondaire), « Why Gold Moves When the Dollar Moves » (22/07/2025) : https://www.phillipnova.com.sg/educational_articles/why-gold-moves-when-the-dollar-moves-the-correlation-between-dxy-and-gold-prices/
+- **S-TOT-01** — Totality (secondaire), 28/10/2025 (déjà lu en L5.03).
+- **S-ISA-01**, **S-MTL-01** — prix de l'or (secondaires, déjà lus en L5.01).
+- **S-FED-25** — Réserve fédérale, pondérations de l'indice large (02/02/2026), déjà lue en L4.06 : https://www.federalreserve.gov/releases/h10/weights/
+
+**Définitions de cours non rattachées à une source lue :** facteur commun, refuge, choc nommé avant attribution. **Points non vérifiés :** pondérations du DXY (hors euro), période de base de l'indice large, séries quotidiennes du dollar pour janvier, mai-juin et septembre 2026, amplitude de la baisse de l'or en 2022, étude statistique or-dollar, prix de l'or du 19 au 23 octobre 2026.

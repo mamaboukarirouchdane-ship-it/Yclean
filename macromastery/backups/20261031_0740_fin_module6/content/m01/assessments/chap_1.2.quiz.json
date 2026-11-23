@@ -1,0 +1,178 @@
+{
+  "chapterId": "1.2",
+  "module": 1,
+  "title": "Quiz de chapitre 1.2 — Inflation : mesure, causes, désinflation (L1.04–L1.06)",
+  "passThreshold": 0.8,
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C1.2-Q1",
+      "type": "mcq",
+      "prompt": "Quel est l'objectif d'inflation de la Réserve fédérale ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "3 % du PCE hors énergie"
+        },
+        {
+          "id": "b",
+          "text": "2 % du CPI mensuel"
+        },
+        {
+          "id": "c",
+          "text": "0 % du CPI"
+        },
+        {
+          "id": "d",
+          "text": "2 % en variation annuelle de l'indice des prix PCE"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Objectif de 2 % mesuré par la variation annuelle de l'indice des prix PCE (S-FED-01).",
+      "tags": [
+        "objectif"
+      ]
+    },
+    {
+      "id": "C1.2-Q2",
+      "type": "mcq",
+      "prompt": "Quelle est une différence de construction entre CPI et PCE ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aucune"
+        },
+        {
+          "id": "b",
+          "text": "Le CPI vient d'une enquête sur ce que les ménages achètent ; le PCE d'enquêtes sur ce que les entreprises vendent"
+        },
+        {
+          "id": "c",
+          "text": "Le CPI est calculé par la Fed, le PCE par le BLS"
+        },
+        {
+          "id": "d",
+          "text": "Le PCE exclut les services"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le CPI (BLS) repose sur ce que les ménages achètent ; le PCE (BEA) sur ce que les entreprises vendent, avec pondérations et périmètres différents.",
+      "tags": [
+        "cpi-pce"
+      ]
+    },
+    {
+      "id": "C1.2-Q3",
+      "type": "mcq",
+      "prompt": "CPI de septembre 2026 : total +3,7 % sur 12 mois, hors alimentation et énergie +2,6 %, énergie +20,4 %. Qu'est-ce qui explique l'écart ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une erreur de mesure"
+        },
+        {
+          "id": "b",
+          "text": "Un effet des salaires uniquement"
+        },
+        {
+          "id": "c",
+          "text": "La baisse des loyers"
+        },
+        {
+          "id": "d",
+          "text": "Le poids de l'énergie, dont le prix a fortement augmenté"
+        }
+      ],
+      "correct": "d",
+      "explanation": "L'énergie tire l'indice total au-dessus de l'indice de base ; c'est un choc de prix relatif plutôt qu'une inflation diffuse.",
+      "tags": [
+        "energie"
+      ]
+    },
+    {
+      "id": "C1.2-Q4",
+      "type": "mcq",
+      "prompt": "La désinflation désigne :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une baisse générale des prix"
+        },
+        {
+          "id": "b",
+          "text": "Une hausse de l'inflation"
+        },
+        {
+          "id": "c",
+          "text": "Un ralentissement de l'inflation, qui reste positive"
+        },
+        {
+          "id": "d",
+          "text": "L'absence de prix"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Désinflation : l'inflation baisse mais les prix continuent de monter ; déflation : baisse générale des prix.",
+      "tags": [
+        "desinflation"
+      ]
+    },
+    {
+      "id": "C1.2-Q5",
+      "type": "mcq",
+      "prompt": "Selon la Banque du Japon (résumé), que s'est-il passé à partir de 1998 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un CPI négatif, dans l'ensemble pendant environ quinze ans"
+        },
+        {
+          "id": "b",
+          "text": "Une inflation supérieure à 10 %"
+        },
+        {
+          "id": "c",
+          "text": "Une hyperinflation"
+        },
+        {
+          "id": "d",
+          "text": "Une stabilité parfaite des prix"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le résumé indique un CPI négatif à partir de 1998, dans l'ensemble pendant quinze ans, le plus souvent inférieur à −1 % sur un an.",
+      "tags": [
+        "japon"
+      ]
+    },
+    {
+      "id": "C1.2-Q6",
+      "type": "mcq",
+      "prompt": "La Grande Inflation américaine couvre, selon l'histoire de la Fed, la période :",
+      "options": [
+        {
+          "id": "a",
+          "text": "1990–2000"
+        },
+        {
+          "id": "b",
+          "text": "1965–1982"
+        },
+        {
+          "id": "c",
+          "text": "2008–2012"
+        },
+        {
+          "id": "d",
+          "text": "1929–1933"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Janvier 1965 à décembre 1982, avec une inflation proche de 15 % en mars 1980.",
+      "tags": [
+        "grande-inflation"
+      ]
+    }
+  ],
+  "revision": 1
+}

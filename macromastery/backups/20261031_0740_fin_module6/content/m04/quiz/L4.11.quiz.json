@@ -1,0 +1,233 @@
+{
+  "lessonId": "L4.11",
+  "title": "Quiz — Régimes de change et interventions",
+  "passThreshold": 0.8,
+  "note": "Seuil : 7 bonnes réponses sur 8.",
+  "questions": [
+    {
+      "id": "L4.11-Q1",
+      "type": "mcq",
+      "prompt": "Que dit le triangle d'incompatibilité ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il faut toujours un change fixe"
+        },
+        {
+          "id": "b",
+          "text": "Les trois sont toujours compatibles"
+        },
+        {
+          "id": "c",
+          "text": "On ne peut pas avoir à la fois change fixe, libre circulation des capitaux et politique monétaire autonome"
+        },
+        {
+          "id": "d",
+          "text": "Il interdit toute intervention"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Un pays doit renoncer à l'un des trois éléments : change fixe, capitaux libres ou politique monétaire autonome (définition de cours).",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L4.11-Q2",
+      "type": "mcq",
+      "prompt": "Que fait la BNS en janvier 2015 selon le discours de Thomas Jordan ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle abandonne le plancher de 1,20 franc pour un euro et abaisse le taux à −0,75 %"
+        },
+        {
+          "id": "b",
+          "text": "Elle instaure un plancher"
+        },
+        {
+          "id": "c",
+          "text": "Elle relève son taux à 1 %"
+        },
+        {
+          "id": "d",
+          "text": "Elle ne change rien"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le discours publié par la BRI décrit l'abandon immédiat du cours plancher et un taux sur les avoirs à vue de −0,75 %.",
+      "tags": [
+        "bns"
+      ]
+    },
+    {
+      "id": "L4.11-Q3",
+      "type": "mcq",
+      "prompt": "USD/JPY de 164 à 155,20 : quelle variation du cours ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−8,80 %"
+        },
+        {
+          "id": "b",
+          "text": "−1 %"
+        },
+        {
+          "id": "c",
+          "text": "+5,67 %"
+        },
+        {
+          "id": "d",
+          "text": "−5,37 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "155,20 ÷ 164 − 1 = −5,37 % pour l'USD/JPY ; la valeur du yen monte de 5,67 %.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.11-Q4",
+      "type": "mcq",
+      "prompt": "Niveaux 164 (avant), 155,20 (après), 159,09 (10 août) : quelle part du mouvement est effacée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "5,4 %"
+        },
+        {
+          "id": "b",
+          "text": "44,2 %"
+        },
+        {
+          "id": "c",
+          "text": "100 %"
+        },
+        {
+          "id": "d",
+          "text": "24,6 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "(159,09 − 155,20) ÷ (164 − 155,20) = 3,89 ÷ 8,80 = 44,2 % ; cela montre une persistance partielle seulement.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.11-Q5",
+      "type": "mcq",
+      "prompt": "Estimation de 8 450 milliards de yens ≈ 52,8 milliards de dollars : quel taux implicite ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 100"
+        },
+        {
+          "id": "b",
+          "text": "≈ 52,8"
+        },
+        {
+          "id": "c",
+          "text": "≈ 8,45"
+        },
+        {
+          "id": "d",
+          "text": "≈ 160 yens par dollar"
+        }
+      ],
+      "correct": "d",
+      "explanation": "8 450 ÷ 52,8 ≈ 160,0 yens par dollar, proche des niveaux de l'époque ; l'estimation reste une estimation.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.11-Q6",
+      "type": "mcq",
+      "prompt": "Total du ministère du 30 juillet au 26 août : 15 399,3 milliards de yens. Que contient le communiqué mensuel ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les niveaux d'exécution"
+        },
+        {
+          "id": "b",
+          "text": "Toutes les dates et les montants"
+        },
+        {
+          "id": "c",
+          "text": "Seulement l'agrégat, sans dates, montants quotidiens ni paires"
+        },
+        {
+          "id": "d",
+          "text": "Le montant américain"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Selon l'article, le détail par date est attendu dans la publication trimestrielle de novembre ; le montant américain n'y figure pas.",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "L4.11-Q7",
+      "type": "mcq",
+      "prompt": "Total 15 399,3 moins estimation de 8 450 : que peut-on dire du reste de 6 949,3 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "On ne peut pas l'attribuer : dates et montants ne sont pas divulgués"
+        },
+        {
+          "id": "b",
+          "text": "Il correspond aux États-Unis"
+        },
+        {
+          "id": "c",
+          "text": "Il est une erreur"
+        },
+        {
+          "id": "d",
+          "text": "Il correspond à l'or"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le reste n'est pas attribuable sans détail par date ; l'estimation de 8 450 est elle-même une estimation.",
+      "tags": [
+        "limite"
+      ]
+    },
+    {
+      "id": "L4.11-Q8",
+      "type": "mcq",
+      "prompt": "Pourquoi ne peut-on pas dire que l'intervention a durablement réussi ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que le yen n'a pas bougé"
+        },
+        {
+          "id": "b",
+          "text": "Une grande partie du mouvement a été effacée, et l'écart de taux avec le dollar reste large"
+        },
+        {
+          "id": "c",
+          "text": "Parce que le Japon n'a pas agi"
+        },
+        {
+          "id": "d",
+          "text": "Parce que les interventions sont illégales"
+        }
+      ],
+      "correct": "b",
+      "explanation": "L'USD/JPY est revenu à 159,09 le 10 août et à 160,08 le 29 août ; les opérations ne remplacent pas politique monétaire ni budget.",
+      "tags": [
+        "limite"
+      ]
+    }
+  ],
+  "revision": 1
+}

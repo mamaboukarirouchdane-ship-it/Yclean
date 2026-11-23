@@ -1,0 +1,178 @@
+{
+  "chapterId": "3.4",
+  "module": 3,
+  "title": "Quiz de chapitre 3.4 — Activité : enquêtes, PIB, ventes, production (L3.08–L3.09)",
+  "passThreshold": 0.8,
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C3.4-Q1",
+      "type": "mcq",
+      "prompt": "Composantes manufacturières 55,3 ; 56,7 ; 52,7 ; 59,0 ; 48,6. Quel PMI ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "50,0"
+        },
+        {
+          "id": "b",
+          "text": "52,0"
+        },
+        {
+          "id": "c",
+          "text": "57,0"
+        },
+        {
+          "id": "d",
+          "text": "54,46"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La moyenne des cinq composantes égale 272,3 ÷ 5 = 54,46, soit la valeur publiée de 54,5.",
+      "tags": [
+        "pmi"
+      ]
+    },
+    {
+      "id": "C3.4-Q2",
+      "type": "mcq",
+      "prompt": "Pourquoi les livraisons des fournisseurs sont-elles inversées dans le PMI ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce qu'elles baissent toujours"
+        },
+        {
+          "id": "b",
+          "text": "Par erreur historique"
+        },
+        {
+          "id": "c",
+          "text": "Des délais plus longs reflètent en général une demande plus forte"
+        },
+        {
+          "id": "d",
+          "text": "Parce qu'elles ne comptent pas"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Un indice supérieur à 50 signifie des livraisons plus lentes, lu comme un signe de demande forte.",
+      "tags": [
+        "pmi"
+      ]
+    },
+    {
+      "id": "C3.4-Q3",
+      "type": "mcq",
+      "prompt": "PIB réel +3,4 % annualisé : quel taux trimestriel ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ 0,84 %"
+        },
+        {
+          "id": "b",
+          "text": "Environ 3,4 %"
+        },
+        {
+          "id": "c",
+          "text": "Environ 13,6 %"
+        },
+        {
+          "id": "d",
+          "text": "Environ 1,7 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "1,034^(1/4) − 1 = 0,84 % par trimestre.",
+      "tags": [
+        "pib"
+      ]
+    },
+    {
+      "id": "C3.4-Q4",
+      "type": "mcq",
+      "prompt": "PIB du T2 2026 : deuxième estimation 1,5 %, troisième 2,2 %. Quelle révision ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−0,7 point"
+        },
+        {
+          "id": "b",
+          "text": "+0,7 point"
+        },
+        {
+          "id": "c",
+          "text": "+0,2 point"
+        },
+        {
+          "id": "d",
+          "text": "0 point"
+        }
+      ],
+      "correct": "b",
+      "explanation": "2,2 − 1,5 = +0,7 point, due aux stocks, à l'investissement, à la consommation et aux dépenses publiques.",
+      "tags": [
+        "revision"
+      ]
+    },
+    {
+      "id": "C3.4-Q5",
+      "type": "mcq",
+      "prompt": "Ventes au détail +0,8 % nominal ; CPI +0,6 % : ventes réelles approchées ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ −0,2 %"
+        },
+        {
+          "id": "b",
+          "text": "Environ +0,8 %"
+        },
+        {
+          "id": "c",
+          "text": "Environ +0,20 %"
+        },
+        {
+          "id": "d",
+          "text": "Environ +1,4 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "1,008 ÷ 1,006 − 1 = 0,20 % ; l'approximation par le CPI est imparfaite car les champs diffèrent.",
+      "tags": [
+        "ventes"
+      ]
+    },
+    {
+      "id": "C3.4-Q6",
+      "type": "mcq",
+      "prompt": "Production industrielle +0,7 %, manufacturier +0,3 %, services publics +3,5 % : que retenir ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'essentiel de la hausse vient des services publics, sensibles à la météo"
+        },
+        {
+          "id": "b",
+          "text": "L'industrie manufacturière repart fortement"
+        },
+        {
+          "id": "c",
+          "text": "Les mines tirent la hausse"
+        },
+        {
+          "id": "d",
+          "text": "Rien"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le manufacturier progresse peu ; la hausse totale est surtout portée par les services publics.",
+      "tags": [
+        "production"
+      ]
+    }
+  ],
+  "revision": 1
+}

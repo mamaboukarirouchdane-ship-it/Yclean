@@ -1,0 +1,233 @@
+{
+  "lessonId": "L5.05",
+  "title": "Quiz — Or, inflation et anticipations",
+  "passThreshold": 0.8,
+  "note": "Seuil : 7 bonnes réponses sur 8.",
+  "questions": [
+    {
+      "id": "L5.05-Q1",
+      "type": "mcq",
+      "prompt": "CPI sur 12 mois de 3,7 % (septembre 2026) et point mort moyen à 10 ans de 2,35 % : quel est l'écart et que signifie-t-il ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "6,05 points ; l'inflation est mal mesurée"
+        },
+        {
+          "id": "b",
+          "text": "1,35 point ; le marché s'est trompé"
+        },
+        {
+          "id": "c",
+          "text": "1,35 point ; les deux mesures diffèrent par l'horizon, la composante énergie et les primes"
+        },
+        {
+          "id": "d",
+          "text": "0 point"
+        }
+      ],
+      "correct": "c",
+      "explanation": "3,7 − 2,35 = 1,35 ; observé sur un an passé contre moyenne future sur dix ans avec primes : pas une erreur démontrée.",
+      "tags": [
+        "ecart"
+      ]
+    },
+    {
+      "id": "L5.05-Q2",
+      "type": "mcq",
+      "prompt": "Réel 2,04 → 2,64 et point mort 2,44 → 2,35 (mai à septembre 2026). Que vaut la variation du nominal dérivé ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+0,51 point (réel +0,60 ; point mort −0,09)"
+        },
+        {
+          "id": "b",
+          "text": "+0,60 point"
+        },
+        {
+          "id": "c",
+          "text": "−0,09 point"
+        },
+        {
+          "id": "d",
+          "text": "+1,11 point"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Nominal = réel + point mort : 4,48 → 4,99, soit +0,51 = 0,60 − 0,09.",
+      "tags": [
+        "decomposition"
+      ]
+    },
+    {
+      "id": "L5.05-Q3",
+      "type": "mcq",
+      "prompt": "Un actif est une couverture de long terme contre l'inflation si :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il paie un coupon indexé"
+        },
+        {
+          "id": "b",
+          "text": "Il monte chaque année quand l'inflation monte"
+        },
+        {
+          "id": "c",
+          "text": "Il monte à chaque publication de CPI"
+        },
+        {
+          "id": "d",
+          "text": "Son prix réel est à peu près stable sur de longues périodes"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Couverture de long terme, de court terme et conditionnelle sont trois propriétés distinctes.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L5.05-Q4",
+      "type": "mcq",
+      "prompt": "Que dit l'étude du WGC de 2006 (Levin, Montagnoli, Wright), selon les sources lues ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'or est une couverture sur tout horizon"
+        },
+        {
+          "id": "b",
+          "text": "Relation de long terme or–inflation américaine d'environ 1 pour 1, rapport non évalué par des pairs et antérieur à 2006"
+        },
+        {
+          "id": "c",
+          "text": "L'or suit l'inflation mondiale"
+        },
+        {
+          "id": "d",
+          "text": "Elle prouve la couverture en 2026"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Étude de l'industrie, notice et article secondaire, période jusqu'en 2005, méthode non décrite.",
+      "tags": [
+        "etude"
+      ]
+    },
+    {
+      "id": "L5.05-Q5",
+      "type": "mcq",
+      "prompt": "Dans la simulation 4.4, corrélation annuelle de −0,185 et or/prix cumulés de 0,989. Que montre-t-elle ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que l'inflation de 8 % a fait monter l'or"
+        },
+        {
+          "id": "b",
+          "text": "Que l'or n'a aucun lien avec l'inflation"
+        },
+        {
+          "id": "c",
+          "text": "Que la corrélation prouve la causalité"
+        },
+        {
+          "id": "d",
+          "text": "Une couverture de long terme peut coexister avec l'absence de lien année par année"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Construction pédagogique : cumuls proches (−1,1 % réel) et corrélation annuelle faible.",
+      "tags": [
+        "simulation"
+      ]
+    },
+    {
+      "id": "L5.05-Q6",
+      "type": "mcq",
+      "prompt": "Un CPI supérieur au consensus fait monter le nominal de 25 pb et le point mort de 5 pb. Effet sur le réel et l'or (toutes choses égales) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Réel −20 pb ; haussier"
+        },
+        {
+          "id": "b",
+          "text": "Réel +30 pb ; haussier"
+        },
+        {
+          "id": "c",
+          "text": "Réel +20 pb ; pression baissière sur l'or"
+        },
+        {
+          "id": "d",
+          "text": "Réel inchangé"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Réel = nominal − point mort = 20 pb ; coût d'opportunité en hausse (L5.03).",
+      "tags": [
+        "canal"
+      ]
+    },
+    {
+      "id": "L5.05-Q7",
+      "type": "mcq",
+      "prompt": "445 $ en 2005 contre ≈ 415 $ de 2005 en 1833 : variation réelle ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ +7,2 % sur 172 ans"
+        },
+        {
+          "id": "b",
+          "text": "≈ +7 % par an"
+        },
+        {
+          "id": "c",
+          "text": "≈ +2 100 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ −7 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "445 ÷ 415 − 1 = 7,2 % sur 172 ans (étude WGC 2006, secondaire).",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.05-Q8",
+      "type": "mcq",
+      "prompt": "Peut-on affirmer, avec les sources lues, que l'or a protégé de l'inflation des années 1970 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui, l'essai de la Fed le montre"
+        },
+        {
+          "id": "b",
+          "text": "Non : aucun prix de l'or de cette période n'a été lu"
+        },
+        {
+          "id": "c",
+          "text": "Oui, l'étude de 2006 le prouve"
+        },
+        {
+          "id": "d",
+          "text": "Oui, par les prix légaux de L5.01"
+        }
+      ],
+      "correct": "b",
+      "explanation": "L'essai décrit l'inflation, pas l'or ; L5.01 s'arrête aux prix légaux jusqu'en 1973 : point à vérifier.",
+      "tags": [
+        "limite"
+      ]
+    }
+  ],
+  "revision": 1
+}

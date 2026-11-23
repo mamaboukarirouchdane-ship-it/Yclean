@@ -1,0 +1,225 @@
+---
+id: L3.09
+module: 3
+order: 9
+title: "PIB, ventes au détail et production industrielle : les statistiques d'activité"
+title_initial: "PIB, ventes au détail, production industrielle"
+level: "intermédiaire"
+duration_hours: 3
+prerequisites: ["L3.04", "L3.07", "L3.08"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L3.09.quiz.json"
+sources: ["S-BEA-09", "S-BEA-10", "S-CEN-02", "S-FEDIP-01", "S-ISM-01"]
+---
+
+# L3.09 — PIB, ventes au détail et production industrielle : les statistiques d'activité
+
+> **Convention de lecture.** **[Fait]** = énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. lire un **communiqué de PIB** (taux annualisé, estimations successives, composantes) ;
+2. **convertir** un taux trimestriel en taux annualisé et inversement, en tenant compte de l'arrondi ;
+3. lire les **ventes au détail** (nominales, intervalle d'erreur, déflatées) ;
+4. lire la **production industrielle** et le **taux d'utilisation des capacités** ;
+5. rapprocher **enquêtes (PMI)** et **statistiques dures** sans les confondre ;
+6. expliquer pourquoi les **révisions** limitent la portée d'un chiffre de première estimation.
+
+## 2. Prérequis
+
+- Emploi (L3.04), prix et déflateur (L3.07), enquêtes (L3.08) ; PIB réel et nominal (module 1).
+
+## 3. Explication intuitive
+
+Le PIB est le grand bilan trimestriel de l'activité ; il arrive tard, en trois versions. Les ventes au détail et la production industrielle sont des instantanés mensuels : ils arrivent plus vite et alimentent les prévisions de PIB. Les trois ont des défauts : le PIB est révisé ; les ventes au détail sont en valeur (elles gonflent avec les prix) et mesurées avec une marge d'erreur ; la production industrielle pèse moins dans l'économie américaine que les services, et les services publics (électricité, gaz) y dépendent de la météo. Un bon analyste lit ces chiffres comme des **indices partiels**, les recoupe et note ce qui reste incertain.
+
+## 4. Développement technique
+
+### 4.1 Le PIB : un chiffre en trois temps
+
+**[Fait]** (S-BEA-10, communiqué du BEA du 30/09/2026 à 8 h 30, heure de l'Est, résumé automatique) : PIB réel du deuxième trimestre 2026 : **+2,2 %** en rythme annualisé (**+0,6 %** en rythme trimestriel), **révisé de +0,7 point** par rapport à la deuxième estimation (**+1,5 %**) ; l'estimation avancée était aussi de +1,5 %. Révision attribuée aux stocks et à l'investissement fixe privé, à la consommation (services et biens) et aux dépenses publiques (défense fédérale). Indice des prix PCE du trimestre : **+5,0 %** annualisé (révisé de −0,3 point) ; hors alimentation et énergie **+3,3 %**.
+
+**[Fait]** (S-BEA-09, communiqué du BEA du 29/10/2026 à 8 h 30, estimation avancée du troisième trimestre, résumé automatique) : PIB réel **+3,4 %** annualisé (**+0,8 %** en rythme trimestriel), contre 2,2 % au deuxième trimestre ; investissement, consommation et dépenses publiques en hausse, exportations en baisse, importations en hausse ; **ventes finales réelles aux acheteurs privés nationaux +4,9 %** (T2 : 4,6 %) ; PIB en dollars courants **+5,6 %** ; indice des prix des achats intérieurs bruts **+3,0 %** (T2 : 5,6 %) ; indice des prix PCE **+2,1 %** (T2 : 5,0 %), hors alimentation et énergie **+2,5 %** (T2 : 3,3 %) ; prochaine publication (deuxième estimation) le **25/11/2026**. Les contributions en points de pourcentage n'ont pas été lues (tableaux liés).
+
+**[Calcul de l'auteur]**
+- révision du T2 : 2,2 − 1,5 = **+0,7 point** ; accélération T2 → T3 : 3,4 − 2,2 = **+1,2 point** ;
+- conversion : 1,034^(1/4) − 1 = **0,84 %** par trimestre (publié **0,8 %**) ; 1,008⁴ − 1 = **3,24 %** (publié 3,4 % : l'écart vient de l'arrondi de 0,8 %, un trimestre à 0,85 % donne 3,44 %) ;
+- T2 : 1,022^(1/4) − 1 = **0,5455 %**, arrondi à **0,5 %** alors que le BEA publie **0,6 %** : c'est compatible avec un taux annualisé non arrondi compris entre **2,21 % et 2,25 %** (1,0055⁴ − 1 = 2,218 %) ;
+- déflateur implicite du T3 : 1,056 ÷ 1,034 − 1 = **2,13 %** (annualisé) : à comparer aux 3,0 % des achats intérieurs bruts et aux 2,1 % du PCE (périmètres différents, L3.07).
+
+**[Interprétation]** Le PIB de première estimation est un point de départ : l'estimation du T2 a été relevée de **0,7 point** entre la deuxième et la troisième. **Aucune stratégie ne devrait reposer sur une décimale du PIB avancé.** La croissance des **ventes finales aux acheteurs privés** (4,9 %) est une mesure de la demande intérieure moins bruitée que le PIB (stocks et échanges extérieurs en sont exclus) : elle est ici supérieure au PIB (3,4 %).
+
+**Cohérence à vérifier.** Un indice des prix PCE de **+2,1 %** annualisé au T3, alors que le PCE mensuel d'août (+0,3 %) et de septembre (+0,5 %) est élevé (L3.07), n'est pas contradictoire en soi (moyenne trimestrielle contre dernier mois, autres mois bas), mais le détail mensuel de **juillet** n'a pas été lu : point signalé.
+
+### 4.2 Les ventes au détail
+
+**[Fait]** (S-CEN-02, page du Census Bureau, résumé automatique) : **septembre 2026**, ventes au détail et services de restauration : **+0,8 %** sur le mois (± 0,4 %), **+6,3 %** sur 12 mois (± 0,5 %), publication du **15/10/2026** ; le niveau de confiance des intervalles et la variation hors automobiles n'ont pas été lus.
+
+**[Calcul de l'auteur]**
+- intervalle sur le mois : 0,8 ± 0,4 → de **0,4 % à 1,2 %** ;
+- ventes **réelles** approximées (déflatées par le CPI d'ensemble, L3.06 : +0,6 % sur le mois, +3,7 % sur 12 mois) : 1,008 ÷ 1,006 − 1 = **+0,20 %** ; 1,063 ÷ 1,037 − 1 = **+2,51 %**.
+
+**[Interprétation]** Les ventes au détail sont nominales : la hausse mensuelle de 0,8 % dépend en bonne partie de l'inflation des prix (énergie : stations-service). Le déflateur par le CPI d'ensemble est une **approximation** (le champ des ventes au détail n'est pas celui du CPI : services exclus, niveaux de pondération différents). L'intervalle d'erreur montre qu'une variation mensuelle se situe dans une fourchette de 0,8 point : ne pas interpréter un dixième.
+
+### 4.3 La production industrielle
+
+**[Fait]** (S-FEDIP-01, publication G.17 de la Réserve fédérale du 16/10/2026, résumé automatique) : septembre 2026, production industrielle totale **+0,7 %** (août **+0,1 %**) ; indice **104,0** (2017 = 100), soit **2,2 %** de plus qu'en septembre 2025 ; industrie manufacturière **+0,3 %** (+1,1 % sur 12 mois) ; mines **+0,2 %** (+2,8 %) ; services publics **+3,5 %** (+8,7 %) ; taux d'utilisation des capacités **76,9 %**, soit **2,5 points** sous la moyenne de long terme 1972–2025 (**79,4 %**) ; manufacturier 75,9 %, mines 87,5 %, services publics 73,8 % ; juillet révisé (0,0 % → 0,1 %) ; **révision annuelle prévue le 24/11/2026** (année de base 2022, nouvelles références, facteurs saisonniers).
+
+**[Calcul de l'auteur]**
+- écart de capacité : 79,4 − 76,9 = **2,5 points** ✓ ;
+- niveau de septembre 2025 déduit de l'indice : 104,0 ÷ 1,022 = **101,8** ;
+- l'industrie manufacturière (+0,3 %) contribue peu à la hausse de 0,7 % : l'essentiel vient des **services publics** (+3,5 %), dont l'activité dépend de la météo.
+
+**[Interprétation]** Une production industrielle forte portée par les services publics n'est pas un signal de reprise manufacturière ; la production manufacturière reste modeste (+1,1 % sur 12 mois). Une utilisation des capacités sous sa moyenne de long terme suggère l'absence de pression généralisée sur les capacités (hypothèse). Les résultats vont être **révisés** le 24 novembre.
+
+### 4.4 Enquêtes et statistiques dures
+
+**[Fait]** (S-ISM-01, L3.08) : production manufacturière de l'enquête ISM **56,7** en septembre (expansion, en baisse de 1,6).
+
+**[Interprétation]** L'enquête (production en expansion) et la statistique dure (manufacturier +0,3 % sur le mois, +1,1 % sur 12 mois) vont dans le même sens général sans être comparables en unité. Le rapprochement est qualitatif.
+
+### 4.5 Méthode de lecture
+
+**[Définition]** (convention de cours) :
+1. Identifier la version (avancée, deuxième, troisième) et la date de la prochaine révision.
+2. Distinguer taux annualisé et taux trimestriel.
+3. Lire les composantes plutôt que le total (consommation, investissement, stocks, échanges).
+4. Pour les ventes, passer en réel (approximativement) et lire l'intervalle.
+5. Pour la production, séparer manufacturier, mines et services publics.
+6. Recouper avec les enquêtes et noter les écarts.
+
+## 5. Définitions essentielles
+
+- **Estimation avancée / deuxième / troisième** : versions successives du PIB.
+- **Taux annualisé** : taux trimestriel porté à l'année par composition (1 + t)⁴ − 1.
+- **Ventes finales aux acheteurs privés nationaux** : demande intérieure privée, hors stocks, échanges extérieurs et dépenses publiques.
+- **Ventes au détail** : ventes nominales des commerces de détail et de la restauration.
+- **Production industrielle** : indice de volume de la production des mines, usines et services publics.
+- **Taux d'utilisation des capacités** : production rapportée à la capacité.
+
+## 6. Exemples chiffrés
+
+**6.1 Conversion.** 1,034^(1/4) − 1 = 0,84 % ; 1,008⁴ − 1 = 3,24 %.
+**6.2 Révision.** 2,2 − 1,5 = +0,7 point.
+**6.3 Ventes réelles.** 1,008 ÷ 1,006 − 1 = +0,20 %.
+**6.4 Déflateur implicite (SIMULATION de lecture).** Nominal +5,6 %, réel +3,4 % : 2,13 %.
+
+### 6.5 Cas historique documenté — la fin d'octobre 2026
+
+**[Fait]** : retail du 15/10 (S-CEN-02) ; production industrielle du 16/10 (S-FEDIP-01) ; PIB du T3 du 29/10 (S-BEA-09).
+
+**[Calcul de l'auteur]** PIB T3 3,4 % ; ventes au détail réelles ≈ +0,2 % ; production industrielle +0,7 %, dont l'essentiel vient des services publics ; capacités à 76,9 %.
+
+**[Interprétation]** Les statistiques d'activité sont solides dans l'ensemble (demande privée +4,9 %), mais **les comparaisons ne se font pas à l'unité** (annualisé, trimestriel, mensuel, nominal, réel). **Limites** : résumés automatiques ; contributions au PIB non lues ; pas de consensus lu ; pas de réaction de marché ; le PIB sera révisé le 25/11 et la production industrielle le 24/11.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Dollar** : une croissance supérieure à celle des autres économies soutient en général le dollar à moyen terme ; la réaction immédiate à un PIB avancé dépend de l'écart avec l'attente et du contenu en prix (le PCE du PIB est publié en même temps).
+- **Taux** : des ventes finales solides et un taux de chômage bas rendent des baisses de taux moins probables (L2.07) ; hypothèse.
+- **Or** : un PIB fort réduit la demande de valeur refuge mais peut relever les taux ; effet ambigu, à tester (module 5).
+- **Tempo** : le PIB n'est pas un déclencheur à lui seul ; les mensuels (ventes, production) préparent la surprise.
+- **Prudence** : la croissance d'un trimestre ne garantit ni la tendance ni la direction d'une paire.
+
+## 8. Erreurs courantes
+
+1. Comparer un taux annualisé à un taux trimestriel.
+2. Prendre la première estimation du PIB pour définitive.
+3. Lire les ventes au détail en nominal comme une croissance réelle.
+4. Ignorer l'intervalle d'erreur du Census.
+5. Attribuer la hausse de la production industrielle à l'industrie manufacturière sans regarder les composantes.
+6. Confondre indice de volume (production) et valeur (ventes).
+7. Oublier la révision annuelle.
+
+## 9. Limites de l'interprétation
+
+- Les communiqués sont lus par résumé ; les contributions détaillées du PIB, la variation des ventes hors automobiles et les consensus ne sont pas lus.
+- Le déflateur des ventes au détail par le CPI d'ensemble est une approximation.
+- La cohérence entre le PCE trimestriel (2,1 %) et le PCE mensuel de juillet n'a pas été vérifiée.
+- Les chiffres de production seront révisés le 24 novembre ; ceux du PIB le 25 novembre.
+- Le niveau de confiance des intervalles du Census n'a pas été lu.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Conversion.** Le PIB croît de 3,4 % annualisé. Quel taux trimestriel ? Et 0,8 % trimestriel, annualisé ?
+
+<details>
+<summary>Correction 1</summary>
+
+1,034^(1/4) − 1 = **0,84 %** ; 1,008⁴ − 1 = **3,24 %**. L'écart avec 3,4 % vient de l'arrondi du trimestriel.
+</details>
+
+**Exercice 2 — Révision.** PIB du T2 : avancée 1,5 % ; deuxième 1,5 % ; troisième 2,2 %. Révision totale ? Que cela implique-t-il pour la lecture d'une avancée ?
+
+<details>
+<summary>Correction 2</summary>
+
+2,2 − 1,5 = **+0,7 point**. Une avancée peut être révisée de façon notable ; ne jamais fonder une conclusion sur la seule première estimation.
+</details>
+
+**Exercice 3 — Ventes réelles.** Ventes +0,8 % (mois) et +6,3 % (12 mois) ; CPI +0,6 % et +3,7 %. Calcule les ventes réelles approchées.
+
+<details>
+<summary>Correction 3</summary>
+
+1,008 ÷ 1,006 − 1 = **+0,20 %** ; 1,063 ÷ 1,037 − 1 = **+2,51 %**.
+</details>
+
+**Exercice 4 — Intervalle.** Ventes +0,8 % ± 0,4 %. Intervalle ? Une valeur de +0,5 % attendue serait-elle significativement différente ?
+
+<details>
+<summary>Correction 4</summary>
+
+Intervalle : **0,4 % à 1,2 %**. Une attente de 0,5 % est dans l'intervalle : l'écart n'est pas distinguable de l'erreur d'échantillonnage (au niveau de confiance de la source, non lu).
+</details>
+
+**Exercice 5 — Capacités.** Utilisation 76,9 % ; moyenne 1972–2025 : 79,4 %. Écart ? Septembre 2025 : 76,0 %, évolution ?
+
+<details>
+<summary>Correction 5</summary>
+
+79,4 − 76,9 = **2,5 points** sous la moyenne ; 76,9 − 76,0 = **+0,9 point** sur un an.
+</details>
+
+**Exercice 6 — Critique.** « La production industrielle gagne 0,7 % : le secteur manufacturier repart et l'économie surchauffe. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) L'industrie manufacturière ne progresse que de 0,3 %. (2) Les services publics (+3,5 %) dépendent de la météo. (3) L'utilisation des capacités (76,9 %) est sous sa moyenne de long terme. (4) Les chiffres seront révisés le 24 novembre. (5) Un seul mois.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L3.09.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Le PIB est publié en trois estimations ; le T2 2026 est passé de 1,5 % à 2,2 %.
+- Le PIB du T3 2026 avancé : +3,4 % annualisé ; ventes finales privées +4,9 %.
+- Ventes au détail de septembre : +0,8 % (± 0,4) nominal ; environ +0,2 % en réel approché.
+- Production industrielle : +0,7 %, tirée par les services publics ; capacités 76,9 %.
+- Taux annualisé, trimestriel, nominal, réel : ne jamais les mélanger.
+
+## 13. Critères de maîtrise
+
+- [ ] Convertir trimestriel et annualisé (Exercice 1).
+- [ ] Expliquer l'effet des révisions (Exercice 2).
+- [ ] Déflater approximativement des ventes (Exercice 3).
+- [ ] Lire un intervalle d'erreur (Exercice 4).
+- [ ] Décomposer une production industrielle (Exercices 5 et 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-BEA-09** — BEA, GDP (Advance Estimate), 3rd Quarter 2026 (29/10/2026) : https://bea.gov/news/2026/gdp-advance-estimate-3rd-quarter-2026
+- **S-BEA-10** — BEA, GDP Third Estimate, 2nd Quarter 2026 (30/09/2026) : https://bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-2nd
+- **S-CEN-02** — Census Bureau, Retail Sales : https://census.gov/retail/sales.html
+- **S-FEDIP-01** — Réserve fédérale, G.17, 16/10/2026 : https://www.federalreserve.gov/releases/g17/current/default.htm
+- **S-ISM-01** — ISM (voir L3.08).
+
+**Définitions de cours non rattachées à une source officielle lue :** conversion annualisée, ventes finales (définition de cours), méthode de lecture. **Points non vérifiés :** contributions du PIB, ventes hors automobiles, consensus, niveau de confiance de l'intervalle, PCE de juillet.

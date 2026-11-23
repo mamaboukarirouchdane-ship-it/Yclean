@@ -1,0 +1,229 @@
+---
+id: L1.02
+module: 1
+order: 2
+title: "Cycle économique et récessions : phases, écart de production et datation"
+title_initial: "Cycle économique et récessions"
+level: "débutant à intermédiaire"
+duration_hours: 3.0
+prerequisites: ["L1.01"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L1.02.quiz.json"
+sources: ["S-NBER-01", "S-NBER-02", "S-STL-01"]
+---
+
+# L1.02 — Cycle économique et récessions : phases, écart de production et datation
+
+> **Convention de lecture.** **[Fait]** = énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. décrire les **phases du cycle** (expansion, pic, récession, creux) sans en faire une mécanique régulière ;
+2. définir et calculer un **écart de production** (*output gap*) et dire pourquoi il est **estimé, non observé** ;
+3. distinguer la **récession technique** (deux trimestres de baisse) de la **récession datée par le NBER** ;
+4. expliquer pourquoi la datation arrive **avec retard** ;
+5. calculer une baisse cumulée et le gain nécessaire pour la compenser ;
+6. relier cycle et marchés **sans prétendre à une relation automatique**.
+
+## 2. Prérequis
+
+L1.01 (PIB réel, taux annualisé, révisions) et L0.10 (baisse maximale, asymétrie).
+
+## 3. Explication intuitive
+
+L'économie ne progresse pas en ligne droite : elle alterne périodes où la production augmente et périodes où elle recule ou stagne. Trois idées guident cette leçon :
+
+1. **Un cycle n'est pas une horloge.** Les phases n'ont ni durée fixe ni amplitude régulière : « cycle » désigne une alternance, pas une périodicité.
+2. **On ne sait jamais en temps réel où l'on est.** Les chiffres sont retardés et révisés ; la datation officielle d'un pic ou d'un creux se fait des mois après.
+3. **Une définition unique de la récession n'existe pas.** La règle populaire « deux trimestres de baisse du PIB » est une règle pratique ; l'institution qui date les récessions aux États-Unis, le NBER, ne l'utilise pas.
+
+## 4. Développement technique
+
+### 4.1 Les phases du cycle
+
+**[Définition, vocabulaire du NBER]** Un **pic** est le sommet de l'activité ; un **creux** en est le point le plus bas. Une **récession** est la période entre un pic et le creux suivant ; une **expansion** est la période entre un creux et le pic suivant. **[Fait, S-NBER-02, résumé automatique]** La page du NBER ajoute : « Expansion is the normal state of the economy; most recessions are brief. » Par convention de la page, le mois du pic est le dernier mois de l'expansion et le mois du creux est le dernier mois de la récession.
+
+On décrit souvent le cycle en quatre temps :
+
+| Phase | Production | Emploi | Inflation (tendance usuelle, non systématique) |
+| --- | --- | --- | --- |
+| Expansion précoce | Reprend | Redémarre | Souvent basse |
+| Expansion tardive | Proche des capacités | Chômage bas | Peut monter |
+| Récession | Recule, de façon étendue | Baisse | Souvent ralentit |
+| Creux / reprise | Cesse de reculer | Se stabilise | Variable |
+
+**[Interprétation]** Le tableau décrit des tendances habituelles, non des lois. Les chocs d'offre (L1.05) peuvent produire des combinaisons inhabituelles de croissance et d'inflation.
+
+### 4.2 L'écart de production
+
+**[Fait, S-STL-01, résumé automatique]** Le **PIB potentiel** est une estimation de ce que l'économie pourrait produire en employant pleinement ses ressources ; la CBO le décrit comme « the economy's maximum sustainable output ». Il est **estimé, pas observé**, à partir de données passées, et « estimates can be wrong ». L'**écart de production** est :
+
+**Écart = (production effective − production potentielle) ÷ production potentielle × 100.**
+
+- **Écart négatif** : l'économie produit moins que son potentiel (ressources sous-utilisées) ; souvent associé aux récessions.
+- **Écart positif** : ressources très sollicitées ; la source dit que c'est rare et non soutenable durablement.
+
+**Exemple (SIMULATION).** Production effective 98, potentielle 100 : écart = (98 − 100) ÷ 100 = **−2 %**. Production effective 10 300, potentielle 10 000 : écart = **+3 %**.
+
+**Cas de vérification d'une source.** L'article du Federal Reserve Bank of St. Louis cité donne, pour le premier trimestre 2020, un potentiel de **19 154 Md$** et une production effective de **19 011 Md$** selon la CBO, et un écart de **−0,07 %**. **[Calcul de l'auteur]** (19 011 − 19 154) ÷ 19 154 = **−0,747 %**, soit environ −0,75 %. Le résultat annoncé (−0,07 %) ne correspond pas à ses propres données : il s'agit probablement d'une erreur de transcription ou de calcul de la source, ou d'une erreur du résumé automatique. **La leçon retient le calcul vérifié (−0,75 %) en le signalant comme calcul de l'auteur, et non la valeur −0,07 %.** Moralité : recalcule toujours un chiffre dérivé quand tu as les chiffres de base.
+
+**[Interprétation]** Comme le potentiel n'est pas observé, l'écart de production est **révisé**, parfois fortement : c'est un outil d'analyse, pas une mesure précise.
+
+### 4.3 Récession technique et récession datée
+
+**[Définition]** La **récession technique** est la règle populaire de **deux trimestres consécutifs de baisse** du PIB réel.
+
+**[Fait, S-NBER-01, résumé automatique]** Le NBER écrit que sa définition traditionnelle est « a significant decline in economic activity that is spread across the economy and that lasts more than a few months ». Il précise que **deux trimestres consécutifs de baisse du PIB ne sont pas sa définition** : le comité examine un ensemble d'indicateurs plutôt que le seul PIB réel. Les critères sont la **profondeur**, la **diffusion** (*spread across the economy*) et la **durée** ; chacun doit être rempli à un certain degré, mais une valeur extrême sur un critère peut compenser en partie un critère plus faible. La FAQ cite la récession de 2001 comme exemple sans deux trimestres consécutifs de baisse du PIB.
+
+**Exemple d'application (SIMULATION).** PIB réel, taux annualisés trimestriels : +3,0 ; +2,5 ; +0,5 ; −0,8 ; −1,2 ; +0,4 ; +2,8 (%). Deux trimestres consécutifs négatifs (−0,8 et −1,2) : **récession technique**. Cela ne prouve pas que le NBER daterait une récession, ni inversement.
+
+### 4.4 Pourquoi la datation arrive tard
+
+**[Fait, S-NBER-01]** Il n'y a pas de règle fixe : le comité attend d'être sûr du point de retournement et laisse le temps aux révisions de données. Dans le tableau de la FAQ lu, les annonces sont venues **entre 4 mois** (pic de février 2020) **et 21 mois** (creux de mars 1991) après le point de retournement.
+
+**[Interprétation]** Conséquence pratique : **on ne peut pas utiliser la datation officielle pour décider en temps réel**. Les analystes recourent à des indicateurs rapides (emploi, production, ventes, enquêtes, indicateurs financiers) et à des probabilités subjectives (L0.10). Ces probabilités ne sont pas des datations.
+
+### 4.5 Baisse cumulée et récupération
+
+Une récession se mesure du pic au creux. Si les niveaux de production baissent de −3 % puis de −2 % :
+
+niveau = 0,97 × 0,98 = 0,9506, soit **−4,94 %** (et non −5 %). Le gain nécessaire pour revenir au pic est 1 ÷ 0,9506 − 1 = **+5,20 %**. Les pourcentages se composent (L0.07, L0.10).
+
+### 4.6 Cycle, marchés, devises et or
+
+**[Interprétation, non démontrée dans la leçon]** Les marchés réagissent rarement à la récession elle-même (déjà datée trop tard) mais à ses **anticipations** : probabilité perçue de récession → anticipation de baisses de taux → effets sur les rendements, les devises et l'or (modules 2, 4, 5, 6). Un raisonnement par scénarios est préférable à une règle unique.
+
+## 5. Définitions essentielles
+
+- **Pic / creux** : points hauts et bas de l'activité (par convention du NBER, mois de dernier niveau haut ou bas).
+- **Expansion / récession** : creux→pic / pic→creux.
+- **PIB potentiel** : production soutenable estimée ; **écart de production** : (effective − potentielle) ÷ potentielle.
+- **Récession technique** : deux trimestres consécutifs de baisse du PIB réel.
+- **Profondeur, diffusion, durée** : trois critères de datation du NBER.
+- **Baisse cumulée** : composition des variations, du pic au creux.
+
+## 6. Exemples chiffrés
+
+**A.** Production 98, potentiel 100 : écart −2 % (§4.2).
+**B.** St. Louis Fed (CBO), T1 2020 : (19 011 − 19 154) ÷ 19 154 = −0,75 % ; la source annonce −0,07 % (§4.2).
+**C.** Série de croissances simulée : récession technique en T4 et T5 (§4.3).
+**D.** −3 % puis −2 % : −4,94 % ; récupération +5,20 % (§4.5).
+**E.** Annonces du NBER : 4 à 21 mois après le retournement (§4.4).
+
+### 6.5 Cas historique documenté — la récession de 2020 et la datation du NBER
+
+**[Fait, S-NBER-02, résumé automatique]** Le NBER donne comme **dernier pic février 2020** et **dernier creux avril 2020**. Avec la convention de la page (mois du pic = dernier mois d'expansion ; mois du creux = dernier mois de récession), la récession couvre mars et avril 2020, soit **environ deux mois** **[calcul de l'auteur, la page ne donne pas la durée]**. **[Fait, S-NBER-01]** L'annonce du pic de février 2020 est venue **quatre mois** après son retournement, c'est le délai le plus court du tableau lu.
+
+**Ce que la leçon n'a pas pu confirmer :** les données de PIB trimestriel de 2020 (source FRED hors liste d'accès) ; les dates d'annonce exactes ; les autres récessions du tableau (2001, 2007–2009). La leçon ne cite donc aucun chiffre de PIB de 2020.
+
+**[Interprétation]** Cet épisode, très court, montre qu'une récession peut être brève sans être légère ; il montre aussi que la définition « deux trimestres » est une règle de commodité : une récession peut être datée sans correspondre à cette règle, et l'inverse est possible. La leçon ne prétend pas que 2020 est un modèle pour les récessions futures.
+
+## 7. Application au Forex et à l'or
+
+- **Forex** : le cycle n'impose pas le sens d'une devise. Une récession américaine anticipée peut s'accompagner d'un dollar plus faible (baisses de taux anticipées) ou plus fort (recherche de sécurité) selon le contexte ; l'effet est **à mesurer, non à présumer** (modules 4, 6, 8).
+- **Or** : les récessions s'accompagnent parfois de baisses de taux réels, qui soutiennent l'or (module 5), mais une phase de panique financière peut aussi s'accompagner de ventes forcées. Les deux effets existent.
+- **Méthode** : construire des **scénarios** (expansion tardive, ralentissement, récession) avec une probabilité subjective datée et des indicateurs de suivi.
+- **Rappel** : aucune phase du cycle ne garantit un gain ou une perte.
+
+## 8. Erreurs courantes
+
+- **Croire que les cycles ont une durée régulière.**
+- **Prendre « deux trimestres de baisse » pour la définition officielle.**
+- **Croire que le NBER annonce les récessions en temps réel.**
+- **Lire l'écart de production comme une mesure observée.**
+- **Additionner des baisses** sans composer.
+- **Recopier un chiffre dérivé sans le recalculer** (cas St. Louis Fed).
+- **Déduire le sens d'une devise d'une phase du cycle.**
+
+## 9. Limites de l'interprétation
+
+- Sources lues par **résumé automatique** ; la page du NBER lue ne contient pas le tableau des dates antérieures à 2020.
+- L'estimation de l'écart de production dépend du potentiel estimé, lui-même incertain.
+- Les indicateurs utilisés par le NBER ne sont pas détaillés dans les sources lues (seuls profondeur, diffusion et durée le sont).
+- Les séries de PIB trimestriel de 2020 n'ont pas été lues.
+- Les applications aux devises et à l'or sont des **hypothèses d'analyse**.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Écart de production.** (a) Production effective 9 700, potentielle 10 000 : écart ? (b) Effective 10 450, potentielle 10 000 : écart ? (c) Dans quel cas l'économie est-elle en sous-utilisation ? (d) Pourquoi cet écart peut-il être révisé ?
+
+<details>
+<summary>Correction 1</summary>
+
+(a) (9 700 − 10 000) ÷ 10 000 = **−3 %**. (b) **+4,5 %**. (c) En (a), écart négatif : ressources sous-utilisées. (d) Parce que le PIB potentiel est estimé à partir des données passées et des hypothèses sur la croissance tendancielle ; de nouvelles données changent l'estimation.
+</details>
+
+**Exercice 2 — Récession technique ou non ?** Croissances annualisées trimestrielles (SIMULATION) : +2,0 ; −0,5 ; +1,0 ; −0,3 ; −0,9 ; −1,5 ; +0,6 ; +2,2. (a) Y a-t-il une récession technique ? Entre quels trimestres ? (b) Un trimestre isolé négatif change-t-il la réponse ? (c) Cela prouve-t-il que le NBER daterait une récession ?
+
+<details>
+<summary>Correction 2</summary>
+
+(a) Oui : les trimestres 4, 5 et 6 (−0,3 ; −0,9 ; −1,5) forment trois baisses consécutives, donc au moins deux consécutives. (b) Non : le trimestre 2 (−0,5) est isolé, suivi de +1,0 ; il ne constitue pas à lui seul une récession technique. (c) Non : le NBER examine profondeur, diffusion et durée sur plusieurs indicateurs ; la règle des deux trimestres n'est pas sa définition.
+</details>
+
+**Exercice 3 — Vérifier une source.** Une source écrit : « potentiel 19 154 ; effectif 19 011 ; écart −0,07 % ». (a) Recalcule. (b) Quel écart relatif entre la valeur publiée et la tienne ? (c) Que fais-tu dans un cours ?
+
+<details>
+<summary>Correction 3</summary>
+
+(a) (19 011 − 19 154) ÷ 19 154 = −143 ÷ 19 154 = **−0,747 %**. (b) La valeur publiée est environ dix fois plus petite (−0,07 % contre −0,75 %). (c) Je cite le calcul vérifié (−0,75 %), je signale la divergence avec la source et je ne reproduis pas la valeur douteuse comme un fait.
+</details>
+
+**Exercice 4 — Délais de datation.** Pic de février 2020 ; annonce du pic quatre mois plus tard. Creux de mars 1991 ; annonce 21 mois plus tard. (a) Dans quels mois ont eu lieu ces annonces (si on compte en mois calendaires à partir du mois du retournement) ? (b) Que conclure sur l'usage de la datation en temps réel ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) Février 2020 + 4 mois = **juin 2020** ; mars 1991 + 21 mois = **décembre 1992**. (Ces dates sont des calculs de l'auteur à partir de délais en mois ; les dates exactes d'annonce ne figurent pas dans le résumé lu.) (b) La datation officielle ne permet pas de décider en temps réel : on s'appuie sur des indicateurs rapides et des probabilités subjectives.
+</details>
+
+**Exercice 5 — Baisse cumulée.** Une production baisse de 4 % puis de 3 %. (a) Baisse cumulée ? (b) Gain nécessaire pour retrouver le pic ? (c) Pourquoi n'est-ce pas 7 % ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) 0,96 × 0,97 = 0,9312, soit **−6,88 %**. (b) 1 ÷ 0,9312 − 1 = **+7,39 %**. (c) Les variations se composent : la seconde baisse porte sur un niveau déjà réduit.
+</details>
+
+**Exercice 6 — Critique d'une règle.** Un commentateur écrit : « Deux trimestres de baisse du PIB : récession confirmée, vendez la devise du pays. » Identifie les erreurs ou les non-dits.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) « Deux trimestres » est une règle pratique, non la définition du NBER. (2) Les chiffres sont révisés et la datation officielle vient des mois plus tard. (3) L'effet sur une devise dépend des attentes déjà intégrées au prix, des taux et du contexte ; il peut aller dans les deux sens. (4) Aucune conclusion de transaction n'est garantie ; il faut un scénario, des indicateurs de suivi et une gestion du risque (module 11).
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L1.02.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- **Récession** : du pic au creux ; **expansion** : du creux au pic ; « most recessions are brief » (NBER).
+- **Écart de production** = (effectif − potentiel) ÷ potentiel ; le potentiel est **estimé**.
+- Le NBER ne retient **pas** la règle des deux trimestres : il pèse **profondeur, diffusion, durée**.
+- La datation arrive **4 à 21 mois** après dans le tableau lu : pas utilisable en temps réel.
+- Les baisses se **composent** (−3 % puis −2 % = −4,94 %).
+- Les marchés réagissent à des **anticipations**, avec des effets non automatiques sur devises et or.
+- Recalculer un chiffre dérivé évite de recopier une erreur de source.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer un écart de production et expliquer son incertitude (Exercices 1, 3).
+- [ ] Distinguer récession technique et récession datée (Exercice 2).
+- [ ] Expliquer le retard de datation (Exercice 4).
+- [ ] Composer des baisses (Exercice 5).
+- [ ] Critiquer une règle simpliste (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-NBER-01** — NBER, *Business Cycle Dating Procedure: Frequently Asked Questions* : https://www.nber.org/research/business-cycle-dating/business-cycle-dating-procedure-frequently-asked-questions
+- **S-NBER-02** — NBER, *Business Cycle Dating* : https://www.nber.org/research/business-cycle-dating
+- **S-STL-01** — Federal Reserve Bank of St. Louis, *Page One Economics*, « Minding the Output Gap: What Is Potential GDP and Why Does It Matter? » (3 mai 2021) : https://www.stlouisfed.org/publications/page-one-economics/2021/05/03/minding-the-output-gap-what-is-potential-gdp-and-why-does-it-matter
+
+**Définitions de cours non rattachées à une source officielle lue :** phases du cycle (tableau), récession technique, baisse cumulée. **Points non vérifiés :** dates et durées des récessions autres que 2020, PIB trimestriel de 2020, détail des indicateurs du NBER, dates exactes d'annonce.

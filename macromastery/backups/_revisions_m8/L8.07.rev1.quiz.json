@@ -1,0 +1,239 @@
+{
+  "lessonId": "L8.07",
+  "title": "Quiz — Crises bancaires et de dette souveraine",
+  "passThreshold": 0.8,
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L8.07-Q1",
+      "type": "mcq",
+      "prompt": "Une banque a des actifs supérieurs à ses dettes mais ne peut payer 40 de retraits avec 30 de liquidités. De quel problème s'agit-il ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un problème de souveraineté"
+        },
+        {
+          "id": "b",
+          "text": "Une insolvabilité certaine"
+        },
+        {
+          "id": "c",
+          "text": "Un manque de liquidité (10) tant que les actifs ne sont pas bradés"
+        },
+        {
+          "id": "d",
+          "text": "Aucun problème"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Illiquidité : les fonds disponibles manquent alors que la valeur des actifs détenus dépasse les dettes ; une vente forcée à décote peut la rendre insolvable.",
+      "tags": [
+        "liquidite"
+      ]
+    },
+    {
+      "id": "L8.07-Q2",
+      "type": "mcq",
+      "prompt": "Dans la banque fictive de l'exemple (100 d'actifs dont 70 illiquides valant 56 en vente forcée, 92 de dettes), que devient la solvabilité en vente forcée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Actifs 86 < dettes 92 : insolvabilité apparente de 6"
+        },
+        {
+          "id": "b",
+          "text": "Solvable de 8 dans tous les cas"
+        },
+        {
+          "id": "c",
+          "text": "Insolvable de 14"
+        },
+        {
+          "id": "d",
+          "text": "Impossible à dire"
+        }
+      ],
+      "correct": "a",
+      "explanation": "30 + 56 = 86 contre 92 de dettes : déficit de 6. Si les actifs sont détenus, 100 − 92 = 8. Un prêt de banque centrale évite la vente forcée.",
+      "tags": [
+        "solvabilite",
+        "simulation"
+      ]
+    },
+    {
+      "id": "L8.07-Q3",
+      "type": "mcq",
+      "prompt": "Quelles dates et quels délais (S-FEDH-01, S-FED-33) relient la faillite de Lehman au TARP et aux rachats de MBS ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aucune date n'est connue"
+        },
+        {
+          "id": "b",
+          "text": "Lehman le 15/09 ; TARP le 15/10 ; rachats le 25/12"
+        },
+        {
+          "id": "c",
+          "text": "Lehman le 15/09/2007"
+        },
+        {
+          "id": "d",
+          "text": "Lehman le 15/09/2008 ; TARP le 03/10 (18 jours) ; rachats de MBS annoncés le 25/11 (71 jours)"
+        }
+      ],
+      "correct": "d",
+      "explanation": "15/09 → 03/10 = 18 jours ; 15/09 → 25/11 = 71 jours. Les outils s'enchaînent sur des semaines.",
+      "tags": [
+        "2008",
+        "calendrier"
+      ]
+    },
+    {
+      "id": "L8.07-Q4",
+      "type": "mcq",
+      "prompt": "Quelle est la variation entre les moyennes mensuelles de l'or de septembre (827 $) et de novembre 2008 (759 $), même source, et comment la qualifier ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ −20 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ −8,2 % ; deux moyennes de la même source, différente du « −20 % » d'un commentaire non sourcé"
+        },
+        {
+          "id": "c",
+          "text": "≈ +8,2 %"
+        },
+        {
+          "id": "d",
+          "text": "Aucun calcul n'est permis"
+        }
+      ],
+      "correct": "b",
+      "explanation": "759/827 − 1 = −0,0822. Le −20 % du gestionnaire n'est pas sourcé ; les deux mesures sont conservées sans arbitrage.",
+      "tags": [
+        "or2008",
+        "calcul"
+      ]
+    },
+    {
+      "id": "L8.07-Q5",
+      "type": "mcq",
+      "prompt": "En quoi une crise de dette souveraine de la zone euro diffère-t-elle d'une crise bancaire américaine ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle dure toujours des jours"
+        },
+        {
+          "id": "b",
+          "text": "Elle est identique"
+        },
+        {
+          "id": "c",
+          "text": "Elle ne concerne que les banques"
+        },
+        {
+          "id": "d",
+          "text": "Le débiteur est un État qui n'émet pas la monnaie de sa dette ; la réponse est conditionnelle et la durée se compte en années"
+        }
+      ],
+      "correct": "d",
+      "explanation": "2010-2012 : programmes conditionnels (FMI-UE) puis OMT conditionné ; une panique bancaire se joue en jours (SVB) et se traite par prêteur de dernier ressort et garantie.",
+      "tags": [
+        "difference"
+      ]
+    },
+    {
+      "id": "L8.07-Q6",
+      "type": "mcq",
+      "prompt": "Que sait-on, dans la leçon, de la phrase « whatever it takes » ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il a été prononcé en septembre 2012"
+        },
+        {
+          "id": "b",
+          "text": "Le discours a été lu intégralement"
+        },
+        {
+          "id": "c",
+          "text": "Le texte du discours n'a pas été lu ; la phrase n'est vue que dans le titre d'un résultat de recherche ; la page de la BRI donne deux dates (26 et 27/07/2012)"
+        },
+        {
+          "id": "d",
+          "text": "Elle figure dans le communiqué du 06/09/2012"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La page de la BRI lue ne contient que des métadonnées. Le 06/09/2012, la BCE parle de l'OMT et d'un euro irréversible, ce qui est autre chose.",
+      "tags": [
+        "sources",
+        "bce"
+      ]
+    },
+    {
+      "id": "L8.07-Q7",
+      "type": "mcq",
+      "prompt": "En mars 2023 (WGC), l'or monte de 8,5 % sur le mois alors que le rendement américain à 10 ans recule de 40 pb au T1. Que dit cet épisode de l'idée « en crise, l'or est d'abord vendu » ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle n'est pas une loi : l'or a monté tout de suite, mais la part des facteurs (rendements, repricing de la Fed, flux) n'est pas mesurée"
+        },
+        {
+          "id": "b",
+          "text": "Elle est confirmée"
+        },
+        {
+          "id": "c",
+          "text": "Elle est démontrée fausse pour toute crise"
+        },
+        {
+          "id": "d",
+          "text": "Elle ne peut pas être discutée"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Un épisode ne prouve pas une règle ; les mécanismes possibles (liquidité, dollar, rendements, réponse des autorités) restent à documenter.",
+      "tags": [
+        "mars2023",
+        "or"
+      ]
+    },
+    {
+      "id": "L8.07-Q8",
+      "type": "mcq",
+      "prompt": "Le communiqué de la Fed du 28/04/2023 sur SVB : que contient-il, d'après la lecture ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le risque de taux comme cause unique"
+        },
+        {
+          "id": "b",
+          "text": "Quatre causes de la faillite et 31 avertissements non traités ; il ne mentionne ni le risque de taux ni les dépôts non assurés"
+        },
+        {
+          "id": "c",
+          "text": "Le coût de la résolution"
+        },
+        {
+          "id": "d",
+          "text": "La date de fermeture de SVB"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le résumé du communiqué liste des causes de gestion et de supervision ; les sujets absents restent à lire dans le rapport complet, non lu.",
+      "tags": [
+        "svb",
+        "sources"
+      ]
+    }
+  ],
+  "revision": 1
+}

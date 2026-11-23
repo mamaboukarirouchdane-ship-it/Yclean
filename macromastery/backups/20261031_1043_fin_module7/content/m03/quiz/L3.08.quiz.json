@@ -1,0 +1,233 @@
+{
+  "lessonId": "L3.08",
+  "title": "Quiz — PMI et ISM",
+  "passThreshold": 0.8,
+  "note": "Quiz de la leçon L3.08",
+  "questions": [
+    {
+      "id": "L3.08-Q1",
+      "type": "mcq",
+      "prompt": "Que signifie un PMI de 54,5 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'activité est tombée de 45,5 %"
+        },
+        {
+          "id": "b",
+          "text": "L'activité a progressé de 54,5 %"
+        },
+        {
+          "id": "c",
+          "text": "Les réponses « en hausse » l'emportent nettement sur les « en baisse » ; ce n'est pas un taux de croissance"
+        },
+        {
+          "id": "d",
+          "text": "Le PIB croît de 4,5 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "C'est un indice de diffusion : au-dessus de 50, expansion nette ; il ne mesure ni le niveau ni l'ampleur de la croissance.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L3.08-Q2",
+      "type": "mcq",
+      "prompt": "Quelle valeur d'indice de diffusion obtient-on avec 40 % « plus élevé », 45 % « identique », 15 % « plus faible » ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "62,5"
+        },
+        {
+          "id": "b",
+          "text": "40"
+        },
+        {
+          "id": "c",
+          "text": "85"
+        },
+        {
+          "id": "d",
+          "text": "55"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Indice = 40 + 45 ÷ 2 = 62,5 ; les réponses identiques comptent pour moitié.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.08-Q3",
+      "type": "mcq",
+      "prompt": "Quelles composantes forment le PMI manufacturier de l'ISM ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Production et prix seulement"
+        },
+        {
+          "id": "b",
+          "text": "Prix payés, commandes, emploi, exportations, importations"
+        },
+        {
+          "id": "c",
+          "text": "Prix et stocks seulement"
+        },
+        {
+          "id": "d",
+          "text": "Nouvelles commandes, production, emploi, livraisons des fournisseurs, stocks"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La moyenne égale de ces cinq indices redonne 54,46 pour septembre 2026 ; les prix payés n'en font pas partie.",
+      "tags": [
+        "methode"
+      ]
+    },
+    {
+      "id": "L3.08-Q4",
+      "type": "mcq",
+      "prompt": "Composantes : 55,3 ; 56,7 ; 52,7 ; 59,0 ; 48,6. Quel est le PMI ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "52,0"
+        },
+        {
+          "id": "b",
+          "text": "54,46, soit 54,5"
+        },
+        {
+          "id": "c",
+          "text": "57,0"
+        },
+        {
+          "id": "d",
+          "text": "50,0"
+        }
+      ],
+      "correct": "b",
+      "explanation": "272,3 ÷ 5 = 54,46, ce qui correspond à la valeur publiée de 54,5.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.08-Q5",
+      "type": "mcq",
+      "prompt": "Pourquoi les livraisons des fournisseurs sont-elles inversées ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce qu'elles sont hors enquête"
+        },
+        {
+          "id": "b",
+          "text": "Parce que c'est une erreur de calcul"
+        },
+        {
+          "id": "c",
+          "text": "Parce qu'elles baissent toujours"
+        },
+        {
+          "id": "d",
+          "text": "Des délais plus longs traduisent en général une demande plus forte"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Un indice supérieur à 50 signifie des livraisons plus lentes, lu comme un signe de demande forte ; sans inversion, le PMI serait de 50,86.",
+      "tags": [
+        "methode"
+      ]
+    },
+    {
+      "id": "L3.08-Q6",
+      "type": "mcq",
+      "prompt": "PMI publié à 54,5 pour une attente de 55,0 : quelle est la surprise ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−0,1 point"
+        },
+        {
+          "id": "b",
+          "text": "+0,5 point"
+        },
+        {
+          "id": "c",
+          "text": "−0,5 point"
+        },
+        {
+          "id": "d",
+          "text": "0 point"
+        }
+      ],
+      "correct": "c",
+      "explanation": "54,5 − 55,0 = −0,5 ; la baisse de 0,1 par rapport au mois précédent est une autre mesure.",
+      "tags": [
+        "surprise"
+      ]
+    },
+    {
+      "id": "L3.08-Q7",
+      "type": "mcq",
+      "prompt": "Un indice des prix payés à 77,9 signifie-t-il une inflation de 7,8 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Non : c'est une proportion de répondants constatant une hausse, pas une ampleur"
+        },
+        {
+          "id": "b",
+          "text": "Oui"
+        },
+        {
+          "id": "c",
+          "text": "Oui, mais seulement pour le mois"
+        },
+        {
+          "id": "d",
+          "text": "Oui, en moyenne annuelle"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Les indices de prix des enquêtes sont des indices de diffusion ; ils ne se convertissent pas directement en taux d'inflation.",
+      "tags": [
+        "prudence"
+      ]
+    },
+    {
+      "id": "L3.08-Q8",
+      "type": "mcq",
+      "prompt": "Que faire quand un résumé automatique d'une source secondaire contredit le communiqué de l'organisme ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Retenir la source secondaire"
+        },
+        {
+          "id": "b",
+          "text": "Retenir le communiqué et signaler la contradiction"
+        },
+        {
+          "id": "c",
+          "text": "Faire la moyenne des deux"
+        },
+        {
+          "id": "d",
+          "text": "Ne rien signaler"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le communiqué de l'ISM donne 77,9 (+6,8) pour les prix, contrairement au résumé PNC ; on retient la source de référence et on signale l'écart.",
+      "tags": [
+        "methode"
+      ]
+    }
+  ],
+  "revision": 1
+}

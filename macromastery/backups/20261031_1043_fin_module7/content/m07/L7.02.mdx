@@ -1,0 +1,240 @@
+---
+id: L7.02
+module: 7
+order: 2
+title: "Positionnement extrême et rapport COT : calculer, comparer plusieurs dates, définir un extrême — et en mesurer les limites"
+title_initial: "Positionnement extrême"
+level: "avancé"
+duration_hours: 3.0
+prerequisites: ["L7.01", "L6.04", "L6.05"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L7.02.quiz.json"
+sources: ["S-CFTC-01", "S-CFTC-03", "S-CFTC-06", "S-CFTC-07", "S-CFTC-08", "S-CFTC-09", "S-CFTC-10", "S-CFTC-11", "S-CFTC-12", "S-CFTC-13", "S-SAX-01", "S-SAN-01", "S-WNG-01", "S-KIT-04", "S-KIT-08"]
+---
+
+# L7.02 — Positionnement extrême et rapport COT
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée, avec sa date ; **[Définition]** ; **[Calcul de l'auteur]** ; **[Interprétation]** ; **[Hypothèse]** ; **[SIMULATION]** = données fictives. **Données officielles effectivement consultées** : six rapports de la CFTC (positions aux 8/9, 15/9, 22/9, 29/9, 6/10 et 13/10/2026) lus par résumé automatique. **Données secondaires** : un commentaire de marché et deux études universitaires anciennes. **Exemples fictifs** : une série de 12 semaines, signalée SIMULATION. **Les rapports du 20/10 et du 27/10 n'ont pas pu être lus** (pages inaccessibles depuis cette session). **Aucune lecture de cette leçon ne prédit une direction : une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. décrire précisément les quatre catégories du rapport désagrégé et ce qu'elles ne disent pas ;
+2. distinguer positions longues, courtes, *spreading* et position nette ;
+3. calculer toi-même le **net**, sa **variation hebdomadaire** et sa **part de l'intérêt ouvert** à partir d'un tableau ;
+4. contrôler la **cohérence** entre positions publiées et variations publiées ;
+5. définir un **extrême** (percentile, z-score, indice min-max) et mesurer sa sensibilité à la fenêtre ;
+6. énoncer les **limites** du rapport (retard, couverture, classification, intentions inconnues) et la **preuve empirique** disponible, sans tirer de signal automatique.
+
+## 2. Prérequis
+
+- Lecture d'une ligne du COT, position et flux, chronologie de publication (L7.01) ; régimes et seuils (L6.04) ; probabilités (L6.05).
+
+## 3. Explication intuitive
+
+Un chiffre de positionnement isolé ne dit presque rien. « 111 079 contrats nets acheteurs » devient informatif quand on le compare : à la semaine précédente, à l'intérêt ouvert, à ses propres valeurs passées. Mais plus on veut parler d'« extrême », plus il faut d'histoire : une semaine record sur six semaines n'est pas un record. Et même un vrai record n'annonce pas, à lui seul, un retournement : il décrit un état du marché, pas son avenir.
+
+## 4. Développement technique
+
+### 4.1 Les quatre catégories : ce qu'elles sont et ce qu'elles ne disent pas
+**[Fait]** (S-CFTC-06, résumé automatique) : *Producer/Merchant/Processor/User* (produit, traite ou manipule l'or physique et couvre ses risques) ; *Swap Dealer* (traite surtout des swaps et couvre par des contrats à terme) ; *Managed Money* (CTA, CPO ou fonds identifié par la CFTC) ; *Other Reportables* (tous les autres déclarants). Classement selon l'**activité principale** d'un opérateur, non d'après chaque transaction ; classifications modifiables ; historique antérieur à 2006 recalculé (« backcast »).
+| Catégorie | Ce que la catégorie permet de dire | Ce qu'elle ne permet pas de dire |
+|---|---|---|
+| Producer/Merchant | positions de couverture déclarées d'acteurs de l'or physique | qu'ils couvrent un stock précis (l'intention n'est pas connue) |
+| Swap Dealer | exposition en contrats à terme d'intermédiaires | un pari directionnel : leurs contrats à terme peuvent couvrir des swaps de clients |
+| Managed Money | exposition de fonds gérés | qu'ils soient « les spéculateurs » ni qu'ils agissent de concert |
+| Other Reportables | le reste des déclarants | quoi que ce soit sur leurs motifs |
+**[Interprétation]** Même au sein d'une catégorie, rien n'indique pourquoi un opérateur détient une position : l'**intention individuelle** est inconnue ; la CFTC ne la déduit pas (S-CFTC-01).
+
+### 4.2 Le tableau COT : or COMEX, six dates (contrat de 100 onces)
+**[Fait]** (S-CFTC-08 à S-CFTC-13, rapports « Disaggregated Futures and Options Combined », résumés automatiques ; positions au **mardi** de chaque date ; publication habituelle le vendredi suivant à 15 h 30 heure de l'Est, S-CFTC-03 ; dates de publication exactes non lues, hormis « mise à jour le 16/10/2026 » pour le rapport du 13/10). Unités : contrats.
+
+| Date (mardi) | Intérêt ouvert | PMPU long | PMPU court | SD long | SD court | SD spread | MM long | MM court | MM spread | OR long | OR court | OR spread |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 08/09/2026 | 582 664 | 23 304 | 51 579 | 14 481 | 250 577 | 56 616 | 148 982 | 9 434 | 50 953 | 103 094 | 18 714 | 125 822 |
+| 15/09/2026 | 577 454 | 22 300 | 48 550 | 14 225 | 242 239 | 61 137 | 145 837 | 8 777 | 51 931 | 101 870 | 18 214 | 125 690 |
+| 22/09/2026 | 571 291 | 23 281 | 48 153 | 14 062 | 245 417 | 59 197 | 139 307 | 7 973 | 50 737 | 106 795 | 20 382 | 119 377 |
+| 29/09/2026 | 541 982 | 22 066 | 42 606 | 14 805 | 238 475 | 57 314 | 134 658 | 10 240 | 50 677 | 104 910 | 19 148 | 102 782 |
+| 06/10/2026 | 527 641 | 22 786 | 41 770 | 14 208 | 232 824 | 53 930 | 130 247 | 15 427 | 44 742 | 104 440 | 17 681 | 101 168 |
+| 13/10/2026 | 526 276 | 22 180 | 39 861 | 12 706 | 231 189 | 54 517 | 128 542 | 17 463 | 45 810 | 106 765 | 18 110 | 99 475 |
+
+*PMPU = Producer/Merchant/Processor/User ; SD = Swap Dealers ; MM = Managed Money ; OR = Other Reportables.* Le rapport ne donne pas de colonne *spreading* pour PMPU. Le nombre d'opérateurs de Managed Money (longs / courts) passe de 103 / 13 (08/09) à 84 / 23 (13/10) (S-CFTC-13, S-CFTC-08).
+
+### 4.3 Calculs : net, variation, part de l'intérêt ouvert
+**[Définition]** Net = longs − courts (hors *spreading*). Part de l'intérêt ouvert = position ÷ intérêt ouvert. Variation hebdomadaire = net(t) − net(t−1).
+**[Calcul de l'auteur] Managed Money.**
+| Date | Net | Variation hebdomadaire | Net ÷ intérêt ouvert | Longs ÷ intérêt ouvert |
+|---|---|---|---|---|
+| 08/09 | 139 548 | — | 23,95 % | 25,57 % |
+| 15/09 | 137 060 | −2 488 | 23,74 % | 25,26 % |
+| 22/09 | 131 334 | −5 726 | 22,99 % | 24,38 % |
+| 29/09 | 124 418 | −6 916 | 22,96 % | 24,85 % |
+| 06/10 | 114 820 | −9 598 | 21,76 % | 24,68 % |
+| 13/10 | 111 079 | −3 741 | 21,11 % | 24,42 % |
+**Lecture.** Du 8/9 au 13/10 le net long de Managed Money baisse de 28 469 contrats (−20,4 %), cinq semaines de suite. L'intérêt ouvert total baisse de 582 664 à 526 276 (−56 388 ; −9,7 %) : une partie de la baisse du net est donc un **rétrécissement général du marché**, d'où l'intérêt d'exprimer aussi le net en part de l'intérêt ouvert (23,95 % → 21,11 %, soit −2,84 points).
+**Décomposition par jambes.** Longs : 148 982 → 128 542 (−20 440) ; courts : 9 434 → 17 463 (+8 029). Net : −28 469, dont **71,8 %** par réduction des longs et **28,2 %** par augmentation des courts. **Autre côté du marché** (net du 8/9 au 13/10) : swap dealers −236 096 → −218 483 (+17 613) ; PMPU −28 275 → −17 681 (+10 594) ; Other Reportables +84 380 → +88 655 (+4 275). **[Interprétation]** Le recul du net long des fonds correspond à un recul du net court des opérateurs de swaps et des producteurs ; ce « miroir » est comptable, il n'établit pas qui a pris l'initiative.
+
+### 4.4 Contrôler la cohérence : positions publiées contre variations publiées
+**[Fait]** Chaque rapport publie les variations depuis la semaine précédente. **[Calcul de l'auteur]** Pour Managed Money : 13/10 longs 130 247 − 1 705 = **128 542** (publié 128 542, écart 0) ; 6/10 courts 10 240 + 5 187 = **15 427** (écart 0) ; mais 6/10 longs 134 658 − 4 412 = **130 246** contre 130 247 publié (**écart de 1 contrat**) et 22/9 courts 8 777 − 803 = **7 974** contre 7 973 (**écart de 1 contrat**). Sur les **15 comparaisons possibles** pour Managed Money (longs, courts, *spreading* × cinq semaines), **13 concordent exactement** et 2 diffèrent de 1 contrat.
+**[Interprétation]** Écarts de 1 contrat : erreurs de lecture du résumé automatique, arrondi ou révision ; **non tranchés** et sans effet sur les conclusions. L'habitude à prendre est de **vérifier** plutôt que de copier : un test indépendant a plus de valeur qu'une identité (la somme nulle de L7.01 est une identité par construction). Un autre recoupement : l'article de Saxo (S-SAX-01) donne un net long « d'environ 115 000 » au 6/10 (« en baisse de 8 % », plus bas depuis trois mois) ; le calcul donne **114 820**, et une baisse de 7,7 % par rapport à 124 418 (29/9).
+
+### 4.5 Définir un « extrême »
+**[Définition de cours]** Trois mesures sur une **fenêtre** de N semaines fixée *avant* l'analyse :
+- **percentile** : part des valeurs de la fenêtre inférieures ou égales à la valeur courante ;
+- **z-score** : (x − moyenne) ÷ écart-type de la fenêtre ;
+- **indice min-max** : (x − minimum) ÷ (maximum − minimum) × 100.
+On peut les appliquer au **net**, au **net ÷ intérêt ouvert** (pour neutraliser les variations de taille du marché), ou aux variations. **Seuils de cours (conventions)** : extrême haut ≥ 90 % ; extrême bas ≤ 10 %. Une valeur « extrême » est définie *par rapport à une fenêtre*, pas dans l'absolu.
+**[Calcul de l'auteur] Application aux six dates.** Moyenne du net 126 376,5 ; écart-type 11 693 ; z-scores : +1,13 ; +0,91 ; +0,42 ; −0,17 ; −0,99 ; **−1,31** (13/10). Indice min-max : 100 ; 91,3 ; 71,1 ; 46,9 ; 13,1 ; **0** (13/10).
+**[Interprétation]** Le 13/10 est « l'extrême bas » de **cette** fenêtre de six semaines, mécaniquement : la série descend chaque semaine. Cela ne dit pas qu'il s'agit d'un extrême historique ; Saxo parle d'un « plus bas depuis trois mois » au 6/10 (S-SAX-01), ce qui exigerait une fenêtre de douze semaines au moins, que nous n'avons pas lue.
+
+**[SIMULATION] Effet de la fenêtre.** Net fictif en milliers de contrats sur 12 semaines : 88, 92, 95, 99, 104, 110, 118, 121, 115, 108, 103, 97 ; valeur courante : 97.
+| Fenêtre | Percentile de 97 | Indice min-max |
+|---|---|---|
+| 12 semaines | 33,3 % | 27,3 |
+| 8 dernières semaines | 12,5 % | 0 |
+| 4 dernières semaines | 25,0 % | 0 |
+Z-score sur 12 semaines : (97 − 104,17) ÷ 10,50 = **−0,68**. **[Interprétation]** La même valeur est « extrême basse » sur 8 semaines et « ordinaire » sur 12 : le choix de la fenêtre peut faire apparaître ou disparaître l'extrême. Il doit être **fixé avant** de regarder les données et justifié.
+
+### 4.6 Ce que l'on sait de l'utilité d'un extrême
+**[Fait]** (S-SAN-01, Sanders et Boris, 2000, communication de conférence, résumé automatique) : positions hebdomadaires de 1992 à 1999 sur quatre marchés (bétail, maïs, gaz naturel, pétrole brut) — **pas l'or** ; elles ne **prédisent généralement pas** les rendements ; ce sont les **rendements qui précèdent** les variations de positions (hausses suivies d'achats nets des non-commerciaux) ; les auteurs notent que le COT est publié le vendredi pour des positions du mardi, ce qui rend l'usage prédictif encore moins probable. (S-WNG-01, Wang, 2003, *Journal of Futures Markets*, résumé automatique) : 15 marchés de 1992 à 2000, données **mensuelles** ; les variations de positions des spéculateurs sont **positivement liées** aux rendements anormaux suivants ; l'auteur **ne trouve pas de preuve de compétence** et attribue l'écart à la « pression de couverture » ; pouvoir explicatif faible (R² ajusté le plus souvent < 0,2) ; échantillon d'environ sept ans.
+**[Interprétation]** Les deux études ne se contredisent pas nettement, mais **ne conduisent pas à la même règle** : l'une ne trouve pas de pouvoir prédictif, l'autre trouve un lien positif à horizon mensuel (suivre les spéculateurs, non les contrarier). Aucune ne concerne l'or ni la période 2026, toutes deux utilisent des classifications anciennes (commerciaux / non-commerciaux). **Conclusion de cours** : la littérature lue ne justifie aucun signal automatique. (S-SAX-01, secondaire, marketing) : les extrêmes de positionnement « peuvent signaler des retournements mais rarement seuls » ; leur calendrier dépend d'un déclencheur.
+
+### 4.7 Limites du rapport
+1. **Retard** : observation le mardi, publication le vendredi (S-CFTC-03) ; plan de publication bihebdomadaire annoncé le 27/10 (S-CFTC-02, lu en L7.01) non encore en vigueur selon les sources lues.
+2. **Couverture** : un contrat (COMEX, 100 onces) ; d'autres contrats sur l'or existent (le titre d'un rapport sur un contrat de 1 once de Coinbase Derivatives figure dans les archives, page non lue) ; ni ETF, ni banques centrales, ni marché de gré à gré de Londres.
+3. **Classification** : fondée sur l'activité principale, modifiable, historique recalculé avant 2006 (S-CFTC-06) ; un même groupe peut avoir plusieurs entités classées différemment (S-CFTC-07).
+4. **Intentions inconnues** : le rapport ne dit ni pourquoi, ni à quel prix, ni avec quel horizon.
+5. **Rapportables et non rapportables** : les non rapportables sont déduits ; au 13/10 ils valent 56 281 longs et 19 851 courts (10,7 % et 3,8 % de l'intérêt ouvert).
+6. **Prix non alignés** : aucun prix de l'or aux dates des positions n'a été lu.
+
+### 4.8 La tentation à éviter : relier ces positions à un prix
+**[Fait]** Quelques prix de séance isolés : or spot **4 310,10 $** le 16/09 (S-KIT-08), **4 137,94 $** le 21/10 (S-KIT-04). **[Calcul de l'auteur]** 4 137,94 ÷ 4 310,10 − 1 = **−3,99 %**, pendant que le net de Managed Money baissait de 28 469 contrats. **Piège** : dates non alignées avec les mardis, prix de séances différentes, deux points seulement : **aucune relation n'est établie** ; on ne peut même pas dire si les ventes de fonds ont précédé, accompagné ou suivi la baisse de prix (les études lues suggèrent plutôt que les positions réagissent aux prix). Cette comparaison est écrite ici pour être **refusée**.
+
+## 5. Définitions essentielles
+
+- **Net** : longs − courts d'une catégorie, hors *spreading*.
+- **Part de l'intérêt ouvert** : position ÷ intérêt ouvert.
+- **Extrême** : valeur située dans le décile supérieur ou inférieur d'une **fenêtre prédéfinie**.
+- **Percentile, z-score, indice min-max** : trois mesures de position relative dans une fenêtre.
+- **Fenêtre** : nombre de semaines retenu pour définir l'extrême.
+- **Identité par construction** : égalité vraie par définition (par exemple, somme nulle des nets avec non rapportables déduits), à distinguer d'un test indépendant.
+
+## 6. Exemples chiffrés
+
+**6.1** Net MM 13/10 : 128 542 − 17 463 = 111 079.
+**6.2** Variation 6/10 → 13/10 : 111 079 − 114 820 = −3 741.
+**6.3** Net ÷ intérêt ouvert : 111 079 ÷ 526 276 = 21,11 %.
+**6.4** Indice min-max du 13/10 sur six semaines : (111 079 − 111 079) ÷ (139 548 − 111 079) = 0.
+**6.6 (SIMULATION)** Percentile de 97 sur douze semaines : 4 valeurs ≤ 97 sur 12 → 33,3 %.
+
+### 6.5 Cas historique documenté — le recul du net long de Managed Money, 8 septembre – 13 octobre 2026
+**[Fait]** Net long : 139 548 → 111 079 (−28 469) ; intérêt ouvert : 582 664 → 526 276 ; opérateurs longs : 103 → 84 ; courts : 13 → 23 (S-CFTC-13, S-CFTC-08). Saxo (12/10) : plus bas depuis trois mois au 6/10 (S-SAX-01). **[Interprétation]** Les fonds ont réduit leurs longs et, plus modestement, augmenté leurs courts ; le marché s'est aussi rétréci. **Ce qu'on ne peut pas conclure** : que le net long soit « extrême » au sens historique ; que cette baisse annonce une hausse ou une baisse du prix ; que les rapports des 20/10 et 27/10 poursuivent la tendance (non lus). **Limites** : six dates seulement, résumés automatiques, deux écarts de 1 contrat non élucidés, aucun prix aligné.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Fiche de positionnement** (L7.01) enrichie d'une **fenêtre prédéfinie**, du net en part de l'intérêt ouvert et d'une mention « extrême : oui / non / non évaluable (fenêtre insuffisante) ».
+- **XAU/USD** : le positionnement alimente un diagnostic, jamais un ordre ; il se combine avec les canaux macroéconomiques (module 5) et les scénarios (module 6).
+- **Dollar et devises** : même démarche avec le rapport sur les contrats financiers (autres catégories) ; Saxo cite un net vendeur de l'euro proche de 100 000 contrats, non vérifié dans un rapport officiel.
+- **Risque** : un positionnement chargé peut amplifier la volatilité d'un dénouement (hypothèse, non testée ici).
+
+## 8. Erreurs courantes
+
+1. Appeler « extrême » une valeur sans fenêtre prédéfinie.
+2. Utiliser seulement le net, sans l'exprimer en part de l'intérêt ouvert.
+3. Ne pas décomposer la variation du net en jambes longue et courte.
+4. Copier des variations publiées sans les vérifier.
+5. Déduire un signal haussier ou baissier d'un net élevé ou faible.
+6. Rapprocher un positionnement de prix non alignés dans le temps.
+
+## 9. Limites de l'interprétation
+
+- Six dates seulement ; aucun historique pour un percentile significatif.
+- Rapports lus par résumé automatique ; deux écarts de 1 contrat non résolus.
+- Études universitaires anciennes, hors or ; une source commerciale.
+- Rapports du 20/10 et du 27/10 non lus.
+- Aucun prix aligné.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Calculs sur le tableau (obligatoire).** À partir du § 4.2, calcule pour Managed Money les six positions nettes, les cinq variations hebdomadaires et le net en part de l'intérêt ouvert aux 8/9 et 13/10.
+
+<details>
+<summary>Correction 1</summary>
+
+Nets : 139 548 ; 137 060 ; 131 334 ; 124 418 ; 114 820 ; 111 079. Variations : −2 488 ; −5 726 ; −6 916 ; −9 598 ; −3 741. Net ÷ intérêt ouvert : 8/9 = 139 548 ÷ 582 664 = **23,95 %** ; 13/10 = 111 079 ÷ 526 276 = **21,11 %** (−2,84 points).
+</details>
+
+**Exercice 2 — Autre côté du marché.** Pour Swap Dealers, PMPU et Other Reportables, calcule le net au 8/9 et au 13/10 et la variation. Que peut-on dire de la contrepartie de la baisse du net de Managed Money ?
+
+<details>
+<summary>Correction 2</summary>
+
+SD : −236 096 → −218 483 (**+17 613**) ; PMPU : −28 275 → −17 681 (**+10 594**) ; OR : +84 380 → +88 655 (**+4 275**). Le net de Managed Money recule de 28 469 ; en face, les opérateurs de swaps et les producteurs réduisent leur net vendeur. C'est une lecture **comptable** ; elle n'indique pas qui a pris l'initiative ni pourquoi.
+</details>
+
+**Exercice 3 — Décomposition.** Du 8/9 au 13/10, longs 148 982 → 128 542 et courts 9 434 → 17 463. Quelle part de la baisse du net vient des longs ?
+
+<details>
+<summary>Correction 3</summary>
+
+Longs : −20 440 ; courts : +8 029 (pèse négativement sur le net) ; baisse du net : 28 469. Part due aux longs : 20 440 ÷ 28 469 = **71,8 %** ; aux courts : **28,2 %**.
+</details>
+
+**Exercice 4 — Cohérence.** Rapport du 29/9 : MM longs 134 658, variation publiée du 29/9 au 6/10 : −4 412 ; positions publiées du 6/10 : 130 247. Calcule l'écart. Que fais-tu de cet écart ?
+
+<details>
+<summary>Correction 4</summary>
+
+134 658 − 4 412 = 130 246 ; publié 130 247 : **écart de 1 contrat**. On le signale (lecture automatique, arrondi ou révision possible), on ne le « corrige » pas arbitrairement et on vérifie qu'il ne change pas la conclusion.
+</details>
+
+**Exercice 5 — Extrême et fenêtre.** Net fictif (milliers) : 88, 92, 95, 99, 104, 110, 118, 121, 115, 108, 103, 97. Calcule le percentile de 97 sur 12 semaines puis sur les 8 dernières. Conclus sur le caractère « extrême ».
+
+<details>
+<summary>Correction 5</summary>
+
+12 semaines : valeurs ≤ 97 : 88, 92, 95, 97 → 4 sur 12 = **33,3 %**. 8 dernières (104, 110, 118, 121, 115, 108, 103, 97) : seule 97 → 1 sur 8 = **12,5 %**. La même valeur est quasi extrême ou non selon la fenêtre : la fenêtre doit être fixée et justifiée avant l'analyse.
+</details>
+
+**Exercice 6 — Phrases autorisées.** Dis lesquelles sont autorisées : (i) « le net long de Managed Money a baissé cinq semaines de suite, de 139 548 à 111 079 » ; (ii) « les fonds sont à un extrême, l'or va donc monter » ; (iii) « le net est le plus bas des six dernières semaines » ; (iv) « les ventes de fonds ont fait baisser l'or de 4 % ».
+
+<details>
+<summary>Correction 6</summary>
+
+(i) **autorisée** (fait calculé) ; (iii) **autorisée** (avec la fenêtre précisée) ; (ii) **interdite** : signal automatique et fenêtre trop courte ; (iv) **interdite** : causalité non démontrée, prix non alignés, études lues suggérant plutôt que les positions réagissent aux prix.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L7.02.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Quatre catégories du rapport désagrégé : elles décrivent des expositions, pas des intentions.
+- Net = longs − courts ; à exprimer aussi en part de l'intérêt ouvert et à décomposer par jambes.
+- Net long de Managed Money : 139 548 (8/9) → 111 079 (13/10), −20,4 %, 71,8 % par réduction des longs ; intérêt ouvert −9,7 %.
+- Un extrême est relatif à une fenêtre fixée d'avance ; six semaines ne suffisent pas.
+- Littérature lue : pas de signal automatique ; positions et prix évoluent ensemble, la causalité reste incertaine.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer net, variation et part de l'intérêt ouvert (Exercice 1).
+- [ ] Interpréter les contreparties (Exercice 2).
+- [ ] Décomposer une variation de net (Exercice 3).
+- [ ] Contrôler la cohérence des chiffres publiés (Exercice 4).
+- [ ] Calculer un percentile et en discuter la fenêtre (Exercice 5).
+- [ ] Distinguer phrases autorisées et interdites (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **31 octobre 2026** :
+
+- **S-CFTC-08** à **S-CFTC-13** — CFTC, rapports « Disaggregated Futures and Options Combined », or COMEX, positions aux 13/10, 6/10, 29/9, 22/9, 15/9 et 8/9/2026 (primaires, résumés automatiques) : https://www.cftc.gov/files/dea/cotarchives/2026/options/other_sof101326.htm (et suffixes 100626, 092926, 092226, 091526, 090826).
+- **S-SAN-01** — Sanders, D. et Boris, K. (2000), « Does the CFTC Commitments of Traders Report Contain Useful Information? », communication de conférence NCR-134 : https://ageconsearch.umn.edu/record/18929/files/cp00sa01.pdf
+- **S-WNG-01** — Wang, C. (2003), « The Behavior and Performance of Major Types of Futures Traders », *Journal of Futures Markets*, 23(1) (version de travail MPRA) : https://mpra.ub.uni-muenchen.de/36426/1/MPRA_paper_36426.pdf
+- **S-CFTC-01**, **S-CFTC-03**, **S-CFTC-06**, **S-CFTC-07**, **S-SAX-01**, **S-KIT-04**, **S-KIT-08** — déjà lues.
+
+**Définitions de cours non rattachées à une source lue :** percentile, z-score, indice min-max, seuils 10 % / 90 %, décomposition par jambes. **Points non vérifiés :** rapports des 20/10 et 27/10, dates exactes de publication des rapports lus, deux écarts de 1 contrat, historique de plus de six semaines, prix aux dates des positions.

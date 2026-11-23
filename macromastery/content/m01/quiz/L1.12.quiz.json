@@ -1,0 +1,233 @@
+{
+  "lessonId": "L1.12",
+  "title": "Quiz — Tableau de bord macro d'un pays",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Synthèse du module 1 ; données des leçons L1.01–L1.11.",
+  "questions": [
+    {
+      "id": "L1.12-Q1",
+      "type": "mcq",
+      "prompt": "Quels champs doit contenir la fiche d'un indicateur ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La seule valeur"
+        },
+        {
+          "id": "b",
+          "text": "Uniquement la couleur du feu"
+        },
+        {
+          "id": "c",
+          "text": "Valeur, période, date de publication, fréquence, source, nature de la donnée et limite"
+        },
+        {
+          "id": "d",
+          "text": "Seulement le nom de l'indicateur"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Sans période, source et limite, un chiffre est une opinion : la fiche rend l'indicateur vérifiable.",
+      "tags": [
+        "methode"
+      ]
+    },
+    {
+      "id": "L1.12-Q2",
+      "type": "mcq",
+      "prompt": "Pourquoi ne faut-il pas comparer sans précaution un PIB annualisé et une variation mensuelle ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que les périodes et les conventions de calcul diffèrent (le PIB est publié en taux annualisé)"
+        },
+        {
+          "id": "b",
+          "text": "Parce qu'ils sont identiques"
+        },
+        {
+          "id": "c",
+          "text": "Parce que le PIB est toujours faux"
+        },
+        {
+          "id": "d",
+          "text": "Parce que le mensuel n'existe pas"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Un taux trimestriel annualisé n'est pas équivalent à une variation mensuelle ni à un taux sur 12 mois.",
+      "tags": [
+        "comparabilite"
+      ]
+    },
+    {
+      "id": "L1.12-Q3",
+      "type": "mcq",
+      "prompt": "Salaire horaire moyen +3,0 % sur 12 mois et CPI +3,7 % : salaire réel approximatif ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+0,7 %"
+        },
+        {
+          "id": "b",
+          "text": "+6,7 %"
+        },
+        {
+          "id": "c",
+          "text": "−3,7 %"
+        },
+        {
+          "id": "d",
+          "text": "−0,7 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "1,030 ÷ 1,037 − 1 = −0,675 % ; avec le PCE à 3,4 %, −0,4 %.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L1.12-Q4",
+      "type": "mcq",
+      "prompt": "PIB nominal +8,5 % et réel +2,2 % (annualisés) : déflateur implicite ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ 10,7 %"
+        },
+        {
+          "id": "b",
+          "text": "Environ 6,2 %"
+        },
+        {
+          "id": "c",
+          "text": "Environ 2,2 %"
+        },
+        {
+          "id": "d",
+          "text": "Environ 0 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "1,085 ÷ 1,022 = 1,0616. Ce calcul de l'auteur diffère de l'indice des prix des achats intérieurs bruts (+5,6 %) car les périmètres sont différents.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L1.12-Q5",
+      "type": "mcq",
+      "prompt": "Pays fictif : exportations 220, importations 250, revenus nets de l'étranger −10, PIB 1 000. Balance courante en % du PIB ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−25 %"
+        },
+        {
+          "id": "b",
+          "text": "−3,0 %"
+        },
+        {
+          "id": "c",
+          "text": "+4,0 %"
+        },
+        {
+          "id": "d",
+          "text": "−4,0 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "(220 − 250) − 10 = −40, soit −4,0 % de 1 000.",
+      "tags": [
+        "simulation"
+      ]
+    },
+    {
+      "id": "L1.12-Q6",
+      "type": "mcq",
+      "prompt": "Selon le NBER (FAQ, résumé), comment une récession est-elle datée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Dès que le PIB baisse deux trimestres consécutifs"
+        },
+        {
+          "id": "b",
+          "text": "Par le taux de chômage seul"
+        },
+        {
+          "id": "c",
+          "text": "Par l'examen d'un ensemble d'indicateurs selon profondeur, diffusion et durée"
+        },
+        {
+          "id": "d",
+          "text": "Par le cours de la monnaie"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Deux trimestres de baisse du PIB ne sont pas la définition ; 2001 est citée comme exemple sans deux trimestres consécutifs de baisse.",
+      "tags": [
+        "nber"
+      ]
+    },
+    {
+      "id": "L1.12-Q7",
+      "type": "mcq",
+      "prompt": "Pourquoi le bloc « politique monétaire » est-il absent du tableau de la leçon ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il est traité au module 2 et n'a pas été collecté ici ; il est pourtant déterminant pour le change"
+        },
+        {
+          "id": "b",
+          "text": "Il est inutile"
+        },
+        {
+          "id": "c",
+          "text": "Il est confidentiel"
+        },
+        {
+          "id": "d",
+          "text": "Il n'existe pas"
+        }
+      ],
+      "correct": "a",
+      "explanation": "L'absence est signalée comme une limite : un diagnostic de change sans taux directeur est incomplet.",
+      "tags": [
+        "limites"
+      ]
+    },
+    {
+      "id": "L1.12-Q8",
+      "type": "mcq",
+      "prompt": "« Le tableau est vert à 70 % : le dollar va monter. » Quelle objection est valide ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aucune"
+        },
+        {
+          "id": "b",
+          "text": "Le Forex est un prix relatif, les règles de coloration et pondérations ne sont pas justifiées et aucune source lue ne démontre ce pouvoir prédictif"
+        },
+        {
+          "id": "c",
+          "text": "Le vert est toujours baissier"
+        },
+        {
+          "id": "d",
+          "text": "Le dollar ne dépend de rien"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Un score arbitraire n'est pas un modèle : il faut deux tableaux, des règles écrites et une validation.",
+      "tags": [
+        "critique"
+      ]
+    }
+  ],
+  "revision": 1
+}

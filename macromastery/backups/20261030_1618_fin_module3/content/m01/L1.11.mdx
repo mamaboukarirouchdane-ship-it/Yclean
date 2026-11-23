@@ -1,0 +1,232 @@
+---
+id: L1.11
+module: 1
+order: 11
+title: "Politique budgétaire, déficit et dette : ce que l'État dépense, encaisse et emprunte"
+title_initial: "Politique budgétaire, déficit, dette"
+level: "intermédiaire"
+duration_hours: 2.5
+prerequisites: ["L1.01", "L1.03", "L0.07"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L1.11.quiz.json"
+sources: ["S-CBO-03", "S-CRFB-01", "S-CNBC-01"]
+---
+
+# L1.11 — Politique budgétaire, déficit et dette : ce que l'État dépense, encaisse et emprunte
+
+> **Convention de lecture.** **[Fait]** = chiffre ou énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. distinguer **recettes**, **dépenses**, **déficit**, **déficit primaire**, **charge d'intérêts** et **dette** ;
+2. utiliser la dynamique simplifiée de la dette : dette(t+1) = dette(t) × (1 + r) ÷ (1 + g) − solde primaire ;
+3. lire un bilan budgétaire annuel (niveaux, variations, arrondis) ;
+4. expliquer par quels canaux le budget peut affecter taux longs, monnaie et or ;
+5. décrire le cas britannique de **septembre 2022** et ses limites.
+
+## 2. Prérequis
+
+- Le PIB et le rôle de l'État (L1.01) ; les taux et l'inflation (L1.03, L0.07).
+- Les pourcentages et les taux de croissance.
+
+## 3. Explication intuitive
+
+Un État est comme un ménage dont les dépenses dépassent le revenu : il comble l'écart en **empruntant**. La différence avec le ménage est que l'État peut lever l'impôt, que sa dette est détenue en grande partie dans sa propre monnaie, et que son « revenu » croît avec l'économie.
+
+Ce qui compte pour les marchés n'est pas seulement le niveau de la dette, mais trois questions : (1) la dette croît-elle plus vite que l'économie ? (2) quel est le **taux** auquel l'État emprunte ? (3) les investisseurs gardent-ils confiance dans la trajectoire ? Quand la confiance se dérobe, le **taux exigé** monte, et avec lui la charge d'intérêts.
+
+## 4. Développement technique
+
+### 4.1 Les notions de base
+
+**[Définition]**
+- **Déficit** = dépenses − recettes sur une période (ici l'année fiscale, qui pour les États-Unis se termine le 30 septembre).
+- **Déficit primaire** = déficit − charge nette d'intérêts. Il mesure l'écart avant le service de la dette passée.
+- **Dette** : **stock** accumulé des déficits passés ; à distinguer du déficit, qui est un **flux**.
+- **Dette détenue par le public** : dette hors titres détenus par des organismes publics. (Définition de cours ; non lue dans les sources.)
+- **Politique budgétaire** : choix de dépenses et d'impôts, qui peut soutenir (déficit plus large) ou freiner (resserrement) la demande.
+
+### 4.2 Le bilan de l'exercice 2026 (États-Unis)
+
+**[Fait]** (S-CBO-03, *Monthly Budget Review*, CBO, 8 octobre 2026, estimation préliminaire) :
+
+| Poste | Exercice 2026 | Exercice 2025 | Variation |
+|---|---|---|---|
+| Recettes | 5 403 Md$ | 5 235 Md$ | +169 Md$ (+3 %) |
+| Dépenses | 7 396 Md$ | 7 010 Md$ | +386 Md$ (+6 %) |
+| **Déficit** | **1 993 Md$** | 1 775 Md$ | +218 Md$ (+12 %) |
+| Charge nette d'intérêts | 1 143 Md$ | 1 028 Md$ | +115 Md$ (+11 %) |
+| Droits de douane | 172 Md$ | 195 Md$ | −22 Md$ (−11 %) |
+
+**Moteurs cités par le CBO [Fait]** : hausse de la charge d'intérêts (dette plus élevée et taux longs plus élevés) ; Sécurité sociale (+86 Md$), Medicare (+77), Medicaid (+55), défense (+48), Éducation (+41) ; impôts sur le revenu des personnes et cotisations +255 Md$ (+6 %) ; impôt sur les sociétés −70 Md$ (−16 %), en partie à cause de déductions d'investissement plus larges prévues par la loi de réconciliation de 2025. Le CBO estime à environ **130 Md$** les remboursements liés aux droits de douane IEEPA.
+
+**[Fait, source secondaire]** (S-CRFB-01, communiqué du CRFB, résumé) : le Trésor confirme un déficit d'environ **2 000 Md$** pour l'exercice 2026, dont **27 Md$** en septembre ; la dette brute atteint **40 000 Md$** selon le communiqué. Le *Monthly Treasury Statement* de septembre n'a pas été lu directement.
+
+**[Calcul de l'auteur]** 5 403 − 7 396 = **−1 993** ✓ ; 7 396 − 7 010 = 386 ✓ ; 386 − 169 = 217 (contre 218 publié : arrondi) ; déficit primaire = 1 993 − 1 143 = **850 Md$** ; charge d'intérêts = 1 143 ÷ 7 396 = **15,5 %** des dépenses et 1 143 ÷ 5 403 = **21,2 %** des recettes ; déficit = 1 993 ÷ 7 396 = **26,9 %** des dépenses.
+
+**Prudence sur les droits de douane [Interprétation]** : si le chiffre de 172 est net des remboursements (le résumé ne le dit pas explicitement), les encaissements bruts seraient d'environ 302 Md$ ; ce calcul est **fragile** et ne doit pas être cité comme un fait.
+
+### 4.3 La dynamique simplifiée de la dette
+
+**[Définition]** Soit d la dette en part du PIB, r le taux d'intérêt nominal moyen sur la dette, g la croissance nominale du PIB, p le solde primaire en part du PIB (excédent positif) :
+
+> d(t+1) = d(t) × (1 + r) ÷ (1 + g) − p.
+
+- Si **r > g**, la dette tend à croître d'elle-même ; il faut un **excédent primaire** pour la stabiliser.
+- Si **r < g**, la dette peut se stabiliser avec un déficit primaire modéré.
+- Le solde primaire stabilisant est p* = d × (r − g) ÷ (1 + g).
+
+**Limites** : r est un taux **moyen** sur un stock de titres de maturités différentes ; il bouge lentement ; g nominal inclut l'inflation ; la formule ignore les ajustements de stock-flux.
+
+### 4.4 Les canaux de transmission
+
+**[Interprétation]**
+- **Taux longs** : plus d'offre de titres et plus de risque perçu peuvent faire monter les taux longs (prime de terme, L0.07).
+- **Monnaie** : l'effet est ambigu. Des taux plus hauts peuvent soutenir la monnaie ; une perte de confiance peut la faire baisser.
+- **Banque centrale** : elle peut acheter des titres, mais cela touche l'inflation et son indépendance (module 2).
+- **Or** : une hausse perçue du risque budgétaire peut soutenir la demande d'or comme actif sans émetteur ; ce lien est une **hypothèse** à tester, non établie par une source lue.
+
+### 4.5 Politique budgétaire et cycle
+
+Un déficit élevé en phase de ralentissement est dit **contracyclique** (il amortit) ; élevé en pleine expansion, il est **procyclique** (il ajoute de la demande). L'impulsion budgétaire se mesure par la **variation** du solde corrigé du cycle, non par le niveau du déficit. (Définition de cours ; la mesure exacte n'a pas été lue.)
+
+## 5. Définitions essentielles
+
+- **Solde primaire** : recettes − dépenses hors charge d'intérêts.
+- **Charge d'intérêts** : paiements d'intérêts sur la dette.
+- **Dette/PIB** : stock de dette rapporté au PIB annuel.
+- **r − g** : écart entre coût de la dette et croissance nominale.
+- **Prime de terme** : rendement supplémentaire demandé pour détenir un titre long plutôt que de rouler des titres courts.
+- **Dominance budgétaire** : situation où la politique monétaire est contrainte par le financement de l'État.
+
+## 6. Exemples chiffrés
+
+**6.1 Lecture d'un bilan.** Déficit de 1 993 Md$ sur 7 396 Md$ de dépenses : environ 27 % des dépenses sont financées par l'emprunt.
+
+**6.2 Charge d'intérêts.** 1 143 Md$ ÷ 5 403 Md$ de recettes ≈ 21 % : un cinquième des recettes sert à payer les intérêts.
+
+**6.3 Dynamique (SIMULATION).** d = 100 %, r = 4 %, g = 3 %, p = 0. d(t+1) = 100 × 1,04 ÷ 1,03 = **100,97 %**. Pour stabiliser : p* = 100 × 0,01 ÷ 1,03 = **0,97 %** du PIB d'excédent primaire.
+
+**6.4 r < g (SIMULATION).** d = 100 %, r = 2 %, g = 3 %, p = 0. d(t+1) = 100 × 1,02 ÷ 1,03 = **99,03 %** : la dette baisse sans excédent primaire.
+
+### 6.5 Cas historique documenté — le « mini-budget » britannique (septembre 2022)
+
+**[Fait, source secondaire de presse]** (S-CNBC-01, article de CNBC du 28 septembre 2022, lu par résumé) :
+- le nouveau gouvernement britannique a annoncé un « mini-budget » avec de **larges baisses d'impôt non financées**, selon l'article ;
+- les rendements des gilts à long terme ont fortement monté, et l'article indique qu'ils étaient en voie de connaître **leur plus forte hausse mensuelle depuis au moins 1957** ;
+- la Banque d'Angleterre a annoncé des **achats temporaires de gilts à long terme « à l'échelle nécessaire »**, invoquant un risque pour la **stabilité financière** ; elle a aussi repoussé le début de ses ventes de titres au 31 octobre ;
+- après l'annonce, les rendements 10 et 30 ans ont reculé de plus de **30 points de base**.
+
+**[Interprétation]** Le cas montre qu'un choc budgétaire perçu comme non crédible peut déclencher un mouvement de taux disproportionné, et qu'une banque centrale peut intervenir pour des raisons de **stabilité financière**, même lorsqu'elle resserre par ailleurs sa politique. **Limites** : source secondaire (presse) ; le mouvement de la livre n'est pas mentionné dans le résumé ; la part de la panique des investisseurs, de la structure des fonds de pension et des anticipations de taux n'a pas été lue ; la comparaison avec les États-Unis (monnaie de réserve, marché plus profond) n'est pas démontrée.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Dollar** : un déficit large n'est pas un signal baissier à lui seul. La question est le **prix** auquel les investisseurs financent (taux longs) et leur confiance.
+- **Calendrier** : les bilans mensuels (CBO, Trésor), les enchères de titres, les annonces de budget et les notations souveraines sont à suivre ; leur effet de marché n'est pas démontré ici.
+- **Taux réels et or** : le budget agit surtout par les taux longs et les anticipations d'inflation, qui entrent dans la lecture de l'or (module 5).
+- **Autres monnaies** : le cas britannique montre que, hors monnaie de réserve, la crédibilité budgétaire pèse plus fortement ; à tester pays par pays, non généralisable.
+- **Méthode** : classer un événement budgétaire selon trois critères : ampleur, financement, crédibilité.
+
+## 8. Erreurs courantes
+
+1. Confondre **déficit** (flux) et **dette** (stock).
+2. Comparer des montants en dollars sans les rapporter au PIB ou aux recettes.
+3. Oublier la **charge d'intérêts** : elle amplifie le déficit.
+4. Croire qu'un déficit élevé fait baisser la monnaie mécaniquement.
+5. Ignorer le rôle de **r − g**.
+6. Prendre un chiffre préliminaire pour définitif (le CBO parle d'estimation préliminaire).
+7. Généraliser le cas britannique de 2022 à tous les pays.
+
+## 9. Limites de l'interprétation
+
+- Les chiffres CBO sont préliminaires et lus par résumé ; le *Monthly Treasury Statement* n'a pas été lu directement.
+- Le ratio déficit/PIB et la dette détenue par le public n'ont pas été lus dans les sources.
+- La dynamique de la dette est une simplification (r unique, pas d'ajustement stock-flux).
+- Le cas britannique repose sur un seul article de presse.
+- L'effet des droits de douane et de leurs remboursements n'est qu'esquissé.
+- Aucune prévision de marché n'est déduite.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Cohérence.** Recettes 5 403 ; dépenses 7 396 ; intérêts 1 143 (Md$). (a) Déficit ? (b) Déficit primaire ? (c) Intérêts en % des recettes ? (d) Intérêts en % des dépenses ?
+
+<details>
+<summary>Correction 1</summary>
+
+(a) 7 396 − 5 403 = **1 993 Md$**. (b) 1 993 − 1 143 = **850 Md$**. (c) 1 143 ÷ 5 403 = **21,2 %**. (d) 1 143 ÷ 7 396 = **15,5 %**.
+</details>
+
+**Exercice 2 — Variations.** Dépenses 7 010 → 7 396 ; recettes 5 235 → 5 403 ; intérêts 1 028 → 1 143. Calcule les variations en Md$ et en % (arrondi au dixième).
+
+<details>
+<summary>Correction 2</summary>
+
+Dépenses : +386, soit **+5,5 %** (le CBO écrit 6 %). Recettes : +168 (5 403 − 5 235), soit **+3,2 %** ; le CBO publie +169 : arrondi des composantes. Intérêts : +115, soit **+11,2 %**. Les écarts de 0,5 point entre 5,5 % et 6 % tiennent à l'arrondi d'affichage du CBO.
+</details>
+
+**Exercice 3 — Dynamique (SIMULATION).** d = 60 %, r = 3 %, g = 2 %, déficit primaire de 1 % du PIB (p = −1). (a) d(t+1) ? (b) Variation ? (c) Solde primaire stabilisant ?
+
+<details>
+<summary>Correction 3</summary>
+
+(a) 60 × 1,03 ÷ 1,02 = 60,588 ; + 1 = **61,59 %**. (b) **+1,59 point**. (c) p* = 60 × 0,01 ÷ 1,02 = **0,59 %** d'excédent primaire.
+</details>
+
+**Exercice 4 — r < g (SIMULATION).** d = 100 %, r = 2 %, g = 3 %, p = −1 (déficit primaire de 1 %). (a) d(t+1) ? (b) La dette baisse-t-elle ? (c) Quelle limite à ce raisonnement ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) 100 × 1,02 ÷ 1,03 = 99,029 ; + 1 = **100,03 %**. (b) Non, elle reste quasi stable (+0,03 point). (c) r est un taux moyen sur un stock de titres, g est incertain ; r < g peut se renverser ; la formule ignore les ajustements stock-flux.
+</details>
+
+**Exercice 5 — Recettes.** Les impôts sur le revenu et cotisations augmentent de 255 Md$ (+6 %) ; l'impôt sur les sociétés baisse de 70 Md$ (−16 %). (a) Base de l'an dernier pour chacun (approximative) ? (b) Montant actuel ? (c) Pourquoi « approximative » ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) 255 ÷ 0,06 ≈ **4 250 Md$** ; 70 ÷ 0,16 ≈ **437,5 Md$**. (b) 4 250 + 255 ≈ **4 505** ; 437,5 − 70 ≈ **367,5**. (c) Les pourcentages sont arrondis à l'unité : les bases réelles peuvent s'écarter de plusieurs dizaines de Md$ ; les chiffres exacts devraient être lus dans le rapport complet.
+</details>
+
+**Exercice 6 — Titre critique.** « Le déficit atteint 2 000 milliards : le dollar s'effondre ! » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) Le montant en dollars ne se lit qu'en part du PIB, des recettes et de la trajectoire. (2) L'estimation du CBO est préliminaire (1 993 Md$). (3) L'effet sur la monnaie dépend des taux longs, de la confiance et de la politique monétaire. (4) Le cas britannique de 2022 est spécifique (mesures non financées, structure de marché). (5) Aucune source lue ne mesure la réaction du dollar.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L1.11.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Déficit = flux ; dette = stock ; déficit primaire = déficit − intérêts.
+- Exercice 2026 (CBO, préliminaire) : recettes **5 403**, dépenses **7 396**, déficit **1 993 Md$** (+12 %), intérêts **1 143 Md$** (+11 %).
+- Dynamique : d(t+1) = d × (1 + r) ÷ (1 + g) − p ; **r − g** décide si la dette s'auto-alimente.
+- Le budget agit sur le marché surtout par les **taux longs**, la **crédibilité** et la politique monétaire.
+- Royaume-Uni 2022 : un choc budgétaire perçu comme non crédible peut déclencher une intervention de la banque centrale (source de presse).
+- Un déficit élevé n'est pas un signal de vente de la monnaie.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer déficit, déficit primaire et poids des intérêts (Exercice 1).
+- [ ] Interpréter des variations arrondies (Exercice 2).
+- [ ] Appliquer la dynamique de la dette (Exercices 3 et 4).
+- [ ] Remonter à des bases approximatives (Exercice 5).
+- [ ] Critiquer un titre alarmiste (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-CBO-03** — Congressional Budget Office, *Monthly Budget Review* de l'exercice 2026 (8 octobre 2026) : https://www.cbo.gov/system/files/2026-10/61985-MBR.pdf
+- **S-CRFB-01** — Committee for a Responsible Federal Budget, « Treasury Confirms $2 Trillion Deficit for Fiscal Year 2026 » (source secondaire, non officielle) : https://www.crfb.org/press-releases/treasury-confirms-2-trillion-deficit-fiscal-year-2026
+- **S-CNBC-01** — CNBC, article du 28 septembre 2022 sur les achats de gilts de la Banque d'Angleterre (source de presse) : https://www.cnbc.com/2022/09/28/bank-of-england-delays-bond-sales-launches-temporary-purchase-program.html
+
+**Définitions de cours non rattachées à une source officielle lue :** déficit primaire, dynamique de la dette, prime de terme, dominance budgétaire, politique contracyclique. **Points non vérifiés :** *Monthly Treasury Statement*, ratios au PIB, dette détenue par le public, communiqué de la Banque d'Angleterre (page officielle non accessible), mouvement de la livre en 2022.

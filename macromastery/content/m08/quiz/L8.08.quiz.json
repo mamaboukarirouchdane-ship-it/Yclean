@@ -1,0 +1,238 @@
+{
+  "lessonId": "L8.08",
+  "title": "Quiz — Décider sans surréagir",
+  "passThreshold": 0.875,
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L8.08-Q1",
+      "type": "mcq",
+      "prompt": "Quelles sont, dans l'ordre, les dix étapes du protocole ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Achat, vente, attente, documentation, scénarios, canaux, durée, probabilité, événement, réactions observées"
+        },
+        {
+          "id": "b",
+          "text": "Décision, scénarios, événement, informations datées, canaux, durée, probabilité, documentation, réactions, invalidations"
+        },
+        {
+          "id": "c",
+          "text": "Événement, informations datées, probabilité et ampleur, canaux, durée, réactions observées, trois scénarios, invalidations, décision, documentation"
+        },
+        {
+          "id": "d",
+          "text": "Événement, décision, canaux, durée, probabilité, scénarios, invalidations, réactions, documentation, résultat"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le protocole va de l'identification de l'événement à la documentation, la décision venant après la vérification des informations, des canaux, de la durée, des réactions et des scénarios.",
+      "tags": [
+        "protocole"
+      ]
+    },
+    {
+      "id": "L8.08-Q2",
+      "type": "mcq",
+      "prompt": "Que signifie « juger une décision sur l'ensemble d'informations à sa date » ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ne retenir que ce qui était publié et vérifiable à l'instant de la décision, pour éviter le biais rétrospectif"
+        },
+        {
+          "id": "b",
+          "text": "Utiliser le résultat final observé pour évaluer la qualité de la décision prise au départ"
+        },
+        {
+          "id": "c",
+          "text": "Ignorer les sources secondaires pour ne retenir que les communiqués officiels des autorités"
+        },
+        {
+          "id": "d",
+          "text": "Attendre toujours un mois avant de juger une décision, pour disposer du recul nécessaire"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le biais rétrospectif consiste à juger avec l'information ultérieure ; le journal sépare « connu à t » et « appris plus tard ».",
+      "tags": [
+        "biais"
+      ]
+    },
+    {
+      "id": "L8.08-Q3",
+      "type": "mcq",
+      "prompt": "À la date D1 (13/03/2023), l'analyste n'a pas les séries de l'or, du dollar et des rendements. Quelle décision de la leçon ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Vendre le dollar, car la crise bancaire affaiblit mécaniquement la monnaie américaine"
+        },
+        {
+          "id": "b",
+          "text": "Acheter de l'or, car la crise bancaire renforce le refuge par construction"
+        },
+        {
+          "id": "c",
+          "text": "Ne jamais intervenir sur cet événement, quels que soient les compléments d'information"
+        },
+        {
+          "id": "d",
+          "text": "Attendre, avec le déclencheur de lire les séries du 13/03 et tout communiqué avant la clôture"
+        }
+      ],
+      "correct": "d",
+      "explanation": "L'étape 6 est impossible à D1, mais le manque est comblable par un déclencheur daté ; « ne pas intervenir » serait justifié si le déclencheur était impossible.",
+      "tags": [
+        "mars2023",
+        "decision"
+      ]
+    },
+    {
+      "id": "L8.08-Q4",
+      "type": "mcq",
+      "prompt": "Espérance de trois scénarios fictifs : A (0,5) +2 %, B (0,3) −1 %, C (0,2) −3 %. Quelle valeur, et que montre le déplacement de 10 points de A vers C ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+1,0 % ; elle reste positive, la décision est donc robuste"
+        },
+        {
+          "id": "b",
+          "text": "+0,1 % ; elle devient −0,4 % : décision non robuste"
+        },
+        {
+          "id": "c",
+          "text": "−0,1 % ; elle reste négative, la décision est donc robuste"
+        },
+        {
+          "id": "d",
+          "text": "0 % dans tous les cas : le déplacement de probabilités s'annule"
+        }
+      ],
+      "correct": "b",
+      "explanation": "0,5 × 2 + 0,3 × (−1) + 0,2 × (−3) = +0,1 ; avec 0,4/0,3/0,3 : −0,4. Si le signe change avec 10 points de probabilité, la décision n'est pas robuste.",
+      "tags": [
+        "sensibilite",
+        "simulation"
+      ]
+    },
+    {
+      "id": "L8.08-Q5",
+      "type": "mcq",
+      "prompt": "Quelle est la différence entre « attendre » et « ne pas intervenir » ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ne pas intervenir veut dire vendre les positions existantes avant la prochaine publication prévue"
+        },
+        {
+          "id": "b",
+          "text": "Il n'y en a pas : les deux décisions suspendent l'analyse jusqu'à nouvel ordre, sans autre condition de réexamen"
+        },
+        {
+          "id": "c",
+          "text": "Attendre veut dire acheter à taille réduite en attendant une confirmation datée, ce qui est une forme d'action"
+        },
+        {
+          "id": "d",
+          "text": "Attendre exige une condition précise et datée qui déclenche le réexamen ; ne pas intervenir : critères non remplis même avec plus d'information"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le journal doit contenir pour chaque abstention une raison écrite et, pour l'attente, un déclencheur daté.",
+      "tags": [
+        "decision"
+      ]
+    },
+    {
+      "id": "L8.08-Q6",
+      "type": "mcq",
+      "prompt": "Un journal contient huit « attendre » sans déclencheur et deux « ne pas intervenir » sans critère. Quel diagnostic ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Preuve d'un bon processus, puisque aucune décision n'a conduit à une perte"
+        },
+        {
+          "id": "b",
+          "text": "Preuve de prudence : ne rien faire limite toujours le risque et les coûts"
+        },
+        {
+          "id": "c",
+          "text": "Signal de biais d'abstention à examiner, sans dire que les abstentions étaient mauvaises"
+        },
+        {
+          "id": "d",
+          "text": "Rien à signaler tant que l'information disponible n'est pas complète"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Une abstention n'est pas une méthode en soi : elle doit être documentée, avec un déclencheur ou un critère.",
+      "tags": [
+        "abstention"
+      ]
+    },
+    {
+      "id": "L8.08-Q7",
+      "type": "mcq",
+      "prompt": "Dans la simulation 6.2, six critères sur six sont remplis. Que signifie la décision « agir » ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le processus est complet ; ce n'est ni un conseil ni une prévision de réussite"
+        },
+        {
+          "id": "b",
+          "text": "Le gain est garanti, puisque les six critères sont remplis avant la décision"
+        },
+        {
+          "id": "c",
+          "text": "La position doit être prise à taille maximale, puisque le processus est complet"
+        },
+        {
+          "id": "d",
+          "text": "Le risque a disparu, car les six critères le couvrent entièrement"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le protocole juge la qualité du processus ; une bonne analyse fondamentale ne garantit pas une transaction gagnante.",
+      "tags": [
+        "agir",
+        "simulation"
+      ]
+    },
+    {
+      "id": "L8.08-Q8",
+      "type": "mcq",
+      "prompt": "Une décision documentée complète perd ; une décision non documentée gagne. Que dit le protocole ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La seconde est meilleure, puisque le résultat est le seul critère de qualité d'une décision de marché"
+        },
+        {
+          "id": "b",
+          "text": "La première est meilleure du point de vue du processus : un résultat isolé ne valide ni n'invalide une méthode"
+        },
+        {
+          "id": "c",
+          "text": "Les deux sont équivalentes, car un gain compense l'absence de documentation de la décision"
+        },
+        {
+          "id": "d",
+          "text": "Il faut toujours suivre le résultat, car il révèle la qualité de la décision"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le résultat d'un seul épisode peut venir du hasard ; le processus se vérifie et se réexamine.",
+      "tags": [
+        "resultat",
+        "processus"
+      ]
+    }
+  ],
+  "revision": 2,
+  "passRule": "7 bonnes réponses sur 8 (seuil pédagogique provisoire)"
+}

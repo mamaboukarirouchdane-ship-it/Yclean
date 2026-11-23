@@ -1,0 +1,241 @@
+---
+id: L6.08
+module: 6
+order: 8
+title: "Atelier : scénario contre consensus — rédiger une note d'analyse datée, chiffrée et vérifiable"
+title_initial: "Atelier : scénario contre consensus"
+level: "avancé"
+duration_hours: 3.0
+prerequisites: ["L6.02", "L6.04", "L6.05", "L6.06", "L6.07"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L6.08.quiz.json"
+sources: ["S-ADM-04", "S-ADM-01", "S-FED-26", "S-KIT-04", "S-FRD-04", "S-FRD-05", "S-KIT-05", "S-BNC-01", "S-KIT-09", "S-FED-27", "S-FED-28", "S-WIK-01"]
+---
+
+# L6.08 — Atelier : scénario contre consensus
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée, avec sa date ; **[Calcul de l'auteur]** ; **[Interprétation]** ; **[Hypothèse]** ; **[SIMULATION]** = données fictives. **Tous les rendements de l'or conditionnels aux scénarios, les probabilités de l'analyste et les coûts de cet atelier sont des SIMULATIONS** : ils servent à pratiquer la méthode. Seules les données de contexte (décision du 28/10, probabilités de marché, rendements réels, VIX, prix de l'or) sont lues dans des sources, avec leurs limites. **Cette leçon n'est pas une prévision : une bonne analyse fondamentale ne garantit pas une transaction gagnante, et un scénario minoritaire n'est pas un signal de trading.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. formuler un **scénario consensuel** et un **scénario alternatif** économiquement défendables, avec leurs hypothèses ;
+2. remplir une **matrice de scénarios** (contexte, consensus, surprise, dollar, taux réels, or, probabilité, invalidation) ;
+3. calculer l'espérance, la valeur nette de coûts, la dispersion et la **probabilité d'équilibre**, et comparer scénario central et alternatif ;
+4. noter un raisonnement avec une **grille** qui ne récompense pas le simple fait d'avoir deviné la direction ;
+5. écrire une **note d'analyse** datée, enregistrée avant l'événement, et la réévaluer honnêtement après ;
+6. reconnaître qu'un scénario minoritaire peut être pertinent sans être le plus probable ni d'espérance positive.
+
+## 2. Prérequis
+
+- Probabilités implicites (L6.02), régimes (L6.04), scénarios et calibration (L6.05), volatilité (L6.06), réunions de banque centrale (L6.07).
+
+## 3. Explication intuitive
+
+Face à un événement très attendu, deux erreurs symétriques guettent : suivre le consensus sans réfléchir, ou le contredire par principe. Un atelier sert à s'entraîner à autre chose : **écrire noir sur blanc** ce que tout le monde semble attendre, **pourquoi** cela pourrait être faux, **combien** de chances on accorde à chaque issue, **ce que cela ferait** au dollar, aux taux réels et à l'or, et **ce qui nous ferait changer d'avis**. Puis ranger la note, attendre, et se noter soi-même. La valeur de l'exercice n'est pas d'avoir « eu raison » une fois, mais de produire des raisonnements qu'un tiers peut vérifier.
+
+## 4. Développement technique
+
+### 4.1 Le cas d'atelier
+**Événement retenu.** La décision de politique monétaire de la Fed de **décembre 2026**, évoquée à la date du **9 décembre** (S-ADM-01, article secondaire de la conférence de presse du 28/10, date non vérifiée sur le calendrier officiel). La note de cet atelier est datée du **31/10/2026** ; elle devra être **mise à jour par une nouvelle fiche** (jamais corrigée) lorsque de nouvelles données paraîtront avant la décision.
+**Consensus documenté avant l'événement [Fait], avec dates.**
+- 21/10 : probabilité de hausse en décembre **88 %** (FedWatch via Reuters/Kitco, S-KIT-04).
+- 28/10, 9 h 27 ET : **84 %** (FedWatch via Yahoo Finance, S-ADM-04) ; « environ 85 % » dans l'après-midi (Bloomberg, outil différent) ; maintien en octobre à 90,6 %.
+- 28/10 : fourchette **3¾–4 %** maintenue, vote **10–2** (Cook et Hammack pour +¼), pas de guidage explicite (S-FED-26, S-KIT-05).
+**Contexte macroéconomique [Fait].** Inflation « toujours élevée », activité « forte », emploi stable (S-FED-26). Taux réel à 10 ans (DFII10) de **2,64 à 2,67 %** du 22 au 28/10 ; moyenne de septembre 2,64 % contre 2,40 % en août (S-FRD-04). VIX **17,20** au 29/10 (S-FRD-05). Or : **4 035,48 $** (28/10, −0,60 % sur la séance, S-KIT-05) ; ≈ 4 019,8 $ le 29/10 (opinion, S-BNC-01). Indice du dollar ≈ 102 (−0,2 %, 28/10, S-ADM-04). Dollar et risque restent un **diagnostic indéterminé** (L6.04).
+**Rappel de chronologie.** Les probabilités ci-dessus datent de fin octobre. Elles ne sont **pas** celles du jour de la décision et ne doivent jamais être présentées comme telles.
+
+### 4.2 Deux lectures opposées
+**Scénario consensuel (hausse de ¼ en décembre).** Hypothèses qui le rendent plausible : inflation encore élevée, activité forte, deux dissidents déjà favorables à la hausse (S-FED-26), probabilité de marché à 84–88 %. **[Interprétation]** Dans ce scénario, la décision est largement anticipée ; l'information utile viendra du *ton* et des projections.
+**Scénario alternatif (maintien en décembre).** Hypothèses qui le rendent défendable : une série de données plus faible que prévu d'ici là (emploi, inflation), un choc financier ou géopolitique qui augmente l'incertitude, le calendrier politique (élections de mi-mandat du 3 novembre, évoqué par un commentateur, S-KIT-05, opinion). **[Hypothèse]** Aucune de ces conditions n'est observée à la date de la note. **Garde-fou** : ce scénario n'est pas retenu parce qu'il serait « contrarien » mais parce que ses hypothèses sont explicites et testables.
+
+### 4.3 La matrice de scénarios
+**[SIMULATION]** Quatre scénarios exclusifs et exhaustifs ; horizon : cinq séances après la décision ; rendements de l'or **conditionnels** (hypothèses de cours).
+
+| | S1 — Hausse attendue, ton neutre | S2 — Hausse, ton plus restrictif | S3 — Maintien (alternatif) | S4 — Maintien, signal de reprise rapide |
+|---|---|---|---|---|
+| **Contexte** | inflation élevée, activité forte | idem + inflation plus forte que prévu | données plus faibles ou choc | incertitude, ton ferme malgré le maintien |
+| **Consensus avant** | hausse 84 % (28/10) | hausse 84 % | maintien 16 % | maintien 16 % |
+| **Surprise possible** | proche de 0 pb | hausse conforme, ton plus ferme | forte surprise baissière (≈ −21 pb) | maintien surprenant, ton ferme |
+| **Dollar** (hypothèse) | stable | en hausse | en baisse | mitigé |
+| **Taux réels** (hypothèse) | stables | en hausse | en baisse | stables à en hausse |
+| **Or** (rendement conditionnel) | **+0,3 %** | **−2,0 %** | **+1,8 %** | **−0,5 %** |
+| **Probabilité** (analyste) | **55 %** | **15 %** | **22 %** | **8 %** |
+| **Invalidation** | retrait des attentes sous 50 % | hausse > 95 % avec ton inchangé | probabilité de hausse > 95 % avant la réunion | surprise de données majeure |
+
+Somme des probabilités : 55 + 15 + 22 + 8 = **100 %**. Probabilité de hausse de l'analyste : 55 + 15 = **70 %** (contre 84 % pour le marché le 28/10, à sens *implicite de marché* ; celle de l'analyste est *subjective*, L6.05). **Méthode de la probabilité** : partir de la valeur de marché (84 %), l'abaisser de 14 points en raison d'hypothèses explicites sur les données à venir, puis répartir entre les sous-scénarios ; chaque ajustement est écrit et daté. **[Interprétation]** Un analyste qui s'écarte de 14 points du marché doit pouvoir dire pourquoi, et accepter d'être noté sur cet écart.
+
+### 4.4 Espérance, dispersion et coûts
+**[Calcul de l'auteur, SIMULATION]**
+- Espérance : E = 0,55 × 0,3 + 0,15 × (−2,0) + 0,22 × 1,8 + 0,08 × (−0,5) = 0,165 − 0,300 + 0,396 − 0,040 = **+0,221 %**.
+- Écart-type : **1,155 point**.
+- Coûts supposés de 0,2 % pour un aller-retour : valeur nette **+0,021 %** ; rapport net ÷ écart-type ≈ **0,02**.
+- Position vendeuse sur la même matrice : −0,221 − 0,2 = **−0,421 %**.
+**[Interprétation]** Une espérance nette de +0,021 % pour un écart-type de 1,155 point n'est **pas** un avantage : elle est dix fois inférieure aux coûts supposés (0,2 %). Le scénario alternatif contribue pour +0,396 % de l'espérance brute, mais cette contribution est annulée en grande partie par S2 (−0,300 %).
+
+### 4.5 Comparaison central ou alternatif, et sensibilité
+**Espérances conditionnelles [Calcul de l'auteur].** Sachant la hausse (S1 + S2) : (0,165 − 0,300) ÷ 0,70 = **−0,193 %**. Sachant le maintien (S3 + S4) : (0,396 − 0,040) ÷ 0,30 = **+1,187 %**.
+**Sensibilité à la probabilité de hausse p** (structure interne fixe) : E(p) = 1,187 − 1,380 × p.
+| P(hausse) | E brute | E nette (0,2 %) |
+|---|---|---|
+| 60 % | +0,359 % | +0,159 % |
+| 70 % | +0,221 % | +0,021 % |
+| 80 % | +0,083 % | −0,117 % |
+| 84 % (marché) | +0,028 % | **−0,172 %** |
+| 90 % | −0,055 % | −0,255 % |
+**Probabilité d'équilibre** : E nette = 0 pour p\* = (1,187 − 0,2) ÷ 1,380 = **71,5 %**. **[Interprétation]** Avec la probabilité de marché (84 %), la valeur nette est négative ; elle ne devient positive que si l'analyste est sûr d'être au-dessous de 71,5 %. **Sensibilité à un déplacement** : 5 points de S3 vers S1 donnent E = +0,146 % (−0,075 point).
+**Conclusion de l'atelier [SIMULATION].** Le scénario alternatif est **pertinent** (il est défendable et sert de plan B), mais il n'est **pas** le plus probable (22 % + 8 %) et son espérance, nette de coûts, ne justifie pas de position ; la note le dit.
+
+### 4.6 Évaluer la qualité du raisonnement
+**Grille de notation (100 points) [Définition de cours].**
+| Critère | Points | Ce qui est vérifié |
+|---|---|---|
+| Cohérence économique | 20 | chaîne décision → attentes → dollar/taux réels → or, sans saut |
+| Qualité des sources | 15 | primaires d'abord, dates, niveau de lecture indiqué |
+| Discipline chronologique | 15 | aucune donnée postérieure à la date de la note |
+| Justification des probabilités | 20 | méthode écrite, somme 100 %, écart au marché expliqué |
+| Gestion de l'incertitude | 15 | dispersion, coûts, sensibilité, probabilité d'équilibre, invalidation |
+| Reconnaissance d'erreur | 15 | réévaluation datée, score de Brier multiclasse, aucune réécriture |
+**La direction de l'or compte pour 0 point en elle-même.** Seuil de réussite : **70/100**, dont au moins 10 points sur la chronologie.
+**Évaluation après l'issue [Calcul de l'auteur, SIMULATION].** Score de Brier multiclasse (L6.05) pour les probabilités 0,55 ; 0,15 ; 0,22 ; 0,08 : si S1 se réalise **0,280** ; S2 **1,080** ; S3 **0,940** ; S4 **1,220**. Référence uniforme (0,25 chacun) : **0,75**. **[Interprétation]** Une seule issue ne note pas une calibration : si S3 se réalise, le score (0,940) est moins bon que la référence uniforme, mais cela ne prouve pas que 22 % était une mauvaise probabilité. Il faut de nombreuses notes pour juger.
+
+### 4.7 La note d'analyse (modèle)
+1. **En-tête** : titre, date et heure de rédaction, auteur, version, empreinte SHA-256 du fichier.
+2. **Question et horizon** : événement, date supposée (source), fenêtre de mesure fixée d'avance (L6.01).
+3. **Données de contexte** avec source, date, période, niveau de lecture ; ce qui est observé, estimé, hypothétique.
+4. **Consensus** : valeurs de marché avec date et heure, outil, limites.
+5. **Scénarios** : matrice (§ 4.3), hypothèses de chaque scénario, probabilités et méthode.
+6. **Calculs** : espérance, dispersion, coûts, sensibilité, probabilité d'équilibre.
+7. **Invalidation et mise à jour** : événements qui rendraient la note caduque ; calendrier de révision (nouvelles fiches).
+8. **Limites** : ce qu'on ne sait pas, ce qui a été tenté sans succès.
+9. **Règle d'évaluation** : critères, score de Brier, seuil.
+10. **Avertissement** : la note ne prédit pas le marché et ne constitue pas un conseil.
+
+## 5. Définitions essentielles
+
+- **Scénario consensuel** : issue que les prix de marché et les prévisionnistes jugent la plus probable.
+- **Scénario alternatif** : issue différente mais défendable, avec hypothèses explicites.
+- **Matrice de scénarios** : tableau reliant contexte, surprise, dollar, taux réels, or, probabilité, invalidation.
+- **Probabilité d'équilibre** : probabilité pour laquelle la valeur nette espérée est nulle.
+- **Invalidation** : événement rendant un scénario caduc.
+- **Note d'analyse** : document daté, enregistré avant l'événement, jamais modifié (une correction est une nouvelle version).
+
+## 6. Exemples chiffrés
+
+**6.1 (SIMULATION)** E = +0,221 % ; net +0,021 % ; écart-type 1,155.
+**6.2** Conditionnelles : −0,193 % (hausse), +1,187 % (maintien).
+**6.3** p\* = 71,5 % ; à 84 % : E nette −0,172 %.
+**6.4** Brier : 0,280 / 1,080 / 0,940 / 1,220 ; référence 0,75.
+**6.6** voir cas historique ci-dessous.
+
+### 6.5 Cas historique documenté — des minoritaires de 38 %, 9 % et 8 %
+**[Fait]** Trois décisions de la Fed de 2026 lues à la leçon L6.07, avec la probabilité de hausse disponible la plus proche : 29/07, probabilité **37,9 %** (24/07, ancienne), décision : maintien (S-KIT-09, S-FED-27) ; 28/10, **9,4 %** (maintien à 90,6 %, 9 h 27 ET), décision : maintien (S-ADM-04, S-FED-26) ; 16/09, **92 %**, décision : hausse (S-FED-28). **[Calcul de l'auteur]** Brier binaire de « hausse » : 0,379² = **0,1436** ; 0,094² = **0,0088** ; (1 − 0,92)² = **0,0064** ; moyenne **0,053**, contre 0,25 pour une probabilité constante de 50 %. **[Interprétation]** Le scénario minoritaire (hausse en juillet ; hausse en octobre) n'a pas eu lieu à deux reprises : cela ne l'invalide pas comme hypothèse raisonnable le jour où il était écrit, et trois décisions ne mesurent pas la calibration. **Ce qu'on ne peut pas conclure** : que les probabilités de marché soient bien calibrées ; que le consensus soit toujours exact. **Limites** : trois cas, une probabilité ancienne, sources secondaires, outil non consulté directement.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Procédure** : écrire le consensus daté, au moins un scénario alternatif défendable, les probabilités avec leur méthode, les conditions d'invalidation ; calculer ; enregistrer ; attendre ; noter.
+- **XAU/USD** : relier chaque scénario à ses canaux (dollar, taux réels, risque) comme hypothèses, pas comme faits.
+- **EUR/USD** : même cadre avec les probabilités de la BCE.
+- **Décision** : une note ne dit pas « acheter » ou « vendre » ; elle dit ce qu'on croit, avec quelle probabilité, et ce qui nous ferait changer d'avis.
+
+## 8. Erreurs courantes
+
+1. Écrire un scénario alternatif « pour faire contrarien », sans hypothèses.
+2. Donner des probabilités qui ne totalisent pas 100 %.
+3. Utiliser des données postérieures à la date de la note.
+4. Oublier les coûts et la dispersion.
+5. Confondre scénario pertinent, scénario probable et scénario rentable.
+6. Corriger la note après l'issue.
+7. Se noter uniquement sur la direction de l'or.
+
+## 9. Limites de l'interprétation
+
+- Rendements conditionnels, probabilités de l'analyste et coûts : **SIMULATIONS** ; aucune estimation historique.
+- Le consensus de marché daté de fin octobre ne vaut pas pour décembre ; la date du 9 décembre vient d'une source secondaire.
+- Une seule matrice, aucun échantillon pour évaluer la calibration.
+- La grille de notation est une convention de cours.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Cohérence de la matrice.** Un apprenant écrit pour les quatre scénarios : 50 %, 20 %, 25 %, 8 %. Vérifie, corrige en retirant le surplus de S1 et recalcule la probabilité de hausse si S1 + S2 = 70 % après correction.
+
+<details>
+<summary>Correction 1</summary>
+
+50 + 20 + 25 + 8 = **103 %** : la somme dépasse 100 %. Il faut retrancher 3 points (par exemple sur S1 : 47 %). Après correction S1 = 47, S2 = 20 : hausse = **67 %**. Le correcteur doit demander pourquoi 3 points ont été ajoutés : l'erreur n'est pas qu'arithmétique, elle révèle un manque de discipline sur la somme.
+</details>
+
+**Exercice 2 — Espérance et coûts.** Avec les rendements +0,3 ; −2,0 ; +1,8 ; −0,5 % et les probabilités 55/15/22/8 %, calcule E, la valeur nette pour des coûts de 0,2 % et la valeur d'une position vendeuse.
+
+<details>
+<summary>Correction 2</summary>
+
+E = 0,165 − 0,300 + 0,396 − 0,040 = **+0,221 %** ; nette **+0,021 %** ; vendeuse : −0,221 − 0,2 = **−0,421 %**. Les deux côtés sont soit nuls soit négatifs, nets de coûts : la note ne justifie aucune position.
+</details>
+
+**Exercice 3 — Sensibilité et équilibre.** Les espérances conditionnelles sont −0,193 % (hausse) et +1,187 % (maintien). Calcule E nette pour p = 84 % et la probabilité d'équilibre pour des coûts de 0,2 %.
+
+<details>
+<summary>Correction 3</summary>
+
+E(p) = 1,187 − 1,380 p. À 84 % : 1,187 − 1,159 = 0,028 ; nette **−0,172 %**. p\* = (1,187 − 0,2) ÷ 1,380 = **71,5 %**. Conclusion : l'avantage éventuel dépend entièrement d'un écart de 14 points avec le marché.
+</details>
+
+**Exercice 4 — Évaluation après coup.** Le scénario S3 se réalise. Calcule le score de Brier multiclasse (probabilités 0,55 ; 0,15 ; 0,22 ; 0,08) et compare à la référence uniforme 0,75. Que peut-on dire de la probabilité de 22 % ?
+
+<details>
+<summary>Correction 4</summary>
+
+(0,55)² + (0,15)² + (0,22 − 1)² + (0,08)² = 0,3025 + 0,0225 + 0,6084 + 0,0064 = **0,9398**, soit moins bon que 0,75. Mais une issue unique ne note pas une calibration : un événement à 22 % arrive environ une fois sur cinq. Il faut un grand nombre de notes.
+</details>
+
+**Exercice 5 — Audit chronologique.** Une note datée du 31/10 cite : (a) 84 % du 28/10 ; (b) un prix de l'or du 5/11 ; (c) un communiqué de la Fed du 9/12 ; (d) 88 % du 21/10. Classe chaque élément et dis quel(s) élément(s) invalide(nt) la note.
+
+<details>
+<summary>Correction 5</summary>
+
+(a) et (d) valides, antérieurs à la note ; (b) et (c) sont **postérieurs** : ils invalident la note pour la partie qui les utilise. Une nouvelle version datée peut les intégrer, jamais la version du 31/10. Le correcteur doit aussi vérifier si l'empreinte de la version initiale est conservée.
+</details>
+
+**Exercice 6 — Atelier complet.** Rédige une note d'analyse (modèle du § 4.7) pour une autre échéance de ton choix, avec au moins trois scénarios, des probabilités totalisant 100 %, une espérance recalculée, une analyse de sensibilité, une condition d'invalidation et ta propre note selon la grille. Donne ensuite la note qu'obtiendrait, selon la grille, une note qui « devine » la bonne direction de l'or mais sans méthode de probabilité ni chronologie : quels critères sont à zéro ?
+
+<details>
+<summary>Correction 6</summary>
+
+Modèle de correction : 100 % ; calcul indépendant ; sensibilité ; invalidation datée ; enregistrement avant l'événement ; score de Brier après l'issue. Une note « devinette » obtient 0 aux critères « justification des probabilités », « discipline chronologique » (si aucune date) et « reconnaissance d'erreur » (si aucune réévaluation), soit au plus **100 − 20 − 15 − 15 = 50/100** même si la direction est correcte : elle est sous le seuil de 70. La direction de l'or ne rapporte aucun point en elle-même.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L6.08.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Une note d'analyse oppose un consensus daté à au moins un scénario alternatif défendable, avec hypothèses, probabilités et invalidation.
+- Matrice et calculs : somme 100 %, espérance, coûts, dispersion, probabilité d'équilibre, sensibilité.
+- Simulation : E = +0,221 % brut, +0,021 % net, écart-type 1,155 ; p\* = 71,5 % ; à 84 % la valeur nette est négative.
+- La qualité se note (grille sur 100) sans récompenser la direction de l'or ; évaluation après l'issue par Brier, avec des échantillons suffisants.
+- Un scénario minoritaire peut être pertinent sans être probable ni rentable.
+
+## 13. Critères de maîtrise
+
+- [ ] Construire une matrice cohérente (Exercice 1).
+- [ ] Calculer espérance et valeur nette (Exercice 2).
+- [ ] Calculer sensibilité et équilibre (Exercice 3).
+- [ ] Évaluer après coup avec Brier (Exercice 4).
+- [ ] Auditer une chronologie (Exercice 5).
+- [ ] Produire et noter une note complète (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources de contexte (déjà lues), consultées entre le 29 et le 31 octobre 2026 :
+
+- **S-FED-26**, **S-FED-27**, **S-FED-28** — communiqués officiels de la Fed (28/10, 29/07, 16/09).
+- **S-ADM-04**, **S-ADM-01**, **S-KIT-04**, **S-KIT-05**, **S-KIT-09**, **S-BNC-01** — sources secondaires.
+- **S-FRD-04**, **S-FRD-05** — séries FRED (DFII10, VIX).
+- **S-WIK-01** — score de Brier (résumé encyclopédique).
+
+**Définitions de cours non rattachées à une source lue :** matrice de scénarios, grille de notation, modèle de note, méthode d'ajustement de probabilité. **Points non vérifiés :** date officielle de la réunion de décembre, niveaux de marché à la date de la note, tout rendement conditionnel de l'or (simulations).

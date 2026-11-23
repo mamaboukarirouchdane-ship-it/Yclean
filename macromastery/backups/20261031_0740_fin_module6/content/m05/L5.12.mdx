@@ -1,0 +1,213 @@
+---
+id: L5.12
+module: 5
+order: 12
+title: "Thèse guidée sur XAU/USD : construire, dater, chiffrer des scénarios et prévoir sa propre réfutation"
+title_initial: "Thèse guidée sur XAU/USD"
+level: "avancé"
+duration_hours: 3.5
+prerequisites: ["L5.03", "L5.04", "L5.06", "L5.07", "L5.10", "L5.11"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L5.12.quiz.json"
+sources: ["S-RTR-01", "S-WGC-15", "S-FED-26", "S-KIT-04", "S-BNC-01", "S-FRD-01", "S-FRD-03"]
+---
+
+# L5.12 — Thèse guidée sur XAU/USD
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres, probabilités ou scénarios fictifs ou rétrospectifs de l'auteur. Les faits historiques viennent d'un récapitulatif Reuters de 2013 (secondaire) et d'une étude du World Gold Council (industrie), lus par **résumé automatique**. **Cette leçon est un exercice de méthode : aucune thèse n'y est une recommandation, et une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. formuler une **thèse** en une question datée, un horizon et des mesures de réussite ;
+2. distinguer **faits, hypothèses, scénarios et conditions d'invalidation** ;
+3. attribuer des **probabilités** à des scénarios exclusifs et en calculer une valeur attendue et un score (Brier) ;
+4. évaluer une thèse **après coup** sans céder au biais rétrospectif ;
+5. expliquer pourquoi **un seul résultat** ne valide ni ne réfute une méthode ;
+6. produire une thèse structurée à partir du tableau de bord de L5.11.
+
+## 2. Prérequis
+
+- Tableau de bord (L5.11), cycles (L5.10), taux réels (L5.03), dollar (L5.04), banques centrales (L5.06), ETF (L5.07).
+
+## 3. Explication intuitive
+
+Une thèse n'est pas une opinion sur « où ira l'or ». C'est un **engagement vérifiable** : « à telle date, pour telle raison, voici ce que j'attends, avec telle probabilité, et voici ce qui me prouvera que j'avais tort ». Sans date, sans probabilité et sans condition de réfutation, aucun résultat ne peut jamais la contredire : elle n'enseigne rien. Le but n'est pas d'avoir raison une fois, mais de **mesurer la qualité de ses raisonnements** sur la durée.
+
+## 4. Développement technique
+
+### 4.1 Les six pièces d'une thèse
+1. **Question** et **date** : « Où se situe l'or par rapport à telle zone à telle date ? »
+2. **Horizon** : un nombre de mois, cohérent avec les indicateurs (L5.11 : des moyennes mensuelles ne soutiennent pas un horizon de quelques jours).
+3. **Faits** datés avec source et âge.
+4. **Hypothèses** : ce qui est supposé, non lu.
+5. **Scénarios** exclusifs et exhaustifs, avec probabilités dont la somme est 1.
+6. **Invalidation** : observations qui conduiraient à abandonner la thèse.
+
+### 4.2 Un cas rétrospectif : septembre 2012 → avril 2013
+**[Fait]** (S-RTR-01) : record de 1 920 $ le 6/09/2011 ; plus bas de 2012 à 1 527 $ le 16/05/2012 (brièvement en territoire de marché baissier selon la source) ; sommet de 2012 à **1 795,69 $** en septembre 2012 « après de nouvelles mesures de relance de la Fed » ; prix inférieur à 1 500 $ le 11/04/2013 ; **1 336,04 $** le 14/04/2013, soit −9 % en une journée. **[Fait]** (S-WGC-15) : des sorties d'ETF de 1 215 t sont citées pour 2013-2015.
+**[Calcul de l'auteur]** 1 795,69 ÷ 1 527 − 1 = **+17,6 %** de mai à septembre 2012 ; 1 336,04 ÷ 1 795,69 − 1 = **−25,6 %** de septembre 2012 à avril 2013.
+
+### 4.3 La thèse de septembre 2012 (rétrospective, **[SIMULATION]**)
+**[SIMULATION]** On se place en septembre 2012 avec les seuls faits ci-dessus (la relance de la Fed, le rebond depuis 1 527 $). Thèse fictive : « D'ici sept mois, l'or reste dans une zone de consolidation. » Scénarios et probabilités de l'auteur :
+
+| Scénario | Condition en avril 2013 | Probabilité | Prix représentatif |
+|---|---|---|---|
+| A — haussier | au-dessus de 1 900 | 30 % | 2 000 |
+| B — consolidation | entre 1 600 et 1 900 | 50 % | 1 750 |
+| C — baissier | sous 1 600 | 20 % | 1 450 |
+
+**[Calcul de l'auteur]** Somme : 100 %. Valeur attendue : 0,3 × 2 000 + 0,5 × 1 750 + 0,2 × 1 450 = **1 765 $**. Résultat : **1 336,04 $** (le 14/04/2013), soit −24,3 % sous la valeur attendue : le scénario C s'est réalisé, avec un prix **bien plus bas** que son prix représentatif de 1 450 (−7,9 %).
+**Score de Brier** (somme des carrés des écarts entre probabilités et résultat 0/1) : (0,3 − 0)² + (0,5 − 0)² + (0,2 − 1)² = 0,09 + 0,25 + 0,64 = **0,98**. Un pari uniforme (1/3 chacun) donne 2 × (1/3)² + (2/3)² = **0,667**. La thèse de l'exemple est donc **moins bonne** que l'ignorance totale — pour **une** observation.
+
+### 4.4 Ce que ce cas enseigne — et ce qu'il n'enseigne pas
+**[Interprétation]** Il montre trois choses : (1) l'ampleur d'une chute peut dépasser le pire scénario envisagé ; (2) une thèse chiffrée permet de **mesurer** l'erreur ; (3) la relance de la Fed, facteur apparemment favorable, ne protège pas d'une baisse. Il ne montre **pas** qu'une méthode soit mauvaise : un seul tirage d'une distribution incertaine ne juge pas une méthode (il faudrait des dizaines de thèses indépendantes). Il ne démontre **pas** non plus la cause de la baisse : les sorties d'ETF sont citées pour 2013-2015, mais la chronologie fine n'a pas été lue.
+
+### 4.5 Le biais rétrospectif
+**[Définition]** Le biais rétrospectif consiste à juger après coup que l'issue était « évidente ». Parades : écrire la thèse **avant**, la dater, l'archiver, ne pas la modifier ; consigner séparément les raisons qui étaient connues et celles qui ne l'étaient pas.
+
+### 4.6 Un squelette pour aujourd'hui (exercice, **[SIMULATION]**)
+À partir du tableau de L5.11 (prix ≈ 4 020 $ le 29/10/2026, Fed à 3¾–4 %, taux réel de septembre 2,64 %), voici un **squelette** de thèse à trois mois, sans valeur de recommandation :
+
+| Scénario | Prix représentatif | Probabilité (SIMULATION) |
+|---|---|---|
+| Baisse | 3 700 | 30 % |
+| Stabilité | 4 000 | 45 % |
+| Hausse | 4 500 | 25 % |
+
+**[Calcul de l'auteur]** Valeur attendue : 0,3 × 3 700 + 0,45 × 4 000 + 0,25 × 4 500 = **4 035 $**, soit **+0,4 %** par rapport à 4 019,8. Écarts des extrêmes : −8,0 % et +11,9 %. **[Interprétation]** Une valeur attendue quasi égale au prix actuel signifie que la thèse n'apporte pas d'avantage : elle décrit seulement l'incertitude. Les probabilités sont **inventées pour l'exercice** ; aucune étude lue ne les fonde.
+
+**Conditions d'invalidation possibles** : taux réel quotidien nettement différent de la moyenne de septembre, achats officiels d'octobre en net recul, positionnement CFTC et courbe d'octobre (non lus) montrant un excès — chacune est à **observer**, non à supposer.
+
+### 4.7 Évaluer une thèse : à plusieurs
+**[Interprétation]** Une évaluation sérieuse suppose : un journal de thèses datées ; des scénarios exclusifs ; un score de Brier moyen sur au moins plusieurs dizaines de thèses ; une comparaison avec un pari uniforme ; la séparation entre erreur de **raisonnement** et erreur de **hasard**. Cela relève de la recherche quantitative (module 14).
+
+## 5. Définitions essentielles
+
+- **Thèse** : engagement daté, chiffré et réfutable sur un résultat.
+- **Scénario** : issue possible, exclusive des autres.
+- **Valeur attendue** : somme des probabilités multipliées par les prix représentatifs.
+- **Score de Brier** : somme des carrés des écarts entre probabilités et résultat (0 ou 1) ; plus bas = meilleur.
+- **Invalidation** : observation qui réfute la thèse.
+- **Biais rétrospectif** : surestimation, après coup, de ce qui était prévisible.
+
+## 6. Exemples chiffrés
+
+**6.1 Rebond puis chute.** 1 795,69 ÷ 1 527 − 1 = +17,6 % ; 1 336,04 ÷ 1 795,69 − 1 = −25,6 %.
+**6.2 Valeur attendue.** 0,3 × 2 000 + 0,5 × 1 750 + 0,2 × 1 450 = 1 765.
+**6.3 Brier.** 0,98 contre 0,667 pour le pari uniforme.
+**6.4 Squelette 2026.** 0,3 × 3 700 + 0,45 × 4 000 + 0,25 × 4 500 = 4 035 (+0,4 %).
+
+### 6.5 Cas historique documenté — 11 au 14 avril 2013 : la chute de trois jours
+**[Fait]** (S-RTR-01) : le 11/04/2013, l'or passe sous 1 500 $ pour la première fois depuis juillet 2011 et entre en territoire de marché baissier ; le 14/04, 1 336,04 $, −9 % en une journée, décrit comme la plus forte baisse quotidienne en 30 ans ; le 16/04, rebond d'environ 2 % grâce à des acheteurs d'or physique.
+**[Calcul de l'auteur]** 1 336,04 ÷ 1 500 − 1 = **−10,9 %** en trois jours environ (au plus : le prix du 11/04 est « inférieur » à 1 500).
+**[Interprétation]** Une thèse de consolidation, même prudente, est traversée en trois séances ; d'où l'importance des **conditions d'invalidation** déclarées avant. **Ce qu'on ne peut pas conclure** : la cause précise de la chute (la source ne l'analyse pas dans le résumé lu) ; la qualité d'une méthode à partir de ce seul épisode. **Limites** : récapitulatif secondaire ; résumé automatique ; repères de séance.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **XAU/USD** : la thèse porte sur une zone de prix à une date, pas sur une direction vague.
+- **Forex** : la même discipline vaut pour EUR/USD : question, horizon, scénarios, invalidation.
+- **Lien avec la gestion du risque** (module 11) : la taille d'une position dépend de l'écart entre le pire scénario et le scénario attendu, d'où l'intérêt de chiffrer les extrêmes.
+- **Archivage** : une thèse non datée ne peut pas être évaluée.
+- **Prudence** : aucune thèse de la leçon n'est une recommandation.
+
+## 8. Erreurs courantes
+
+1. Écrire une thèse sans date ni horizon.
+2. Choisir des scénarios qui se recouvrent ou qui ne couvrent pas tous les cas.
+3. Attribuer des probabilités qui ne somment pas à 100 %.
+4. Fixer une zone si large que rien ne peut la réfuter.
+5. Juger la méthode sur un seul résultat.
+6. Réécrire la thèse après l'issue.
+7. Confondre valeur attendue et prévision.
+
+## 9. Limites de l'interprétation
+
+- Faits historiques lus par **résumé automatique** d'un récapitulatif secondaire.
+- La « thèse de 2012 » est une **reconstitution rétrospective** : l'auteur connaît l'issue, ce qui biaise le choix des scénarios et des probabilités.
+- Les probabilités sont des choix d'exercice ; aucune étude lue ne les fonde.
+- Le score de Brier d'un seul cas ne dit rien sur une méthode.
+- Le squelette de 2026 est un exercice et non une prévision.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Mouvements.** Calcule le rebond de 1 527 à 1 795,69 et la chute de 1 795,69 à 1 336,04.
+
+<details>
+<summary>Correction 1</summary>
+
+1 795,69 ÷ 1 527 − 1 = **+17,6 %** ; 1 336,04 ÷ 1 795,69 − 1 = **−25,6 %**.
+</details>
+
+**Exercice 2 — Valeur attendue.** Scénarios : 2 000 (30 %), 1 750 (50 %), 1 450 (20 %). Calcule la valeur attendue, puis l'écart avec 1 336,04.
+
+<details>
+<summary>Correction 2</summary>
+
+0,3 × 2 000 + 0,5 × 1 750 + 0,2 × 1 450 = **1 765** ; 1 336,04 ÷ 1 765 − 1 = **−24,3 %**.
+</details>
+
+**Exercice 3 — Brier.** Même thèse, résultat : scénario C. Calcule le score de Brier et compare-le au pari uniforme. Que conclure ?
+
+<details>
+<summary>Correction 3</summary>
+
+(0,3)² + (0,5)² + (0,2 − 1)² = 0,09 + 0,25 + 0,64 = **0,98** ; pari uniforme : 2 × (1/3)² + (2/3)² = **0,667**. Sur ce seul cas, la thèse est moins bonne que l'ignorance totale ; **un seul cas ne juge pas une méthode**.
+</details>
+
+**Exercice 4 — Squelette 2026.** Scénarios 3 700 (30 %), 4 000 (45 %), 4 500 (25 %) ; prix 4 019,8. Calcule la valeur attendue, l'écart et les écarts des extrêmes. Interprète.
+
+<details>
+<summary>Correction 4</summary>
+
+Valeur attendue **4 035** ; écart **+0,4 %** ; extrêmes **−8,0 %** et **+11,9 %**. Une valeur attendue presque égale au prix actuel ne donne aucun avantage : la thèse décrit l'incertitude.
+</details>
+
+**Exercice 5 — Invalidation.** Écris trois conditions d'invalidation observables pour la thèse de l'exercice 4, en précisant la donnée à lire.
+
+<details>
+<summary>Correction 5</summary>
+
+Exemples : (1) taux réel quotidien de 10 ans nettement au-dessus de la moyenne de septembre (2,64 %) — série FRED à relire ; (2) achats officiels nets d'octobre inférieurs à ceux d'août (39 t) — données du WGC ; (3) rapport de positionnement de la CFTC montrant un excès — non lu à ce jour. Chaque condition désigne une **observation**, une **source** et un **seuil** à fixer avant.
+</details>
+
+**Exercice 6 — Critique.** « Ma thèse de 2012 était bonne : la Fed relançait et l'or était haussier. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) L'issue (1 336,04 $) contredit le scénario central. (2) Une thèse rétrospective est biaisée par la connaissance de l'issue. (3) Le score de Brier de 0,98 est pire que 0,667. (4) Un seul cas ne juge pas une méthode, ni dans un sens ni dans l'autre. (5) La seule cause citée ne suffit pas : les sorties d'ETF sont documentées pour 2013-2015 sans chronologie fine.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L5.12.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Une thèse est un engagement **daté, chiffré, réfutable**.
+- Six pièces : question, horizon, faits, hypothèses, scénarios, invalidation.
+- Valeur attendue et score de Brier mesurent l'erreur ; un cas isolé ne juge pas une méthode.
+- Cas : de 1 795,69 $ (septembre 2012) à 1 336,04 $ (14/04/2013), −25,6 % ; la thèse reconstituée était moins bonne que le pari uniforme sur cet unique cas.
+- Aujourd'hui : l'exercice donne une valeur attendue (+0,4 %) quasi égale au prix ; il ne recommande rien.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer rebonds et chutes (Exercice 1).
+- [ ] Calculer une valeur attendue (Exercices 2 et 4).
+- [ ] Calculer et comparer un score de Brier (Exercice 3).
+- [ ] Écrire des invalidations observables (Exercice 5).
+- [ ] Critiquer une thèse jugée après coup (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** (toutes déjà lues) :
+
+- **S-RTR-01** — Reuters, via Business Standard (17/04/2013) : https://www.business-standard.com/article/reuters/factbox-gold-milestones-after-record-highs-historic-sell-off-113041700037_1.html
+- **S-WGC-15** — World Gold Council, « What's the bear case for gold » (10/07/2025) : https://www.gold.org/goldhub/research/whats-bear-case-gold-historical-perspective/19836
+- **S-FED-26**, **S-KIT-04**, **S-BNC-01**, **S-FRD-01**, **S-FRD-03** — lues en L5.03 et L5.11.
+
+**Définitions de cours non rattachées à une source lue :** thèse, scénario, valeur attendue, score de Brier, invalidation, biais rétrospectif. **Points non vérifiés :** chronologie fine de la baisse de 2013, causes, prix mensuels de 2012-2013, probabilités et scénarios (fictifs), données d'octobre 2026 absentes.

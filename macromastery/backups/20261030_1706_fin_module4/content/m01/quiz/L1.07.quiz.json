@@ -1,0 +1,233 @@
+{
+  "lessonId": "L1.07",
+  "title": "Quiz — Le marché du travail",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : BLS (2/10/2026 et concepts CPS), CBO (fév. 2026), note FEDS (avril 2026), résumés automatiques.",
+  "questions": [
+    {
+      "id": "L1.07-Q1",
+      "type": "mcq",
+      "prompt": "Selon le BLS, quelles conditions faut-il remplir pour être compté comme chômeur ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ne pas avoir d'emploi seulement"
+        },
+        {
+          "id": "b",
+          "text": "Percevoir une allocation"
+        },
+        {
+          "id": "c",
+          "text": "Ne pas avoir d'emploi, être disponible et avoir cherché activement un emploi au cours des quatre dernières semaines"
+        },
+        {
+          "id": "d",
+          "text": "Avoir perdu son emploi depuis moins d'un an"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Les trois conditions : sans emploi pendant la semaine de référence, disponible, démarche active et précise dans les 4 semaines précédentes (exceptions : licenciement temporaire avec rappel).",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L1.07-Q2",
+      "type": "mcq",
+      "prompt": "Population civile 2 000, employés 1 200, chômeurs 100. Quel est le taux de chômage ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "7,69 %"
+        },
+        {
+          "id": "b",
+          "text": "5,0 %"
+        },
+        {
+          "id": "c",
+          "text": "8,33 %"
+        },
+        {
+          "id": "d",
+          "text": "10 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Population active = 1 300 ; taux = 100 ÷ 1 300 = 7,69 %. Le dénominateur est la population active, non la population totale.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L1.07-Q3",
+      "type": "mcq",
+      "prompt": "Rapport emploi/population = ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Taux d'activité − 1"
+        },
+        {
+          "id": "b",
+          "text": "Taux d'activité + taux de chômage"
+        },
+        {
+          "id": "c",
+          "text": "Taux de chômage ÷ taux d'activité"
+        },
+        {
+          "id": "d",
+          "text": "Taux d'activité × (1 − taux de chômage)"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Employés = population active × (1 − chômage), donc emploi/population = activité × (1 − chômage). Septembre 2026 : 61,8 % × 0,958 = 59,2 %.",
+      "tags": [
+        "identite"
+      ]
+    },
+    {
+      "id": "L1.07-Q4",
+      "type": "mcq",
+      "prompt": "Si 50 chômeurs sur 1 300 actifs cessent de chercher et sortent de la population active, sans création d'emploi, que devient le taux de chômage ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il monte"
+        },
+        {
+          "id": "b",
+          "text": "Il baisse sans qu'aucun emploi n'ait été créé"
+        },
+        {
+          "id": "c",
+          "text": "Il reste identique"
+        },
+        {
+          "id": "d",
+          "text": "Il devient négatif"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le taux baisse (ici de 7,7 % à 4,0 %) car le numérateur et le dénominateur diminuent ; le rapport emploi/population est inchangé. D'où l'importance de lire aussi la participation.",
+      "tags": [
+        "participation"
+      ]
+    },
+    {
+      "id": "L1.07-Q5",
+      "type": "mcq",
+      "prompt": "Septembre 2026 (BLS) : emploi salarié non agricole ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+133 000"
+        },
+        {
+          "id": "b",
+          "text": "+290 000"
+        },
+        {
+          "id": "c",
+          "text": "−29 000"
+        },
+        {
+          "id": "d",
+          "text": "+29 000, décrit comme « changed little »"
+        }
+      ],
+      "correct": "d",
+      "explanation": "L'emploi salarié non agricole a augmenté de 29 000 ; juillet et août ont été révisés à la baisse (−60 000 au total).",
+      "tags": [
+        "donnees-observees"
+      ]
+    },
+    {
+      "id": "L1.07-Q6",
+      "type": "mcq",
+      "prompt": "Salaire horaire +3,0 % sur 12 mois et inflation CPI +3,7 % : le salaire réel exact varie de :",
+      "options": [
+        {
+          "id": "a",
+          "text": "+0,7 %"
+        },
+        {
+          "id": "b",
+          "text": "+6,7 %"
+        },
+        {
+          "id": "c",
+          "text": "−0,68 %"
+        },
+        {
+          "id": "d",
+          "text": "0 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "1,030 ÷ 1,037 − 1 = −0,68 %. Avec l'indice sous-jacent (2,6 %), le résultat serait +0,39 % : le choix de l'indice compte.",
+      "tags": [
+        "salaire-reel"
+      ]
+    },
+    {
+      "id": "L1.07-Q7",
+      "type": "mcq",
+      "prompt": "Que mesure l'enquête auprès des établissements (CES) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'emploi salarié non agricole, les heures et les rémunérations par secteur"
+        },
+        {
+          "id": "b",
+          "text": "Le taux de chômage des ménages"
+        },
+        {
+          "id": "c",
+          "text": "Les prix à la consommation"
+        },
+        {
+          "id": "d",
+          "text": "Le PIB"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La CES porte sur des emplois salariés ; la CPS (ménages) donne la population active, l'emploi et le chômage des personnes.",
+      "tags": [
+        "enquetes"
+      ]
+    },
+    {
+      "id": "L1.07-Q8",
+      "type": "mcq",
+      "prompt": "L'emploi d'équilibre (breakeven) est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le nombre d'emplois de l'économie"
+        },
+        {
+          "id": "b",
+          "text": "Le nombre de créations d'emplois par mois nécessaire pour maintenir le taux de chômage stable, compte tenu de la croissance de la population active potentielle"
+        },
+        {
+          "id": "c",
+          "text": "Le salaire minimum"
+        },
+        {
+          "id": "d",
+          "text": "Le taux de chômage maximal"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Elle dépend de la croissance de la population active potentielle ; la page de données lue la définit comme cette variation multipliée par un moins le taux non cyclique de la CBO. Elle est incertaine.",
+      "tags": [
+        "breakeven"
+      ]
+    }
+  ],
+  "revision": 1
+}

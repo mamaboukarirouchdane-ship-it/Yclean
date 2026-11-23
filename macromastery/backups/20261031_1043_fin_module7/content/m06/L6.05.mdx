@@ -1,0 +1,211 @@
+---
+id: L6.05
+module: 6
+order: 5
+title: "Scénarios et probabilités : quatre sens du mot « probabilité », construction, sensibilité, enregistrement et calibration"
+title_initial: "Scénarios et probabilités"
+level: "avancé"
+duration_hours: 3.5
+prerequisites: ["L5.12", "L6.02", "L6.03", "L6.04"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L6.05.quiz.json"
+sources: ["S-WIK-01", "S-ADM-04", "S-CME-05", "S-FRD-04", "S-FRD-01", "S-KIT-04", "S-KIT-05", "S-KIT-06", "S-KIT-07", "S-KIT-08", "S-MIN-02"]
+---
+
+# L6.05 — Scénarios et probabilités
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée, avec sa date ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** ; **[Interprétation]** ; **[Hypothèse]** = supposition nécessaire non vérifiée ; **[SIMULATION]** = chiffres, probabilités ou rendements fictifs. Les sources sont lues par **résumé automatique** (une encyclopédie en ligne sur le score de Brier, des articles de presse). **Cette leçon prolonge L5.12 sans la répéter** : L5.12 introduisait la thèse, la valeur attendue et le score de Brier sur un cas ; ici on approfondit la **construction** des probabilités, leur **sensibilité**, leur **enregistrement** et leur **calibration**, avec d'autres exemples. **Une valeur attendue positive ne prouve pas la rentabilité, et une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. distinguer **quatre sens** de « probabilité » (subjective, historique, de modèle, implicite de marché) et ne pas les échanger ;
+2. construire des scénarios exclusifs et exhaustifs **malgré des données manquantes**, sans inventer les données absentes (conditionnement, loi des probabilités totales, bornes) ;
+3. recalculer indépendamment une **valeur attendue**, une dispersion et une valeur nette de coûts ;
+4. mener une **analyse de sensibilité** et calculer une **probabilité d'équilibre** ;
+5. **enregistrer** une prévision avant sa réalisation, puis l'évaluer (score de Brier, table de calibration, limites d'échantillon) ;
+6. relier le diagnostic incomplet de L6.04 à un arbre de scénarios.
+
+## 2. Prérequis
+
+- Thèse, valeur attendue et score de Brier (L5.12), probabilités implicites (L6.02), réactions asymétriques (L6.03), régimes (L6.04).
+
+## 3. Explication intuitive
+
+Écrire « 60 % de chances » donne une impression de rigueur. Mais 60 % de quoi, calculé comment, et vérifié par quoi ? Un analyste peut dire 60 % parce qu'il le sent ; un marché peut dire 60 % parce que des prix le suggèrent ; un historique peut dire 60 % parce que 3 cas sur 5 ont eu lieu ; un modèle peut dire 60 % parce qu'une équation le produit. Ce sont quatre choses différentes, avec quatre façons de se tromper. Puis il faut agir malgré les trous : quand le dollar ou le risque sont inconnus, on ne les invente pas, on les **traite comme des états possibles** et on regarde combien la conclusion dépend d'eux. Enfin, une probabilité n'a de valeur que si on l'écrit **avant** et qu'on la confronte **après** à un grand nombre de résultats.
+
+## 4. Développement technique
+
+### 4.1 Quatre sens de « probabilité »
+| Sens | Définition | Exemple (chiffres de la leçon) | Risque principal |
+|---|---|---|---|
+| **Subjective** | estimation raisonnée d'un analyste | « 25 % de hausse » écrit par l'auteur | optimisme, ancrage, absence de calibration |
+| **Historique** | fréquence observée dans un échantillon | 3 séances sur 4 en baisse après une décision « conforme » (L6.03) | petit échantillon, instabilité, période non représentative |
+| **De modèle** | sortie d'une méthode statistique | probabilité d'une régression logistique | spécification, surajustement, données d'entraînement |
+| **Implicite de marché** | extraite de prix d'instruments (L6.02) | hausse de décembre à 84 % (28/10/2026) | primes de risque, hypothèses de l'outil, instabilité |
+
+**[Interprétation]** Ces quatre notions ne sont **pas interchangeables** : on ne présente jamais une fréquence de six cas comme une loi, ni un prix de marché comme la « vraie » probabilité, ni une sortie de modèle comme un fait. On indique toujours **quel sens** est utilisé.
+**Exemples chiffrés.** *Historique* : 3 baisses sur 4 donnent une fréquence de 75 % ; une règle de lissage de Laplace, (k + 1) ÷ (n + 2), donne (3 + 1) ÷ (4 + 2) = **66,7 %**, et sur 30 baisses en 40 cas elle donne 31 ÷ 42 = **73,8 %** pour 75 % observés : plus l'échantillon grandit, moins la correction pèse. *Modèle* **[SIMULATION]** : p = 1 ÷ (1 + e^−z) avec z = −0,5 + 0,08 × 24 = 1,42, soit p ≈ **80,5 %**. Les coefficients sont inventés ; la sortie n'est qu'un exemple de calcul.
+
+### 4.2 Construire des scénarios malgré l'information manquante
+**[Définition de cours]** Trois règles : (1) les scénarios sont **exclusifs et exhaustifs** (somme des probabilités = 100 %) ; (2) ce qui n'est pas observé est traité comme un **état possible** ou comme une **borne**, pas comme une valeur ; (3) chaque probabilité porte son **étiquette** (observée, hypothèse, implicite de marché).
+**Loi des probabilités totales.** P(hausse) = Σ P(hausse | état i) × P(état i). **[SIMULATION]** États du dollar non observés : hausse (a), stable (0,7 − a), baisse (0,30). Probabilités conditionnelles de hausse de l'or : 0,30 ; 0,50 ; 0,70. Avec a = 0,30 : 0,30 × 0,30 + 0,40 × 0,50 + 0,30 × 0,70 = 0,09 + 0,20 + 0,21 = **0,50**. En général, P(hausse) = 0,56 − 0,2 × a : pour a de 0,20 à 0,50, P(hausse) va de **0,52 à 0,46**. **[Interprétation]** On ne connaît pas l'état du dollar, mais on peut dire de combien la conclusion en dépend : ici, de 6 points de pourcentage au plus pour la plage supposée.
+
+### 4.3 Valeur attendue, dispersion et coûts
+**[Définition]** E = Σ pᵢ × rᵢ ; variance = Σ pᵢ × (rᵢ − E)² ; écart-type = √variance.
+**[SIMULATION]** Rendements à trois mois : hausse +8 % (35 %), stable 0 % (40 %), baisse −5 % (25 %). **[Calcul de l'auteur]** E = 0,35 × 8 + 0,40 × 0 + 0,25 × (−5) = 2,80 − 1,25 = **+1,55 %** ; écart-type ≈ **5,12 points** ; avec des coûts aller-retour de 0,2 % (hypothèse), valeur nette **+1,35 %**. Rapport valeur attendue sur écart-type : 1,35 ÷ 5,12 ≈ **0,26**.
+**[Interprétation]** Une valeur attendue positive de +1,35 % pour un écart-type de 5,12 points signifie que le résultat réel reste très incertain, et que l'avantage supposé dépend entièrement de la qualité des probabilités. Un portefeuille de transactions indépendantes serait nécessaire pour que la moyenne converge ; ce n'est pas un résultat de la leçon.
+
+### 4.4 Analyse de sensibilité et probabilité d'équilibre
+**Un paramètre à la fois.** **[Calcul de l'auteur]** Déplacer 5 points de probabilité de « baisse » vers « hausse » donne E = 0,40 × 8 + 0,40 × 0 + 0,20 × (−5) = **+2,20 %** (+0,65 point). La sensibilité de E à une probabilité est la différence de rendement entre les scénarios concernés : ici 8 − (−5) = 13 points par unité, soit 0,13 point par point de probabilité.
+**Probabilité d'équilibre.** Cas binaire réduit : gain G = 8, perte L = 5, coût c = 0,2. Valeur nette nulle quand p × G − (1 − p) × L − c = 0, soit **p\* = (L + c) ÷ (G + L) = 5,2 ÷ 13 = 40 %**. **[Interprétation]** Tant que la probabilité de hausse reste au-dessus de 40 %, le pari est rentable *en espérance* dans ce cas simplifié ; sa marge dépend de la qualité de l'estimation à quelques points près.
+
+### 4.5 Enregistrement avant réalisation
+**[Définition de cours]** Fiche d'enregistrement, immuable une fois datée : identifiant ; date et heure ; question et horizon ; scénarios, seuils et prix représentatifs ; probabilités **avec leur sens** (§ 4.1) ; données observées avec source et âge ; hypothèses ; règle d'évaluation ; empreinte (SHA-256) du fichier, comme le projet le fait pour ses livrables. Aucune modification après l'issue : une correction est une **nouvelle** fiche.
+
+### 4.6 Évaluation et calibration
+**[Fait]** (S-WIK-01, résumé d'une encyclopédie en ligne) : le score de Brier est l'écart quadratique moyen entre probabilités et issue (0 ou 1) ; défini par Glenn Brier en 1950, sa forme originale somme les erreurs sur toutes les classes exclusives (valeurs de 0 à 2) et la forme binaire courante va de 0 à 1 ; c'est une règle de score *strictement propre* (elle récompense l'annonce honnête des croyances) ; la décomposition de Murphy sépare incertitude, fiabilité et résolution ; il ne convient pas bien aux variables ordinales à trois niveaux ou plus ; l'évaluation d'événements rares exige de grands échantillons (souvent plus de 1 000 cas).
+**Table de calibration.** **[SIMULATION]** Douze prévisions binaires fictives (probabilités 0,2 ; 0,2 ; 0,3 ; 0,3 ; 0,5 ; 0,5 ; 0,5 ; 0,6 ; 0,7 ; 0,8 ; 0,8 ; 0,9 ; issues 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1) :
+| Classe | Prévisions | Probabilité moyenne | Fréquence observée |
+|---|---|---|---|
+| ≤ 0,4 | 0,2 ; 0,2 ; 0,3 ; 0,3 | 0,250 | 1/4 = 0,250 |
+| 0,4–0,65 | 0,5 ; 0,5 ; 0,5 ; 0,6 | 0,525 | 3/4 = 0,750 |
+| > 0,65 | 0,7 ; 0,8 ; 0,8 ; 0,9 | 0,800 | 3/4 = 0,750 |
+**[Calcul de l'auteur]** Brier moyen = **0,196** ; taux de base 7/12 = 0,583, d'où une référence « climatologique » de 0,583 × 0,417 = **0,243** ; compétence relative = 1 − 0,196 ÷ 0,243 ≈ **0,19**. **[Interprétation]** Avec douze prévisions, la table de calibration reste très bruitée : la classe moyenne (0,525 annoncé, 0,75 observé) n'est pas une preuve de mauvaise calibration, juste un signal à surveiller.
+
+### 4.7 Application au diagnostic de L6.04
+**[Fait]** Diagnostic du 31/10/2026 (L6.04) : politique monétaire en resserrement ; taux réels de 2,64 à 2,67 % ; dollar et risque indéterminés. **[Fait]** Probabilité implicite de hausse en décembre : 84 % (28/10, 9 h 27 ET, S-ADM-04, non vérifiée directement).
+**[SIMULATION] Arbre de scénarios à trois mois** (rendements et probabilités conditionnels *inventés*) :
+| Branche | P(branche) | Baisse (−6 / −3 %) | Stable (0 %) | Hausse (+5 / +8 %) |
+|---|---|---|---|---|
+| Hausse de décembre réalisée | 0,84 (implicite de marché) | −6 % : 50 % | 30 % | +5 % : 20 % |
+| Pas de hausse | 0,16 | −3 % : 25 % | 35 % | +8 % : 40 % |
+**[Calcul de l'auteur]** Probabilités jointes : 0,42 ; 0,252 ; 0,168 | 0,04 ; 0,056 ; 0,064 (somme **1,000**). Marges : baisse 0,46 ; stable 0,308 ; hausse 0,232. **E = 0,42 × (−6) + 0,168 × 5 + 0,04 × (−3) + 0,064 × 8 = −1,288 %.**
+**Sensibilité à la probabilité de marché.** E(p) = p × (−2,0) + (1 − p) × 2,45 = 2,45 − 4,45 × p. Pour p = 0,84 : −1,288 ; pour p = 0,60 : **−0,22** ; E = 0 pour **p\* = 0,551**. **[Interprétation]** Dans cet arbre fictif, la conclusion change de signe si la probabilité implicite tombe sous 55 % : elle est donc très sensible à une donnée de marché qui, elle-même, a bougé de 88 à 84 % en une semaine (L6.02). **Valeur attendue négative ne veut pas dire « vendre »** : coûts, financement, taille de position et risque restent à examiner.
+
+## 5. Définitions essentielles
+
+- **Probabilité subjective / historique / de modèle / implicite de marché** : voir § 4.1.
+- **Scénarios exclusifs et exhaustifs** : un seul se réalise, et la somme des probabilités est 1.
+- **Loi des probabilités totales** : P(A) = Σ P(A | Bᵢ) P(Bᵢ).
+- **Probabilité d'équilibre** : probabilité pour laquelle la valeur nette espérée est nulle.
+- **Calibration** : concordance entre probabilités annoncées et fréquences observées.
+- **Règle de score propre** : règle qui récompense l'annonce de ses vraies croyances.
+
+## 6. Exemples chiffrés
+
+**6.1 Lissage de Laplace.** (3 + 1) ÷ (4 + 2) = 66,7 % ; (30 + 1) ÷ (40 + 2) = 73,8 %.
+**6.2 Probabilités totales (SIMULATION).** 0,56 − 0,2 × a : 0,52 pour a = 0,20 ; 0,46 pour a = 0,50.
+**6.3 Valeur attendue (SIMULATION).** 0,35 × 8 + 0,40 × 0 + 0,25 × (−5) = +1,55 % ; net de 0,2 % : +1,35 %.
+**6.4 Arbre (SIMULATION).** E = −1,288 % ; p\* = 2,45 ÷ 4,45 = 0,551.
+
+### 6.5 Cas historique documenté — la probabilité de décembre vue sous quatre angles
+**[Fait]** (S-KIT-04, S-ADM-04, L6.02) : probabilité de hausse en décembre : 88 % (21/10, FedWatch via Reuters), 84 % (28/10, 9 h 27 ET, FedWatch via Yahoo/courtier), « environ 85 % » (28/10 après-midi, Bloomberg). **[Fait]** (S-CME-05) : l'outil repose sur des hypothèses de pas de 25 pb et de réaction proportionnelle du taux effectif. **[Fait]** (S-KIT-06, S-KIT-07, S-KIT-08, S-MIN-02, S-KIT-05) : cinq décisions de 2026 avec des variations de séance de −1,40 à +1,30 %.
+**[Interprétation]** Le même sujet — « la Fed relèvera-t-elle les taux en décembre ? » — peut recevoir : une probabilité *implicite* de marché (≈ 84–85 %), une probabilité *historique* (aucune lue : la Fed a relevé une fois en 2026, un seul cas), une probabilité *de modèle* (aucune construite) et une probabilité *subjective* (celle de l'analyste, à écrire et à enregistrer). **Ce qu'on ne peut pas conclure** : que 84 % soit « la » probabilité ; que les trois chiffres de sources et d'heures différentes soient comparables. **Limites** : sources de presse et de courtier, résumés automatiques, pas d'accès direct à l'outil.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **XAU/USD** : toute thèse doit annoncer le sens de ses probabilités et recevoir une valeur attendue nette de coûts avec une analyse de sensibilité.
+- **Forex** : la même discipline s'applique à EUR/USD ; les probabilités implicites de la BCE ont leurs propres méthodes.
+- **Gestion du risque** (module 11) : la dispersion décide de la taille, pas la seule espérance.
+- **Prudence** : une probabilité d'équilibre proche de la probabilité estimée signale un pari fragile.
+
+## 8. Erreurs courantes
+
+1. Mélanger les quatre sens de « probabilité ».
+2. Donner une probabilité sans dire comment elle a été obtenue.
+3. Remplacer une donnée manquante par une valeur inventée.
+4. Conclure à la rentabilité d'une valeur attendue positive.
+5. Oublier les coûts et la dispersion.
+6. Évaluer une prévision modifiée après coup.
+7. Juger la calibration sur douze cas.
+
+## 9. Limites de l'interprétation
+
+- Tous les arbres et rendements de la leçon sont **fictifs** ; seules les probabilités implicites de marché sont issues de sources, avec leurs limites.
+- Score de Brier : décrit par une source secondaire ; l'ordre des scénarios n'est pas pris en compte.
+- Aucun échantillon assez grand pour calibrer.
+- Coûts supposés (0,2 %), non mesurés.
+- Pas d'accès direct à l'outil de probabilités de marché.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Quatre sens.** Classe : (a) « je pense que la hausse est à 25 % » ; (b) « 3 baisses sur 4 après une décision conforme » ; (c) « la régression donne 80,5 % » ; (d) « les contrats pointent vers 84 % ». Donne le risque principal de chacune.
+
+<details>
+<summary>Correction 1</summary>
+
+(a) **subjective** : optimisme/ancrage ; (b) **historique** : petit échantillon ; (c) **de modèle** : spécification et surajustement ; (d) **implicite de marché** : primes de risque, hypothèses de l'outil, instabilité.
+</details>
+
+**Exercice 2 — Laplace.** 3 baisses sur 4 ; 30 sur 40. Calcule la fréquence et l'estimation lissée (k + 1) ÷ (n + 2). Que montre la différence ?
+
+<details>
+<summary>Correction 2</summary>
+
+3 ÷ 4 = **75 %** → lissé **66,7 %** ; 30 ÷ 40 = **75 %** → lissé **73,8 %**. La correction pèse beaucoup quand n est petit, peu quand n grandit.
+</details>
+
+**Exercice 3 — Totales.** P(hausse | dollar ↑, stable, ↓) = 0,30 ; 0,50 ; 0,70. P(dollar ↑) = a, P(dollar ↓) = 0,30, P(stable) = 0,70 − a. Calcule P(hausse) pour a = 0,20 et a = 0,50.
+
+<details>
+<summary>Correction 3</summary>
+
+P = 0,30a + 0,50(0,70 − a) + 0,70 × 0,30 = 0,56 − 0,20a. a = 0,20 : **0,52** ; a = 0,50 : **0,46**. L'inconnue sur le dollar déplace la conclusion de 6 points au plus.
+</details>
+
+**Exercice 4 — Espérance et coûts.** Rendements +8 % (35 %), 0 % (40 %), −5 % (25 %) ; coûts 0,2 %. Calcule E, la valeur nette, puis E si 5 points passent de « baisse » à « hausse ».
+
+<details>
+<summary>Correction 4</summary>
+
+E = 2,80 + 0 − 1,25 = **+1,55 %** ; nette **+1,35 %** ; après déplacement : 0,40 × 8 − 0,20 × 5 = **+2,20 %** (+0,65 point). L'écart-type d'environ 5,12 points rappelle que le résultat réel est très dispersé.
+</details>
+
+**Exercice 5 — Équilibre.** Gain 8, perte 5, coût 0,2. Calcule la probabilité d'équilibre et interprète-la.
+
+<details>
+<summary>Correction 5</summary>
+
+p\* = (5 + 0,2) ÷ (8 + 5) = **0,40**. Au-dessus de 40 %, le pari est rentable en espérance dans ce cas simplifié ; l'incertitude de quelques points sur p suffit à faire basculer la conclusion.
+</details>
+
+**Exercice 6 — Arbre.** P(hausse de décembre) = 0,84 ; sachant la hausse, E des rendements = −2,0 ; sachant l'absence de hausse, E = +2,45. Calcule E, E pour p = 0,60 et la probabilité d'équilibre. Que faire de la conclusion ?
+
+<details>
+<summary>Correction 6</summary>
+
+E = 0,84 × (−2,0) + 0,16 × 2,45 = −1,68 + 0,392 = **−1,288 %** ; p = 0,60 : 2,45 − 4,45 × 0,60 = **−0,22 %** ; p\* = 2,45 ÷ 4,45 = **0,551**. La conclusion est fragile : elle change de signe pour un petit écart de la probabilité de marché ; aucun ordre de vente n'en découle (coûts, risque, taille non examinés).
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L6.05.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Quatre probabilités distinctes : subjective, historique, de modèle, implicite de marché ; on précise toujours laquelle.
+- Les données manquantes deviennent des états possibles ou des bornes, jamais des valeurs inventées.
+- Valeur attendue, dispersion, coûts et probabilité d'équilibre : une espérance positive ne prouve pas la rentabilité.
+- Enregistrer avant, évaluer après (Brier, calibration) sur de grands échantillons.
+- Arbre fictif du 31/10/2026 : E = −1,288 %, signe instable autour de p\* = 55,1 %.
+
+## 13. Critères de maîtrise
+
+- [ ] Classer les quatre sens de probabilité (Exercice 1).
+- [ ] Mesurer l'incertitude d'une fréquence (Exercice 2).
+- [ ] Appliquer la loi des probabilités totales (Exercice 3).
+- [ ] Calculer espérance, coûts et sensibilité (Exercice 4).
+- [ ] Calculer une probabilité d'équilibre (Exercices 5 et 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **31 octobre 2026** :
+
+- **S-WIK-01** — Wikipédia (secondaire, résumé automatique), « Brier score » : https://en.wikipedia.org/wiki/Brier_score
+- **S-ADM-04**, **S-CME-05**, **S-FRD-04**, **S-FRD-01**, **S-KIT-05**, **S-KIT-06**, **S-KIT-07**, **S-KIT-08**, **S-MIN-02**, **S-KIT-04** — déjà lues (L5.03, L6.01 à L6.04).
+
+**Définitions de cours non rattachées à une source lue :** quatre sens de probabilité, lissage de Laplace, loi des probabilités totales, probabilité d'équilibre, fiche d'enregistrement, table de calibration. **Points non vérifiés :** article de Brier (1950) et décomposition de Murphy (formules non lues), valeurs de l'outil de probabilités de marché, coûts de transaction réels, probabilité historique de hausse de la Fed.

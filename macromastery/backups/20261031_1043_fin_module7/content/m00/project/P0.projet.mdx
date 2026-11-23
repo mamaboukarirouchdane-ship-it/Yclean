@@ -1,0 +1,78 @@
+---
+id: P0
+module: 0
+title: "Mini-projet du module 0 — Fiche d'identité d'une paire de devises et de l'or"
+duration_hours: 3
+prerequisites: ["L0.01", "L0.02", "L0.03", "L0.04", "L0.05", "L0.06", "L0.07", "L0.08", "L0.09", "L0.10"]
+status: "Rédigé"   # statut officiel dans registry/lessons.json
+---
+
+# P0 — Fiche d'identité d'une paire de devises et de l'or
+
+> **Convention.** [Fait] = vérifié dans une source citée ; [Calcul de l'auteur] ; [Interprétation] ; [SIMULATION]. Ce projet ne demande **aucune prévision** de prix : il demande de **décrire correctement** un instrument. Une bonne fiche ne garantit pas une transaction gagnante.
+
+## 1. Consigne
+
+Tu produis **une fiche d'identité de 2 pages maximum** pour **une paire de devises** de ton choix (par exemple EUR/USD, USD/JPY, USD/XOF ou GBP/USD) **et une fiche pour l'or (XAU/USD)**. Chaque fiche est autonome et sourcée.
+
+## 2. Contenu obligatoire de chaque fiche
+
+1. **Identité** : base, cotation, convention (combien de cotation pour 1 de base), valeur du pip et taille du pip (L0.03).
+2. **Marché** : où et comment s'échange l'instrument (gré à gré / organisé), acteurs principaux et leurs motivations (L0.01, L0.02), heures actives en heure du Bénin (L0.04).
+3. **Coûts et liquidité** : spread typique (à relever dans une source citée, ou à marquer « à définir »), coûts additionnels, risques de liquidité (L0.01, L0.04).
+4. **Mécanique de prix** : taux croisé éventuel, conversions en euros et en francs CFA par la méthode des unités (L0.05) ; pour l'or, conversion once troy → gramme (L0.06).
+5. **Déterminants à étudier** (liste, **sans conclusion**) : les variables macroéconomiques que les modules suivants analyseront (taux, inflation, etc.), avec le module concerné.
+6. **Lecture de graphique** : une période, une échelle, une source et un fuseau explicitement justifiés (L0.09) ; rendement de la période en % (L0.09).
+7. **Risque** : écart-type des rendements sur une fenêtre justifiée, annualisation avec hypothèses, baisse maximale sur la fenêtre (L0.10), et limites.
+8. **Taille de position** : un exemple chiffré à risque fixé (L0.04) en indiquant explicitement que les chiffres sont fictifs.
+9. **Taux et obligations** : le taux sans risque pertinent (par exemple l'écart entre deux rendements d'État pour la paire) **uniquement s'il est relevé dans une source citée** (L0.07, L0.08).
+10. **Sources et limites** : liste datée ; distinction faits / calculs / interprétations ; ce qui n'a pas pu être vérifié.
+
+## 3. Règles de rigueur
+
+- Toute donnée de marché porte **sa source, sa date et son unité**.
+- Les valeurs fictives sont marquées **SIMULATION**.
+- Aucune phrase du type « va monter » ou « va baisser ».
+- Si une donnée n'est pas accessible, écrire **« à définir »** : ne rien inventer.
+
+## 4. Grille de notation (40 points ; réussite : 28)
+
+| Critère | Points | Niveau attendu |
+| --- | --- | --- |
+| Identité exacte (convention, pip, cotation) | 4 | Aucune erreur de convention ni de pip |
+| Marché, acteurs, motivations | 4 | Distingue acteur et motivation ; heures en heure du Bénin vérifiées |
+| Coûts et liquidité | 4 | Spread sourcé ou « à définir » ; risques cités |
+| Calculs de conversion | 5 | Méthode des unités visible ; résultats justes à la précision demandée |
+| Déterminants à étudier | 3 | Liste pertinente, **sans prévision** |
+| Lecture de graphique | 5 | Échelle, période, source justifiées ; rendement correct ; biais cités |
+| Risque quantifié | 6 | Écart-type, annualisation et baisse maximale exacts ; hypothèses et limites nommées |
+| Taille de position | 3 | Formule correcte ; chiffres fictifs signalés |
+| Sources, dates et distinctions | 4 | Chaque donnée est sourcée et datée ; faits/calculs/interprétations séparés |
+| Qualité de rédaction | 2 | Clair, concis, sans répétition |
+| **Total** | **40** | |
+
+**Pénalités :** prévision de prix déguisée en certitude (−4) ; donnée inventée ou non sourcée présentée comme réelle (−6) ; confusion entre pips et pourcentage dans une comparaison (−2).
+
+## 5. Exemple de correction partielle (modèle, SIMULATION là où indiqué)
+
+**Fiche EUR/USD — extraits.**
+
+- *Identité.* 1 euro vaut X dollars ; 1 pip = 0,0001 ; avec 100 000 unités de base, 1 pip vaut 10 USD (par lot standard).
+- *Donnée observée (source S-ECB-04, lecture par résumé automatique).* Taux de référence de la BCE : 27/10/2026 = 1,1150 ; 28/10 = 1,1133 ; 29/10 = 1,1130. Rendement du 27 au 29 : 1,1130 ÷ 1,1150 − 1 = **−0,1794 %** (−20 pips). Ces taux sont informatifs et non des prix de transaction.
+- *Conversion en francs CFA.* 1 € = 655,957 XOF (parité fixe, BCEAO) ; 1 USD = 655,957 ÷ 1,1130 = **589,36 XOF** au taux de référence du 29/10/2026 [Calcul de l'auteur].
+- *Taille de position (SIMULATION).* Risque accepté 100 USD, stop 25 pips, pip à 10 USD : 100 ÷ (25 × 10) = **0,4 lot**.
+- *Risque.* Trois observations ne suffisent pas pour un écart-type fiable : la fiche doit utiliser une **fenêtre plus longue**, obtenue auprès d'une source citée, ou écrire « à définir ».
+- *Lacune assumée.* Le spread typique n'est pas fourni par le taux de référence : **à définir**.
+
+**Fiche or — extraits.**
+- *Identité.* XAU/USD : prix en dollars d'une once troy ; 1 once troy = 31,1034768 g.
+- *Conversion (SIMULATION).* À 2 000 $ l'once : 2 000 ÷ 31,1034768 = **64,30 $ par gramme**.
+- *Marché.* Marché de gros de Londres : comptant à deux jours ouvrés, comptes alloués et non alloués ; contrats COMEX GC/MGC/1OZ de 100, 10 et 1 once.
+- *Avertissement.* L'or n'est pas une monnaie d'État et n'est pas couvert par l'enquête de la BRI sur le change.
+
+## 6. Critères de maîtrise du projet
+
+- [ ] Les deux fiches respectent les 10 rubriques.
+- [ ] Aucune prévision n'est formulée.
+- [ ] Toute donnée de marché est sourcée et datée.
+- [ ] Au moins 28/40 selon la grille.

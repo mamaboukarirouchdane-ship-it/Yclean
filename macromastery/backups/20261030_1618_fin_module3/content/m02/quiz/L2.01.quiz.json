@@ -1,0 +1,238 @@
+{
+  "lessonId": "L2.01",
+  "title": "Quiz — Rôle, mandats et indépendance",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : Fed, Parlement européen, BCE, BCEAO, Federal Reserve History (résumés automatiques).",
+  "questions": [
+    {
+      "id": "L2.01-Q1",
+      "type": "mcq",
+      "prompt": "Quels sont les trois objectifs légaux de la Réserve fédérale (section 2A) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Croissance, commerce, budget"
+        },
+        {
+          "id": "b",
+          "text": "Inflation, change, dette publique"
+        },
+        {
+          "id": "c",
+          "text": "Emploi maximal, prix stables, taux d'intérêt modérés à long terme"
+        },
+        {
+          "id": "d",
+          "text": "Seulement l'inflation"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Section 2A : « maximum employment, stable prices, and moderate long-term interest rates ».",
+      "tags": [
+        "fed",
+        "mandat"
+      ]
+    },
+    {
+      "id": "L2.01-Q2",
+      "type": "mcq",
+      "prompt": "Quelle est la cible d'inflation de la Fed et comment est-elle mesurée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2 % en variation annuelle de l'indice PCE"
+        },
+        {
+          "id": "b",
+          "text": "2 % de l'IPCH"
+        },
+        {
+          "id": "c",
+          "text": "0 % du CPI"
+        },
+        {
+          "id": "d",
+          "text": "3 % du PCE de base"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La déclaration sur les objectifs de long terme fixe 2 % sur la variation annuelle du PCE, réaffirmée le 27 janvier 2026.",
+      "tags": [
+        "fed",
+        "cible"
+      ]
+    },
+    {
+      "id": "L2.01-Q3",
+      "type": "mcq",
+      "prompt": "Pourquoi la Fed n'a-t-elle pas d'objectif chiffré d'emploi ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que l'emploi est sans importance"
+        },
+        {
+          "id": "b",
+          "text": "Parce que le chômage est toujours de 4 %"
+        },
+        {
+          "id": "c",
+          "text": "Parce que la loi l'interdit"
+        },
+        {
+          "id": "d",
+          "text": "Parce que l'emploi maximal n'est pas directement mesurable et varie dans le temps"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le Comité note que l'emploi maximal est non mesurable directement et change surtout pour des raisons non monétaires.",
+      "tags": [
+        "fed",
+        "emploi"
+      ]
+    },
+    {
+      "id": "L2.01-Q4",
+      "type": "mcq",
+      "prompt": "Quel est l'objectif principal de la BCE selon l'article 127(1) du TFUE ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le plein emploi"
+        },
+        {
+          "id": "b",
+          "text": "La stabilité des prix"
+        },
+        {
+          "id": "c",
+          "text": "La croissance du PIB"
+        },
+        {
+          "id": "d",
+          "text": "La stabilité du change"
+        }
+      ],
+      "correct": "b",
+      "explanation": "L'objectif principal est la stabilité des prix, définie depuis juillet 2021 comme 2 % d'IPCH à moyen terme, cible symétrique.",
+      "tags": [
+        "bce",
+        "mandat"
+      ]
+    },
+    {
+      "id": "L2.01-Q5",
+      "type": "mcq",
+      "prompt": "Que signifie une cible d'inflation symétrique ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Seule une inflation supérieure à la cible est indésirable"
+        },
+        {
+          "id": "b",
+          "text": "La cible change chaque année"
+        },
+        {
+          "id": "c",
+          "text": "L'inflation doit être exactement 2 % chaque mois"
+        },
+        {
+          "id": "d",
+          "text": "Les écarts à la hausse et à la baisse sont jugés également indésirables"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Selon la BCE, les écarts positifs et négatifs sont également indésirables ; des écarts de court terme sont admis.",
+      "tags": [
+        "symetrie"
+      ]
+    },
+    {
+      "id": "L2.01-Q6",
+      "type": "mcq",
+      "prompt": "Combien de membres votants compte le FOMC et qui sont-ils ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "12 présidents de banques de réserve"
+        },
+        {
+          "id": "b",
+          "text": "7 gouverneurs seulement"
+        },
+        {
+          "id": "c",
+          "text": "12 : 7 gouverneurs, le président de New York et 4 autres présidents en rotation"
+        },
+        {
+          "id": "d",
+          "text": "5 gouverneurs et 7 présidents"
+        }
+      ],
+      "correct": "c",
+      "explanation": "7 + 1 + 4 = 12 ; les 7 autres présidents participent aux débats sans voter.",
+      "tags": [
+        "fomc"
+      ]
+    },
+    {
+      "id": "L2.01-Q7",
+      "type": "mcq",
+      "prompt": "Que prévoit l'article 36 des statuts de la BCEAO (résumé) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'interdiction des financements monétaires aux Trésors publics et organismes publics des États membres"
+        },
+        {
+          "id": "b",
+          "text": "Un financement monétaire illimité des États"
+        },
+        {
+          "id": "c",
+          "text": "La fixation du taux de change"
+        },
+        {
+          "id": "d",
+          "text": "La nomination des ministres"
+        }
+      ],
+      "correct": "a",
+      "explanation": "L'article 36 interdit le financement monétaire ; l'article 18 plafonne par ailleurs certaines créances adossées à des titres publics.",
+      "tags": [
+        "bceao",
+        "independance"
+      ]
+    },
+    {
+      "id": "L2.01-Q8",
+      "type": "mcq",
+      "prompt": "Que montre l'accord Trésor–Fed du 4 mars 1951 (essai de la Fed, résumé) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que la Fed doit toujours obéir au Trésor"
+        },
+        {
+          "id": "b",
+          "text": "La fin du plafonnement des rendements et la séparation entre gestion de la dette et politique monétaire"
+        },
+        {
+          "id": "c",
+          "text": "L'abolition de la Fed"
+        },
+        {
+          "id": "d",
+          "text": "Un accord sur le taux de change"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le plafond (3/8 % à court terme, 2,5 % à long terme) avait fait perdre à la Fed le contrôle de la quantité de monnaie ; l'accord y a mis fin.",
+      "tags": [
+        "accord-1951"
+      ]
+    }
+  ],
+  "revision": 1
+}

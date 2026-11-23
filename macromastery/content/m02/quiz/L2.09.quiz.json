@@ -1,0 +1,235 @@
+{
+  "lessonId": "L2.09",
+  "title": "Quiz — La BCE en détail",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : BCE (Conseil, rotation, stratégie), Banque d'Espagne (relais de la décision de juin 2026), résumés automatiques.",
+  "questions": [
+    {
+      "id": "L2.09-Q1",
+      "type": "mcq",
+      "prompt": "Combien de membres compte le Conseil des gouverneurs de la BCE selon la page lue ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "12"
+        },
+        {
+          "id": "b",
+          "text": "21"
+        },
+        {
+          "id": "c",
+          "text": "27"
+        },
+        {
+          "id": "d",
+          "text": "19"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Six membres du directoire plus 21 gouverneurs de banques centrales nationales de la zone euro donnent 27 membres.",
+      "tags": [
+        "conseil"
+      ]
+    },
+    {
+      "id": "L2.09-Q2",
+      "type": "mcq",
+      "prompt": "Combien de votants y a-t-il à chaque réunion de politique monétaire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "21"
+        },
+        {
+          "id": "b",
+          "text": "27"
+        },
+        {
+          "id": "c",
+          "text": "12"
+        },
+        {
+          "id": "d",
+          "text": "15"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Les six membres du directoire votent en permanence, auxquels s'ajoutent 4 + 11 droits de vote exercés à tour de rôle : 6 + 4 + 11 = 21.",
+      "tags": [
+        "rotation"
+      ]
+    },
+    {
+      "id": "L2.09-Q3",
+      "type": "mcq",
+      "prompt": "Quelle fréquence de vote a un gouverneur du groupe 1 (5 gouverneurs, 4 droits) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "50 %"
+        },
+        {
+          "id": "b",
+          "text": "68,75 %"
+        },
+        {
+          "id": "c",
+          "text": "100 %"
+        },
+        {
+          "id": "d",
+          "text": "80 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Quatre droits de vote pour cinq gouverneurs donnent 4/5 = 80 % des mois ; le groupe 2 vote 11/16, soit 68,75 %.",
+      "tags": [
+        "rotation",
+        "calcul"
+      ]
+    },
+    {
+      "id": "L2.09-Q4",
+      "type": "mcq",
+      "prompt": "Quel événement a déclenché la rotation des droits de vote ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La crise financière de 2008"
+        },
+        {
+          "id": "b",
+          "text": "Le dépassement de 18 gouverneurs avec l'entrée de la Lituanie le 1er janvier 2015"
+        },
+        {
+          "id": "c",
+          "text": "La création de l'euro en 1999"
+        },
+        {
+          "id": "d",
+          "text": "La révision de la stratégie en 2025"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La rotation était prévue dès décembre 2002 et s'applique depuis que le nombre de gouverneurs a dépassé 18.",
+      "tags": [
+        "cas"
+      ]
+    },
+    {
+      "id": "L2.09-Q5",
+      "type": "mcq",
+      "prompt": "Comment le Conseil décide-t-il en général ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Par tirage au sort"
+        },
+        {
+          "id": "b",
+          "text": "Par vote publié à chaque réunion"
+        },
+        {
+          "id": "c",
+          "text": "Par décision du seul président"
+        },
+        {
+          "id": "d",
+          "text": "Par consensus"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La page lue indique que le Conseil décide en général par consensus ; la rotation n'a pas changé cette pratique.",
+      "tags": [
+        "decision"
+      ]
+    },
+    {
+      "id": "L2.09-Q6",
+      "type": "mcq",
+      "prompt": "Quelle est la cible de la BCE selon la page de stratégie ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "3 % sur douze mois"
+        },
+        {
+          "id": "b",
+          "text": "0 % d'inflation"
+        },
+        {
+          "id": "c",
+          "text": "2 % d'inflation à moyen terme, mesurée par l'IPCH, symétrique"
+        },
+        {
+          "id": "d",
+          "text": "Un taux de chômage fixe"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La stabilité des prix est visée par une inflation de 2 % à moyen terme, avec un engagement symétrique des écarts.",
+      "tags": [
+        "strategie"
+      ]
+    },
+    {
+      "id": "L2.09-Q7",
+      "type": "mcq",
+      "prompt": "DFR = 2,50 %, MRO = 2,65 %. Quelle est la MLF si l'écart MLF − DFR est de 40 pb ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2,90 %"
+        },
+        {
+          "id": "b",
+          "text": "3,05 %"
+        },
+        {
+          "id": "c",
+          "text": "2,75 %"
+        },
+        {
+          "id": "d",
+          "text": "2,65 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "2,50 + 0,40 = 2,90 %, valeur de septembre 2026 ; le MRO se situe 15 pb au-dessus de la DFR.",
+      "tags": [
+        "corridor",
+        "calcul"
+      ]
+    },
+    {
+      "id": "L2.09-Q8",
+      "type": "mcq",
+      "prompt": "Pourquoi est-il risqué de chercher des dissidences publiques à la BCE comme à la Fed ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que la BCE ne tient pas de réunions"
+        },
+        {
+          "id": "b",
+          "text": "Parce que le Conseil décide généralement par consensus et que les votes individuels ne sont pas publiés dans les sources lues"
+        },
+        {
+          "id": "c",
+          "text": "Parce que le directoire ne vote jamais"
+        },
+        {
+          "id": "d",
+          "text": "Parce que la BCE n'a pas de cible d'inflation"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Les désaccords se lisent plutôt dans les discours et les comptes rendus ; transposer la lecture des dissidences du FOMC est une erreur de méthode.",
+      "tags": [
+        "interpretation"
+      ]
+    }
+  ],
+  "revision": 1
+}

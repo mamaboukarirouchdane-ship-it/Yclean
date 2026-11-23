@@ -1,0 +1,233 @@
+{
+  "lessonId": "L4.06",
+  "title": "Quiz — Le dollar",
+  "passThreshold": 0.8,
+  "note": "Seuil : 7 bonnes réponses sur 8.",
+  "questions": [
+    {
+      "id": "L4.06-Q1",
+      "type": "mcq",
+      "prompt": "Selon l'enquête de la BRI d'avril 2025, quelle part des transactions de change comporte le dollar ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "28,9 %"
+        },
+        {
+          "id": "b",
+          "text": "44,5 %"
+        },
+        {
+          "id": "c",
+          "text": "89 %"
+        },
+        {
+          "id": "d",
+          "text": "100 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le communiqué de la BRI indique que le dollar est d'un côté de 89 % des transactions, d'où son rôle de monnaie pivot.",
+      "tags": [
+        "bri"
+      ]
+    },
+    {
+      "id": "L4.06-Q2",
+      "type": "mcq",
+      "prompt": "Pourquoi la somme des parts de toutes les devises dans l'enquête atteint-elle 200 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Chaque transaction implique deux devises"
+        },
+        {
+          "id": "b",
+          "text": "Parce que le dollar est compté deux fois par erreur"
+        },
+        {
+          "id": "c",
+          "text": "Parce que les parts sont en base 200"
+        },
+        {
+          "id": "d",
+          "text": "Parce que l'enquête compte deux années"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Une opération de change implique deux monnaies ; on additionne donc les parts de chaque devise, total de 200 % (convention).",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L4.06-Q3",
+      "type": "mcq",
+      "prompt": "Dollar 89 %, euro 28,9 %, yen 16,8 %, sterling 10,2 % : quel reste pour les autres devises (total 200 %) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "100 %"
+        },
+        {
+          "id": "b",
+          "text": "144,9 %"
+        },
+        {
+          "id": "c",
+          "text": "10,1 %"
+        },
+        {
+          "id": "d",
+          "text": "55,1 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "89 + 28,9 + 16,8 + 10,2 = 144,9 ; 200 − 144,9 = 55,1 %, valeur dérivée sous l'hypothèse d'un total de 200 %.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.06-Q4",
+      "type": "mcq",
+      "prompt": "Dans l'indice large de la Réserve fédérale (février 2026), quel poids a la zone euro ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "57,6 %"
+        },
+        {
+          "id": "b",
+          "text": "21,007 %"
+        },
+        {
+          "id": "c",
+          "text": "10,891 %"
+        },
+        {
+          "id": "d",
+          "text": "50 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La page de la Réserve fédérale donne 21,007 % à la zone euro ; Mexique 14,801 %, Canada 12,769 %, Chine 10,891 %.",
+      "tags": [
+        "fed"
+      ]
+    },
+    {
+      "id": "L4.06-Q5",
+      "type": "mcq",
+      "prompt": "Zone euro + Mexique + Canada + Chine dans l'indice large : quel poids total ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "21,01 %"
+        },
+        {
+          "id": "b",
+          "text": "49,24 %"
+        },
+        {
+          "id": "c",
+          "text": "100 %"
+        },
+        {
+          "id": "d",
+          "text": "59,47 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "21,007 + 14,801 + 12,769 + 10,891 = 59,468 % ; plus de la moitié du poids concerne ces quatre économies.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.06-Q6",
+      "type": "mcq",
+      "prompt": "L'euro perd 2,37 % et les autres devises sont stables : contribution approximative à l'indice large ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+21 %"
+        },
+        {
+          "id": "b",
+          "text": "+2,37 %"
+        },
+        {
+          "id": "c",
+          "text": "+0,50 %"
+        },
+        {
+          "id": "d",
+          "text": "+0,05 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Au premier ordre, 0,21007 × 2,37 = 0,50 % ; c'est une simulation sans autres mouvements.",
+      "tags": [
+        "simulation"
+      ]
+    },
+    {
+      "id": "L4.06-Q7",
+      "type": "mcq",
+      "prompt": "EUR/USD de 1,1400 à 1,1130 : quelle variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−2,37 %"
+        },
+        {
+          "id": "b",
+          "text": "+2,37 %"
+        },
+        {
+          "id": "c",
+          "text": "−2,70 %"
+        },
+        {
+          "id": "d",
+          "text": "−0,27 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "1,1130 ÷ 1,1400 − 1 = −2,37 % ; la variation de l'indice dollar est calculée séparément (+1,96 %).",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.06-Q8",
+      "type": "mcq",
+      "prompt": "Pourquoi ne peut-on pas attribuer la hausse du dollar de fin 2026 à la seule Fed ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que la Fed n'a aucun effet"
+        },
+        {
+          "id": "b",
+          "text": "D'autres facteurs coïncident (énergie, géopolitique) et les données ne permettent pas de les séparer"
+        },
+        {
+          "id": "c",
+          "text": "Parce que l'indice est faux"
+        },
+        {
+          "id": "d",
+          "text": "Parce que le dollar est fixé"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Taux, choc pétrolier et tension géopolitique coïncident ; corrélation n'est pas causalité et les sources sont secondaires.",
+      "tags": [
+        "limite"
+      ]
+    }
+  ],
+  "revision": 1
+}

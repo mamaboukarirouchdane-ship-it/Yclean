@@ -1,0 +1,180 @@
+{
+  "chapterId": "5.2",
+  "module": 5,
+  "title": "Quiz de chapitre 5.2 — Taux réels, dollar et point mort d'inflation (L5.03–L5.05)",
+  "passThreshold": 0.8333333333333334,
+  "requiredCorrect": 5,
+  "passRule": "5 bonnes réponses sur 6 (règle R1 : ⌈0,8 × 6⌉ = 5 ; seuil pédagogique provisoire)",
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C5.2-Q1",
+      "type": "mcq",
+      "prompt": "Rendement nominal 4,95 % ; rendement réel 2,653 %. Point mort par différence ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 4,95 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ 7,603 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ 2,238 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ 2,297 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "4,95 − 2,653 = 2,297 % ; la formule exacte de Fisher donne 2,238 % : la différence surestime d'environ 6 pb.",
+      "tags": [
+        "pointmort"
+      ]
+    },
+    {
+      "id": "C5.2-Q2",
+      "type": "mcq",
+      "prompt": "Prix de l'or 4 060 $ ; taux réel 2,64 %. Quel coût d'opportunité annuel d'une once, en dollars (calcul indicatif) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 10,7 $"
+        },
+        {
+          "id": "b",
+          "text": "≈ 107,2 $"
+        },
+        {
+          "id": "c",
+          "text": "≈ 1 072 $"
+        },
+        {
+          "id": "d",
+          "text": "≈ 2,64 $"
+        }
+      ],
+      "correct": "b",
+      "explanation": "4 060 × 0,0264 = 107,2 $ ; c'est un calcul de cours, non une mesure du coût réel d'un détenteur.",
+      "tags": [
+        "cout"
+      ]
+    },
+    {
+      "id": "C5.2-Q3",
+      "type": "mcq",
+      "prompt": "Taux réel : 2,04 % (mai) et 2,64 % (septembre). Variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−0,60 point"
+        },
+        {
+          "id": "b",
+          "text": "+0,60 %"
+        },
+        {
+          "id": "c",
+          "text": "+30 %"
+        },
+        {
+          "id": "d",
+          "text": "+0,60 point"
+        }
+      ],
+      "correct": "d",
+      "explanation": "2,64 − 2,04 = 0,60 point de pourcentage ; en relatif, la hausse serait de 29 %, mais on parle de points pour des taux.",
+      "tags": [
+        "taux"
+      ]
+    },
+    {
+      "id": "C5.2-Q4",
+      "type": "mcq",
+      "prompt": "Or à 4 000 $ avec EUR/USD à 1,10, puis 4 100 $ avec EUR/USD à 1,15. Variation de l'or en euros ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ +4,55 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ +2,5 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ −1,96 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ 0 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "3 636,36 € puis 3 565,22 € : l'or monte de 2,5 % en dollars mais l'euro de 4,55 %, d'où une baisse en euros.",
+      "tags": [
+        "euro"
+      ]
+    },
+    {
+      "id": "C5.2-Q5",
+      "type": "mcq",
+      "prompt": "Quel poids l'euro a-t-il dans l'indice large du dollar de la Fed (février 2026) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 21,0 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ 57,6 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ 12,8 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ 100 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "21,007 % dans l'indice large (S-FED-25) ; le DXY donne environ 57,6 % à l'euro (source secondaire).",
+      "tags": [
+        "indice"
+      ]
+    },
+    {
+      "id": "C5.2-Q6",
+      "type": "mcq",
+      "prompt": "Nominal moyen de septembre : réel 2,64 % ; point mort 2,35 %. Quel nominal approché ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 0,29 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ 4,99 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ 6,2 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ 2,5 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Nominal ≈ réel + point mort : 2,64 + 2,35 = 4,99 % ; le nominal a gagné 0,51 point depuis mai, dont 0,60 pour le réel.",
+      "tags": [
+        "calcul"
+      ]
+    }
+  ],
+  "revision": 1
+}

@@ -1,0 +1,44 @@
+{
+  "m00": {
+    "chapter_quizzes": {
+      "0.1": "content/m00/assessments/chap_0.1.quiz.json",
+      "0.2": "content/m00/assessments/chap_0.2.quiz.json",
+      "0.3": "content/m00/assessments/chap_0.3.quiz.json",
+      "0.4": "content/m00/assessments/chap_0.4.quiz.json",
+      "0.5": "content/m00/assessments/chap_0.5.quiz.json"
+    },
+    "exam": "content/m00/assessments/EX0.exam.json",
+    "project": "content/m00/project/P0.projet.mdx",
+    "diagnostic_initial": "à rédiger (progressif)",
+    "diagnostic_final_alternatif": "à rédiger (progressif)",
+    "states": {
+      "written": true,
+      "verified_by_script": true,
+      "integrated": false,
+      "tested": false,
+      "validated": false
+    },
+    "notes": "Examen : 25 QCM + 5 calculs, 40 points, seuil 28/40. Les 5 calculs sont recalculés par tools/verify_assessments_m00.py. La grille du projet est incluse dans le fichier du projet."
+  },
+  "m01": {
+    "chapter_quizzes": {
+      "1.1": "content/m01/assessments/chap_1.1.quiz.json",
+      "1.2": "content/m01/assessments/chap_1.2.quiz.json",
+      "1.3": "content/m01/assessments/chap_1.3.quiz.json",
+      "1.4": "content/m01/assessments/chap_1.4.quiz.json",
+      "1.5": "content/m01/assessments/chap_1.5.quiz.json"
+    },
+    "exam": "content/m01/assessments/EX1.exam.json",
+    "project": "content/m01/project/P1.projet.mdx",
+    "diagnostic_initial": "à rédiger (progressif)",
+    "diagnostic_final_alternatif": "à rédiger (progressif)",
+    "states": {
+      "written": true,
+      "verified_by_script": true,
+      "integrated": false,
+      "tested": false,
+      "validated": false
+    },
+    "notes": "Examen : 25 QCM + 5 calculs, 40 points, seuil 28/40. Les 5 calculs sont recalculés par tools/verify_assessments_m01.py. La grille du projet est incluse dans le fichier du projet."
+  }
+}

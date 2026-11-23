@@ -1,0 +1,235 @@
+{
+  "lessonId": "L1.05",
+  "title": "Quiz — Causes de l'inflation",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : Fed de New York (7/10/2026), Fed de San Francisco (21/06/2022), résumés automatiques.",
+  "questions": [
+    {
+      "id": "L1.05-Q1",
+      "type": "mcq",
+      "prompt": "Pour une catégorie de dépenses, prix et quantités s'écartent de l'attendu dans le même sens (tous deux en hausse). Selon la méthode décrite, c'est un signal de :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Offre réduite"
+        },
+        {
+          "id": "b",
+          "text": "Aucun signal"
+        },
+        {
+          "id": "c",
+          "text": "Demande plus forte"
+        },
+        {
+          "id": "d",
+          "text": "Erreur de mesure obligatoirement"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Même sens = demande ; sens opposés = offre. Chaque lecture peut rester ambiguë si l'écart est faible ou si plusieurs chocs coexistent.",
+      "tags": [
+        "classification"
+      ]
+    },
+    {
+      "id": "L1.05-Q2",
+      "type": "mcq",
+      "prompt": "Prix +9 % et quantités −5 % par rapport à l'attendu : lecture la plus plausible ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Offre réduite"
+        },
+        {
+          "id": "b",
+          "text": "Demande plus forte"
+        },
+        {
+          "id": "c",
+          "text": "Demande plus faible"
+        },
+        {
+          "id": "d",
+          "text": "Offre accrue"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Prix en hausse et quantités en baisse : sens opposés → choc d'offre (offre réduite).",
+      "tags": [
+        "classification"
+      ]
+    },
+    {
+      "id": "L1.05-Q3",
+      "type": "mcq",
+      "prompt": "Dans l'étude de la Fed de San Francisco (juin 2022, résumé), l'inflation PCE d'avril 2022 est de 6,3 % contre 1,5 % en moyenne avant la pandémie. Quel est l'écart ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1,5 point"
+        },
+        {
+          "id": "b",
+          "text": "7,8 points"
+        },
+        {
+          "id": "c",
+          "text": "6,3 points"
+        },
+        {
+          "id": "d",
+          "text": "4,8 points"
+        }
+      ],
+      "correct": "d",
+      "explanation": "6,3 − 1,5 = 4,8 points : l'offre contribue 2,5 points, la demande 1,4 point, et 0,9 point reste ambigu.",
+      "tags": [
+        "sf-fed",
+        "calcul"
+      ]
+    },
+    {
+      "id": "L1.05-Q4",
+      "type": "mcq",
+      "prompt": "Quelle part de l'écart de 4,8 points est attribuée à l'offre ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1,4 point, soit environ 29 %"
+        },
+        {
+          "id": "b",
+          "text": "2,5 points, soit environ 52 %"
+        },
+        {
+          "id": "c",
+          "text": "4,8 points"
+        },
+        {
+          "id": "d",
+          "text": "0,9 point"
+        }
+      ],
+      "correct": "b",
+      "explanation": "2,5 ÷ 4,8 = 52 % ; la demande 29 % ; l'ambigu 19 %.",
+      "tags": [
+        "sf-fed"
+      ]
+    },
+    {
+      "id": "L1.05-Q5",
+      "type": "mcq",
+      "prompt": "Nominal 4,40 %, réel (indexé) 1,90 %, même échéance. Le point mort d'inflation approximatif est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "6,30 %"
+        },
+        {
+          "id": "b",
+          "text": "4,40 %"
+        },
+        {
+          "id": "c",
+          "text": "1,90 %"
+        },
+        {
+          "id": "d",
+          "text": "2,50 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Point mort ≈ nominal − réel = 2,50 % (exact : 2,45 %). Il inclut des primes de risque et de liquidité : ce n'est pas une anticipation pure.",
+      "tags": [
+        "breakeven"
+      ]
+    },
+    {
+      "id": "L1.05-Q6",
+      "type": "mcq",
+      "prompt": "Enquête de la Fed de New York de septembre 2026 (résumé) : anticipation d'inflation à un an ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "3,0 %"
+        },
+        {
+          "id": "b",
+          "text": "3,3 %"
+        },
+        {
+          "id": "c",
+          "text": "3,9 %"
+        },
+        {
+          "id": "d",
+          "text": "2,0 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La médiane à un an est de 3,9 % (la plus haute depuis mai 2023) ; 3,3 % à trois ans et 3,0 % à cinq ans.",
+      "tags": [
+        "nyf"
+      ]
+    },
+    {
+      "id": "L1.05-Q7",
+      "type": "mcq",
+      "prompt": "Pourquoi ne faut-il pas comparer directement la médiane de l'enquête (3,0 % à cinq ans) à l'objectif de 2 % de la Fed ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce qu'il s'agit d'une enquête de ménages portant sur leur perception de l'inflation, non de l'indice PCE visé ; la comparaison directe est trompeuse"
+        },
+        {
+          "id": "b",
+          "text": "Parce que l'objectif n'existe pas"
+        },
+        {
+          "id": "c",
+          "text": "Parce que l'enquête est toujours fausse"
+        },
+        {
+          "id": "d",
+          "text": "Parce que la Fed ne regarde jamais les anticipations"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Les ménages anticipent l'inflation telle qu'ils la perçoivent ; les niveaux ne sont pas comparables au PCE. Il faut compléter par des mesures de marché et de prévisionnistes.",
+      "tags": [
+        "enquete",
+        "limites"
+      ]
+    },
+    {
+      "id": "L1.05-Q8",
+      "type": "mcq",
+      "prompt": "Dans un modèle d'anticipations adaptatives avec E₀ = 2 %, λ = 0,5 et une inflation observée de 4 %, que vaut E₁ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2 %"
+        },
+        {
+          "id": "b",
+          "text": "3,0 %"
+        },
+        {
+          "id": "c",
+          "text": "4 %"
+        },
+        {
+          "id": "d",
+          "text": "3,5 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "E₁ = 2 + 0,5 × (4 − 2) = 3,0 %. Un λ plus petit rend les anticipations plus ancrées.",
+      "tags": [
+        "adaptatif"
+      ]
+    }
+  ],
+  "revision": 1
+}

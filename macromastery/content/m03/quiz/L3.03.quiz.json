@@ -1,0 +1,233 @@
+{
+  "lessonId": "L3.03",
+  "title": "Quiz — La surprise standardisée",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : NBER (Andersen et coauteurs), exemples fictifs.",
+  "questions": [
+    {
+      "id": "L3.03-Q1",
+      "type": "mcq",
+      "prompt": "Quelle est la formule de la surprise standardisée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "consensus − publié de l'an dernier"
+        },
+        {
+          "id": "b",
+          "text": "publié ÷ consensus"
+        },
+        {
+          "id": "c",
+          "text": "(publié − consensus) ÷ écart-type des surprises passées"
+        },
+        {
+          "id": "d",
+          "text": "écart-type ÷ publié"
+        }
+      ],
+      "correct": "c",
+      "explanation": "On divise la surprise par sa variabilité habituelle pour la rendre comparable entre indicateurs.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L3.03-Q2",
+      "type": "mcq",
+      "prompt": "Pourquoi standardise-t-on les surprises ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pour comparer et cumuler des indicateurs d'unités et de volatilités différentes"
+        },
+        {
+          "id": "b",
+          "text": "Pour supprimer le consensus"
+        },
+        {
+          "id": "c",
+          "text": "Pour prévoir le prix exact"
+        },
+        {
+          "id": "d",
+          "text": "Parce que le BLS l'exige"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Une surprise d'emploi en milliers et une surprise de chômage en points ne sont comparables qu'une fois exprimées en écarts-types.",
+      "tags": [
+        "usage"
+      ]
+    },
+    {
+      "id": "L3.03-Q3",
+      "type": "mcq",
+      "prompt": "Avec σ = 40 (milliers), quelle est la surprise standardisée d'une surprise de −80 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−40"
+        },
+        {
+          "id": "b",
+          "text": "−0,5"
+        },
+        {
+          "id": "c",
+          "text": "+2,0"
+        },
+        {
+          "id": "d",
+          "text": "−2,0"
+        }
+      ],
+      "correct": "d",
+      "explanation": "−80 ÷ 40 = −2,0 : une surprise deux fois plus grande que la surprise typique.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.03-Q4",
+      "type": "mcq",
+      "prompt": "Chômage publié 4,0 contre 4,3 attendu, σ = 0,15. Quel est le z orienté pour l'emploi ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−2,0"
+        },
+        {
+          "id": "b",
+          "text": "+2,0"
+        },
+        {
+          "id": "c",
+          "text": "+0,3"
+        },
+        {
+          "id": "d",
+          "text": "−0,3"
+        }
+      ],
+      "correct": "b",
+      "explanation": "(4,0 − 4,3) ÷ 0,15 = −2,0 en brut ; en inversant le signe du chômage on obtient +2,0 : bonne nouvelle pour l'emploi.",
+      "tags": [
+        "signe"
+      ]
+    },
+    {
+      "id": "L3.03-Q5",
+      "type": "mcq",
+      "prompt": "Surprises +10, −10, +20, −20 : quel est l'écart-type d'échantillon ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "25"
+        },
+        {
+          "id": "b",
+          "text": "Environ 15,81"
+        },
+        {
+          "id": "c",
+          "text": "0"
+        },
+        {
+          "id": "d",
+          "text": "Environ 18,26"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La somme des carrés est 1 000 ; divisée par n − 1 = 3 elle donne 333,3 ; la racine vaut 18,26 (15,81 pour la population).",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.03-Q6",
+      "type": "mcq",
+      "prompt": "Selon Andersen et coauteurs, que produit une surprise d'un écart-type sur l'emploi américain (1992-1998) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aucun effet"
+        },
+        {
+          "id": "b",
+          "text": "Un saut de 5 %"
+        },
+        {
+          "id": "c",
+          "text": "Un saut d'environ 0,16 % du DM/$"
+        },
+        {
+          "id": "d",
+          "text": "Une baisse de l'inflation"
+        }
+      ],
+      "correct": "c",
+      "explanation": "C'est un effet moyen mesuré sur 5 minutes ; l'extrapolation à 2026 n'est pas justifiée.",
+      "tags": [
+        "recherche"
+      ]
+    },
+    {
+      "id": "L3.03-Q7",
+      "type": "mcq",
+      "prompt": "Que dit l'étude de l'asymétrie des effets ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les mauvaises nouvelles pèsent généralement davantage que les bonnes, surtout pour le yen, le mark et le franc suisse"
+        },
+        {
+          "id": "b",
+          "text": "Les bonnes nouvelles pèsent toujours davantage"
+        },
+        {
+          "id": "c",
+          "text": "Il n'y a aucun effet"
+        },
+        {
+          "id": "d",
+          "text": "L'effet est identique pour toutes les paires"
+        }
+      ],
+      "correct": "a",
+      "explanation": "L'asymétrie est marquée pour certaines paires et presque absente pour la livre et l'euro.",
+      "tags": [
+        "asymetrie"
+      ]
+    },
+    {
+      "id": "L3.03-Q8",
+      "type": "mcq",
+      "prompt": "Pourquoi les séries de surprises de la leçon sont-elles étiquetées SIMULATION ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que les surprises n'existent pas"
+        },
+        {
+          "id": "b",
+          "text": "Parce que les consensus historiques réels sont en général sous licence et n'ont pas été lus"
+        },
+        {
+          "id": "c",
+          "text": "Parce que le BLS ne publie pas d'emploi"
+        },
+        {
+          "id": "d",
+          "text": "Parce que l'écart-type est interdit"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Sans consensus historiques, on ne peut pas calculer un σ réel ; les calculs servent à apprendre la méthode.",
+      "tags": [
+        "limites"
+      ]
+    }
+  ],
+  "revision": 1
+}

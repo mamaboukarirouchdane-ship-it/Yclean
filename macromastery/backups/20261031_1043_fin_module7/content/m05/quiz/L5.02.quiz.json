@@ -1,0 +1,233 @@
+{
+  "lessonId": "L5.02",
+  "title": "Quiz — Offre et demande physiques",
+  "passThreshold": 0.8,
+  "note": "Seuil : 7 bonnes réponses sur 8.",
+  "questions": [
+    {
+      "id": "L5.02-Q1",
+      "type": "mcq",
+      "prompt": "Offre 2025 : mines 3 671,6 t, recyclage 1 404,3 t, couverture nette −73,6 t. Offre totale ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "4 961,9 t"
+        },
+        {
+          "id": "b",
+          "text": "5 149,5 t"
+        },
+        {
+          "id": "c",
+          "text": "5 002,3 t"
+        },
+        {
+          "id": "d",
+          "text": "5 075,9 t"
+        }
+      ],
+      "correct": "c",
+      "explanation": "3 671,6 + 1 404,3 − 73,6 = 5 002,3 t ; 5 149,5 oublie le signe de la couverture, 4 961,9 est l'offre 2024.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.02-Q2",
+      "type": "mcq",
+      "prompt": "Quel bloc pèse le plus dans la demande 2025 (5 002,3 t) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'investissement (43,5 %)"
+        },
+        {
+          "id": "b",
+          "text": "La bijouterie (32,7 %)"
+        },
+        {
+          "id": "c",
+          "text": "Les banques centrales (17,3 %)"
+        },
+        {
+          "id": "d",
+          "text": "La technologie (6,5 %)"
+        }
+      ],
+      "correct": "a",
+      "explanation": "2 175,3 ÷ 5 002,3 = 43,5 % ; la bijouterie représente 32,7 %.",
+      "tags": [
+        "parts"
+      ]
+    },
+    {
+      "id": "L5.02-Q3",
+      "type": "mcq",
+      "prompt": "Pourquoi l'égalité offre = demande de 5 002,3 t ne prouve-t-elle pas un marché à l'équilibre ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que le prix est fixé par la loi"
+        },
+        {
+          "id": "b",
+          "text": "Parce que l'offre est toujours supérieure"
+        },
+        {
+          "id": "c",
+          "text": "Parce que la demande n'est pas mesurée"
+        },
+        {
+          "id": "d",
+          "text": "Elle est construite par un poste d'équilibre (OTC et autres, définition de cours à vérifier)"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le poste d'équilibre rend les totaux égaux ; cela ne dit rien du niveau de prix.",
+      "tags": [
+        "identite"
+      ]
+    },
+    {
+      "id": "L5.02-Q4",
+      "type": "mcq",
+      "prompt": "Prix moyen +44 % en 2025, offre minière +0,6 %. Quelle conclusion est prudente ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'élasticité de l'offre est exactement 0,014"
+        },
+        {
+          "id": "b",
+          "text": "L'offre minière a peu réagi en un an, sans qu'on puisse estimer une élasticité"
+        },
+        {
+          "id": "c",
+          "text": "L'offre est parfaitement inélastique"
+        },
+        {
+          "id": "d",
+          "text": "Le prix est causé par la demande de bijoux"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Un seul point et des causes non établies : on décrit, on n'estime pas.",
+      "tags": [
+        "elasticite"
+      ]
+    },
+    {
+      "id": "L5.02-Q5",
+      "type": "mcq",
+      "prompt": "Bijouterie : quantité −18 %, valeur +18 % en 2025. Quelle lecture est cohérente ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les chiffres sont forcément faux"
+        },
+        {
+          "id": "b",
+          "text": "Le prix a baissé"
+        },
+        {
+          "id": "c",
+          "text": "La demande de bijoux a augmenté en tonnes"
+        },
+        {
+          "id": "d",
+          "text": "Les acheteurs dépensent plus pour moins de métal, avec un prix en forte hausse"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Valeur = quantité × prix : une quantité en baisse et une valeur en hausse impliquent un prix en hausse.",
+      "tags": [
+        "interpretation"
+      ]
+    },
+    {
+      "id": "L5.02-Q6",
+      "type": "mcq",
+      "prompt": "Banques centrales : 56,5 t au T1 2026 et 288,9 t au T2. Variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ +511 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ +62 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ +411 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ −80 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "288,9 ÷ 56,5 = 5,11 soit +411 % ; +62 % est la variation sur un an (177,9 t au T2 2025).",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.02-Q7",
+      "type": "mcq",
+      "prompt": "Au T2 2026, la demande totale est stable à 1 269 t. Que peut-on en conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Rien sur le mélange : bijouterie en baisse, ETF en sortie et banques centrales en hausse se compensent"
+        },
+        {
+          "id": "b",
+          "text": "Que toutes les composantes sont stables"
+        },
+        {
+          "id": "c",
+          "text": "Que le prix est stable"
+        },
+        {
+          "id": "d",
+          "text": "Que l'offre est stable"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Un total plat peut masquer des mouvements opposés ; le prix et l'offre ne sont pas dans la source lue.",
+      "tags": [
+        "melange"
+      ]
+    },
+    {
+      "id": "L5.02-Q8",
+      "type": "mcq",
+      "prompt": "555 Md$ pour 5 002,3 t : quel prix implicite par once (1 t = 32 150,7 oz) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 5 595 $"
+        },
+        {
+          "id": "b",
+          "text": "≈ 3 450 $"
+        },
+        {
+          "id": "c",
+          "text": "≈ 4 060 $"
+        },
+        {
+          "id": "d",
+          "text": "≈ 110,9 $"
+        }
+      ],
+      "correct": "b",
+      "explanation": "555 000 M$ ÷ 5 002,3 = 110,9 M$/t, soit 3 450 $/oz ; c'est un prix implicite, non le prix annuel moyen publié.",
+      "tags": [
+        "calcul"
+      ]
+    }
+  ],
+  "revision": 1
+}

@@ -1,0 +1,250 @@
+---
+id: L1.06
+module: 1
+order: 6
+title: "Déflation, désinflation, stagflation : définir les régimes et les reconnaître sur des données"
+title_initial: "Déflation, désinflation, stagflation"
+level: "débutant à intermédiaire"
+duration_hours: 2.5
+prerequisites: ["L1.04", "L1.05"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L1.06.quiz.json"
+sources: ["S-FRH-01", "S-BOJ-01"]
+---
+
+# L1.06 — Déflation, désinflation, stagflation : définir les régimes et les reconnaître sur des données
+
+> **Convention de lecture.** **[Fait]** = chiffre ou énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. Les seuils chiffrés utilisés pour classer les régimes sont des **conventions pédagogiques de ce cours**, non des définitions officielles. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. distinguer **inflation**, **désinflation**, **déflation** et **stagflation** ;
+2. reconnaître chaque régime sur une série de données en distinguant **niveau** et **variation** de l'inflation ;
+3. calculer un **taux réel** en situation de déflation et expliquer pourquoi la déflation complique la politique monétaire ;
+4. expliquer le mécanisme de la **déflation par la dette** ;
+5. décrire deux épisodes documentés : la **déflation japonaise** et la **« Grande Inflation »** américaine ;
+6. éviter les confusions de vocabulaire dans la presse financière.
+
+## 2. Prérequis
+
+L1.04 (mesure de l'inflation, glissement annuel) et L1.05 (causes, anticipations, taux réel).
+
+## 3. Explication intuitive
+
+Le mot « inflation » désigne le **niveau** des prix qui monte. Mais on peut se tromper d'un cran en parlant de ce qui se passe quand le **rythme** change :
+
+- **Inflation** : les prix montent (taux > 0).
+- **Désinflation** : les prix montent **moins vite** qu'avant (taux positif mais en baisse). Les prix continuent de monter.
+- **Déflation** : les prix **baissent** (taux < 0).
+- **Stagflation** : l'**inflation est élevée alors que l'activité stagne** ou que le chômage est élevé. Le mot associe stagnation et inflation.
+
+Une image : la vitesse d'une voiture. L'inflation, c'est la vitesse vers l'avant ; la désinflation, c'est freiner sans s'arrêter ; la déflation, c'est passer en marche arrière ; la stagflation, c'est rouler vite alors que le moteur de l'économie cale.
+
+## 4. Développement technique
+
+### 4.1 Les définitions
+
+**[Définition]**
+
+| Régime | Condition sur l'inflation π (glissement annuel) | Condition complémentaire |
+| --- | --- | --- |
+| **Inflation** | π > 0 | — |
+| **Désinflation** | π > 0 et π diminue d'une période à l'autre | — |
+| **Déflation** | π < 0, de façon généralisée et durable | Prix en baisse sur un large ensemble |
+| **Stagflation** | π « élevée » | Croissance faible ou négative, chômage élevé |
+| **Inflation zéro / stabilité des prix** | π proche de 0 ou de l'objectif | — |
+
+**Précisions de vocabulaire.**
+
+- **Désinflation ≠ déflation.** Si l'inflation passe de 6 % à 3 %, c'est une désinflation : les prix sont encore plus élevés qu'avant.
+- **Déflation ≠ baisse d'un prix.** Le prix de l'énergie peut baisser sans qu'il y ait déflation. On parle de déflation pour une baisse **générale et persistante** du niveau des prix.
+- **Stagflation n'a pas de seuil officiel.** Le cours utilise la **convention suivante**, purement pédagogique : inflation > 5 % **et** croissance réelle < 1 %.
+
+### 4.2 Lire une série : niveau ou variation ?
+
+On confond souvent le **niveau** des prix, leur **taux de variation** (l'inflation) et la **variation du taux** (accélération ou décélération).
+
+**Exemple (SIMULATION).** Glissement annuel de l'indice des prix, en %, sur sept années : 6,0 ; 4,5 ; 3,0 ; 1,5 ; 0,2 ; −0,5 ; −0,8.
+
+| Année | Inflation | Variation du taux | Régime |
+| --- | --- | --- | --- |
+| 1 | 6,0 | — | Inflation |
+| 2 | 4,5 | −1,5 | **Désinflation** |
+| 3 | 3,0 | −1,5 | Désinflation |
+| 4 | 1,5 | −1,5 | Désinflation |
+| 5 | 0,2 | −1,3 | Désinflation (quasi-stabilité) |
+| 6 | −0,5 | −0,7 | **Déflation** |
+| 7 | −0,8 | −0,3 | Déflation (qui se réduit en vitesse de baisse) |
+
+Remarque : à l'année 7, la déflation s'aggrave en niveau (−0,8 %) alors que la variation du taux a ralenti. L'**indice** des prix, lui, a baissé deux années de suite.
+
+### 4.3 Pourquoi la déflation est redoutée : taux réels et politique monétaire
+
+**Taux réel et déflation.** Le taux réel exact est (1 + i) ÷ (1 + π) − 1 (L0.07). Si π est négatif, le taux réel est **supérieur** au taux nominal.
+
+**Exemples (SIMULATION).**
+- i = 0,5 %, π = −1 % : taux réel = 1,005 ÷ 0,99 − 1 = **+1,52 %**.
+- i = 0 %, π = −2 % : taux réel = 1 ÷ 0,98 − 1 = **+2,04 %**.
+
+Quand le taux nominal est bas et ne peut guère descendre sous zéro (borne inférieure effective, module 2), la déflation **relève le taux réel** : le crédit devient plus coûteux en termes réels, alors que l'économie est faible. La banque centrale perd une partie de sa marge de manœuvre (module 2).
+
+**Anticipations.** Si les agents s'attendent à des prix plus bas demain, ils peuvent **différer** leurs achats, ce qui affaiblit la demande, qui renforce la baisse des prix. C'est un **risque**, pas une certitude.
+
+### 4.4 La déflation par la dette
+
+**[Définition]** Quand les prix et les revenus nominaux baissent, une dette **fixée en valeur nominale** pèse davantage.
+
+**Exemple (SIMULATION).** Dette = 100 ; revenu nominal = 100 la première année, puis −2 % par an. Après cinq ans : revenu = 100 × 0,98⁵ = 90,39. Rapport dette/revenu = 100 ÷ 90,39 = **110,6 %** (contre 100 %). Après dix ans : 100 ÷ 0,98¹⁰ = **122,4 %**. La charge de la dette augmente sans que le débiteur ait emprunté un euro de plus.
+
+**[Interprétation]** Ce mécanisme suggère pourquoi une déflation généralisée peut peser sur le crédit et les banques. Son importance dans un épisode donné est une question empirique.
+
+### 4.5 La désinflation : un cas fréquent, parfois douloureux
+
+La désinflation est ce qui se passe quand la banque centrale ou l'économie réduisent l'inflation d'un niveau élevé vers l'objectif. Elle peut venir d'un **choc d'offre qui s'estompe** (L1.05) ou d'un **resserrement** de la politique monétaire accompagné d'un ralentissement. Le coût en activité et en emploi dépend de l'état des anticipations (L1.05). Plus elles sont ancrées, moins le coût est élevé **[hypothèse d'analyse]**.
+
+### 4.6 La stagflation : l'inflation avec une activité faible
+
+**[Définition]** La stagflation combine inflation élevée et activité faible. Elle est difficile pour la politique monétaire : lutter contre l'inflation (resserrer) aggrave l'activité ; soutenir l'activité (assouplir) alimente l'inflation. Elle est typiquement associée à un **choc d'offre** (énergie, matières premières) accompagné d'anticipations qui dérivent (L1.05).
+
+**Indicateur simple : l'« indice de misère »** = inflation + taux de chômage. **[Définition]** Il est grossier : il additionne deux grandeurs de nature différente.
+
+## 5. Définitions essentielles
+
+- **Inflation** : hausse générale des prix (π > 0).
+- **Désinflation** : ralentissement de l'inflation (π reste positive).
+- **Déflation** : baisse générale et persistante des prix (π < 0).
+- **Stagflation** : inflation élevée avec activité faible ou chômage élevé (pas de seuil officiel).
+- **Taux réel exact** : (1 + i) ÷ (1 + π) − 1.
+- **Déflation par la dette** : alourdissement de la dette nominale quand prix et revenus baissent.
+- **Indice de misère** : inflation + chômage (indicateur grossier).
+
+## 6. Exemples chiffrés
+
+**A.** Série simulée : 6,0 → −0,8 %, désinflation puis déflation (§4.2).
+**B.** Taux réel : +1,52 % et +2,04 % en déflation (§4.3).
+**C.** Dette/revenu : 110,6 % après cinq ans à −2 % par an (§4.4).
+**D.** Indice de misère (Grande Inflation, ordres de grandeur) : environ 22 en 1980, environ 6 en 1964 (§6.5).
+**E.** Japon : prix négatifs presque continus pendant quinze ans, rarement sous −1 % (§6.5).
+
+### 6.5 Cas historiques documentés — la déflation japonaise et la Grande Inflation américaine
+
+**Cas 1 : la déflation japonaise (BoJ, 2014).** **[Fait, S-BOJ-01, résumé automatique du discours de H. Nakaso du 19 juin 2014]** Selon le vice-gouverneur de la Banque du Japon, l'indice des prix à la consommation est entré en territoire négatif en **1998** et y est resté, dans l'ensemble, pendant les **quinze années** suivantes ; la déflation est restée la plupart du temps **inférieure à −1 % sur un an**, sauf brèves périodes comme juste après la crise Lehman. La croissance potentielle aurait chuté d'environ 4 % au début des années 1990 à parfois **0,5 %** ; le taux directeur était déjà proche de **0,5 %** avant les chocs de 1997. Le discours décrit des anticipations d'inflation « formées de manière adaptative » qui peuvent baisser quand une faible inflation dure, et un basculement vers un équilibre déflationniste après les turbulences bancaires de 1997 et la crise asiatique. Il mentionne une politique d'assouplissement quantitatif et qualitatif visant 2 % d'inflation ; l'indice hors alimentation et énergie était de **2,3 %** en avril 2014, mais d'environ **0,8 %** hors effet de la hausse de la taxe à la consommation.
+
+**Ce que la leçon n'a pas pu confirmer :** le niveau exact du taux directeur ensuite, la date de lancement exacte (le discours dit « il y a environ un an »), l'évolution après 2014, et les causes détaillées.
+
+**[Calcul de l'auteur, illustration]** Avec un taux directeur de 0,5 % et une déflation de 1 %, le taux réel est de **+1,52 %** (§4.3). **[Interprétation]** La déflation japonaise est un cas où l'inflation est restée **faiblement négative pendant longtemps** plutôt que de s'effondrer ; elle illustre le piège des taux réels élevés avec un taux nominal bas. L'analyse du discours est celle d'un responsable de la banque centrale, avec ses propres intérêts à défendre sa politique.
+
+**Cas 2 : la « Grande Inflation » (1965–1982).** **[Fait, S-FRH-01, résumé automatique de l'essai de la Federal Reserve History]** La période va de janvier 1965 à décembre 1982. L'inflation CPI sur un an était d'un peu plus de **1 %** en 1964 ; dix ans plus tard, elle dépassait **12 %** ; elle a atteint un pic de près de **15 %** en mars 1980 ; elle était au-dessus de **11 %** quand Paul Volcker est devenu président en août 1979 ; elle est revenue sous **5 %** à la fin de la récession de novembre 1982. Le chômage était de **5 %** en 1964, au-dessus de **7 %** dix ans plus tard, de **7,5 %** à l'été 1980, et a atteint près de **11 %** pendant la récession de 1981–1982. L'embargo pétrolier arabe d'octobre 1973 (environ cinq mois) a quadruplé le prix du pétrole ; la révolution iranienne de 1979 l'a triplé. Le texte parle d'une ère de « stagflation ». En octobre 1979, le FOMC a annoncé cibler la croissance des réserves plutôt que le taux des fonds fédéraux.
+
+**[Calcul de l'auteur]** Ordres de grandeur d'indice de misère (inflation + chômage) : 1964 ≈ 1 + 5 = **6** ; 1980 ≈ 14,5 + 7,5 = **22**. Désinflation de 1980 à 1982 : d'environ 15 % à moins de 5 %, soit plus de **10 points**.
+
+**Ce que la leçon n'a pas pu confirmer :** le niveau et la date du pic du taux des fonds fédéraux (l'essai lu ne les donne pas), la décomposition des causes, la comparaison avec d'autres pays. **[Interprétation]** Ce cas illustre à la fois la stagflation (inflation et chômage élevés ensemble), le rôle des chocs d'offre et des anticipations (L1.05) et le coût d'une désinflation volontaire (chômage proche de 11 % en 1981–1982). Il ne prédit rien pour 2026.
+
+## 7. Application au Forex et à l'or
+
+- **Forex** : une devise dont l'inflation baisse vers l'objectif peut voir ses taux réels monter si la banque centrale maintient les taux nominaux ; une devise dont l'économie entre en stagflation fait face à un dilemme de politique qui accroît l'incertitude. Les sens de réaction ne sont **pas automatiques** (modules 4, 6, 8).
+- **Or** : l'or est souvent associé à l'inflation et à la stagflation, mais son prix dépend d'abord des **taux réels** et du dollar (module 5). Dans une déflation avec taux réels élevés, le coût d'opportunité de détenir de l'or (qui ne verse aucun intérêt, L0.01) augmente ; dans une stagflation avec taux réels négatifs, il diminue. **Hypothèses d'analyse, à tester** : le cours n'affirme pas que l'or monte en stagflation.
+- **Méthode** : avant de nommer un régime, écrire la série, le niveau, la variation et la croissance.
+- **Rappel** : **une bonne analyse ne garantit pas une transaction gagnante.**
+
+## 8. Erreurs courantes
+
+- **Appeler « déflation » une désinflation.**
+- **Appeler « stagflation » toute inflation élevée** sans stagnation.
+- **Conclure à la déflation sur un mois** ou un poste isolé.
+- **Ignorer le niveau** (une inflation de 0,5 % n'est pas la même chose que 5 %).
+- **Oublier que le taux réel augmente quand les prix baissent.**
+- **Utiliser l'indice de misère comme une mesure précise.**
+- **Supposer qu'un régime donne toujours le même sens à une devise ou à l'or.**
+
+## 9. Limites de l'interprétation
+
+- Sources lues par **résumé automatique** (BoJ, 19/06/2014 ; Federal Reserve History).
+- Les **seuils** de la stagflation et de la déflation « durable » sont des conventions de cours.
+- Les épisodes décrits sont **historiques** ; ils ne prédisent pas le futur.
+- Le discours de la BoJ est une source **institutionnelle** : elle décrit la politique de l'institution.
+- Les chiffres de chômage et d'inflation de la Grande Inflation sont des **ordres de grandeur** tels qu'écrits dans l'essai.
+- La relation avec l'or et les devises est une **hypothèse**.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Classer.** Série annuelle d'inflation (SIMULATION) : 3,0 ; 5,5 ; 7,0 ; 4,0 ; 1,0 ; −0,3 ; 0,4. Donne le régime de chaque année et la variation du taux.
+
+<details>
+<summary>Correction 1</summary>
+
+An 1 : 3,0 % inflation. An 2 : 5,5 % (+2,5) inflation qui accélère. An 3 : 7,0 % (+1,5) inflation qui accélère. An 4 : 4,0 % (−3,0) **désinflation**. An 5 : 1,0 % (−3,0) **désinflation**. An 6 : −0,3 % (−1,3) **déflation** (si généralisée et durable ; un seul point ne suffit pas). An 7 : 0,4 % (+0,7) retour à une inflation faible positive.
+</details>
+
+**Exercice 2 — Taux réel.** (a) i = 1,0 %, π = −1,5 % : taux réel exact ? (b) i = 4,0 %, π = 3,0 % ? (c) i = 2,0 %, π = 5,0 % ? (d) Dans quel cas le taux réel est-il négatif ?
+
+<details>
+<summary>Correction 2</summary>
+
+(a) 1,010 ÷ 0,985 − 1 = **+2,54 %**. (b) 1,04 ÷ 1,03 − 1 = **+0,97 %**. (c) 1,02 ÷ 1,05 − 1 = **−2,86 %**. (d) En (c) : l'inflation dépasse le taux nominal.
+</details>
+
+**Exercice 3 — Déflation par la dette.** Dette 200 fixe ; revenu 100 qui baisse de 3 % par an. (a) Ratio dette/revenu à l'année 0 ? (b) Après trois ans ? (c) Après cinq ans ? (d) Quel effet attendre sur l'incitation à emprunter ?
+
+<details>
+<summary>Correction 3</summary>
+
+(a) 200 ÷ 100 = **200 %**. (b) Revenu = 100 × 0,97³ = 91,27 ; ratio = **219,1 %**. (c) 100 × 0,97⁵ = 85,87 ; ratio = **232,9 %**. (d) Le poids réel de la dette augmente : les agents ont intérêt à réduire leur endettement et à épargner, ce qui pèse sur la demande.
+</details>
+
+**Exercice 4 — Données historiques.** À partir du §6.5 : (a) Indice de misère approximatif 1964 et 1980 ? (b) Désinflation entre mars 1980 et novembre 1982 ? (c) Pourquoi ne peut-on pas dire que « tout le monde sait que Volcker a relevé les taux à X % » à partir de cet essai ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) 1964 ≈ 1 + 5 = **6** ; 1980 ≈ 14,5 + 7,5 = **22**. (b) D'environ 15 % à moins de 5 % : plus de **10 points**. (c) Le résumé lu ne donne ni niveau ni date du pic du taux des fonds fédéraux ; la leçon ne l'invente pas.
+</details>
+
+**Exercice 5 — Convention de stagflation.** Convention du cours : inflation > 5 % et croissance < 1 %. Pour chaque économie (SIMULATION), dis si la convention est remplie : (a) π 7 %, croissance −0,5 % ; (b) π 6 %, croissance 3 % ; (c) π 2 %, croissance 0 % ; (d) π 5,5 %, croissance 0,8 %. Que penser du cas (b) ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) Oui. (b) Non : inflation forte mais croissance soutenue (plutôt une surchauffe). (c) Non : croissance faible mais inflation modérée. (d) Oui. Le cas (b) montre qu'il ne faut pas appeler « stagflation » toute inflation élevée.
+</details>
+
+**Exercice 6 — Critique d'un titre.** Un titre dit : « Les prix ont baissé de 0,1 % en un mois : le pays est en déflation ! » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) Un mois ne fait pas une tendance ; la déflation suppose une baisse générale et persistante (glissement annuel négatif). (2) Une baisse mensuelle peut venir d'un poste isolé (énergie, base). (3) L'effet de base peut jouer sur le glissement annuel. (4) Il faut vérifier l'indice (global ou sous-jacent), la période et la révision éventuelle. On ne conclut pas au régime sur un seul point.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L1.06.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- **Désinflation** = inflation qui ralentit (reste positive) ; **déflation** = baisse générale et persistante des prix ; **stagflation** = inflation élevée avec activité faible (seuil non officiel).
+- En déflation, le **taux réel** est supérieur au nominal ; avec un taux nominal bas, la politique monétaire est contrainte.
+- La **déflation par la dette** alourdit les dettes nominales (100 → 110,6 % du revenu en cinq ans à −2 %).
+- Japon (BoJ, 2014) : prix négatifs presque continus de 1998 à 2013, rarement sous −1 %.
+- Grande Inflation (1965–1982) : pic proche de 15 % en mars 1980, chômage près de 11 % en 1981–1982.
+- Les mots doivent correspondre aux **données** ; les conséquences pour devises et or sont des **hypothèses**.
+
+## 13. Critères de maîtrise
+
+- [ ] Classer des séries d'inflation en régimes (Exercices 1, 5).
+- [ ] Calculer des taux réels en déflation (Exercice 2).
+- [ ] Mesurer la déflation par la dette (Exercice 3).
+- [ ] Lire des épisodes historiques sans sur-conclure (Exercice 4).
+- [ ] Critiquer un titre de presse (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-FRH-01** — Federal Reserve History, *The Great Inflation* : https://www.federalreservehistory.org/essays/great_inflation
+- **S-BOJ-01** — Banque du Japon, discours de Hiroshi Nakaso, « The Conquest of Japanese Deflation: Interim Report » (19 juin 2014) : https://www.boj.or.jp/en/about/press/koen_2014/ko140619b.htm
+
+**Définitions de cours non rattachées à une source officielle lue :** typologie des régimes, seuil de stagflation, déflation par la dette, indice de misère. **Points non vérifiés :** pic et date du taux des fonds fédéraux, évolution de l'inflation japonaise après 2014, causes détaillées.

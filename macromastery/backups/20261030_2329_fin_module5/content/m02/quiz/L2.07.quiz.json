@@ -1,0 +1,235 @@
+{
+  "lessonId": "L2.07",
+  "title": "Quiz — La fonction de réaction",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : Fed (communiqués, minutes, SEP 2026), discours de Powell 2022 (BRI), résumés automatiques.",
+  "questions": [
+    {
+      "id": "L2.07-Q1",
+      "type": "mcq",
+      "prompt": "Qu'est-ce que la fonction de réaction d'une banque centrale ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une loi fixant le taux"
+        },
+        {
+          "id": "b",
+          "text": "Le calendrier des réunions"
+        },
+        {
+          "id": "c",
+          "text": "La relation, explicite ou implicite, entre l'état de l'économie et les décisions"
+        },
+        {
+          "id": "d",
+          "text": "Le montant du bilan"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Elle décrit comment la banque centrale répond aux données ; la règle de Taylor n'en est qu'une approximation.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L2.07-Q2",
+      "type": "mcq",
+      "prompt": "Dans R_t = R_(t−1) + ρ (R*_t − R_(t−1)), que représente ρ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La vitesse d'ajustement vers la cible"
+        },
+        {
+          "id": "b",
+          "text": "Le taux d'inflation"
+        },
+        {
+          "id": "c",
+          "text": "Le chômage"
+        },
+        {
+          "id": "d",
+          "text": "Le taux de change"
+        }
+      ],
+      "correct": "a",
+      "explanation": "ρ proche de 1 : ajustement rapide ; ρ petit : petits pas.",
+      "tags": [
+        "lissage"
+      ]
+    },
+    {
+      "id": "L2.07-Q3",
+      "type": "mcq",
+      "prompt": "R_(t−1) = 3,625 ; R* = 4,5 ; ρ = 0,4. Quel est R_t ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "3,625"
+        },
+        {
+          "id": "b",
+          "text": "4,5"
+        },
+        {
+          "id": "c",
+          "text": "4,125"
+        },
+        {
+          "id": "d",
+          "text": "3,975"
+        }
+      ],
+      "correct": "d",
+      "explanation": "On applique R_t = R_(t−1) + ρ × (R* − R_(t−1)) : 3,625 + 0,4 × 0,875 = 3,625 + 0,35 = 3,975.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L2.07-Q4",
+      "type": "mcq",
+      "prompt": "Avec ρ = 0,4, quelle part de l'écart initial subsiste après trois pas si la cible est inchangée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "40 %"
+        },
+        {
+          "id": "b",
+          "text": "21,6 %"
+        },
+        {
+          "id": "c",
+          "text": "60 %"
+        },
+        {
+          "id": "d",
+          "text": "0 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "À chaque pas l'écart est multiplié par (1 − ρ) = 0,6 ; après trois pas : 0,6³ = 0,216, soit 21,6 % de l'écart initial.",
+      "tags": [
+        "calcul",
+        "lissage"
+      ]
+    },
+    {
+      "id": "L2.07-Q5",
+      "type": "mcq",
+      "prompt": "Selon les minutes de septembre 2026, quel message la plupart des participants envoient-ils ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les taux sont fixés pour dix ans"
+        },
+        {
+          "id": "b",
+          "text": "Les baisses sont certaines"
+        },
+        {
+          "id": "c",
+          "text": "Aucune décision n'est possible"
+        },
+        {
+          "id": "d",
+          "text": "Une nouvelle hausse serait probablement appropriée d'ici la fin de l'année, selon les données"
+        }
+      ],
+      "correct": "d",
+      "explanation": "C'est une orientation conditionnelle et qualitative, non une décision.",
+      "tags": [
+        "minutes"
+      ]
+    },
+    {
+      "id": "L2.07-Q6",
+      "type": "mcq",
+      "prompt": "Pourquoi la surprise compte-t-elle plus que le niveau d'une donnée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que le marché ignore les données"
+        },
+        {
+          "id": "b",
+          "text": "Parce que les niveaux sont toujours faux"
+        },
+        {
+          "id": "c",
+          "text": "Parce que les prix de marché intègrent déjà ce qui était attendu"
+        },
+        {
+          "id": "d",
+          "text": "Parce que la banque centrale ne regarde que les surprises"
+        }
+      ],
+      "correct": "c",
+      "explanation": "L'information est l'écart avec le consensus ; une donnée conforme aux attentes ne modifie pas la décision attendue.",
+      "tags": [
+        "surprise"
+      ]
+    },
+    {
+      "id": "L2.07-Q7",
+      "type": "mcq",
+      "prompt": "Que dit Powell à Jackson Hole (26 août 2022) à propos d'une seule lecture d'inflation plus faible ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Qu'elle est loin d'être suffisante pour conclure à un repli de l'inflation"
+        },
+        {
+          "id": "b",
+          "text": "Qu'elle prouve que l'inflation est vaincue"
+        },
+        {
+          "id": "c",
+          "text": "Qu'elle justifie une baisse immédiate"
+        },
+        {
+          "id": "d",
+          "text": "Qu'elle n'a aucune importance"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Il dit qu'un mois de lecture plus faible est « loin d'être suffisant » et met en garde contre un assouplissement prématuré.",
+      "tags": [
+        "jackson-hole"
+      ]
+    },
+    {
+      "id": "L2.07-Q8",
+      "type": "mcq",
+      "prompt": "Fourchette de 2,25-2,5 % après deux hausses de 75 pb : quelle était la fourchette avant ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1,50-1,75 %"
+        },
+        {
+          "id": "b",
+          "text": "0,75-1,00 %"
+        },
+        {
+          "id": "c",
+          "text": "2,00-2,25 %"
+        },
+        {
+          "id": "d",
+          "text": "0,00-0,25 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "2,25 − 1,50 = 0,75 et 2,50 − 1,50 = 1,00 : déduction arithmétique du texte.",
+      "tags": [
+        "calcul",
+        "cas"
+      ]
+    }
+  ],
+  "revision": 1
+}

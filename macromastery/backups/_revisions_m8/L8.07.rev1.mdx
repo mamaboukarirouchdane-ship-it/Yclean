@@ -1,0 +1,315 @@
+---
+id: L8.07
+module: 8
+order: 7
+title: "Crises bancaires et de dette souveraine : distinguer liquidité et solvabilité, suivre la contagion et les interventions, et comprendre pourquoi l'or peut d'abord être vendu avant d'être recherché comme refuge"
+title_initial: "Crises bancaires et de dette souveraine"
+level: "avancé"
+duration_hours: 3.0
+prerequisites: ["L8.01", "L8.05", "L8.06", "L2.01", "L6.01"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L8.07.quiz.json"
+sources: ["S-FEDH-01", "S-FED-33", "S-MC-03", "S-IMF-09", "S-ECB-OMT-01", "S-BIS-12", "S-WGC-33", "S-FED-34", "S-FED-35", "S-FINMA-01", "S-WGC-34", "S-NBC-01", "S-WT-01"]
+---
+
+# L8.07 — Crises bancaires et de dette souveraine
+
+> **Convention de lecture.** **[Fait]** = chiffre ou énoncé lu dans une source citée, avec sa date ; **[Fait rapporté]** = lu dans un relais (presse, site de données) ; **[Calcul de l'auteur]** ; **[Définition de cours]** ; **[Interprétation]** ; **[Hypothèse]** ; **[SIMULATION]** = données fictives. **Toutes les lectures web de cette leçon sont des résumés automatiques, jamais des lectures intégrales.** Les séries quotidiennes de l'or, du dollar, des rendements et des écarts de crédit n'ont pas été lues ; les valeurs manquantes ne sont pas reconstituées. Les prix de l'or sont de bases hétérogènes (fixings, moyennes mensuelles de sites de données, extrêmes) : **aucun rendement n'est calculé entre instruments ou horaires différents.** Cette leçon est pédagogique : elle ne donne aucun conseil d'investissement personnalisé. **L4.11 et L5.08 restent des points critiques ouverts ; la leçon ne s'appuie sur aucune des deux. L'anomalie de périmètre CFTC reste ouverte et n'intervient pas ici.** **Une bonne analyse fondamentale ne garantit pas une transaction gagnante. Règle centrale : l'or n'est ni un refuge automatique ni un actif qu'on vend toujours en crise ; son premier mouvement dépend de la nature du stress (liquidité, taux, confiance) et de la réponse des autorités.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. distinguer **liquidité** et **solvabilité** d'une banque ou d'un État, et dire quelles preuves chacune exige ;
+2. décrire les **causes et déclencheurs** de trois épisodes : 2008, 2010-2012, mars 2023 ;
+3. décrire les **canaux de contagion** (financement, confiance, expositions, taux, dépôts) ;
+4. classer les **interventions** des banques centrales et des États (prêteur en dernier ressort, garantie des dépôts, recapitalisation, achats d'actifs, filet conditionnel) ;
+5. lire leurs **effets** sur les taux, le dollar, les devises et l'or, **en séparant ce qui est lu de ce qui ne l'est pas** ;
+6. expliquer les **différences entre crise bancaire et crise souveraine** ;
+7. expliquer pourquoi une crise peut **d'abord provoquer une vente d'or** (recherche de liquidités) avant une éventuelle demande de refuge, et pourquoi ce n'est pas systématique.
+
+## 2. Prérequis
+
+- Cadre de L8.01, régimes de risque (L8.05), grille d'horizons (L8.06).
+- Banques centrales et instruments de liquidité (module 2).
+- Règles de calcul : même instrument, même horaire.
+
+## 3. Explication intuitive
+
+Une banque emprunte à court terme (dépôts, marchés) et prête ou investit à plus long terme. Si les déposants et les prêteurs doutent, ils retirent leurs fonds ; la banque doit vendre des actifs dans l'urgence. La **liquidité** (avoir des fonds disponibles maintenant) et la **solvabilité** (valoir plus qu'on ne doit) sont deux problèmes différents, mais la peur de l'un peut provoquer l'autre : une banque solvable peut s'effondrer faute de liquidité si la confiance disparaît.
+
+Un État est différent : il peut avoir sa propre monnaie et sa banque centrale, ou non. Dans la zone euro, les États n'ont pas de banque centrale nationale qui garantisse leurs titres ; un doute sur la dette peut se transformer en doute sur l'appartenance à la monnaie.
+
+Sur l'or : quand tout le monde veut du cash, **tout ce qui est liquide se vend**, y compris l'or. Quand l'État et la banque centrale ont apporté la liquidité, la peur peut se déplacer vers la confiance dans le système, et l'or peut alors être recherché. L'ordre n'est pas garanti.
+
+## 4. Développement technique
+
+### 4.1 Liquidité et solvabilité
+
+**[Définition de cours]** **Illiquidité** : l'établissement manque de fonds disponibles pour honorer ses paiements à court terme, bien que ses actifs vaillent davantage que ses dettes. **Insolvabilité** : la valeur des actifs est inférieure à celle des dettes. **Preuve.** L'illiquidité se voit dans les sorties de dépôts, les appels de marge, le recours aux facilités de banque centrale ; l'insolvabilité se voit dans la valeur des actifs après évaluation, les pertes avérées, le capital réglementaire. **Piège.** Les autorités et les acteurs ne connaissent pas toujours la solvabilité en temps réel ; elle est souvent débattue pendant la crise et établie après.
+
+**[Fait, S-FINMA-01]** Le communiqué du 19/03/2023 décrit Credit Suisse comme confronté à une crise de confiance et à des sorties de clients, avec un risque d'illiquidité alors que la banque restait solvable. **[Interprétation]** C'est l'énoncé des autorités à la date du communiqué ; il ne démontre pas à lui seul la solvabilité.
+
+### 4.2 Canaux de contagion
+
+| Canal | Mécanisme | Observable possible |
+|---|---|---|
+| Financement | Les prêteurs refusent de refinancer | Écarts de financement interbancaire, recours aux facilités |
+| Confiance des déposants | Retraits rapides, surtout de dépôts non assurés | Sorties de dépôts, annonces de garantie |
+| Expositions croisées | Pertes chez un établissement touchent ses contreparties | Appels de collatéral, pertes déclarées |
+| Valorisation des actifs | Ventes forcées font baisser les prix | Prix des titres, décotes |
+| Souverain-banque | Banques détiennent la dette de l'État ; l'État garantit les banques | Écarts de taux souverains, notes |
+| Taux | Anticipations de politique monétaire repricées | Rendements, volatilité des taux |
+
+**[Fait, S-FEDH-01]** En 2008, AIG a subi des appels de collatéral sur ses swaps de défaut qu'elle ne pouvait honorer sans aide : un canal d'expositions croisées.
+
+### 4.3 Interventions : une typologie
+
+| Type | Exemple lu | Source |
+|---|---|---|
+| Prêt de dernier ressort à un établissement | Prêt de 12,9 Md$ à Bear Stearns via JPMorgan (14/03/2008) ; crédit à AIG (16/09/2008) | S-FEDH-01 |
+| Facilité générale de liquidité | TSLF, PDCF (Lehman a emprunté 18,5 et 28 Md$ à ces facilités, 12 et 15/09/2008) ; BTFP (12/03/2023) | S-FEDH-01, S-FED-34 |
+| Garantie des déposants | Protection de tous les déposants de SVB et Signature (12/03/2023) | S-FED-34 |
+| Recapitalisation par l'État | TARP : plus de 200 Md$ d'actions préférentielles de banques (approuvé le 03/10/2008) | S-FED-33 |
+| Achats d'actifs | Annonce de rachats de MBS (25/11/2008) | S-FED-33 |
+| Taux directeur | Fourchette 0-1/4 % (date non lue) | S-FED-33 |
+| Programme conditionnel | Accord FMI-UE pour la Grèce (09/05/2010) ; OMT de la BCE (06/09/2012), conditionné à un programme EFSF/ESM | S-IMF-09, S-ECB-OMT-01 |
+| Résolution et reprise | Reprise de Credit Suisse par UBS, liquidité de la BNS garantie par la Confédération, amortissement des AT1 (19/03/2023) | S-FINMA-01 |
+
+### 4.4 Crise bancaire et crise souveraine : différences
+
+| | Crise bancaire | Crise de dette souveraine |
+|---|---|---|
+| Débiteur en cause | Un établissement ou un secteur bancaire | Un État |
+| Mécanisme de panique | Retrait de dépôts, refus de refinancement | Refus d'acheter la dette, hausse des écarts de taux |
+| Réponse typique | Prêteur de dernier ressort, garantie, résolution | Programme conditionnel, soutien de la banque centrale, réformes |
+| Contrepartie politique | Supervision, capital, parfois pertes pour certains créanciers | Conditionnalité budgétaire et structurelle |
+| Lien avec la monnaie | La banque centrale émet la monnaie du pays | Dans la zone euro, l'État n'émet pas la monnaie de sa dette |
+| Rapidité | Jours (SVB) | Mois à années (2010-2012) |
+
+**[Interprétation]** Les deux crises peuvent se rejoindre (lien souverain-banque), mais leurs mécanismes et leurs réponses diffèrent.
+
+### 4.5 Pourquoi l'or peut d'abord être vendu
+
+**[Définition de cours]** Quatre mécanismes **possibles**, aucun démontré par un seul épisode :
+
+1. **Besoin de liquidités.** Des investisseurs vendent ce qui se vend (actions, or, titres d'État) pour financer des appels de marge ou des rachats. **[Fait rapporté, S-WT-01]** Un gestionnaire d'actifs écrit que l'or a baissé d'environ 20 % de septembre à novembre 2008 puis monté de 170 % jusqu'à 2011 (chiffres non sourcés).
+2. **Dollar en hausse.** **[Fait, S-FED-33]** Le dollar pondéré par les échanges a gagné environ 12 % au second semestre 2008, dont 13 % contre l'euro et 36 % contre la livre. **[Hypothèse]** Un dollar qui monte pèse sur l'or.
+3. **Contrepartie cash.** Les prêteurs et les contreparties demandent du collatéral liquide.
+4. **Ordre du stress.** Tant que l'urgence est la liquidité, la demande de refuge ne s'exprime pas ; elle peut venir quand les autorités ont apporté la liquidité.
+
+**Contre-exemple de la leçon.** En mars 2023, l'or a **monté** immédiatement (voir 6.3). La différence ne se démontre pas par les sources lues, mais des hypothèses distinguent les deux épisodes : réponse des autorités en quelques jours en 2023, rendements américains en baisse, crise d'abord bancaire et non d'ensemble des marchés. **L'ordre « vente puis refuge » est une hypothèse, non une loi.**
+
+## 5. Définitions essentielles
+
+- **Illiquidité / insolvabilité** : voir 4.1.
+- **Prêteur en dernier ressort** : banque centrale qui prête à des établissements solvables contre collatéral en période de stress.
+- **Dépôts non assurés** : dépôts au-delà du plafond de garantie.
+- **AT1** : obligations convertibles ou amortissables servant de capital ; amortissables selon les conditions.
+- **Écart de taux souverain** : différence entre le rendement d'une dette d'État et celui d'une référence.
+- **Conditionnalité** : engagements de politique économique liés à une aide.
+- **Contagion** : transmission du stress d'un établissement ou d'un État à d'autres.
+- **Liquidation forcée** : vente imposée par un besoin de trésorerie.
+
+## 6. Exemples chiffrés
+
+### 6.1 Cas historique documenté — crise financière mondiale de 2008
+
+**Cas historique documenté — Bear Stearns, Lehman, AIG, TARP (2008).**
+
+**Chronologie [Fait, S-FEDH-01, S-FED-33].** 14/03/2008 : prêt de 12,9 Md$ à Bear Stearns (via JPMorgan), garanti par 13,8 Md$ d'actifs ; 16/03 : fusion ; Maiden Lane achète ≈ 30 Md$ d'actifs avec un prêt de ≈ 29 Md$. 15/09/2008 : Lehman Brothers en faillite après l'échec d'une solution privée, sans programme spécifique ; sa filiale courtier avait emprunté 18,5 Md$ au TSLF (12/09) et 28 Md$ au PDCF (15/09), emprunts terminés le 18/09. 16/09 : crédit de la FRBNY à AIG contre 79,9 % du capital au Trésor ; AIG subissait des appels de collatéral. 03/10 : TARP approuvé. 25/11 : rachats de MBS annoncés. Fourchette des fonds fédéraux ramenée à 0-1/4 % (date non lue).
+
+**Économie [Fait, S-FED-33].** PIB réel du T4 2008 : −3,75 % en rythme annuel (estimation avancée) ; chômage de 4,9 % (déc. 2007) à 7,6 % (janv. 2009) ; écarts Libor-OIS à des records ; pertes des banques commerciales au T4.
+
+**Dollar [Fait, S-FED-33].** Dollar pondéré par les échanges ≈ +12 % au S2 2008 ; +13 % contre l'euro, +20 % contre le dollar canadien, +36 % contre la livre ; **−14 % contre le yen**.
+
+**Or [Fait rapporté, S-MC-03]** (site de données, base non précisée) : moyenne annuelle 872 $ (LBMA) ; plus haut 1 033 $, plus bas 682 $, clôture 882 $ (sans dates) ; moyennes mensuelles des clôtures : septembre 827 $, octobre 811 $, novembre 759 $, décembre 822 $ ; plus haut de septembre 927 $, plus bas d'octobre 682 $.
+
+**Calculs [Calcul de l'auteur].** Annualisé vers trimestriel : (1 − 0,0375)^(1/4) − 1 ≈ **−0,95 %** ; chômage : 7,6 − 4,9 = **+2,7 points**. Bear Stearns : 12,9 / 13,8 = **93,5 %** de la valeur du collatéral. Or (même source, moyennes mensuelles) : 759 / 827 − 1 = **−8,2 %** de septembre à novembre ; 822 / 759 − 1 = **+8,3 %** de novembre à décembre. Amplitude entre extrêmes de la même source : 682 / 927 − 1 = **−26,4 %** (plus haut de septembre à plus bas d'octobre ; ce n'est pas un rendement de clôture). Jours : 15/09 → 03/10 = **18 jours** ; 15/09 → 25/11 = **71 jours**.
+
+**Lecture [Interprétation].** Pendant les deux mois qui suivent Lehman, l'or ne se comporte pas comme un refuge immédiat dans les moyennes mensuelles lues, alors que le dollar monte contre l'euro et la livre ; il remonte en décembre. Le gestionnaire cité parle de −20 % en trois mois (chiffre non sourcé) alors que les moyennes lues donnent −8,2 % : **deux mesures différentes, conservées sans arbitrage**. La cause de la baisse n'est pas établie par les sources lues. **Liquidité contre solvabilité :** Lehman est tombée sans soutien spécifique ; AIG a été soutenue après des appels de collatéral (problème de liquidité adossé à des pertes potentielles) ; la ligne entre les deux ne se lit pas dans les sources.
+
+### 6.2 Cas historique documenté — crise de la dette souveraine européenne, 2010-2012
+
+**Cas historique documenté — Grèce (2010), OMT (2012), or (2011).**
+
+**Grèce [Fait, S-IMF-09].** 09/05/2010 : accord de confirmation du FMI de trois ans, 26,4 Md DTS (30 Md€), 4,8 Md DTS immédiatement disponibles, accès exceptionnel (plus de 3 200 % de la quote-part) ; paquet de 110 Md€ avec l'UE ; consolidation budgétaire (déficit < 3 % du PIB en 2014, mesures de 11 % du PIB) et réformes de compétitivité ; correction de données 2008 mal déclarées.
+
+**BCE [Fait, S-ECB-OMT-01].** 06/09/2012 : taux inchangés ; OMT sur le marché secondaire des titres souverains, conditionnel à un programme EFSF/ESM, échéances d'environ 1 à 3 ans, « aucune limite ex ante », arrêt si les conditions ne sont pas respectées ; « peurs infondées sur la réversibilité de l'euro » ; « l'euro est irréversible » ; pas de plafond de rendement. **[Fait, S-BIS-12]** Discours de Draghi à Londres le 26 ou le 27/07/2012 (deux dates sur la même page) : **le texte n'a pas été lu** ; la phrase « whatever it takes » n'est vue que dans le titre d'un résultat de recherche, non consulté.
+
+**Or [Fait, S-WGC-33].** 2011 : moyenne 1 571,52 $ (fixing de l'après-midi), ≈ +28 % sur 2010 ; plus haut 1 895 $ en septembre ; clôture 1 531 $ ; flux d'ETF 154,0 t (367,7 t en 2010) ; achats officiels 439,7 t contre 77 t en 2010 ; investissement européen record de 374,8 t ; la crise de l'euro est citée comme motif de demande.
+
+**Calculs [Calcul de l'auteur].** 09/05/2010 → 06/09/2012 = **851 jours** ; 26/07/2012 → 06/09/2012 = **42 jours** ; ETF : 154,0 / 367,7 − 1 = **−58,1 %** ; achats officiels : 439,7 / 77 = **5,7 fois**. Aucun rendement de l'or entre le pic de septembre et la clôture : le résumé ne précise pas que les deux valeurs sont du même instrument.
+
+**Lecture [Interprétation].** La crise souveraine dure des années ; les réponses sont **conditionnelles** (programmes, OMT) et la parole de la banque centrale précède l'usage de l'outil. **Non lus :** rendements des titres souverains, écarts de taux, cours de l'euro, mesures de la BCE autres que l'OMT : aucun effet sur les taux ou le change n'est établi dans cette leçon.
+
+### 6.3 Cas historique documenté — mars 2023 : SVB, Signature, Credit Suisse
+
+**Cas historique documenté — banques américaines et Credit Suisse, mars 2023.**
+
+**Autorités [Fait, S-FED-34].** Dimanche 12/03/2023, 18 h 15 EDT : programme BTFP (prêts jusqu'à un an, collatéral évalué au pair), garantie de 25 Md$ du Fonds de stabilisation des changes que la Fed n'attend pas d'utiliser ; résolution de SVB et Signature de façon à protéger tous les déposants, assurés ou non. **[Fait, S-FED-35]** Le 28/04/2023, la Fed attribue la faillite de SVB à quatre causes (gestion des risques, vulnérabilités non reconnues, supervision trop lente, assouplissement de la supervision après la loi de 2018), avec 31 avertissements non traités, environ trois fois la moyenne des pairs ; le communiqué lu ne parle ni du risque de taux ni des dépôts non assurés. **[Fait, S-FINMA-01]** 19/03/2023 : reprise de Credit Suisse par UBS, liquidité de la BNS garantie par la Confédération, amortissement des AT1 d'environ 16 Md CHF.
+
+**Or et taux [Fait, S-WGC-34].** Or LBMA PM : 1 980 $ fin mars 2023 ; mars +8,5 % ; T1 +9,2 % ; échec au-dessus de 2 000 $ puis demande tactique de refuge en recul ; rendement américain à 10 ans −40 pb au T1 ; dollar plus faible ; Fed +25 pb avec ton accommodant, BCE +50 pb, BoE +25 pb ; ETF mondiaux +1,9 Md$ (+32 t) en mars, premier mois positif depuis avril 2022, T1 −29 t. **[Fait rapporté, S-NBC-01]** Achats des banques centrales de 228 t au T1, record pour un premier trimestre.
+
+**Calculs [Calcul de l'auteur].** Fin février implicite : 1 980 / 1,085 ≈ **1 825 $** (valeur déduite, non lue). 12/03 → 19/03 = **7 jours** ; 12/03 → 28/04 = **47 jours**. Les 1 980 $ et le +8,5 % sont de la même source et du même fixing.
+
+**Lecture [Interprétation].** L'or monte en mars avec des rendements en baisse et des mesures rapides ; il ne se vend pas d'abord dans les données lues. **Non lus :** niveaux quotidiens autour du 10-13 mars, du dollar, des rendements, des écarts de crédit ; fermeture de SVB (date non lue) ; part des facteurs concurrents (repricing de la Fed, flux, achats officiels).
+
+### 6.4 Tableau de couverture
+
+| Variable | 2008 | 2010-2012 | 2023 |
+|---|---|---|---|
+| Autorités (dates, outils) | Couvert (Fed History, rapport de la Fed) | Couvert (FMI 2010, BCE 06/09/2012) ; discours du 26/07 non lu | Couvert (Fed, FINMA) |
+| Taux | Fourchette 0-1/4 % (date non lue) | Non couvert | Rendement à 10 ans −40 pb au T1 (WGC) |
+| Dollar / devises | Couvert pour le S2 2008 (Fed) | Non couvert | Qualitatif (WGC) |
+| Or | Moyennes mensuelles (site de données) | Année 2011 (WGC) | Fin mars, mars, T1 (WGC) |
+| Or, séries quotidiennes | Non couvert | Non couvert | Non couvert |
+
+### 6.5 SIMULATION — liquidité ou solvabilité ?
+
+**[SIMULATION]** Une banque fictive a 100 d'actifs, 92 de dettes (dont 70 de dépôts), 8 de capital. Une rumeur provoque 40 de retraits en deux jours. Elle détient 30 d'actifs liquides et 70 d'actifs illiquides qui valent 70 si détenus, mais seulement 56 en vente forcée.
+**Calculs.** Capital : 100 − 92 = **8** ; retraits payables par les liquidités : 30 < 40, **manque de 10** ; en vente forcée, actifs = 30 + 56 = 86 < 92 dettes : **insolvabilité apparente de 6** ; valeur détenue : 100 > 92 : solvable de **8**. **Lecture.** La banque est solvable si elle peut attendre, insolvable si elle est forcée de vendre : un prêt de banque centrale contre collatéral change la situation.
+
+### 6.6 SIMULATION — trois scénarios pour l'or dans une crise bancaire fictive
+
+| Scénario | Description | Or | Signaux associés | Invalidation |
+|---|---|---|---|---|
+| A. Vente de liquidité | Appels de marge, dollar en hausse | Baisse initiale | Dollar +1,5 %, actions −4 %, or −2 % | Si l'or monte le même jour que le dollar sans appels de marge, A est affaibli |
+| B. Refuge après la liquidité | Autorités apportent la liquidité ; peur de confiance | Hausse | Rendements −30 pb, or +3 % | Si les rendements remontent fortement, B est invalidé |
+| C. Hausse de taux dominante | Banque centrale maintient la ligne dure | Baisse | Taux réels en hausse | Si les taux réels baissent, C est invalidé |
+
+## 7. Application au Forex et à l'or
+
+- **Forex.** En stress de liquidité, le dollar peut monter contre des devises d'actifs risqués ; le yen peut faire l'inverse (2008 : −14 % du dollar contre le yen). Une devise de la zone euro dépend du lien souverain-banque.
+- **Or.** Avant de parler de refuge, demander : le stress est-il d'abord de liquidité ? Les autorités ont-elles apporté la liquidité ? Les rendements baissent-ils ? Que font le dollar et les taux réels ?
+- **Méthode.** Classer chaque fait : établissement, outil, date, statut ; séparer ce qui est lu de ce qui ne l'est pas.
+- **Gestion du risque.** La leçon ne dimensionne aucune position ; une analyse correcte ne garantit pas une transaction gagnante.
+
+## 8. Erreurs courantes
+
+1. **Confondre illiquidité et insolvabilité.**
+2. **Poser « crise → or monte »** ou **« crise → or baisse »** comme une loi.
+3. **Traiter une crise souveraine de la zone euro comme une crise bancaire américaine.**
+4. **Prendre un communiqué d'autorités pour une preuve de solvabilité.**
+5. **Mêler moyennes mensuelles, extrêmes et fixings** dans un rendement.
+6. **Citer « whatever it takes » comme si le discours avait été lu.**
+7. **Attribuer à l'or la cause d'un mouvement sans mesurer dollar et taux.**
+8. **Ignorer les dépôts non assurés** dans l'analyse d'une panique bancaire.
+9. **Confondre taux annualisé et variation trimestrielle.**
+10. **Oublier les facteurs concurrents** (repricing de la Fed en 2023, achats officiels).
+
+## 9. Limites de l'interprétation
+
+- **Résumés automatiques et relais.** Aucune lecture intégrale ; le discours du 26 ou 27/07/2012 n'a pas été lu (métadonnées seulement) ; le rapport de la Fed sur SVB n'a été lu que par son communiqué ; le rapport de février 2009 sur ses 100 000 premiers caractères.
+- **Séries non lues.** Or quotidien, dollar, rendements, écarts de crédit, cours de l'euro, écarts souverains.
+- **Or de 2008** : moyennes mensuelles d'un site de données, base non précisée ; le « −20 % » du gestionnaire n'est pas sourcé.
+- **Date de la baisse à 0-1/4 %** et date de la fermeture de SVB non lues.
+- **Effets sur les taux et le change de 2010-2012** non établis dans cette leçon.
+- **Facteurs concurrents non mesurés** : repricing de la Fed, flux, achats officiels (228 t au T1 2023, record trimestriel).
+- **Anomalies consignées :** discours de Draghi daté du 26 et du 27/07/2012 sur la même page ; le −20 % (gestionnaire) contre −8,2 % (moyennes mensuelles) pour l'or en 2008 ; moyenne annuelle LBMA 872 $ contre « moyennes mensuelles de clôtures » du site : bases différentes.
+- **Aucun contrefactuel** ; trois épisodes ne font pas une règle.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Liquidité ou solvabilité ?** Pour chaque cas, classe : (a) une banque a des actifs supérieurs à ses dettes mais ne peut payer 40 de retraits avec ses 30 de liquidités ; (b) ses actifs valent 86 pour 92 de dettes ; (c) elle emprunte à une facilité de banque centrale contre collatéral.
+
+<details>
+<summary>Correction</summary>
+
+(a) Problème de liquidité (manque de 10) tant que les actifs ne sont pas bradés. (b) Insolvabilité apparente (déficit de 6). (c) Réponse de prêteur de dernier ressort à un problème de liquidité ; elle ne prouve pas la solvabilité.
+</details>
+
+**Exercice 2 — Ordre des événements de 2008.** Calcule le délai entre la faillite de Lehman (15/09/2008) et (a) le TARP (03/10) ; (b) les rachats de MBS (25/11). Que montre-t-il ?
+
+<details>
+<summary>Correction</summary>
+
+(a) **18 jours** ; (b) **71 jours**. Les outils s'enchaînent sur des semaines ; les effets sur les prix ne se lisent qu'avec des séries datées, non lues ici.
+</details>
+
+**Exercice 3 — Calculs permis.** Parmi : (a) 759/827 − 1 ; (b) 682/927 − 1 ; (c) 1 895/682 − 1 ; (d) 1 980/1,085. Classe.
+
+<details>
+<summary>Correction</summary>
+
+(a) Permis : deux moyennes mensuelles de la même source, **−8,2 %**. (b) Permis avec étiquette « amplitude entre extrêmes », **−26,4 %**, pas un rendement de clôture. (c) Refusé : plus bas d'un site de données contre plus haut d'une autre source (WGC), instruments non précisés. (d) Déduction de la fin février (≈ 1 825 $) à partir de +8,5 % : valeur dérivée, non lue.
+</details>
+
+**Exercice 4 — Annualisé et trimestriel.** Le PIB du T4 2008 est de −3,75 % en rythme annuel. Calcule la variation trimestrielle approximative.
+
+<details>
+<summary>Correction</summary>
+
+(1 − 0,0375)^(1/4) − 1 ≈ **−0,95 %**. Un taux annualisé n'est pas la variation du trimestre.
+</details>
+
+**Exercice 5 — Banque ou État ?** Classe : (a) retraits massifs de dépôts non assurés ; (b) hausse des écarts de rendement d'un État de la zone euro ; (c) programme conditionnel FMI-UE ; (d) garantie de tous les déposants.
+
+<details>
+<summary>Correction</summary>
+
+(a) Crise bancaire. (b) Crise souveraine. (c) Réponse souveraine (conditionnalité). (d) Réponse bancaire (garantie).
+</details>
+
+**Exercice 6 — Pourquoi vendre l'or ? (SIMULATION)** Un jour fictif, actions −5 %, dollar +1,8 %, or −2,5 %, rendement du 10 ans −20 pb, appels de marge signalés par plusieurs courtiers. Donne deux hypothèses pour la baisse de l'or et ce qu'il faudrait observer pour chacune.
+
+<details>
+<summary>Correction</summary>
+
+(1) Liquidation forcée : appels de marge documentés, corrélation positive avec les actions le jour même. (2) Dollar : dollar en hausse sans baisse des taux réels (les rendements nominaux baissent mais aussi les anticipations d'inflation). Aucune n'est démontrée par ces seuls chiffres ; la part de chacune n'est pas mesurée.
+</details>
+
+**Exercice 7 — Auditer.** « En 2008, l'or a baissé de 20 % parce que c'est une crise : l'or baisse toujours en crise. » Relève les défauts.
+
+<details>
+<summary>Correction</summary>
+
+(1) Le −20 % vient d'un commentaire non sourcé ; les moyennes mensuelles lues donnent −8,2 % de septembre à novembre. (2) Une cause (la crise) n'est pas démontrée ; dollar et liquidité sont des facteurs concurrents. (3) « Toujours » : mars 2023 contredit (l'or +8,5 % en mars). (4) L'or a rebondi en décembre (+8,3 % entre moyennes). Reformulation : « Dans les sources lues, les moyennes mensuelles de l'or ont baissé de 8,2 % de septembre à novembre 2008 puis remonté de 8,3 % en décembre ; la cause n'est pas établie. »
+</details>
+
+**Exercice 8 — Discours non lu.** Un élève écrit : « Dans son discours du 26 juillet 2012, Draghi a promis de faire "whatever it takes" et les rendements ont baissé le lendemain. » Que corriges-tu ?
+
+<details>
+<summary>Correction</summary>
+
+La leçon n'a pas lu le discours (métadonnées seulement, avec deux dates, 26 et 27/07) ; la phrase n'est vue que dans un titre de recherche ; aucun rendement n'a été lu. Reformulation : « Un discours de Draghi à Londres est daté du 26 ou du 27/07/2012 par une page de la BRI ; son texte n'a pas été lu et aucun effet sur les rendements n'est documenté ici. »
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L8.07.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Liquidité et solvabilité sont deux problèmes distincts mais liés par la confiance.
+- Canaux de contagion : financement, déposants, expositions, valorisation, lien souverain-banque, taux.
+- Interventions : prêts, facilités, garanties, recapitalisations, achats d'actifs, programmes conditionnels.
+- Crise bancaire (jours, dépôts) et crise souveraine (années, conditionnalité) diffèrent.
+- L'or peut d'abord être vendu (2008, selon des moyennes mensuelles et un commentaire) ou monter tout de suite (mars 2023) ; l'ordre n'est pas une loi.
+- **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 13. Critères de maîtrise
+
+- [ ] Distinguer liquidité et solvabilité (Exercice 1).
+- [ ] Dater et classer des interventions (Exercices 2 et 5).
+- [ ] Refuser ou étiqueter des calculs (Exercices 3 et 4).
+- [ ] Formuler des hypothèses sur la vente de l'or en crise (Exercice 6).
+- [ ] Auditer une règle trop générale (Exercice 7).
+- [ ] Ne pas citer une source non lue (Exercice 8).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+- **S-FEDH-01** — Federal Reserve History, Support for Specific Institutions : https://www.federalreservehistory.org/-/media/Project/FedHistory/FedHistory/Documents/essaysPDFs/Support-for-Specific-Institutions-_-Federal-Reserve-History.pdf
+- **S-FED-33** — Monetary Policy Report, 24/02/2009, partie 2 : https://www.federalreserve.gov/monetarypolicy/mpr_20090224_part2.htm
+- **S-MC-03** — MetalCharts, or 2008 : https://metalcharts.org/gold-price-history/2008
+- **S-IMF-09** — FMI, communiqué 10/187 : https://www.imf.org/external/np/sec/pr/2010/pr10187.htm
+- **S-ECB-OMT-01** — BCE, conférence de presse du 06/09/2012 : https://www.ecb.europa.eu/press/pressconf/2012/html/is120906.en.html
+- **S-BIS-12** — BRI, Central Bankers' Speeches (métadonnées) : https://www.bis.org/review/r120727d.pdf
+- **S-WGC-33** — WGC, Gold Demand Trends T4 2011 : https://www.gold.org/sites/default/files/GDT_Q4_2011.pdf
+- **S-FED-34** — Fed, 12/03/2023 : https://www.federalreserve.gov/newsevents/pressreleases/monetary20230312a.htm
+- **S-FED-35** — Fed, 28/04/2023 : https://www.federalreserve.gov/newsevents/pressreleases/bcreg20230428a.htm
+- **S-FINMA-01** — FINMA, 19/03/2023 : https://www.finma.ch/en/news/2023/03/20230319-mm-cs-ubs/
+- **S-WGC-34** — WGC, T1 2023 : https://www.gold.org/goldhub/research/gold-market-commentary-march-2023
+- **S-NBC-01** — NBC 5 / CNBC, 05/05/2023 : https://www.nbcdfw.com/news/business/money-report/central-bank-gold-demand-hits-first-quarter-record-investments-surge-on-u-s-banking-turmoil/3251365
+- **S-WT-01** — WisdomTree, 26/03/2020 (voir L8.05).

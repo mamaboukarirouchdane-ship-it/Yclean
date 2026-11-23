@@ -1,0 +1,292 @@
+---
+id: L0.03
+module: 0
+order: 3
+title: "L'anatomie du marché des changes (Forex)"
+level: débutant
+duration_hours: 3
+prerequisites: ["L0.01", "L0.02"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L0.03.quiz.json"
+sources: ["S-BIS-03", "S-BIS-04", "S-BIS-02", "S-BIS-01"]
+---
+
+# L0.03 — L'anatomie du marché des changes (Forex)
+
+> **Convention de lecture.** **[Fait]** = vérifié dans une source citée ; **[Définition]** = convention de vocabulaire ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Cette leçon suppose connus : bid, ask, spread, liquidité, gré à gré (L0.01) et les familles d'acteurs (L0.02).
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. lire une cotation de paire de devises (devise de base, devise de cotation) et dire ce que coûte un achat ;
+2. calculer une variation en **pips**, la valeur d'un pip et un gain ou une perte en devise de cotation puis en dollars ;
+3. calculer un **taux croisé** à partir de deux paires contre le dollar ;
+4. nommer les cinq grandes familles d'instruments de change et leur poids dans le volume (BRI, avril 2025) ;
+5. expliquer pourquoi les parts des devises totalisent 200 % et ce que signifie « le dollar est d'un côté d'environ 89 % des transactions » ;
+6. décrire la structure du marché : gré à gré, concentration géographique, règlement du change au comptant ;
+7. situer XAU/USD par rapport à une paire de devises.
+
+## 2. Prérequis
+
+L0.01 et L0.02. Multiplication, division et pourcentages.
+
+## 3. Explication intuitive
+
+Un prix s'exprime toujours dans une unité : « 2 euros le kilo de riz ». Pour une monnaie, c'est pareil, sauf que l'unité est… une autre monnaie. Dire « l'euro vaut 1,0800 » n'a pas de sens ; il faut dire **1 euro vaut 1,0800 dollar**. Le marché des changes est donc le lieu où l'on échange en permanence *une monnaie contre une autre*, et chaque prix relie deux monnaies.
+
+Ce marché n'a pas de place centrale comme une bourse : c'est un **réseau** de banques et d'autres institutions qui se cotent mutuellement des prix, et qui servent leurs clients. Il est très grand, très concentré autour de quelques places financières et dominé par une monnaie : le dollar américain.
+
+## 4. Développement technique
+
+### 4.1 Lire une paire de devises
+
+**[Définition]** Une paire s'écrit **BASE/COTATION**. Le prix indique combien d'unités de la devise de **cotation** il faut pour obtenir **1 unité de la devise de base**.
+
+- **EUR/USD = 1,0800** signifie : 1 EUR = 1,0800 USD. EUR est la base, USD est la cotation.
+- **Acheter EUR/USD** = acheter des euros (la base) en payant des dollars (la cotation). **Vendre EUR/USD** = vendre des euros contre des dollars.
+- Si EUR/USD monte, l'euro vaut plus de dollars : l'euro s'apprécie face au dollar. Si EUR/USD baisse, c'est le dollar qui s'apprécie face à l'euro. Chaque paire est un rapport entre deux monnaies : une variation ne dit pas, à elle seule, laquelle des deux a « bougé ».
+
+Une paire est cotée avec un **bid** (prix auquel le teneur de marché achète la base) et un **ask** (prix auquel il la vend) — voir L0.01.
+
+### 4.2 Le pip
+
+**[Définition]** Le **pip** est l'unité usuelle pour mesurer une variation de cotation.
+
+- Pour la plupart des paires, 1 pip = **0,0001** (quatrième décimale). Exemple : EUR/USD de 1,0800 à 1,0801 = +1 pip.
+- Pour les paires avec le yen, 1 pip = **0,01** (deuxième décimale). Exemple : USD/JPY de 150,00 à 150,01 = +1 pip.
+
+**Valeur d'un pip.** Elle s'exprime dans la devise de cotation. Pour une position de 100 000 EUR sur EUR/USD : 100 000 × 0,0001 = **10 USD** par pip. Pour 100 000 USD sur USD/JPY : 100 000 × 0,01 = **1 000 JPY** par pip, à convertir en dollars au taux du moment si l'on veut un résultat en dollars.
+
+### 4.3 Taux croisés
+
+**[Définition]** Un **taux croisé** est une paire qui ne contient pas le dollar, par exemple EUR/GBP ou EUR/JPY. Il se calcule à partir de deux paires cotées contre le dollar.
+
+- Si la devise commune est en cotation dans l'une et en base dans l'autre, on **multiplie** : EUR/JPY = EUR/USD × USD/JPY.
+- Si la devise commune est en cotation dans les deux, on **divise** : EUR/GBP = EUR/USD ÷ GBP/USD.
+
+Le test de cohérence : les unités se simplifient. (USD par EUR) × (JPY par USD) = JPY par EUR ; (USD par EUR) ÷ (USD par GBP) = GBP par EUR.
+
+### 4.4 Spot, forward, swap, options
+
+**[Fait]** La BRI définit une transaction **au comptant (*spot*)** comme l'échange de deux devises à un taux convenu à la date du contrat, avec livraison dans un délai de **deux jours ouvrés** (S-BIS-01).
+
+Les autres instruments, décrits ici par définition de cours (la BRI les mesure, sans que la page de glossaire lue les définisse) :
+
+- **Contrat à terme sec (*outright forward*)** : échange de deux devises à une date future, à un taux fixé aujourd'hui.
+- **Swap de change (*FX swap*)** : deux opérations opposées sur la même paire — on achète une devise à une date et on la revend à une autre date, le taux de l'opération à terme étant fixé dès le départ.
+- **Swap de devises (*currency swap*)** : échange de flux dans deux devises sur une durée plus longue.
+- **Option de change** : contrat qui donne le droit, sans l'obligation, d'échanger à un taux fixé.
+
+**[Fait]** Selon la BRI (publication de décembre 2025, S-BIS-03, tableau A.2 ; montants détaillés dans S-BIS-04), le volume quotidien moyen de change de gré à gré en avril 2025 est de **9 510 milliards de dollars** (base « net-net »), en hausse de **27 %** par rapport à avril 2022 (+2 043 milliards). Les chiffres publiés en septembre 2025 (9 600 milliards, +28 %, S-BIS-02) étaient préliminaires : ils sont remplacés ici par ceux de décembre. Décomposition par instrument (montants et parts publiés dans S-BIS-03) :
+
+| Instrument | Part du volume | Montant publié |
+|---|---|---|
+| Swaps de change | 42 % | 4 015 Md$ |
+| Comptant (*spot*) | 31 % | 2 952 Md$ |
+| Contrats à terme secs | 18 % | 1 747 Md$ |
+| Options | 7 % | 632 Md$ |
+| Swaps de devises | 2 % | 164 Md$ |
+
+Les cinq parts publiées totalisent 100 %.
+
+**[Interprétation]** On s'attend souvent à ce que le « change » soit surtout du comptant ; en réalité, c'est le swap de change qui domine. Il sert, à ma connaissance, surtout à emprunter ou prêter une devise à court terme et à renouveler des couvertures ; cette explication **n'est pas sourcée ici** et sera étudiée avec les marchés monétaires au module 2.
+
+### 4.5 Les devises : pourquoi 200 % ?
+
+Chaque transaction de change implique **deux** devises. La BRI précise que, pour cette raison, la somme des montants par devise est égale à **deux fois** le total publié (S-BIS-04, note des tableaux) : les parts de chaque devise sont donc calculées sur 200 % au total.
+
+**[Fait]** Montants par devise en avril 2025 (S-BIS-04, tableau 2, base net-net, en milliards de dollars, arrondis) : USD 8 472 ; EUR 2 714 ; JPY 1 608 ; GBP 967 ; CNY 817 ; CHF 601 ; AUD 582 ; CAD 547 ; HKD 367 ; SGD 232.
+
+**[Calcul de l'auteur]** Rapportés au total de 9 510 : USD ≈ 89,1 % ; EUR ≈ 28,5 % ; JPY ≈ 16,9 % ; GBP ≈ 10,2 % ; CNY ≈ 8,6 % ; CHF ≈ 6,3 % ; AUD ≈ 6,1 % ; CAD ≈ 5,8 % ; HKD ≈ 3,9 % ; SGD ≈ 2,4 %. Ces pourcentages ne sont pas des statistiques publiées dans les documents de décembre lus : ils sont calculés ici. La page préliminaire de septembre 2025 donnait d'autres valeurs (par exemple 89,2 % pour le dollar, S-BIS-02) ; l'écart n'est pas expliqué par les sources lues.
+
+Lecture correcte : le dollar est l'un des deux côtés dans **environ 89 % de toutes les transactions** — et non « 89 % du marché ». **[Interprétation]** Le dollar joue donc un rôle central : beaucoup d'échanges entre deux autres monnaies passent par lui, et c'est par commodité que les taux croisés de cette leçon se calculent à partir de paires contre le dollar. Le détail du fonctionnement des paires croisées dans le marché réel sera revu au module 4.
+
+**[Fait]** Selon la BRI (S-BIS-03, encadré C, p. 38), en avril 2025 USD/CNY a dépassé USD/GBP au rang de **troisième paire la plus échangée, derrière USD/EUR et USD/JPY** (la BRI écrit USD/EUR ; la convention de cotation de cette leçon écrit EUR/USD). Les trois premières sont donc **EUR/USD, USD/JPY et USD/CNY**. La page préliminaire de septembre 2025 indiquait en outre que les dix paires les plus échangées contiennent toutes le dollar (S-BIS-02) ; cette phrase n'a pas été revérifiée dans les documents de décembre.
+
+**[Calcul de l'auteur]** À partir des montants du tableau 3 de S-BIS-04 (milliards de dollars), rapportés à 9 510 : USD/EUR 1 970 (≈ 20,7 %) ; USD/JPY 1 370 (≈ 14,4 %) ; USD/CNY 781 (≈ 8,2 %) ; USD/GBP 715 (≈ 7,5 %) ; USD/CHF 455 (≈ 4,8 %) ; USD/HKD 347 (≈ 3,6 %). Ce sont des calculs et non des parts publiées. Cette liste n'est **pas un classement complet** : d'autres paires (par exemple USD/CAD ou USD/AUD) n'ont pas été lues, et le rang de USD/CHF et de USD/HKD n'a pas été établi.
+
+### 4.6 Où se fait le marché ?
+
+**[Fait]** Selon la BRI (page de septembre 2025, S-BIS-02), les places les plus importantes (base « net-gross ») sont : Royaume-Uni environ **38 %**, États-Unis environ **19 %**, Singapour **11,8 %**, Hong Kong **7,0 %** ; ensemble, environ **trois quarts** du total. **[Calcul de l'auteur]** Les montants par pays des tableaux détaillés (S-BIS-04, tableau 1, net-gross : 4 743, 2 335, 1 485 et 883 milliards de dollars) donnent 37,8 %, 18,6 %, 11,8 % et 7,0 %, soit 75,2 % pour les quatre, lorsqu'on les rapporte à la somme des lignes du tableau (12 557 milliards, « autres pays » compris) : la BRI n'imprime pas de total net-gross dans les pages lues. Ces parts concordent avec celles de septembre ; je n'ai pas vu de republication de ces parts géographiques en décembre.
+
+La répartition par type de contrepartie a été vue en L0.02 (section 4.3) et n'est pas reprise ici.
+
+**[Interprétation, non sourcée ici]** Le marché passe d'une grande place à l'autre au fil de la journée, ce qui le rend très actif pendant la semaine. Les horaires précis ne sont pas fournis dans cette leçon et seront sourcés au module 4.
+
+### 4.7 L'or dans cette architecture
+
+**[Définition]** XAU est le code de l'or dans la notation des devises. **XAU/USD** est le prix d'**une once d'or** (once troy) exprimé en dollars. Comme pour EUR/USD, une hausse de XAU/USD signifie que 1 once d'or vaut plus de dollars.
+
+Différence importante : l'or n'est pas une monnaie émise par un État et ne verse pas d'intérêt. Il suit la même **convention de cotation** (BASE/COTATION), mais l'enquête de la BRI sur le change ne couvre pas l'or ; je n'avance donc aucun chiffre sur sa part de marché.
+
+## 5. Définitions essentielles
+
+| Terme | Définition |
+|---|---|
+| Paire de devises | Prix d'une devise (base) exprimé dans une autre (cotation). |
+| Devise de base / de cotation | Première / seconde devise de la paire. |
+| Pip | 0,0001 pour la plupart des paires ; 0,01 pour les paires avec le yen. |
+| Valeur du pip | Montant gagné ou perdu pour 1 pip sur la taille de la position, dans la devise de cotation. |
+| Taux croisé | Paire sans dollar, calculée à partir de deux paires avec le dollar. |
+| Comptant (*spot*) | Échange au taux du jour, livraison sous deux jours ouvrés (BRI). |
+| Contrat à terme sec (*outright forward*) | Échange futur à un taux fixé aujourd'hui. |
+| Swap de change (*FX swap*) | Achat et revente de la même devise à deux dates. |
+| Option de change | Droit, sans obligation, d'échanger à un taux fixé. |
+| XAU/USD | Prix d'une once d'or en dollars. |
+
+## 6. Exemples chiffrés
+
+> **[SIMULATION]** pour tous les taux de cette section, sauf les parts de la BRI qui sont des **[Faits]**.
+
+**Exemple A — Aller-retour sur EUR/USD.** Cotation : bid 1,0798 / ask 1,0802.
+
+- Spread = 1,0802 − 1,0798 = 0,0004 = **4 pips**.
+- Acheter 100 000 EUR au ask : 100 000 × 1,0802 = **108 020 USD**.
+- Revendre immédiatement au bid : 100 000 × 1,0798 = **107 980 USD**.
+- Perte = 108 020 − 107 980 = **40 USD** = 4 pips × 10 USD par pip. Le coût du spread se lit donc directement en pips.
+
+**Exemple B — Gain en pips sur EUR/USD.** Tu es acheteur de 200 000 EUR à 1,0800 ; le marché passe à 1,0850.
+
+- Variation = 1,0850 − 1,0800 = 0,0050 = **50 pips**.
+- Gain = 200 000 × 0,0050 = **1 000 USD**. (Contrôle : valeur du pip = 200 000 × 0,0001 = 20 USD ; 50 × 20 = 1 000.)
+
+**Exemple C — Perte sur USD/JPY, convertie en dollars.** Tu es acheteur de 100 000 USD à 150,00 ; le marché passe à 149,20.
+
+- Variation = 149,20 − 150,00 = −0,80 = **−80 pips** (1 pip = 0,01).
+- Perte en yen = 100 000 × (−0,80) = **−80 000 JPY**.
+- En dollars au taux final : 80 000 / 149,20 = **536,19 USD** (perte).
+
+**Exemple D — Taux croisés.** EUR/USD = 1,0800 ; USD/JPY = 150,00 ; GBP/USD = 1,2600.
+
+- EUR/JPY = 1,0800 × 150,00 = **162,00**.
+- EUR/GBP = 1,0800 / 1,2600 = **0,857143**.
+- Si GBP/USD monte à 1,3000 alors que EUR/USD reste à 1,0800 : EUR/GBP = 1,0800 / 1,3000 = **0,830769** — l'euro vaut moins de livres : la livre s'est appréciée face à l'euro.
+
+**Exemple E — Contrôles sur les données de la BRI.** Montants en milliards de dollars ; les résultats de calcul sont ceux de l'auteur.
+
+- Croissance : variation publiée +2 043 sur un total de 9 510, donc base 2022 = 9 510 − 2 043 = 7 467 ; 2 043 / 7 467 = **+27,4 %**, cohérent avec les +27 % publiés ✓.
+- Swaps de change : 4 015 / 9 510 = **42,2 %** → 42 % publié ✓. (42 % × 9 510 = 3 994, proche de 4 015 : l'écart vient de l'arrondi de la part.)
+- Comptant : 2 952 / 9 510 = **31,0 %** → 31 % publié ✓. (31 % × 9 510 = 2 948 ≈ 2 952.)
+- Parts publiées par instrument : 42 + 31 + 18 + 7 + 2 = **100 %** : ici les arrondis se compensent.
+- Quatre places financières : parts de septembre 38 + 19 + 11,8 + 7,0 = **75,8 %** ; sur les montants détaillés, **75,2 %** : dans les deux cas, environ trois quarts ✓.
+
+## 7. Application au Forex et à l'or
+
+**Forex.** Pour un analyste fondamental, la cotation EUR/USD résume *deux* économies. Une hausse de EUR/USD peut venir de facteurs qui renforcent l'euro, de facteurs qui affaiblissent le dollar, ou des deux. Avant de chercher la cause, il faut savoir lire la paire correctement (4.1) et mesurer le mouvement (4.2). Le fait que le dollar soit d'un côté d'environ 89 % des transactions explique pourquoi la plupart des analyses macro sur les changes passent par les États-Unis : elles seront reprises aux modules 2, 4 et 9.
+
+**Or.** Dans XAU/USD, le dollar est la devise de cotation ; on entend souvent dire qu'une hausse du dollar face aux autres monnaies pèse sur le prix de l'or. C'est **une hypothèse à tester, pas une règle** : aucune donnée n'est avancée ici pour la soutenir, et elle est étudiée au module 5.
+
+## 8. Erreurs courantes
+
+1. **Inverser base et cotation.** EUR/USD = 1,0800 se lit « 1 euro = 1,0800 dollar », jamais l'inverse.
+2. **Oublier que le pip du yen est 0,01.** Confondre avec 0,0001 multiplie les erreurs par 100.
+3. **Calculer un gain sans préciser la devise.** Le gain d'EUR/USD est en dollars, celui d'USD/JPY est en yen.
+4. **Lire « environ 89 % » comme « le dollar est 89 % du marché ».** Les parts totalisent 200 %.
+5. **Multiplier là où il faut diviser dans un taux croisé.** Vérifier les unités.
+6. **Croire que le marché est surtout du comptant.** En volume, le swap de change domine.
+
+## 9. Limites de l'interprétation
+
+- Les chiffres de la BRI décrivent **avril 2025** (publication de décembre 2025, qui remplace les chiffres préliminaires de septembre) : ce sont des moyennes quotidiennes, pas des volumes d'un jour donné, et ils ne mesurent pas les prix.
+- La définition du pip est une convention de marché, non une règle légale ; certains courtiers cotent avec une décimale de plus.
+- Des parts arrondies peuvent ne pas totaliser 100 % : les parts publiées par instrument totalisent 100 %, celles par contrepartie 101 % (voir L0.02, section 4.3). Les pourcentages marqués « calcul de l'auteur » ne sont pas des statistiques publiées.
+- L'enquête de la BRI ne couvre pas l'or.
+- Un taux croisé calculé est un prix théorique : le prix réellement coté peut différer légèrement.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Lire une cotation.** GBP/USD = 1,2600. (a) Quelle est la devise de base ? (b) Combien coûtent 50 000 GBP en USD ? (c) Si GBP/USD passe à 1,2700, quelle est la nouvelle valeur et la variation en USD et en % ?
+
+<details>
+<summary>Correction 1</summary>
+
+(a) La **livre sterling (GBP)**, première devise de la paire.
+(b) 50 000 × 1,2600 = **63 000 USD**.
+(c) 50 000 × 1,2700 = **63 500 USD** ; variation = **+500 USD**, soit 500 / 63 000 ≈ **+0,79 %** (1,2700 / 1,2600 − 1 ≈ 0,0079 : même résultat).
+</details>
+
+**Exercice 2 — Spread en pips.** AUD/USD : bid 0,6500 / ask 0,6503. (a) Spread en pips ? (b) Coût d'un aller-retour immédiat sur 100 000 AUD ?
+
+<details>
+<summary>Correction 2</summary>
+
+(a) 0,6503 − 0,6500 = 0,0003 = **3 pips**.
+(b) Valeur du pip = 100 000 × 0,0001 = 10 USD. Coût = 3 × 10 = **30 USD**. (Contrôle direct : achat à 65 030 USD, revente à 65 000 USD → perte 30 USD.)
+</details>
+
+**Exercice 3 — USD/JPY.** Tu achètes 100 000 USD à 150,00 et tu clôtures à 151,00. (a) Gain en pips ? (b) Gain en yen ? (c) Gain en dollars, converti au taux de clôture ?
+
+<details>
+<summary>Correction 3</summary>
+
+(a) 151,00 − 150,00 = 1,00 = **100 pips** (1 pip = 0,01).
+(b) 100 000 × 1,00 = **100 000 JPY**.
+(c) 100 000 / 151,00 = **662,25 USD**.
+Raisonnement : le gain est d'abord obtenu en yen (devise de cotation) ; on le convertit ensuite en dollars au taux de clôture.
+</details>
+
+**Exercice 4 — Taux croisé.** EUR/USD = 1,0800 ; GBP/USD = 1,2600. (a) Calcule EUR/GBP. (b) Si GBP/USD monte à 1,3000 (EUR/USD inchangé), que devient EUR/GBP et que cela signifie-t-il ? (c) Vérifie les unités.
+
+<details>
+<summary>Correction 4</summary>
+
+(a) 1,0800 / 1,2600 = **0,857143**.
+(b) 1,0800 / 1,3000 = **0,830769**. EUR/GBP baisse : 1 euro vaut moins de livres, donc la livre s'est appréciée face à l'euro.
+(c) (USD/EUR) ÷ (USD/GBP) : les USD se simplifient, il reste GBP par EUR, ce qui correspond bien à EUR/GBP.
+</details>
+
+**Exercice 5 — Lire la BRI.** (a) Quelle est la croissance du volume entre avril 2022 et avril 2025, sachant que la variation publiée est de +2 043 milliards pour un total de 9 510 ? (b) Calcule le volume du comptant à partir de sa part publiée (31 %). (c) Pourquoi les parts de devises totalisent-elles 200 % ? (d) Que signifie « USD environ 89 % » ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) Base 2022 = 9 510 − 2 043 = 7 467 ; 2 043 / 7 467 ≈ 0,274 → **+27 %**.
+(b) 31 % × 9 510 = **2 948** milliards de dollars, proche des 2 952 publiés (la part est arrondie à l'unité).
+(c) Chaque transaction a **deux** côtés, donc chaque transaction est comptée deux fois (une fois par devise).
+(d) Le dollar figure d'un côté d'**environ 89 % des transactions**, pas 89 % du marché. (Le pourcentage exact est un calcul de l'auteur sur les montants publiés : 89,1 %.)
+</details>
+
+**Exercice 6 — Raisonner sur XAU/USD.** XAU/USD passe de 2 000 à 2 040 (valeurs **fictives**). (a) Que signifie ce mouvement ? (b) Quelle est la variation en pourcentage ? (c) Peut-on déduire que le dollar s'est affaibli ?
+
+<details>
+<summary>Correction 6</summary>
+
+(a) Une once d'or vaut maintenant 2 040 USD au lieu de 2 000.
+(b) 2 040 / 2 000 − 1 = **+2 %**.
+(c) **Non, pas directement.** Le prix peut monter parce que la demande d'or augmente, sans que le dollar change par rapport aux monnaies. Pour juger du dollar, il faut regarder des paires de devises. Toute relation entre dollar et or est une hypothèse à tester (module 5).
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L0.03.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Une paire BASE/COTATION indique combien d'unités de cotation valent 1 unité de base.
+- 1 pip = 0,0001 (0,01 pour le yen) ; sa valeur dépend de la taille de la position.
+- Un taux croisé se calcule en multipliant ou en divisant selon la position de la devise commune.
+- Marché de gré à gré de 9 510 Md$ par jour en avril 2025 (BRI, publication de décembre 2025) ; le swap de change (42 %) domine, devant le comptant (31 %).
+- Le dollar est d'un côté d'environ 89 % des transactions (calcul de l'auteur sur les montants publiés) ; les parts de devises totalisent 200 %. Les paires les plus échangées sont EUR/USD, USD/JPY puis USD/CNY.
+- Quatre places concentrent environ trois quarts du volume ; le comptant se règle sous deux jours ouvrés.
+- XAU/USD suit la même convention de cotation, mais l'or n'est ni une monnaie d'État ni couvert par l'enquête de la BRI.
+
+## 13. Critères de maîtrise
+
+- [ ] Lire une paire et dire ce que coûte un achat (Exercice 1).
+- [ ] Calculer un spread en pips et son coût (Exercice 2).
+- [ ] Calculer un gain sur une paire avec le yen et le convertir (Exercice 3).
+- [ ] Calculer un taux croisé en vérifiant les unités (Exercice 4).
+- [ ] Expliquer la règle des 200 % (Exercice 5).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. S-BIS-01 et S-BIS-02 consultées le **29 octobre 2026** ; S-BIS-03 et S-BIS-04 consultées le **30 octobre 2026** :
+
+- **S-BIS-03** — BRI, *BIS Quarterly Review*, décembre 2025 (publié le 8 décembre 2025), article sur le marché des changes « Global FX markets: when hedging takes centre stage » (Huang, Krohn, Sushko), tableau A.2 et encadré C : https://www.bis.org/publications/global-fx-markets-when-hedging-takes-centre-stage_1.pdf
+- **S-BIS-04** — BRI, *2025 Triennial Central Bank Survey — Detailed tables* (OTC foreign exchange market turnover in April 2025) : https://www.bis.org/publications/triennial-survey/rpfx25-fx-annex-2606.pdf
+- **S-BIS-02** — BRI, « OTC foreign exchange turnover in April 2025 » (30 septembre 2025, chiffres **préliminaires**, remplacés par S-BIS-03/04 ; conservée pour les parts géographiques et la phrase sur les dix paires) : https://www.bis.org/statistics/rpfx25_fx.htm
+- **S-BIS-01** — BRI, glossaire des données, entrée « Spot » : https://data.bis.org/help/glossary?item=Spot
+
+Les définitions de pip, de taux croisé, de contrat à terme sec, de swap de change, de swap de devises, d'option et la convention de cotation de l'or sont des définitions de cours, non attribuées à une source précise.

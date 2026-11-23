@@ -1,0 +1,233 @@
+{
+  "lessonId": "L4.04",
+  "title": "Quiz — Balance des paiements",
+  "passThreshold": 0.8,
+  "note": "Quiz de la leçon L4.04",
+  "questions": [
+    {
+      "id": "L4.04-Q1",
+      "type": "mcq",
+      "prompt": "Quels sont les quatre éléments du compte courant selon le BPM6 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Importations, exportations, taux, change"
+        },
+        {
+          "id": "b",
+          "text": "Actions, obligations, dérivés, réserves"
+        },
+        {
+          "id": "c",
+          "text": "Biens, services, revenus primaires, revenus secondaires"
+        },
+        {
+          "id": "d",
+          "text": "Dette, déficit, inflation, PIB"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le compte courant comprend biens, services, revenus primaires et secondaires ; actions et obligations relèvent du compte financier.",
+      "tags": [
+        "structure"
+      ]
+    },
+    {
+      "id": "L4.04-Q2",
+      "type": "mcq",
+      "prompt": "Que mesurent les revenus primaires ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La rémunération du travail et des capitaux (intérêts, dividendes)"
+        },
+        {
+          "id": "b",
+          "text": "Les aides entre pays"
+        },
+        {
+          "id": "c",
+          "text": "Les prix à l'importation"
+        },
+        {
+          "id": "d",
+          "text": "Les droits de douane"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Les revenus primaires rémunèrent le travail et les capitaux ; les revenus secondaires sont des transferts courants.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L4.04-Q3",
+      "type": "mcq",
+      "prompt": "Biens −250,9 ; services +92,1 ; revenus primaires −15,8 ; secondaires −38,0. Quel solde ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−158,3"
+        },
+        {
+          "id": "b",
+          "text": "−297,6"
+        },
+        {
+          "id": "c",
+          "text": "+212,6"
+        },
+        {
+          "id": "d",
+          "text": "−212,6"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Somme : −250,9 + 92,1 − 15,8 − 38,0 = −212,6 milliards de dollars, qui est le solde publié du T1 révisé.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.04-Q4",
+      "type": "mcq",
+      "prompt": "Déficit courant américain de 212,6 (T1) à 246,0 (T2). Quelle hausse en % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+33,4 %"
+        },
+        {
+          "id": "b",
+          "text": "+15,7 %"
+        },
+        {
+          "id": "c",
+          "text": "+13,6 %"
+        },
+        {
+          "id": "d",
+          "text": "+1,57 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "33,4 ÷ 212,6 = 15,7 % ; le déficit passe de 2,7 % à 3,0 % du PIB.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.04-Q5",
+      "type": "mcq",
+      "prompt": "Zone euro, 12 mois : biens 290, services 153, revenus primaires 14, secondaires −207. Solde ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "290"
+        },
+        {
+          "id": "b",
+          "text": "457"
+        },
+        {
+          "id": "c",
+          "text": "−250"
+        },
+        {
+          "id": "d",
+          "text": "250 milliards d'euros"
+        }
+      ],
+      "correct": "d",
+      "explanation": "290 + 153 + 14 − 207 = 250 ; c'est 1,5 % du PIB de la zone euro, contre 290 un an plus tôt.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.04-Q6",
+      "type": "mcq",
+      "prompt": "Pourquoi les flux de portefeuille bruts importent-ils plus que le solde courant pour le change ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que le solde courant est nul"
+        },
+        {
+          "id": "b",
+          "text": "Parce qu'ils sont publiés avant"
+        },
+        {
+          "id": "c",
+          "text": "Ils sont environ 7,6 fois plus grands (1 903 contre 250) et plus volatils"
+        },
+        {
+          "id": "d",
+          "text": "Parce qu'ils sont fixés par la banque centrale"
+        }
+      ],
+      "correct": "c",
+      "explanation": "798 + 1 105 = 1 903 milliards de flux bruts de portefeuille ; le solde courant n'est que de 250 milliards.",
+      "tags": [
+        "flux"
+      ]
+    },
+    {
+      "id": "L4.04-Q7",
+      "type": "mcq",
+      "prompt": "Écart de 123,7 milliards de dollars entre compte courant et compte financier américains : que signifie-t-il ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il correspond au compte de capital et aux erreurs et omissions, qui sont élevés"
+        },
+        {
+          "id": "b",
+          "text": "Une erreur du lecteur"
+        },
+        {
+          "id": "c",
+          "text": "Une absence de comptabilité"
+        },
+        {
+          "id": "d",
+          "text": "Un excédent"
+        }
+      ],
+      "correct": "a",
+      "explanation": "L'identité n'est vérifiée qu'avec le compte de capital et les erreurs et omissions ; ici ce poste est important et à signaler.",
+      "tags": [
+        "identite"
+      ]
+    },
+    {
+      "id": "L4.04-Q8",
+      "type": "mcq",
+      "prompt": "Que peut-on conclure d'un déficit courant en hausse pour le change à court terme ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une dépréciation certaine"
+        },
+        {
+          "id": "b",
+          "text": "Rien de mécanique : la stabilité du financement et les flux comptent davantage"
+        },
+        {
+          "id": "c",
+          "text": "Une appréciation certaine"
+        },
+        {
+          "id": "d",
+          "text": "Une intervention de la banque centrale"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le solde courant évolue lentement ; le dollar s'est renforcé en octobre 2026 malgré un déficit en hausse.",
+      "tags": [
+        "limite"
+      ]
+    }
+  ],
+  "revision": 1
+}

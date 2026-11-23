@@ -1,0 +1,824 @@
+{
+  "examId": "EX5",
+  "module": 5,
+  "title": "Examen du module 5 — Taux de change : fondamentaux des grandes devises",
+  "durationMinutes": 120,
+  "passThreshold": 0.7,
+  "note": "25 QCM (1 point) + 5 calculs (3 points) + 2 cas fictifs à analyser (10 points chacun) = 60 points ; seuil de réussite 42/60. Les données sont fictives (SIMULATION) sauf mention contraire.",
+  "questions": [
+    {
+      "id": "EX5-Q1",
+      "type": "mcq",
+      "prompt": "Quelle est la règle du WGC pour un marché baissier de l'or ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Prix sous 1 000 $"
+        },
+        {
+          "id": "b",
+          "text": "Baisse de 5 % en une séance"
+        },
+        {
+          "id": "c",
+          "text": "Baisse de plus de 20 % mesurée sur des prix de fin de mois du fixing de l'après-midi"
+        },
+        {
+          "id": "d",
+          "text": "Baisse supérieure à 50 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La définition est chiffrée (plus de 20 %) et utilise des prix de fin de mois, non des extrêmes de séance.",
+      "tags": [
+        "bear"
+      ]
+    },
+    {
+      "id": "EX5-Q2",
+      "type": "mcq",
+      "prompt": "Pourquoi 850 $ (janvier 1980) et 667 $ (septembre 1980) ne se contredisent-ils pas ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Record de séance contre pic de fin de mois du fixing"
+        },
+        {
+          "id": "b",
+          "text": "L'un est faux"
+        },
+        {
+          "id": "c",
+          "text": "L'un est réel"
+        },
+        {
+          "id": "d",
+          "text": "Ce sont deux métaux"
+        }
+      ],
+      "correct": "a",
+      "explanation": "850 ÷ 667 − 1 = 27,4 % : la mesure change le niveau.",
+      "tags": [
+        "mesure"
+      ]
+    },
+    {
+      "id": "EX5-Q3",
+      "type": "mcq",
+      "prompt": "Le taux d'intérêt réel est, par approximation de Fisher :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le taux divisé par l'inflation"
+        },
+        {
+          "id": "b",
+          "text": "Le taux nominal plus l'inflation"
+        },
+        {
+          "id": "c",
+          "text": "L'inflation moins le taux"
+        },
+        {
+          "id": "d",
+          "text": "Le taux nominal moins l'inflation (attendue ou observée)"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La formule exacte est (1 + nominal) ÷ (1 + inflation) − 1 ; la différence est une approximation.",
+      "tags": [
+        "fisher"
+      ]
+    },
+    {
+      "id": "EX5-Q4",
+      "type": "mcq",
+      "prompt": "Le point mort d'inflation d'un TIPS à 10 ans est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le CPI publié"
+        },
+        {
+          "id": "b",
+          "text": "L'écart entre rendement nominal et rendement réel, mêlant anticipations et primes"
+        },
+        {
+          "id": "c",
+          "text": "Le taux directeur"
+        },
+        {
+          "id": "d",
+          "text": "Le rendement réel seul"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Il ne s'agit pas d'une prévision pure : primes de risque et de liquidité s'y mêlent.",
+      "tags": [
+        "pointmort"
+      ]
+    },
+    {
+      "id": "EX5-Q5",
+      "type": "mcq",
+      "prompt": "L'or en euros (XAU/EUR) se calcule à partir de :",
+      "options": [
+        {
+          "id": "a",
+          "text": "EUR/USD ÷ XAU/USD"
+        },
+        {
+          "id": "b",
+          "text": "XAU/USD × EUR/USD"
+        },
+        {
+          "id": "c",
+          "text": "XAU/USD + EUR/USD"
+        },
+        {
+          "id": "d",
+          "text": "XAU/USD ÷ EUR/USD"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Si l'or vaut 4 000 $ et l'euro 1,10 $, l'or vaut 3 636 €.",
+      "tags": [
+        "xaueur"
+      ]
+    },
+    {
+      "id": "EX5-Q6",
+      "type": "mcq",
+      "prompt": "L'identité d'un ETF d'or s'écrit :",
+      "options": [
+        {
+          "id": "a",
+          "text": "AUM = tonnes ÷ prix"
+        },
+        {
+          "id": "b",
+          "text": "AUM = tonnes + prix"
+        },
+        {
+          "id": "c",
+          "text": "AUM = tonnes × 32 150,7 onces × prix par once"
+        },
+        {
+          "id": "d",
+          "text": "AUM = prix ÷ tonnes"
+        }
+      ],
+      "correct": "c",
+      "explanation": "On peut en tirer un prix implicite, à manier avec prudence (dates et arrondis).",
+      "tags": [
+        "etf"
+      ]
+    },
+    {
+      "id": "EX5-Q7",
+      "type": "mcq",
+      "prompt": "Le « contango » désigne :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un cours à terme supérieur au comptant"
+        },
+        {
+          "id": "b",
+          "text": "Un cours à terme inférieur au comptant"
+        },
+        {
+          "id": "c",
+          "text": "Un cours égal au comptant"
+        },
+        {
+          "id": "d",
+          "text": "Une intervention"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La base (terme − comptant) est positive ; elle reflète notamment le coût de portage.",
+      "tags": [
+        "contango"
+      ]
+    },
+    {
+      "id": "EX5-Q8",
+      "type": "mcq",
+      "prompt": "La « backwardation » est, selon la source lue :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Permanente"
+        },
+        {
+          "id": "b",
+          "text": "Rare pour l'or, observée en période de stress"
+        },
+        {
+          "id": "c",
+          "text": "Toujours liée à l'inflation"
+        },
+        {
+          "id": "d",
+          "text": "Impossible"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La source citée évoque 2008 et les périodes de stress ; la fréquence exacte n'est pas établie.",
+      "tags": [
+        "backwardation"
+      ]
+    },
+    {
+      "id": "EX5-Q9",
+      "type": "mcq",
+      "prompt": "Dans la formule du coût de portage, quels éléments figurent ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'inflation seule"
+        },
+        {
+          "id": "b",
+          "text": "Seulement le PIB"
+        },
+        {
+          "id": "c",
+          "text": "Prix comptant, stockage, taux sans risque, durée"
+        },
+        {
+          "id": "d",
+          "text": "Le nombre de banques centrales"
+        }
+      ],
+      "correct": "c",
+      "explanation": "F = (S + stockage) × (1 + r)ᵗ ; la base observée peut s'en écarter.",
+      "tags": [
+        "portage"
+      ]
+    },
+    {
+      "id": "EX5-Q10",
+      "type": "mcq",
+      "prompt": "Le communiqué de la Fed du 28/10/2026 a :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Maintenu la fourchette de 3¾ à 4 % par 10 voix contre 2"
+        },
+        {
+          "id": "b",
+          "text": "Relevé les taux de ¼ point à l'unanimité"
+        },
+        {
+          "id": "c",
+          "text": "Baissé les taux"
+        },
+        {
+          "id": "d",
+          "text": "Annulé la réunion"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Les deux dissidents (Cook, Hammack) souhaitaient une hausse ; lecture par résumé automatique du communiqué.",
+      "tags": [
+        "fed"
+      ]
+    },
+    {
+      "id": "EX5-Q11",
+      "type": "mcq",
+      "prompt": "Une probabilité de 88 % de hausse en décembre (21/10) est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une donnée de la BCE"
+        },
+        {
+          "id": "b",
+          "text": "Une décision"
+        },
+        {
+          "id": "c",
+          "text": "Une certitude"
+        },
+        {
+          "id": "d",
+          "text": "Une anticipation de marché datée, antérieure au communiqué"
+        }
+      ],
+      "correct": "d",
+      "explanation": "FedWatch exprime un prix de marché ; elle doit être relue après chaque événement.",
+      "tags": [
+        "fedwatch"
+      ]
+    },
+    {
+      "id": "EX5-Q12",
+      "type": "mcq",
+      "prompt": "Que montre une note globale de tableau de bord qui varie de −1 à +2 selon les pondérations ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que l'or monte"
+        },
+        {
+          "id": "b",
+          "text": "Qu'elle dépend des pondérations plus que des données"
+        },
+        {
+          "id": "c",
+          "text": "Que l'or baisse"
+        },
+        {
+          "id": "d",
+          "text": "Que les données sont exactes"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Les pondérations ne reposent sur aucune étude lue.",
+      "tags": [
+        "note"
+      ]
+    },
+    {
+      "id": "EX5-Q13",
+      "type": "mcq",
+      "prompt": "Comment noter une case de tableau « positionnement : non lu » ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−1"
+        },
+        {
+          "id": "b",
+          "text": "0"
+        },
+        {
+          "id": "c",
+          "text": "+1"
+        },
+        {
+          "id": "d",
+          "text": "Comme une lacune, pas comme un zéro"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Un zéro signifierait « neutre » alors que l'information est inconnue.",
+      "tags": [
+        "lacune"
+      ]
+    },
+    {
+      "id": "EX5-Q14",
+      "type": "mcq",
+      "prompt": "Le record de séance est de 5 595 $ (29/01) dans une source et de 5 589 $ dans une autre. Que faire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les ignorer"
+        },
+        {
+          "id": "b",
+          "text": "Choisir la plus haute sans le dire"
+        },
+        {
+          "id": "c",
+          "text": "Signaler la contradiction et préciser la mesure de chacune"
+        },
+        {
+          "id": "d",
+          "text": "Faire la moyenne"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Les écarts (6 $, 0,11 %) proviennent de sources secondaires et de mesures non harmonisées.",
+      "tags": [
+        "contradiction"
+      ]
+    },
+    {
+      "id": "EX5-Q15",
+      "type": "mcq",
+      "prompt": "Peut-on dire que l'or a connu un marché baissier au sens du WGC en 2026 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Non démontrable : les prix de fin de mois du fixing n'ont pas été lus"
+        },
+        {
+          "id": "b",
+          "text": "Oui, démontré"
+        },
+        {
+          "id": "c",
+          "text": "Non, la baisse est inférieure à 20 %"
+        },
+        {
+          "id": "d",
+          "text": "Oui, car 4 060 est sous 5 000"
+        }
+      ],
+      "correct": "a",
+      "explanation": "−27,4 % en séance dépasse 20 %, mais la définition exige des prix de fin de mois.",
+      "tags": [
+        "2026"
+      ]
+    },
+    {
+      "id": "EX5-Q16",
+      "type": "mcq",
+      "prompt": "Le prix du dollar de l'or passe de 20,67 à 35 $ l'once en 1934. Cette hausse est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "+40,9 %"
+        },
+        {
+          "id": "b",
+          "text": "+69,3 %"
+        },
+        {
+          "id": "c",
+          "text": "+15 %"
+        },
+        {
+          "id": "d",
+          "text": "+100 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "35 ÷ 20,67 − 1 = 69,3 % ; la valeur en or du dollar baisse de 40,9 %.",
+      "tags": [
+        "histoire"
+      ]
+    },
+    {
+      "id": "EX5-Q17",
+      "type": "mcq",
+      "prompt": "Une corrélation de −0,185 sur dix observations fictives indique :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une identité"
+        },
+        {
+          "id": "b",
+          "text": "Une causalité forte"
+        },
+        {
+          "id": "c",
+          "text": "Une relation faible et non causale à elle seule"
+        },
+        {
+          "id": "d",
+          "text": "Rien du tout sur le signe"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Une corrélation ne démontre pas une cause, et le petit échantillon la rend instable.",
+      "tags": [
+        "correlation"
+      ]
+    },
+    {
+      "id": "EX5-Q18",
+      "type": "mcq",
+      "prompt": "Quelle différence entre achats « déclarés » et « non déclarés » de banques centrales ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les seconds ne sont pas publiés par l'institution et sont estimés a posteriori"
+        },
+        {
+          "id": "b",
+          "text": "Aucune"
+        },
+        {
+          "id": "c",
+          "text": "Les premiers sont faux"
+        },
+        {
+          "id": "d",
+          "text": "Les seconds sont illégaux"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La mesure est incomplète et révisée ; chaque chiffre doit être daté.",
+      "tags": [
+        "bc"
+      ]
+    },
+    {
+      "id": "EX5-Q19",
+      "type": "mcq",
+      "prompt": "Dans une crise géopolitique, l'or peut :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Rester fixe"
+        },
+        {
+          "id": "b",
+          "text": "Toujours monter"
+        },
+        {
+          "id": "c",
+          "text": "Toujours baisser"
+        },
+        {
+          "id": "d",
+          "text": "Monter, baisser ou stagner selon les canaux dominants"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Refuge, taux réels, dollar et liquidation agissent simultanément.",
+      "tags": [
+        "crise"
+      ]
+    },
+    {
+      "id": "EX5-Q20",
+      "type": "mcq",
+      "prompt": "Un tableau de bord complet à 100 % garantit :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un gain"
+        },
+        {
+          "id": "b",
+          "text": "Aucun résultat de transaction"
+        },
+        {
+          "id": "c",
+          "text": "Une perte"
+        },
+        {
+          "id": "d",
+          "text": "La direction du prix"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Il décrit des conditions datées ; il ne prévoit rien.",
+      "tags": [
+        "limites"
+      ]
+    },
+    {
+      "id": "EX5-Q21",
+      "type": "mcq",
+      "prompt": "Un seul résultat défavorable d'une thèse prouve-t-il que la méthode est mauvaise ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Non, car la méthode est infaillible"
+        },
+        {
+          "id": "b",
+          "text": "Oui, toujours"
+        },
+        {
+          "id": "c",
+          "text": "Oui si l'écart dépasse 10 %"
+        },
+        {
+          "id": "d",
+          "text": "Non : un tirage unique ne juge pas une méthode"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Il faut de nombreuses thèses indépendantes pour distinguer erreur de raisonnement et hasard.",
+      "tags": [
+        "thesis"
+      ]
+    },
+    {
+      "id": "EX5-Q22",
+      "type": "mcq",
+      "prompt": "Quel est le biais rétrospectif ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sous-estimer l'inflation"
+        },
+        {
+          "id": "b",
+          "text": "Surestimer le dollar"
+        },
+        {
+          "id": "c",
+          "text": "Juger après coup l'issue comme évidente"
+        },
+        {
+          "id": "d",
+          "text": "Se tromper de signe"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Parade : dater et archiver la thèse avant l'issue.",
+      "tags": [
+        "biais"
+      ]
+    },
+    {
+      "id": "EX5-Q23",
+      "type": "mcq",
+      "prompt": "La mention « résumé automatique » signifie que la source :",
+      "options": [
+        {
+          "id": "a",
+          "text": "N'a pas été lue dans son texte intégral"
+        },
+        {
+          "id": "b",
+          "text": "A été relue intégralement"
+        },
+        {
+          "id": "c",
+          "text": "Est primaire"
+        },
+        {
+          "id": "d",
+          "text": "Est vérifiée"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La règle du cours interdit de présenter une source résumée comme pleinement consultée.",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "EX5-Q24",
+      "type": "mcq",
+      "prompt": "Un article d'opinion fournit des niveaux de support à 3 978, 4 000 et 4 030 $. Statut ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Faits officiels"
+        },
+        {
+          "id": "b",
+          "text": "Niveaux d'opinion, pas des faits de marché établis"
+        },
+        {
+          "id": "c",
+          "text": "Prévisions garanties"
+        },
+        {
+          "id": "d",
+          "text": "Données de la LBMA"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Ils décrivent la lecture d'un analyste ; aucune méthode n'est vérifiée.",
+      "tags": [
+        "opinion"
+      ]
+    },
+    {
+      "id": "EX5-Q25",
+      "type": "mcq",
+      "prompt": "Quand un tableau de bord doit-il être actualisé ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une fois par an"
+        },
+        {
+          "id": "b",
+          "text": "Jamais"
+        },
+        {
+          "id": "c",
+          "text": "À chaque publication ou événement qui touche un cadran"
+        },
+        {
+          "id": "d",
+          "text": "Seulement après un gain"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Les déclencheurs (taux quotidien, flux, positionnement, courbe, Fed) fixent la péremption.",
+      "tags": [
+        "maj"
+      ]
+    }
+  ],
+  "calculations": [
+    {
+      "id": "EX5-K1",
+      "type": "calc",
+      "prompt": "Coût d'opportunité (SIMULATION). Or à 3 900 $ ; taux réel à 10 ans de 2,50 %. Coût annuel indicatif d'une once, en dollars (1 décimale) ?",
+      "answer": 97.5,
+      "tolerance": 0.05,
+      "unit": "$",
+      "solution": "3 900 × 0,025 = 97,5 $ ; calcul de cours, non une mesure du coût réel d'un détenteur.",
+      "tags": [
+        "cout"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX5-K2",
+      "type": "calc",
+      "prompt": "Or en euros (SIMULATION). XAU/USD = 4 200 ; EUR/USD = 1,20. XAU/EUR (en euros, entier) ?",
+      "answer": 3500,
+      "tolerance": 0.5,
+      "unit": "€",
+      "solution": "4 200 ÷ 1,20 = 3 500 € ; on divise par EUR/USD.",
+      "tags": [
+        "xaueur"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX5-K3",
+      "type": "calc",
+      "prompt": "Prix implicite d'un ETF (SIMULATION). AUM 480 Md$ ; avoirs 3 800 t ; 1 t = 32 150,7 oz. Prix implicite par once (en $, entier) ?",
+      "answer": 3929,
+      "tolerance": 1.5,
+      "unit": "$/oz",
+      "solution": "3 800 × 32 150,7 = 122,17 millions d'onces ; 480 × 10⁹ ÷ 122,17 × 10⁶ ≈ 3 928,9 $.",
+      "tags": [
+        "implicite"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX5-K4",
+      "type": "calc",
+      "prompt": "Cours à terme (SIMULATION). Comptant 4 000 $ ; stockage 0,50 % par an ; taux sans risque 4,00 % ; durée 0,25 an. Cours à terme théorique (2 décimales, F = (S + stockage) × (1 + r)ᵗ) ?",
+      "answer": 4044.46,
+      "tolerance": 0.02,
+      "unit": "$",
+      "solution": "Stockage = 4 000 × 0,005 × 0,25 = 5 ; (4 005) × 1,04^0,25 = 4 005 × 1,009853 ≈ 4 044,46 $.",
+      "tags": [
+        "portage"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX5-K5",
+      "type": "calc",
+      "prompt": "Valeur attendue (SIMULATION). Scénarios 3 900 (50 %), 4 000 (30 %), 4 300 (20 %). Valeur attendue en $ (entier) ?",
+      "answer": 4010,
+      "tolerance": 0.5,
+      "unit": "$",
+      "solution": "0,5 × 3 900 + 0,3 × 4 000 + 0,2 × 4 300 = 1 950 + 1 200 + 860 = 4 010 $ ; ce n'est pas une prévision.",
+      "tags": [
+        "ev"
+      ],
+      "points": 3
+    }
+  ],
+  "analyses": [
+    {
+      "id": "EX5-A1",
+      "type": "analysis",
+      "title": "Tableau de bord fictif d'un métal précieux (SIMULATION)",
+      "material": "Date d'analyse : 15 mars (année fictive). Taux réel à 10 ans, moyenne mensuelle : janvier 1,60 % ; février 1,80 %. Point mort : janvier 2,20 % ; février 2,10 %. Indice du dollar : 99,2 le 5 mars ; 98,0 le 10 mars. Banques centrales : +30 t en février. ETF : −15 t en février. Positionnement : non lu. Courbe à terme : non lue. Prix : 3 500 $. Notes : taux réel −1 ; dollar +1 ; banques centrales +1 ; ETF −1.",
+      "tasks": [
+        "Calcule l'âge de la donnée de taux de février (période terminée le 28/02) et celui du dernier indice du dollar (10/03).",
+        "Calcule le taux nominal approché de janvier et de février et décompose la variation.",
+        "Calcule la variation de l'indice du dollar en pourcentage.",
+        "Calcule la note à poids égaux, puis avec le poids du taux réel doublé.",
+        "Rédige la synthèse en trois phrases (faits, calcul, limites) et liste trois inconnues."
+      ],
+      "expectedElements": [
+        "Âge du taux de février : 15 jours ; dernier indice du dollar : 5 jours",
+        "Nominal : janvier 1,60 + 2,20 = 3,80 % ; février 1,80 + 2,10 = 3,90 % ; variation +0,10 point (réel +0,20 ; point mort −0,10)",
+        "Variation du dollar : 98,0 ÷ 99,2 − 1 = −1,21 %",
+        "Note à poids égaux : −1 + 1 + 1 − 1 = 0 ; taux réel doublé : −2 + 1 + 1 − 1 = −1",
+        "Synthèse sans prévision ; lacunes : positionnement et courbe non lus ; note arbitraire",
+        "Inconnues : valeurs quotidiennes de mars, positionnement, courbe, flux de mars"
+      ],
+      "points": 10
+    },
+    {
+      "id": "EX5-A2",
+      "type": "analysis",
+      "title": "Thèse chiffrée et évaluation après coup (SIMULATION)",
+      "material": "Prix d'un métal fictif : 3 000. Thèse à trois mois : baisse 2 700 (30 %) ; stabilité 3 000 (40 %) ; hausse 3 400 (30 %). Trois mois plus tard, le prix est de 2 700. Conditions d'invalidation déclarées à l'avance : taux réel supérieur à 2 % ; achats officiels inférieurs à 20 t par mois.",
+      "tasks": [
+        "Vérifie que les probabilités somment à 100 % et calcule la valeur attendue, puis son écart au prix initial.",
+        "Calcule l'écart entre le prix final et la valeur attendue.",
+        "Calcule le score de Brier (le scénario de baisse se réalise) et compare-le à la référence uniforme.",
+        "Explique ce qu'un seul résultat permet ou non de conclure.",
+        "Rédige trois phrases de synthèse sans prévision et liste trois inconnues."
+      ],
+      "expectedElements": [
+        "Somme 30 + 40 + 30 = 100 % ; valeur attendue : 810 + 1 200 + 1 020 = 3 030, soit +1,0 % au-dessus de 3 000",
+        "Prix final 2 700 : 2 700 ÷ 3 030 − 1 = −10,9 % sous la valeur attendue",
+        "Brier : (0,3 − 1)² + 0,4² + 0,3² = 0,49 + 0,16 + 0,09 = 0,74, contre 0,667 pour la référence uniforme",
+        "Un seul résultat ne juge pas une méthode ; il faut de nombreuses thèses",
+        "Inconnues : causes de la baisse, état des conditions d'invalidation, qualité des probabilités"
+      ],
+      "points": 10
+    }
+  ],
+  "totalPoints": 60,
+  "revision": 1
+}

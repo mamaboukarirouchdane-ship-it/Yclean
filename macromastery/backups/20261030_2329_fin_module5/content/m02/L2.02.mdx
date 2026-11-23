@@ -1,0 +1,244 @@
+---
+id: L2.02
+module: 2
+order: 2
+title: "Banques, monnaie et réserves : comment le crédit crée des dépôts"
+title_initial: "Banques, monnaie et réserves"
+level: "intermédiaire"
+duration_hours: 2.5
+prerequisites: ["L0.07", "L1.03", "L2.01"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L2.02.quiz.json"
+sources: ["S-BOE-01", "S-FED-07", "S-FED-08"]
+---
+
+# L2.02 — Banques, monnaie et réserves : comment le crédit crée des dépôts
+
+> **Convention de lecture.** **[Fait]** = chiffre ou énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. distinguer **monnaie de banque centrale** (billets, réserves) et **monnaie de banque commerciale** (dépôts) ;
+2. lire les agrégats **M1** et **M2** ;
+3. écrire en **bilan** les écritures d'un prêt, d'un remboursement et d'un règlement entre banques ;
+4. comparer le **multiplicateur monétaire** de manuel et la description de la Banque d'Angleterre ;
+5. citer les **freins** qui limitent le crédit bancaire ;
+6. expliquer ce qui change quand les réserves obligatoires sont nulles.
+
+## 2. Prérequis
+
+- Taux d'intérêt et bilans simples (L0.07) ; inflation et monnaie (L1.03, L1.05) ; mandats et indépendance (L2.01).
+
+## 3. Explication intuitive
+
+La monnaie que tu utilises au quotidien n'est pas surtout du **papier**. C'est principalement un **chiffre sur un compte** : une créance sur ta banque. Quand une banque accorde un prêt, elle n'attend pas qu'un déposant arrive avec l'argent : elle **inscrit** un dépôt à ton nom et une créance contre toi. Il y a alors plus de monnaie qu'avant.
+
+La banque centrale, elle, fournit une autre monnaie : les **réserves**, que seules les banques peuvent détenir. Ces réserves servent à **régler** les paiements entre banques. La question centrale de la leçon est : **les réserves limitent-elles le crédit, ou est-ce l'inverse ?**
+
+## 4. Développement technique
+
+### 4.1 Les agrégats monétaires
+
+**[Fait]** (S-FED-08, publication H.6 de la Réserve fédérale du 28 juillet 2026, mois de juin 2026, données corrigées des variations saisonnières, résumé automatique) :
+- **M1** : monnaie fiduciaire hors Trésor, banques de réserve et coffres des banques + dépôts à vue + autres dépôts liquides (comptes de type NOW, comptes d'épargne y compris les comptes de marché monétaire) ;
+- **M2** : M1 + dépôts à terme de moins de 100 000 $ + parts de fonds monétaires de détail, moins les soldes IRA et Keogh détenus dans des institutions de dépôt et des fonds monétaires ;
+- niveaux de juin 2026 : **M1 = 19 831,5 Md$** ; **M2 = 23 155,2 Md$**. La publication lue ne donne **pas de taux de croissance**.
+
+**[Calcul de l'auteur]** M2 − M1 = 23 155,2 − 19 831,5 = **3 323,7 Md$**, soit 14,4 % de M2.
+
+**[Définition]** Les agrégats sont classés par **liquidité décroissante** ; leurs définitions varient d'un pays à l'autre et ont été modifiées au fil du temps (non lu ici).
+
+### 4.2 Le bilan d'une banque
+
+**[Définition]**
+- **Actif** : ce que la banque détient (prêts, titres, réserves à la banque centrale, billets).
+- **Passif** : ce qu'elle doit (dépôts, emprunts).
+- **Fonds propres** : actif − passif ; ils absorbent les pertes.
+
+**[SIMULATION]** Banque fictive : actif = prêts 700 + titres 200 + réserves 100 = **1 000** ; passif = dépôts 900 ; fonds propres = **100** (10 % de l'actif).
+
+### 4.3 L'écriture d'un prêt
+
+**[Fait]** (S-BOE-01, Banque d'Angleterre, *Money creation in the modern economy*, Quarterly Bulletin 2014 Q1, lu par résumé automatique) : lorsqu'une banque accorde un prêt, elle **crédite le compte de l'emprunteur** d'un dépôt égal au prêt ; les deux côtés du bilan augmentent ; la monnaie « existe au moment où le prêt est accordé », sans mouvement de billets. L'article indique que la plupart de la monnaie en circulation est créée ainsi.
+
+**[SIMULATION]** Prêt de 50 : prêts 750, titres 200, réserves 100 = **1 050** ; dépôts **950**, fonds propres 100. Les fonds propres représentent désormais 100 ÷ 1 050 = **9,52 %** de l'actif (contre 10,00 %).
+
+### 4.4 Le règlement entre banques
+
+**[Fait]** (S-BOE-01) : les réserves sont de la monnaie de banque centrale détenue par les banques ; elles ne peuvent pas être détenues par les ménages ou les entreprises ; lorsqu'un dépôt est transféré à une autre banque, la banque doit **régler en réserves** ; elle cherche donc à attirer ou conserver des dépôts. Selon l'article, la banque prête **d'abord**, puis obtient les réserves dont elle a besoin : la demande de réserves **suit** le crédit.
+
+**[SIMULATION]** L'emprunteur paie 50 à un client d'une autre banque : prêts 750, titres 200, réserves **50** = 1 000 ; dépôts 900 ; fonds propres 100. Les réserves ont baissé de 50 ; le dépôt a changé de banque.
+
+### 4.5 Le multiplicateur de manuel et sa critique
+
+**[Définition]** Le **multiplicateur monétaire** de manuel suppose que la banque centrale fixe la quantité de réserves et que les banques prêtent le montant excédant la réserve obligatoire. Avec un ratio de réserves obligatoires r, le multiplicateur maximal vaut 1 ÷ r. Pour r = 10 %, un dépôt initial de 1 000 peut conduire à 10 000 de dépôts au maximum (SIMULATION).
+
+**[Fait]** (S-BOE-01) : l'article **rejette** cette description comme inexacte pour le système actuel : les banques centrales fixent le **prix** des réserves (le taux d'intérêt), non leur quantité ; les réserves **ne limitent pas** le crédit ; le Royaume-Uni n'a pas de réserves obligatoires ; la causalité va du crédit vers la demande de réserves. L'article reconnaît que le multiplicateur reste un outil pédagogique.
+
+### 4.6 Ce qui limite le crédit
+
+**[Fait]** (S-BOE-01) :
+- **rentabilité et concurrence** : étendre le crédit oblige à baisser les taux de prêt et à mieux rémunérer les dépôts ;
+- **liquidité** : les dépôts peuvent être retirés rapidement alors que les prêts sont longs ;
+- **risque de crédit** : plus de prêts à des emprunteurs plus risqués = plus de pertes attendues ;
+- **fonds propres et réglementation** ;
+- **comportement collectif** : si toutes les banques s'étendent ensemble, les freins individuels se relâchent et la fragilité peut augmenter ;
+- **comportement des ménages et des entreprises** : la monnaie peut être détruite par remboursement, ou dépensée ;
+- **politique monétaire** : le taux directeur influence la demande de prêts et fixe, selon l'article, la limite ultime de la création monétaire.
+
+### 4.7 Destruction de monnaie et achats d'actifs
+
+**[Fait]** (S-BOE-01) : le remboursement d'un prêt **détruit** le dépôt correspondant ; l'émission de dette longue ou d'actions par la banque, payée en dépôts, détruit aussi de la monnaie ; quand une banque ou la banque centrale **achète** des actifs au secteur privé, des dépôts sont créés. Dans l'assouplissement quantitatif, la banque centrale achète des titres, la banque du vendeur reçoit des **réserves** et le vendeur un **dépôt** : la monnaie au sens large augmente, les réserves étant, selon l'article, un sous-produit. (L2.04 y revient.)
+
+**[SIMULATION]** Si l'emprunteur rembourse 50 en puisant dans un dépôt de la **même** banque, le prêt (−50) et le dépôt (−50) disparaissent : la monnaie est détruite. S'il rembourse depuis un compte d'une autre banque, le prêt baisse et les réserves de la banque prêteuse augmentent d'autant (Exercice 3).
+
+### 4.8 Réserves obligatoires de la Fed
+
+**[Fait]** (S-FED-07, page *Reserve Requirements*, résumé automatique) : tous les ratios de réserves obligatoires sont **0 %** ; le taux appliqué aux comptes de transaction est passé à **0 % le 26 mars 2020** (annoncé le 15 mars 2020) ; avant cela, la structure comportait une tranche exemptée à 0 %, une tranche à 3 % et le reste à 10 % ; la page estime que la mesure a réduit les réserves obligatoires d'environ **200 Md$**. Les raisons de la mesure ne figurent pas dans le résumé lu.
+
+### 4.9 Pourquoi cela compte pour un analyste
+
+**[Interprétation]**
+- La **transmission** de la politique monétaire passe par le **prix** du crédit et des réserves, non par la seule quantité de monnaie ; l'analyse des taux (L2.03) en est le prolongement.
+- Une forte croissance d'un agrégat n'est pas, à elle seule, un signal d'inflation : le lien entre monnaie et prix a été modifié dans le temps (non démontré dans cette leçon).
+- Les tensions de **liquidité** entre banques et le niveau des réserves ont des effets sur le marché monétaire (L2.04).
+
+## 5. Définitions essentielles
+
+- **Réserves** : dépôts des banques auprès de la banque centrale.
+- **Dépôt** : créance d'un client sur sa banque.
+- **M1, M2** : agrégats de monnaie par ordre de liquidité décroissante.
+- **Réserves obligatoires** : fraction des dépôts à détenir en réserve ; **0 %** aux États-Unis depuis le 26 mars 2020.
+- **Multiplicateur monétaire** : modèle de manuel 1 ÷ r.
+- **Fonds propres** : actif moins passif.
+- **Règlement** : transfert de réserves entre banques pour solder un paiement.
+
+## 6. Exemples chiffrés
+
+**6.1 M2 − M1.** 23 155,2 − 19 831,5 = 3 323,7 Md$.
+
+**6.2 Multiplicateur de manuel (SIMULATION).** r = 10 % ; dépôt initial 1 000 ; maximum de dépôts = 1 000 ÷ 0,10 = **10 000**, soit une création de 9 000.
+
+**6.3 Ratio de fonds propres (SIMULATION).** Fonds propres 100 pour un actif de 1 000 = 10 % ; après un prêt de 50 : 100 ÷ 1 050 = 9,52 % : le crédit **consomme** du capital.
+
+**6.4 Règlement (SIMULATION).** Réserves de 100 ; paiement de 50 vers une autre banque : réserves **50**.
+
+### 6.5 Cas historique documenté — les réserves obligatoires ramenées à zéro (mars 2020)
+
+**[Fait]** (S-FED-07) : la Fed a ramené les ratios de réserves obligatoires à **0 %** avec effet le **26 mars 2020** ; auparavant, trois tranches (exemption, 3 %, 10 %) ; réduction estimée à **200 Md$** de réserves obligatoires.
+
+**[Calcul de l'auteur]** Si un multiplicateur de manuel s'appliquait, un ratio de 10 % impliquait un multiplicateur de 10 et un ratio de 0 % un multiplicateur **infini** (division par zéro) : la formule cesse d'avoir un sens, ce qui illustre que la quantité de réserves obligatoires ne peut pas être la contrainte principale du crédit.
+
+**[Interprétation]** Le cas est cohérent avec la thèse de la Banque d'Angleterre : le crédit n'est pas limité par un ratio de réserves, mais par la rentabilité, le risque, le capital et les taux. **Limites** : le résumé lu n'explique ni les motifs de la décision, ni ses effets mesurés sur le crédit ; le contexte de mars 2020 n'a pas été lu dans cette leçon ; une absence de contrainte légale ne signifie pas absence de contrainte économique.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Monnaie et change** : une croissance rapide de la masse monétaire peut être suivie d'inflation et de dépréciation, mais **cette relation est instable** et non démontrée dans cette leçon ; ce n'est pas un signal de transaction.
+- **Dollar** : le prix des réserves (taux sur les réserves) et le niveau des réserves influencent les taux courts en dollars, donc les différentiels (module 4).
+- **Or** : une expansion monétaire perçue est parfois citée en faveur de l'or ; il s'agit d'une **hypothèse** à tester (module 5).
+- **XOF** : l'architecture de la BCEAO comporte un système de réserves et de refinancement dont les règles ne sont pas décrites dans cette leçon ; ne pas transposer les règles de la Fed.
+- **Risque** : les tensions de liquidité bancaire se traduisent par des mouvements de taux et de change brusques ; aucune donnée récente n'a été lue.
+
+## 8. Erreurs courantes
+
+1. Croire que les banques « prêtent l'argent des déposants » comme un intermédiaire simple.
+2. Confondre réserves (monnaie de banque centrale) et dépôts (monnaie de banque commerciale).
+3. Appliquer le multiplicateur de manuel comme une loi.
+4. Croire que l'assouplissement quantitatif « donne de l'argent aux banques » sans contrepartie.
+5. Confondre M1 et M2.
+6. Croire que la croissance monétaire prédit mécaniquement l'inflation.
+7. Oublier que le remboursement d'un prêt détruit de la monnaie.
+
+## 9. Limites de l'interprétation
+
+- Les sources sont lues par résumé automatique ; l'article complet de la Banque d'Angleterre n'a pas été relu.
+- La description de la Banque d'Angleterre porte sur le Royaume-Uni ; son application aux États-Unis est partielle (les États-Unis ont une structure de réserves rémunérées, non lue ici).
+- Les taux de croissance de M2 n'ont pas été lus.
+- La relation monnaie-inflation n'est pas traitée empiriquement.
+- Aucune prévision ne peut être déduite.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — M1 et M2.** M1 = 19 831,5 ; M2 = 23 155,2 (Md$, juin 2026). (a) M2 − M1 ? (b) Part de M1 dans M2 ?
+
+<details>
+<summary>Correction 1</summary>
+
+(a) 23 155,2 − 19 831,5 = **3 323,7 Md$**. (b) 19 831,5 ÷ 23 155,2 = **85,6 %**.
+</details>
+
+**Exercice 2 — Un prêt (SIMULATION).** Bilan : prêts 700, titres 200, réserves 100 ; dépôts 900 ; fonds propres 100. La banque accorde un prêt de 80. (a) Nouveau bilan ? (b) Ratio de fonds propres avant et après ?
+
+<details>
+<summary>Correction 2</summary>
+
+(a) Prêts 780, titres 200, réserves 100 = **1 080** ; dépôts **980** ; fonds propres 100. (b) Avant : 100 ÷ 1 000 = **10,0 %** ; après : 100 ÷ 1 080 = **9,26 %**.
+</details>
+
+**Exercice 3 — Règlement puis remboursement (SIMULATION).** Après le prêt de 80 de l'exercice 2, l'emprunteur paie 80 à un client d'une autre banque. (a) Bilan de la première banque ? (b) L'emprunteur rembourse ensuite 30 à la première banque en payant depuis un compte détenu dans une autre banque : que deviennent prêts, réserves et dépôts de la première banque ?
+
+<details>
+<summary>Correction 3</summary>
+
+(a) Réserves 100 − 80 = **20** ; prêts 780 ; titres 200 → actif **1 000** ; dépôts 900 ; fonds propres 100. (b) Le prêt baisse de 30 (**750**) et les réserves augmentent de 30 (**50**) : actif = 750 + 200 + 50 = **1 000** ; les dépôts de la première banque ne changent pas ici (le remboursement vient d'un compte d'une autre banque) : 900. Le dépôt détruit est dans l'autre banque.
+</details>
+
+**Exercice 4 — Multiplicateur de manuel (SIMULATION).** r = 8 %. (a) Multiplicateur maximal ? (b) Dépôts maximaux pour 500 de réserves ? (c) Pourquoi la Banque d'Angleterre juge-t-elle ce modèle inexact ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) 1 ÷ 0,08 = **12,5**. (b) 500 × 12,5 = **6 250**. (c) Elle écrit que les banques centrales fixent le prix des réserves et non leur quantité, que les réserves ne limitent pas le crédit et que le lien causal va du crédit vers les réserves.
+</details>
+
+**Exercice 5 — Mars 2020.** Réserves obligatoires réduites d'environ 200 Md$. (a) Que devient le multiplicateur de manuel à 0 % ? (b) Pourquoi cela ne prouve-t-il pas que le crédit est illimité ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) 1 ÷ 0 n'est pas défini : la formule perd son sens. (b) Le crédit reste limité par la rentabilité, la liquidité, le risque, le capital réglementaire et la demande de prêts, selon la Banque d'Angleterre ; le résumé de la Fed ne donne pas les effets mesurés.
+</details>
+
+**Exercice 6 — Critique.** « La banque centrale imprime de l'argent, donc l'inflation est certaine. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) La plupart de la monnaie est créée par le crédit bancaire, non par la banque centrale (BoE). (2) Les réserves ne sont pas multipliées en prêts mécaniquement. (3) La monnaie peut être détruite par remboursement. (4) Le lien entre agrégats monétaires et inflation est instable et n'a pas été démontré ici. (5) L'inflation dépend aussi de la demande, de l'offre et des anticipations (L1.05).
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L2.02.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Un prêt bancaire crée un dépôt (monnaie de banque commerciale) ; son remboursement le détruit.
+- Les réserves sont de la monnaie de banque centrale, utilisée pour le règlement entre banques.
+- Selon la Banque d'Angleterre, la demande de réserves suit le crédit ; le multiplicateur de manuel est inexact comme description.
+- Le crédit est limité par la rentabilité, le risque, la liquidité, le capital et le taux directeur.
+- Juin 2026 (Fed) : M1 = 19 831,5 Md$, M2 = 23 155,2 Md$.
+- Les réserves obligatoires de la Fed sont à 0 % depuis le 26 mars 2020.
+
+## 13. Critères de maîtrise
+
+- [ ] Distinguer réserves et dépôts.
+- [ ] Écrire un prêt, un règlement et un remboursement en bilan (Exercices 2 et 3).
+- [ ] Calculer un multiplicateur de manuel et en expliquer la critique (Exercice 4).
+- [ ] Citer les freins du crédit.
+- [ ] Lire M1 et M2 (Exercice 1).
+- [ ] Critiquer l'idée « imprimer de l'argent = inflation certaine » (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-BOE-01** — Bank of England, *Money creation in the modern economy*, Quarterly Bulletin 2014 Q1 : https://www.bankofengland.co.uk/-/media/boe/files/quarterly-bulletin/2014/money-creation-in-the-modern-economy
+- **S-FED-07** — Federal Reserve, *Reserve Requirements* : https://www.federalreserve.gov/monetarypolicy/reservereq.htm
+- **S-FED-08** — Federal Reserve, publication H.6 *Money Stock Measures* du 28 juillet 2026 : https://www.federalreserve.gov/releases/h6/20260728/
+
+**Définitions de cours non rattachées à une source officielle lue :** structure du bilan bancaire, multiplicateur de manuel, ratios de fonds propres, exemples fictifs. **Points non vérifiés :** motifs de la mesure de mars 2020, taux de croissance de M2, publications H.6 postérieures à juillet 2026, règles de réserves de la BCEAO, rémunération des réserves de la Fed.

@@ -1,0 +1,180 @@
+{
+  "chapterId": "5.3",
+  "module": 5,
+  "title": "Quiz de chapitre 5.3 — Banques centrales et ETF (L5.06–L5.07)",
+  "passThreshold": 0.8333333333333334,
+  "requiredCorrect": 5,
+  "passRule": "5 bonnes réponses sur 6 (règle R1 : ⌈0,8 × 6⌉ = 5 ; seuil pédagogique provisoire)",
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C5.3-Q1",
+      "type": "mcq",
+      "prompt": "T2 2026 : 288,9 t d'achats de banques centrales, dont 100 t détaillées par pays. Quelle part reste non détaillée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 34,6 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ 65,4 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ 100 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ 5 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "188,9 ÷ 288,9 = 65,4 % : la majorité du total n'est pas attribuable pays par pays dans la source lue.",
+      "tags": [
+        "detail"
+      ]
+    },
+    {
+      "id": "C5.3-Q2",
+      "type": "mcq",
+      "prompt": "Deux sources donnent 2 346 t et 2 196 t pour les avoirs de la Chine. Que faire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ignorer les deux"
+        },
+        {
+          "id": "b",
+          "text": "Choisir le plus grand"
+        },
+        {
+          "id": "c",
+          "text": "Faire la moyenne"
+        },
+        {
+          "id": "d",
+          "text": "Signaler la contradiction et ne pas trancher sans source primaire"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Les dates, définitions et révisions peuvent différer ; l'écart de 150 t est enregistré comme point à vérifier.",
+      "tags": [
+        "contradiction"
+      ]
+    },
+    {
+      "id": "C5.3-Q3",
+      "type": "mcq",
+      "prompt": "Septembre 2026 : ETF +67 t pour des avoirs de 4 256 t. Quelle variation en pourcentage des avoirs de départ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ +0,16 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ +16 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ +1,6 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ +6,7 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Avoirs de départ : 4 256 − 67 = 4 189 t ; 67 ÷ 4 189 = 1,6 %.",
+      "tags": [
+        "etf"
+      ]
+    },
+    {
+      "id": "C5.3-Q4",
+      "type": "mcq",
+      "prompt": "AUM 574 Md$ pour 4 256 t : prix implicite par once (1 t = 32 150,7 oz) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 4 195 $"
+        },
+        {
+          "id": "b",
+          "text": "≈ 419 $"
+        },
+        {
+          "id": "c",
+          "text": "≈ 41 950 $"
+        },
+        {
+          "id": "d",
+          "text": "≈ 574 $"
+        }
+      ],
+      "correct": "a",
+      "explanation": "574 × 10⁹ ÷ (4 256 × 32 150,7) ≈ 4 195 $ ; un recoupement, sensible aux arrondis et aux dates.",
+      "tags": [
+        "implicite"
+      ]
+    },
+    {
+      "id": "C5.3-Q5",
+      "type": "mcq",
+      "prompt": "Les achats officiels de la Chine sont déclarés mois par mois ; pourquoi leur total est-il une mesure incomplète ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les banques centrales n'achètent pas d'or"
+        },
+        {
+          "id": "b",
+          "text": "Des achats non déclarés et des révisions sont possibles"
+        },
+        {
+          "id": "c",
+          "text": "Les déclarations sont toujours exactes"
+        },
+        {
+          "id": "d",
+          "text": "L'or n'a pas de statistiques"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Achats déclarés, non déclarés, transferts et swaps compliquent la mesure ; les données sont révisées.",
+      "tags": [
+        "mesure"
+      ]
+    },
+    {
+      "id": "C5.3-Q6",
+      "type": "mcq",
+      "prompt": "T1 2026 : ETF +62,4 t ; T2 : −44,8 t. Flux net du semestre ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+107,2 t"
+        },
+        {
+          "id": "b",
+          "text": "−107,2 t"
+        },
+        {
+          "id": "c",
+          "text": "+17,6 t"
+        },
+        {
+          "id": "d",
+          "text": "−17,6 t"
+        }
+      ],
+      "correct": "c",
+      "explanation": "62,4 − 44,8 = 17,6 t : le signe change d'un trimestre à l'autre, d'où l'intérêt de ne pas extrapoler un mois.",
+      "tags": [
+        "flux"
+      ]
+    }
+  ],
+  "revision": 1
+}

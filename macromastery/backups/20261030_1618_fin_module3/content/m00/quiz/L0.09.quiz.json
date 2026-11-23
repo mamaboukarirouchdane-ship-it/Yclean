@@ -1,0 +1,238 @@
+{
+  "lessonId": "L0.09",
+  "title": "Quiz — Lire un graphique sans se faire piéger",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Données : exemples fictifs et taux de référence BCE 27-29/10/2026.",
+  "questions": [
+    {
+      "id": "L0.09-Q1",
+      "type": "mcq",
+      "prompt": "EUR/USD : ouverture 1,0820, plus haut 1,0870, plus bas 1,0800, clôture 1,0810. Quel est le corps de la bougie et son sens ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "70 pips, haussier"
+        },
+        {
+          "id": "b",
+          "text": "10 pips, haussier"
+        },
+        {
+          "id": "c",
+          "text": "10 pips, baissier"
+        },
+        {
+          "id": "d",
+          "text": "50 pips, baissier"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Corps = |clôture − ouverture| = 0,0010 = 10 pips ; la clôture est sous l'ouverture : bougie baissière. L'amplitude (70 pips) est plus haut − plus bas, la mèche haute vaut 50 pips.",
+      "tags": [
+        "bougie"
+      ]
+    },
+    {
+      "id": "L0.09-Q2",
+      "type": "mcq",
+      "prompt": "USD/JPY : O 148,50, H 149,30, L 148,40, C 149,20. Quelle est l'amplitude en pips ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "90 pips"
+        },
+        {
+          "id": "b",
+          "text": "0,90 pip"
+        },
+        {
+          "id": "c",
+          "text": "70 pips"
+        },
+        {
+          "id": "d",
+          "text": "9 000 pips"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Amplitude = 149,30 − 148,40 = 0,90 ; avec 1 pip = 0,01 pour le yen, cela fait 90 pips.",
+      "tags": [
+        "bougie",
+        "yen"
+      ]
+    },
+    {
+      "id": "L0.09-Q3",
+      "type": "mcq",
+      "prompt": "Que ne peut PAS dire une bougie journalière ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le plus haut de la période"
+        },
+        {
+          "id": "b",
+          "text": "La clôture de la période"
+        },
+        {
+          "id": "c",
+          "text": "L'amplitude de la période"
+        },
+        {
+          "id": "d",
+          "text": "Si le plus haut a été atteint avant le plus bas"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Une bougie résume quatre prix (OHLC) mais pas leur ordre intraday. Deux journées différentes peuvent donner la même bougie.",
+      "tags": [
+        "bougie",
+        "limites"
+      ]
+    },
+    {
+      "id": "L0.09-Q4",
+      "type": "mcq",
+      "prompt": "Sur une échelle logarithmique, deux hausses de +100 % (1 000→2 000, puis 2 000→4 000) apparaissent :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Avec la 2ᵉ deux fois plus grande"
+        },
+        {
+          "id": "b",
+          "text": "Avec la même hauteur"
+        },
+        {
+          "id": "c",
+          "text": "Avec la 1ʳᵉ deux fois plus grande"
+        },
+        {
+          "id": "d",
+          "text": "Impossibles à représenter"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Sur l'échelle log, une même variation en % donne la même distance (ln 2 = 0,693 dans les deux cas). Sur l'échelle linéaire, la 2ᵉ paraît deux fois plus grande (2 000 contre 1 000).",
+      "tags": [
+        "echelle"
+      ]
+    },
+    {
+      "id": "L0.09-Q5",
+      "type": "mcq",
+      "prompt": "Un mouvement de 50 pips représente environ :",
+      "options": [
+        {
+          "id": "a",
+          "text": "La même variation relative sur toutes les paires"
+        },
+        {
+          "id": "b",
+          "text": "0,05 % sur toutes les paires"
+        },
+        {
+          "id": "c",
+          "text": "0,33 % sur EUR/USD et 0,46 % sur USD/JPY"
+        },
+        {
+          "id": "d",
+          "text": "0,46 % sur EUR/USD à 1,0800 et 0,33 % sur USD/JPY à 150,00"
+        }
+      ],
+      "correct": "d",
+      "explanation": "50 pips = 0,0050 sur EUR/USD (÷ 1,0800 = 0,463 %) mais 0,50 sur USD/JPY (÷ 150,00 = 0,333 %). Les pips ne sont pas comparables d'une paire à l'autre : on compare en pourcentage.",
+      "tags": [
+        "rendement",
+        "pips"
+      ]
+    },
+    {
+      "id": "L0.09-Q6",
+      "type": "mcq",
+      "prompt": "Taux de référence de la BCE : EUR/USD 1,1150 (27/10/2026), 1,1133 (28/10), 1,1130 (29/10). Quel est le rendement simple total du 27 au 29 octobre ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−0,03 %"
+        },
+        {
+          "id": "b",
+          "text": "−20 %"
+        },
+        {
+          "id": "c",
+          "text": "−0,18 % (environ −0,1794 %)"
+        },
+        {
+          "id": "d",
+          "text": "+0,18 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "1,1130 ÷ 1,1150 − 1 = −0,1794 %, soit −20 pips. Taux de référence informatifs, non des prix de transaction.",
+      "tags": [
+        "rendement",
+        "donnees-observees"
+      ]
+    },
+    {
+      "id": "L0.09-Q7",
+      "type": "mcq",
+      "prompt": "Pourquoi les rendements logarithmiques sont-ils pratiques sur plusieurs périodes ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Leur somme est exactement le rendement logarithmique total"
+        },
+        {
+          "id": "b",
+          "text": "Ils sont toujours plus grands"
+        },
+        {
+          "id": "c",
+          "text": "Ils ignorent les baisses"
+        },
+        {
+          "id": "d",
+          "text": "Ils évitent d'avoir un point de départ"
+        }
+      ],
+      "correct": "a",
+      "explanation": "ln(P₂/P₀) = ln(P₁/P₀) + ln(P₂/P₁) : les rendements log s'additionnent exactement, tandis que les rendements simples se composent (multiplication de 1 + r).",
+      "tags": [
+        "log"
+      ]
+    },
+    {
+      "id": "L0.09-Q8",
+      "type": "mcq",
+      "prompt": "Deux barres valent 1,0800 et 1,0850 ; l'axe commence à 1,0790. Que se passe-t-il visuellement ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Rien, les hauteurs sont proportionnelles"
+        },
+        {
+          "id": "b",
+          "text": "La seconde paraît 6 fois plus haute alors qu'elle ne dépasse la première que de 0,46 %"
+        },
+        {
+          "id": "c",
+          "text": "La seconde paraît 2 fois plus haute"
+        },
+        {
+          "id": "d",
+          "text": "La première paraît plus haute"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Hauteurs 0,0010 et 0,0060 : rapport 6, pour un écart réel de 0,0050 ÷ 1,0800 = 0,46 %. Pour des barres, l'axe doit partir de zéro.",
+      "tags": [
+        "axe-tronque",
+        "biais-visuels"
+      ]
+    }
+  ],
+  "revision": 1
+}

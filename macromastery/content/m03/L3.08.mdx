@@ -1,0 +1,238 @@
+---
+id: L3.08
+module: 3
+order: 8
+title: "Les enquêtes PMI et ISM : indices de diffusion, composantes et lecture"
+title_initial: "PMI et ISM"
+level: "intermédiaire"
+duration_hours: 3
+prerequisites: ["L3.02", "L3.05", "L3.07"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L3.08.quiz.json"
+sources: ["S-ISM-01", "S-ISM-02", "S-FTP-04", "S-MTR-01"]
+---
+
+# L3.08 — Les enquêtes PMI et ISM : indices de diffusion, composantes et lecture
+
+> **Convention de lecture.** **[Fait]** = énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. expliquer ce qu'est un **indice de diffusion** et pourquoi le seuil de 50 compte ;
+2. recomposer un **PMI** à partir de ses composantes et vérifier la cohérence ;
+3. expliquer pourquoi l'indice des **prix payés** n'entre pas dans le PMI et pourquoi les **livraisons des fournisseurs** sont inversées ;
+4. lire un PMI avec son **consensus**, ses composantes et ses sous-indices ;
+5. distinguer **enquête (données douces)** et **statistique mesurée (données dures)** ;
+6. mettre en regard l'ISM américain et le PMI flash de la zone euro, avec leurs limites.
+
+## 2. Prérequis
+
+- Consensus et surprise (L3.02) ; fiche de lecture (L3.05) ; prix (L3.06, L3.07).
+
+## 3. Explication intuitive
+
+Un PMI ne mesure pas un niveau d'activité : il mesure la **direction perçue**. On demande à des directeurs d'achat si, ce mois-ci, la production, les commandes, l'emploi sont plus élevés, identiques ou plus faibles que le mois dernier. Plus de réponses « plus élevé » que « plus faible » donne un indice au-dessus de 50 ; l'inverse, en dessous. Un indice de 54,5 ne veut pas dire que l'activité a augmenté de 54,5 % ; il veut dire que les réponses « en hausse » l'emportent largement. L'intérêt : les enquêtes sortent tôt (début de mois suivant), bien avant les chiffres mesurés. Le défaut : ce sont des perceptions, parfois influencées par l'actualité (droits de douane, prix du pétrole), qui peuvent s'écarter de l'économie réelle.
+
+## 4. Développement technique
+
+### 4.1 L'indice de diffusion
+
+**[Définition]** (convention de cours) : pour chaque question, indice = pourcentage de réponses « plus élevé » + la moitié du pourcentage de réponses « identique ». **50** = aucun changement net ; au-dessus = expansion nette ; en dessous = contraction nette. La source lue précise le seuil de 50 comme signe d'expansion du secteur (S-ISM-01, S-ISM-02) ; la formule exacte n'a pas été relue dans la source.
+
+**[SIMULATION]** 40 % « plus élevé », 45 % « identique », 15 % « plus faible » : indice = 40 + 45 ÷ 2 = **62,5**.
+
+### 4.2 L'ISM manufacturier de septembre 2026
+
+**[Fait]** (S-ISM-01, texte du communiqué de l'ISM du 01/10/2026 reproduit par un site tiers ; S-FTP-04, First Trust, secondaire) :
+
+| Indice | Sept. | Août | Variation |
+|---|---|---|---|
+| **PMI manufacturier** | **54,5** | 54,6 | −0,1 |
+| Nouvelles commandes | 55,3 | 53,7 | +1,6 |
+| Production | 56,7 | 58,3 | −1,6 |
+| Emploi | 52,7 | 51,2 | +1,5 |
+| Livraisons des fournisseurs | 59,0 | 59,3 | −0,3 |
+| Stocks | 48,6 | 50,6 | −2,0 |
+| Prix payés | **77,9** | 71,1 | +6,8 |
+| Carnets de commandes | 56,4 | 51,8 | +4,6 |
+| Commandes à l'exportation | 50,9 | 53,2 | −2,3 |
+| Importations | 51,0 | 52,5 | −1,5 |
+
+Consensus : **55,0** (S-FTP-04). Douze industries en croissance, deux en contraction (impression, textile) (S-ISM-01). L'ISM attribue la hausse des prix à l'acier et à l'aluminium, aux droits de douane et aux produits pétroliers (S-FTP-04, secondaire).
+
+**[Calcul de l'auteur]**
+- surprise : 54,5 − 55,0 = **−0,5** ;
+- recomposition (moyenne égale des cinq composantes : commandes, production, emploi, livraisons, stocks) : (55,3 + 56,7 + 52,7 + 59,0 + 48,6) ÷ 5 = **54,46 ≈ 54,5** ✓ ; août : 273,1 ÷ 5 = **54,62 ≈ 54,6** ✓ ;
+- variation exacte : 54,46 − 54,62 = **−0,16** (publiée −0,1 : effet d'arrondi) ;
+- si les livraisons n'étaient pas inversées : (55,3 + 56,7 + 52,7 + (100 − 59,0) + 48,6) ÷ 5 = **50,86** (**SIMULATION de lecture**) ;
+- marge au-dessus du seuil de 47,5 donné par l'ISM pour une économie en expansion : 54,5 − 47,5 = **7,0** points.
+
+**[Fait]** (S-ISM-01) : seuil de 50 = expansion du secteur ; **47,5** = expansion de l'économie dans son ensemble sur la durée (indication de l'ISM, pas une règle absolue).
+
+**[Anomalie de source — écartée]** Un résumé automatique d'une note de banque (PNC) indique que « les prix ont baissé » ; cela **contredit** le communiqué de l'ISM (77,9, +6,8) et First Trust. Le texte du communiqué est retenu ; la note PNC est notée comme **non fiable pour ce point**. Elle reste une source secondaire lue par résumé.
+
+### 4.3 L'ISM des services de septembre 2026
+
+**[Fait]** (S-ISM-02, PDF de l'ISM, résumé automatique) : PMI des services **54,9** (août 55,4, −0,5), 27ᵉ mois en expansion ; activité des affaires **56,5** (61,7) ; nouvelles commandes **59,8** (60,9) ; emploi **50,1** (47,8) ; livraisons des fournisseurs **53,2** (51,3) ; stocks 57,8 ; **prix 74,0** (72,6) ; carnets 56,6 ; commandes à l'exportation 46,9 (en contraction) ; **PMI des services = composite de quatre indices à poids égaux** (activité, commandes, emploi, livraisons inversées) ; économie en expansion au-dessus de **48,1**.
+
+**[Calcul de l'auteur]**
+- (56,5 + 59,8 + 50,1 + 53,2) ÷ 4 = **54,9** ✓ ; août : (61,7 + 60,9 + 47,8 + 51,3) ÷ 4 = 55,425 ≈ **55,4** ✓ ;
+- baisse de l'activité : 56,5 − 61,7 = **−5,2** points ;
+- prix manufacturier − prix services : 77,9 − 74,0 = **3,9** points ;
+- consensus services **55,2** relevé dans le titre d'une dépêche secondaire (S-MTR-01 ; texte non lu) : surprise −0,3 (**à confirmer**).
+
+**[Interprétation]** Le manufacturier et les services affichent tous deux des indices de prix très élevés, ce qui est cohérent avec le CPI et le PPI de septembre (L3.06, L3.07), mais **ce rapprochement est une hypothèse** : les indices de prix des enquêtes mesurent la proportion de répondants qui constatent une hausse, pas l'ampleur de la hausse.
+
+### 4.4 Enquête douce et statistique dure
+
+**[Définition]** (convention de cours) : une enquête mesure des perceptions et sort vite ; une statistique dure (emploi, production industrielle, ventes) mesure des quantités avec retard. Les deux peuvent diverger. Exemples de limites :
+- biais de réponse (influence de l'actualité) ;
+- échantillon et taux de réponse ;
+- correction saisonnière ;
+- indice de diffusion sans ampleur.
+
+**[Interprétation]** En septembre 2026, l'emploi manufacturier de l'ISM (52,7) est en expansion alors que le rapport sur l'emploi du BLS donne +9 000 emplois industriels (S-BLS-04, L3.05) : l'ordre de grandeur n'est pas comparable (diffusion contre variation en milliers) ; le rapprochement montre surtout qu'une enquête ne se convertit pas en nombre d'emplois.
+
+### 4.5 Le PMI flash de la zone euro
+
+**[Fait]** (S-MTR-01, dépêche secondaire reprenant le PMI HCOB, résumé automatique) : octobre 2026, composite flash **51,9** (septembre 53,1 ; attendu 52,7) ; manufacturier **52,4** (52,9) ; services **51,7** (53,0) ; l'économiste en chef de S&P Global estime que l'enquête est compatible avec une croissance trimestrielle d'environ 0,3 % ; l'euro-dollar échangeait un peu sous 1,1200 après la publication.
+
+**[Calcul de l'auteur]** surprise composite 51,9 − 52,7 = **−0,8** ; variation 51,9 − 53,1 = **−1,2**.
+
+**[Interprétation]** Un indice en baisse mais au-dessus de 50 signale une expansion plus lente, pas une contraction. Les PMI de zone euro et américains n'ont pas la même méthodologie de sondage ni les mêmes pondérations : **ne pas comparer directement 51,9 et 54,5 comme des niveaux d'activité**.
+
+## 5. Définitions essentielles
+
+- **PMI** : indice de diffusion issu d'enquêtes auprès de directeurs d'achat.
+- **Indice de diffusion** : proportion de hausses + ½ de proportion d'identiques.
+- **Prix payés** : indice des prix, hors PMI.
+- **Livraisons des fournisseurs** : indice inversé : des délais plus longs augmentent l'indice.
+- **Carnets de commandes** : commandes non encore livrées.
+- **Flash** : estimation préliminaire d'un PMI sur la base d'une partie des réponses.
+
+## 6. Exemples chiffrés
+
+**6.1 Recomposition.** (55,3 + 56,7 + 52,7 + 59,0 + 48,6) ÷ 5 = 54,46.
+**6.2 Surprise.** 54,5 − 55,0 = −0,5.
+**6.3 Diffusion (SIMULATION).** 40 + 45 ÷ 2 = 62,5.
+**6.4 Inversion (SIMULATION).** Livraisons non inversées : PMI = 50,86.
+
+### 6.5 Cas historique documenté — les enquêtes de septembre et octobre 2026
+
+**[Fait]** : ISM manufacturier du 01/10/2026 (S-ISM-01, S-FTP-04) ; ISM services (S-ISM-02) ; PMI flash de la zone euro du 23/10/2026 (S-MTR-01, secondaire).
+
+**[Calcul de l'auteur]** Manufacturier −0,5 contre le consensus ; services −0,3 (à confirmer) ; composite zone euro −0,8 ; recompositions du PMI exactes.
+
+**[Interprétation]** Les enquêtes décrivent une expansion qui ralentit légèrement, avec des prix en forte tension. **Limites** : textes lus par résumé ; communiqué manufacturier reproduit par un site tiers ; consensus services issu d'un titre ; marché non étudié ; pas d'analyse des industries ; PMI HCOB de septembre non lu directement.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Dollar** : un PMI inférieur à l'attente avec des prix en hausse envoie un message mixte ; la lecture dépend de la fonction de réaction de la banque centrale (L2.07).
+- **Euro** : un composite plus faible que prévu pèse sur les perspectives de la BCE (module 2) ; la réaction observée de l'euro-dollar en source secondaire ne permet pas de conclure.
+- **Or** : les prix payés très élevés alimentent le débat sur l'inflation ; le canal des taux réels reste l'hypothèse à tester (module 5).
+- **Usage** : les PMI servent de signal précoce ; il faut les confirmer par les statistiques dures (emploi, production, ventes : L3.09).
+- **Prudence** : un PMI ne prédit ni le PIB ni la direction d'une paire de devises.
+
+## 8. Erreurs courantes
+
+1. Lire 54,5 comme une croissance de 54,5 %.
+2. Ignorer que les prix payés ne sont pas dans le PMI.
+3. Oublier l'inversion des livraisons.
+4. Comparer des PMI de pays différents comme des niveaux.
+5. Conclure à partir d'un seul mois et d'un seul sous-indice.
+6. Interpréter un PMI à 51 comme un recul.
+7. Présenter un résumé automatique contradictoire comme un fait.
+
+## 9. Limites de l'interprétation
+
+- Le communiqué manufacturier est lu sur une reproduction par un site tiers, et recoupé par First Trust ; le PDF officiel n'a pas été ouvert pour ce secteur.
+- Le consensus manufacturier vient de First Trust ; le consensus services d'un titre non relu.
+- Le résumé de la note PNC contredit le communiqué ; il est écarté.
+- La formule détaillée de l'indice de diffusion n'a pas été relue dans une source officielle.
+- Les PMI de zone euro sont lus par une dépêche secondaire.
+- Les seuils de 47,5 et 48,1 sont des indications de l'ISM, non des règles.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Recomposition.** Composantes manufacturières : 55,3 ; 56,7 ; 52,7 ; 59,0 ; 48,6. Calcule le PMI.
+
+<details>
+<summary>Correction 1</summary>
+
+272,3 ÷ 5 = **54,46 ≈ 54,5**.
+</details>
+
+**Exercice 2 — Services.** Composantes : 56,5 ; 59,8 ; 50,1 ; 53,2. PMI ?
+
+<details>
+<summary>Correction 2</summary>
+
+219,6 ÷ 4 = **54,9**.
+</details>
+
+**Exercice 3 — Surprise.** Manufacturier : publié 54,5, attendu 55,0 ; zone euro composite : 51,9 et 52,7. Calcule les surprises et la variation du composite par rapport à 53,1.
+
+<details>
+<summary>Correction 3</summary>
+
+54,5 − 55,0 = **−0,5** ; 51,9 − 52,7 = **−0,8** ; 51,9 − 53,1 = **−1,2**.
+</details>
+
+**Exercice 4 — Diffusion (SIMULATION).** 40 % plus élevé, 45 % identique, 15 % plus faible. Indice ?
+
+<details>
+<summary>Correction 4</summary>
+
+40 + 45 ÷ 2 = **62,5**.
+</details>
+
+**Exercice 5 — Inversion (SIMULATION).** Si les livraisons (59,0) étaient comptées sans inversion, quel serait le PMI manufacturier ?
+
+<details>
+<summary>Correction 5</summary>
+
+Livraisons inversées : 100 − 59,0 = 41,0 ; somme = 55,3 + 56,7 + 52,7 + 41,0 + 48,6 = 254,3 ; ÷ 5 = **50,86**. Une valeur de 59 pour les livraisons correspond à des délais plus longs, lus comme un signe de demande forte.
+</details>
+
+**Exercice 6 — Critique.** « L'ISM à 54,5 signifie que l'industrie américaine croît de 54,5 % ; les prix à 77,9 prouvent que l'inflation d'octobre sera de 7,8 %. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) Un indice de diffusion n'est pas un taux de croissance. (2) L'indice de prix mesure la proportion de répondants constatant une hausse, non l'ampleur. (3) Les prix ne sont pas dans le PMI et ne se convertissent pas en inflation. (4) Le CPI de septembre est de 3,7 %, et le lien enquête → CPI n'est pas mécanique. (5) Un seul mois.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L3.08.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Un PMI est un indice de diffusion : 50 = pas de changement net.
+- Le PMI manufacturier est la moyenne de cinq composantes ; celui des services, de quatre ; les prix n'y sont pas.
+- Septembre 2026 : ISM manufacturier 54,5 (attendu 55,0), prix payés 77,9 ; services 54,9, prix 74,0 ; zone euro (octobre, flash) 51,9 (attendu 52,7).
+- Les recompositions sont exactes à l'arrondi près ; les livraisons sont inversées.
+- Une enquête est un signal précoce, pas une mesure de croissance.
+
+## 13. Critères de maîtrise
+
+- [ ] Expliquer un indice de diffusion.
+- [ ] Recomposer un PMI (Exercices 1 et 2).
+- [ ] Mesurer une surprise (Exercice 3).
+- [ ] Expliquer l'inversion des livraisons (Exercice 5).
+- [ ] Critiquer une lecture erronée (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-ISM-01** — ISM, communiqué du PMI manufacturier, septembre 2026 (copie sur un site tiers) : https://www.textileworld.com/textile-world/2026/10/manufacturing-pmi-at-54-5-september-2026-ism-manufacturing-pmi-report/
+- **S-ISM-02** — ISM, Services PMI Report, septembre 2026 (PDF officiel) : https://www.ismworld.org/globalassets/pub/research-and-surveys/rob/nmi/rain202609svcs.pdf
+- **S-FTP-04** — First Trust (secondaire) : https://www.ftportfolios.com/Commentary/EconomicResearch/2026/10/1/the-ism-manufacturing-index-declined-to-54.5-in-september
+- **S-MTR-01** — Mitrade (secondaire), PMI HCOB flash d'octobre 2026 : https://www.mitrade.com/insights/news/live-news/article-6-2189091-20261023
+
+**Définitions de cours non rattachées à une source officielle lue :** formule de l'indice de diffusion, distinction données douces / dures. **Points non vérifiés :** consensus services, PMI HCOB direct, formule officielle, note PNC contradictoire.

@@ -1,0 +1,217 @@
+---
+id: L4.10
+module: 4
+order: 10
+title: "Le carry trade : portage, risque d'inversion et monnaies de financement"
+title_initial: "Le carry trade"
+level: "avancé"
+duration_hours: 3.5
+prerequisites: ["L4.01", "L4.02", "L4.08", "L4.09"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L4.10.quiz.json"
+sources: ["S-BIS-09", "S-STR-01", "S-BCFH-01", "S-NTH-01", "S-CBA-01", "S-SNB-02"]
+---
+
+# L4.10 — Le carry trade
+
+> **Convention de lecture.** **[Fait]** = énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante ; le carry trade en est une illustration : un gain régulier peut disparaître en quelques jours.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. définir le **portage** (carry) et le décomposer en différentiel de taux et variation de change ;
+2. calculer un **point mort** de change et un ratio **portage / risque** ;
+3. expliquer pourquoi le carry trade rapporte en moyenne tout en exposant à des **inversions brutales** ;
+4. lire l'épisode d'**août 2024** décrit par la BRI en distinguant faits, indicateurs de taille et causalité non établie ;
+5. situer l'état du carry trade en **septembre 2026** (yen, franc, dollar australien) à partir de sources datées ;
+6. dire ce que le portage **permet** et **ne permet pas** de conclure.
+
+## 2. Prérequis
+
+- Parité couverte et non couverte, test de Fama (L4.01) ; différentiels (L4.02) ; yen, franc (L4.08) ; dollar australien (L4.09).
+
+## 3. Explication intuitive
+
+Le carry trade consiste à **emprunter dans une devise à taux bas** pour **placer dans une devise à taux élevé**, en espérant empocher l'écart de taux sans que le change ne le détruise. En théorie, la parité des taux non couverte dit que la devise à taux élevé devrait se déprécier de l'écart, ce qui annulerait le gain ; en pratique, le test de Fama (L4.01) montre que ce n'est pas ce qu'on observe en moyenne. D'où l'attrait de la stratégie. Mais ce gain a un prix : lorsque l'appétit pour le risque s'effondre, tout le monde veut **rembourser** sa dette en devise de financement en même temps ; cette devise **monte vite**, et la perte peut effacer des mois de gains. Le carry trade est donc une stratégie qui **rapporte régulièrement et perd rarement mais fort**.
+
+## 4. Développement technique
+
+### 4.1 Le rendement d'un portage
+
+**[Définition]** Rendement approximatif sur un an d'une position longue en devise de placement financée en devise de financement : **différentiel de taux + variation du cours de la devise de placement**. Le **point mort** est la variation de change qui annule le gain : (1 + taux de financement) ÷ (1 + taux de placement) − 1 (cours exprimé en unités de devise de financement par unité de devise de placement).
+
+**[Calcul de l'auteur]** Placement en dollar australien (4,60 %, L4.09), financement en yen (1,25 %, L4.08) : différentiel **3,35** points par an, soit environ **0,28** point par mois (taux directeurs comme substituts) ; point mort : 1,0125 ÷ 1,046 − 1 = **−3,20 %** pour l'AUD/JPY ; financement en franc (0 %) : différentiel **4,60** points et point mort 1,00 ÷ 1,046 − 1 = **−4,40 %** ; écart d'économie de financement franc contre yen : 1,25 − 0 = **1,25** point.
+
+### 4.2 Portage et risque
+
+**[Définition]** Le **ratio portage/risque** est le différentiel de taux divisé par la volatilité implicite du change (en points de pourcentage annuels). Plus il est élevé, plus le gain attendu par unité de risque est grand.
+
+**[SIMULATION]** Différentiel de 3,35 points ; volatilité implicite de 10 % : ratio **0,34** ; volatilité de 15 % : **0,22**. Une hausse de la volatilité fait baisser le ratio sans que le différentiel ne change.
+
+**[Interprétation]** C'est le mécanisme qui rend le carry trade **procyclique** : une hausse de volatilité réduit l'attrait des positions, ce qui pousse à les dénouer, ce qui accroît encore la volatilité. (La relation est une hypothèse de travail, vérifiée ci-dessous seulement par le cas de la BRI.)
+
+### 4.3 Pourquoi le portage rapporte en moyenne
+
+**[Fait]** (S-BCFH-01, L4.01) : le test de Fama donne des coefficients négatifs sur huit devises (1999–2021) ; euro −1,019 ; moyenne de la littérature ≈ −0,88. Fama attribue le résultat à une **prime de risque variable**, hypothèse peu vérifiée.
+
+**[Interprétation]** Si le coefficient est négatif, la devise à taux élevé a tendance à **ne pas se déprécier** (voire à s'apprécier) : le portage rapporte en moyenne. Ce résultat porte sur un échantillon passé et **ne garantit rien** pour l'avenir ; il ne dit pas quand les inversions surviennent.
+
+### 4.4 L'épisode d'août 2024 vu par la BRI
+
+**[Fait]** (S-BIS-09, BRI, *Quarterly Review* de septembre 2024, article « Carry off, carry on », 16 septembre 2024, **source primaire**, résumé automatique de l'article) :
+- **Déclencheur** : le vendredi 2 août 2024, des créations d'emplois américaines inférieures aux attentes ; le rendement du Trésor à deux ans baisse de **26** points de base ce jour-là ; le lundi 5 août, l'épicentre se déplace au Japon : le yen s'apprécie, le TOPIX perd plus de 10 % (double chiffre) et l'indice des banques du TOPIX subit sa pire séance en 40 ans ; le VIX dépasse brièvement **60** avant l'ouverture et clôture sous **40** ;
+- **Récupération** : les pertes sont effacées en quelques jours ;
+- **Dénouement du portage** : appréciation brusque mais brève des devises de financement (surtout le yen) et dépréciation de devises de placement comme le peso mexicain ; mouvements « importants mais pas hors norme » par rapport aux krachs passés ; la volatilité du change augmente bien moins que celle des actions ;
+- **Taille indicative (T1 2024)** : créances bancaires en yen sur des emprunteurs non bancaires hors du Japon : **133 000 milliards de yens** (≈ **880** milliards de dollars) contre 110 000 milliards fin 2021 ; prêts en yen à des non-banques hors du Japon : ≈ **271** milliards de dollars contre 228 ; contrats de change à terme et swaps avec le yen : **14 200** milliards de dollars fin 2023 ; positions à terme estimées des fonds spéculatifs : ≈ **160** milliards de dollars ; offre nette de yens estimée en hausse d'environ **66**000 milliards de yens (≈ **435** milliards de dollars) entre fin 2021 et T1 2024 ; levier déclaré de fonds multi-stratégies **4 pour 1** (traditionnel) et **14 pour 1** avec levier synthétique ;
+- **Causalité** : la BRI **ne dit pas** que le dénouement est le facteur principal ; elle le décrit comme un **amplificateur** d'un choc ; les données américaines seules ne justifiaient pas la réaction ; d'autres amplificateurs sont cités (couvertures d'options de produits structurés en yen, dénouement de positions courtes sur la volatilité, appels de marge) ; les encadrés avertissent que les données ne couvrent pas début août, que l'emprunt en yen « peut, mais ne doit pas » être lié au carry trade et que les chiffres reposent sur des hypothèses.
+
+**[Calcul de l'auteur]** Taux de change implicite : 133 000 ÷ 880 ≈ **151,1** yens par dollar ; 66 000 ÷ 435 ≈ **151,7** (cohérents entre eux) ; hausse des créances : 133 ÷ 110 − 1 = **+20,9 %** ; hausse des prêts : 271 ÷ 228 − 1 = **+18,9 %** ; positions des fonds rapportées aux créances : 160 ÷ 880 = **18,2 %** ; levier synthétique : 14 − 4 = **10** tours.
+
+**[Interprétation]** L'épisode montre un **amplificateur** à la fois visible dans le yen et dans les actions japonaises ; ce n'est **pas** une démonstration que le carry trade « a causé » la chute : la BRI s'en garde. Les indicateurs de taille mesurent des **encours en yen**, dont une partie n'est pas du carry trade.
+
+### 4.5 Septembre 2026 : l'attrait du yen comme monnaie de financement s'érode
+
+**[Fait]** (S-STR-01, Bloomberg reproduit par The Star, 17 septembre 2026, **source secondaire**, résumé automatique) :
+- les rendements obligataires japonais montent ; les rendements à deux ans auraient plus que doublé cette année ; une **intervention conjointe États-Unis–Japon** pour soutenir le yen est mentionnée, le Japon étant intervenu **deux fois** cette année ; le yen aurait gagné **3,3 %** en septembre et un montant similaire en juillet après l'intervention (**affirmations non vérifiées à la source**) ;
+- vendre le yen pour acheter le dollar australien (devise à taux le plus élevé du G10) a perdu **1,3 %** depuis juillet, après un gain de **9 %** au premier semestre 2026 ;
+- le financement en franc a donné des gains totaux de **14 %** en 2026 ; le franc a perdu plus de 1 % contre le dollar et **4,4 %** contre le yen ; la Suisse resterait à taux zéro jusqu'à fin 2027 et semblerait prête à laisser le franc glisser pour soutenir ses exportateurs (interprétation de l'article) ; certains gérants favorisent le franc, JPMorgan recommande de vendre la couronne suédoise et le dollar canadien contre dollar ;
+- l'article **ne donne pas** de niveau d'USD/JPY, de volatilité implicite, de ratio portage/risque ni de positions.
+
+**[Calcul de l'auteur]** Rendement cumulé approximatif du portage yen/dollar australien : 1,09 × 0,987 − 1 = **+7,6 %** (composition de deux rendements d'après l'article, ordre de grandeur) ; différentiel yen/franc de financement : **1,25** point ; yen +3,3 % en septembre.
+
+**[Interprétation]** Le carry trade en yen **perd de son attrait** à mesure que la Banque du Japon relève ses taux (L4.08), que les rendements japonais montent et que le yen se renforce ; le franc, à taux zéro, **prend le relais** comme monnaie de financement. **Ce qu'on ne peut pas conclure** : la taille actuelle des positions ; le risque de dénouement ; la part de chaque facteur dans la baisse du portage yen/AUD. **Limite** : l'USD/JPY a pourtant atteint plus de 157,50 le 18 septembre (L4.08) après la décision de la Banque du Japon : les deux informations viennent de sources secondaires non synchrones et ne se réconcilient pas dans cette leçon (le yen se renforçait au début de septembre puis s'est affaibli à la mi-septembre).
+
+## 5. Définitions essentielles
+
+- **Portage (carry)** : rendement obtenu en détenant une devise à taux élevé financée dans une devise à taux bas.
+- **Devise de financement / de placement** : devise empruntée / devise détenue.
+- **Point mort** : variation de change qui annule le portage.
+- **Ratio portage/risque** : différentiel de taux ÷ volatilité implicite.
+- **Dénouement (unwinding)** : clôture simultanée de positions de portage.
+- **Levier synthétique** : levier obtenu par dérivés.
+- **Volatilité implicite** : volatilité attendue déduite des prix d'options.
+
+## 6. Exemples chiffrés
+
+**6.1 Différentiel.** 4,60 − 1,25 = 3,35 point par an ; 3,35 ÷ 12 ≈ 0,28 par mois.
+**6.2 Point mort.** 1,0125 ÷ 1,046 − 1 = −3,20 % ; franc : 1,00 ÷ 1,046 − 1 = −4,40 %.
+**6.3 Ratio (SIMULATION).** 3,35 ÷ 10 = 0,34 ; 3,35 ÷ 15 = 0,22.
+**6.4 BRI.** 133 000 ÷ 880 ≈ 151,1 ; 14 − 4 = 10.
+
+### 6.5 Cas historique documenté — août 2024 et septembre 2026
+
+**[Fait]** (S-BIS-09, S-STR-01, S-BCFH-01) : voir 4.3 à 4.5.
+
+**[Calcul de l'auteur]** Août 2024 : rendement à deux ans −26 pb le 2 août ; VIX > 60 avant l'ouverture, < 40 à la clôture ; créances en yen +20,9 % depuis fin 2021 ; septembre 2026 : portage yen/AUD +9 % au premier semestre puis −1,3 % depuis juillet ; financement en franc +14 % en 2026.
+
+**[Interprétation]** Deux épisodes, **août 2024 et septembre 2026**, montrent la même structure : un portage rentable, puis une période où le yen se renforce et où le portage cesse de rapporter. **Ce qu'on ne peut pas conclure** : une règle de dénouement ; la cause exacte d'août 2024 (la BRI parle d'amplificateur) ; la taille des positions de 2026. **Limites** : résumé automatique ; données de 2024 non actualisées ; article de 2026 secondaire, sans niveaux de change ni positions ; épisodes non comparables par leur ampleur.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Choix de la devise de financement** : comparer taux, volatilité et orientation de la banque centrale (yen, franc) ; un différentiel plus faible n'est pas toujours un handicap si la devise est moins volatile.
+- **Surveillance** : volatilité implicite, ratio portage/risque, communication des banques centrales, actions japonaises.
+- **Devises de placement** : AUD, MXN et autres à taux élevé sont les plus exposées en cas de dénouement ; ce n'est pas une prévision.
+- **Or** : le lien entre portage, dollar et or n'est pas étudié ici (module 5) ; le positionnement spéculatif sera traité au module 7.
+- **Méthode** : calculer le point mort avant de juger un portage ; séparer faits, indicateurs et causalité.
+- **Prudence** : un portage positif ne protège pas d'une perte de change.
+
+## 8. Erreurs courantes
+
+1. Confondre différentiel de taux et rendement total.
+2. Oublier le point mort de change.
+3. Conclure qu'un portage rapporte toujours parce qu'il a rapporté en moyenne.
+4. Attribuer l'épisode d'août 2024 à une seule cause.
+5. Prendre les encours en yen pour des positions de carry trade.
+6. Comparer des rendements de portage de périodes et d'instruments différents.
+7. Ignorer que le franc et le yen ont des différentiels et des risques différents.
+
+## 9. Limites de l'interprétation
+
+- La BRI est lue par résumé de son article de septembre 2024, non actualisé ; elle ne tranche pas la causalité.
+- L'article de septembre 2026 est secondaire ; l'intervention américano-japonaise et les mouvements du yen cités ne sont pas vérifiés.
+- Aucun niveau d'USD/JPY, aucune volatilité implicite et aucune position de 2026 ne sont lus ; le ratio portage/risque est simulé.
+- Les taux directeurs sont des substituts imparfaits des taux de financement.
+- Les rendements de portage cités sont des chiffres rapportés (« total return »), dont la méthode n'est pas lue.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Différentiel.** Placement à 4,60 % ; financement à 1,25 %. Différentiel annuel et mensuel approximatif ?
+
+<details>
+<summary>Correction 1</summary>
+
+4,60 − 1,25 = **3,35** ; 3,35 ÷ 12 ≈ **0,28**.
+</details>
+
+**Exercice 2 — Point mort.** Mêmes taux : variation de change qui annule le gain d'un an ? Avec un financement en franc à 0 % ?
+
+<details>
+<summary>Correction 2</summary>
+
+1,0125 ÷ 1,046 − 1 = **−3,20 %** ; 1,00 ÷ 1,046 − 1 = **−4,40 %**.
+</details>
+
+**Exercice 3 — Ratio (SIMULATION).** Différentiel 3,35 ; volatilités implicites de 10 % puis 15 %. Ratios ? Que montre l'écart ?
+
+<details>
+<summary>Correction 3</summary>
+
+3,35 ÷ 10 = **0,34** ; 3,35 ÷ 15 = **0,22** ; une hausse de volatilité réduit l'attrait sans changer le différentiel.
+</details>
+
+**Exercice 4 — Données de la BRI.** Créances en yen de 133 000 milliards de yens (≈ 880 milliards de dollars) ; 110 000 en 2021. Taux implicite ? Variation ? Levier synthétique (4 → 14) ?
+
+<details>
+<summary>Correction 4</summary>
+
+133 000 ÷ 880 ≈ **151,1** ; 133 ÷ 110 − 1 = **+20,9 %** ; 14 − 4 = **10** tours.
+</details>
+
+**Exercice 5 — Septembre 2026.** Portage yen/AUD : +9 % au premier semestre, −1,3 % depuis juillet. Rendement cumulé approximatif ?
+
+<details>
+<summary>Correction 5</summary>
+
+1,09 × 0,987 − 1 = **+7,6 %** (ordre de grandeur ; méthode de calcul de l'article non lue).
+</details>
+
+**Exercice 6 — Critique.** « Août 2024 prouve que le carry trade fait chuter les marchés. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) La BRI décrit un amplificateur, pas la cause principale. (2) Le déclencheur était un rapport américain sur l'emploi. (3) D'autres amplificateurs sont cités (options, positions courtes sur la volatilité, appels de marge). (4) Les encours en yen ne sont pas tous du carry trade. (5) Les données ne couvrent pas début août.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L4.10.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Portage = différentiel de taux + variation de change ; le point mort mesure la marge de sécurité.
+- Dollar australien financé en yen : différentiel de 3,35 points, point mort −3,20 % (taux directeurs).
+- Août 2024 (BRI) : amplificateur d'un choc, pas démonstration de cause unique ; VIX > 60 avant l'ouverture, récupération en quelques jours.
+- Septembre 2026 (source secondaire) : le yen perd de son attrait comme devise de financement ; le franc prend le relais.
+- Le portage rapporte en moyenne et peut perdre brutalement.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer différentiel et point mort (Exercices 1 et 2).
+- [ ] Calculer un ratio portage/risque (Exercice 3).
+- [ ] Lire les indicateurs de taille de la BRI (Exercice 4).
+- [ ] Composer deux rendements (Exercice 5).
+- [ ] Critiquer une explication causale unique (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-BIS-09** — BRI, *Quarterly Review*, septembre 2024, « Carry off, carry on » (16 septembre 2024) : https://bis.org/publ/qtrpdf/r_qt2409a.htm
+- **S-STR-01** — The Star (Bloomberg, secondaire), « Carry traders eye franc and krona as yen's funding appeal ebbs » (17 septembre 2026) : https://www.thestar.com.my/business/business-news/2026/09/17/carry-traders-eye-franc-and-krona-as-yens-funding-appeal-ebbs
+- **S-BCFH-01** — Chinn et autres (2022) ; **S-NTH-01**, **S-SNB-02**, **S-CBA-01** — voir L4.08 et L4.09.
+
+**Définitions de cours non rattachées à une source officielle lue :** point mort, ratio portage/risque, procyclicité. **Points non vérifiés :** intervention américano-japonaise de 2026, mouvements du yen cités, positions de 2026, méthode de calcul des rendements de portage de l'article.

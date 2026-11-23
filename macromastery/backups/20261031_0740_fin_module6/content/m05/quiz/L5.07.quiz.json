@@ -1,0 +1,233 @@
+{
+  "lessonId": "L5.07",
+  "title": "Quiz — ETF d'or et flux",
+  "passThreshold": 0.8,
+  "note": "Seuil : 7 bonnes réponses sur 8.",
+  "questions": [
+    {
+      "id": "L5.07-Q1",
+      "type": "mcq",
+      "prompt": "Que se passe-t-il quand la demande de parts d'un ETF d'or physique dépasse l'offre sur le marché secondaire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le prix de l'or est fixé par le fonds"
+        },
+        {
+          "id": "b",
+          "text": "Le fonds vend de l'or"
+        },
+        {
+          "id": "c",
+          "text": "Un participant autorisé livre de l'or au fonds contre de nouvelles parts : les avoirs en tonnes augmentent"
+        },
+        {
+          "id": "d",
+          "text": "Rien ne change"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La création de parts par les participants autorisés augmente les tonnes détenues et maintient le prix de la part proche de la valeur de l'or.",
+      "tags": [
+        "mecanique"
+      ]
+    },
+    {
+      "id": "L5.07-Q2",
+      "type": "mcq",
+      "prompt": "Quelle identité relie AUM, avoirs et prix ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "AUM = tonnes × 32 150,7 oz/t × prix"
+        },
+        {
+          "id": "b",
+          "text": "AUM = flux × prix"
+        },
+        {
+          "id": "c",
+          "text": "AUM = tonnes ÷ prix"
+        },
+        {
+          "id": "d",
+          "text": "AUM = prix − tonnes"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Une baisse d'AUM peut venir du seul prix, sans sortie de flux.",
+      "tags": [
+        "identite"
+      ]
+    },
+    {
+      "id": "L5.07-Q3",
+      "type": "mcq",
+      "prompt": "Flux 2025 : Amérique du Nord 51, Asie 25, Europe 12, autres 0,9 (Md$). Part de l'Amérique du Nord dans les 89 Md$ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 89 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ 25 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ 12 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ 57 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "51 ÷ 89 = 57,3 % ; la somme des régions donne 88,9 Md$.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.07-Q4",
+      "type": "mcq",
+      "prompt": "AUM 574 Md$ pour 4 256 t : prix implicite par once ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 4 640 $"
+        },
+        {
+          "id": "b",
+          "text": "≈ 4 195 $"
+        },
+        {
+          "id": "c",
+          "text": "≈ 574 $"
+        },
+        {
+          "id": "d",
+          "text": "≈ 135 $"
+        }
+      ],
+      "correct": "b",
+      "explanation": "574 × 10⁹ ÷ (4 256 × 32 150,7) = 4 195 $/oz ; prix calculé, non publié.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.07-Q5",
+      "type": "mcq",
+      "prompt": "Septembre 2026 : AUM −7 %, avoirs +1,6 %. Variation du prix implicite ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ +1,6 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ −7 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ −5,4 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ −8,5 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "0,93 ÷ 1,016 − 1 = −8,5 % : l'AUM mélange prix et quantité.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.07-Q6",
+      "type": "mcq",
+      "prompt": "Avoirs : 4 047 t fin juin, +211 t au T3, 4 256 t fin septembre. Que dire de la cohérence ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'écart est de 211 t"
+        },
+        {
+          "id": "b",
+          "text": "Les chiffres sont faux"
+        },
+        {
+          "id": "c",
+          "text": "Écart de 2 t, dû aux arrondis ou aux révisions : cohérence bonne"
+        },
+        {
+          "id": "d",
+          "text": "On ne peut pas comparer"
+        }
+      ],
+      "correct": "c",
+      "explanation": "4 047 + 211 = 4 258 contre 4 256 : écart de 2 t.",
+      "tags": [
+        "coherence"
+      ]
+    },
+    {
+      "id": "L5.07-Q7",
+      "type": "mcq",
+      "prompt": "Au premier semestre 2026, quel comportement régional oppose l'Amérique du Nord et l'Asie ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Amérique du Nord −7,7 Md$ (sorties) et Asie +12 Md$ (record)"
+        },
+        {
+          "id": "b",
+          "text": "Les deux en entrées"
+        },
+        {
+          "id": "c",
+          "text": "Les deux en sorties"
+        },
+        {
+          "id": "d",
+          "text": "Aucune donnée"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Les régions ne réagissent pas de la même façon à la baisse du prix : première moitié 2026.",
+      "tags": [
+        "regions"
+      ]
+    },
+    {
+      "id": "L5.07-Q8",
+      "type": "mcq",
+      "prompt": "Septembre 2026 : entrées de 10 Md$, prix implicite en recul de 8,5 % et hausse de la Fed. Quelle conclusion est prudente ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les flux causent la baisse"
+        },
+        {
+          "id": "b",
+          "text": "Les flux n'ont pas suivi mécaniquement la direction des taux ; la cause n'est pas établie"
+        },
+        {
+          "id": "c",
+          "text": "La Fed n'a aucun effet"
+        },
+        {
+          "id": "d",
+          "text": "Les flux prévoient la hausse du prix"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Les explications du WGC sont hypothétiques (« may have ») ; aucune causalité n'est démontrée.",
+      "tags": [
+        "interpretation"
+      ]
+    }
+  ],
+  "revision": 1
+}

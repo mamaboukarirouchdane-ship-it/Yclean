@@ -1,0 +1,233 @@
+{
+  "lessonId": "L4.12",
+  "title": "Quiz — Thèse guidée sur EUR/USD",
+  "passThreshold": 0.8,
+  "note": "Seuil : 7 bonnes réponses sur 8.",
+  "questions": [
+    {
+      "id": "L4.12-Q1",
+      "type": "mcq",
+      "prompt": "Pourquoi une thèse fondamentale doit-elle être datée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pour éviter les calculs"
+        },
+        {
+          "id": "b",
+          "text": "Pour la rendre plus longue"
+        },
+        {
+          "id": "c",
+          "text": "Pour séparer ce qui était connu à la date de ce qui arrive après"
+        },
+        {
+          "id": "d",
+          "text": "Parce que les cours sont fixes"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Dater permet d'exclure les informations postérieures et de noter la thèse sur ce qui était réellement connu.",
+      "tags": [
+        "methode"
+      ]
+    },
+    {
+      "id": "L4.12-Q2",
+      "type": "mcq",
+      "prompt": "Probabilité de hausse de la Fed de 68,5 % : quelle espérance de hausse en points de base (25 pb) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 17,1 pb"
+        },
+        {
+          "id": "b",
+          "text": "≈ 25 pb"
+        },
+        {
+          "id": "c",
+          "text": "≈ 68,5 pb"
+        },
+        {
+          "id": "d",
+          "text": "≈ 1,7 pb"
+        }
+      ],
+      "correct": "a",
+      "explanation": "0,685 × 25 = 17,1 points de base ; pour la BCE à 60 %, l'espérance est de 15,0 pb.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.12-Q3",
+      "type": "mcq",
+      "prompt": "EUR/USD de 1,1400 à 1,1130 : quelle variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−0,27 %"
+        },
+        {
+          "id": "b",
+          "text": "+2,37 %"
+        },
+        {
+          "id": "c",
+          "text": "−2,70 %"
+        },
+        {
+          "id": "d",
+          "text": "−2,37 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "1,1130 ÷ 1,1400 − 1 = −2,37 % en 34 jours ; ce n'est pas une explication causale.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.12-Q4",
+      "type": "mcq",
+      "prompt": "Scénarios 0,50 / 0,30 / 0,20 avec variations −2,5 % / 0 / +2,5 % : quelle espérance ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,00 %"
+        },
+        {
+          "id": "b",
+          "text": "−0,75 %"
+        },
+        {
+          "id": "c",
+          "text": "+0,75 %"
+        },
+        {
+          "id": "d",
+          "text": "−1,25 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "0,50 × (−2,5) + 0,30 × 0 + 0,20 × 2,5 = −1,25 + 0,5 = −0,75 %.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.12-Q5",
+      "type": "mcq",
+      "prompt": "Probabilités (0,25 ; 0,50 ; 0,25), la « baisse » se réalise : quel score de Brier ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,25"
+        },
+        {
+          "id": "b",
+          "text": "0,375"
+        },
+        {
+          "id": "c",
+          "text": "0,667"
+        },
+        {
+          "id": "d",
+          "text": "0,875"
+        }
+      ],
+      "correct": "d",
+      "explanation": "(0,25 − 1)² + 0,50² + 0,25² = 0,5625 + 0,25 + 0,0625 = 0,875 ; plus bas est meilleur.",
+      "tags": [
+        "brier"
+      ]
+    },
+    {
+      "id": "L4.12-Q6",
+      "type": "mcq",
+      "prompt": "Quel est le score de Brier de référence avec trois scénarios équiprobables et une issue réalisée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1,000"
+        },
+        {
+          "id": "b",
+          "text": "≈ 0,333"
+        },
+        {
+          "id": "c",
+          "text": "≈ 0,667"
+        },
+        {
+          "id": "d",
+          "text": "0,000"
+        }
+      ],
+      "correct": "c",
+      "explanation": "(2/3)² + (1/3)² + (1/3)² = 0,667 : ce niveau correspond à l'absence de compétence.",
+      "tags": [
+        "brier"
+      ]
+    },
+    {
+      "id": "L4.12-Q7",
+      "type": "mcq",
+      "prompt": "Pourquoi un seul bon score de Brier ne prouve-t-il pas la qualité d'une thèse ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un résultat unique peut relever de la chance : il faut de nombreuses thèses"
+        },
+        {
+          "id": "b",
+          "text": "Parce que le score est toujours faux"
+        },
+        {
+          "id": "c",
+          "text": "Parce que les scénarios sont inutiles"
+        },
+        {
+          "id": "d",
+          "text": "Parce que le cours est fixe"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Sur un seul résultat, un score favorable peut venir du hasard ; la compétence se mesure sur un grand nombre de thèses.",
+      "tags": [
+        "limite"
+      ]
+    },
+    {
+      "id": "L4.12-Q8",
+      "type": "mcq",
+      "prompt": "Quelle est la principale protection contre le biais de rétrospection ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Changer les seuils après coup"
+        },
+        {
+          "id": "b",
+          "text": "Enregistrer thèse, scénarios et seuils avant de regarder le résultat"
+        },
+        {
+          "id": "c",
+          "text": "Ne garder que les réussites"
+        },
+        {
+          "id": "d",
+          "text": "Supprimer la date"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La discipline est procédurale : dater, probabiliser et fixer le critère avant le résultat, puis noter toutes les thèses.",
+      "tags": [
+        "biais"
+      ]
+    }
+  ],
+  "revision": 1
+}

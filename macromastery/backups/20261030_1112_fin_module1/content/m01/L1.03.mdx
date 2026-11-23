@@ -1,0 +1,239 @@
+---
+id: L1.03
+module: 1
+order: 3
+title: "Productivité et croissance potentielle : ce qui fixe la croissance de long terme"
+title_initial: "Productivité et croissance potentielle"
+level: "débutant à intermédiaire"
+duration_hours: 2.5
+prerequisites: ["L1.01", "L1.02"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L1.03.quiz.json"
+sources: ["S-BLS-01", "S-CBO-01"]
+---
+
+# L1.03 — Productivité et croissance potentielle : ce qui fixe la croissance de long terme
+
+> **Convention de lecture.** **[Fait]** = chiffre ou énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les documents du BLS et de la CBO sont lus par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. définir la **productivité du travail** (production par heure) et la calculer ;
+2. décomposer la croissance du PIB potentiel en **croissance de la main-d'œuvre** et **croissance de la productivité** ;
+3. expliquer le rôle du **capital** et de la **productivité globale des facteurs (PGF)** dans un modèle de croissance de type Solow ;
+4. relier productivité, rémunération et **coût unitaire du travail** ;
+5. mesurer l'effet cumulé d'écarts de croissance durables sur plusieurs décennies ;
+6. expliquer **pourquoi la croissance potentielle borne la politique monétaire** sans en faire une règle mécanique.
+
+## 2. Prérequis
+
+L1.01 (PIB réel, taux annualisé) et L1.02 (PIB potentiel, écart de production). L0.07 (composition, règle de 72).
+
+## 3. Explication intuitive
+
+Un pays produit plus de deux façons : **plus de gens travaillent plus d'heures**, ou **chaque heure travaillée produit davantage**. La première source est limitée par la démographie. La seconde, la **productivité**, est celle qui, sur longtemps, fait monter le niveau de vie.
+
+La croissance de long terme est donc, en ordre de grandeur, la somme de deux choses :
+
+**croissance du potentiel ≈ croissance de la main-d'œuvre + croissance de la productivité.**
+
+Pourquoi cela intéresse un analyste de marchés ? Parce que cette croissance « de fond » est la **vitesse maximale sans tension** : une économie qui avance durablement plus vite que son potentiel consomme ses réserves de capacité, et la banque centrale peut le percevoir comme un risque d'inflation (module 2). Ce lien est une **hypothèse d'analyse**, pas une loi.
+
+## 4. Développement technique
+
+### 4.1 La productivité du travail
+
+**[Fait, S-BLS-01, résumé automatique]** Le BLS écrit que la productivité du travail, ou production par heure, est calculée en divisant un indice de la production réelle par un indice des heures travaillées par tous les travailleurs (salariés, indépendants, aides familiaux non rémunérés).
+
+**Formule.** Productivité = production réelle ÷ heures travaillées. En taux de croissance : (1 + g_productivité) = (1 + g_production) ÷ (1 + g_heures), donc g_productivité ≈ g_production − g_heures.
+
+**Exemple (SIMULATION).** Production +3,0 %, heures +1,0 % : productivité = 1,03 ÷ 1,01 − 1 = **+1,98 %** (approximation : 2,0 %).
+
+**Données réelles.** **[Fait, S-BLS-01, résumé automatique]** Dans le communiqué révisé du 3 septembre 2026 (secteur des entreprises non agricoles, deuxième trimestre 2026, taux annualisés corrigés des variations saisonnières) : production **+1,7 %**, heures travaillées **+0,3 %**, productivité du travail **+1,4 %** ; sur quatre trimestres, productivité **+2,2 %**. **[Calcul de l'auteur]** 1,017 ÷ 1,003 − 1 = **1,396 %**, soit 1,4 % : les chiffres publiés sont cohérents entre eux.
+
+### 4.2 Productivité, rémunération et coût unitaire du travail
+
+**[Définition]** Le **coût unitaire du travail** (CUT) est le coût du travail par unité produite. En taux de croissance : CUT ≈ rémunération horaire − productivité.
+
+**[Fait, S-BLS-01]** Au T2 2026 : rémunération horaire **+2,6 %**, productivité **+1,4 %**, coût unitaire du travail **+1,2 %** (révisé à la baisse depuis 1,3 %) ; **+1,4 %** sur quatre trimestres. **[Calcul de l'auteur]** 1,026 ÷ 1,014 − 1 = **1,18 %**, soit 1,2 %.
+
+**[Interprétation]** Si les salaires augmentent plus vite que la productivité, le coût unitaire du travail monte, ce qui peut alimenter l'inflation par les coûts (L1.05) ; si la productivité augmente autant que les salaires, les salaires peuvent monter sans pression sur les coûts. Cette lecture est une grille d'analyse, pas une prédiction.
+
+### 4.3 Le modèle de croissance de type Solow
+
+**[Fait, S-CBO-01, résumé automatique]** Dans une présentation de la CBO (A. Betz, 28 juillet 2026), la CBO estime le PIB potentiel (« maximum sustainable GDP ») avec un **modèle de croissance de type Solow** reposant sur trois grandeurs : la **main-d'œuvre potentielle**, le **flux de services du stock de capital** et la **productivité globale des facteurs (PGF) potentielle** dans le secteur des entreprises non agricoles. La **productivité du travail potentielle** est le rapport entre le PIB potentiel réel et la main-d'œuvre potentielle.
+
+**[Définition]** La **PGF** est la part de la croissance qui n'est pas expliquée par l'augmentation des quantités de travail et de capital : progrès technique, organisation, éducation, institutions… C'est un **résidu**, donc une mesure incertaine.
+
+**Décomposition simple.** Production ≈ PGF + (part du travail × croissance du travail) + (part du capital × croissance du capital). La part du capital est souvent de l'ordre du tiers, mais cette valeur n'a pas été lue dans les sources de la leçon.
+
+### 4.4 Les chiffres de la CBO
+
+**[Fait, S-CBO-01, résumé automatique]** Projection de février 2026, croissance annuelle moyenne 2026–2036 : PIB potentiel réel **1,9 %** ; main-d'œuvre potentielle **0,4 %** ; productivité du travail potentielle **1,5 %**. Dans le secteur des entreprises non agricoles : production potentielle **2,3 %** ; heures potentielles **0,5 %** ; services du capital **2,4 %** ; PGF potentielle **1,1 %**.
+
+**[Calcul de l'auteur]** 0,4 + 1,5 = 1,9 ✓. Pour le secteur non agricole, si production = PGF + (1 − α) × heures + α × capital, alors 2,3 = 1,1 + (1 − α) × 0,5 + α × 2,4, soit α ≈ **0,37**. Cette valeur est **déduite** des chiffres arrondis, non publiée par la CBO dans le résumé lu : c'est un ordre de grandeur cohérent avec « environ un tiers ».
+
+**Historique (moyennes annuelles).** **[Fait, S-CBO-01]**
+
+| Période | PIB potentiel réel | Main-d'œuvre potentielle | Productivité du travail potentielle |
+| --- | --- | --- | --- |
+| 1950–1973 | 4,0 % | 1,6 % | 2,4 % |
+| 1974–1981 | 3,1 % | 2,4 % | 0,7 % |
+| 1982–1990 | 3,1 % | 1,4 % | 1,7 % |
+| 1991–2001 | 3,4 % | 1,4 % | 2,0 % |
+| 2002–2007 | 2,4 % | 0,9 % | 1,4 % |
+| 2008–2025 | 2,0 % | 0,7 % | 1,3 % |
+| 1950–2025 | 3,1 % | 1,4 % | 1,7 % |
+
+**[Calcul de l'auteur]** Dans chaque ligne, main-d'œuvre + productivité ≈ PIB potentiel (par exemple 1950–1973 : 1,6 + 2,4 = 4,0 ; 1991–2001 : 1,4 + 2,0 = 3,4 ; 2002–2007 : 0,9 + 1,4 = 2,3 contre 2,4 publié, écart d'arrondi et de composition). La PGF non agricole : 1,4 % (1991–2001), 1,4 % (2002–2007), 1,0 % (2008–2025).
+
+**[Interprétation]** La baisse du PIB potentiel entre 1950–1973 (4,0 %) et 2008–2025 (2,0 %) combine une main-d'œuvre qui croît moins vite (de 1,6 % à 0,7 %) et une productivité qui progresse moins vite (de 2,4 % à 1,3 %). Les **causes** de ces évolutions ne sont pas dans la source lue ; la leçon n'en propose pas.
+
+### 4.5 L'effet des petits écarts de croissance
+
+La règle de 72 (L0.07) donne un ordre de grandeur du temps de doublement : 72 ÷ taux en %.
+
+- À 1,9 % par an : 72 ÷ 1,9 = **37,9 ans** (calcul exact : ln 2 ÷ ln 1,019 = 36,8 ans).
+- À 3,1 % par an : 72 ÷ 3,1 = **23,2 ans** (exact : 22,7 ans).
+
+Sur 20 ans, le niveau est multiplié par 1,019²⁰ = **1,457** à 1,9 % et par 1,031²⁰ = **1,842** à 3,1 % : **+26 % d'écart de niveau** (1,842 ÷ 1,457 − 1 = 26,4 %) pour un écart de croissance de 1,2 point par an. Les petits écarts de croissance durables produisent de grands écarts de niveau.
+
+### 4.6 Pourquoi la croissance potentielle intéresse les banques centrales
+
+**[Interprétation]** Une banque centrale cherche à ce que la demande ne dépasse pas durablement la capacité de production, sous peine de tensions sur les prix. Si le potentiel croît de 1,9 %, une croissance réelle persistante de 3 % peut absorber la marge disponible (écart de production, L1.02) et fait monter le risque d'inflation ; une croissance de 1 % persistante la laisse se creuser. Mais :
+
+- le **potentiel est estimé**, donc incertain ;
+- la productivité peut **accélérer ou ralentir** sans prévenir ;
+- la banque centrale regarde aussi l'inflation observée, les anticipations et l'emploi (modules 2 et 3).
+
+Le lien entre potentiel, **taux neutre** et niveau des taux est développé au module 2.
+
+## 5. Définitions essentielles
+
+- **Productivité du travail** : production réelle par heure travaillée.
+- **Productivité globale des facteurs (PGF)** : part de croissance non expliquée par travail et capital (résidu).
+- **Main-d'œuvre potentielle** : estimation de la main-d'œuvre à pleine utilisation.
+- **Modèle de Solow** : modèle de croissance fondé sur travail, capital et PGF.
+- **Coût unitaire du travail** : rémunération horaire corrigée de la productivité.
+- **Croissance potentielle** : croissance du PIB potentiel.
+
+## 6. Exemples chiffrés
+
+**A.** Production +3 %, heures +1 % : productivité +1,98 % (§4.1).
+**B.** T2 2026 : 1,7 % − 0,3 % ≈ 1,4 % ; 2,6 % − 1,4 % ≈ 1,2 % (§4.1–4.2).
+**C.** CBO : 0,4 + 1,5 = 1,9 % (§4.4).
+**D.** 1,9 % contre 3,1 % pendant 20 ans : niveaux ×1,457 et ×1,842 (§4.5).
+**E.** Part du capital implicite ≈ 0,37 (§4.4).
+
+### 6.5 Cas historique documenté — l'évolution de la croissance potentielle aux États-Unis (CBO)
+
+**[Fait, S-CBO-01, résumé automatique]** Selon le tableau de la CBO, le PIB potentiel a crû de 4,0 % par an en moyenne en 1950–1973, de 3,1 % en 1974–1981, de 3,4 % en 1991–2001 et de 2,0 % en 2008–2025. La productivité du travail potentielle est tombée à 0,7 % en 1974–1981 avant de remonter à 2,0 % en 1991–2001 puis de se replier à 1,3 % en 2008–2025.
+
+**Ce que la leçon n'a pas pu confirmer :** les causes de ces mouvements (le résumé ne les donne pas), la méthodologie d'estimation en détail et la révision éventuelle des chiffres. **[Interprétation]** Ce cas montre deux choses : la croissance de fond évolue lentement, et la productivité est volatile d'une période à l'autre. Il ne démontre pas que la tendance actuelle se prolongera.
+
+## 7. Application au Forex et à l'or
+
+- **Forex** : à long terme, une économie à productivité croissante peut attirer des capitaux et rendre la devise plus forte en termes réels (hypothèse classique, développée au module 4) ; mais cet effet est lent, diffus et dominé à court terme par les taux, les flux et les chocs. **Un écart de croissance potentielle ne dit pas quand une devise bougera.**
+- **Or** : pas de lien direct simple avec la croissance potentielle ; l'effet passe par les taux réels et le dollar (module 5).
+- **Méthode** : intégrer la croissance potentielle à l'évaluation du **niveau d'inflation et de taux compatible** avec la croissance, pour interpréter les décisions des banques centrales (module 2).
+- **Limite** : le potentiel est estimé et révisé ; ne bâtis jamais une conviction de court terme sur lui seul. **Une bonne analyse ne garantit pas une transaction gagnante.**
+
+## 8. Erreurs courantes
+
+- **Confondre croissance du PIB et croissance par habitant ou par heure.**
+- **Lire un trimestre de productivité comme une tendance.**
+- **Traiter la PGF comme une mesure directe** : c'est un résidu.
+- **Confondre niveau et croissance** (un pays riche peut croître lentement).
+- **Supposer que le potentiel est connu.**
+- **Additionner des taux annuels sans composer** sur de longues durées.
+- **Conclure d'un écart de croissance à un mouvement imminent d'une devise.**
+
+## 9. Limites de l'interprétation
+
+- Données du BLS et de la CBO lues par **résumé automatique**.
+- La part du capital et la formule de comptabilité de la croissance sont des **définitions de cours** et un calcul de l'auteur, non des valeurs publiées par la CBO dans le résumé lu.
+- Les causes des évolutions de productivité ne sont pas documentées ici.
+- Les projections de la CBO (février 2026) sont des **prévisions**, non des observations.
+- L'interprétation « le potentiel borne la politique monétaire » est une hypothèse d'analyse.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Productivité.** Production +2,5 %, heures travaillées +0,5 % sur un an (SIMULATION). (a) Croissance exacte de la productivité ? (b) Approximation ? (c) Si les heures baissaient de 1 % avec la même production, que deviendrait-elle ?
+
+<details>
+<summary>Correction 1</summary>
+
+(a) 1,025 ÷ 1,005 − 1 = **1,99 %**. (b) 2,5 − 0,5 = **2,0 %**. (c) 1,025 ÷ 0,99 − 1 = **3,54 %**.
+</details>
+
+**Exercice 2 — Coût unitaire du travail.** Rémunération horaire +4,0 %, productivité +1,5 %. (a) Coût unitaire du travail (exact) ? (b) Que se passe-t-il pour le coût unitaire si la productivité monte à +4,0 % ? (c) Pourquoi est-ce important pour l'inflation dans une grille d'analyse ?
+
+<details>
+<summary>Correction 2</summary>
+
+(a) 1,04 ÷ 1,015 − 1 = **2,46 %**. (b) 1,04 ÷ 1,04 − 1 = **0 %**. (c) Si les salaires montent plus vite que la productivité, le coût par unité produite augmente, ce qui peut se répercuter sur les prix ; avec une productivité égale aux salaires, la pression est nulle. C'est une grille, non une prédiction.
+</details>
+
+**Exercice 3 — Données réelles.** À partir du §4.1–4.2 : (a) Vérifie que 1,7 % de production et 0,3 % d'heures donnent environ 1,4 % de productivité. (b) Vérifie que 2,6 % de rémunération et 1,4 % de productivité donnent environ 1,2 % de coût unitaire. (c) Pourquoi les calculs exacts diffèrent-ils légèrement des chiffres arrondis publiés ?
+
+<details>
+<summary>Correction 3</summary>
+
+(a) 1,017 ÷ 1,003 − 1 = **1,396 %**. (b) 1,026 ÷ 1,014 − 1 = **1,183 %**. (c) Les chiffres publiés sont arrondis à une décimale et calculés à partir de données non arrondies.
+</details>
+
+**Exercice 4 — Décomposition.** Main-d'œuvre potentielle +0,4 %, productivité potentielle +1,5 %. (a) Croissance du PIB potentiel (approximation et exacte) ? (b) Si la main-d'œuvre était stable (0 %) et la productivité +1,5 % ? (c) Quel est l'effet pour la croissance potentielle du vieillissement démographique, toutes choses égales par ailleurs ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) Approximation : 0,4 + 1,5 = **1,9 %** ; exacte : 1,004 × 1,015 − 1 = **1,906 %**. (b) **1,5 %**. (c) Si la main-d'œuvre croît moins vite, le potentiel croît moins vite, sauf si la productivité compense.
+</details>
+
+**Exercice 5 — Niveaux sur 20 ans.** Deux pays démarrent au même niveau de production. L'un croît de 2,0 % par an, l'autre de 3,0 %. (a) Niveaux après 20 ans ? (b) Écart de niveau ? (c) Temps de doublement par la règle de 72 pour chacun ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) 1,02²⁰ = **1,486** ; 1,03²⁰ = **1,806**. (b) 1,806 ÷ 1,486 − 1 = **21,5 %**. (c) 72 ÷ 2 = **36 ans** ; 72 ÷ 3 = **24 ans**.
+</details>
+
+**Exercice 6 — Lire un tableau de la CBO.** À partir du tableau du §4.4 : (a) Quelle période a la productivité potentielle la plus basse, et la plus haute ? (b) Quel est l'écart de PIB potentiel entre 1950–1973 et 2008–2025 ? (c) Que ne dit pas la source quant aux causes de ces évolutions ?
+
+<details>
+<summary>Correction 6</summary>
+
+(a) La plus basse : 1974–1981 (**0,7 %**) ; la plus haute : 1950–1973 (**2,4 %**). (b) 4,0 − 2,0 = **2,0 points**. (c) La source lue ne donne pas les causes : on ne les affirme pas et on précise qu'elles ne sont pas documentées ici.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L1.03.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- **Productivité** = production réelle ÷ heures ; **croissance du potentiel ≈ croissance de la main-d'œuvre + croissance de la productivité**.
+- **CUT ≈ rémunération − productivité** : T2 2026, 2,6 % − 1,4 % ≈ 1,2 % (BLS).
+- Le modèle de type Solow de la CBO utilise **main-d'œuvre, capital, PGF** ; la PGF est un **résidu**.
+- CBO (février 2026) : potentiel 1,9 % = 0,4 % + 1,5 % pour 2026–2036 ; il était de 4,0 % en 1950–1973.
+- De petits écarts de croissance durables créent de grands écarts de niveau (+26 % en 20 ans pour 1,2 point).
+- La croissance potentielle est un **repère** pour la politique monétaire, non une règle ; elle est **estimée**.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer productivité et coût unitaire du travail (Exercices 1–3).
+- [ ] Décomposer le potentiel (Exercice 4).
+- [ ] Mesurer l'effet cumulé d'écarts de croissance (Exercice 5).
+- [ ] Lire un tableau sans lui prêter des causes absentes (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-BLS-01** — BLS, *Productivity and Costs, Second Quarter 2026, Revised* (3 septembre 2026) : https://www.bls.gov/news.release/archives/prod2_09032026.htm
+- **S-CBO-01** — CBO (A. Betz), présentation sur la productivité (fichier « 62564-NABE-Productivity-Growth.pdf »), séminaire de la NABE Foundation, 28 juillet 2026 : https://www.cbo.gov/system/files/2026-07/62564-NABE-Productivity-Growth.pdf
+
+**Définitions de cours non rattachées à une source officielle lue :** décomposition de la croissance, coût unitaire du travail en taux de croissance, part du capital (déduite). **Points non vérifiés :** causes des évolutions de productivité, méthode détaillée d'estimation, révisions ultérieures.

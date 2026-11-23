@@ -1,0 +1,178 @@
+{
+  "chapterId": "4.2",
+  "module": 4,
+  "title": "Quiz de chapitre 4.2 — Taux réels et balance des paiements (L4.03–L4.04)",
+  "passThreshold": 0.8,
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C4.2-Q1",
+      "type": "mcq",
+      "prompt": "Rendement nominal à 10 ans 4,96 % et rendement réel 2,64 % : quel point mort d'inflation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 2,64 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ 7,60 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ 4,96 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ 2,32 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "4,96 − 2,64 = 2,32 % : le point mort est l'écart entre nominal et réel (approximation de Fisher) ; il mélange anticipations et primes.",
+      "tags": [
+        "pointmort"
+      ]
+    },
+    {
+      "id": "C4.2-Q2",
+      "type": "mcq",
+      "prompt": "Réouverture du TIPS à 10 ans le 17 septembre 2026 : réel 2,653 %, nominal 4,95 %. Quel point mort ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 7,60 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ 2,30 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ 2,65 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ 1,30 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "4,95 − 2,653 = 2,297 ≈ 2,30 % ; la source est secondaire et cite le Trésor.",
+      "tags": [
+        "tips"
+      ]
+    },
+    {
+      "id": "C4.2-Q3",
+      "type": "mcq",
+      "prompt": "Zone euro, 12 mois : biens 290, services 153, revenus primaires 14, secondaires −207. Quel solde courant (Md€) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "290"
+        },
+        {
+          "id": "b",
+          "text": "457"
+        },
+        {
+          "id": "c",
+          "text": "−250"
+        },
+        {
+          "id": "d",
+          "text": "250"
+        }
+      ],
+      "correct": "d",
+      "explanation": "290 + 153 + 14 − 207 = 250 milliards d'euros, soit 1,5 % du PIB selon la BCE.",
+      "tags": [
+        "bop"
+      ]
+    },
+    {
+      "id": "C4.2-Q4",
+      "type": "mcq",
+      "prompt": "Flux de portefeuille bruts de la zone euro : 798 + 1 105. Quel rapport au solde courant de 250 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 4,2"
+        },
+        {
+          "id": "b",
+          "text": "≈ 0,13"
+        },
+        {
+          "id": "c",
+          "text": "≈ 7,6"
+        },
+        {
+          "id": "d",
+          "text": "≈ 1,0"
+        }
+      ],
+      "correct": "c",
+      "explanation": "1 903 ÷ 250 ≈ 7,6 : les flux financiers bruts dominent le solde courant pour le change.",
+      "tags": [
+        "flux"
+      ]
+    },
+    {
+      "id": "C4.2-Q5",
+      "type": "mcq",
+      "prompt": "Compte courant américain du T1 révisé : biens −250,9 ; services +92,1 ; primaires −15,8 ; secondaires −38,0. Solde ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−212,6"
+        },
+        {
+          "id": "b",
+          "text": "−297,6"
+        },
+        {
+          "id": "c",
+          "text": "+212,6"
+        },
+        {
+          "id": "d",
+          "text": "−158,3"
+        }
+      ],
+      "correct": "a",
+      "explanation": "−250,9 + 92,1 − 15,8 − 38,0 = −212,6 milliards de dollars.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "C4.2-Q6",
+      "type": "mcq",
+      "prompt": "Un déficit courant américain en hausse annonce-t-il une baisse du dollar ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui, toujours"
+        },
+        {
+          "id": "b",
+          "text": "Non : la relation n'est ni mécanique ni de court terme, le financement compte"
+        },
+        {
+          "id": "c",
+          "text": "Oui, dans les trois jours"
+        },
+        {
+          "id": "d",
+          "text": "Il annonce une hausse certaine"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le solde courant évolue lentement ; le dollar s'est renforcé en octobre 2026 malgré un déficit en hausse.",
+      "tags": [
+        "limite"
+      ]
+    }
+  ],
+  "revision": 1
+}

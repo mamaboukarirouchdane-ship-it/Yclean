@@ -1,0 +1,233 @@
+{
+  "lessonId": "L6.04",
+  "title": "Quiz — Régimes de marché",
+  "passThreshold": 0.8,
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L6.04-Q1",
+      "type": "mcq",
+      "prompt": "Qu'est-ce qu'un régime de marché au sens de la leçon ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un signal d'achat"
+        },
+        {
+          "id": "b",
+          "text": "Une tendance de quelques séances"
+        },
+        {
+          "id": "c",
+          "text": "Un environnement durable défini par des règles mesurables écrites à l'avance"
+        },
+        {
+          "id": "d",
+          "text": "Une décision de la Fed"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Un régime décrit des conditions sur une période suffisante ; il ne déclenche jamais une transaction.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L6.04-Q2",
+      "type": "mcq",
+      "prompt": "Pourquoi autoriser un état « indéterminé ou mixte » ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pour ne pas forcer une précision injustifiée quand les signaux sont sous les seuils ou contradictoires"
+        },
+        {
+          "id": "b",
+          "text": "Pour éviter de calculer"
+        },
+        {
+          "id": "c",
+          "text": "Parce que la Fed l'exige"
+        },
+        {
+          "id": "d",
+          "text": "Pour augmenter les effectifs des régimes"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Forcer chaque période dans une catégorie unique donnerait une impression de précision que les données ne permettent pas.",
+      "tags": [
+        "mixte"
+      ]
+    },
+    {
+      "id": "L6.04-Q3",
+      "type": "mcq",
+      "prompt": "Distribution de référence fictive de 20 variations : quartile supérieur ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+20 pb"
+        },
+        {
+          "id": "b",
+          "text": "+10 pb"
+        },
+        {
+          "id": "c",
+          "text": "+5 pb"
+        },
+        {
+          "id": "d",
+          "text": "+7,25 pb"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Position 0,75 × 19 = 14,25, entre 7 et 8 : 7 + 0,25 × 1 = 7,25.",
+      "tags": [
+        "quartile"
+      ]
+    },
+    {
+      "id": "L6.04-Q4",
+      "type": "mcq",
+      "prompt": "Pourquoi les seuils doivent-ils venir d'une période de référence antérieure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que les percentiles sont des lois"
+        },
+        {
+          "id": "b",
+          "text": "Pour éviter d'utiliser l'information future et de choisir des seuils qui expliquent le passé"
+        },
+        {
+          "id": "c",
+          "text": "Pour réduire le nombre de régimes"
+        },
+        {
+          "id": "d",
+          "text": "Pour que le dollar soit plus fort"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Un seuil choisi après avoir vu les rendements ajuste la règle aux résultats : c'est un biais rétrospectif.",
+      "tags": [
+        "seuil"
+      ]
+    },
+    {
+      "id": "L6.04-Q5",
+      "type": "mcq",
+      "prompt": "Régime B fictif : +3,0 ; +2,2 ; +1,1 ; +2,6 %. Moyenne ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+1,1 %"
+        },
+        {
+          "id": "b",
+          "text": "+2,6 %"
+        },
+        {
+          "id": "c",
+          "text": "+8,9 %"
+        },
+        {
+          "id": "d",
+          "text": "+2,225 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La somme vaut 8,9 ; divisée par 4, la moyenne est +2,225 %. Résultat descriptif sur données fictives.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L6.04-Q6",
+      "type": "mcq",
+      "prompt": "Les régimes A et B fictifs « confirment » une relation inverse entre taux réels et or. Que peut-on en conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que l'or est toujours inverse"
+        },
+        {
+          "id": "b",
+          "text": "Que la relation est prouvée"
+        },
+        {
+          "id": "c",
+          "text": "Rien d'indépendant : la classification utilise les mêmes variables et les données contiennent cette relation"
+        },
+        {
+          "id": "d",
+          "text": "Que le dollar est inutile"
+        }
+      ],
+      "correct": "c",
+      "explanation": "C'est de la circularité : concordance attendue par construction, sans preuve de la pertinence de la règle.",
+      "tags": [
+        "circularite"
+      ]
+    },
+    {
+      "id": "L6.04-Q7",
+      "type": "mcq",
+      "prompt": "Taux réel +3 pb (22 → 28/10) et or −2,48 % (21 → 28/10) : « sensibilité » de −0,83 %/pb. Quelle est la bonne lecture ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sans valeur : dates décalées, deux points, sources différentes, autres facteurs non contrôlés"
+        },
+        {
+          "id": "b",
+          "text": "Une loi du marché"
+        },
+        {
+          "id": "c",
+          "text": "Une preuve de causalité"
+        },
+        {
+          "id": "d",
+          "text": "Un signal de vente"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Un calcul par unité exige des fenêtres alignées et un échantillon ; ici l'alignement manque.",
+      "tags": [
+        "sensibilite"
+      ]
+    },
+    {
+      "id": "L6.04-Q8",
+      "type": "mcq",
+      "prompt": "Dans le diagnostic réel du 31/10/2026, pourquoi le régime du dollar est-il « indéterminé » ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que le dollar ne bouge jamais"
+        },
+        {
+          "id": "b",
+          "text": "La fenêtre de 20 séances n'est pas disponible (cinq jours lus seulement)"
+        },
+        {
+          "id": "c",
+          "text": "Parce que l'or est stable"
+        },
+        {
+          "id": "d",
+          "text": "Parce que la Fed l'a décidé"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Seuls cinq jours de l'indice large ont été lus, avec une variation quasi nulle ; la règle de 20 séances ne peut pas être appliquée.",
+      "tags": [
+        "diagnostic"
+      ]
+    }
+  ],
+  "revision": 1
+}

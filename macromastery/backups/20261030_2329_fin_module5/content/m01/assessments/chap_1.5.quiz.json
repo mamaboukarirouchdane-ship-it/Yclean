@@ -1,0 +1,178 @@
+{
+  "chapterId": "1.5",
+  "module": 1,
+  "title": "Quiz de chapitre 1.5 — Budget, dette et synthèse (L1.11–L1.12)",
+  "passThreshold": 0.8,
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C1.5-Q1",
+      "type": "mcq",
+      "prompt": "Quelle est la différence entre déficit et dette ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aucune"
+        },
+        {
+          "id": "b",
+          "text": "Le déficit est un stock ; la dette un flux"
+        },
+        {
+          "id": "c",
+          "text": "Le déficit est un flux annuel ; la dette est un stock"
+        },
+        {
+          "id": "d",
+          "text": "Le déficit est toujours nul"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le déficit s'ajoute chaque année au stock de dette.",
+      "tags": [
+        "flux-stock"
+      ]
+    },
+    {
+      "id": "C1.5-Q2",
+      "type": "mcq",
+      "prompt": "CBO, exercice 2026 : déficit 1 993 Md$ et charge d'intérêts 1 143 Md$. Déficit primaire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "850 Md$"
+        },
+        {
+          "id": "b",
+          "text": "3 136 Md$"
+        },
+        {
+          "id": "c",
+          "text": "1 143 Md$"
+        },
+        {
+          "id": "d",
+          "text": "1 993 Md$"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Déficit primaire = déficit − intérêts = 850 Md$.",
+      "tags": [
+        "primaire"
+      ]
+    },
+    {
+      "id": "C1.5-Q3",
+      "type": "mcq",
+      "prompt": "Si r > g et le solde primaire est nul, la dette en part du PIB :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Baisse"
+        },
+        {
+          "id": "b",
+          "text": "Tend à augmenter"
+        },
+        {
+          "id": "c",
+          "text": "Reste exactement identique"
+        },
+        {
+          "id": "d",
+          "text": "Disparaît"
+        }
+      ],
+      "correct": "b",
+      "explanation": "d(t+1) = d × (1 + r) ÷ (1 + g) − p : avec r > g et p = 0, d augmente.",
+      "tags": [
+        "dynamique"
+      ]
+    },
+    {
+      "id": "C1.5-Q4",
+      "type": "mcq",
+      "prompt": "Intérêts 1 143 Md$ et recettes 5 403 Md$ : part des recettes ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ 50 %"
+        },
+        {
+          "id": "b",
+          "text": "Environ 2 %"
+        },
+        {
+          "id": "c",
+          "text": "Environ 21 %"
+        },
+        {
+          "id": "d",
+          "text": "Environ 100 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "1 143 ÷ 5 403 = 21,2 %.",
+      "tags": [
+        "interets"
+      ]
+    },
+    {
+      "id": "C1.5-Q5",
+      "type": "mcq",
+      "prompt": "Que doit contenir la fiche d'un indicateur d'un tableau de bord ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Valeur, période, date de publication, fréquence, source, nature et limite"
+        },
+        {
+          "id": "b",
+          "text": "La seule valeur"
+        },
+        {
+          "id": "c",
+          "text": "Un feu vert ou rouge"
+        },
+        {
+          "id": "d",
+          "text": "Un prix cible"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Sans période, source et limite, le chiffre n'est pas vérifiable.",
+      "tags": [
+        "tableau-de-bord"
+      ]
+    },
+    {
+      "id": "C1.5-Q6",
+      "type": "mcq",
+      "prompt": "Salaire horaire +3,0 % et CPI +3,7 % sur 12 mois : salaire réel approximatif ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+0,7 %"
+        },
+        {
+          "id": "b",
+          "text": "+6,7 %"
+        },
+        {
+          "id": "c",
+          "text": "−3,7 %"
+        },
+        {
+          "id": "d",
+          "text": "−0,7 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "1,030 ÷ 1,037 − 1 = −0,675 %.",
+      "tags": [
+        "salaire-reel"
+      ]
+    }
+  ],
+  "revision": 1
+}

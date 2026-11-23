@@ -1,0 +1,238 @@
+{
+  "lessonId": "L0.03",
+  "title": "Quiz — L'anatomie du marché des changes (Forex)",
+  "passThreshold": 0.8,
+  "note": "Chiffres des questions de calcul : SIMULATION. Les parts de la BRI sont des faits (avril 2025, publication de décembre 2025) ; le pourcentage du dollar est un calcul de l'auteur sur les montants publiés. Révision 3 : option c de Q5 précisée (outright forwards). Révision 4 : Q5 en texte brut, sans Markdown, la réponse correcte restant inchangée.",
+  "questions": [
+    {
+      "id": "L0.03-Q1",
+      "type": "mcq",
+      "prompt": "EUR/USD = 1,0800. Que signifie cette cotation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 dollar = 1,0800 euro"
+        },
+        {
+          "id": "b",
+          "text": "L'euro a gagné 1,08 % sur la journée"
+        },
+        {
+          "id": "c",
+          "text": "1 euro = 1,0800 dollar"
+        },
+        {
+          "id": "d",
+          "text": "Il faut 1,08 euro pour acheter 100 dollars"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La paire s'écrit BASE/COTATION : le prix indique combien d'unités de la devise de cotation (USD) sont nécessaires pour 1 unité de la devise de base (EUR).",
+      "tags": [
+        "cotation"
+      ]
+    },
+    {
+      "id": "L0.03-Q2",
+      "type": "mcq",
+      "prompt": "Quelle est la valeur d'un pip sur EUR/USD pour une position de 100 000 EUR ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 USD"
+        },
+        {
+          "id": "b",
+          "text": "10 USD"
+        },
+        {
+          "id": "c",
+          "text": "100 USD"
+        },
+        {
+          "id": "d",
+          "text": "1 000 USD"
+        }
+      ],
+      "correct": "b",
+      "explanation": "1 pip = 0,0001. Sur 100 000 EUR : 100 000 × 0,0001 = 10 USD.",
+      "tags": [
+        "pip"
+      ]
+    },
+    {
+      "id": "L0.03-Q3",
+      "type": "mcq",
+      "prompt": "USD/JPY passe de 150,00 à 150,50. Combien de pips cela représente-t-il ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "5 pips"
+        },
+        {
+          "id": "b",
+          "text": "50 pips"
+        },
+        {
+          "id": "c",
+          "text": "500 pips"
+        },
+        {
+          "id": "d",
+          "text": "0,5 pip"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Pour les paires avec le yen, 1 pip = 0,01. La variation est de 0,50, soit 0,50 / 0,01 = 50 pips.",
+      "tags": [
+        "pip",
+        "yen"
+      ]
+    },
+    {
+      "id": "L0.03-Q4",
+      "type": "mcq",
+      "prompt": "EUR/USD = 1,0800 et USD/JPY = 150,00 (simulation). Quel est EUR/JPY ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "138,89"
+        },
+        {
+          "id": "b",
+          "text": "148,92"
+        },
+        {
+          "id": "c",
+          "text": "151,08"
+        },
+        {
+          "id": "d",
+          "text": "162,00"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La devise commune (USD) est en cotation dans EUR/USD et en base dans USD/JPY : on multiplie. 1,0800 × 150,00 = 162,00. Les unités se simplifient : (USD par EUR) × (JPY par USD) = JPY par EUR.",
+      "tags": [
+        "taux-croisé"
+      ]
+    },
+    {
+      "id": "L0.03-Q5",
+      "type": "mcq",
+      "prompt": "Selon la BRI (avril 2025, publication de décembre 2025), quel instrument pèse la plus grande part du volume quotidien de change de gré à gré ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les swaps de change (42 %)"
+        },
+        {
+          "id": "b",
+          "text": "Le comptant (31 %)"
+        },
+        {
+          "id": "c",
+          "text": "Les contrats à terme secs (outright forwards, 18 %)"
+        },
+        {
+          "id": "d",
+          "text": "Les options (7 %)"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Les swaps de change représentent 42 % du volume (environ 4 015 milliards de dollars sur 9 510), devant le comptant (31 %). Beaucoup de débutants supposent le contraire.",
+      "tags": [
+        "BRI",
+        "instruments"
+      ]
+    },
+    {
+      "id": "L0.03-Q6",
+      "type": "mcq",
+      "prompt": "Pourquoi les parts des devises dans l'enquête de la BRI totalisent-elles 200 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que le volume a doublé depuis 2022"
+        },
+        {
+          "id": "b",
+          "text": "Parce que l'enquête compte les ordres annulés"
+        },
+        {
+          "id": "c",
+          "text": "Parce que seul le dollar est compté deux fois"
+        },
+        {
+          "id": "d",
+          "text": "Parce que chaque transaction implique deux devises et est donc comptée deux fois"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Chaque transaction a deux côtés (une devise achetée, une devise vendue). La BRI précise que la somme des montants par devise est égale à deux fois le total publié : chaque devise est comptée une fois par transaction où elle figure, d'où un total de 200 %.",
+      "tags": [
+        "BRI",
+        "devises"
+      ]
+    },
+    {
+      "id": "L0.03-Q7",
+      "type": "mcq",
+      "prompt": "Comment lire correctement la part d'environ 89 % attribuée au dollar dans l'enquête de la BRI sur avril 2025 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le dollar figure d'un côté d'environ 89 % des transactions de change"
+        },
+        {
+          "id": "b",
+          "text": "Le dollar représente environ 89 % de la valeur de toutes les monnaies"
+        },
+        {
+          "id": "c",
+          "text": "Le dollar a progressé d'environ 89 % depuis 2022"
+        },
+        {
+          "id": "d",
+          "text": "Environ 89 % des échanges se font entre banques centrales"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La part mesure la fréquence d'apparition de la devise dans les transactions, sur une base de 200 %. Elle ne mesure ni une valeur, ni une performance. Le pourcentage (environ 89,1 %) est un calcul de l'auteur à partir des montants publiés par la BRI en décembre 2025.",
+      "tags": [
+        "BRI",
+        "lecture"
+      ]
+    },
+    {
+      "id": "L0.03-Q8",
+      "type": "mcq",
+      "prompt": "Que signifie XAU/USD = 2 000 (valeur fictive) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un dollar vaut 2 000 onces d'or"
+        },
+        {
+          "id": "b",
+          "text": "L'or a gagné 2 000 points"
+        },
+        {
+          "id": "c",
+          "text": "Une once d'or vaut 2 000 dollars"
+        },
+        {
+          "id": "d",
+          "text": "L'or est couvert par l'enquête de la BRI sur le change"
+        }
+      ],
+      "correct": "c",
+      "explanation": "XAU/USD suit la convention BASE/COTATION : prix d'une once d'or exprimé en dollars. L'enquête de la BRI utilisée dans cette leçon ne couvre pas l'or.",
+      "tags": [
+        "or",
+        "cotation"
+      ]
+    }
+  ],
+  "revision": 4
+}

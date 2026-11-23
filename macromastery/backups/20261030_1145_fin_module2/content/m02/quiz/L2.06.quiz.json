@@ -1,0 +1,234 @@
+{
+  "lessonId": "L2.06",
+  "title": "Quiz — Taux neutre et règle de Taylor",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : Fed (rapport de juillet 2026), Fed de New York (r-star), Bernanke (2010), résumés automatiques.",
+  "questions": [
+    {
+      "id": "L2.06-Q1",
+      "type": "mcq",
+      "prompt": "Comment la Fed de New York définit-elle r-star dans ses modèles ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le taux d'inflation visé"
+        },
+        {
+          "id": "b",
+          "text": "Le taux d'escompte"
+        },
+        {
+          "id": "c",
+          "text": "Le taux d'intérêt réel à court terme attendu lorsque l'économie est à pleine puissance, avec une inflation stable"
+        },
+        {
+          "id": "d",
+          "text": "Le rendement de l'or"
+        }
+      ],
+      "correct": "c",
+      "explanation": "r* est un taux réel non observé, estimé par des modèles et révisé ; la page précise que ces estimations ne sont pas des prévisions officielles.",
+      "tags": [
+        "rstar"
+      ]
+    },
+    {
+      "id": "L2.06-Q2",
+      "type": "mcq",
+      "prompt": "Dans la règle de Taylor (1993) utilisée par la Fed, quelle est la formule de R ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "R = r* + π + 0,5 (π − π*) + (u* − u)"
+        },
+        {
+          "id": "b",
+          "text": "R = π − r*"
+        },
+        {
+          "id": "c",
+          "text": "R = r* × π"
+        },
+        {
+          "id": "d",
+          "text": "R = u − u*"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La règle part du taux neutre, ajoute l'inflation, puis corrige selon l'écart d'inflation (0,5) et l'écart de chômage (1).",
+      "tags": [
+        "taylor"
+      ]
+    },
+    {
+      "id": "L2.06-Q3",
+      "type": "mcq",
+      "prompt": "Quelle est la différence entre la règle d'approche équilibrée et la règle de Taylor (1993) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle impose un taux fixe"
+        },
+        {
+          "id": "b",
+          "text": "Elle ignore l'inflation"
+        },
+        {
+          "id": "c",
+          "text": "Elle utilise l'or"
+        },
+        {
+          "id": "d",
+          "text": "Le coefficient de l'écart de chômage passe de 1 à 2"
+        }
+      ],
+      "correct": "d",
+      "explanation": "L'approche équilibrée donne un poids double (2) à l'écart de chômage u* − u.",
+      "tags": [
+        "rules"
+      ]
+    },
+    {
+      "id": "L2.06-Q4",
+      "type": "mcq",
+      "prompt": "Quelle règle n'utilise pas r* ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La règle de Taylor (1993)"
+        },
+        {
+          "id": "b",
+          "text": "La règle en différence première"
+        },
+        {
+          "id": "c",
+          "text": "L'approche équilibrée"
+        },
+        {
+          "id": "d",
+          "text": "Aucune"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La règle en différence première modifie le taux précédent selon l'inflation et la variation du chômage, sans r*.",
+      "tags": [
+        "differences"
+      ]
+    },
+    {
+      "id": "L2.06-Q5",
+      "type": "mcq",
+      "prompt": "Avec r* = 1,0 %, π = 3,0 %, π* = 2 % et un écart de chômage nul, la règle de Taylor donne :",
+      "options": [
+        {
+          "id": "a",
+          "text": "1,0 %"
+        },
+        {
+          "id": "b",
+          "text": "3,0 %"
+        },
+        {
+          "id": "c",
+          "text": "5,5 %"
+        },
+        {
+          "id": "d",
+          "text": "4,5 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Calcul : 1,0 + 3,0 + 0,5 × (3,0 − 2) = 4,5 % avec un écart de chômage nul.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L2.06-Q6",
+      "type": "mcq",
+      "prompt": "Taux en vigueur 3,875 %, PCE de base 3,0 %, taux réel neutre implicite 1,2 %. Le taux réel ex post est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Au-dessus du neutre de 0,325 point"
+        },
+        {
+          "id": "b",
+          "text": "Égal au neutre"
+        },
+        {
+          "id": "c",
+          "text": "Sous le neutre de 0,325 point"
+        },
+        {
+          "id": "d",
+          "text": "Négatif de 3 points"
+        }
+      ],
+      "correct": "c",
+      "explanation": "3,875 − 3,0 = 0,875 ; 0,875 − 1,2 = −0,325 : le taux réel est sous le neutre implicite, alors que la comparaison nominale (3,875 contre 3,2) donne le signe inverse.",
+      "tags": [
+        "nominal-reel"
+      ]
+    },
+    {
+      "id": "L2.06-Q7",
+      "type": "mcq",
+      "prompt": "Que conclut le rapport de politique monétaire de juillet 2026 sur l'usage d'une seule règle ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Qu'il est indésirable, pour l'instant, que le FOMC adhère strictement aux prescriptions d'une seule règle"
+        },
+        {
+          "id": "b",
+          "text": "Qu'il faut suivre strictement une règle"
+        },
+        {
+          "id": "c",
+          "text": "Que les règles sont interdites"
+        },
+        {
+          "id": "d",
+          "text": "Que le Taylor est obligatoire"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Les règles servent de repères ; elles ne peuvent pas capter toutes les considérations d'une politique appropriée.",
+      "tags": [
+        "fed"
+      ]
+    },
+    {
+      "id": "L2.06-Q8",
+      "type": "mcq",
+      "prompt": "Selon Bernanke (2010), pourquoi le verdict de la règle de Taylor sur 2002-2006 dépend-il des hypothèses ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que la règle ne dépend d'aucune donnée"
+        },
+        {
+          "id": "b",
+          "text": "Parce que l'inflation courante ou prévue, la mesure de l'écart en temps réel et le choix de l'indice changent la prescription"
+        },
+        {
+          "id": "c",
+          "text": "Parce que la Fed ne publie rien"
+        },
+        {
+          "id": "d",
+          "text": "Parce que le taux n'a pas varié"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Avec l'inflation courante, le taux observé était en moyenne environ 200 pb sous la prescription ; avec l'inflation prévue, la trajectoire prescrite est proche de l'observée.",
+      "tags": [
+        "bernanke",
+        "cas"
+      ]
+    }
+  ],
+  "revision": 1
+}

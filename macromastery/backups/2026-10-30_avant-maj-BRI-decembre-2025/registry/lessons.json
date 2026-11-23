@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "updated": "2026-10-29",
+  "note": "États : planned, written, sourced, assessed, integrated, tested, validated. 'true' = réellement fait et vérifié ; 'false' = pas encore fait. 'assessed' = quiz écrit et validé par script (structure + réponses recalculées), pas encore passé par l'apprenant. 'integrated' = intégrée au site (pas de site à ce stade). 'tested' = testée dans l'interface. 'validated' = validée par l'utilisateur.",
+  "lessons": [
+    {
+      "id": "L0.01",
+      "module": 0,
+      "title": "Les marchés financiers et leur rôle",
+      "duration_hours": 3.0,
+      "files": [
+        "content/m00/L0.01.mdx",
+        "content/m00/quiz/L0.01.quiz.json"
+      ],
+      "sources": [
+        "S-ECB-01",
+        "S-SEC-01",
+        "S-BIS-01"
+      ],
+      "states": {
+        "planned": true,
+        "written": true,
+        "sourced": true,
+        "assessed": true,
+        "integrated": false,
+        "tested": false,
+        "validated": true
+      },
+      "open_points": [
+        "Définitions de cours non sourcées : marché primaire/secondaire, familles de marchés, profondeur, slippage, forward/future/swap.",
+        "Mode de négociation par instrument (section 4.4) : connaissance générale non sourcée.",
+        "Numéros de page du rapport SEC non confirmés (non cités).",
+        "Terminologie « contrat à terme / forward / future » à harmoniser avec L0.02 et L0.03 (non modifiées).",
+        "Tableau BCE : valeurs (six montants et total 34 395) vérifiées dans le contenu officiel accessible de la BCE (vérification indépendante rapportée par l'utilisateur, 29/10/2026) ; consultation visuelle du tableau original NON réalisée ; somme des six montants = 34 396 contre total publié 34 395 ; explication par les arrondis probable mais non formellement confirmée."
+      ],
+      "revision": 3,
+      "recommended_status": "validée par l'utilisateur le 30/10/2026 ; points ouverts conservés (consultation visuelle du tableau BCE non réalisée, définitions non sourcées, terminologie forward/future)",
+      "validated_by_user": "2026-10-30 (validation globale demandée par l'utilisateur)"
+    },
+    {
+      "id": "L0.02",
+      "module": 0,
+      "title": "Les acteurs des marchés et leurs motivations",
+      "duration_hours": 2.5,
+      "files": [
+        "content/m00/L0.02.mdx",
+        "content/m00/quiz/L0.02.quiz.json"
+      ],
+      "sources": [
+        "S-BIS-02",
+        "S-FXC-01",
+        "S-CFTC-01",
+        "S-CFTC-02",
+        "S-CFTC-03",
+        "S-UST-01",
+        "S-CLE-01"
+      ],
+      "states": {
+        "planned": true,
+        "written": true,
+        "sourced": true,
+        "assessed": true,
+        "integrated": false,
+        "tested": false,
+        "validated": true
+      },
+      "open_points": [
+        "Parts BRI par contrepartie = 101 % : explication par les arrondis prudente, non confirmée par une note méthodologique ; la page ne l'explique pas.",
+        "Écart 9,6 − (4,4 + 4,8) = 0,4 : estimation calculée sur montants arrondis, compatible avec les clients non financiers (≈ 5 % × 9,6 ≈ 0,48) ; aucun montant publié pour cette catégorie ; base (net-net) du détail par contrepartie non explicitée.",
+        "Quiz L0.02 révisé (10 questions, seuil 8/10) : Q6 est volatile (calendrier traditionnel de la CFTC) et doit être actualisée quand l'application du calendrier à deux publications hebdomadaires annoncé le 27/10/2026 sera officiellement confirmée (aucune date d'application confirmée au 30/10/2026).",
+        "CFTC : calendrier traditionnel (mardi → vendredi) décrit par la page officielle le 29/10/2026 ; passage à deux publications hebdomadaires annoncé le 27/10/2026 (plan, sans date de début) ; pas de preuve officielle qu'il soit en vigueur ; page « Release Schedule » non lue. À revérifier avant usage.",
+        "Contenu détaillé des 55 principes du FX Global Code non lu.",
+        "Date exacte de l'article du Fed de Cleveland non confirmée ; formule « compte du Trésor » pour l'ESF et « Congrès et administration Roosevelt » non retrouvées mot pour mot.",
+        "Terminologie « contrat à terme / forward / future » à harmoniser avec L0.01.",
+        "Quiz L0.02 : aucune relecture indépendante ni test auprès d'un débutant ; spéculation, allocation et besoin de transaction ne sont pas évalués directement (couverts par l'Exercice 1)."
+      ],
+      "revision": 2,
+      "recommended_status": "validée par l'utilisateur le 30/10/2026 ; points ouverts conservés (Q6 à actualiser, pas encore intégrée ni testée dans une interface)",
+      "quiz_revision": 2,
+      "quiz_questions": 10,
+      "quiz_pass_rule": "8 bonnes réponses sur 10 (0,8 × 10)",
+      "validated_by_user": "2026-10-30 (révision 2 de la leçon et révision 2 du quiz, 10 questions, seuil 8/10)"
+    },
+    {
+      "id": "L0.03",
+      "module": 0,
+      "title": "L'anatomie du marché des changes (Forex)",
+      "duration_hours": 3.0,
+      "files": [
+        "content/m00/L0.03.mdx",
+        "content/m00/quiz/L0.03.quiz.json"
+      ],
+      "sources": [
+        "S-BIS-01",
+        "S-BIS-02"
+      ],
+      "states": {
+        "planned": true,
+        "written": true,
+        "sourced": true,
+        "assessed": true,
+        "integrated": false,
+        "tested": false,
+        "validated": true
+      },
+      "open_points": [
+        "Définitions de pip, taux croisé, forward, swap, option, XAU : définitions de cours, non sourcées.",
+        "Place de l'EUR/USD parmi les paires non lue.",
+        "Horaires du marché non traités."
+      ],
+      "validated_by_user": "2026-10-30 (validation globale demandée par l'utilisateur)",
+      "recommended_status": "validée par l'utilisateur le 30/10/2026 sans audit détaillé équivalent à celui de L0.01 et L0.02 ; points ouverts conservés"
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+---
+id: L7.06
+module: 7
+order: 6
+title: "Horizons de flux : lire dans le temps des flux qui ne mesurent pas la même chose — et décider de ne pas conclure quand les horizons divergent"
+title_initial: "Horizons de flux"
+level: "avancé"
+duration_hours: 2.5
+prerequisites: ["L7.01", "L7.02", "L7.04", "L7.05", "L5.06", "L5.07"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L7.06.quiz.json"
+sources: ["S-WGC-21", "S-WGC-06", "S-WGC-07", "S-WGC-08", "S-WGC-09", "S-WGC-04", "S-WGC-10", "S-WGC-11", "S-WGC-16", "S-WGC-17", "S-WGC-18", "S-WGC-19", "S-WGC-20", "S-CFTC-01", "S-CFTC-03", "S-CFTC-08", "S-CFTC-13", "S-IAU-01"]
+---
+
+# L7.06 — Horizons de flux
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée, avec sa date ; **[Réemploi]** = donnée déjà lue dans une leçon précédente (L5.06, L5.07, L7.02, L7.04), **non une nouvelle observation** ; **[Calcul de l'auteur]** ; **[Reconstitué]** ; **[Définition]** ; **[Interprétation]** ; **[Hypothèse]** ; **[SIMULATION]** = données fictives. **Nouvelle lecture de cette leçon** : le communiqué du World Gold Council sur le deuxième trimestre 2026 (S-WGC-21). Tout le reste est réemploi, avec sa provenance. **Les horizons (très court, court, moyen, long) sont des conventions pédagogiques, pas des normes.** **Aucune donnée journalière de flux n'a été lue.** **Une bonne analyse fondamentale ne garantit pas une transaction gagnante ; aucune configuration d'horizons n'est un signal d'achat ou de vente.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. distinguer **horizon d'analyse**, **fréquence de publication** et **délai de publication** ;
+2. documenter, pour cinq familles de données, **ce qui est mesuré**, la fréquence, le délai, les révisions, les limites et l'horizon le plus utile ;
+3. refuser d'additionner ou d'assimiler des **stocks, des positions sur contrats, des achats et des flux financiers** ;
+4. distinguer un **mouvement temporaire** d'une **tendance structurelle** à l'aide de critères écrits d'avance ;
+5. analyser quatre scénarios d'horizons (dont un à données contradictoires) en expliquant pourquoi **aucun n'est un signal automatique** ;
+6. produire une lecture qui sépare **ce que les données montrent, ce qu'elles suggèrent et ce qu'elles ne permettent pas de conclure**.
+
+## 2. Prérequis
+
+- Banques centrales (L5.06), ETF (L5.07) ; fiche de positionnement et chronologie (L7.01) ; COT en série et notion d'extrême (L7.02) ; flux d'ETF et décomposition (L7.04) ; calendrier et effets de clôture (L7.05).
+- **Non repris ici** : mécaniques de création/rachat, lecture d'une ligne COT, décomposition flux/valorisation, calendrier des contrats. On les **mobilise**, on ne les réexplique pas.
+
+## 3. Explication intuitive
+
+Imagine quatre personnes qui regardent le même marché : l'une surveille l'heure, une autre la semaine, une troisième le trimestre, la dernière l'année. Chacune a raison dans son horizon, et elles peuvent donner des conclusions opposées. Un afflux d'ETF ce mois-ci, un positionnement spéculatif en repli cette semaine, des achats officiels élevés depuis un an : ces trois faits peuvent coexister sans que l'un contredise l'autre, parce qu'ils décrivent des **acteurs différents, sur des durées différentes, avec des instruments différents**. Le piège est de les additionner dans un seul « flux haussier ». L'objectif est d'apprendre à **les ranger dans le temps** avant de les comparer.
+
+## 4. Développement technique
+
+### 4.1 Trois horloges à ne pas confondre
+
+| Horloge | Question | Exemple |
+|---|---|---|
+| **Horizon d'analyse** | Sur quelle durée l'information est-elle censée compter pour la décision ? | « Le mouvement récent se maintient-il ? » (1 à 4 semaines) |
+| **Fréquence de publication** | À quel rythme la donnée est-elle produite ? | COT hebdomadaire, flux d'ETF mensuels, banques centrales trimestrielles |
+| **Délai de publication** | Combien de temps après la **date de référence** la donnée est-elle disponible ? | COT : 3 jours ; flux d'ETF : 4 à 9 jours ; demande trimestrielle : ≈ 30 jours |
+
+**[Définition de cours]** Classification opérationnelle (conventions pédagogiques) :
+
+| Horizon | Période indicative | Question principale |
+|---|---|---|
+| Très court terme | intraday à 5 jours | Que se passe-t-il actuellement ? |
+| Court terme | 1 à 4 semaines | Le mouvement récent se maintient-il ? |
+| Moyen terme | 1 à 3 mois | Observe-t-on une évolution persistante ? |
+| Long terme | 6 à 12 mois et plus | Existe-t-il une tendance structurelle ? |
+
+**Pourquoi un horizon n'est pas une fréquence.** Une donnée **mensuelle** (flux d'ETF d'un mois) peut servir une lecture de **moyen terme** (somme sur trois mois) ou de **court terme** (le dernier mois seul) ; une donnée **hebdomadaire** (COT) peut servir une lecture de court terme (la dernière semaine) ou de moyen terme (huit semaines). Une donnée **tardive** (publiée 30 jours après la fin du trimestre) n'est pas « de long terme » pour autant : elle décrit une période passée avec retard. **Le délai décide de ce que la donnée peut dire sur le présent ; la fréquence limite la finesse ; l'horizon est le choix du lecteur.**
+
+### 4.2 Fiche de provenance par famille de données
+
+**[Fait / Réemploi]** Pour chaque famille : ce qui est mesuré, unité, fréquence, délai, révisions, limites, horizon le plus utile.
+
+**(a) ETF d'or (flux et avoirs)** — WGC mensuel (S-WGC-10, 11, 16 à 20 ; **réemploi de L7.04**) ; fiches de fonds quotidiennes (S-IAU-01).
+- *Mesuré* : variation des avoirs des fonds d'or physique (t) et flux nets (Md$) ; avoirs et encours en fin de mois.
+- *Date de référence → publication* : fin de mois → 4 à 9 jours plus tard. **[Calcul de l'auteur]** mars 31/03 → 08/04 (8 jours) ; avril → 07/05 (7) ; mai → 04/06 (4) ; juin → 08/07 (8) ; juillet → 06/08 (6) ; août → 09/09 (9) ; septembre → 07/10 (7).
+- *Révisions* : non documentées dans les pages lues.
+- *Limites* : portée = fonds d'or physique réglementés ; flux = différence nette ; résidus de valorisation estimés (L7.04).
+- *Horizon utile* : **moyen terme** (somme sur 1 à 3 mois) ; la page mensuelle arrive trop tard pour le très court terme.
+
+**(b) Positionnement spéculatif (COT)** — CFTC hebdomadaire (S-CFTC-01, 03, 08, 13 ; **réemploi de L7.02**).
+- *Mesuré* : **stock** de positions sur contrats à terme par catégorie (Managed Money pour l'or), en contrats de 100 onces ; la variation hebdomadaire est un **flux de position**, pas un flux d'argent.
+- *Référence → publication* : mardi → vendredi 15 h 30 (heure de l'Est), soit 3 jours (13/10 → 16/10).
+- *Révisions* : deux écarts de 1 contrat entre positions et variations publiées (L7.02).
+- *Limites* : classification des opérateurs, intentions inconnues, couvre un marché.
+- *Horizon utile* : **très court à court terme** ; plusieurs semaines pour une tendance.
+
+**(c) Banques centrales** — WGC trimestriel (*Gold Demand Trends*) et mensuel (S-WGC-06, 07, 08, 09, 21 ; **réemploi de L5.06**, plus **nouvelle lecture S-WGC-21**).
+- *Mesuré* : achats nets officiels estimés (t), à partir de déclarations (FMI, banques centrales) et d'estimations de Metals Focus ; une partie des achats est non déclarée.
+- *Référence → publication* : trimestre → environ 30 jours (T2 2026 : 30/06 → 30/07/2026) ; statistiques mensuelles (juillet 2026, publiées le 03/09/2026) → **34 jours**.
+- *Révisions* : **[Fait]** (S-WGC-21) le chiffre de T1 2026 a été révisé de **244 t à 57 t** par Metals Focus, 187 t étant reclassées en demande OTC ; S-WGC-09 signale par ailleurs un cumul mensuel (≈ 130 t à fin juillet) qui ne correspond pas au cumul trimestriel (S1 345 t).
+- *Limites* : estimation, reclassements, achats non déclarés.
+- *Horizon utile* : **long terme** ; très mal adapté au court terme.
+
+**(d) Acteurs commerciaux et couverture** — COT *Producer/Merchant* (S-CFTC-08 ; hebdomadaire) et ligne « couverture » de l'offre du WGC (S-WGC-04 ; annuelle/trimestrielle, **réemploi**).
+- *Mesuré* : positions de couverture déclarées (COT) ; variation nette des couvertures de producteurs (offre).
+- *Limites* : une position de couverture n'est pas un pari directionnel ; la motivation est liée au risque couvert, pas au prix attendu.
+- *Horizon utile* : moyen à long terme (cycle de production) ; le COT les rend visibles chaque semaine.
+
+**(e) Demande physique (bijouterie, barres et pièces)** — WGC trimestriel (S-WGC-21, S-WGC-05, S-WGC-07).
+- *Mesuré* : quantités estimées de bijoux fabriqués et de barres et pièces, par trimestre ; non des achats quotidiens.
+- *Référence → publication* : trimestre → ≈ 30 jours.
+- *Limites* : estimations ; réaction aux prix de long ou moyen terme (volume en baisse quand le prix est élevé).
+- *Horizon utile* : **moyen à long terme**.
+
+**Ces cinq familles ne sont pas équivalentes.** Un **stock** (avoirs d'un ETF ; position nette sur contrats) n'est pas un **flux** (variation sur une période) ; un **achat** (banque centrale) n'est pas une **position spéculative** ; un **flux financier** en dollars n'est pas une variation en tonnes (L7.04, ratio flux/tonnes). On peut convertir en tonnes, on ne peut pas **additionner**.
+
+### 4.3 Rendre deux séries comparables sans les rendre équivalentes
+
+**[Calcul de l'auteur]** Conversion d'un net COT en tonnes : contrats × 100 oz ÷ 32 150,7466 oz/t. Managed Money, or COMEX **[Réemploi, L7.02]** : 139 548 contrats (08/09) = **434,0 t** ; 111 079 (13/10) = **345,5 t** ; variation sur cinq semaines : −28 469 contrats = **−88,5 t**. Du 08/09 au 29/09 (124 418 contrats) : −15 130 contrats = **−47,1 t**.
+
+Comparaison avec les ETF **[Réemploi, L7.04]** : septembre 2026 : +67 t (31/08 → 30/09). **Les deux nombres sont en tonnes, mais** : l'un est la variation d'une **exposition sur contrats à terme** observée un mardi, l'autre la variation d'**or physique détenu** à la fin du mois ; les fenêtres diffèrent d'une semaine au moins (le COT du 01/09 n'a pas été lu) ; ils ne s'additionnent pas. **Ce qui est comparable** : le sens et l'ordre de grandeur relatif, **à condition de dire que les natures diffèrent**.
+
+### 4.4 Temporaire ou structurel ? Quatre critères écrits d'avance
+
+**[Définition de cours]** Un mouvement est lu comme **plus structurel** s'il remplit, **simultanément**, des critères fixés avant l'observation :
+1. **Persistance** : même signe sur au moins *k* périodes consécutives (k = 3 pour les mois, 4 pour les semaines : seuils de cours arbitraires) ;
+2. **Ampleur** : supérieure à la variabilité habituelle de la série (nécessite un historique ; sinon « non évaluable ») ;
+3. **Étendue** : visible dans plusieurs régions ou catégories ;
+4. **Cohérence** : non contredit par les autres familles de données au même horizon.
+
+**[Calcul de l'auteur]** Flux mensuels d'ETF d'avril à septembre 2026 **[Réemploi, L7.04]** : +6,6 ; −2 ; −8,9 ; +3 ; +18 ; +10 Md$. Sommes glissantes sur trois mois, à fin juin : **−4,3** ; fin juillet : **−7,9** ; fin août : **+12,1** ; fin septembre : **+31,0** (record trimestriel selon le WGC) ; six mois : **+26,7**. Le **signe du flux dépend de l'horizon** : le « mois » de juin est négatif, le « trimestre » de septembre est positif. La plus longue série de mois de même signe est de 3 mois positifs (juillet à septembre), précédée de deux mois négatifs. **Persistance (k = 3) : atteinte à fin septembre pour le signe positif ; ampleur : non évaluable (pas d'historique mensuel lu) ; étendue : les régions de septembre sont toutes positives (L7.04) ; cohérence : voir § 4.5.** Verdict prudent : **plus structurel que temporaire pour les ETF sur trois mois, non démontré sur douze**.
+
+### 4.5 Pourquoi les horizons divergent : le cas de septembre–octobre 2026
+
+**[Réemploi]** Données déjà lues (provenance dans chaque ligne) :
+
+| Horizon | Donnée | Valeur | Provenance |
+|---|---|---|---|
+| Très court / court | Net long Managed Money, or COMEX | 139 548 (08/09) → 111 079 (13/10), cinq baisses hebdomadaires consécutives | S-CFTC-08, 13 (L7.02) |
+| Moyen | Flux d'ETF d'or physique | T3 2026 : +31 Md$, +211 t ; septembre : +10 Md$, +67 t | S-WGC-10 (L7.04) |
+| Long | Achats de banques centrales | T2 2026 : 288,9 t (record de T2) ; S1 : 345 t | S-WGC-08, S-WGC-21 |
+| Long | Demande d'investissement physique | barres et pièces S1 2026 : +21 % sur un an ; T2 : −3 % | S-WGC-21 |
+| Contexte | Prix implicite des ETF | 4 566 → 4 195 $/oz en septembre (−8,1 %, dérivé) | L7.04 |
+
+**[Interprétation]** Ces lignes ne se contredisent pas : une réduction de positions sur contrats à terme (court terme) coexiste avec des entrées d'ETF (moyen terme) et des achats officiels élevés (long terme). Ce qui est **contradictoire en apparence**, c'est la lecture « tout le monde achète ». Les acteurs diffèrent, comme les motifs : les motifs des banques centrales, tirés de l'enquête lue en L5.06, sont des raisons de réserves ; pour les autres catégories, les motifs sont des **hypothèses**. **Aucune ligne ne donne de signal de direction : le prix implicite baisse alors que les entrées d'ETF sont positives et que les achats officiels sont élevés**, ce qui rappelle le cas du deuxième trimestre 2026 de L5.06 (achats officiels records, prix en recul).
+
+### 4.6 Quatre scénarios d'horizons
+
+**[Définition de cours]**
+
+| Scénario | Court terme | Long terme | Question | Lectures possibles (hypothèses) | Ce qui départagerait | Pourquoi ce n'est pas un signal |
+|---|---|---|---|---|---|---|
+| **A** | flux positifs | flux négatifs | reprise temporaire ou retournement ? | achat d'opportunité dans une tendance de sorties ; fin de la tendance | persistance sur plusieurs périodes, étendue régionale, positionnement | un seul mois ne renverse pas une tendance ; le prix peut baisser quand même |
+| **B** | flux négatifs | flux positifs | correction ou changement structurel ? | prise de bénéfices dans une tendance d'entrées ; début d'inversion | ampleur relative à l'historique, autres catégories | une correction peut précéder une reprise ou une baisse |
+| **C** | flux positifs | flux positifs | confirmation ou simple convergence temporaire ? | tendance établie ; ou rattrapage d'un retard | sources indépendantes, valorisation, positionnement | des flux concordants peuvent déjà être dans le prix |
+| **D** | contradictoires ou insuffisants | — | peut-on conclure ? | — | données manquantes (délai, révisions, période couverte) | « indéterminé » est une conclusion valide |
+
+**Placement des données de septembre** : court terme (COT) en baisse + moyen terme (ETF, trois mois) en hausse + long terme (banques centrales) élevé. Ce n'est pas un seul des scénarios A à C proprement dit (il mêle trois horizons et trois natures de mesure) : **scénario D partiel** pour la synthèse, avec une lecture de type **B** si l'on ne compare que la série COT à quatre semaines et les ETF sur trois mois.
+
+### 4.7 Conséquences possibles pour l'or, sans promesse
+
+**[Hypothèses, non testées ici]** (1) Des entrées d'ETF persistantes pourraient soutenir la demande ; (2) une réduction de positions spéculatives pourrait traduire une prise de bénéfices ou une rotation ; (3) des achats officiels élevés pourraient réduire l'offre disponible. **Rien dans les données lues ne démontre que l'un de ces canaux domine** ; L5.06 documente un trimestre où achats officiels records et prix en recul ont coexisté. **Un flux positif de court terme ne signifie pas que les investisseurs ont adopté une position haussière durable** : un flux net est une différence, et la même somme peut venir de nombreux achats et ventes.
+
+### 4.8 Construire une lecture cohérente quand les horizons divergent
+
+**[Définition de cours]** Fiche d'horizons, en trois colonnes :
+- **Les données montrent** : faits datés, avec date de référence, publication, unité, nature (stock / flux / achat / position).
+- **Elles suggèrent** : hypothèses classées par horizon, avec ce qui les affaiblirait.
+- **Elles ne permettent pas de conclure** : direction du prix, intentions, causalité, durabilité.
+
+Règle de décision : ne jamais prendre une décision sur un seul horizon ; si les horizons divergent et si les natures des mesures diffèrent, la lecture par défaut est « indéterminée », assortie des données qui feraient basculer la lecture.
+
+## 5. Définitions essentielles
+
+- **Horizon d'analyse** : durée sur laquelle une information est censée compter ; convention du lecteur.
+- **Fréquence de publication** : rythme de production de la donnée.
+- **Délai de publication** : temps entre la date de référence et la mise à disposition.
+- **Date de référence** : date à laquelle la mesure s'applique (≠ date de publication).
+- **Stock / flux** : niveau à une date / variation sur une période.
+- **Persistance** : répétition du même signe sur plusieurs périodes.
+- **Convergence temporaire** : alignement d'horizons sans tendance établie.
+
+## 6. Exemples chiffrés
+
+### 6.1 Délais
+
+COT : 13/10 → 16/10 : **3 jours**. Flux d'ETF de septembre : 30/09 → 07/10 : **7 jours**. Demande du T2 : 30/06 → 30/07 : **30 jours**. Banques centrales de juillet : 31/07 → 03/09 : **34 jours**.
+
+### 6.2 Conversion
+
+111 079 contrats × 100 ÷ 32 150,7466 = **345,5 t**.
+
+### 6.3 Somme glissante
+
+Juillet + août + septembre : 3 + 18 + 10 = **31 Md$**.
+
+### 6.4 Demande physique
+
+**[Calcul de l'auteur]** T2 2026 (S-WGC-21) : investissement total 262 t, ETF −44,8 t (S-WGC-07) ⇒ barres et pièces ≈ 262 + 44,8 = **306,8 t** (dérivé, arrondis). Bijouterie : 278,2 t contre 335,3 t un an plus tôt : **−17,0 %**.
+
+### 6.5 Cas historique documenté — T2 2026 : des achats officiels records, des ETF en sortie, une demande physique contrastée
+
+**[Fait]** (S-WGC-21, S-WGC-07, S-WGC-08 ; WGC, communiqué du 30 juillet 2026, résumé automatique) : au deuxième trimestre 2026, achats nets de banques centrales **288,9 t** (+62 % sur un an, record pour un T2) ; ETF **−44,8 t** ; barres et pièces **−3 %** sur un an (mais **+21 %** sur le premier semestre) ; bijouterie **−17 %** en volume ; demande totale **1 269 t**, stable. Le chiffre de T1 des banques centrales a été **révisé de 244 à 57 t** (187 t reclassées en OTC). **Lecture** : cinq familles de données, cinq directions, au même trimestre. Il n'y a pas de « flux de l'or » unique. **Ce que les données ne permettent pas** : conclure à une tendance commune, ou à une cause du recul des prix (L5.06).
+
+### 6.6 (SIMULATION) — voir l'atelier du § 10 (exercice 6).
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Fiche d'horizons** (suite des fiches L7.01 à L7.05) : pour chaque donnée, famille, nature (stock / flux / achat / position), date de référence, date de publication, horizon, révision connue ; puis les trois colonnes « montrent / suggèrent / ne permettent pas ».
+- **XAU/USD** : la lecture des flux se combine avec les taux réels, le dollar et les scénarios (modules 5 et 6) ; elle ne les remplace pas.
+- **Forex** : la même fiche s'applique aux devises (positionnement TFF en L7.03) ; les horizons y sont tout aussi indépendants des fréquences.
+- **Risque** : décider sur un seul horizon expose à un signal contraire à un autre horizon.
+
+## 8. Erreurs courantes
+
+1. Comparer des données mensuelles et hebdomadaires sans harmoniser leurs dates de référence.
+2. Confondre date de publication et date de référence.
+3. Additionner des flux qui ne mesurent pas la même chose (stock, position, achat, flux financier).
+4. Conclure qu'un flux temporaire annonce une tendance durable.
+5. Assimiler achats de banques centrales et positionnement spéculatif.
+6. Utiliser une corrélation comme preuve de causalité.
+7. Ignorer les délais de publication.
+8. Confondre horizon et fréquence.
+
+## 9. Limites de l'interprétation
+
+- La plupart des données sont des réemplois lus par résumé automatique ; seule la publication du T2 (S-WGC-21) est nouvelle.
+- Aucune donnée journalière de flux ; COT des 20/10 et 27/10 non lus ; aucune série mensuelle longue.
+- Aucun historique pour juger l'ampleur ; seuils de persistance arbitraires.
+- Estimations de demande (banques centrales, bijouterie, barres et pièces) révisées et reclassées.
+- Prix implicites dérivés (L7.04), aucun cours de marché.
+- Barres et pièces du T2 déduites par différence (arrondis).
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Classification des données (obligatoire).** Pour chaque donnée, indique la nature (stock / flux / achat / position), la fréquence et l'horizon le plus utile : (a) net Managed Money du COT ; (b) flux mensuel d'ETF ; (c) avoirs de l'iShares Gold Trust ; (d) achats trimestriels de banques centrales ; (e) volume trimestriel de bijouterie.
+
+<details>
+<summary>Correction 1</summary>
+
+(a) **position** (stock d'exposition sur contrats), hebdomadaire, très court à court terme ; (b) **flux** (variation d'avoirs / montants nets), mensuel, moyen terme ; (c) **stock** d'or détenu, quotidien (fiche du fonds), court à moyen terme selon l'usage ; (d) **achats nets estimés**, trimestriel, long terme ; (e) **volume de demande** estimé, trimestriel, moyen à long terme. Aucune de ces natures n'est interchangeable.
+</details>
+
+**Exercice 2 — Délais.** Calcule le délai entre date de référence et publication pour : COT du 13/10 (publié le 16/10) ; flux d'ETF de mai (31/05 ; publié le 04/06) ; T2 (30/06 ; 30/07) ; banques centrales de juillet (31/07 ; 03/09).
+
+<details>
+<summary>Correction 2</summary>
+
+3 jours ; 4 jours ; 30 jours ; 34 jours. Les deux derniers ne renseignent pas sur le présent : leurs horizons utiles sont longs.
+</details>
+
+**Exercice 3 — Conversion et comparabilité.** Net Managed Money : 139 548 (08/09) et 124 418 (29/09). Convertis la variation en tonnes et compare à +67 t d'ETF en septembre. Qu'est-ce qui reste incomparable ?
+
+<details>
+<summary>Correction 3</summary>
+
+Δ = −15 130 contrats × 100 ÷ 32 150,7466 = **−47,1 t**. Comparaison avec +67 t : les deux sont en tonnes, mais l'un est une exposition sur contrats d'un mardi à l'autre, l'autre de l'or physique d'une fin de mois à l'autre ; fenêtres différentes ; non additifs. Le signe opposé n'est pas une contradiction : acteurs et instruments différents.
+</details>
+
+**Exercice 4 — Sommes glissantes.** Flux d'ETF d'avril à septembre : +6,6 ; −2 ; −8,9 ; +3 ; +18 ; +10 Md$. Calcule les sommes sur trois mois à fin juin, juillet, août et septembre. Que montre le changement de signe ?
+
+<details>
+<summary>Correction 4</summary>
+
+−4,3 ; −7,9 ; +12,1 ; +31,0. Le signe du flux dépend de l'horizon et de la fenêtre ; un mois négatif (juin) n'empêche pas un trimestre positif (T3). La persistance (3 mois de même signe) n'est atteinte qu'à fin septembre.
+</details>
+
+**Exercice 5 — Placer des données dans les scénarios.** À fin septembre 2026 : court terme (COT) en baisse, ETF sur trois mois en hausse, achats officiels élevés. A, B, C ou D ? Pourquoi aucun n'est un signal ?
+
+<details>
+<summary>Correction 5</summary>
+
+Aucun scénario ne s'applique « proprement » : trois horizons, trois natures. Lecture partielle de type B (court terme négatif, moyen terme positif) pour les seules séries COT et ETF ; synthèse en D (contradictoire ou insuffisant). Pas de signal : les acteurs diffèrent, le prix implicite baisse malgré les entrées, la durabilité n'est pas observable.
+</details>
+
+**Exercice 6 — Atelier (SIMULATION).** Cas **fictif** : (i) les ETF enregistrent **+12 Md$** et **+95 t** sur un mois ; (ii) le net Managed Money hebdomadaire baisse sur cinq semaines : 120 000 ; 117 500 ; 113 800 ; 110 200 ; 108 900 contrats ; (iii) les banques centrales achètent en moyenne **70 t par mois** sur douze mois (840 t) ; (iv) le prix recule de **4 000 à 3 876 $/oz** en quatre séances. Tu dois : classer par horizon ; relever les contradictions apparentes ; dire quelles informations sont comparables ; proposer deux interprétations ; lister les données supplémentaires ; conclure prudemment.
+
+<details>
+<summary>Correction 6</summary>
+
+*Classement* : très court terme : recul du prix de 3,1 % en quatre séances (−124 $/oz, 3,1 %) ; court terme : net spéculatif −11 100 contrats sur quatre semaines (120 000 → 108 900), soit **−34,5 t** ; moyen terme : ETF +95 t (+12 Md$) sur un mois ; long terme : 840 t d'achats officiels sur douze mois. *Contradictions apparentes* : entrées d'ETF et achats officiels élevés alors que le prix recule et que les spéculateurs réduisent. *Comparable* : en tonnes, ETF +95 contre exposition sur contrats −34,5 — comparables en ordre de grandeur, **non additifs** ; l'ETF est mensuel, le COT hebdomadaire, les achats officiels sont annuels, le prix quotidien : seuls la fenêtre et la nature commandent la comparaison. Prix implicite des entrées : 12 Md$ ÷ (95 × 32 150,7466) = **3 929 $/oz**, proche du bas de la fenêtre (rapport indicatif, non un prix). *Deux interprétations* : (1) les ETF achètent la baisse (prises de position de moyen terme) pendant que des positions spéculatives sont liquidées : divergence d'horizons et d'acteurs ; (2) le recul du prix est un mouvement bref non lié à ces flux, qui sont décidés sur des horizons plus longs. *Données à ajouter* : flux quotidiens d'ETF, dates exactes des entrées, prix intrajournaliers, événements macroéconomiques des quatre séances, positions par catégorie, répartition régionale. *Conclusion prudente* : les flux de moyen et long terme sont élevés, le positionnement de court terme se réduit et le prix recule ; **ces faits ne permettent pas de dire si la baisse est temporaire, ni si les entrées d'ETF durent** — lecture : indéterminée.
+</details>
+
+**Exercice 7 — Étude de cas contradictoire (réelle, réemploi).** À partir du § 4.5 et du § 6.5, rédige trois phrases : une qui est **montrée**, une **suggérée**, une **non permise** par les données.
+
+<details>
+<summary>Correction 7</summary>
+
+*Montrée* : « Au T2 2026, les achats nets officiels estimés ont été de 288,9 t et les ETF de −44,8 t (S-WGC-21, S-WGC-07). » *Suggérée* : « Les acteurs de long terme et ceux de moyen terme n'ont pas agi dans le même sens, ce qui est compatible avec des motifs différents (hypothèse). » *Non permise* : « Les achats officiels ont empêché une baisse plus forte » ou « les sorties d'ETF ont causé le recul du prix » (causalité non démontrée).
+</details>
+
+**Exercice 8 — Question de synthèse.** « Comment construire une lecture cohérente du marché de l'or lorsque les flux de court terme et de long terme divergent ? »
+
+<details>
+<summary>Correction 8</summary>
+
+Réponse type : (1) ranger chaque donnée par horizon, nature, date de référence et délai ; (2) ne comparer que ce qui est comparable (mêmes fenêtres, natures dites) ; (3) tester la persistance, l'ampleur, l'étendue et la cohérence selon des critères écrits d'avance ; (4) formuler au moins deux interprétations et les données qui les départageraient ; (5) conclure sur trois niveaux : montré, suggéré, non permis ; (6) accepter « indéterminé » et ne jamais décider sur un seul horizon. Aucun résultat ne garantit un gain.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L7.06.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Horizon d'analyse, fréquence et délai de publication sont trois notions distinctes.
+- Stocks (avoirs, positions), flux, achats et flux financiers ne sont pas équivalents ; on peut convertir en tonnes, pas additionner.
+- Le signe d'un flux dépend de l'horizon (ETF : juin −8,9 Md$ mais T3 +31 Md$).
+- Un mouvement est plus structurel s'il est persistant, ample, étendu et cohérent ; sans historique, l'ampleur est non évaluable.
+- Des horizons qui divergent ne sont pas un signal : montrer, suggérer, ne pas conclure.
+
+## 13. Critères de maîtrise
+
+- [ ] Classer des données par nature, fréquence et horizon (Exercice 1).
+- [ ] Calculer des délais de publication (Exercice 2).
+- [ ] Convertir et comparer sans additionner (Exercice 3).
+- [ ] Lire des flux à plusieurs horizons (Exercice 4).
+- [ ] Placer des données dans les scénarios et refuser d'en tirer un signal (Exercice 5).
+- [ ] Mener l'atelier fictif en six étapes (Exercice 6).
+- [ ] Séparer montré / suggéré / non permis (Exercice 7).
+- [ ] Répondre à la question de synthèse (Exercice 8).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **31 octobre 2026** :
+
+- **S-WGC-21** — World Gold Council, *Gold Demand Trends Q2 2026*, communiqué du 30 juillet 2026 (industrie, résumé automatique) : https://www.gold.org/download/file/21011/Q2_2026_GDT_Press_Release.pdf
+- **Réemplois** (déjà lus) : S-WGC-04, S-WGC-06, S-WGC-07, S-WGC-08, S-WGC-09 (demande et banques centrales) ; S-WGC-10, 11, 16 à 20 (flux d'ETF, L7.04) ; S-CFTC-01, 03, 08, 13 (COT, L7.01–L7.02) ; S-IAU-01 (fonds).
+
+**Définitions de cours non rattachées à une source lue :** classification en quatre horizons, critères de persistance (k = 3 mois, 4 semaines), fiche d'horizons, scénarios A à D. **Points non vérifiés :** révisions des données d'ETF, COT des 20/10 et 27/10, flux journaliers, historique long, répartition détaillée de la demande du T2 (technologie non lue), cours de marché de l'or.

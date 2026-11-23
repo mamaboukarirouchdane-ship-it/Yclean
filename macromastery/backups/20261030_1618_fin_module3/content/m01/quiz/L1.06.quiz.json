@@ -1,0 +1,234 @@
+{
+  "lessonId": "L1.06",
+  "title": "Quiz — Déflation, désinflation, stagflation",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : Federal Reserve History et Banque du Japon, résumés automatiques.",
+  "questions": [
+    {
+      "id": "L1.06-Q1",
+      "type": "mcq",
+      "prompt": "L'inflation passe de 6 % à 3 % sur un an. De quel régime s'agit-il ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Déflation"
+        },
+        {
+          "id": "b",
+          "text": "Stagflation"
+        },
+        {
+          "id": "c",
+          "text": "Désinflation"
+        },
+        {
+          "id": "d",
+          "text": "Hyperinflation"
+        }
+      ],
+      "correct": "c",
+      "explanation": "L'inflation reste positive mais ralentit : désinflation. Les prix continuent de monter, moins vite.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L1.06-Q2",
+      "type": "mcq",
+      "prompt": "Quelle affirmation est correcte sur la déflation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle désigne une baisse générale et persistante du niveau des prix"
+        },
+        {
+          "id": "b",
+          "text": "Elle désigne la baisse d'un seul prix"
+        },
+        {
+          "id": "c",
+          "text": "Elle désigne une inflation de 0,5 %"
+        },
+        {
+          "id": "d",
+          "text": "Elle est synonyme de désinflation"
+        }
+      ],
+      "correct": "a",
+      "explanation": "On parle de déflation pour une baisse générale et durable des prix (glissement annuel négatif), pas pour la baisse d'un poste ou d'un mois.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L1.06-Q3",
+      "type": "mcq",
+      "prompt": "Taux nominal 0,5 %, inflation −1 % : taux réel exact ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−0,5 %"
+        },
+        {
+          "id": "b",
+          "text": "−1,5 %"
+        },
+        {
+          "id": "c",
+          "text": "+0,5 %"
+        },
+        {
+          "id": "d",
+          "text": "+1,52 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "1,005 ÷ 0,99 − 1 = +1,52 % : en déflation, le taux réel est supérieur au taux nominal.",
+      "tags": [
+        "taux-reel"
+      ]
+    },
+    {
+      "id": "L1.06-Q4",
+      "type": "mcq",
+      "prompt": "Pourquoi la déflation limite-t-elle la politique monétaire quand le taux nominal est proche de zéro ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que la banque centrale ne peut pas parler"
+        },
+        {
+          "id": "b",
+          "text": "Parce que le taux nominal ne peut guère descendre sous zéro alors que le taux réel monte quand les prix baissent"
+        },
+        {
+          "id": "c",
+          "text": "Parce que les banques disparaissent"
+        },
+        {
+          "id": "d",
+          "text": "Parce que l'inflation est interdite"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Avec un taux nominal près de sa borne basse, la baisse des prix relève le taux réel, ce qui freine l'économie sans que la banque centrale puisse facilement le compenser.",
+      "tags": [
+        "politique-monetaire"
+      ]
+    },
+    {
+      "id": "L1.06-Q5",
+      "type": "mcq",
+      "prompt": "Dette fixe de 100, revenu nominal de 100 qui baisse de 2 % par an. Que devient le rapport dette/revenu après cinq ans ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "100 %"
+        },
+        {
+          "id": "b",
+          "text": "98 %"
+        },
+        {
+          "id": "c",
+          "text": "90 %"
+        },
+        {
+          "id": "d",
+          "text": "Environ 110,6 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Revenu = 100 × 0,98⁵ = 90,39 ; rapport = 100 ÷ 90,39 = 110,6 %.",
+      "tags": [
+        "dette"
+      ]
+    },
+    {
+      "id": "L1.06-Q6",
+      "type": "mcq",
+      "prompt": "Selon l'essai de la Federal Reserve History lu, quand l'inflation CPI a-t-elle atteint son pic près de 15 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Août 1979"
+        },
+        {
+          "id": "b",
+          "text": "Novembre 1982"
+        },
+        {
+          "id": "c",
+          "text": "Mars 1980"
+        },
+        {
+          "id": "d",
+          "text": "1964"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Pic proche de 15 % en mars 1980 ; elle était au-dessus de 11 % en août 1979 et sous 5 % à la fin de la récession de novembre 1982.",
+      "tags": [
+        "grande-inflation"
+      ]
+    },
+    {
+      "id": "L1.06-Q7",
+      "type": "mcq",
+      "prompt": "Selon le discours de la BoJ (juin 2014, résumé), que s'est-il passé à partir de 1998 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'indice des prix est entré en territoire négatif et y est resté, dans l'ensemble, pendant quinze ans"
+        },
+        {
+          "id": "b",
+          "text": "L'inflation a dépassé 10 %"
+        },
+        {
+          "id": "c",
+          "text": "Le yen a été supprimé"
+        },
+        {
+          "id": "d",
+          "text": "La Banque du Japon a cessé d'exister"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La déflation est restée la plupart du temps inférieure à −1 % sur un an, avec de brèves périodes plus marquées comme après la crise Lehman.",
+      "tags": [
+        "japon"
+      ]
+    },
+    {
+      "id": "L1.06-Q8",
+      "type": "mcq",
+      "prompt": "Selon la convention pédagogique du cours (inflation > 5 % et croissance < 1 %), une économie à 6 % d'inflation et 3 % de croissance est en :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Stagflation"
+        },
+        {
+          "id": "b",
+          "text": "Pas de stagflation selon cette convention (inflation forte avec croissance soutenue)"
+        },
+        {
+          "id": "c",
+          "text": "Déflation"
+        },
+        {
+          "id": "d",
+          "text": "Désinflation obligatoirement"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La stagflation associe inflation élevée et activité faible ; une inflation forte avec une croissance soutenue n'est pas une stagflation selon la convention. Les seuils sont pédagogiques, non officiels.",
+      "tags": [
+        "stagflation",
+        "convention"
+      ]
+    }
+  ],
+  "revision": 1
+}

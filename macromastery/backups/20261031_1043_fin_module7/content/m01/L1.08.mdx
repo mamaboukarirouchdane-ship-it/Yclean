@@ -1,0 +1,230 @@
+---
+id: L1.08
+module: 1
+order: 8
+title: "Courbe de Phillips et ses limites : le lien entre inflation et chômage"
+title_initial: "Courbe de Phillips et limites"
+level: "débutant à intermédiaire"
+duration_hours: 2.5
+prerequisites: ["L1.05", "L1.06", "L1.07"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L1.08.quiz.json"
+sources: ["S-FRBSF-03", "S-FRH-01", "S-BLS-04", "S-CBO-02", "S-NYF-01"]
+---
+
+# L1.08 — Courbe de Phillips et ses limites : le lien entre inflation et chômage
+
+> **Convention de lecture.** **[Fait]** = chiffre ou énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. La **forme originelle** de la courbe de Phillips (1958) et la **théorie** de la courbe augmentée des anticipations sont rappelées comme définitions de cours : **aucune source primaire correspondante n'a été lue** dans cette session. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. énoncer l'idée d'une **courbe de Phillips** et écrire sa forme **augmentée des anticipations** ;
+2. calculer la réponse de l'inflation à un **écart de chômage** pour différentes pentes ;
+3. expliquer pourquoi le lien est **instable** (anticipations, chocs d'offre, taux naturel inconnu, non-linéarités) ;
+4. lire des résultats empiriques (pente, persistance, tests de résistance) avec leurs incertitudes ;
+5. éviter d'appliquer mécaniquement un chiffre ancien à la situation de 2026 ;
+6. relier la courbe de Phillips à la **politique monétaire** et aux **marchés**.
+
+## 2. Prérequis
+
+L1.05 (anticipations d'inflation), L1.06 (stagflation, Grande Inflation) et L1.07 (taux de chômage, taux non cyclique).
+
+## 3. Explication intuitive
+
+L'idée est simple : quand beaucoup de gens sont au chômage, les salariés ont peu de pouvoir de négociation et les entreprises peu de raisons d'augmenter leurs prix ; quand le chômage est très bas, les entreprises se disputent les travailleurs, les salaires montent et les prix aussi. Le chômage mesure ainsi la **tension** (ou « marge de manœuvre ») de l'économie.
+
+Mais la relation est **faible, changeante et dominée par autre chose**. Les anticipations d'inflation, les chocs d'énergie et la mesure même du « bon » niveau de chômage brouillent la lecture. La courbe de Phillips est donc un **outil de raisonnement**, pas une loi.
+
+## 4. Développement technique
+
+### 4.1 La forme de base et la forme augmentée
+
+**[Définition, non sourcée dans cette session]** La courbe de Phillips originelle (A. W. Phillips, 1958) décrit une relation inverse entre la variation des salaires nominaux et le chômage au Royaume-Uni. La forme moderne relie l'**inflation** à l'**écart de chômage** et aux **anticipations** :
+
+**π = πᵉ − β × (u − u*) + ε**
+
+- π : inflation ; πᵉ : inflation anticipée ; u : taux de chômage ; u* : taux non cyclique (naturel, L1.07) ; β > 0 : pente ; ε : chocs (énergie, importations…).
+- Si u < u* (tension), l'inflation tend à dépasser l'inflation anticipée ; si u > u*, elle tend à lui être inférieure.
+
+**Exemple (SIMULATION).** πᵉ = 2,0 %, u* = 4,2 %, u = 3,2 % (écart de −1 point).
+
+- β = 0,15 : π = 2,0 − 0,15 × (−1) = **2,15 %**.
+- β = 0,50 : π = 2,0 + 0,50 = **2,50 %**.
+- Si u = 5,2 % (écart de +1) avec β = 0,15 : π = 2,0 − 0,15 = **1,85 %**.
+
+Plus la pente est faible, moins le chômage informe sur l'inflation.
+
+### 4.2 Ce que montre une étude de la Fed de San Francisco (2019)
+
+**[Fait, S-FRBSF-03, résumé automatique de la Lettre économique 2019-05, O. Jordà, C. Marti, F. Nechio et E. Tallman, 11 février 2019]**
+
+- **Spécification** : l'inflation courante dépend de la **marge de capacité** (écart de chômage = chômage courant moins le taux naturel de la CBO), de l'**inflation passée** et de l'**inflation anticipée**. Le modèle utilise l'inflation CPI globale, les prévisions à un an de l'enquête des prévisionnistes professionnels, et le prix du pétrole en contrôle.
+- **Pente** : proche de **zéro** avant et après la Grande Récession ; **0,15** sur 1975–1996 (valeur de comparaison des tests de résistance). Sur les vingt dernières années, la pente quasi nulle contraste avec les vingt précédentes (le chiffre exact n'est pas donné dans le texte lu).
+- **Persistance** : une hausse imprévue de 1 point de l'inflation augmente l'inflation du trimestre suivant d'environ **0,45 point** aujourd'hui, contre environ **0,71 point** avant 2007.
+- **Anticipations** : elles seraient devenues le **déterminant dominant** de l'inflation ; leur contribution aurait presque doublé depuis la Grande Récession ; les anticipations à un an sont restées proches de 2 % et les anticipations de long terme autour de 2 % depuis 2012.
+- **Tests de résistance** : taux naturel supérieur de 2 points → effet inférieur à 0,1 point ; pente relevée à 0,15 → environ +0,13 point (inflation à 2,1 %) ; anticipations dérivant à 2,4 % → environ +0,22 point (inflation à 2,2 %).
+- **Précautions** : estimations incertaines ; le taux naturel n'est pas observable ; la courbe change dans le temps ; les scénarios combinés se renforceraient par la persistance.
+- **Conclusion de la lettre** : maintenir les anticipations ancrées à 2 % est la préoccupation centrale ; une perte de confiance dans l'objectif serait coûteuse à rétablir.
+
+**[Calcul de l'auteur]** Avec une pente de 0,15, un chômage inférieur de 1 point au taux naturel ajoute **0,15 point** à l'inflation ; un chômage inférieur de 2 points, **0,30 point**. Le niveau de 2,1 % cité pour le scénario de pente relevée est cohérent avec une référence d'environ 1,97 % (2,1 − 0,13) ; celui de 2,2 % avec environ 1,98 % (2,2 − 0,22) : la base de comparaison est proche de 2,0 %. Ce sont des chiffres arrondis.
+
+**[Interprétation]** Cette lettre date de **2019** et porte sur un modèle précis (CPI global, données américaines jusqu'à la fin des années 2010). Elle documente un **aplatissement** à cette date, mais **ne dit rien de 2021–2026**. Appliquer ses coefficients à l'inflation de 2026 serait une erreur.
+
+### 4.3 Pourquoi la relation est instable
+
+1. **Les anticipations** : si elles sont ancrées, l'inflation bouge peu avec le chômage ; si elles dérivent, l'inflation se décroche (L1.05, L1.06).
+2. **Les chocs d'offre** : l'énergie ou la logistique déplacent l'inflation sans lien avec le chômage ; dans la forme ci-dessus, ils sont dans ε.
+3. **Le taux naturel inconnu** : u* est estimé et révisé (L1.07). Une erreur de 1 point sur u* change l'écart de chômage de 1 point.
+4. **Les non-linéarités** : la relation peut être plus forte quand le marché est très tendu. **[Hypothèse d'analyse ; une étude de la Fed de San Francisco sur une courbe non linéaire est apparue dans les résultats de recherche, mais n'a pas été lue.]**
+5. **Les mesures** : l'indice choisi (global, sous-jacent), la période, le modèle.
+6. **La mondialisation et la structure de l'économie** : explications avancées dans la littérature, non lues ici.
+
+### 4.4 Un contre-exemple historique : les années 1970
+
+**[Fait, S-FRH-01, résumé automatique, voir L1.06]** Pendant la « Grande Inflation » (1965–1982), l'inflation et le chômage ont augmenté ensemble : en 1964, inflation d'un peu plus de 1 % et chômage de 5 % ; dix ans plus tard, inflation au-dessus de 12 % et chômage au-dessus de 7 %. Cette période est appelée « stagflation » dans la source. **[Interprétation]** Une relation stable entre inflation et chômage (plus d'inflation contre moins de chômage) ne pouvait pas décrire ces années : les chocs d'offre (embargo de 1973, 1979) et les anticipations jouaient un rôle central (L1.06).
+
+**Le coût de la désinflation (illustration prudente).** **[Calcul de l'auteur sur chiffres arrondis de la source]** De 1979 à 1982, l'inflation passe d'au-dessus de 11 % (août 1979) à moins de 5 % (novembre 1982), soit environ 6 points ou plus, pendant que le chômage passe d'un peu moins de 6 % à près de 11 %, soit environ 5 points. Cette mise en regard **n'établit pas un taux d'échange stable** entre chômage et inflation : les dates, les chocs et la politique se mêlent.
+
+### 4.5 Et en 2026 ?
+
+**[Faits observés, résumés automatiques]** Chômage de septembre 2026 : **4,2 %** (S-BLS-04) ; taux « noncyclical » de la CBO à terme : **4,2 %** (S-CBO-02) ; anticipations des ménages à un an : **3,9 %**, à cinq ans : **3,0 %** (S-NYF-01) ; inflation CPI : globale 3,7 %, sous-jacente 2,6 %, énergie +20,4 % (L1.04).
+
+**[Calcul de l'auteur]** L'écart de chômage, au sens de cette leçon (4,2 − 4,2), est **nul** : le modèle de base ne prévoit pas de surchauffe liée à la tension du marché du travail. **[Interprétation]** L'écart entre l'inflation globale (3,7 %) et sous-jacente (2,6 %) vient surtout de l'énergie, qui entre dans ε et non dans l'écart de chômage. Les anticipations à un an ont monté (3,9 %), ce qui, dans la logique de la forme augmentée, pourrait exercer une pression si elles se diffusaient aux salaires (L1.05). Mais l'incertitude sur u* (la CBO donne une estimation, non une mesure) interdit de conclure : **cette lecture est une hypothèse d'analyse, pas un diagnostic**.
+
+### 4.6 Ce que cela change pour la politique monétaire et les marchés
+
+Pour une banque centrale, la courbe de Phillips pose deux questions : *le marché du travail ajoute-t-il une pression sur les prix ?* et *les anticipations sont-elles ancrées ?* Si la pente est faible, un chômage bas fait moins craindre l'inflation, mais les anticipations deviennent la variable à surveiller. Pour les marchés : les chiffres d'emploi et de salaires (L1.07) sont lus à travers cette grille ; une **surprise** de salaires importe parce qu'elle peut changer les anticipations de taux (modules 2 et 3).
+
+## 5. Définitions essentielles
+
+- **Courbe de Phillips** : relation entre inflation (ou salaires) et marge de capacité (chômage).
+- **Écart de chômage** : u − u*.
+- **Pente (β)** : sensibilité de l'inflation à l'écart de chômage.
+- **Courbe augmentée des anticipations** : inflation = anticipée − β × écart + chocs.
+- **Persistance** : effet d'une hausse d'inflation sur l'inflation du trimestre suivant.
+- **Aplatissement** : baisse de la pente.
+- **Test de résistance** : calcul de la sensibilité d'un résultat à un changement d'hypothèse.
+
+## 6. Exemples chiffrés
+
+**A.** πᵉ = 2 %, écart −1 : π = 2,15 % (β = 0,15) ou 2,50 % (β = 0,50) (§4.1).
+**B.** Pente 0,15 : chômage 1 point sous u* → +0,15 point (§4.2).
+**C.** Persistance : 0,45 contre 0,71 point (§4.2).
+**D.** Tests : +0,13 point (pente) et +0,22 point (anticipations 2,4 %) (§4.2).
+**E.** 2026 : chômage 4,2 % pour un taux non cyclique de 4,2 % : écart nul (§4.5).
+
+### 6.5 Cas historique documenté — l'aplatissement de la courbe de Phillips (Fed de San Francisco, 2019)
+
+**[Fait, S-FRBSF-03]** Les auteurs de la Lettre 2019-05 comparent des fenêtres de vingt ans (graphique 1) et de dix ans avant et après la Grande Récession (graphique 2) et concluent à un **aplatissement** : le lien entre marge de capacité et inflation aurait presque disparu. Ils testent ensuite la résistance de leurs prévisions d'inflation à des hypothèses différentes et insistent sur l'importance des anticipations.
+
+**Ce que la leçon n'a pas pu confirmer :** la pente exacte récente, la méthode d'estimation détaillée, la robustesse à d'autres indices (par exemple l'inflation sous-jacente), et ce qui s'est passé depuis 2019. **[Interprétation]** Ce cas montre l'importance de rester **prudent sur la date et le modèle**. Il ne dit rien sur la validité de la courbe en 2026.
+
+## 7. Application au Forex et à l'or
+
+- **Forex** : une surprise de salaires ou d'emploi est lue à travers la courbe de Phillips pour réviser les anticipations de taux directeur, donc les devises (modules 3 et 4). Mais si la pente est faible, la même surprise a moins de portée sur la trajectoire de l'inflation, et c'est l'**inflation observée** et les **anticipations** qui dominent.
+- **Or** : pas de lien direct ; l'effet passe par les taux réels et le dollar (module 5).
+- **Méthode** : avant d'utiliser la courbe de Phillips dans un raisonnement, énoncer **quelle pente, quel taux naturel, quelles anticipations, quelle période**, et faire un test de résistance.
+- **Rappel** : **une bonne analyse ne garantit pas une transaction gagnante.**
+
+## 8. Erreurs courantes
+
+- **Traiter la courbe de Phillips comme une loi stable.**
+- **Oublier les anticipations** dans la relation.
+- **Confondre le niveau du chômage et l'écart de chômage.**
+- **Appliquer un coefficient estimé en 2019 à 2026.**
+- **Supposer que le taux naturel est connu.**
+- **Attribuer une hausse d'inflation à la tension du marché du travail** alors qu'elle vient de l'énergie.
+- **Confondre pente faible et absence de risque** : si les anticipations dérivent, l'inflation peut accélérer.
+
+## 9. Limites de l'interprétation
+
+- La lettre de San Francisco date de **2019** ; elle est lue par **résumé automatique**.
+- La forme originelle de Phillips (1958) et la théorie augmentée sont des **définitions de cours non sourcées**.
+- Les données de 2026 (chômage, anticipations, inflation) sont **observées mais lues par résumé automatique** ; la lecture qui les relie à la courbe est une **hypothèse**.
+- Le taux « non cyclique » de la CBO n'est **pas** un taux naturel au sens strict (la CBO ne définit pas le terme dans les diapositives lues).
+- Les non-linéarités et la mondialisation ne sont pas traitées de façon documentée.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Appliquer la formule.** πᵉ = 2,5 %, u* = 4,5 %, β = 0,2. Calcule π pour (a) u = 3,5 % ; (b) u = 4,5 % ; (c) u = 6,0 % ; (d) u = 3,5 % mais β = 0,05.
+
+<details>
+<summary>Correction 1</summary>
+
+(a) Écart = −1 : π = 2,5 + 0,2 × 1 = **2,70 %**. (b) Écart = 0 : π = **2,50 %**. (c) Écart = +1,5 : π = 2,5 − 0,2 × 1,5 = **2,20 %**. (d) π = 2,5 + 0,05 = **2,55 %**.
+</details>
+
+**Exercice 2 — Pente et écart.** Avec β = 0,15, de combien baisse le chômage si on veut ajouter 0,6 point à l'inflation (toutes choses égales) ? Que conclure sur la pertinence de ce levier ?
+
+<details>
+<summary>Correction 2</summary>
+
+0,6 ÷ 0,15 = **4 points** de chômage en moins : levier peu efficace si la pente est de 0,15 (et encore moins si elle est plus faible). Le chômage ne peut pas, à lui seul, expliquer de grandes variations de l'inflation.
+</details>
+
+**Exercice 3 — Persistance.** Une hausse imprévue de 1 point de l'inflation se transmet d'un trimestre à l'autre avec un coefficient p. Pour p = 0,45 puis p = 0,71, calcule l'effet sur les trois trimestres suivants (en supposant une propagation géométrique simple) et leur somme.
+
+<details>
+<summary>Correction 3</summary>
+
+p = 0,45 : 0,45 ; 0,2025 ; 0,0911 ; somme = **0,744**. p = 0,71 : 0,71 ; 0,5041 ; 0,3579 ; somme = **1,572**. Une persistance plus forte multiplie par plus de deux l'effet cumulé sur trois trimestres. (Propagation géométrique : simplification de l'auteur, la lettre ne donne que l'effet du trimestre suivant.)
+</details>
+
+**Exercice 4 — Tests de résistance.** D'après le §4.2 : (a) Quelle référence d'inflation implique un résultat de 2,1 % avec +0,13 point ? (b) Et 2,2 % avec +0,22 point ? (c) Lequel des deux tests change le plus l'inflation ? (d) Que dit la lettre sur l'importance des anticipations ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) 2,1 − 0,13 = **1,97 %**. (b) 2,2 − 0,22 = **1,98 %**. (c) L'hypothèse de dérive des anticipations à 2,4 % (+0,22 point) change plus l'inflation que le relèvement de la pente (+0,13). (d) La lettre conclut que l'ancrage des anticipations est la préoccupation centrale.
+</details>
+
+**Exercice 5 — 2026 : diagnostic prudent.** Chômage 4,2 % ; taux non cyclique de la CBO 4,2 % ; anticipations à un an 3,9 % ; inflation globale 3,7 % et sous-jacente 2,6 % ; énergie +20,4 %. (a) Écart de chômage ? (b) Que dit le modèle de base de la tension du marché du travail ? (c) Quelle variable est la plus informative ici ? (d) Pourquoi ne s'agit-il pas d'un diagnostic ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) 4,2 − 4,2 = **0**. (b) Pas de tension particulière signalée par l'écart de chômage. (c) Les anticipations (3,9 % à un an) et les chocs d'énergie (+20,4 %). (d) Parce que le taux « non cyclique » est une estimation, les données sont des résumés, et la courbe a été estimée sur d'autres périodes ; c'est une hypothèse d'analyse.
+</details>
+
+**Exercice 6 — Critique d'une affirmation.** Un éditorial : « Le chômage est à 3,5 %, donc l'inflation va forcément s'envoler selon la courbe de Phillips. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) La courbe dépend de l'**écart** avec le taux naturel, non du niveau seul. (2) La pente estimée est faible (proche de 0 dans l'étude de 2019). (3) Les anticipations et les chocs d'offre dominent souvent. (4) Le taux naturel est estimé et révisé. (5) « Forcément » : la relation est instable, non une loi. Une conclusion prudente : un chômage bas est un facteur de risque à surveiller parmi d'autres.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L1.08.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- **π = πᵉ − β (u − u*) + ε** : l'inflation dépend des anticipations, de l'écart de chômage et des chocs.
+- La **pente** estimée est faible : proche de 0 dans l'étude de 2019, 0,15 sur 1975–1996.
+- Les **anticipations** deviennent la variable dominante ; la **persistance** est passée de 0,71 à 0,45.
+- Les années 1970 montrent qu'une relation stable inflation/chômage ne tient pas face aux chocs d'offre et aux anticipations.
+- En 2026, l'écart de chômage est nul (4,2 % contre 4,2 %), l'énergie domine l'écart global/sous-jacent, les anticipations à un an sont à 3,9 % : **hypothèses d'analyse**.
+- Un coefficient ancien ne s'applique pas mécaniquement à aujourd'hui.
+
+## 13. Critères de maîtrise
+
+- [ ] Appliquer la forme augmentée (Exercices 1–2).
+- [ ] Interpréter persistance et tests de résistance (Exercices 3–4).
+- [ ] Faire un diagnostic prudent à partir de données récentes (Exercice 5).
+- [ ] Critiquer une affirmation simpliste (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-FRBSF-03** — Ò. Jordà, C. Marti, F. Nechio, E. Tallman, *Inflation: Stress-Testing the Phillips Curve*, FRBSF Economic Letter 2019-05 (11 février 2019) : https://www.frbsf.org/research-and-insights/publications/economic-letter/2019/02/inflation-stress-testing-phillips-curve
+- **S-FRH-01** — Federal Reserve History, *The Great Inflation* : https://www.federalreservehistory.org/essays/great_inflation
+- **S-BLS-04** — BLS, emploi de septembre 2026 (voir L1.07) : https://www.bls.gov/news.release/archives/empsit_10022026.htm
+- **S-CBO-02** — CBO, diapositives de février 2026 (voir L1.07) : https://www.cbo.gov/system/files/2026-02/62052-Economic-Outlook-Slides.pdf
+- **S-NYF-01** — Fed de New York, enquête de septembre 2026 (voir L1.05) : https://www.newyorkfed.org/newsevents/news/research/2026/20261007.html
+
+**Définitions de cours non rattachées à une source officielle lue :** courbe de Phillips originelle (1958) et forme augmentée, écart de chômage, propagation géométrique de la persistance. **Points non vérifiés :** pente récente, études non linéaires, effets après 2019, mondialisation.

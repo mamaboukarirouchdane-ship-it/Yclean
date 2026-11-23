@@ -1,0 +1,241 @@
+{
+  "lessonId": "L0.05",
+  "title": "Quiz — Taux croisés et parité : conversions, cohérence des cotations et pouvoir d'achat",
+  "passThreshold": 0.8,
+  "note": "Cotations des questions de calcul : SIMULATION. Les taux de référence de la BCE du 28/10/2026 (USD 1,1133 ; GBP 0,83785) sont des lectures de tableaux par résumé automatique. La parité 655,957 XOF/EUR vient de la BCEAO et du Trésor français.",
+  "questions": [
+    {
+      "id": "L0.05-Q1",
+      "type": "mcq",
+      "prompt": "EUR/USD = 1,0800 et USD/CHF = 0,9000 (chiffres fictifs). Quel est EUR/CHF ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1,2000"
+        },
+        {
+          "id": "b",
+          "text": "1,9800"
+        },
+        {
+          "id": "c",
+          "text": "0,9720"
+        },
+        {
+          "id": "d",
+          "text": "0,8333"
+        }
+      ],
+      "correct": "c",
+      "explanation": "1 EUR = 1,0800 USD et 1 USD = 0,9000 CHF : les dollars s'annulent et EUR/CHF = 1,0800 × 0,9000 = 0,9720. Diviser (1,2000) ou additionner (1,9800) ne fait pas se simplifier les unités ; 0,8333 est l'inverse de 1,2000.",
+      "tags": [
+        "croise",
+        "methode-unites"
+      ]
+    },
+    {
+      "id": "L0.05-Q2",
+      "type": "mcq",
+      "prompt": "EUR/USD = 1,0800 / 1,0802 et GBP/USD = 1,2600 / 1,2603 (chiffres fictifs). Quel est le prix ask de EUR/GBP reconstitué (livres à payer pour acheter 1 euro) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,85730"
+        },
+        {
+          "id": "b",
+          "text": "0,85694"
+        },
+        {
+          "id": "c",
+          "text": "0,85712"
+        },
+        {
+          "id": "d",
+          "text": "0,85760"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Pour acheter l'euro avec des livres : on vend des livres contre des dollars au bid de GBP/USD (1,2600) et on achète l'euro au ask de EUR/USD (1,0802). Ask = 1,0802 ÷ 1,2600 = 0,85730. Le bid correspondant est 1,0800 ÷ 1,2603 = 0,85694 ; 0,85712 est le milieu approximatif.",
+      "tags": [
+        "bid-ask",
+        "croise"
+      ]
+    },
+    {
+      "id": "L0.05-Q3",
+      "type": "mcq",
+      "prompt": "Avec EUR/USD = 1,0800 / 1,0802, tu vends 10 000 EUR contre des dollars. Combien reçois-tu ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "10 802 USD"
+        },
+        {
+          "id": "b",
+          "text": "9 257 USD"
+        },
+        {
+          "id": "c",
+          "text": "9 259 USD"
+        },
+        {
+          "id": "d",
+          "text": "10 800 USD"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Tu vends la devise de base : le fournisseur t'achète au bid (1,0800). 10 000 × 1,0800 = 10 800 USD. Le taux ask s'applique quand tu achètes l'euro.",
+      "tags": [
+        "conversion",
+        "bid-ask"
+      ]
+    },
+    {
+      "id": "L0.05-Q4",
+      "type": "mcq",
+      "prompt": "Que décrit l'arbitrage triangulaire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une garantie de profit pour tout particulier qui compare trois fournisseurs"
+        },
+        {
+          "id": "b",
+          "text": "Une boucle de trois échanges qui exploiterait, en théorie, un écart entre un croisé direct et le croisé implicite, écart que les spreads et la rapidité du marché font disparaître en pratique"
+        },
+        {
+          "id": "c",
+          "text": "Le calcul de la parité de pouvoir d'achat entre trois pays"
+        },
+        {
+          "id": "d",
+          "text": "L'achat simultané de trois paires pour diversifier le risque"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Si le croisé direct diffère du croisé implicite, une boucle (par exemple GBP → EUR → USD → GBP) rapporte théoriquement un gain. En pratique, les écarts sont très brefs, les spreads et les délais les absorbent, et ce n'est pas une stratégie accessible telle quelle.",
+      "tags": [
+        "arbitrage",
+        "coherence"
+      ]
+    },
+    {
+      "id": "L0.05-Q5",
+      "type": "mcq",
+      "prompt": "Parmi ces calculs, lequel est correct pour obtenir un GBP/USD implicite avec les taux de référence de la BCE ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "EUR/USD du 28 octobre + EUR/GBP du 28 octobre"
+        },
+        {
+          "id": "b",
+          "text": "EUR/USD du 28 octobre ÷ EUR/GBP du 26 octobre"
+        },
+        {
+          "id": "c",
+          "text": "EUR/GBP du 28 octobre ÷ EUR/USD du 28 octobre"
+        },
+        {
+          "id": "d",
+          "text": "EUR/USD du 28 octobre ÷ EUR/GBP du 28 octobre"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Les deux taux doivent être pris au même instant et à la même source. 1 GBP = (USD par EUR) ÷ (GBP par EUR) USD : 1,1133 ÷ 0,83785 ≈ 1,3288. Inverser la division donnerait l'inverse (0,7526).",
+      "tags": [
+        "meme-instant",
+        "croise"
+      ]
+    },
+    {
+      "id": "L0.05-Q6",
+      "type": "mcq",
+      "prompt": "Sachant 1 EUR = 655,957 XOF et EUR/USD = 1,0800 (fictif), combien de XOF faut-il, à ce taux implicite, pour 1 USD ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "708,43"
+        },
+        {
+          "id": "b",
+          "text": "655,96"
+        },
+        {
+          "id": "c",
+          "text": "607,37"
+        },
+        {
+          "id": "d",
+          "text": "0,0016"
+        }
+      ],
+      "correct": "c",
+      "explanation": "1 USD = 1 ÷ 1,0800 EUR = 0,9259 EUR ; × 655,957 = 607,37 XOF. En multipliant (708,43), on obtiendrait XOF par « 1,08 EUR », pas par dollar.",
+      "tags": [
+        "xof",
+        "croise"
+      ]
+    },
+    {
+      "id": "L0.05-Q7",
+      "type": "mcq",
+      "prompt": "La parité 1 EUR = 655,957 XOF est fixe. Si EUR/USD passe de 1,1000 à 1,0500 (le dollar se renforce face à l'euro), que devient le nombre de XOF pour 1 USD ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il monte de 596 à 625 environ"
+        },
+        {
+          "id": "b",
+          "text": "Il reste identique, car la parité est fixe"
+        },
+        {
+          "id": "c",
+          "text": "Il baisse de 596 à 576 environ"
+        },
+        {
+          "id": "d",
+          "text": "On ne peut pas le calculer sans le taux USD/XOF direct"
+        }
+      ],
+      "correct": "a",
+      "explanation": "XOF par USD = 655,957 ÷ EUR/USD : 655,957 ÷ 1,1000 ≈ 596,32 et 655,957 ÷ 1,0500 ≈ 624,72. La parité est fixe face à l'euro, pas face au dollar : le franc CFA se déprécie face au dollar quand l'euro faiblit.",
+      "tags": [
+        "xof",
+        "dollar"
+      ]
+    },
+    {
+      "id": "L0.05-Q8",
+      "type": "mcq",
+      "prompt": "Un même panier coûte 1 000 EUR en zone euro et 1 200 USD aux États-Unis ; le taux de marché est 1,08. Quelle conclusion est cohérente avec ce que dit la source du FMI utilisée dans la leçon ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "EUR/USD va monter vers 1,20 le mois prochain"
+        },
+        {
+          "id": "b",
+          "text": "La PPP implicite est 1,20 ; elle sert à comparer des niveaux de prix et ne prédit pas le taux de marché à court terme"
+        },
+        {
+          "id": "c",
+          "text": "Le taux de marché de 1,08 est faux et doit être corrigé"
+        },
+        {
+          "id": "d",
+          "text": "La PPP et le taux de marché sont toujours égaux dans les économies avancées"
+        }
+      ],
+      "correct": "b",
+      "explanation": "PPP = 1 200 ÷ 1 000 = 1,20. L'article du FMI (2018) présente la PPP comme relativement stable et le taux de marché comme volatil, utile pour comparer niveaux de vie et PIB ; il ne décrit pas de retour rapide du marché vers la PPP.",
+      "tags": [
+        "ppp",
+        "limites"
+      ]
+    }
+  ],
+  "revision": 1
+}

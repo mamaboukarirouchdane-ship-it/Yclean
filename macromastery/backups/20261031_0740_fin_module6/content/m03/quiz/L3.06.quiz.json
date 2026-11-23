@@ -1,0 +1,233 @@
+{
+  "lessonId": "L3.06",
+  "title": "Quiz — L'indice des prix à la consommation (CPI)",
+  "passThreshold": 0.8,
+  "note": "Quiz de la leçon L3.06",
+  "questions": [
+    {
+      "id": "L3.06-Q1",
+      "type": "mcq",
+      "prompt": "Qu'est-ce que le « cœur » du CPI ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'indice hors logement"
+        },
+        {
+          "id": "b",
+          "text": "L'indice des loyers seuls"
+        },
+        {
+          "id": "c",
+          "text": "L'indice hors alimentation et énergie"
+        },
+        {
+          "id": "d",
+          "text": "L'indice des biens durables"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le cœur exclut l'alimentation et l'énergie, deux postes volatils ; l'indice d'ensemble les inclut.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L3.06-Q2",
+      "type": "mcq",
+      "prompt": "Quelle est l'annualisation d'une variation mensuelle de +0,3 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ 3,66 %"
+        },
+        {
+          "id": "b",
+          "text": "Environ 3,0 %"
+        },
+        {
+          "id": "c",
+          "text": "Environ 0,36 %"
+        },
+        {
+          "id": "d",
+          "text": "Environ 7,4 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "(1 + 0,003)¹² − 1 = 3,66 %, formule composée.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.06-Q3",
+      "type": "mcq",
+      "prompt": "Pourquoi annualiser un seul mois est-il risqué ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que le CPI est trimestriel"
+        },
+        {
+          "id": "b",
+          "text": "Parce que le CPI ne se calcule pas par mois"
+        },
+        {
+          "id": "c",
+          "text": "Parce que l'annualisation est interdite"
+        },
+        {
+          "id": "d",
+          "text": "Le bruit mensuel est multiplié par douze et l'arrondi devient très influent"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Une variation arrondie à 0,1 point près donne une annualisation incertaine ; on préfère des moyennes sur trois ou six mois.",
+      "tags": [
+        "methode"
+      ]
+    },
+    {
+      "id": "L3.06-Q4",
+      "type": "mcq",
+      "prompt": "Importances relatives (décembre 2025) : logement 35,625 et OER 26,204. Quelle part de l'OER dans le logement ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ 26,2 %"
+        },
+        {
+          "id": "b",
+          "text": "Environ 73,6 %"
+        },
+        {
+          "id": "c",
+          "text": "Environ 22,0 %"
+        },
+        {
+          "id": "d",
+          "text": "Environ 35,6 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "26,204 ÷ 35,625 = 73,6 % ; le loyer (7,840) représente 22,0 % du logement.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.06-Q5",
+      "type": "mcq",
+      "prompt": "Que représente l'OER ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les intérêts hypothécaires payés"
+        },
+        {
+          "id": "b",
+          "text": "Le loyer réellement payé par les locataires"
+        },
+        {
+          "id": "c",
+          "text": "Le prix des maisons neuves"
+        },
+        {
+          "id": "d",
+          "text": "Le loyer qu'un propriétaire occupant paierait pour louer son logement, estimé"
+        }
+      ],
+      "correct": "d",
+      "explanation": "L'OER est un loyer équivalent estimé ; ce n'est pas une dépense observée.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L3.06-Q6",
+      "type": "mcq",
+      "prompt": "Pondérations fictives : énergie 7 %, cœur 79 %, alimentation 14 %. Variations : énergie +5,2 %, cœur +0,3 %, alimentation 0,0 %. Quelle hausse d'ensemble ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ +1,10 point"
+        },
+        {
+          "id": "b",
+          "text": "Environ +0,24 point"
+        },
+        {
+          "id": "c",
+          "text": "Environ +0,60 point"
+        },
+        {
+          "id": "d",
+          "text": "Environ +0,36 point"
+        }
+      ],
+      "correct": "c",
+      "explanation": "0,07 × 5,2 + 0,79 × 0,3 + 0 = 0,364 + 0,237 = 0,601 point ; l'énergie en explique 60,6 %.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.06-Q7",
+      "type": "mcq",
+      "prompt": "Cœur publié à 0,3 % (arrondi à 0,1) pour une attente de 0,22 % : quelle est la fourchette réelle de la surprise ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "De +0,03 à +0,13 point"
+        },
+        {
+          "id": "b",
+          "text": "Exactement +0,08 point"
+        },
+        {
+          "id": "c",
+          "text": "De −0,08 à +0,08"
+        },
+        {
+          "id": "d",
+          "text": "De 0 à +0,3"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Une publication de 0,3 % recouvre 0,25 à 0,35 ; moins 0,22, la surprise vaut +0,03 à +0,13 point.",
+      "tags": [
+        "surprise"
+      ]
+    },
+    {
+      "id": "L3.06-Q8",
+      "type": "mcq",
+      "prompt": "Quelle erreur consiste à comparer un chiffre mensuel corrigé à un chiffre sur 12 mois ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aucune, ils sont équivalents"
+        },
+        {
+          "id": "b",
+          "text": "Mélanger deux périodes et deux traitements saisonniers"
+        },
+        {
+          "id": "c",
+          "text": "Un effet de base"
+        },
+        {
+          "id": "d",
+          "text": "Une erreur de pondération"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le mensuel est en général corrigé des variations saisonnières et le 12 mois non corrigé ; on ne les compare pas directement.",
+      "tags": [
+        "methode"
+      ]
+    }
+  ],
+  "revision": 1
+}

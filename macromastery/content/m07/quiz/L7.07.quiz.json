@@ -1,0 +1,235 @@
+{
+  "lessonId": "L7.07",
+  "title": "Quiz — Combiner positionnement et fondamentaux",
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L7.07-Q1",
+      "type": "mcq",
+      "prompt": "Quelle phrase est un constat (niveau A) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les spéculateurs anticipent une baisse des taux"
+        },
+        {
+          "id": "b",
+          "text": "Les spéculateurs ont pris leurs bénéfices"
+        },
+        {
+          "id": "c",
+          "text": "Le net Managed Money COMEX or est passé de 139 548 à 111 079 contrats entre le 08/09 et le 13/10"
+        },
+        {
+          "id": "d",
+          "text": "L'or va corriger"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Un constat est une donnée datée, chiffrée et sourcée. Les trois autres énoncés ajoutent un motif ou une prévision non observés.",
+      "tags": [
+        "niveaux"
+      ]
+    },
+    {
+      "id": "L7.07-Q2",
+      "type": "mcq",
+      "prompt": "Le net Managed Money baisse de 139 548 à 111 079 contrats. Quelle est la variation et son équivalent en tonnes ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−28 469 contrats, soit −20,4 % et ≈ 88,5 t"
+        },
+        {
+          "id": "b",
+          "text": "−28 469 contrats, soit ≈ 885 t"
+        },
+        {
+          "id": "c",
+          "text": "−2 847 contrats, soit ≈ 8,9 t"
+        },
+        {
+          "id": "d",
+          "text": "−20,4 contrats"
+        }
+      ],
+      "correct": "a",
+      "explanation": "139 548 − 111 079 = 28 469 ; × 100 ÷ 32 150,7466 = 88,5 t. La conversion rend les unités comparables, pas les natures équivalentes.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L7.07-Q3",
+      "type": "mcq",
+      "prompt": "Pourquoi des entrées positives dans les ETF ne contredisent-elles pas un repli de la position nette COT ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que les deux mesurent la même chose"
+        },
+        {
+          "id": "b",
+          "text": "Parce que les ETF sont des spéculateurs"
+        },
+        {
+          "id": "c",
+          "text": "Parce que le COT est faux"
+        },
+        {
+          "id": "d",
+          "text": "Ce sont des natures différentes : avoirs physiques de fonds contre exposition sur contrats à terme"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Un flux d'ETF n'est pas un achat spéculatif sur contrats ; les deux séries peuvent diverger sans erreur.",
+      "tags": [
+        "piliers"
+      ]
+    },
+    {
+      "id": "L7.07-Q4",
+      "type": "mcq",
+      "prompt": "Positionnement baissier et fondamentaux favorables : quelle lecture de la matrice ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Convergence baissière"
+        },
+        {
+          "id": "b",
+          "text": "Divergence et potentiel de retournement, sans garantie"
+        },
+        {
+          "id": "c",
+          "text": "Convergence haussière certaine"
+        },
+        {
+          "id": "d",
+          "text": "Signal d'achat"
+        }
+      ],
+      "correct": "b",
+      "explanation": "C'est la situation 3 : divergence. Elle indique une tension entre éléments, pas un retournement assuré.",
+      "tags": [
+        "matrice"
+      ]
+    },
+    {
+      "id": "L7.07-Q5",
+      "type": "mcq",
+      "prompt": "Le dernier rapport COT lu a 18 jours alors que la cadence est hebdomadaire. Que faire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le remplacer par une estimation"
+        },
+        {
+          "id": "b",
+          "text": "L'utiliser comme s'il était actuel"
+        },
+        {
+          "id": "c",
+          "text": "L'ignorer sans le mentionner"
+        },
+        {
+          "id": "d",
+          "text": "Classer le pilier positionnement en situation 6 (données trop anciennes) et le dire"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Une donnée périmée par rapport au critère écrit d'avance ne soutient plus la thèse : on le signale.",
+      "tags": [
+        "delai"
+      ]
+    },
+    {
+      "id": "L7.07-Q6",
+      "type": "mcq",
+      "prompt": "Quel élément est indispensable pour qu'une thèse soit réfutable ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une conviction forte"
+        },
+        {
+          "id": "b",
+          "text": "Un objectif de prix"
+        },
+        {
+          "id": "c",
+          "text": "Des conditions d'invalidation mesurables écrites avant d'observer la suite"
+        },
+        {
+          "id": "d",
+          "text": "Uniquement des indicateurs favorables"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Sans condition d'invalidation écrite d'avance, aucune observation ne peut contredire la thèse.",
+      "tags": [
+        "thèse"
+      ]
+    },
+    {
+      "id": "L7.07-Q7",
+      "type": "mcq",
+      "prompt": "Les 187 t reclassées au T1 2026 par rapport à la première estimation sont-elles des achats supplémentaires ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Non : c'est une reclassification vers la demande hors bourse (OTC), ni achats ajoutés ni achats disparus"
+        },
+        {
+          "id": "b",
+          "text": "Oui, ce sont des achats nouveaux"
+        },
+        {
+          "id": "c",
+          "text": "Oui, mais seulement au T2"
+        },
+        {
+          "id": "d",
+          "text": "Non, ce sont des ventes"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le communiqué du T2 2026 décrit une reclassification : elle ne s'ajoute à aucun calcul d'achats.",
+      "tags": [
+        "revision"
+      ]
+    },
+    {
+      "id": "L7.07-Q8",
+      "type": "mcq",
+      "prompt": "Sur quoi se fonde l'évaluation de la leçon ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La direction du prix"
+        },
+        {
+          "id": "b",
+          "text": "La qualité du raisonnement (sources, séparation des niveaux, invalidation), pas la direction devinée"
+        },
+        {
+          "id": "c",
+          "text": "Le nombre d'indicateurs cités"
+        },
+        {
+          "id": "d",
+          "text": "La longueur de la fiche"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Une bonne analyse fondamentale ne garantit pas une transaction gagnante : on évalue la méthode.",
+      "tags": [
+        "evaluation"
+      ]
+    }
+  ],
+  "revision": 1
+}

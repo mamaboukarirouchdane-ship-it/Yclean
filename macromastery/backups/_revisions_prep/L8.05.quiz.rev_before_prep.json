@@ -1,0 +1,238 @@
+{
+  "lessonId": "L8.05",
+  "title": "Quiz — Risk-on et risk-off",
+  "passThreshold": 0.8,
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L8.05-Q1",
+      "type": "mcq",
+      "prompt": "Quelle définition de travail de « risk-off » respecte la leçon ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une prévision du prix de l'or"
+        },
+        {
+          "id": "b",
+          "text": "Une cause des baisses des actions"
+        },
+        {
+          "id": "c",
+          "text": "Un résumé de co-mouvements de prix sur un ensemble d'indicateurs et un horizon fixés, sans valeur causale ni prédictive"
+        },
+        {
+          "id": "d",
+          "text": "Un état unique du marché valable pour tous les indicateurs"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le régime décrit ce que les prix ont fait ensemble ; il dépend du choix des indicateurs et de l'horizon, et ne dit rien de la cause ni de la suite.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L8.05-Q2",
+      "type": "mcq",
+      "prompt": "Le VIX est-il une mesure de perception ou de comportement ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "De perception : une volatilité attendue déduite de prix d'options sur le S&P 500 à 30 jours"
+        },
+        {
+          "id": "b",
+          "text": "De comportement : il mesure les ventes des portefeuilles"
+        },
+        {
+          "id": "c",
+          "text": "Ni l'un ni l'autre"
+        },
+        {
+          "id": "d",
+          "text": "Il mesure le prix de l'or"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La méthodologie CBOE lue décrit une volatilité attendue à maturité constante déduite d'options ; elle ne mesure pas ce que les portefeuilles font.",
+      "tags": [
+        "vix"
+      ]
+    },
+    {
+      "id": "L8.05-Q3",
+      "type": "mcq",
+      "prompt": "Que disent les deux sources lues sur le franc suisse comme devise refuge ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il se comporte comme le dollar"
+        },
+        {
+          "id": "b",
+          "text": "Il est toujours un refuge contre toutes les devises"
+        },
+        {
+          "id": "c",
+          "text": "Il n'est jamais un refuge"
+        },
+        {
+          "id": "d",
+          "text": "Refuge net dans l'une, mais contre certaines devises seulement dans l'autre : il faut préciser la paire et la période"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La chronique CEPR (2000-2013) place franc et yen parmi les refuges les plus nets ; le document de la BNS trouve une appréciation contre l'euro mais une dépréciation contre le dollar, le yen et la livre.",
+      "tags": [
+        "refuge",
+        "paires"
+      ]
+    },
+    {
+      "id": "L8.05-Q4",
+      "type": "mcq",
+      "prompt": "Selon un commentaire de gestionnaire (mars 2020), l'or a baissé de 10 % la semaine du 9 au 16 mars alors que le S&P 500 baissait de 13 %. Quel est le statut correct de ce chiffre dans la leçon ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Fait confirmé par une série officielle"
+        },
+        {
+          "id": "b",
+          "text": "Fait rapporté non vérifié, instrument non précisé, sans recalcul ni causalité établie"
+        },
+        {
+          "id": "c",
+          "text": "Prévision"
+        },
+        {
+          "id": "d",
+          "text": "Résultat d'une étude académique"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le commentaire ne cite pas ses sources et ne précise pas l'instrument ; la leçon le conserve comme rapporté et ne le recalcule pas.",
+      "tags": [
+        "statut",
+        "mars2020"
+      ]
+    },
+    {
+      "id": "L8.05-Q5",
+      "type": "mcq",
+      "prompt": "Un score de +3 sur 6 avec une règle d'avance exigeant +4 : quel verdict ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "On abaisse le seuil à +3"
+        },
+        {
+          "id": "b",
+          "text": "Risk-off"
+        },
+        {
+          "id": "c",
+          "text": "Risk-on"
+        },
+        {
+          "id": "d",
+          "text": "Régime non tranché"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La règle est fixée avant d'observer les prix ; la changer après coup détruit son sens. « Non tranché » est un verdict légitime.",
+      "tags": [
+        "matrice",
+        "regle"
+      ]
+    },
+    {
+      "id": "L8.05-Q6",
+      "type": "mcq",
+      "prompt": "Le contrat de décembre du COMEX a clôturé à 278,60 $ le 13/11/2001 puis à 275,30 $ le 16/11/2001. Quelle variation, et pourquoi le calcul est-il permis ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ +1,2 % ; il faut inverser"
+        },
+        {
+          "id": "b",
+          "text": "≈ −8,2 % depuis le 300 $ du 14/09"
+        },
+        {
+          "id": "c",
+          "text": "≈ −1,18 % ; même contrat, deux clôtures"
+        },
+        {
+          "id": "d",
+          "text": "Aucun calcul n'est permis"
+        }
+      ],
+      "correct": "c",
+      "explanation": "275,30 / 278,60 − 1 = −0,0118 ; deux clôtures du même contrat. Le 300 $ est un plus haut, pas une clôture : on ne le mélange pas.",
+      "tags": [
+        "calcul",
+        "bases"
+      ]
+    },
+    {
+      "id": "L8.05-Q7",
+      "type": "mcq",
+      "prompt": "Entre le 8/03 et le 30/09/2022, l'or passe de 2 069 $ à 1 672 $ (fixings de l'après-midi rapportés par le WGC). Quelle lecture respecte la méthode ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−19,2 % ; une guerre n'implique pas une hausse de l'or, mais la part du dollar et des taux n'est pas mesurée"
+        },
+        {
+          "id": "b",
+          "text": "−19,2 % ; la guerre a causé la baisse"
+        },
+        {
+          "id": "c",
+          "text": "+19,2 %"
+        },
+        {
+          "id": "d",
+          "text": "Aucune conclusion n'est possible sur le prix"
+        }
+      ],
+      "correct": "a",
+      "explanation": "1 672 / 2 069 − 1 = −0,1919. Le WGC évoque le dollar fort et les hausses de taux ; la variation décrit un prix, non un effet isolé de la guerre.",
+      "tags": [
+        "2022",
+        "causalite"
+      ]
+    },
+    {
+      "id": "L8.05-Q8",
+      "type": "mcq",
+      "prompt": "Un indice de volatilité de 24 lu comme annualisé en %. Quel ordre de grandeur de l'écart-type attendu sur 30 jours ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 24 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ 6,9 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ 1,5 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ 0,7 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "24 × √(30/365) ≈ 6,88 % ; c'est un ordre de grandeur sous hypothèses (indépendance, volatilité constante), et la lecture annualisée est une convention non confirmée par le résumé lu.",
+      "tags": [
+        "volatilite"
+      ]
+    }
+  ],
+  "revision": 1
+}

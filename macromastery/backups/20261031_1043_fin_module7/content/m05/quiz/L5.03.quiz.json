@@ -1,0 +1,233 @@
+{
+  "lessonId": "L5.03",
+  "title": "Quiz — L'or et les taux réels",
+  "passThreshold": 0.8,
+  "note": "Seuil : 7 bonnes réponses sur 8.",
+  "questions": [
+    {
+      "id": "L5.03-Q1",
+      "type": "mcq",
+      "prompt": "Pourquoi une hausse du rendement réel américain peut-elle pénaliser l'or, toutes choses égales par ailleurs ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que la Fed achète de l'or"
+        },
+        {
+          "id": "b",
+          "text": "Parce que l'or paie un coupon indexé"
+        },
+        {
+          "id": "c",
+          "text": "Le coût d'opportunité d'un actif sans revenu courant augmente"
+        },
+        {
+          "id": "d",
+          "text": "Parce que l'inflation baisse toujours"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Détenir de l'or fait renoncer au rendement réel d'un titre indexé ; plus ce rendement monte, plus le renoncement coûte. C'est un mécanisme, non une loi de marché.",
+      "tags": [
+        "mecanisme"
+      ]
+    },
+    {
+      "id": "L5.03-Q2",
+      "type": "mcq",
+      "prompt": "Nominal 4,95 %, rendement réel 2,653 % : que valent l'inflation implicite exacte (Fisher) et la soustraction ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2,24 % et 2,30 %"
+        },
+        {
+          "id": "b",
+          "text": "2,60 % et 2,30 %"
+        },
+        {
+          "id": "c",
+          "text": "2,30 % et 2,24 %"
+        },
+        {
+          "id": "d",
+          "text": "7,60 % dans les deux cas"
+        }
+      ],
+      "correct": "a",
+      "explanation": "1,0495 ÷ 1,02653 − 1 = 2,238 % ; 4,95 − 2,653 = 2,297 % ; la soustraction surestime légèrement.",
+      "tags": [
+        "fisher"
+      ]
+    },
+    {
+      "id": "L5.03-Q3",
+      "type": "mcq",
+      "prompt": "Prix 4 060 $, rendement réel 2,64 % : revenu réel renoncé par once et par an ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 24 $"
+        },
+        {
+          "id": "b",
+          "text": "≈ 2,64 $"
+        },
+        {
+          "id": "c",
+          "text": "≈ 1 540 $"
+        },
+        {
+          "id": "d",
+          "text": "≈ 107 $"
+        }
+      ],
+      "correct": "d",
+      "explanation": "4 060 × 0,0264 = 107,2 $ ; 24 $ est la différence entre 2,64 % et 2,04 %.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.03-Q4",
+      "type": "mcq",
+      "prompt": "TIPS, principal 1 000 $, ratio d'indice 0,95 à l'échéance : que reçoit l'investisseur au remboursement ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "950 $"
+        },
+        {
+          "id": "b",
+          "text": "1 000 $ (le plus élevé du principal ajusté et de l'original)"
+        },
+        {
+          "id": "c",
+          "text": "1 050 $"
+        },
+        {
+          "id": "d",
+          "text": "Rien"
+        }
+      ],
+      "correct": "b",
+      "explanation": "À l'échéance, l'investisseur reçoit le plus élevé du principal ajusté et du principal d'origine.",
+      "tags": [
+        "tips"
+      ]
+    },
+    {
+      "id": "L5.03-Q5",
+      "type": "mcq",
+      "prompt": "Rendement réel +60 pb et or −10,6 % entre fin mai et fin octobre 2026. Quelle conclusion est prudente ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La relation est une loi"
+        },
+        {
+          "id": "b",
+          "text": "L'or baisse de 0,18 % par point de base"
+        },
+        {
+          "id": "c",
+          "text": "Les taux réels causent la baisse de l'or"
+        },
+        {
+          "id": "d",
+          "text": "Direction cohérente avec la relation inverse sur cette fenêtre, sans corrélation ni causalité établies"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Deux prix, des moyennes mensuelles contre des points, un dollar non contrôlé : on décrit, on n'estime pas de sensibilité.",
+      "tags": [
+        "interpretation"
+      ]
+    },
+    {
+      "id": "L5.03-Q6",
+      "type": "mcq",
+      "prompt": "L'or atteint un record alors que le rendement réel à 10 ans dépasse 2 % (2025). Quelle lecture est exacte ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les taux réels n'ont jamais d'effet"
+        },
+        {
+          "id": "b",
+          "text": "Le mécanisme est faux"
+        },
+        {
+          "id": "c",
+          "text": "D'autres forces (achats officiels, flux, risques, dollar) peuvent dominer le mécanisme du coût d'opportunité"
+        },
+        {
+          "id": "d",
+          "text": "Le dollar n'a aucun rôle"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Une rupture signale une domination d'autres facteurs sur une période ; le mécanisme n'est pas pour autant réfuté.",
+      "tags": [
+        "rupture"
+      ]
+    },
+    {
+      "id": "L5.03-Q7",
+      "type": "mcq",
+      "prompt": "Corrélations de −0,998 et +0,991 sur deux sous-périodes, −0,118 en global (simulation). Que montre-t-on ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Deux régimes opposés peuvent se compenser dans une statistique globale"
+        },
+        {
+          "id": "b",
+          "text": "Qu'il n'y a aucune relation"
+        },
+        {
+          "id": "c",
+          "text": "Que la corrélation prouve la causalité"
+        },
+        {
+          "id": "d",
+          "text": "Que le dollar explique tout"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Une statistique globale proche de zéro masque des régimes de sens opposé ; il faut des sous-périodes.",
+      "tags": [
+        "regimes"
+      ]
+    },
+    {
+      "id": "L5.03-Q8",
+      "type": "mcq",
+      "prompt": "Quel est l'usage prudent des taux réels dans un scénario XAU/USD ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un signal d'achat/vente automatique"
+        },
+        {
+          "id": "b",
+          "text": "Un filtre de contexte croisé avec dollar, flux et calendrier, avec conditions et invalidation"
+        },
+        {
+          "id": "c",
+          "text": "Un indicateur prédictif unique"
+        },
+        {
+          "id": "d",
+          "text": "Un substitut à la gestion du risque"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Un scénario conditionnel nomme ses conditions et son invalidation ; il ne garantit pas un gain.",
+      "tags": [
+        "scenario"
+      ]
+    }
+  ],
+  "revision": 1
+}

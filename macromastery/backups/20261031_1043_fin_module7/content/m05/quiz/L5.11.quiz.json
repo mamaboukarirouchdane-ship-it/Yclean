@@ -1,0 +1,233 @@
+{
+  "lessonId": "L5.11",
+  "title": "Quiz — Tableau de bord fondamental XAU/USD",
+  "passThreshold": 0.8,
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L5.11-Q1",
+      "type": "mcq",
+      "prompt": "Le 30/10/2026, quel est l'âge d'un taux mensuel de septembre 2026 (publié le 1er octobre) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0 jour, car il vient d'être publié"
+        },
+        {
+          "id": "b",
+          "text": "29 jours, depuis la publication"
+        },
+        {
+          "id": "c",
+          "text": "30 jours, mesurés depuis la fin de la période"
+        },
+        {
+          "id": "d",
+          "text": "Il n'a pas d'âge"
+        }
+      ],
+      "correct": "c",
+      "explanation": "L'âge se compte depuis la fin de la période mesurée (30/09), pas depuis la publication : 30 jours.",
+      "tags": [
+        "age"
+      ]
+    },
+    {
+      "id": "L5.11-Q2",
+      "type": "mcq",
+      "prompt": "Taux réel 2,64 % et point mort 2,35 % en septembre : taux nominal approché ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 4,99 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ 0,29 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ 6,2 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ 2,5 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Nominal ≈ réel + point mort : 2,64 + 2,35 = 4,99 %, sur des moyennes mensuelles.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.11-Q3",
+      "type": "mcq",
+      "prompt": "La hausse de décembre à 88 % (21/10) est…",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un chiffre de la BCE"
+        },
+        {
+          "id": "b",
+          "text": "Une décision de la Fed"
+        },
+        {
+          "id": "c",
+          "text": "Une certitude"
+        },
+        {
+          "id": "d",
+          "text": "Une anticipation de marché d'avant le communiqué, pas une décision"
+        }
+      ],
+      "correct": "d",
+      "explanation": "FedWatch exprime une probabilité déduite des prix ; elle date de neuf jours et précède le communiqué du 28/10.",
+      "tags": [
+        "fed"
+      ]
+    },
+    {
+      "id": "L5.11-Q4",
+      "type": "mcq",
+      "prompt": "Que montre la note globale qui passe de −1 à 0 puis à +2 selon les pondérations ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que l'or va monter"
+        },
+        {
+          "id": "b",
+          "text": "Qu'elle dépend davantage des pondérations que des données"
+        },
+        {
+          "id": "c",
+          "text": "Que l'or va baisser"
+        },
+        {
+          "id": "d",
+          "text": "Que les données sont fausses"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Mêmes données, trois résultats : les pondérations ne reposent sur aucune étude lue.",
+      "tags": [
+        "note"
+      ]
+    },
+    {
+      "id": "L5.11-Q5",
+      "type": "mcq",
+      "prompt": "Comment traiter une case « positionnement : non lu » ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La supprimer du tableau"
+        },
+        {
+          "id": "b",
+          "text": "La noter 0"
+        },
+        {
+          "id": "c",
+          "text": "La noter +1"
+        },
+        {
+          "id": "d",
+          "text": "La laisser vide et la compter comme une lacune, pas comme un 0"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Un zéro dirait « neutre » alors que l'information est inconnue ; la lacune fait partie du tableau.",
+      "tags": [
+        "lacune"
+      ]
+    },
+    {
+      "id": "L5.11-Q6",
+      "type": "mcq",
+      "prompt": "Prix de 4 137,94 $ (21/10) et de 4 019,8 $ (29/10) : que dire de leur écart de −2,85 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "C'est le recul officiel de l'or"
+        },
+        {
+          "id": "b",
+          "text": "C'est la réaction exacte à la Fed"
+        },
+        {
+          "id": "c",
+          "text": "Indicatif seulement : sources et mesures différentes"
+        },
+        {
+          "id": "d",
+          "text": "Il est sans signification mathématique"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Cours de séance d'une dépêche et bougie d'un article d'analyse : comparaison non homogène, causalité non établie.",
+      "tags": [
+        "prix"
+      ]
+    },
+    {
+      "id": "L5.11-Q7",
+      "type": "mcq",
+      "prompt": "Septembre 2011 : record de 1 920 $ le 6/09, moins de 1 600 $ le 26/09. Variation maximale en 20 jours ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ −16,7 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ −6,7 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ −26,7 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ −1,67 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "1 600 ÷ 1 920 − 1 = −16,7 % ; la source dit « inférieur à 1 600 », donc au plus.",
+      "tags": [
+        "histoire"
+      ]
+    },
+    {
+      "id": "L5.11-Q8",
+      "type": "mcq",
+      "prompt": "« Le tableau est favorable, donc l'or va monter » : quelle est la meilleure réponse ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "C'est correct si au moins quatre cadrans sont verts"
+        },
+        {
+          "id": "b",
+          "text": "Un tableau décrit des conditions datées ; il ne prévoit pas et ne garantit pas un gain"
+        },
+        {
+          "id": "c",
+          "text": "C'est correct si la Fed est neutre"
+        },
+        {
+          "id": "d",
+          "text": "C'est correct pour tout horizon"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Notes arbitraires, données anciennes, cadrans manquants : aucune prévision ne s'en déduit.",
+      "tags": [
+        "limites"
+      ]
+    }
+  ],
+  "revision": 1
+}

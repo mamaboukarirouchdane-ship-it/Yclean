@@ -1,0 +1,180 @@
+{
+  "chapterId": "3.2",
+  "module": 3,
+  "title": "Quiz de chapitre 3.2 — Emploi : lecture du rapport et protocole en dix minutes (L3.04–L3.05)",
+  "passThreshold": 0.8333333333333334,
+  "requiredCorrect": 5,
+  "passRule": "5 bonnes réponses sur 6 (règle R1 : ⌈0,8 × 6⌉ = 5 ; seuil pédagogique provisoire)",
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C3.2-Q1",
+      "type": "mcq",
+      "prompt": "Quelle enquête fournit l'emploi salarié non agricole, et laquelle le taux de chômage ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aucune des deux"
+        },
+        {
+          "id": "b",
+          "text": "CPS pour les deux"
+        },
+        {
+          "id": "c",
+          "text": "CES pour les deux"
+        },
+        {
+          "id": "d",
+          "text": "Enquête auprès des établissements (CES) ; enquête auprès des ménages (CPS)"
+        }
+      ],
+      "correct": "d",
+      "explanation": "L'emploi salarié vient de l'enquête sur les établissements, le taux de chômage de l'enquête sur les ménages ; leurs précisions diffèrent.",
+      "tags": [
+        "ces-cps"
+      ]
+    },
+    {
+      "id": "C3.2-Q2",
+      "type": "mcq",
+      "prompt": "Emploi +29 000 avec un intervalle de ±122 000 à 90 %. Quel intervalle ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "De +29 000 à +151 000"
+        },
+        {
+          "id": "b",
+          "text": "De −93 000 à +151 000"
+        },
+        {
+          "id": "c",
+          "text": "De −122 000 à +122 000"
+        },
+        {
+          "id": "d",
+          "text": "De 0 à +58 000"
+        }
+      ],
+      "correct": "b",
+      "explanation": "29 000 − 122 000 = −93 000 et 29 000 + 122 000 = +151 000 : le chiffre n'est pas distinguable de zéro au niveau de confiance de 90 %.",
+      "tags": [
+        "intervalle"
+      ]
+    },
+    {
+      "id": "C3.2-Q3",
+      "type": "mcq",
+      "prompt": "Secteur privé +46 000 et gouvernement −17 000 : quel total ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+46 000"
+        },
+        {
+          "id": "b",
+          "text": "+63 000"
+        },
+        {
+          "id": "c",
+          "text": "−63 000"
+        },
+        {
+          "id": "d",
+          "text": "+29 000"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le total non agricole est la somme du privé et du gouvernement : 46 000 − 17 000 = 29 000.",
+      "tags": [
+        "coherence"
+      ]
+    },
+    {
+      "id": "C3.2-Q4",
+      "type": "mcq",
+      "prompt": "Variations révisées +29 000, +133 000 et −10 000 : moyenne sur trois mois ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ +17 000"
+        },
+        {
+          "id": "b",
+          "text": "Environ +152 000"
+        },
+        {
+          "id": "c",
+          "text": "Environ +51 000"
+        },
+        {
+          "id": "d",
+          "text": "Environ +29 000"
+        }
+      ],
+      "correct": "c",
+      "explanation": "(29 + 133 − 10) ÷ 3 = 50,67 milliers, soit environ +51 000.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "C3.2-Q5",
+      "type": "mcq",
+      "prompt": "Salaire horaire +3,0 % et inflation +3,7 % sur 12 mois : salaire réel ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ −0,68 %"
+        },
+        {
+          "id": "b",
+          "text": "Environ +0,7 %"
+        },
+        {
+          "id": "c",
+          "text": "Environ +6,7 %"
+        },
+        {
+          "id": "d",
+          "text": "0 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "1,030 ÷ 1,037 − 1 = −0,68 % : en termes réels, le salaire moyen recule légèrement.",
+      "tags": [
+        "salaire-reel"
+      ]
+    },
+    {
+      "id": "C3.2-Q6",
+      "type": "mcq",
+      "prompt": "Activité 61,8 % et emploi/population 59,2 % : quel taux de chômage ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ 2,6 %"
+        },
+        {
+          "id": "b",
+          "text": "Environ 4,21 %"
+        },
+        {
+          "id": "c",
+          "text": "Environ 59,2 %"
+        },
+        {
+          "id": "d",
+          "text": "Environ 61,8 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "(61,8 − 59,2) ÷ 61,8 = 4,21 % : contrôle de cohérence avec le taux publié de 4,2 %.",
+      "tags": [
+        "coherence"
+      ]
+    }
+  ],
+  "revision": 1
+}

@@ -1,0 +1,236 @@
+---
+id: L3.06
+module: 3
+order: 6
+title: "L'indice des prix à la consommation (CPI) : construction, composantes et lecture de la surprise"
+title_initial: "L'indice des prix à la consommation (CPI)"
+level: "intermédiaire"
+duration_hours: 3
+prerequisites: ["L3.02", "L3.03", "L3.05"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L3.06.quiz.json"
+sources: ["S-BLS-02", "S-BLS-12", "S-BLS-13", "S-IVL-01", "S-VBZ-01"]
+---
+
+# L3.06 — L'indice des prix à la consommation (CPI) : construction, composantes et lecture de la surprise
+
+> **Convention de lecture.** **[Fait]** = énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. expliquer **comment le CPI est construit** (panier, pondérations, collecte) et ce qu'il mesure ;
+2. distinguer **variation mensuelle corrigée** et **variation sur 12 mois non corrigée**, et **annualiser** une variation mensuelle ;
+3. lire l'**indice d'ensemble**, l'**indice hors alimentation et énergie** (« cœur ») et leurs composantes ;
+4. expliquer le **poids du logement** et du **loyer équivalent** (OER) ;
+5. calculer une **contribution** et un **effet de base** ;
+6. lire une **surprise de CPI** en tenant compte de l'arrondi, du consensus et de ses limites.
+
+## 2. Prérequis
+
+- Consensus et surprise (L3.02), standardisation (L3.03), fiche de lecture (L3.05) ; inflation et mesures (module 1).
+
+## 3. Explication intuitive
+
+Le CPI répond à une question simple : combien coûte, ce mois-ci, un panier de biens et de services représentatif de ce que les ménages urbains achètent, comparé au mois dernier et à l'an dernier ? Chaque produit compte en proportion de la part du budget qu'il représente. L'énergie bouge vite mais pèse peu ; le logement bouge lentement mais pèse lourd. C'est pourquoi un mois d'essence très cher peut faire monter l'indice d'ensemble sans rien changer à la tendance de fond, et pourquoi les marchés regardent aussi le « cœur », plus lent. Le chiffre est publié par le BLS ; il est attendu par le marché ; ce qui compte pour les prix d'actifs est l'**écart** avec l'attente, puis ce que cet écart dit de la trajectoire de la banque centrale.
+
+## 4. Développement technique
+
+### 4.1 Ce que mesure le CPI
+
+**[Fait]** (S-BLS-12, Handbook of Methods du BLS, résumé automatique ; non relu intégralement) : le CPI s'appuie sur des données de prix collectées par le BLS et sur des données de dépenses des ménages ; les prix portent sur un panier de biens et services, et les pondérations proviennent des dépenses déclarées. Le détail des enquêtes (échantillons de points de vente, enquête sur les dépenses) est dans le *Handbook*.
+
+**[Définition]** (convention de cours) :
+- **CPI-U** : indice pour l'ensemble des consommateurs urbains ;
+- **Indice d'ensemble** (*headline*) : tous les postes ;
+- **Cœur** (*core*) : hors alimentation et énergie, deux postes volatils ;
+- **Pondération (importance relative)** : part d'un poste dans la dépense totale, mise à jour périodiquement ;
+- **Contribution** d'un poste à la variation de l'indice = pondération × variation du poste.
+
+**[Interprétation]** Le CPI est un indice de **prix de consommation payés par les ménages** ; il n'est pas l'indicateur retenu par la Fed pour son objectif de 2 % (c'est l'indice PCE, S-FED-01 ; voir L3.07).
+
+### 4.2 Mensuel, annuel, annualisé
+
+**[Définition]**
+- Variation mensuelle : généralement publiée **corrigée des variations saisonnières**.
+- Variation sur 12 mois : généralement publiée sur les indices **non corrigés**.
+- **Annualisation** : (1 + variation mensuelle)¹² − 1.
+
+**[Fait]** (S-BLS-02, communiqué du 14/10/2026, résumé automatique) : septembre 2026, ensemble +0,6 % (mensuel corrigé) et +3,7 % (12 mois non corrigé).
+
+**[Calcul de l'auteur]** 1,006¹² − 1 = **7,44 %** annualisé. Une variation mensuelle arrondie à 0,1 point près donne une annualisation très incertaine : 0,55 % → 6,8 % ; 0,65 % → 8,1 % (ordre de grandeur). Pour le cœur : 1,003¹² − 1 = **3,66 %**, contre 2,6 % sur 12 mois publié.
+
+**[Interprétation]** Un seul mois annualisé est du bruit amplifié par douze ; la moyenne sur trois ou six mois est plus informative.
+
+### 4.3 Le logement, le loyer équivalent et le cœur
+
+**[Fait]** (S-BLS-13, fiche du BLS sur le loyer équivalent, résumé automatique) : importance relative en **décembre 2025**, en pourcentage de l'indice : logement (*shelter*) **35,625** ; loyer équivalent des propriétaires occupants (OER) **26,204** ; loyers **7,840** ; hébergement hors domicile **1,289** ; assurance du locataire **0,292**.
+
+**[Calcul de l'auteur]**
+- Somme : 26,204 + 7,840 + 1,289 + 0,292 = **35,625** ✓ ;
+- part de l'OER dans le logement : 26,204 ÷ 35,625 = **73,6 %** ; du loyer : 22,0 % ; de l'hébergement : 3,6 %.
+
+**[Définition]** L'**OER** estime ce qu'un propriétaire occupant paierait pour louer son logement ; ce n'est pas une dépense observée. Il évolue lentement, car il suit des loyers qui se renouvellent par étapes.
+
+**[Fait]** (S-BLS-02) : logement +0,4 % sur le mois et +3,2 % sur 12 mois en septembre 2026 ; cœur +0,3 % / +2,6 % ; alimentation 0,0 % / +2,5 % ; énergie +5,2 % / +20,4 %.
+
+**[Interprétation]** Le logement pèse plus du tiers du panier : une variation de 0,1 point de son indice déplace l'ensemble d'environ 0,035 point. C'est pourquoi on suit sa tendance. Les marchés regardent aussi des agrégats de services hors logement (souvent appelés *supercore*) ; **leur définition n'a pas été lue dans une source officielle** : ne pas la figer (point à vérifier).
+
+### 4.4 Contributions et effet de base
+
+**[SIMULATION]** (pondérations fictives, non lues : énergie 7 %, alimentation 14 %, cœur 79 %) avec les variations mensuelles publiées de septembre 2026 (énergie +5,2 %, alimentation 0,0 %, cœur +0,3 %) :
+- énergie : 0,07 × 5,2 = **0,364** point ; alimentation : **0** ; cœur : 0,79 × 0,3 = **0,237** point ;
+- total **0,601 ≈ 0,6** : proche du +0,6 % publié ; l'énergie explique **60,6 %** de la hausse mensuelle.
+
+**[Interprétation]** Même avec des pondérations approximatives, l'ordre de grandeur montre qu'un mois d'énergie fortement orienté peut expliquer l'essentiel de l'indice d'ensemble, alors que le cœur, lui, bouge de 0,3.
+
+**Effet de base** (**[Définition]**) : la variation sur 12 mois dépend de ce qui s'est passé le même mois un an plus tôt. Un mois de l'an passé très haut ou très bas fait baisser ou monter mécaniquement la variation annuelle, même si le mois courant est inchangé.
+
+### 4.5 La surprise de CPI
+
+**[Fait]** (S-IVL-01, aperçu de l'enquête de 14 prévisionnistes, source secondaire, résumé automatique) : attente d'un indice d'ensemble à environ **3,6 %** sur 12 mois, énergie en cause, cœur proche de **0,2 %** sur le mois. **[Fait]** (S-VBZ-01, Reuters repris par un média régional, source secondaire) : attentes de hausse de taux et niveaux de marché cités autour de la publication, dont taux à 2 ans **4,92 %**, à 10 ans **5,304 %**, indice dollar **102,75** ; **l'ordre exact des événements et l'ampleur des variations ne sont pas établis dans les résumés lus**.
+
+**[Calcul de l'auteur]**
+- indice d'ensemble sur 12 mois : 3,7 − 3,6 = **+0,1 point** (au-dessus) ;
+- cœur mensuel : 0,3 − 0,22 (moyenne des prévisions citée ≈ 0,22) = **+0,08 point** ; avec l'arrondi de la publication (0,25 à 0,35), l'écart vaut en réalité de **+0,03 à +0,13** ;
+- l'ordre de grandeur de l'écart est inférieur à la précision de la publication : à utiliser avec prudence.
+
+**[Interprétation]** Une surprise de 0,1 point sur l'indice d'ensemble avec une énergie à +20,4 % sur 12 mois ne dit rien, à elle seule, de la tendance sous-jacente ; la composition (énergie ou cœur) est plus informative que l'écart seul.
+
+## 5. Définitions essentielles
+
+- **CPI-U** : indice des prix à la consommation des consommateurs urbains.
+- **Indice d'ensemble / cœur** : avec ou sans alimentation et énergie.
+- **Importance relative** : pondération d'un poste dans l'indice.
+- **OER** : loyer équivalent des propriétaires occupants (estimé).
+- **Annualisation** : (1 + variation mensuelle)¹² − 1.
+- **Contribution** : pondération × variation du poste.
+- **Effet de base** : influence de la variation du même mois un an plus tôt.
+
+## 6. Exemples chiffrés
+
+**6.1 Annualisation.** 1,006¹² − 1 = 7,44 % ; 1,003¹² − 1 = 3,66 %.
+**6.2 Logement.** 26,204 ÷ 35,625 = 73,6 % de l'indice logement.
+**6.3 Contributions (SIMULATION).** 0,07 × 5,2 + 0 + 0,79 × 0,3 = 0,601.
+**6.4 Effet de base (SIMULATION).** Indice fictif : septembre 2025 = 100,0 ; août 2025 = 99,6 ; août 2026 = 103,5 ; septembre 2026 = 104,1. Variation sur 12 mois d'août : 103,5 ÷ 99,6 − 1 = **3,92 %** ; de septembre : 104,1 ÷ 100,0 − 1 = **4,10 %**. Variation mensuelle de septembre 2026 : 104,1 ÷ 103,5 − 1 = **0,58 %** ; celle de septembre 2025 : 100,0 ÷ 99,6 − 1 = **0,40 %** : le mois courant dépasse celui de l'an dernier de 0,18 point, d'où la hausse du glissement annuel.
+
+### 6.5 Cas historique documenté — le CPI de septembre 2026, publié le 14 octobre 2026
+
+**[Fait]** (S-BLS-02, S-BLS-05 pour la date) : publication du 14/10/2026 ; ensemble +0,6 % / +3,7 % ; cœur +0,3 % / +2,6 % ; énergie +5,2 % / +20,4 % ; logement +0,4 % / +3,2 %. **[Fait]** (S-IVL-01, secondaire) : attente de 3,6 % sur 12 mois, cœur près de 0,2 %.
+
+**[Calcul de l'auteur]** Surprise de +0,1 point sur l'indice d'ensemble ; cœur +0,08 point (de +0,03 à +0,13 avec l'arrondi) ; énergie dominante dans la hausse mensuelle (simulation de contribution : 60,6 %).
+
+**[Interprétation]** Le chiffre d'ensemble est tiré par l'énergie ; le cœur est conforme à l'attente à l'arrondi près. **Limites** : résumé automatique ; pondérations de septembre 2026 non lues (celles de décembre 2025 sont utilisées pour le logement) ; consensus et niveaux de marché en source secondaire ; détail du cœur (biens, services) non lu ; indicateurs d'anticipation non étudiés ici. L'interruption de collecte de 2025 (S-BLS-10, L3.01) rappelle que des séries peuvent contenir des trous ; aucune valeur d'effet sur les variations sur 12 mois n'a été lue.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Dollar** : un CPI supérieur à l'attente rend plus probable une politique plus restrictive, donc, toutes choses égales, un dollar plus ferme et des taux plus hauts ; l'effet dépend de ce qui était déjà anticipé (L3.02) et de l'état du marché.
+- **Or** : l'inflation élevée peut le soutenir, mais ce qui compte le plus à court terme est le **taux réel** : si le marché en déduit des taux nominaux plus hauts, l'effet peut être négatif (module 5). **Hypothèse à tester**, jamais un fait.
+- **Lire la composition** : un surprise portée par l'énergie est moins persistante qu'une surprise portée par le logement ou les services ; les banques centrales le disent souvent, cela se vérifie au cas par cas.
+- **Calendrier** : le CPI est publié à 8 h 30 (heure de l'Est) selon le calendrier du BLS (S-BLS-05) ; prochaines dates : 10 novembre et 10 décembre 2026 (S-BLS-06, S-BLS-07).
+- **Prudence** : une bonne lecture du CPI ne garantit ni la direction du marché ni la décision de la banque centrale.
+
+## 8. Erreurs courantes
+
+1. Comparer une variation mensuelle corrigée à une variation sur 12 mois non corrigée.
+2. Annualiser un seul mois et en tirer une tendance.
+3. Ignorer l'arrondi : un écart de 0,08 point n'est pas mesurable à un chiffre après la virgule.
+4. Confondre indice d'ensemble et cœur.
+5. Confondre CPI et PCE (objectif de la Fed).
+6. Prendre l'OER pour une dépense observée.
+7. Oublier l'effet de base.
+8. Présenter une source secondaire comme une donnée officielle.
+
+## 9. Limites de l'interprétation
+
+- Le communiqué du BLS est lu par résumé ; les tableaux détaillés (composantes) ne sont pas lus.
+- Les pondérations de l'énergie et de l'alimentation de septembre 2026 ne sont pas lues ; la décomposition est une **SIMULATION**.
+- Le consensus est une source secondaire (S-IVL-01) ; la moyenne ≈ 0,22 du cœur provient de ce résumé et n'a pas été vérifiée.
+- Les niveaux de marché (S-VBZ-01) sont cités sans ordre vérifié ; aucune réaction n'est quantifiée.
+- Le CPI mesure un panier moyen ; l'inflation vécue par un ménage ou un pays différent peut s'écarter fortement.
+- La définition précise des services « hors logement » n'a pas été lue.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Annualisation.** Variation mensuelle de +0,3 %, puis de +0,6 %. Annualise-les.
+
+<details>
+<summary>Correction 1</summary>
+
+1,003¹² − 1 = **3,66 %** ; 1,006¹² − 1 = **7,44 %**.
+</details>
+
+**Exercice 2 — Logement.** Importances relatives : logement 35,625 ; OER 26,204 ; loyers 7,840. Quelles parts de l'OER et du loyer dans le logement ?
+
+<details>
+<summary>Correction 2</summary>
+
+26,204 ÷ 35,625 = **73,6 %** ; 7,840 ÷ 35,625 = **22,0 %**.
+</details>
+
+**Exercice 3 — Contributions (SIMULATION).** Pondérations fictives : énergie 7 %, alimentation 14 %, cœur 79 % ; variations : énergie +5,2 %, alimentation 0,0 %, cœur +0,3 %. Calcule les contributions et la hausse d'ensemble.
+
+<details>
+<summary>Correction 3</summary>
+
+Énergie 0,07 × 5,2 = **0,364** ; alimentation **0** ; cœur 0,79 × 0,3 = **0,237** ; total **0,601** point.
+</details>
+
+**Exercice 4 — Surprise.** Publié : ensemble 3,7 % (12 mois), cœur 0,3 % (mensuel). Attendu : 3,6 % et 0,22 %. Calcule les surprises et l'intervalle de la surprise du cœur compte tenu de l'arrondi.
+
+<details>
+<summary>Correction 4</summary>
+
+Ensemble : **+0,1 point** ; cœur : 0,3 − 0,22 = **+0,08** ; avec l'arrondi de 0,25 à 0,35 : de **+0,03 à +0,13**.
+</details>
+
+**Exercice 5 — Effet de base (SIMULATION).** Indice fictif : août 2025 = 99,6 ; septembre 2025 = 100,0 ; août 2026 = 103,5 ; septembre 2026 = 104,1. Calcule les variations sur 12 mois d'août et de septembre, et explique l'évolution.
+
+<details>
+<summary>Correction 5</summary>
+
+Août : 103,5 ÷ 99,6 − 1 = **3,92 %** ; septembre : 104,1 ÷ 100,0 − 1 = **4,10 %**. Le mois de septembre 2026 (+0,58 %) dépasse celui de septembre 2025 (+0,40 %) : le glissement annuel monte de 0,18 point.
+</details>
+
+**Exercice 6 — Critique.** « Le CPI d'ensemble dépasse l'attente de 0,1 point : l'inflation repart et le dollar va monter. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) 0,1 point est de l'ordre de l'arrondi. (2) La surprise vient surtout de l'énergie, moins persistante. (3) Le cœur est conforme à l'attente à l'arrondi près. (4) La réaction du dollar dépend de ce qui était déjà anticipé et de la décision de la banque centrale, pas du seul écart. (5) Le consensus lu est une source secondaire.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L3.06.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Le CPI mesure le prix d'un panier de consommation pondéré par les dépenses ; l'indice d'ensemble inclut l'alimentation et l'énergie, le cœur les exclut.
+- Mensuel corrigé ≠ 12 mois non corrigé ; annualiser un mois seul est trompeur.
+- Le logement pèse 35,625 % (décembre 2025), dont 26,204 pour l'OER (73,6 %).
+- Septembre 2026 : ensemble +0,6 % / +3,7 % ; cœur +0,3 % / +2,6 % ; énergie +5,2 % / +20,4 %.
+- La surprise se lit avec l'arrondi, la composition et les limites du consensus.
+
+## 13. Critères de maîtrise
+
+- [ ] Annualiser une variation mensuelle (Exercice 1).
+- [ ] Calculer parts et contributions (Exercices 2 et 3).
+- [ ] Mesurer une surprise et son intervalle d'arrondi (Exercice 4).
+- [ ] Expliquer un effet de base (Exercice 5).
+- [ ] Critiquer une conclusion hâtive (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-BLS-02** — BLS, Consumer Price Index, septembre 2026 : https://www.bls.gov/news.release/archives/cpi_10142026.htm
+- **S-BLS-12** — BLS, Handbook of Methods, CPI, sources de données : https://www.bls.gov/opub/hom/cpi/data.htm
+- **S-BLS-13** — BLS, fiche sur l'OER et le loyer : https://www.bls.gov/cpi/factsheets/owners-equivalent-rent-and-rent.htm
+- **S-IVL-01** — investingLive, aperçu CPI (secondaire) : https://investinglive.com/news/us-cpi-preview-14-investment-bank-forecasters-see-energy-lifting-headline-to-3-6-core-held-near-0-2/
+- **S-VBZ-01** — Reuters via Virginia Business (secondaire) : https://virginiabusiness.com/us-consumer-price-index-september-rate-hike-bets/
+
+**Définitions de cours non rattachées à une source officielle lue :** annualisation, contribution, effet de base. **Points non vérifiés :** pondérations de septembre 2026, détail du cœur, définition du *supercore*, consensus exact, ampleur de la réaction de marché.

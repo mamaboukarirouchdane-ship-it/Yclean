@@ -1,0 +1,184 @@
+{
+  "chapterId": "8.1",
+  "module": 8,
+  "title": "Quiz de chapitre 8.1 — Cadre d'analyse du risque géopolitique (L8.01)",
+  "passThreshold": 0.8333333333333334,
+  "passRule": "5 bonnes réponses sur 6 (seuil pédagogique provisoire)",
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C8.1-Q1",
+      "type": "mcq",
+      "prompt": "Quel statut donner à l'énoncé fictif « Le gouvernement Y affirme que les sanctions seront renforcées » ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une déclaration : ce qu'une partie affirme, sans document primaire daté qui établisse le fait"
+        },
+        {
+          "id": "b",
+          "text": "Un événement confirmé : l'annonce d'un gouvernement suffit à établir le fait en question"
+        },
+        {
+          "id": "c",
+          "text": "Une hypothèse de marché : une anticipation qui n'émane d'aucune partie identifiée"
+        },
+        {
+          "id": "d",
+          "text": "Un fait établi : toute affirmation officielle vaut source primaire datée"
+        }
+      ],
+      "correct": "a",
+      "explanation": "L'énoncé rapporte une affirmation d'une partie. Le fait confirmé exige un document ou une source primaire datée (exemple : publication de la directive au registre officiel).",
+      "tags": [
+        "statuts"
+      ]
+    },
+    {
+      "id": "C8.1-Q2",
+      "type": "mcq",
+      "prompt": "Événement A : probabilité 5 %, hausse du pétrole de 40 %. Événement B : probabilité 40 %, hausse de 5 %. Les produits sont égaux (2,0 points). Que peut-on conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le produit prédit le niveau du prix à l'échéance avec une erreur inférieure à un point"
+        },
+        {
+          "id": "b",
+          "text": "Les deux événements sont équivalents pour l'investisseur, puisque l'espérance est identique dans les deux cas"
+        },
+        {
+          "id": "c",
+          "text": "B est plus grave, car une probabilité élevée domine toujours une ampleur supérieure"
+        },
+        {
+          "id": "d",
+          "text": "Le produit est un repère de comparaison : A est un risque de queue, B un événement fréquent, aux canaux et couvertures différents"
+        }
+      ],
+      "correct": "d",
+      "explanation": "5 % × 40 = 2,0 et 40 % × 5 = 2,0. Le produit ne remplace jamais l'analyse : une issue rare et grave diffère d'une issue fréquente et modérée.",
+      "tags": [
+        "probabilite",
+        "ampleur"
+      ]
+    },
+    {
+      "id": "C8.1-Q3",
+      "type": "mcq",
+      "prompt": "L'or a gagné « 6 % » en février 2022 et clôturé à 1 910 $ (LBMA PM, 28/02/2022). Quelle base implicite, et quel statut ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 910 $ : valeur lue, puisque la clôture de fin février est la base du rendement mensuel"
+        },
+        {
+          "id": "b",
+          "text": "≈ 1 802 $ (1 910 ÷ 1,06) : valeur dérivée d'un rendement arrondi, non une cotation du 31/01 lue"
+        },
+        {
+          "id": "c",
+          "text": "≈ 2 025 $ (1 910 × 1,06) : on applique le rendement à la clôture pour retrouver la base"
+        },
+        {
+          "id": "d",
+          "text": "Impossible : sans la cotation du 31/01, aucune fourchette, même approximative, ne peut être calculée"
+        }
+      ],
+      "correct": "b",
+      "explanation": "1 910 / 1,06 = 1 802 ; l'arrondi du rendement (5,5 % à 6,5 %) donne une fourchette de 1 793 à 1 810 $. La valeur est dérivée, non lue.",
+      "tags": [
+        "calcul",
+        "base"
+      ]
+    },
+    {
+      "id": "C8.1-Q4",
+      "type": "mcq",
+      "prompt": "Quelle durée du choc géopolitique mondial sur les actions rapporte la leçon d'après le FMI (S-IMF-04) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un effet d'un seul jour, identique pour tous les épisodes de l'échantillon, de façon systématique"
+        },
+        {
+          "id": "b",
+          "text": "Une baisse d'environ 20 % qui persiste dix ans après tout choc géopolitique d'après le FMI"
+        },
+        {
+          "id": "c",
+          "text": "Aucun effet mesurable : le FMI conclut que les chocs sont absorbés le jour même par les prix"
+        },
+        {
+          "id": "d",
+          "text": "Environ −1 % sur les actions, avec un effet de l'ordre d'un trimestre : ordre de grandeur d'un échantillon, non une prévision"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le FMI est cité pour un effet moyen et une durée d'environ un trimestre, avec des queues de risque d'environ six mois ; c'est un ordre de grandeur sur échantillon, non une prévision.",
+      "tags": [
+        "duree",
+        "fmi"
+      ]
+    },
+    {
+      "id": "C8.1-Q5",
+      "type": "mcq",
+      "prompt": "À quelle condition la leçon autorise-t-elle d'attribuer un mouvement de l'or à un événement ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une manchette de presse qui relie explicitement l'événement au mouvement, quel que soit le canal"
+        },
+        {
+          "id": "b",
+          "text": "La coïncidence des dates entre l'événement et le mouvement de l'or, dès lors que le sens paraît cohérent"
+        },
+        {
+          "id": "c",
+          "text": "Un canal identifié et vérifié, les facteurs simultanés examinés et une fenêtre fixée d'avance ; la coïncidence seule ne suffit pas"
+        },
+        {
+          "id": "d",
+          "text": "Aucune attribution n'est jamais permise, quelle que soit la qualité des données et des canaux vérifiés"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La règle d'or exige un canal vérifié (énergie, dollar, taux réels, flux), la prise en compte des facteurs simultanés et une réaction mesurée sur une fenêtre fixée avant l'observation.",
+      "tags": [
+        "attribution",
+        "regle"
+      ]
+    },
+    {
+      "id": "C8.1-Q6",
+      "type": "mcq",
+      "prompt": "Dans la grille G8, quelle rubrique demande les prix ou probabilités documentés avant l'événement ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La rubrique 7, « Attentes préalables et réaction » : prix ou probabilités documentés avant l'événement"
+        },
+        {
+          "id": "b",
+          "text": "La rubrique 1, « Événement et statut » : on y inscrit le prix de réaction mesuré le lendemain"
+        },
+        {
+          "id": "c",
+          "text": "La rubrique 3, « Ampleur » : on y inscrit la probabilité implicite des marchés de paris"
+        },
+        {
+          "id": "d",
+          "text": "La rubrique 8, « Scénarios et invalidation » : on y inscrit les attentes de la veille de l'événement"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La rubrique 7 sépare les attentes préalables, si elles sont documentées, de la réaction mesurée sur une fenêtre définie d'avance ; sans attentes documentées, la surprise n'est pas mesurable.",
+      "tags": [
+        "g8",
+        "attentes"
+      ]
+    }
+  ],
+  "revision": 1
+}

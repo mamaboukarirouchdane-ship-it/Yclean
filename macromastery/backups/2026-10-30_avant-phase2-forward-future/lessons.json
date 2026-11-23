@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "updated": "2026-10-29",
+  "note": "États : planned, written, sourced, assessed, integrated, tested, validated. 'true' = réellement fait et vérifié ; 'false' = pas encore fait. 'assessed' = quiz écrit et validé par script (structure + réponses recalculées), pas encore passé par l'apprenant. 'integrated' = intégrée au site (pas de site à ce stade). 'tested' = testée dans l'interface. 'validated' = validée par l'utilisateur. Mise à jour 30/10/2026 : pour L0.02 et L0.03, 'validated' = false car les versions actuelles (après actualisation BRI) attendent la validation pédagogique finale ; les validations antérieures sont conservées dans previous_validations.",
+  "lessons": [
+    {
+      "id": "L0.01",
+      "module": 0,
+      "title": "Les marchés financiers et leur rôle",
+      "duration_hours": 3.0,
+      "files": [
+        "content/m00/L0.01.mdx",
+        "content/m00/quiz/L0.01.quiz.json"
+      ],
+      "sources": [
+        "S-ECB-01",
+        "S-SEC-01",
+        "S-BIS-01"
+      ],
+      "states": {
+        "planned": true,
+        "written": true,
+        "sourced": true,
+        "assessed": true,
+        "integrated": false,
+        "tested": false,
+        "validated": true
+      },
+      "open_points": [
+        "Définitions de cours non sourcées : marché primaire/secondaire, familles de marchés, profondeur, slippage, forward/future/swap.",
+        "Mode de négociation par instrument (section 4.4) : connaissance générale non sourcée.",
+        "Numéros de page du rapport SEC non confirmés (non cités).",
+        "Terminologie « contrat à terme / forward / future » à harmoniser avec L0.02 et L0.03 (non modifiées).",
+        "Tableau BCE : valeurs (six montants et total 34 395) vérifiées dans le contenu officiel accessible de la BCE (vérification indépendante rapportée par l'utilisateur, 29/10/2026) ; consultation visuelle du tableau original NON réalisée ; somme des six montants = 34 396 contre total publié 34 395 ; explication par les arrondis probable mais non formellement confirmée."
+      ],
+      "revision": 3,
+      "recommended_status": "validée par l'utilisateur le 30/10/2026 ; points ouverts conservés (consultation visuelle du tableau BCE non réalisée, définitions non sourcées, terminologie forward/future)",
+      "validated_by_user": "2026-10-30 (validation globale demandée par l'utilisateur)"
+    },
+    {
+      "id": "L0.02",
+      "module": 0,
+      "title": "Les acteurs des marchés et leurs motivations",
+      "duration_hours": 2.5,
+      "files": [
+        "content/m00/L0.02.mdx",
+        "content/m00/quiz/L0.02.quiz.json"
+      ],
+      "sources": [
+        "S-BIS-02",
+        "S-BIS-03",
+        "S-FXC-01",
+        "S-CFTC-01",
+        "S-CFTC-02",
+        "S-CFTC-03",
+        "S-UST-01",
+        "S-CLE-01"
+      ],
+      "states": {
+        "planned": true,
+        "written": true,
+        "sourced": true,
+        "assessed": true,
+        "integrated": false,
+        "tested": false,
+        "validated": false
+      },
+      "open_points": [
+        "BRI : chiffres de décembre 2025 lus deux fois dans S-BIS-03 et S-BIS-04 (résumés automatiques de PDF, non vus directement). Le 101 % est expliqué par un calcul de l'auteur sur les montants (arrondis vers le haut), et non par une explication méthodologique de la BRI. Le statut « définitif » des chiffres de décembre est une déduction.",
+        "Quiz L0.02 révisé (10 questions, seuil 8/10) : Q6 est volatile (calendrier traditionnel de la CFTC) et doit être actualisée quand l'application du calendrier à deux publications hebdomadaires annoncé le 27/10/2026 sera officiellement confirmée (aucune date d'application confirmée au 30/10/2026).",
+        "CFTC : calendrier traditionnel (mardi → vendredi) décrit par la page officielle le 29/10/2026 ; passage à deux publications hebdomadaires annoncé le 27/10/2026 (plan, sans date de début) ; pas de preuve officielle qu'il soit en vigueur ; page « Release Schedule » non lue. À revérifier avant usage.",
+        "Contenu détaillé des 55 principes du FX Global Code non lu.",
+        "Date exacte de l'article du Fed de Cleveland non confirmée ; formule « compte du Trésor » pour l'ESF et « Congrès et administration Roosevelt » non retrouvées mot pour mot.",
+        "Terminologie « contrat à terme / forward / future » à harmoniser avec L0.01.",
+        "Quiz L0.02 : aucune relecture indépendante ni test auprès d'un débutant ; spéculation, allocation et besoin de transaction ne sont pas évalués directement (couverts par l'Exercice 1)."
+      ],
+      "revision": 3,
+      "recommended_status": "versions actuelles en attente de validation pédagogique finale ; validation antérieure conservée comme trace (previous_validations)",
+      "quiz_revision": 3,
+      "quiz_questions": 10,
+      "quiz_pass_rule": "8 bonnes réponses sur 10 (0,8 × 10)",
+      "post_validation_change": "2026-10-30 : chiffres de la BRI actualisés (publication de décembre 2025) sur autorisation de l'utilisateur ; §4.3, Exercice 3 et sa correction, erreurs courantes, résumé, quiz Q4. Sauvegarde : backups/2026-10-30_avant-maj-BRI-decembre-2025/. Nouvelle validation de l'utilisateur à confirmer.",
+      "previous_validations": [
+        {
+          "date": "2026-10-30",
+          "scope": "versions antérieures à l'actualisation BRI de décembre 2025 (L0.02 : leçon révision 2, quiz révision 2 ; L0.03 : validation globale sans audit détaillé)",
+          "trace": "2026-10-30 (révision 2 de la leçon et révision 2 du quiz, 10 questions, seuil 8/10)"
+        }
+      ],
+      "factual_acceptance": "2026-10-30 : l'utilisateur accepte sur le plan factuel l'actualisation BRI (décembre 2025), sous réserve des points d'incertitude du rapport qualité ; contrôle indépendant de la table 1 des tableaux détaillés : principaux montants concordants.",
+      "awaiting": "validation pédagogique finale de l'utilisateur (versions actuelles)"
+    },
+    {
+      "id": "L0.03",
+      "module": 0,
+      "title": "L'anatomie du marché des changes (Forex)",
+      "duration_hours": 3.0,
+      "files": [
+        "content/m00/L0.03.mdx",
+        "content/m00/quiz/L0.03.quiz.json"
+      ],
+      "sources": [
+        "S-BIS-03",
+        "S-BIS-04",
+        "S-BIS-02",
+        "S-BIS-01"
+      ],
+      "states": {
+        "planned": true,
+        "written": true,
+        "sourced": true,
+        "assessed": true,
+        "integrated": false,
+        "tested": false,
+        "validated": false
+      },
+      "open_points": [
+        "BRI : chiffres de décembre 2025 lus deux fois dans S-BIS-03 et S-BIS-04 (résumés automatiques de PDF, non vus directement) ; statut « définitif » déduit.",
+        "Pourcentages par devise, par paire et par pays : calculs de l'auteur (la BRI ne les publie pas dans les documents lus) ; parts géographiques publiées uniquement dans la page préliminaire de septembre 2025.",
+        "Classement des paires : seules les trois premières sont établies par la BRI (EUR/USD, USD/JPY, USD/CNY) ; la phrase « les dix paires contiennent le dollar » provient de la page préliminaire, non revérifiée.",
+        "Définitions de contrat à terme sec, swap de change, swap de devises, option, pip, taux croisé, once troy : définitions de cours non sourcées (lignes directrices de la BRI sans définition lisible).",
+        "Aucune relecture indépendante ; pas de test auprès d'un débutant ; non intégrée à une interface."
+      ],
+      "recommended_status": "versions actuelles en attente de validation pédagogique finale ; validation antérieure conservée comme trace (previous_validations)",
+      "revision": 2,
+      "quiz_revision": 2,
+      "post_validation_change": "2026-10-30 : audit détaillé réalisé ; chiffres de la BRI actualisés (décembre 2025) ; classement des paires corrigé (EUR/USD, USD/JPY, USD/CNY) ; quiz Q5, Q6, Q7 actualisés. Sauvegarde : backups/2026-10-30_avant-maj-BRI-decembre-2025/. Nouvelle validation de l'utilisateur à confirmer.",
+      "previous_validations": [
+        {
+          "date": "2026-10-30",
+          "scope": "versions antérieures à l'actualisation BRI de décembre 2025 (L0.02 : leçon révision 2, quiz révision 2 ; L0.03 : validation globale sans audit détaillé)",
+          "trace": "2026-10-30 (validation globale demandée par l'utilisateur)"
+        }
+      ],
+      "factual_acceptance": "2026-10-30 : l'utilisateur accepte sur le plan factuel l'actualisation BRI (décembre 2025), sous réserve des points d'incertitude du rapport qualité ; contrôle indépendant de la table 1 des tableaux détaillés : principaux montants concordants.",
+      "awaiting": "validation pédagogique finale de l'utilisateur (versions actuelles)"
+    }
+  ]
+}

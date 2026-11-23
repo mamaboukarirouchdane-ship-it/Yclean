@@ -1,0 +1,237 @@
+{
+  "lessonId": "L0.08",
+  "title": "Quiz — Obligations et courbe des taux : prix, rendement et pente",
+  "passThreshold": 0.8,
+  "note": "Prix et rendements des exemples : calculs de l'auteur ou SIMULATION. Chiffres de la SEC (1 082 / 925 $) reproduits par calcul. Courbe du 30/06/2026 : Trésor américain, lecture par résumé automatique d'une page tronquée.",
+  "questions": [
+    {
+      "id": "L0.08-Q1",
+      "type": "mcq",
+      "prompt": "Que se passe-t-il, toutes choses égales par ailleurs, pour le prix d'une obligation à taux fixe existante quand les taux de marché montent ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il monte, car le coupon devient plus attractif"
+        },
+        {
+          "id": "b",
+          "text": "Il reste identique tant que l'émetteur paie"
+        },
+        {
+          "id": "c",
+          "text": "Il baisse"
+        },
+        {
+          "id": "d",
+          "text": "Il devient égal à la valeur nominale"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Les nouveaux titres offrent un rendement plus élevé : pour que l'ancien titre offre un rendement comparable, son prix doit baisser. C'est la règle centrale (SEC, 2013 : taux et prix évoluent en sens opposé).",
+      "tags": [
+        "relation-inverse"
+      ]
+    },
+    {
+      "id": "L0.08-Q2",
+      "type": "mcq",
+      "prompt": "Obligation : nominal 1 000, coupon annuel de 4 %, échéance 5 ans. Quel est son prix si le rendement exigé est de 5 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "956,71"
+        },
+        {
+          "id": "b",
+          "text": "1 000,00"
+        },
+        {
+          "id": "c",
+          "text": "1 045,80"
+        },
+        {
+          "id": "d",
+          "text": "915,75"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Flux : 40, 40, 40, 40, 1 040, actualisés à 5 % : 38,10 + 36,28 + 34,55 + 32,91 + 814,87 = 956,71 (décote). 1 045,80 correspond à 3 % ; 915,75 à 6 %.",
+      "tags": [
+        "prix"
+      ]
+    },
+    {
+      "id": "L0.08-Q3",
+      "type": "mcq",
+      "prompt": "Un rendement exigé égal au coupon d'une obligation signifie que son prix est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Inférieur à la valeur nominale"
+        },
+        {
+          "id": "b",
+          "text": "Supérieur à la valeur nominale"
+        },
+        {
+          "id": "c",
+          "text": "Nul"
+        },
+        {
+          "id": "d",
+          "text": "Égal à la valeur nominale (au pair)"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Quand le rendement exigé égale le coupon, la valeur actuelle des flux est égale à la valeur nominale : l'obligation cote au pair (par exemple 1 000 pour un coupon de 4 % et un rendement de 4 %).",
+      "tags": [
+        "pair"
+      ]
+    },
+    {
+      "id": "L0.08-Q4",
+      "type": "mcq",
+      "prompt": "Pour une hausse du rendement de 4 % à 5 %, laquelle de ces obligations à coupon de 4 % perd le plus en valeur ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Échéance 5 ans (−4,33 %)"
+        },
+        {
+          "id": "b",
+          "text": "Échéance 30 ans (−15,37 %)"
+        },
+        {
+          "id": "c",
+          "text": "Échéance 10 ans (−7,72 %)"
+        },
+        {
+          "id": "d",
+          "text": "Elles perdent toutes la même chose"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La sensibilité aux taux (durée) augmente avec l'échéance : −4,33 % (5 ans), −7,72 % (10 ans), −15,37 % (30 ans) dans le calcul de la leçon.",
+      "tags": [
+        "duree",
+        "echeance"
+      ]
+    },
+    {
+      "id": "L0.08-Q5",
+      "type": "mcq",
+      "prompt": "Selon la FINRA (2024), une obligation de durée 10 perd environ combien si les taux montent de 1 point de pourcentage ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 %"
+        },
+        {
+          "id": "b",
+          "text": "100 %"
+        },
+        {
+          "id": "c",
+          "text": "0,10 %"
+        },
+        {
+          "id": "d",
+          "text": "10 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La durée donne approximativement le pourcentage de variation du prix pour 1 point de variation des taux : durée 10 → environ −10 % pour +1 point. C'est une approximation.",
+      "tags": [
+        "duree"
+      ]
+    },
+    {
+      "id": "L0.08-Q6",
+      "type": "mcq",
+      "prompt": "Tu achètes pour 956,71 une obligation de nominal 1 000 et coupon de 4 % (rendement à l'échéance de 5 %). Que vaut le rendement actuel et pourquoi diffère-t-il de 5 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "4,00 % : il est toujours égal au coupon"
+        },
+        {
+          "id": "b",
+          "text": "5,00 % : il est toujours égal au rendement à l'échéance"
+        },
+        {
+          "id": "c",
+          "text": "4,18 % : il ignore le gain en capital de 43,29 à l'échéance"
+        },
+        {
+          "id": "d",
+          "text": "3,82 % : il inclut la perte en capital"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Rendement actuel = 40 ÷ 956,71 = 4,18 %. Il ne tient pas compte du gain de 1 000 − 956,71 = 43,29 perçu si le titre est conservé jusqu'à l'échéance ; seul le rendement à l'échéance l'inclut.",
+      "tags": [
+        "rendement-actuel",
+        "ytm"
+      ]
+    },
+    {
+      "id": "L0.08-Q7",
+      "type": "mcq",
+      "prompt": "Le 30 juin 2026, le Trésor américain donne 3,87 % à 3 mois, 4,14 % à 2 ans et 4,44 % à 10 ans. Quelle est la pente 10 ans − 3 mois ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+0,57 point (57 pb)"
+        },
+        {
+          "id": "b",
+          "text": "+0,30 point (30 pb)"
+        },
+        {
+          "id": "c",
+          "text": "−0,57 point"
+        },
+        {
+          "id": "d",
+          "text": "+4,44 points"
+        }
+      ],
+      "correct": "a",
+      "explanation": "4,44 − 3,87 = 0,57 point de pourcentage = 57 points de base. La pente 10 ans − 2 ans vaut 0,30 point (30 pb). Courbe globalement normale.",
+      "tags": [
+        "pente",
+        "donnees-observees"
+      ]
+    },
+    {
+      "id": "L0.08-Q8",
+      "type": "mcq",
+      "prompt": "Que conclut la Fed de San Francisco (Bauer et Mertens, 2018) sur la courbe des taux ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une pente positive exclut toute récession"
+        },
+        {
+          "id": "b",
+          "text": "L'inversion de la courbe, surtout l'écart 10 ans − 3 mois, a été un indicateur historique de récession à 1-2 ans, mais corrélation n'est pas causalité"
+        },
+        {
+          "id": "c",
+          "text": "La courbe prédit la date exacte de la prochaine récession"
+        },
+        {
+          "id": "d",
+          "text": "La courbe des taux prédit la hausse du dollar"
+        }
+      ],
+      "correct": "b",
+      "explanation": "L'étude conclut que l'inversion (pas un simple aplatissement) a précédé les récessions avec un délai typique de un à deux ans, que l'écart 10 ans − 3 mois est la mesure la plus fiable des écarts testés, et rappelle que corrélation n'est pas causalité.",
+      "tags": [
+        "recession",
+        "limites"
+      ]
+    }
+  ],
+  "revision": 1
+}

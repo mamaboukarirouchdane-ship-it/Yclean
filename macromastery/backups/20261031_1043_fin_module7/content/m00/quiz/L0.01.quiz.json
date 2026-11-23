@@ -1,0 +1,234 @@
+{
+  "lessonId": "L0.01",
+  "title": "Quiz — Les marchés financiers et leur rôle",
+  "passThreshold": 0.8,
+  "note": "Chiffres des questions de calcul : SIMULATION. Quiz inchangé (8 questions, seuil 7/8) : les révisions 4 et 5 de la leçon (sources et tableau forward/future, exercice 7) n'ont pas modifié ce quiz.",
+  "questions": [
+    {
+      "id": "L0.01-Q1",
+      "type": "mcq",
+      "prompt": "Une entreprise émet pour la première fois 10 000 actions à 30 chacune. Qui reçoit l'argent et sur quel marché ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les premiers acheteurs ; marché secondaire"
+        },
+        {
+          "id": "b",
+          "text": "La bourse ; marché secondaire"
+        },
+        {
+          "id": "c",
+          "text": "L'entreprise ; marché primaire"
+        },
+        {
+          "id": "d",
+          "text": "L'État ; marché primaire"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le titre est créé à cette occasion : c'est une émission, donc un marché primaire. L'émetteur reçoit 10 000 × 30 = 300 000.",
+      "tags": [
+        "primaire-secondaire"
+      ]
+    },
+    {
+      "id": "L0.01-Q2",
+      "type": "mcq",
+      "prompt": "Un investisseur vend 200 actions déjà cotées à un autre investisseur. Quel est l'effet direct sur les ressources de l'entreprise émettrice ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aucun apport direct : l'argent va au vendeur"
+        },
+        {
+          "id": "b",
+          "text": "Elle reçoit le produit de la vente"
+        },
+        {
+          "id": "c",
+          "text": "Elle reçoit une commission égale à l'écart acheteur-vendeur"
+        },
+        {
+          "id": "d",
+          "text": "Elle doit racheter les actions"
+        }
+      ],
+      "correct": "a",
+      "explanation": "C'est une transaction de marché secondaire : l'argent passe de l'acheteur au vendeur, sans nouvel apport à l'émetteur.",
+      "tags": [
+        "primaire-secondaire"
+      ]
+    },
+    {
+      "id": "L0.01-Q3",
+      "type": "mcq",
+      "prompt": "Lequel de ces schémas correspond à la finance indirecte ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un investisseur achète des obligations émises par une entreprise"
+        },
+        {
+          "id": "b",
+          "text": "Une entreprise émet des actions sur un marché"
+        },
+        {
+          "id": "c",
+          "text": "Deux entreprises échangent des devises"
+        },
+        {
+          "id": "d",
+          "text": "Un épargnant dépose de l'argent à la banque, qui prête à une entreprise"
+        }
+      ],
+      "correct": "d",
+      "explanation": "En finance indirecte, un intermédiaire (la banque) se place entre l'épargnant et l'emprunteur. Acheter des obligations émises par une entreprise ou émettre des actions sur un marché relève de la finance directe par les marchés.",
+      "tags": [
+        "direct-indirect"
+      ]
+    },
+    {
+      "id": "L0.01-Q4",
+      "type": "mcq",
+      "prompt": "Une action cote bid 49,90 / ask 50,10. Quel est le mid ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,20"
+        },
+        {
+          "id": "b",
+          "text": "49,90"
+        },
+        {
+          "id": "c",
+          "text": "50,00"
+        },
+        {
+          "id": "d",
+          "text": "50,10"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Mid = (49,90 + 50,10) / 2 = 50,00. Le spread, lui, vaut 0,20.",
+      "tags": [
+        "bid-ask"
+      ]
+    },
+    {
+      "id": "L0.01-Q5",
+      "type": "mcq",
+      "prompt": "Avec bid 49,90 / ask 50,10, tu achètes 100 actions puis tu les revends immédiatement, sans mouvement de prix. Quel est ton résultat ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Gain de 20"
+        },
+        {
+          "id": "b",
+          "text": "Perte de 20"
+        },
+        {
+          "id": "c",
+          "text": "Résultat nul"
+        },
+        {
+          "id": "d",
+          "text": "Perte de 10"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Achat : 100 × 50,10 = 5 010. Revente : 100 × 49,90 = 4 990. Perte = 5 010 − 4 990 = 20, soit le spread (0,20) multiplié par 100 actions.",
+      "tags": [
+        "bid-ask",
+        "coût"
+      ]
+    },
+    {
+      "id": "L0.01-Q6",
+      "type": "mcq",
+      "prompt": "Parmi ces affirmations sur la liquidité, laquelle est la plus prudente ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un spread faible est un indice de liquidité, mais pas une preuve complète"
+        },
+        {
+          "id": "b",
+          "text": "Un spread faible prouve que le marché est liquide en toutes circonstances"
+        },
+        {
+          "id": "c",
+          "text": "La liquidité ne dépend que du nombre d'acheteurs"
+        },
+        {
+          "id": "d",
+          "text": "Un marché liquide est un marché sans risque"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La liquidité a plusieurs dimensions (rapidité, taille, coût). Le spread en mesure une partie et peut se dégrader en période de stress.",
+      "tags": [
+        "liquidité"
+      ]
+    },
+    {
+      "id": "L0.01-Q7",
+      "type": "mcq",
+      "prompt": "Une banque (simulation) prête 1 000 à 6 % et rémunère ses dépôts à 2 %. 5 % du capital prêté n'est jamais remboursé. Quel est son résultat avant frais ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+40"
+        },
+        {
+          "id": "b",
+          "text": "+10"
+        },
+        {
+          "id": "c",
+          "text": "−10"
+        },
+        {
+          "id": "d",
+          "text": "−50"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Marge brute = 1 000 × (6 % − 2 %) = 40. Perte = 1 000 × 5 % = 50. Résultat = 40 − 50 = −10.",
+      "tags": [
+        "risque",
+        "banque"
+      ]
+    },
+    {
+      "id": "L0.01-Q8",
+      "type": "mcq",
+      "prompt": "Quelle affirmation sur le prix d'un marché est la plus rigoureuse ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "C'est la valeur réelle et définitive de l'actif"
+        },
+        {
+          "id": "b",
+          "text": "C'est toujours le prix fixé par l'émetteur"
+        },
+        {
+          "id": "c",
+          "text": "C'est le mid, auquel on peut toujours transiger"
+        },
+        {
+          "id": "d",
+          "text": "C'est le résultat de la rencontre des acheteurs et des vendeurs à un moment donné, avec une information incomplète"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le prix est un résultat d'échange. On n'achète pas au mid mais au ask, et on ne vend pas au mid mais au bid.",
+      "tags": [
+        "prix"
+      ]
+    }
+  ]
+}

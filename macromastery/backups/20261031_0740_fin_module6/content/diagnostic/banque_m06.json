@@ -1,0 +1,223 @@
+{
+  "bank": "diagnostic",
+  "module": 6,
+  "note": "Banque progressive : 4 paires de QCM parallèles (forme A = diagnostic initial, forme B = version finale alternative). Niveau : accessible avant le cours. Les modules 0 à 3 restent à alimenter. Données fictives.",
+  "items": [
+    {
+      "id": "D6-A1",
+      "module": 6,
+      "form": "A",
+      "pair": 1,
+      "tag": "surprise",
+      "prompt": "Le marché prévoyait une hausse de 25 pb à 40 % et la banque maintient. Quelle est la surprise ? (attendu = 40 % × 25)",
+      "options": [
+        {
+          "id": "a",
+          "text": "−10 pb"
+        },
+        {
+          "id": "b",
+          "text": "+10 pb"
+        },
+        {
+          "id": "c",
+          "text": "−25 pb"
+        },
+        {
+          "id": "d",
+          "text": "0 pb"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D6-B1",
+      "module": 6,
+      "form": "B",
+      "pair": 1,
+      "tag": "surprise",
+      "prompt": "Le marché prévoyait une hausse de 25 pb à 20 % et la banque maintient. Quelle est la surprise ? (attendu = 20 % × 25)",
+      "options": [
+        {
+          "id": "a",
+          "text": "−5 pb"
+        },
+        {
+          "id": "b",
+          "text": "+5 pb"
+        },
+        {
+          "id": "c",
+          "text": "−20 pb"
+        },
+        {
+          "id": "d",
+          "text": "0 pb"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D6-A2",
+      "module": 6,
+      "form": "A",
+      "pair": 2,
+      "tag": "volatilité",
+      "prompt": "Un écart-type journalier de 1 % annualisé par √252 (≈ 15,9) donne environ :",
+      "options": [
+        {
+          "id": "a",
+          "text": "15,9 %"
+        },
+        {
+          "id": "b",
+          "text": "1 %"
+        },
+        {
+          "id": "c",
+          "text": "252 %"
+        },
+        {
+          "id": "d",
+          "text": "0,06 %"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D6-B2",
+      "module": 6,
+      "form": "B",
+      "pair": 2,
+      "tag": "volatilité",
+      "prompt": "Un écart-type journalier de 0,5 % annualisé par √252 (≈ 15,9) donne environ :",
+      "options": [
+        {
+          "id": "a",
+          "text": "7,9 %"
+        },
+        {
+          "id": "b",
+          "text": "0,5 %"
+        },
+        {
+          "id": "c",
+          "text": "126 %"
+        },
+        {
+          "id": "d",
+          "text": "0,03 %"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D6-A3",
+      "module": 6,
+      "form": "A",
+      "pair": 3,
+      "tag": "probabilités",
+      "prompt": "Trois scénarios à 50 %, 30 % et 30 %. Que faire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les corriger : la somme est 110 %"
+        },
+        {
+          "id": "b",
+          "text": "Les garder"
+        },
+        {
+          "id": "c",
+          "text": "Diviser par 3"
+        },
+        {
+          "id": "d",
+          "text": "Ajouter 10 %"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D6-B3",
+      "module": 6,
+      "form": "B",
+      "pair": 3,
+      "tag": "probabilités",
+      "prompt": "Trois scénarios à 40 %, 40 % et 30 %. Que faire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les corriger : la somme est 110 %"
+        },
+        {
+          "id": "b",
+          "text": "Les garder"
+        },
+        {
+          "id": "c",
+          "text": "Diviser par 3"
+        },
+        {
+          "id": "d",
+          "text": "Ajouter 10 %"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D6-A4",
+      "module": 6,
+      "form": "A",
+      "pair": 4,
+      "tag": "valeur attendue",
+      "prompt": "Rendements +4 % (50 %) et −2 % (50 %), coûts 0,5 %. Valeur nette ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+0,5 %"
+        },
+        {
+          "id": "b",
+          "text": "+1,0 %"
+        },
+        {
+          "id": "c",
+          "text": "+3,0 %"
+        },
+        {
+          "id": "d",
+          "text": "+1,5 %"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D6-B4",
+      "module": 6,
+      "form": "B",
+      "pair": 4,
+      "tag": "valeur attendue",
+      "prompt": "Rendements +6 % (50 %) et −2 % (50 %), coûts 0,5 %. Valeur nette ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+1,5 %"
+        },
+        {
+          "id": "b",
+          "text": "+2,0 %"
+        },
+        {
+          "id": "c",
+          "text": "+4,0 %"
+        },
+        {
+          "id": "d",
+          "text": "+2,5 %"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+---
+id: L5.11
+module: 5
+order: 11
+title: "Tableau de bord fondamental XAU/USD : indicateurs datés, âge des données, lacunes et lecture prudente"
+title_initial: "Tableau de bord fondamental XAU/USD"
+level: "intermédiaire à avancé"
+duration_hours: 3.0
+prerequisites: ["L5.03", "L5.04", "L5.06", "L5.07", "L5.09", "L5.10"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L5.11.quiz.json"
+sources: ["S-FED-26", "S-KIT-04", "S-BNC-01", "S-FRD-01", "S-FRD-03", "S-FRD-02", "S-WGC-10", "S-KIT-02", "S-KIT-03", "S-RTR-01", "S-MMT-01", "S-WGC-14"]
+---
+
+# L5.11 — Tableau de bord fondamental XAU/USD
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée, avec sa date ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Toutes les sources de cette leçon sont lues par **résumé automatique** ; deux d'entre elles sont une **dépêche d'agence reprise par un site** (Reuters via Kitco) et un **article d'opinion/analyse technique** (Brave New Coin), traités comme telles. Le tableau est daté du **30 octobre 2026** : des valeurs plus récentes existent probablement. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante**, et un tableau de bord n'est pas un signal de transaction.
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. construire un **tableau de bord** où chaque indicateur porte sa valeur, sa date, son âge, sa source et son statut de lecture ;
+2. calculer l'**âge d'une donnée** et distinguer date de période, date de publication et date de lecture ;
+3. relier six familles d'indicateurs (taux réels, dollar, banque centrale américaine, banques centrales étrangères, ETF, prix) et reconnaître celles qui **manquent** ;
+4. attribuer un sens à chaque indicateur **sans** en faire une cause démontrée ;
+5. mesurer l'**arbitraire d'une note globale** en faisant varier les pondérations ;
+6. rédiger une lecture du tableau qui indique ce qui est établi, ce qui est inconnu et ce qui changerait l'analyse.
+
+## 2. Prérequis
+
+- Taux réels et points morts (L5.03), dollar (L5.04), banques centrales (L5.06), ETF (L5.07), courbe à terme (L5.09), cycles (L5.10).
+
+## 3. Explication intuitive
+
+Un pilote regarde plusieurs cadrans : altitude, vitesse, carburant. Un cadran dont l'aiguille est bloquée est plus dangereux qu'un cadran absent, car on croit lire alors qu'on ne lit rien. Le tableau de bord de l'or fonctionne de la même façon. Chaque indicateur est utile s'il est **récent**, **mesuré comme on croit** et **relié à un mécanisme**. Une valeur de septembre n'est pas une valeur d'octobre ; une dépêche du 21 n'est pas le prix du 29. Le but n'est pas de produire un « feu vert » ou un « feu rouge », mais de savoir **quoi regarder, avec quel âge, et ce qu'on ignore**.
+
+## 4. Développement technique
+
+### 4.1 Les trois dates d'une donnée
+**[Définition]** Une donnée a (1) une **période** (le mois ou le jour mesuré), (2) une **date de publication** et (3) une **date de lecture**. L'**âge** est l'écart entre la fin de la période et le jour d'analyse (ici le 30/10/2026). Un taux réel mensuel de septembre a donc 30 jours d'âge le 30 octobre, même s'il a été publié le 1er octobre.
+
+### 4.2 Le tableau au 30 octobre 2026
+
+| # | Indicateur | Valeur lue | Période / date | Âge au 30/10 | Source (statut) |
+|---|---|---|---|---|---|
+| 1 | Taux réel 10 ans (moyenne mensuelle) | 2,64 % (août 2,40 ; mai 2,04) | septembre 2026 | 30 j | S-FRD-01 (primaire, résumé) |
+| 2 | Point mort 10 ans (moyenne mensuelle) | 2,35 % (août 2,29) | septembre 2026 | 30 j | S-FRD-03 (primaire, résumé) |
+| 3 | Indice large du dollar | 121,3202 (19/10 : 121,3248) | 23/10/2026 | 7 j | S-FRD-02 (primaire, résumé) |
+| 4 | Fourchette de la Fed | 3¾ à 4 %, maintenue ; vote 10–2 ; deux voix pour +¼ point | 28/10/2026 | 2 j | S-FED-26 (primaire, résumé) |
+| 5 | Anticipation de décembre | 88 % de hausse (FedWatch) | 21/10/2026 | 9 j | S-KIT-04 (dépêche reprise, résumé) |
+| 6 | Banques centrales (flux) | août : 39 t nettes ; Chine septembre : 21 t, avoirs 2 196 t | août, septembre 2026 | 30–60 j | S-KIT-02, S-KIT-03 (secondaires) |
+| 7 | ETF d'or | septembre : +67 t, avoirs 4 256 t, AUM 574 Md$ | septembre 2026 | 30 j | S-WGC-10 (industrie, résumé) |
+| 8 | Prix | 4 137,94 $ (21/10, séance) ; ≈ 4 019,8 $ (29/10, bougie) ; fourchette 3 978–4 030 | 21 et 29/10 | 9 j / 1 j | S-KIT-04 ; S-BNC-01 (opinion) |
+| — | Positionnement (CFTC) | **non lu** | — | — | — |
+| — | Courbe à terme d'octobre | **non lue** (dernier repère : 30/07, portage 4,0–5,1 %) | — | > 90 j | S-MMT-01 ; S-WGC-14 |
+
+**[Fait]** Le communiqué du 28/10 décrit une activité qui « croît fortement », une inflation « toujours élevée » et deux voix dissidentes (Lisa D. Cook, Beth M. Hammack) en faveur d'une hausse d'un quart de point (S-FED-26). **[Fait]** Selon la dépêche du 21/10, la quasi-totalité des économistes interrogés attendaient un maintien en octobre et une hausse en décembre ; elle cite aussi le conflit au Moyen-Orient et d'éventuelles avancées dans les pourparlers russo-ukrainiens (S-KIT-04).
+
+### 4.3 Ce que chaque cadran permet de dire (et de ne pas dire)
+- **Taux réel (1) et point mort (2).** **[Calcul de l'auteur]** Nominal ≈ réel + point mort : 2,64 + 2,35 = **4,99 %** en septembre contre 2,40 + 2,29 = 4,69 % en août, soit **+0,30 point**, dont +0,24 (80 %) viennent du taux réel. **[Interprétation]** Un taux réel qui monte renchérit le coût d'opportunité de l'or (L5.03) ; il ne dit pas que l'or a baissé *à cause* de cela. Ce sont des moyennes mensuelles : elles lissent les mouvements de fin de mois.
+- **Dollar (3).** Cinq jours seulement ont été lus, avec une variation de l'indice quasi nulle (121,3248 → 121,3202). Un indicateur plat sur cinq jours n'est pas un indicateur « neutre » sur le mois.
+- **Fed (4, 5).** Le maintien est un **fait** ; la hausse de décembre est une **anticipation de marché** datée du 21/10, d'avant la décision. Elle n'a pas été relue après le communiqué.
+- **Banques centrales (6).** Flux mensuels déclarés ; leur mesure est incomplète et révisée (L5.06). Les 2 196 t de la Chine proviennent d'une source secondaire et diffèrent d'un autre chiffre du WGC (point déjà enregistré).
+- **ETF (7).** Septembre est un mois de hausse des avoirs, juin un mois de baisse (−74 t) : le signe change d'un mois à l'autre.
+- **Prix (8).** Deux mesures de nature différente (cours de séance d'une dépêche, bougie d'un article d'analyse) : leur écart (−2,85 %) n'est pas une variation établie.
+
+### 4.4 Les manques sont des indicateurs
+**[Définition de cours]** Une case « non lu » fait partie du tableau. Ici : positionnement, courbe à terme d'octobre, taux réel quotidien d'octobre, flux d'ETF d'octobre, achats officiels d'octobre. Plus de la moitié des familles de données de **flux** sont donc plus anciennes d'un mois ou davantage. **[Interprétation]** Le tableau décrit mieux l'environnement de taux et la décision de la Fed que le comportement des investisseurs en octobre.
+
+### 4.5 Une note globale : utile ou trompeuse ?
+**[Définition de cours]** On attribue +1 (favorable à l'or), 0 ou −1 (défavorable) à chaque cadran lu :
+
+| Cadran | Note | Motif |
+|---|---|---|
+| Taux réel | −1 | hausse de 24 pb entre août et septembre |
+| Dollar | 0 | cinq jours plats |
+| Fed | −1 | maintien, deux voix pour une hausse, hausse de décembre anticipée le 21/10 |
+| Banques centrales | +1 | achats nets déclarés |
+| ETF | +1 | +67 t en septembre |
+| Géopolitique | 0 | la dépêche cite un conflit mais une analyste indique qu'il limite le potentiel de hausse |
+
+**[Calcul de l'auteur]** Poids égaux : −1 + 0 − 1 + 1 + 1 + 0 = **0**. Si l'on double le poids du taux réel : **−1**. Si l'on double celui des banques centrales et des ETF : **+2**. **[Interprétation]** Selon les pondérations choisies, les mêmes données livrent −1, 0 ou +2 : la note dépend davantage des pondérations que des données. Ces pondérations ne sont étayées par aucune étude lue ; la note ne sert qu'à vérifier la cohérence d'un raisonnement, jamais à décider.
+
+### 4.6 Lire le tableau sans causalité
+**[Fait]** Entre le 21/10 (4 137,94 $) et le 29/10 (≈ 4 019,8 $), le prix indiqué recule et une décision de la Fed intervient. **[Interprétation]** On ne peut pas attribuer le recul à la décision : les deux prix proviennent de sources et de mesures différentes, d'autres événements ont eu lieu, et un article d'analyse technique n'est pas une mesure officielle. Un tableau de bord **décrit des conditions** ; il ne démontre pas de cause.
+
+### 4.7 Ce qui changerait la lecture
+Une liste de déclencheurs d'actualisation : publication du taux réel quotidien d'octobre (série FRED annoncée au 30/10), nouvelles données de flux d'ETF et d'achats officiels, rapport hebdomadaire de positionnement de la CFTC, relevé de la courbe à terme, et toute nouvelle déclaration de la Fed. **[Interprétation]** Un tableau a une **date de péremption** : au-delà de quelques jours, ses cadrans de marché sont à relire.
+
+## 5. Définitions essentielles
+
+- **Âge d'une donnée** : jours entre la fin de la période mesurée et le jour d'analyse.
+- **Indicateur lu / non lu** : valeur effectivement vue dans une source citée, ou non.
+- **Anticipation de marché** : probabilité déduite des prix de marché, non une décision.
+- **Note globale** : somme de notes −1/0/+1 ; arbitraire par construction.
+- **Pondération** : poids donné à un cadran dans la note.
+- **Déclencheur d'actualisation** : événement ou publication qui impose de relire le tableau.
+
+## 6. Exemples chiffrés
+
+**6.1 Âges.** 28/10 → 2 jours ; 21/10 → 9 jours ; 23/10 → 7 jours ; 30/09 → 30 jours.
+**6.2 Taux.** Septembre : 2,64 + 2,35 = 4,99 % ; août : 4,69 % ; différence +0,30 point, dont 80 % de taux réel.
+**6.3 Distance au record.** Record de séance 5 595 $ (29/01/2026, déjà lu en L5.10). 4 137,94 ÷ 5 595 − 1 = **−26,0 %** ; 4 019,8 ÷ 5 595 − 1 = **−28,2 %** (mesures de séance, non comparables au critère du WGC).
+**6.4 Niveaux de l'analyse technique.** À 4 019,8 : 3 978 est à −1,04 % ; 4 000 à −0,49 % ; 4 030 à +0,25 %. Ces niveaux sont ceux d'un article d'opinion, pas des faits de marché établis.
+
+### 6.5 Cas historique documenté — septembre 2011 : le sommet et la glissade
+**[Fait]** (S-RTR-01, résumé d'un récapitulatif Reuters) : record de **1 920 $** le 6 septembre 2011, « parmi les inquiétudes sur la dette de la zone euro et des États-Unis » ; le 26 septembre, un prix **inférieur à 1 600 $**, décrit comme la plus forte glissade sur trois jours depuis environ 28,5 ans ; « environ 1 520 $ » le 29 décembre.
+**[Calcul de l'auteur]** 1 600 ÷ 1 920 − 1 = **−16,7 %** en 20 jours (au plus ; le prix est donné comme « inférieur » à 1 600) ; 1 520 ÷ 1 920 − 1 = **−20,8 %** en séance, mesure qui n'est pas la règle du WGC (L5.10).
+**[Interprétation]** Un tableau bâti sur les inquiétudes de dette aurait, ce jour-là, décrit un environnement de risque favorable au refuge ; il n'aurait pas indiqué la date ni l'ampleur de la glissade. **Ce qu'on ne peut pas conclure** : qu'un indicateur précis ait annoncé le retournement (aucun n'a été lu pour septembre 2011). **Limites** : récapitulatif secondaire, résumé automatique, repères de séance.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **XAU/USD** : les cadrans de taux et de dollar parlent du côté « USD » de la paire ; ceux de flux (banques centrales, ETF) du côté « XAU ».
+- **Forex** : le même tableau de taux et de Fed alimente EUR/USD ou USD/JPY ; l'indice large (euro 21,0 %) n'est pas un proxy de l'euro seul.
+- **Fed** : un communiqué tranche une incertitude (maintien) mais en ouvre une autre (décembre).
+- **Routine** : dater, relire les déclencheurs, noter les cases vides, ne jamais fusionner des mesures de natures différentes.
+- **Prudence** : un tableau complet à 100 % ne garantit pas un résultat de transaction.
+
+## 8. Erreurs courantes
+
+1. Remplir une case avec une valeur ancienne sans en indiquer l'âge.
+2. Confondre anticipation (88 % de hausse) et décision.
+3. Comparer un cours de séance à une bougie d'un article d'analyse.
+4. Traiter une case « non lu » comme neutre (0).
+5. Croire que la note globale mesure quelque chose.
+6. Attribuer le mouvement du prix à l'événement le plus récent.
+7. Reprendre sans réserve les niveaux d'un article d'opinion.
+
+## 9. Limites de l'interprétation
+
+- Sources lues par **résumé automatique** ; aucune n'a été relue dans son texte intégral.
+- Les valeurs sont **mensuelles** (taux, flux) ou **d'une séance** (prix) : granularité hétérogène.
+- Le positionnement et la courbe d'octobre sont absents.
+- Les notes et leurs pondérations sont des **choix de cours** non validés.
+- Le tableau est valable à une date ; il se périme.
+- Ni causalité ni prévision n'en découlent.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Âges.** Le jour d'analyse est le 30/10/2026. Calcule l'âge d'une donnée du 28/10, du 21/10, du 23/10 et d'un taux de fin de période le 30/09.
+
+<details>
+<summary>Correction 1</summary>
+
+**2 jours**, **9 jours**, **7 jours** et **30 jours**. L'âge se mesure depuis la fin de la période, pas depuis la date de publication.
+</details>
+
+**Exercice 2 — Décomposition.** Taux réel / point mort : août 2,40 / 2,29 ; septembre 2,64 / 2,35. Calcule le taux nominal approché des deux mois, la variation, et la part du taux réel.
+
+<details>
+<summary>Correction 2</summary>
+
+Août : 2,40 + 2,29 = **4,69 %** ; septembre : 2,64 + 2,35 = **4,99 %** ; variation **+0,30 point** ; part du taux réel : 0,24 ÷ 0,30 = **80 %**. Ce sont des moyennes mensuelles et une approximation (nominal ≈ réel + point mort).
+</details>
+
+**Exercice 3 — Distance au record.** Record de séance 5 595 $. Prix 4 137,94 $ (21/10) et 4 019,8 $ (29/10). Calcule les distances et la variation entre les deux prix. Que dire de cette dernière ?
+
+<details>
+<summary>Correction 3</summary>
+
+4 137,94 ÷ 5 595 − 1 = **−26,0 %** ; 4 019,8 ÷ 5 595 − 1 = **−28,2 %** ; 4 019,8 ÷ 4 137,94 − 1 = **−2,85 %**. Cette dernière variation compare deux sources et deux mesures différentes : indicative, non établie.
+</details>
+
+**Exercice 4 — Pondérations.** Notes : taux réel −1, dollar 0, Fed −1, banques centrales +1, ETF +1, géopolitique 0. Calcule la note à poids égaux, avec taux réel doublé, puis avec banques centrales et ETF doublés. Conclus.
+
+<details>
+<summary>Correction 4</summary>
+
+Poids égaux : **0** ; taux réel doublé : **−1** ; banques centrales et ETF doublés : **+2**. Mêmes données, trois résultats : la note dépend des pondérations, qu'aucune étude lue ne justifie.
+</details>
+
+**Exercice 5 — Prix implicite.** Avoirs des ETF : 4 256 t ; AUM : 574 Md$ ; 1 tonne = 32 150,7 onces troy. Calcule le prix implicite par once et compare-le à 4 019,8 $. Pourquoi l'écart n'est-il pas une anomalie démontrée ?
+
+<details>
+<summary>Correction 5</summary>
+
+4 256 × 32 150,7 ≈ 136,8 millions d'onces ; 574 × 10⁹ ÷ 136,8 × 10⁶ ≈ **4 194,9 $/once**, soit **+4,4 %** au-dessus de 4 019,8 $. Les dates diffèrent (fin septembre contre le 29/10), les sources aussi, et les AUM sont arrondis : aucune anomalie n'est démontrée.
+</details>
+
+**Exercice 6 — Critique.** « Quatre cadrans sur six sont verts ou neutres, donc l'or va monter. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) Les notes et pondérations sont arbitraires (Exercice 4). (2) Deux familles de données (positionnement, courbe) manquent. (3) Plusieurs cadrans ont un mois d'âge ou davantage. (4) Un tableau décrit des conditions et ne prévoit pas ; l'épisode de septembre 2011 le montre (§ 6.5). (5) « Quatre sur six » ne correspond d'ailleurs pas aux notes du tableau (deux favorables, deux neutres, deux défavorables).
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L5.11.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Un tableau de bord est utile s'il est **daté**, **mesuré comme on croit** et relié à un mécanisme.
+- Au 30/10/2026 : taux réel 2,64 % (septembre), Fed maintenue à 3¾–4 % (10–2, deux voix pour une hausse), hausse de décembre anticipée à 88 % (21/10), ETF +67 t en septembre, prix autour de 4 020–4 140 $.
+- Les cases vides (positionnement, courbe d'octobre) font partie du tableau.
+- La note globale varie de −1 à +2 selon les pondérations : outil de cohérence, pas de décision.
+- Le tableau décrit des conditions ; il ne démontre pas de cause et ne prévoit rien.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer l'âge d'une donnée (Exercice 1).
+- [ ] Décomposer un taux nominal (Exercice 2).
+- [ ] Mesurer une distance et nommer la limite d'une comparaison (Exercice 3).
+- [ ] Montrer la sensibilité d'une note aux pondérations (Exercice 4).
+- [ ] Vérifier un prix implicite et prudemment l'interpréter (Exercice 5).
+- [ ] Critiquer une conclusion tirée d'un tableau (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-FED-26** — Réserve fédérale, communiqué du FOMC du 28/10/2026 : https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm
+- **S-KIT-04** — Reuters via Kitco (21/10/2026), « Gold edges higher as yields retreat, Fed decision in focus » : https://www.kitco.com/news/off-the-wire/2026-10-21/gold-edges-higher-yields-retreat-fed-decision-focus
+- **S-BNC-01** — Brave New Coin (29/10/2026, analyse technique/opinion), « Gold price analysis October 2026 as Fed decision puts key support at risk » : https://bravenewcoin.com/insights/gold-price-analysis-october-2026-as-fed-decision-puts-key-support-at-risk
+- **S-FRD-01**, **S-FRD-03**, **S-FRD-02**, **S-WGC-10**, **S-KIT-02**, **S-KIT-03**, **S-RTR-01**, **S-MMT-01**, **S-WGC-14** — déjà lues (L5.03 à L5.10).
+
+**Définitions de cours non rattachées à une source lue :** note globale, pondérations, déclencheur d'actualisation, âge d'une donnée. **Points non vérifiés :** taux réel et point mort quotidiens d'octobre, flux d'ETF et achats officiels d'octobre, positionnement CFTC, courbe à terme d'octobre, probabilités FedWatch après le 28/10, niveaux de prix issus de l'article d'opinion.

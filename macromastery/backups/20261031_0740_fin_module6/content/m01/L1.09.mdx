@@ -1,0 +1,264 @@
+---
+id: L1.09
+module: 1
+order: 9
+title: "Consommation, investissement, immobilier : ménages, entreprises et logement dans le cycle"
+title_initial: "Consommation, investissement, immobilier"
+level: "débutant à intermédiaire"
+duration_hours: 2.5
+prerequisites: ["L1.01", "L1.02", "L0.07"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L1.09.quiz.json"
+sources: ["S-CEN-01", "S-FMC-01", "S-BEA-02", "S-BEA-01"]
+---
+
+# L1.09 — Consommation, investissement, immobilier : ménages, entreprises et logement dans le cycle
+
+> **Convention de lecture.** **[Fait]** = chiffre ou énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. expliquer les déterminants de la **consommation** (revenu, richesse, crédit, confiance, épargne) ;
+2. expliquer l'**investissement** et le principe d'**accélérateur**, et pourquoi il est plus volatil que la consommation ;
+3. lire des statistiques de **logement** (permis, mises en chantier, achèvements) et leurs **marges d'erreur** ;
+4. calculer l'effet d'un **taux hypothécaire** sur la mensualité ;
+5. relier ménages, entreprises et logement à l'**orientation du cycle** (L1.02) ;
+6. distinguer un **mouvement statistiquement significatif** d'un **bruit**.
+
+## 2. Prérequis
+
+L1.01 (décomposition du PIB), L1.02 (cycle) et L0.07 (intérêts, annuités, composition).
+
+## 3. Explication intuitive
+
+Le PIB se décompose en grandes familles de dépenses (L1.01) :
+
+- les **ménages** consomment (la plus grande composante) et achètent des logements ;
+- les **entreprises** investissent (machines, bâtiments, stocks) ;
+- l'**État** dépense (L1.11) ;
+- l'**étranger** achète nos exportations (L1.10).
+
+Ces dépenses ne varient pas toutes à la même vitesse. La consommation est lissée (les ménages évitent de modifier brutalement leur niveau de vie). L'investissement et le logement réagissent fort aux **taux d'intérêt**, aux **anticipations de demande** et au **crédit** : ils sont plus volatils, et souvent plus tôt dans le cycle **[hypothèse d'analyse, non démontrée ici]**.
+
+## 4. Développement technique
+
+### 4.1 La consommation
+
+**[Définition]** La consommation des ménages dépend de :
+
+- le **revenu disponible** (revenu après impôts et transferts) ;
+- la **richesse** (actions, immobilier, épargne) ;
+- le **crédit** (coût et accès) ;
+- la **confiance** et les anticipations (emploi, inflation) ;
+- le **taux d'épargne** : part du revenu disponible non dépensée.
+
+**Lissage de la consommation.** **[Définition]** Les ménages cherchent à stabiliser leur niveau de vie : une hausse temporaire du revenu est en partie épargnée, une baisse temporaire est en partie financée par l'épargne ou l'emprunt. C'est pourquoi la consommation bouge moins que le revenu.
+
+**Données réelles.** **[Fait, S-BEA-02, résumé automatique du communiqué du 30 septembre 2026]** Août 2026 : revenu personnel **+66,6 Md$ (+0,2 %)** ; revenu disponible **+68,6 Md$ (+0,3 %)** ; dépenses de consommation **+190,8 Md$ (+0,9 %)** ; dépenses réelles **+92,8 Md$ (+0,6 %)** ; épargne **990,2 Md$**, taux d'épargne **4,1 %**.
+
+**[Calcul de l'auteur]** Les dépenses (+190,8 Md$) ont augmenté beaucoup plus que le revenu disponible (+68,6 Md$) : la différence (122,2 Md$) a été financée par une **baisse de l'épargne** ou du crédit. Le résumé ne donne pas le taux d'épargne du mois précédent : on ne peut donc pas mesurer la baisse du taux. Une consommation qui progresse plus vite que le revenu ne peut pas durer indéfiniment ; c'est un signal à surveiller, non une prévision.
+
+**Données du PIB.** **[Fait, S-BEA-01, L1.01]** Au T2 2026, les ventes finales réelles aux acheteurs privés intérieurs (consommation et investissement privé hors stocks) ont augmenté de **4,6 %** en rythme annualisé, et la révision à la hausse du PIB (de 1,5 % à 2,2 %) est attribuée en partie à la consommation.
+
+### 4.2 L'investissement des entreprises et l'accélérateur
+
+**[Définition]** L'investissement comprend les machines, les bâtiments, les logiciels et la **variation des stocks** (L1.01). Il dépend du **coût du capital** (taux d'intérêt), des **perspectives de demande**, des **profits** et de l'accès au crédit.
+
+**Principe d'accélérateur (simplifié).** Si l'entreprise veut un stock de capital proportionnel à la production (K = v × Y), l'investissement net est proportionnel à la **variation** de la production : I = v × ΔY.
+
+**Exemple (SIMULATION).** v = 2 ; production : 100, 102, 106, 108.
+
+| Période | Production | Variation ΔY | Investissement I = 2 × ΔY |
+| --- | --- | --- | --- |
+| 1 → 2 | 102 | +2 | 4 |
+| 2 → 3 | 106 | +4 | 8 |
+| 3 → 4 | 108 | +2 | 4 |
+
+La production croît de +2 %, +3,9 %, +1,9 % ; l'investissement double (+100 %) puis est divisé par deux (−50 %). **L'investissement amplifie les variations de la production** : c'est pourquoi il est plus volatil. **[Interprétation]** Ce modèle est une simplification pédagogique ; l'investissement réel dépend aussi des taux, de l'incertitude et du crédit.
+
+### 4.3 Le logement : une dépense sensible aux taux
+
+**Mensualité d'un prêt.** **[Définition]** Pour un prêt L au taux annuel r (taux mensuel i = r ÷ 12) sur n mois : mensualité = L × i ÷ (1 − (1 + i)⁻ⁿ) (annuité, L0.07).
+
+**Exemple avec des données réelles.** **[Fait, S-FMC-01, résumé automatique d'une page de Freddie Mac]** Au 29 octobre 2026, le taux moyen des prêts à 30 ans à taux fixe est de **7,24 %** (7,32 % la semaine précédente ; **6,17 %** un an plus tôt) ; celui à 15 ans, de **6,60 %**. **[Calcul de l'auteur]** Pour un prêt de 300 000 $ sur 30 ans :
+
+- à 7,24 % : mensualité ≈ **2 044,49 $** ;
+- à 6,17 % : mensualité ≈ **1 831,57 $** ;
+- écart : **+212,92 $ par mois**, soit **+11,6 %** à emprunt identique.
+
+Une hausse de 1,07 point de taux augmente la mensualité de plus de 11 % : le logement est **sensible aux taux**. **Limite :** le taux de Freddie Mac est une enquête hebdomadaire, non un prix de transaction.
+
+### 4.4 Les statistiques de logement et leur incertitude
+
+**Vocabulaire.** **[Définition]** Les **permis de construire** autorisent des constructions ; les **mises en chantier** (*housing starts*) comptent les logements dont la construction démarre ; les **achèvements** comptent les logements terminés. Les permis précèdent en général les mises en chantier, qui précèdent les achèvements. Ces statistiques sont en **rythme annualisé corrigé des variations saisonnières**.
+
+**Données réelles.** **[Fait, S-CEN-01, résumé automatique du communiqué du Census Bureau du 20 octobre 2026, septembre 2026]**
+
+| Indicateur | Septembre 2026 (taux annualisé) |
+| --- | --- |
+| Mises en chantier | **1 221 000**, soit **−5,2 %** (± 11,8 %) par rapport à août révisé (1 288 000) et **−7,4 %** (± 11,5 %) par rapport à septembre 2025 (1 319 000) |
+| Permis de construire | **1 400 000** |
+| Achèvements | **1 192 000** |
+| Maisons individuelles | permis 845 000 ; mises en chantier 859 000 ; achèvements 840 000 |
+| Immeubles de 5 logements et plus | permis 503 000 ; mises en chantier 349 000 ; achèvements 339 000 |
+
+**[Calcul de l'auteur]**
+
+- Les variations calculées sont cohérentes : 1 221 ÷ 1 288 − 1 = −5,20 % ; 1 221 ÷ 1 319 − 1 = −7,43 %.
+- **Marges d'erreur** : −5,2 % ± 11,8 % donne un intervalle de **−17,0 % à +6,6 %** ; −7,4 % ± 11,5 % donne **−18,9 % à +4,1 %**. Les deux intervalles **contiennent zéro** : on ne peut pas affirmer, à partir de ce seul chiffre, que les mises en chantier ont baissé. La baisse est **statistiquement indiscernable du bruit** (le communiqué précise le niveau de confiance, non repris dans le résumé : à vérifier).
+- Mises en chantier par catégorie : 859 + 349 = 1 208 ; le reste (**13 000**, immeubles de 2 à 4 logements) est **déduit** par différence, le communiqué ne publiant pas ce chiffre pour le mois.
+- Permis : 845 + 503 = 1 348 ; reste de 52 000 pour 2 à 4 logements.
+- Permis (1 400 000) supérieurs aux mises en chantier (1 221 000) de 179 000 : **[Interprétation]** les permis ne se traduisent pas tous en chantiers, et l'écart est particulièrement marqué pour les grands immeubles (permis 503 000 contre chantiers 349 000, soit 154 000 de plus). Un écart peut refléter des délais, des abandons ou des difficultés de financement ; **la leçon n'a pas les éléments pour trancher**.
+
+### 4.5 Ménages, entreprises, logement et cycle
+
+**[Interprétation, grille d'analyse, non démontrée ici]**
+
+| Composante | Sensibilité principale | Signal précoce ? |
+| --- | --- | --- |
+| Logement | Taux hypothécaires, crédit, revenus | Souvent |
+| Investissement des entreprises | Coût du capital, perspectives de demande, profits | Parfois |
+| Consommation de biens durables | Crédit, confiance, revenus | Parfois |
+| Consommation de services | Revenu, emploi | Rarement (stable) |
+
+La plupart des dépenses ne signalent pas à elles seules un retournement du cycle. On croise plusieurs indicateurs et on regarde les **révisions** et les **marges d'erreur**.
+
+## 5. Définitions essentielles
+
+- **Taux d'épargne** : épargne ÷ revenu disponible.
+- **Lissage de la consommation** : stabilisation du niveau de vie malgré les variations du revenu.
+- **Accélérateur** : I = v × ΔY dans la version simplifiée.
+- **Mensualité** : L × i ÷ (1 − (1 + i)⁻ⁿ).
+- **Permis, mises en chantier, achèvements** : étapes de la construction.
+- **SAAR** : corrigé des variations saisonnières, en taux annualisé.
+- **Marge d'erreur** : intervalle autour d'une variation estimée à partir d'un échantillon.
+
+## 6. Exemples chiffrés
+
+**A.** Accélérateur : ΔY = 2, 4, 2 → I = 4, 8, 4 (§4.2).
+**B.** Mensualité 300 000 $ : 2 044,49 $ à 7,24 % contre 1 831,57 $ à 6,17 % (§4.3).
+**C.** Mises en chantier : −5,2 % ± 11,8 % → [−17,0 %, +6,6 %] (§4.4).
+**D.** 859 000 + 349 000 + 13 000 = 1 221 000 (§4.4).
+**E.** Août 2026 : dépenses +0,9 %, revenu disponible +0,3 % (§4.1).
+
+### 6.5 Cas historique documenté — les taux hypothécaires et le logement en 2026
+
+**[Fait, S-FMC-01 et S-CEN-01]** Au 29 octobre 2026, le taux fixe à 30 ans est de **7,24 %**, soit **1,07 point de plus** qu'un an plus tôt (6,17 %). Les mises en chantier de septembre 2026 sont à **1,221 million** (SAAR), contre **1,319 million** en septembre 2025, soit **−7,4 %** (± 11,5 %).
+
+**[Interprétation]** Un taux hypothécaire plus élevé a tendance à freiner la demande de logements, ce qui est compatible avec le recul mesuré, mais la **marge d'erreur** (± 11,5 %) empêche de conclure sur la seule base de ce chiffre. D'autres facteurs (prix, revenus, coûts de construction, offre existante) interviennent et ne sont pas dans les sources lues. La leçon **n'établit aucun lien de cause à effet** entre les deux séries.
+
+**Ce que la leçon n'a pas pu confirmer :** les ventes de logements existants et neufs, les prix des logements, les stocks, les conditions de crédit, la confiance des ménages, les profits des entreprises, et les enquêtes d'investissement.
+
+## 7. Application au Forex et à l'or
+
+- **Forex** : des données de consommation et de logement fortes ou faibles influencent les anticipations de croissance et de taux (modules 2, 4). Elles pèsent surtout par **l'écart avec les prévisions** (module 3). Une consommation robuste avec des taux élevés peut soutenir le dollar via les rendements ; l'effet n'est pas automatique.
+- **Or** : l'effet passe par les taux réels et le dollar (module 5) ; un logement qui faiblit avec des taux hypothécaires élevés signale un durcissement des conditions financières, qui peut alimenter des anticipations de baisses de taux et des taux réels plus bas : mécanisme **hypothétique**, à tester.
+- **Méthode** : pour chaque statistique, demander *quelle est la marge d'erreur, la révision attendue, la saisonnalité, la prévision du marché ?* avant toute lecture de direction.
+- **Rappel** : **une bonne analyse ne garantit pas une transaction gagnante.**
+
+## 8. Erreurs courantes
+
+- **Conclure d'une variation mensuelle sans regarder sa marge d'erreur.**
+- **Confondre permis, mises en chantier et achèvements.**
+- **Penser que la consommation est instable** (elle est plutôt lissée).
+- **Oublier que l'investissement amplifie les variations de la production.**
+- **Déduire un lien de cause à effet de deux séries qui bougent ensemble.**
+- **Comparer des taux annualisés à des taux mensuels.**
+- **Négliger le taux d'épargne** quand la consommation dépasse le revenu.
+- **Utiliser une enquête privée comme une statistique officielle.**
+
+## 9. Limites de l'interprétation
+
+- Communiqués du BEA et du Census Bureau et page de Freddie Mac lus par **résumé automatique**.
+- Le chiffre de 13 000 pour les immeubles de 2 à 4 logements est **déduit**.
+- Le taux d'épargne du mois précédent n'a pas été lu.
+- Les niveaux de confiance des marges d'erreur du Census Bureau ne figurent pas dans le résumé.
+- Aucune donnée sur les prix des logements, les ventes ou les enquêtes d'investissement n'a été lue.
+- Un rapport de la NRF (CNBC/NRF Retail Monitor) a été repéré mais **non retenu** (source privée, non officielle).
+- Le principe d'accélérateur est un **modèle pédagogique** ; il ne décrit pas la réalité de façon fine.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Mensualité.** Prêt de 250 000 $ sur 30 ans. Calcule la mensualité à (a) 7,24 % ; (b) 6,17 % ; (c) l'écart en $ et en %.
+
+<details>
+<summary>Correction 1</summary>
+
+Pour 300 000 $ les mensualités sont 2 044,49 $ et 1 831,57 $ ; le calcul est proportionnel au capital : × 250 ÷ 300 = 0,8333. (a) 2 044,49 × 0,8333 = **1 703,75 $**. (b) 1 831,57 × 0,8333 = **1 526,31 $**. (c) **+177,44 $**, soit **+11,6 %** (le pourcentage ne dépend pas du capital).
+</details>
+
+**Exercice 2 — Marge d'erreur.** Les mises en chantier baissent de 3,0 % (± 9,0 %). (a) Intervalle ? (b) Peut-on affirmer une baisse ? (c) Et si la baisse était de 12,0 % (± 9,0 %) ?
+
+<details>
+<summary>Correction 2</summary>
+
+(a) −3,0 ± 9,0 : de **−12,0 % à +6,0 %**. (b) Non : l'intervalle contient zéro. (c) −12,0 ± 9,0 : de **−21,0 % à −3,0 %** : l'intervalle est entièrement négatif, une baisse est alors statistiquement indiquée (au niveau de confiance de la marge).
+</details>
+
+**Exercice 3 — Décomposition.** Mises en chantier : maisons individuelles 859 000 ; immeubles de 5 logements et plus 349 000 ; total 1 221 000. Permis : individuelles 845 000 ; 5 et plus 503 000 ; total 1 400 000. (a) Mises en chantier de 2 à 4 logements ? (b) Permis de 2 à 4 logements ? (c) Écart permis − chantiers pour les 5 et plus ?
+
+<details>
+<summary>Correction 3</summary>
+
+(a) 1 221 000 − 859 000 − 349 000 = **13 000**. (b) 1 400 000 − 845 000 − 503 000 = **52 000**. (c) 503 000 − 349 000 = **154 000**. Ces valeurs sont déduites ; l'écart n'est pas expliqué par les sources lues.
+</details>
+
+**Exercice 4 — Accélérateur.** v = 3 ; production : 200, 204, 212, 214. (a) Investissement net à chaque période ? (b) Variation de l'investissement ? (c) Variation de la production ? (d) Que montre le résultat ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) ΔY = 4, 8, 2 → I = **12, 24, 6**. (b) +100 % puis −75 %. (c) Production : +2,0 %, +3,9 %, +0,9 %. (d) L'investissement amplifie fortement les variations de la production (modèle simplifié).
+</details>
+
+**Exercice 5 — Épargne (SIMULATION).** Revenu disponible 100, dépenses 96 (taux d'épargne 4 %). Le revenu augmente de 0,3 % et les dépenses de 0,9 %. (a) Nouveau taux d'épargne ? (b) Peut-on prolonger la tendance ? (c) Le taux publié de 4,1 % en août 2026 est-il celui de la simulation ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) Revenu = 100,3 ; dépenses = 96 × 1,009 = 96,864 ; épargne = 3,436 ; taux = 3,436 ÷ 100,3 = **3,43 %**. (b) Non, indéfiniment : le taux d'épargne ne peut pas baisser sans fin ; un ajustement du revenu ou des dépenses est nécessaire. (c) Non : la simulation est fictive ; le taux publié est de 4,1 % et son niveau du mois précédent n'a pas été lu.
+</details>
+
+**Exercice 6 — Critique.** Un titre : « Les mises en chantier s'effondrent de 5,2 % : le logement plonge ! » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) La marge d'erreur (± 11,8 %) inclut zéro. (2) « S'effondrent » ne correspond pas à −5,2 % ; une variation mensuelle est bruyante. (3) Les chiffres sont révisés (août a été révisé à 1 288 000). (4) Il faut regarder permis, achèvements, ventes, prix et taux. (5) Aucune prévision de marché n'est mentionnée : l'effet sur les prix dépend de l'écart avec les attentes.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L1.09.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- **Consommation** : lissée, dépend du revenu, de la richesse, du crédit, de la confiance et de l'épargne ; août 2026 : dépenses +0,9 %, revenu disponible +0,3 %, taux d'épargne 4,1 %.
+- **Investissement** : amplifie les variations de la production (accélérateur simplifié).
+- **Logement** : sensible aux taux ; 300 000 $ sur 30 ans : 2 044,49 $ à 7,24 % contre 1 831,57 $ à 6,17 % (+11,6 %).
+- Septembre 2026 : mises en chantier 1,221 million, −5,2 % (± 11,8 %) : **non significatif** statistiquement.
+- Permis > mises en chantier, surtout pour les grands immeubles : écart **non expliqué** par les sources lues.
+- Une corrélation entre taux et logement ne prouve pas une cause.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer une mensualité et un écart de taux (Exercice 1).
+- [ ] Interpréter une marge d'erreur (Exercice 2).
+- [ ] Décomposer des statistiques de logement (Exercice 3).
+- [ ] Appliquer l'accélérateur (Exercice 4).
+- [ ] Lire consommation et épargne (Exercice 5).
+- [ ] Critiquer un titre alarmiste (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-CEN-01** — U.S. Census Bureau, *New Residential Construction, September 2026* (20 octobre 2026) : https://www.census.gov/construction/nrc/pdf/newresconst_202609.pdf
+- **S-FMC-01** — Freddie Mac, *Primary Mortgage Market Survey* (données au 29 octobre 2026) : https://www.freddiemac.com/pmms?intcmp=CWS
+- **S-BEA-02** — BEA, *Personal Income and Outlays, August 2026* (30 septembre 2026) : https://www.bea.gov/sites/default/files/2026-09/pi0826.pdf
+- **S-BEA-01** — BEA, communiqué du PIB du T2 2026 (voir L1.01) : https://www.bea.gov/sites/default/files/2026-09/gdp2q26-3rd.pdf
+
+**Définitions de cours non rattachées à une source officielle lue :** déterminants de la consommation, lissage, accélérateur, formule de mensualité, grille de sensibilité du §4.5. **Points non vérifiés :** niveau de confiance des marges d'erreur, ventes et prix de logements, enquêtes d'investissement, taux d'épargne de juillet 2026.

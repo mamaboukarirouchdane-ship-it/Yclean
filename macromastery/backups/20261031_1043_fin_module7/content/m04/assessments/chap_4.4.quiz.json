@@ -1,0 +1,178 @@
+{
+  "chapterId": "4.4",
+  "module": 4,
+  "title": "Quiz de chapitre 4.4 — Euro, yen, livre, franc, devises de matières premières (L4.07–L4.09)",
+  "passThreshold": 0.8,
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C4.4-Q1",
+      "type": "mcq",
+      "prompt": "Taux de la facilité de dépôt de la BCE depuis le 16 septembre 2026 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2,90 %"
+        },
+        {
+          "id": "b",
+          "text": "2,25 %"
+        },
+        {
+          "id": "c",
+          "text": "2,65 %"
+        },
+        {
+          "id": "d",
+          "text": "2,50 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "2,50 % est le taux de dépôt ; 2,65 % est le MRO et 2,90 % le prêt marginal.",
+      "tags": [
+        "bce"
+      ]
+    },
+    {
+      "id": "C4.4-Q2",
+      "type": "mcq",
+      "prompt": "Dépôt 2,50 % et IPCH 3,8 % : taux réel ex post ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,00 point"
+        },
+        {
+          "id": "b",
+          "text": "+1,30 point"
+        },
+        {
+          "id": "c",
+          "text": "−1,30 point"
+        },
+        {
+          "id": "d",
+          "text": "−0,50 point"
+        }
+      ],
+      "correct": "c",
+      "explanation": "2,50 − 3,8 = −1,30 point ; avec le sous-jacent de 2,5 %, le taux réel serait de 0,00.",
+      "tags": [
+        "reel"
+      ]
+    },
+    {
+      "id": "C4.4-Q3",
+      "type": "mcq",
+      "prompt": "Banque du Japon, 18 septembre 2026 (source secondaire) : quel taux et quel vote ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1,25 % ; 7 contre 2"
+        },
+        {
+          "id": "b",
+          "text": "1,00 % ; 8 contre 1"
+        },
+        {
+          "id": "c",
+          "text": "1,50 % ; unanime"
+        },
+        {
+          "id": "d",
+          "text": "0,75 % ; 5 contre 4"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La hausse de 0,25 point mène le taux de 1,00 % à 1,25 % par 7 voix contre 2 ; l'information est à confirmer à la source.",
+      "tags": [
+        "boj"
+      ]
+    },
+    {
+      "id": "C4.4-Q4",
+      "type": "mcq",
+      "prompt": "BoE : 3,75 % maintenu, 6 voix contre 3 pour 4,00 %. Quelle part du comité voulait resserrer ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "66,7 %"
+        },
+        {
+          "id": "b",
+          "text": "33,3 %"
+        },
+        {
+          "id": "c",
+          "text": "25 %"
+        },
+        {
+          "id": "d",
+          "text": "50 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "3 ÷ 9 = 33,3 % ; la répartition des votes informe sur la trajectoire.",
+      "tags": [
+        "boe"
+      ]
+    },
+    {
+      "id": "C4.4-Q5",
+      "type": "mcq",
+      "prompt": "Taux canadien 2,5 % et Fed (milieu) 3,875 % : différentiel ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,875 point"
+        },
+        {
+          "id": "b",
+          "text": "1,25 point"
+        },
+        {
+          "id": "c",
+          "text": "1,375 point"
+        },
+        {
+          "id": "d",
+          "text": "0,725 point"
+        }
+      ],
+      "correct": "c",
+      "explanation": "3,875 − 2,50 = 1,375 point en défaveur du Canada ; l'Australie, à 4,60 %, est à +0,725 point.",
+      "tags": [
+        "boc"
+      ]
+    },
+    {
+      "id": "C4.4-Q6",
+      "type": "mcq",
+      "prompt": "Quatre hausses de 25 pb en 2026 jusqu'à 4,60 % (RBA) : taux au début de l'année ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "3,60 %"
+        },
+        {
+          "id": "b",
+          "text": "4,35 %"
+        },
+        {
+          "id": "c",
+          "text": "4,10 %"
+        },
+        {
+          "id": "d",
+          "text": "5,60 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "4 × 0,25 = 1,00 point ; 4,60 − 1,00 = 3,60 %.",
+      "tags": [
+        "rba"
+      ]
+    }
+  ],
+  "revision": 1
+}

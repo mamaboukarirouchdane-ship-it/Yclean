@@ -1,0 +1,289 @@
+{
+  "lessonId": "L7.08",
+  "title": "Quiz — Atelier : un indicateur COT",
+  "passThreshold": 0.8,
+  "note": "Seuil 80 % (8 sur 10)",
+  "questions": [
+    {
+      "id": "L7.08-Q1",
+      "type": "mcq",
+      "prompt": "Quelle est la différence entre la date de référence et la date de publication d'un rapport COT ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La référence est le jour de publication"
+        },
+        {
+          "id": "b",
+          "text": "Les deux sont le vendredi"
+        },
+        {
+          "id": "c",
+          "text": "La référence est le mardi où les positions sont mesurées ; la publication a lieu généralement le vendredi"
+        },
+        {
+          "id": "d",
+          "text": "Il n'y a pas de différence"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Les positions sont arrêtées au mardi et publiées environ trois jours plus tard ; l'âge de la donnée se calcule depuis la date de référence.",
+      "tags": [
+        "dates"
+      ]
+    },
+    {
+      "id": "L7.08-Q2",
+      "type": "mcq",
+      "prompt": "Net Managed Money : 139 548 le 08/09 et 105 562 le 27/10. Quelle variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−33 986 contrats, soit −24,4 %"
+        },
+        {
+          "id": "b",
+          "text": "−3 398 contrats, soit −2,4 %"
+        },
+        {
+          "id": "c",
+          "text": "+33 986 contrats"
+        },
+        {
+          "id": "d",
+          "text": "−24,4 contrats"
+        }
+      ],
+      "correct": "a",
+      "explanation": "139 548 − 105 562 = 33 986 ; 33 986 ÷ 139 548 = 24,4 %.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L7.08-Q3",
+      "type": "mcq",
+      "prompt": "Le net MM baisse de 5,0 % mais sa part de l'intérêt ouvert passe de 21,11 % à 26,60 %. Pourquoi ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que le net a doublé"
+        },
+        {
+          "id": "b",
+          "text": "Parce que les Managed Money ont acheté"
+        },
+        {
+          "id": "c",
+          "text": "Parce que le prix a monté"
+        },
+        {
+          "id": "d",
+          "text": "Parce que l'intérêt ouvert a chuté de 526 276 à 396 810 : effet de dénominateur"
+        }
+      ],
+      "correct": "d",
+      "explanation": "À OI constant la part aurait été de 20,06 % ; la hausse du ratio vient du dénominateur, pas d'achats.",
+      "tags": [
+        "denominateur"
+      ]
+    },
+    {
+      "id": "L7.08-Q4",
+      "type": "mcq",
+      "prompt": "Sur 8 semaines d'observations, peut-on parler d'un niveau extrême par percentile ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui, dès qu'on a un percentile"
+        },
+        {
+          "id": "b",
+          "text": "Non : la fenêtre est inférieure au minimum de 52 observations fixé d'avance"
+        },
+        {
+          "id": "c",
+          "text": "Oui si le z-score dépasse 1"
+        },
+        {
+          "id": "d",
+          "text": "Oui si le prix a baissé"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le calcul reste possible mais descriptif ; une conclusion d'extrême exige une fenêtre écrite d'avance et suffisante.",
+      "tags": [
+        "fenetre"
+      ]
+    },
+    {
+      "id": "L7.08-Q5",
+      "type": "mcq",
+      "prompt": "Un percentile de 90,4 % sur 52 semaines signifie :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que la position est à son maximum"
+        },
+        {
+          "id": "b",
+          "text": "Que le prix va baisser"
+        },
+        {
+          "id": "c",
+          "text": "Que 90,4 % des fonds sont acheteurs"
+        },
+        {
+          "id": "d",
+          "text": "Que 90,4 % des observations de la fenêtre sont inférieures ou égales à la valeur courante"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le percentile est un rang dans la fenêtre ; il ne dit ni quand ni si la position se dénouera. Le maximum de la fenêtre simulée était 260 200.",
+      "tags": [
+        "percentile"
+      ]
+    },
+    {
+      "id": "L7.08-Q6",
+      "type": "mcq",
+      "prompt": "Pourquoi un net négatif des Swap Dealers n'est-il pas un pari baissier ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce qu'ils ne sont pas rapportés"
+        },
+        {
+          "id": "b",
+          "text": "Parce qu'ils sont toujours acheteurs"
+        },
+        {
+          "id": "c",
+          "text": "Ils couvrent des swaps de clients : leur position est souvent la contrepartie de la demande de leurs clients"
+        },
+        {
+          "id": "d",
+          "text": "Parce que c'est une erreur de publication"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Selon les notes explicatives de la CFTC, les Swap Dealers couvrent leurs swaps par des contrats à terme ; leur net reflète cette activité.",
+      "tags": [
+        "categories"
+      ]
+    },
+    {
+      "id": "L7.08-Q7",
+      "type": "mcq",
+      "prompt": "Le net et le prix baissent tous deux entre le 15/09 et le 27/10. Que peut-on conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une co-direction sur deux points, sans corrélation ni causalité démontrées"
+        },
+        {
+          "id": "b",
+          "text": "Que le net cause la baisse du prix"
+        },
+        {
+          "id": "c",
+          "text": "Que le prix cause la baisse du net"
+        },
+        {
+          "id": "d",
+          "text": "Que l'or va rebondir"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Deux points, dates décalées et prix secondaires ne permettent ni de mesurer une relation ni d'en établir le sens.",
+      "tags": [
+        "prix"
+      ]
+    },
+    {
+      "id": "L7.08-Q8",
+      "type": "mcq",
+      "prompt": "La donnée Nonreportable de l'atelier est-elle une lecture directe ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui, elle est lue dans le rapport"
+        },
+        {
+          "id": "b",
+          "text": "Non : elle est reconstituée par différence (intérêt ouvert − positions rapportables)"
+        },
+        {
+          "id": "c",
+          "text": "Oui, elle est fournie par le WGC"
+        },
+        {
+          "id": "d",
+          "text": "Elle n'existe pas"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le texte lu ne contenait pas le bloc Nonreportable : la valeur est calculée, donc marquée [Reconstitué].",
+      "tags": [
+        "reconstitue"
+      ]
+    },
+    {
+      "id": "L7.08-Q9",
+      "type": "mcq",
+      "prompt": "Quelle condition d'invalidation est correctement formulée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Si mon intuition change"
+        },
+        {
+          "id": "b",
+          "text": "Si le marché me donne tort"
+        },
+        {
+          "id": "c",
+          "text": "Net MM en hausse deux rapports consécutifs, ce qui invalide la lecture d'un repli en cours"
+        },
+        {
+          "id": "d",
+          "text": "Aucune condition n'est nécessaire"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Une invalidation est mesurable, écrite avant l'observation, et rattachée à une donnée et à sa date de publication.",
+      "tags": [
+        "invalidation"
+      ]
+    },
+    {
+      "id": "L7.08-Q10",
+      "type": "mcq",
+      "prompt": "Que change l'annonce du 27/10/2026 de la CFTC sur la publication du COT ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un plan de publication deux fois par semaine : le calendrier mardi/vendredi doit être revérifié à chaque lecture"
+        },
+        {
+          "id": "b",
+          "text": "Le COT est supprimé"
+        },
+        {
+          "id": "c",
+          "text": "Le COT devient quotidien dès demain"
+        },
+        {
+          "id": "d",
+          "text": "Rien, le calendrier est garanti"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le communiqué décrit un plan d'ici la fin de 2026, avec un délai ramené de trois à deux jours ; la leçon ne présente pas ce calendrier comme acquis.",
+      "tags": [
+        "calendrier"
+      ]
+    }
+  ],
+  "revision": 1
+}

@@ -1,0 +1,178 @@
+{
+  "chapterId": "4.3",
+  "module": 4,
+  "title": "Quiz de chapitre 4.3 — Termes de l'échange, matières premières et dollar (L4.05–L4.06)",
+  "passThreshold": 0.8,
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C4.3-Q1",
+      "type": "mcq",
+      "prompt": "Comment calcule-t-on les termes de l'échange ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Exportations − importations"
+        },
+        {
+          "id": "b",
+          "text": "Indice des prix d'exportation ÷ indice des prix d'importation × 100"
+        },
+        {
+          "id": "c",
+          "text": "Prix d'importation − prix d'exportation"
+        },
+        {
+          "id": "d",
+          "text": "Balance commerciale ÷ PIB"
+        }
+      ],
+      "correct": "b",
+      "explanation": "C'est un rapport d'indices de prix ; ce n'est pas une différence de valeurs d'échanges.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "C4.3-Q2",
+      "type": "mcq",
+      "prompt": "Prix d'exportation +10 %, prix d'importation +4 % : variation des termes de l'échange ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+2,5 %"
+        },
+        {
+          "id": "b",
+          "text": "+6 %"
+        },
+        {
+          "id": "c",
+          "text": "+14 %"
+        },
+        {
+          "id": "d",
+          "text": "+5,77 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "1,10 ÷ 1,04 = 1,0577 → +5,77 % ; soustraire donne +6 %, ce qui est inexact.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "C4.3-Q3",
+      "type": "mcq",
+      "prompt": "BLS, septembre 2026 : exportations +11,6 % et importations +8,1 % sur 12 mois. Termes de l'échange ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ +19,7 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ +3,5 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ +3,24 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ −3,24 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "1,116 ÷ 1,081 − 1 = +3,24 % (calcul de l'auteur sur des variations publiées).",
+      "tags": [
+        "bls"
+      ]
+    },
+    {
+      "id": "C4.3-Q4",
+      "type": "mcq",
+      "prompt": "Quelle part des transactions de change comporte le dollar (BRI, avril 2025) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "89 %"
+        },
+        {
+          "id": "b",
+          "text": "44,5 %"
+        },
+        {
+          "id": "c",
+          "text": "28,9 %"
+        },
+        {
+          "id": "d",
+          "text": "100 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La BRI indique le dollar d'un côté de 89 % des transactions, le total des parts de devises étant de 200 % par convention.",
+      "tags": [
+        "bri"
+      ]
+    },
+    {
+      "id": "C4.3-Q5",
+      "type": "mcq",
+      "prompt": "Quel poids la zone euro a-t-elle dans l'indice large du dollar de la Réserve fédérale (février 2026) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "57,6 %"
+        },
+        {
+          "id": "b",
+          "text": "21,007 %"
+        },
+        {
+          "id": "c",
+          "text": "10,891 %"
+        },
+        {
+          "id": "d",
+          "text": "50 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La page de la Réserve fédérale donne 21,007 % à la zone euro, 14,801 % au Mexique, 12,769 % au Canada, 10,891 % à la Chine.",
+      "tags": [
+        "fed"
+      ]
+    },
+    {
+      "id": "C4.3-Q6",
+      "type": "mcq",
+      "prompt": "L'euro perd 2,37 % et les autres devises sont stables : contribution approximative à l'indice large ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ +21 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ +2,37 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ +0,50 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ +0,05 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "0,21007 × 2,37 ≈ 0,50 % au premier ordre (simulation).",
+      "tags": [
+        "contribution"
+      ]
+    }
+  ],
+  "revision": 1
+}

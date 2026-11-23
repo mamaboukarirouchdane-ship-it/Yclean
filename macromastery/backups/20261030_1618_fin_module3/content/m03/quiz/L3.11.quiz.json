@@ -1,0 +1,233 @@
+{
+  "lessonId": "L3.11",
+  "title": "Quiz — Reconstituer une réaction de marché",
+  "passThreshold": 0.8,
+  "note": "Quiz de la leçon L3.11",
+  "questions": [
+    {
+      "id": "L3.11-Q1",
+      "type": "mcq",
+      "prompt": "Que désigne t₀ dans une reconstitution de réaction de marché ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le début de la semaine"
+        },
+        {
+          "id": "b",
+          "text": "La clôture du marché"
+        },
+        {
+          "id": "c",
+          "text": "L'heure officielle de publication de la statistique"
+        },
+        {
+          "id": "d",
+          "text": "L'heure de la réunion de la banque centrale"
+        }
+      ],
+      "correct": "c",
+      "explanation": "t₀ ancre les fenêtres d'événement ; pour les rapports du BLS, c'est 8 h 30, heure de l'Est.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L3.11-Q2",
+      "type": "mcq",
+      "prompt": "Pourquoi privilégier une fenêtre courte autour de t₀ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle isole mieux l'effet de la publication des autres nouvelles de la séance"
+        },
+        {
+          "id": "b",
+          "text": "Elle est plus longue"
+        },
+        {
+          "id": "c",
+          "text": "Elle remplace la source"
+        },
+        {
+          "id": "d",
+          "text": "Elle élimine le risque"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La séance entière mélange la publication et tous les autres événements (pétrole, banque centrale, géopolitique).",
+      "tags": [
+        "methode"
+      ]
+    },
+    {
+      "id": "L3.11-Q3",
+      "type": "mcq",
+      "prompt": "Emploi publié +29 000 ; consensus 84 000. Quelle est la surprise ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0"
+        },
+        {
+          "id": "b",
+          "text": "+55 000"
+        },
+        {
+          "id": "c",
+          "text": "−61 000 par définition"
+        },
+        {
+          "id": "d",
+          "text": "−55 000"
+        }
+      ],
+      "correct": "d",
+      "explanation": "29 000 − 84 000 = −55 000 ; avec le consensus de 90 000 de FactSet, on obtient −61 000 : le consensus utilisé doit être cité.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.11-Q4",
+      "type": "mcq",
+      "prompt": "Un 10 ans à 5,28 % avec +0,04 point : quel était le niveau précédent et la variation en % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "5,32 % ; −0,76 %"
+        },
+        {
+          "id": "b",
+          "text": "5,24 % ; +0,76 %"
+        },
+        {
+          "id": "c",
+          "text": "5,24 % ; +4 %"
+        },
+        {
+          "id": "d",
+          "text": "5,28 % ; 0 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "5,28 − 0,04 = 5,24 ; 0,04 ÷ 5,24 = 0,76 % : le contrôle valide la cohérence du bandeau.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.11-Q5",
+      "type": "mcq",
+      "prompt": "Probabilité de hausse de 25 points de base : 18 %. Quelle espérance de hausse ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,18 point de base"
+        },
+        {
+          "id": "b",
+          "text": "18 points de base"
+        },
+        {
+          "id": "c",
+          "text": "25 points de base"
+        },
+        {
+          "id": "d",
+          "text": "4,5 points de base"
+        }
+      ],
+      "correct": "d",
+      "explanation": "0,18 × 25 = 4,5 points de base : c'est une espérance, non une décision.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.11-Q6",
+      "type": "mcq",
+      "prompt": "Deux cotations de l'or ont des heures et des instruments différents. Que faire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les moyenner"
+        },
+        {
+          "id": "b",
+          "text": "Calculer l'écart et conclure"
+        },
+        {
+          "id": "c",
+          "text": "Ne pas les comparer pour mesurer la réaction à la publication"
+        },
+        {
+          "id": "d",
+          "text": "Garder la plus haute"
+        }
+      ],
+      "correct": "c",
+      "explanation": "L'écart de −1,23 % entre un contrat à terme de 7 h 36 et un bandeau d'heure inconnue ne mesure pas la réaction.",
+      "tags": [
+        "methode"
+      ]
+    },
+    {
+      "id": "L3.11-Q7",
+      "type": "mcq",
+      "prompt": "Pourquoi le pétrole est-il un facteur concurrent dans le cas du 2 octobre 2026 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il a fortement baissé le même jour et influence les rendements, les anticipations d'inflation et l'or"
+        },
+        {
+          "id": "b",
+          "text": "Il a fixé le taux directeur"
+        },
+        {
+          "id": "c",
+          "text": "Il est publié avec l'emploi"
+        },
+        {
+          "id": "d",
+          "text": "Il n'a pas bougé"
+        }
+      ],
+      "correct": "a",
+      "explanation": "WTI cotait −3,75 % en début de séance puis −1,90 % ; le mouvement ne peut pas être attribué au seul rapport.",
+      "tags": [
+        "lecture"
+      ]
+    },
+    {
+      "id": "L3.11-Q8",
+      "type": "mcq",
+      "prompt": "Que doit contenir une conclusion prudente quand les données gratuites sont lacunaires ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un récit causal complet"
+        },
+        {
+          "id": "b",
+          "text": "Ce qui est établi, ce qui ne l'est pas et les cases manquantes"
+        },
+        {
+          "id": "c",
+          "text": "Une prévision pour demain"
+        },
+        {
+          "id": "d",
+          "text": "Une règle générale"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La méthode accepte les cases vides et refuse de les combler par un récit.",
+      "tags": [
+        "prudence"
+      ]
+    }
+  ],
+  "revision": 1
+}

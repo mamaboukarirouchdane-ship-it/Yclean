@@ -1,0 +1,233 @@
+{
+  "lessonId": "L4.07",
+  "title": "Quiz — L'euro",
+  "passThreshold": 0.8,
+  "note": "Seuil : 7 bonnes réponses sur 8.",
+  "questions": [
+    {
+      "id": "L4.07-Q1",
+      "type": "mcq",
+      "prompt": "Quel est le taux de la facilité de dépôt de la BCE en vigueur depuis le 16 septembre 2026 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2,65 %"
+        },
+        {
+          "id": "b",
+          "text": "2,25 %"
+        },
+        {
+          "id": "c",
+          "text": "2,50 %"
+        },
+        {
+          "id": "d",
+          "text": "2,90 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La page des taux directeurs de la BCE indique 2,50 % pour le dépôt ; 2,65 % est le taux des opérations principales, 2,90 % le prêt marginal.",
+      "tags": [
+        "taux"
+      ]
+    },
+    {
+      "id": "L4.07-Q2",
+      "type": "mcq",
+      "prompt": "Pourquoi la décision du 29 octobre 2026 est-elle présentée comme non vérifiée à la source ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le site de la BCE n'a pas pu être lu ; elle vient de la presse"
+        },
+        {
+          "id": "b",
+          "text": "Parce qu'elle n'a pas eu lieu"
+        },
+        {
+          "id": "c",
+          "text": "Parce qu'elle est secrète"
+        },
+        {
+          "id": "d",
+          "text": "Parce qu'elle est fausse"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le site de la BCE n'est pas accessible depuis l'environnement ; la décision est connue par Euronews, source secondaire.",
+      "tags": [
+        "source"
+      ]
+    },
+    {
+      "id": "L4.07-Q3",
+      "type": "mcq",
+      "prompt": "Fed 3,75–4,00 % et dépôt BCE 2,50 % : quel différentiel de milieu de fourchette ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,875 point"
+        },
+        {
+          "id": "b",
+          "text": "1,25 point"
+        },
+        {
+          "id": "c",
+          "text": "1,50 point"
+        },
+        {
+          "id": "d",
+          "text": "1,375 point"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le milieu de la fourchette de la Fed est 3,875 ; 3,875 − 2,50 = 1,375 point.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.07-Q4",
+      "type": "mcq",
+      "prompt": "Dépôt 2,50 % et IPCH 3,8 % : quel taux réel ex post ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+1,30 point"
+        },
+        {
+          "id": "b",
+          "text": "−1,30 point"
+        },
+        {
+          "id": "c",
+          "text": "−0,50 point"
+        },
+        {
+          "id": "d",
+          "text": "0,00 point"
+        }
+      ],
+      "correct": "b",
+      "explanation": "2,50 − 3,8 = −1,30 point ; avec l'inflation sous-jacente de 2,5 %, le taux réel est de 0,00 point.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.07-Q5",
+      "type": "mcq",
+      "prompt": "L'inflation passe de 3,2 % à 3,8 % ; l'énergie de 14,3 % à 18,9 %. Quelle lecture est prudente ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les salaires explosent"
+        },
+        {
+          "id": "b",
+          "text": "L'énergie n'a aucun effet"
+        },
+        {
+          "id": "c",
+          "text": "La demande interne explique tout"
+        },
+        {
+          "id": "d",
+          "text": "La hausse vient surtout de l'énergie (+4,6 points), pas de la demande interne"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le sous-jacent ne gagne que 0,1 point alors que l'énergie progresse de 4,6 points ; la somme des composantes n'est toutefois pas vérifiée.",
+      "tags": [
+        "inflation"
+      ]
+    },
+    {
+      "id": "L4.07-Q6",
+      "type": "mcq",
+      "prompt": "Rendement français 5,00 % et écart de 155 pb avec l'Allemagne : quel rendement du Bund ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "5,00 %"
+        },
+        {
+          "id": "b",
+          "text": "6,55 %"
+        },
+        {
+          "id": "c",
+          "text": "3,45 %"
+        },
+        {
+          "id": "d",
+          "text": "1,55 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "5,00 − 1,55 = 3,45 % ; c'est un ordre de grandeur, les sources et les dates diffèrent de celles du 23 septembre.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.07-Q7",
+      "type": "mcq",
+      "prompt": "Probabilité de hausse de 60 % le 24 septembre, maintien le 29 octobre : est-ce une surprise mesurée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Non : l'anticipation a plus d'un mois et le consensus de la veille n'est pas lu"
+        },
+        {
+          "id": "b",
+          "text": "Oui, de 15 points de base exactement"
+        },
+        {
+          "id": "c",
+          "text": "Oui, de 60 points de base"
+        },
+        {
+          "id": "d",
+          "text": "Non, parce que la BCE ne surprend jamais"
+        }
+      ],
+      "correct": "a",
+      "explanation": "L'espérance de 15 pb date du 24 septembre ; la presse décrit le maintien comme attendu, donc l'écart n'est pas une surprise.",
+      "tags": [
+        "anticipation"
+      ]
+    },
+    {
+      "id": "L4.07-Q8",
+      "type": "mcq",
+      "prompt": "Que peut-on conclure d'une pause de la BCE sur l'EUR/USD ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une baisse certaine"
+        },
+        {
+          "id": "b",
+          "text": "Rien de mécanique : la réaction n'est pas documentée et d'autres facteurs agissent"
+        },
+        {
+          "id": "c",
+          "text": "Une hausse certaine"
+        },
+        {
+          "id": "d",
+          "text": "Une intervention de change"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La réaction de l'euro le 29 octobre n'est pas rapportée ; Fed, énergie et dette française agissent aussi.",
+      "tags": [
+        "limite"
+      ]
+    }
+  ],
+  "revision": 1
+}

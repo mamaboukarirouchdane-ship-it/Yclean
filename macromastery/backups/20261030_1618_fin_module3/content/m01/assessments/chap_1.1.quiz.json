@@ -1,0 +1,178 @@
+{
+  "chapterId": "1.1",
+  "module": 1,
+  "title": "Quiz de chapitre 1.1 — PIB, cycle, productivité (L1.01–L1.03)",
+  "passThreshold": 0.8,
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C1.1-Q1",
+      "type": "mcq",
+      "prompt": "Dans l'identité des dépenses du PIB, quelle composante n'est PAS une dépense incluse ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Achat d'actions d'occasion sur le marché secondaire"
+        },
+        {
+          "id": "b",
+          "text": "Investissement des entreprises"
+        },
+        {
+          "id": "c",
+          "text": "Consommation des ménages"
+        },
+        {
+          "id": "d",
+          "text": "Exportations nettes"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le PIB mesure la production courante : consommation, investissement, dépenses publiques et exportations nettes. L'achat d'actions d'occasion est un transfert d'actifs, pas une production courante.",
+      "tags": [
+        "pib"
+      ]
+    },
+    {
+      "id": "C1.1-Q2",
+      "type": "mcq",
+      "prompt": "PIB nominal +8,5 % et PIB réel +2,2 % (T2 2026, annualisés). Que peut-on en déduire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que le PIB nominal ne dépend pas des prix"
+        },
+        {
+          "id": "b",
+          "text": "Que le PIB réel est faux"
+        },
+        {
+          "id": "c",
+          "text": "Que les prix ont baissé"
+        },
+        {
+          "id": "d",
+          "text": "Que les prix implicites ont augmenté d'environ 6,2 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "1,085 ÷ 1,022 − 1 = 6,2 % : c'est un déflateur implicite calculé par l'auteur, qui diffère d'autres indices de prix de périmètre différent.",
+      "tags": [
+        "reel-nominal"
+      ]
+    },
+    {
+      "id": "C1.1-Q3",
+      "type": "mcq",
+      "prompt": "Deux trimestres consécutifs de baisse du PIB sont-ils la définition d'une récession selon le NBER ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui, c'est la définition officielle"
+        },
+        {
+          "id": "b",
+          "text": "Non : le comité examine un ensemble d'indicateurs (profondeur, diffusion, durée)"
+        },
+        {
+          "id": "c",
+          "text": "Oui, mais seulement en Europe"
+        },
+        {
+          "id": "d",
+          "text": "Non : seul le chômage compte"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le NBER indique que deux trimestres consécutifs de baisse ne constituent pas la définition ; la récession de 2001 est citée comme exemple sans cette séquence.",
+      "tags": [
+        "nber"
+      ]
+    },
+    {
+      "id": "C1.1-Q4",
+      "type": "mcq",
+      "prompt": "PIB potentiel 19 154 Md$ et PIB effectif 19 011 Md$ (exemple CBO cité par la Fed de Saint-Louis). L'écart de production calculé est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "+0,75 %"
+        },
+        {
+          "id": "b",
+          "text": "−0,07 %"
+        },
+        {
+          "id": "c",
+          "text": "−7,5 %"
+        },
+        {
+          "id": "d",
+          "text": "−0,75 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "(19 011 − 19 154) ÷ 19 154 = −0,747 %, soit −0,75 % ; la source annonçait −0,07 %, incohérent avec le calcul, point signalé dans le cours.",
+      "tags": [
+        "ecart-production"
+      ]
+    },
+    {
+      "id": "C1.1-Q5",
+      "type": "mcq",
+      "prompt": "Le PIB potentiel est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Observé directement chaque trimestre"
+        },
+        {
+          "id": "b",
+          "text": "Toujours égal au PIB effectif"
+        },
+        {
+          "id": "c",
+          "text": "Estimé par des modèles : ce que l'économie peut produire durablement"
+        },
+        {
+          "id": "d",
+          "text": "Une donnée du Trésor"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le potentiel est estimé, non observé : deux institutions peuvent donner des valeurs différentes.",
+      "tags": [
+        "potentiel"
+      ]
+    },
+    {
+      "id": "C1.1-Q6",
+      "type": "mcq",
+      "prompt": "Projection CBO (moyennes 2026–2036) : main-d'œuvre potentielle 0,4 % et productivité 1,5 %. Quelle croissance du PIB potentiel en découle approximativement ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ 1,9 %"
+        },
+        {
+          "id": "b",
+          "text": "Environ 0,6 %"
+        },
+        {
+          "id": "c",
+          "text": "Environ 3,0 %"
+        },
+        {
+          "id": "d",
+          "text": "Environ 0 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "0,4 + 1,5 = 1,9 % : croissance du potentiel ≈ croissance de la main-d'œuvre + croissance de la productivité (approximation).",
+      "tags": [
+        "productivite"
+      ]
+    }
+  ],
+  "revision": 1
+}

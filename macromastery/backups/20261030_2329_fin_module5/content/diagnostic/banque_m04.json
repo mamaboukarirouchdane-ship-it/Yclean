@@ -1,0 +1,224 @@
+{
+  "bank": "diagnostic",
+  "module": 4,
+  "note": "Banque progressive : 4 paires de QCM parallèles (forme A = diagnostic initial, forme B = version finale alternative). Niveau : accessible avant le cours. À réordonner et compléter avec les autres modules (cible : 62 QCM + 2 questions ouvertes pour le diagnostic initial). Les modules 0 à 3 restent à alimenter. Données fictives.",
+  "items": [
+    {
+      "id": "D4-A1",
+      "module": 4,
+      "form": "A",
+      "pair": 1,
+      "tag": "parité",
+      "prompt": "Si le taux d'intérêt d'un pays est plus élevé que celui d'un autre, que dit en principe la parité des taux non couverte (anticipations rationnelles) pour sa devise ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle devrait se déprécier de l'écart de taux"
+        },
+        {
+          "id": "b",
+          "text": "Elle devrait s'apprécier de l'écart de taux"
+        },
+        {
+          "id": "c",
+          "text": "Elle ne dépend pas des taux"
+        },
+        {
+          "id": "d",
+          "text": "Elle devient fixe"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D4-A2",
+      "module": 4,
+      "form": "A",
+      "pair": 2,
+      "tag": "taux réel",
+      "prompt": "Taux nominal de 5 % et inflation attendue de 2 % : quel est le taux réel approximatif ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "3 %"
+        },
+        {
+          "id": "b",
+          "text": "7 %"
+        },
+        {
+          "id": "c",
+          "text": "2,5 %"
+        },
+        {
+          "id": "d",
+          "text": "10 %"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D4-A3",
+      "module": 4,
+      "form": "A",
+      "pair": 3,
+      "tag": "termes de l'échange",
+      "prompt": "Prix d'exportation +6 % et prix d'importation +2 % : quelle variation des termes de l'échange (approximation arrondie) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+3,92 %"
+        },
+        {
+          "id": "b",
+          "text": "+4 % exactement"
+        },
+        {
+          "id": "c",
+          "text": "+8 %"
+        },
+        {
+          "id": "d",
+          "text": "−4 %"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D4-A4",
+      "module": 4,
+      "form": "A",
+      "pair": 4,
+      "tag": "causalité",
+      "prompt": "Une devise baisse le jour où sa banque centrale relève ses taux. Quelle conclusion est la plus prudente ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "On ne peut rien conclure sans connaître les attentes préalables et les autres facteurs"
+        },
+        {
+          "id": "b",
+          "text": "La hausse de taux est la cause certaine de la baisse"
+        },
+        {
+          "id": "c",
+          "text": "La banque centrale s'est trompée"
+        },
+        {
+          "id": "d",
+          "text": "Les taux n'influencent jamais le change"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D4-B1",
+      "module": 4,
+      "form": "B",
+      "pair": 1,
+      "tag": "parité",
+      "prompt": "Selon la parité couverte, le cours à terme d'une devise à taux d'intérêt plus élevé que l'autre se situe en principe :",
+      "options": [
+        {
+          "id": "a",
+          "text": "En dessous du comptant (décote à terme)"
+        },
+        {
+          "id": "b",
+          "text": "Au-dessus du comptant"
+        },
+        {
+          "id": "c",
+          "text": "Toujours égal au comptant"
+        },
+        {
+          "id": "d",
+          "text": "À zéro"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D4-B2",
+      "module": 4,
+      "form": "B",
+      "pair": 2,
+      "tag": "taux réel",
+      "prompt": "Taux nominal de 3,5 % et inflation attendue de 3,0 % : quel est le taux réel approximatif ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,5 %"
+        },
+        {
+          "id": "b",
+          "text": "6,5 %"
+        },
+        {
+          "id": "c",
+          "text": "3 %"
+        },
+        {
+          "id": "d",
+          "text": "1,17 %"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D4-B3",
+      "module": 4,
+      "form": "B",
+      "pair": 3,
+      "tag": "termes de l'échange",
+      "prompt": "Prix d'exportation +9 % et prix d'importation +3 % : quelle variation des termes de l'échange (approximation arrondie) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+5,83 %"
+        },
+        {
+          "id": "b",
+          "text": "+6 % exactement"
+        },
+        {
+          "id": "c",
+          "text": "+12 %"
+        },
+        {
+          "id": "d",
+          "text": "−6 %"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D4-B4",
+      "module": 4,
+      "form": "B",
+      "pair": 4,
+      "tag": "causalité",
+      "prompt": "Une devise remonte après une intervention des autorités puis revient à son niveau initial en quelques jours. Quelle lecture est la plus prudente ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'effet peut être transitoire : il faut examiner sa persistance et les fondamentaux"
+        },
+        {
+          "id": "b",
+          "text": "L'intervention a réglé le problème définitivement"
+        },
+        {
+          "id": "c",
+          "text": "L'intervention n'a eu aucun effet"
+        },
+        {
+          "id": "d",
+          "text": "Les autorités ne peuvent jamais agir"
+        }
+      ],
+      "correct": "a"
+    }
+  ],
+  "revision": 1
+}

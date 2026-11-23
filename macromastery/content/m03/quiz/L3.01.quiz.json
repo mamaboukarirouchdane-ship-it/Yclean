@@ -1,0 +1,235 @@
+{
+  "lessonId": "L3.01",
+  "title": "Quiz — Calendrier économique et agences statistiques",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : BLS, BEA, directive n° 3, calendrier de la BCE (résumés automatiques).",
+  "questions": [
+    {
+      "id": "L3.01-Q1",
+      "type": "mcq",
+      "prompt": "À quelle heure sont publiés les sept indicateurs principaux du BLS ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Minuit"
+        },
+        {
+          "id": "b",
+          "text": "10 h, heure de l'Est"
+        },
+        {
+          "id": "c",
+          "text": "8 h 30, heure de l'Est"
+        },
+        {
+          "id": "d",
+          "text": "Midi, heure de Paris"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Les indicateurs principaux (PFEI) sont publiés à 8 h 30 Est ; d'autres publications, comme JOLTS, à 10 h.",
+      "tags": [
+        "heure"
+      ]
+    },
+    {
+      "id": "L3.01-Q2",
+      "type": "mcq",
+      "prompt": "Que prévoit la directive n° 3 pour les chiffres préliminaires ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ils doivent être clairement étiquetés comme préliminaires ou révisés"
+        },
+        {
+          "id": "b",
+          "text": "Ils sont secrets"
+        },
+        {
+          "id": "c",
+          "text": "Ils ne sont jamais révisés"
+        },
+        {
+          "id": "d",
+          "text": "Ils sont publiés sans date"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La directive exige l'étiquetage des estimations préliminaires, les révisions routinières suivant un calendrier régulier.",
+      "tags": [
+        "directive"
+      ]
+    },
+    {
+      "id": "L3.01-Q3",
+      "type": "mcq",
+      "prompt": "Emploi d'octobre 2026 publié le 6 novembre 2026 : quel est le délai depuis la fin du mois ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "16 jours"
+        },
+        {
+          "id": "b",
+          "text": "10 jours"
+        },
+        {
+          "id": "c",
+          "text": "29 jours"
+        },
+        {
+          "id": "d",
+          "text": "6 jours"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Délai = date de publication moins fin de période : du 31 octobre au 6 novembre, soit 6 jours (calcul de l'auteur sur les dates annoncées).",
+      "tags": [
+        "delai",
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.01-Q4",
+      "type": "mcq",
+      "prompt": "Quelle est la date de la deuxième estimation du PIB du T3 2026 selon le calendrier de la BEA lu ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "29 octobre 2026"
+        },
+        {
+          "id": "b",
+          "text": "25 novembre 2026"
+        },
+        {
+          "id": "c",
+          "text": "23 décembre 2026"
+        },
+        {
+          "id": "d",
+          "text": "6 novembre 2026"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La deuxième estimation du PIB du T3 et les revenus et dépenses d'octobre sont prévus le 25 novembre ; la troisième le 23 décembre.",
+      "tags": [
+        "pib"
+      ]
+    },
+    {
+      "id": "L3.01-Q5",
+      "type": "mcq",
+      "prompt": "Quel est le délai entre la fin du T3 (30 septembre) et la troisième estimation du PIB (23 décembre) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "22 jours"
+        },
+        {
+          "id": "b",
+          "text": "29 jours"
+        },
+        {
+          "id": "c",
+          "text": "56 jours"
+        },
+        {
+          "id": "d",
+          "text": "84 jours"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Du 30 septembre au 23 décembre : 84 jours, contre 29 pour l'estimation avancée et 56 pour la deuxième.",
+      "tags": [
+        "delai",
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.01-Q6",
+      "type": "mcq",
+      "prompt": "Que s'est-il passé pour l'Employment Situation d'octobre 2025 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il a été publié deux fois"
+        },
+        {
+          "id": "b",
+          "text": "Il a été publié à la date prévue"
+        },
+        {
+          "id": "c",
+          "text": "Il a été annulé ; l'enquête auprès des ménages d'octobre n'a pas été collectée"
+        },
+        {
+          "id": "d",
+          "text": "Il n'a jamais été prévu"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Les données des établissements d'octobre ont été publiées avec celles de novembre, mais celles des ménages n'ont pas été collectées rétroactivement.",
+      "tags": [
+        "2025"
+      ]
+    },
+    {
+      "id": "L3.01-Q7",
+      "type": "mcq",
+      "prompt": "Pourquoi 8 h 30 à l'Est ne correspond-il pas toujours à la même heure à Paris ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que les deux zones ne changent pas d'heure aux mêmes dates : l'écart est de 5 ou 6 heures"
+        },
+        {
+          "id": "b",
+          "text": "Parce que Paris n'a pas de fuseau"
+        },
+        {
+          "id": "c",
+          "text": "Parce que le BLS change ses horaires chaque jour"
+        },
+        {
+          "id": "d",
+          "text": "Parce que l'écart est de 12 heures toute l'année"
+        }
+      ],
+      "correct": "a",
+      "explanation": "L'Europe passe à l'heure d'hiver le 25 octobre 2026 et les États-Unis le 1er novembre ; entre les deux l'écart est de 5 heures (règle appliquée par l'auteur).",
+      "tags": [
+        "fuseau"
+      ]
+    },
+    {
+      "id": "L3.01-Q8",
+      "type": "mcq",
+      "prompt": "Quelle est la bonne attitude face à un calendrier économique ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le considérer comme une garantie"
+        },
+        {
+          "id": "b",
+          "text": "Le recouper avec l'agence, car il peut être modifié ou une publication annulée"
+        },
+        {
+          "id": "c",
+          "text": "Ignorer la période couverte"
+        },
+        {
+          "id": "d",
+          "text": "Ne regarder que la date"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Les calendriers officiels sont mis à jour en général au moins une semaine avant ; en 2025 plusieurs publications ont été décalées ou annulées.",
+      "tags": [
+        "methode"
+      ]
+    }
+  ],
+  "revision": 1
+}

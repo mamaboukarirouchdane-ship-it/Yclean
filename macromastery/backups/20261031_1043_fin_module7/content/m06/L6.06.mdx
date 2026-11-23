@@ -1,0 +1,204 @@
+---
+id: L6.06
+module: 6
+order: 6
+title: "Volatilité et événements : mesurer l'amplitude d'un mouvement sans la confondre avec la direction ni l'opportunité"
+title_initial: "Volatilité et événements"
+level: "avancé"
+duration_hours: 3.0
+prerequisites: ["L6.01", "L6.03", "L6.04", "L6.05"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L6.06.quiz.json"
+sources: ["S-GVZ-01", "S-GVZ-02", "S-BIS-09", "S-YHF-01", "S-ADM-04", "S-FRD-05", "S-KIT-06", "S-KIT-07", "S-KIT-08", "S-MIN-02", "S-KIT-05"]
+---
+
+# L6.06 — Volatilité et événements
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée, avec sa date ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** ; **[Interprétation]** ; **[Hypothèse]** ; **[SIMULATION]** = données fictives. Les sources sont lues par **résumé automatique**. **Aucune donnée intrajournalière de l'or n'a pu être obtenue pour cette leçon** : les calculs sur fenêtres de 5 minutes, 30 minutes ou 4 heures sont donc présentés uniquement sur des **données fictives**. **Une forte volatilité n'est pas une opportunité automatique, et une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. distinguer volatilité **réalisée**, **historique** et **implicite**, et dire ce que chacune mesure ;
+2. calculer un rendement, un écart-type, une volatilité annualisée, et mesurer l'effet du choix de fenêtre ;
+3. séparer **amplitude**, **volatilité** et **direction** d'un mouvement autour d'un événement ;
+4. préparer un événement (consensus, scénarios, mouvement implicite) et le mesurer ensuite sur des **fenêtres fixées d'avance** ;
+5. chiffrer l'effet des **spreads, du slippage et des gaps** sur la taille et le coût d'une position ;
+6. décrire les canaux possibles vers XAU/USD **sans les présenter comme systématiques**.
+
+## 2. Prérequis
+
+- Réaction à un événement et fenêtres préenregistrées (L6.01), asymétries (L6.03), régimes (L6.04), probabilités et enregistrement (L6.05).
+
+## 3. Explication intuitive
+
+Un ascenseur peut monter de dix étages d'un coup ou osciller entre deux étages : dans les deux cas il « bouge », mais ce n'est ni la même amplitude, ni la même direction, ni la même régularité. En finance, la **volatilité** dit *de combien* un prix a l'habitude de bouger, pas *vers où*. Un jour de publication (CPI, NFP, décision de la Fed), l'incertitude est concentrée en quelques minutes : le prix peut bondir, les écarts d'achat-vente s'élargir, les ordres s'exécuter plus loin que prévu. Le travail de l'analyste est de **mesurer** ce choc avec des règles fixées d'avance, pas de le deviner ni d'y voir un signal automatique.
+
+## 4. Développement technique
+
+### 4.1 Trois volatilités
+| Notion | Définition de cours | Source des données | Pièges |
+|---|---|---|---|
+| **Réalisée** | dispersion des rendements *effectivement observés* sur une période donnée | prix passés | dépend de la fréquence (journalière, 5 minutes) et de la fenêtre |
+| **Historique** | volatilité réalisée *calculée sur le passé récent et utilisée comme repère* pour l'avenir | prix passés | suppose que l'avenir ressemble au passé |
+| **Implicite** | volatilité attendue *déduite des prix d'options* | cotations d'options | contient des primes de risque ; n'est pas une prévision exacte |
+
+**[Définition]** Les termes « réalisée » et « historique » sont employés de façon variable selon les auteurs ; la leçon fixe la convention ci-dessus et la répète dans tout le cours.
+**[Fait]** (S-GVZ-02, annonce du 28/02/2011, résumé automatique) : l'indice de volatilité de l'or de Cboe (GVZ) applique la méthode du VIX aux options sur le fonds **GLD** et fournit une estimation de la volatilité attendue sur **30 jours**. (S-GVZ-01, article de courtier, résumé automatique) : mêmes éléments ; échelles indicatives « moins de 12 faible, 12 à 20 normale, plus de 20 élevée » ; il tend à évoluer en sens inverse du prix de l'or ; il surestime souvent un peu les mouvements à venir. **Contradiction signalée** : l'un indique un calcul « depuis 2008 », l'autre « depuis 2009 ». **Non lu** : le niveau de GVZ au 29/10/2026 ; le VIX du 29/10 (17,20) concerne les actions américaines, pas l'or.
+**[Interprétation]** Une volatilité implicite est un *prix*, donc une opinion de marché mêlée à une compensation du risque ; elle n'est pas la volatilité future.
+
+### 4.2 Mesurer : rendement, écart-type, annualisation, fenêtre
+**[Définition]** Rendement journalier r_t = (P_t ÷ P_{t−1} − 1) × 100 (le rendement logarithmique ln(P_t ÷ P_{t−1}) donne presque le même nombre pour de petits mouvements : ln 1,02 = 1,980 % contre 2,000 %). Écart-type d'échantillon : s = √[Σ (r_t − r̄)² ÷ (n − 1)]. Annualisation par convention : s × √252 (252 séances par an, hypothèse d'indépendance des rendements).
+**[SIMULATION]** Dix rendements journaliers (en %) : 0,4 ; −0,6 ; 0,2 ; 0,9 ; −0,3 ; 0,1 ; −0,8 ; 0,5 ; 0,0 ; 0,3. **[Calcul de l'auteur]** moyenne **0,07 %** ; s = **0,517 %** par jour ; annualisée **8,20 %**.
+**Effet de fenêtre.** Cinq premiers jours : s = 0,589 % (9,35 % annualisé) ; cinq derniers : 0,497 % (7,89 %). **[Interprétation]** Le même actif donne 7,9 % ou 9,4 % selon la fenêtre : toute volatilité doit être publiée avec sa **fenêtre**, sa **fréquence** et sa **formule**.
+**Effet d'un événement dans la fenêtre.** **[SIMULATION]** Vingt jours à ±0,8 % en alternance : s = 0,821 %. On remplace le dernier jour par −2,0 % : s = 0,920 % (+12 %). Un seul jour d'événement a relevé la volatilité de la fenêtre de 12 % ; il faut donc dire si les jours d'événement sont **inclus** ou **exclus** du calcul de référence.
+
+### 4.3 Amplitude, volatilité, direction
+**[Définition de cours]** *Direction* : signe du mouvement ; *amplitude* : |r| sur une fenêtre donnée ; *volatilité* : dispersion habituelle des rendements ; *tendance* : déplacement persistant dans un sens sur plusieurs périodes.
+**Ratio d'amplitude.** Z = r_événement ÷ s_référence (la référence est calculée *avant* l'événement et fixée d'avance). **[SIMULATION]** s_référence = 0,8 %/jour : un mouvement de −2,0 % donne Z = **−2,5** ; un mouvement de +0,4 % donne Z = **+0,5**. Sur fenêtre de 5 minutes (s = 0,05 %) : un premier rendement de −0,35 % donne Z = **−7,0**.
+**[Interprétation]** Un Z de −2,5 dit qu'il s'est passé quelque chose d'inhabituel pour *cet* actif ; il ne dit pas si le mouvement continuera, ni s'il faut acheter ou vendre. Une forte volatilité peut accompagner une séance sans tendance (hausse puis baisse, résultat net faible) : **volatilité ≠ tendance**.
+
+### 4.4 Avant l'événement : consensus, scénarios, mouvement implicite
+**Mouvement attendu.** Si la volatilité implicite annualisée est σ, l'écart-type quotidien attendu est σ ÷ √252. **[Hypothèse, niveau non observé]** GVZ = 20 : 20 ÷ 15,87 = **1,26 %** par jour, soit environ **50,8 $** sur un prix de 4 035,48 $ (clôture du 28/10, S-KIT-06 à S-KIT-08). Comme le VIX réel du 29/10 (17,20, S-FRD-05) donnerait 1,08 % par jour pour les actions américaines. **[Interprétation]** Ce n'est qu'un ordre de grandeur « un écart-type », pas un intervalle garanti : un mouvement de 2 écarts-types reste possible.
+**Fiche préévénement** : événement et heure (S-ADM-04 pour un exemple de contexte du 28/10), consensus, trois scénarios avec probabilités étiquetées (L6.05), spread normal observé, fenêtres de mesure et référence σ, règle d'inclusion/exclusion. Tout est **daté et enregistré avant** (L6.05).
+
+### 4.5 Après l'événement : fenêtres fixes
+**[Définition de cours]** Trois fenêtres, fixées avant l'analyse (L6.01) : 5 minutes, 30 minutes, 4 heures après la publication. Pour chacune : prix de départ (dernier prix avant la publication), prix de fin, rendement, Z (§ 4.3), amplitude maximale intrafenêtre (plus haut − plus bas), et signe.
+**Limite de cette leçon.** **[Fait]** Aucune série intrajournalière de XAU/USD n'a pu être obtenue (L6.01, L6.03). Les séances ci-dessous sont donc des **variations de séance**, non des fenêtres fixes.
+**[Fait]** (S-YHF-01, résumé automatique d'un bandeau de page du 02/10/2026, 9 h 54 ET) : chômage américain 4,2 % contre 4,1 % attendu ; or 4 162,30 (−40,00). **[Calcul de l'auteur]** −40,00 ÷ (4 162,30 + 40,00) = **−0,95 %** si −40,00 mesure l'écart à la clôture précédente. **[Interprétation]** L'heure de la lecture et celle de la publication ne sont pas alignées avec une fenêtre définie ; ce chiffre ne peut pas servir de test.
+
+### 4.6 Gestion du risque autour de l'événement
+- **Spread** : écart entre prix d'achat et de vente ; il s'élargit souvent autour des publications (constat général de pratique, non chiffré par une source lue ici).
+- **Slippage** : écart entre prix visé et prix d'exécution.
+- **Gap** : saut de prix sans transaction intermédiaire ; un ordre d'arrêt peut s'exécuter bien au-delà de son niveau.
+**[SIMULATION]** Capital 10 000 $, risque accepté 1 % = 100 $. Distance d'arrêt 10 $ par once, slippage prévu 0 → taille **10 onces**. Autour d'un événement, slippage supposé 6 $ : risque par once 16 $ → taille **6,25 onces** (−37,5 %). Spread de 0,30 $ qui passe à 1,50 $ : coût d'entrée-sortie par once +1,20 $. **[Interprétation]** Réduire la taille avant un événement n'est pas un signal de direction : c'est une adaptation à l'incertitude d'exécution. Ne pas ouvrir de position avant l'événement est aussi une décision légitime.
+
+### 4.7 Transmission vers XAU/USD (sans prétendre qu'elle soit systématique)
+**[Interprétation]** Canaux possibles : (1) surprise d'inflation ou d'emploi → révision des attentes de taux (L6.02) → taux réels → coût d'opportunité de l'or ; (2) même surprise → dollar ; (3) aversion au risque (L6.04) ; (4) positionnement (L6.03). Chacun peut jouer, aucun n'est constant. **[Fait]** (S-KIT-06 à S-KIT-08, S-MIN-02, S-KIT-05) : cinq décisions de 2026 avec des variations de séance de −1,40 % à +1,30 % ; le signe n'est pas déductible de la seule nature de l'événement.
+
+## 5. Définitions essentielles
+
+- **Volatilité réalisée / historique / implicite** : voir § 4.1.
+- **Annualisation** : multiplication par √252 sous hypothèse d'indépendance.
+- **Ratio d'amplitude (Z)** : mouvement divisé par l'écart-type de référence.
+- **Spread, slippage, gap** : voir § 4.6.
+- **GVZ** : indice Cboe de volatilité implicite 30 jours déduit d'options sur GLD.
+
+## 6. Exemples chiffrés
+
+**6.1** s = 0,517 %/jour ; 8,20 % annualisé.
+**6.2** Fenêtres : 9,35 % contre 7,89 %.
+**6.3** Z = −2,5 et Z = +0,5 ; 5 minutes : Z = −7,0.
+**6.4** GVZ hypothétique 20 → 1,26 %/jour → 50,8 $ sur 4 035,48 $.
+**6.6 (taille)** 100 ÷ 10 = 10 onces ; 100 ÷ 16 = 6,25 onces.
+
+### 6.5 Cas historique documenté — début août 2024 : un choc d'emploi et une volatilité exceptionnelle
+**[Fait]** (S-BIS-09, article de la BRI sur la période du 1er juin au 6/09/2024, résumé automatique) : le 2/08/2024 l'emploi américain est inférieur aux attentes et le rendement des bons du Trésor à 2 ans recule de 26 points de base ; le 5/08, le TOPIX chute de deux chiffres et l'indice des banques connaît sa pire séance en 40 ans ; le VIX dépasse 60 avant l'ouverture puis clôture sous 40 ; la récupération intervient en moins d'une semaine ; les mouvements du yen et du peso mexicain sont qualifiés d'« importants mais pas hors norme » ; la BRI ne désigne pas le dénouement du portage comme cause principale et cite des amplificateurs (couvertures d'options, positions courtes de volatilité, appels de marge).
+**[Interprétation]** Trois lectures distinctes : *amplitude* (VIX > 60 puis < 40 dans la même séance), *direction* (baisse des actions japonaises, puis rebond), *persistance* (retour en moins d'une semaine). Un choc de volatilité n'a pas été une tendance durable. **Ce qu'on ne peut pas conclure** : que l'emploi du 2/08 soit « la » cause du 5/08 ; ni quel aurait été le mouvement de l'or (non lu ici). **Limites** : résumé automatique ; chiffres exacts de variation du yen non donnés ; aucune donnée intrajournalière.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Avant** : fiche préévénement, mouvement implicite en ordre de grandeur, taille ajustée.
+- **Pendant** : ne pas confondre le premier mouvement (souvent bruité, spreads larges) et la réaction durable.
+- **Après** : mesure sur fenêtres fixées d'avance, Z, direction, persistance ; archivage.
+- **XAU/USD et EUR/USD** : même méthode, avec leur propre référence σ et leurs propres coûts.
+
+## 8. Erreurs courantes
+
+1. Appeler « opportunité » toute forte volatilité.
+2. Confondre volatilité et tendance.
+3. Publier une volatilité sans fenêtre ni formule.
+4. Choisir les fenêtres après avoir vu le résultat.
+5. Comparer une volatilité implicite à une volatilité réalisée sans tenir compte des primes de risque.
+6. Oublier spreads, slippage et gaps dans le calcul du risque.
+7. Illustrer un événement réel avec des données non vérifiées.
+
+## 9. Limites de l'interprétation
+
+- Aucune donnée intrajournalière de l'or ; fenêtres fixes illustrées sur données **fictives**.
+- GVZ, VIX : niveaux ponctuels, GVZ du jour non lu ; deux sources divergent sur l'année de départ.
+- Annualisation par √252 : suppose indépendance, souvent fausse en période de stress.
+- Sources lues par résumé automatique ; article de la BRI non lu directement.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Trois volatilités.** Classe : (a) l'écart-type des rendements de 5 minutes d'hier ; (b) l'écart-type des 20 derniers jours utilisé comme repère ; (c) une valeur déduite de prix d'options à 30 jours. Donne un piège pour chacune.
+
+<details>
+<summary>Correction 1</summary>
+
+(a) **réalisée** : dépend de la fréquence ; (b) **historique** : suppose que l'avenir ressemble au passé ; (c) **implicite** : contient des primes de risque et n'est pas une prévision exacte.
+</details>
+
+**Exercice 2 — Calcul.** Rendements (%) 0,4 ; −0,6 ; 0,2 ; 0,9 ; −0,3 ; 0,1 ; −0,8 ; 0,5 ; 0,0 ; 0,3. Calcule la moyenne, l'écart-type d'échantillon et la volatilité annualisée (√252 ≈ 15,87).
+
+<details>
+<summary>Correction 2</summary>
+
+Somme = 0,7 → moyenne **0,07** ; s = **0,517 %** (division par n − 1 = 9) ; annualisée 0,517 × 15,87 ≈ **8,20 %**.
+</details>
+
+**Exercice 3 — Fenêtre.** Même série : s des cinq premiers jours (0,589) et des cinq derniers (0,497). Annualise et conclus.
+
+<details>
+<summary>Correction 3</summary>
+
+0,589 × 15,87 ≈ **9,35 %** ; 0,497 × 15,87 ≈ **7,89 %**. Le choix de fenêtre déplace la volatilité de près d'un point et demi : il faut toujours publier la fenêtre.
+</details>
+
+**Exercice 4 — Amplitude.** Référence 0,8 %/jour. Événement A : −2,0 % ; événement B : +0,4 %. Calcule Z et interprète. Peut-on dire que A annonce une tendance baissière ?
+
+<details>
+<summary>Correction 4</summary>
+
+Z(A) = −2,0 ÷ 0,8 = **−2,5** ; Z(B) = 0,4 ÷ 0,8 = **+0,5**. A est inhabituel, B est dans la norme. Non : un Z mesure l'amplitude d'un jour, pas la persistance ; il faudrait observer les jours suivants.
+</details>
+
+**Exercice 5 — Mouvement implicite.** Volatilité implicite hypothétique de 20 % annualisée, prix 4 035,48 $. Calcule l'écart-type quotidien attendu en % et en dollars. Que ne dit pas ce chiffre ?
+
+<details>
+<summary>Correction 5</summary>
+
+20 ÷ 15,87 = **1,26 %** ; 4 035,48 × 1,26 % ≈ **50,8 $**. Il ne garantit pas que le mouvement reste dans cet intervalle, ne donne pas la direction, et le niveau de 20 est une hypothèse, non une lecture de GVZ.
+</details>
+
+**Exercice 6 — Taille et exécution.** Capital 10 000 $, risque 1 %, arrêt à 10 $, slippage supposé 6 $ autour de l'événement. Calcule les tailles normale et ajustée, puis explique pourquoi cette réduction n'est pas un signal directionnel.
+
+<details>
+<summary>Correction 6</summary>
+
+Normale : 100 ÷ 10 = **10 onces** ; ajustée : 100 ÷ 16 = **6,25 onces** (−37,5 %). La réduction répond à l'incertitude d'exécution (slippage, gap), pas à une opinion sur la hausse ou la baisse.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L6.06.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Réalisée, historique, implicite : trois mesures différentes ; toujours publier fenêtre, fréquence, formule.
+- Amplitude ≠ direction ≠ tendance ; le ratio Z compare un mouvement à une référence fixée d'avance.
+- Avant : consensus, scénarios, mouvement implicite en ordre de grandeur. Après : fenêtres fixes.
+- Spreads, slippage, gaps : ils changent la taille et le coût, pas la direction.
+- Aucune donnée intrajournalière de l'or : exemples de fenêtres sur données fictives.
+
+## 13. Critères de maîtrise
+
+- [ ] Distinguer les trois volatilités (Exercice 1).
+- [ ] Calculer et annualiser un écart-type (Exercices 2 et 3).
+- [ ] Calculer et interpréter un ratio d'amplitude (Exercice 4).
+- [ ] Convertir une volatilité implicite en mouvement quotidien (Exercice 5).
+- [ ] Ajuster une taille de position au risque d'exécution (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **31 octobre 2026** :
+
+- **S-GVZ-01** — Forex.com (courtier, secondaire, résumé automatique), « GVZ index » : https://forex.com/ie/news-and-analysis/gvz-index
+- **S-GVZ-02** — Mondo Visione (reprise d'un communiqué de Cboe, 28/02/2011, résumé automatique) : https://mondovisione.com/media-and-resources/news/cboe-and-cfe-to-begin-trading-cboe-gold-etf-volatility-index-gvz-futures-and-o-2011228/
+- **S-BIS-09**, **S-YHF-01**, **S-ADM-04**, **S-FRD-05**, **S-KIT-05** à **S-KIT-08**, **S-MIN-02** — déjà lues.
+
+**Définitions de cours non rattachées à une source lue :** convention réalisée/historique, annualisation par √252, ratio d'amplitude, fiche préévénement, ajustement de taille. **Points non vérifiés :** niveau du GVZ au 29/10/2026, année de début de calcul (2008 ou 2009), élargissement chiffré des spreads, séries intrajournalières de l'or.

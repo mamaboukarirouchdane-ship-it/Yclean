@@ -1,0 +1,178 @@
+{
+  "chapterId": "5.5",
+  "module": 5,
+  "title": "Quiz de chapitre 5.5 — Cycles, tableau de bord et thèse (L5.10–L5.12)",
+  "passThreshold": 0.8,
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C5.5-Q1",
+      "type": "mcq",
+      "prompt": "Pic de 667 $ et creux de 318 $ (fin de mois, 1980-1982) : baisse ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ −42 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ −32 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ −52,3 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ −20 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "318 ÷ 667 − 1 = −52,3 % ; la règle du WGC retient les prix de fin de mois du fixing de l'après-midi.",
+      "tags": [
+        "cycle"
+      ]
+    },
+    {
+      "id": "C5.5-Q2",
+      "type": "mcq",
+      "prompt": "Durées de marchés baissiers : 21, 21, 25, 141, 52 mois. Moyenne et médiane ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "52 et 25"
+        },
+        {
+          "id": "b",
+          "text": "25 et 52"
+        },
+        {
+          "id": "c",
+          "text": "52 et 52"
+        },
+        {
+          "id": "d",
+          "text": "141 et 21"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Somme 260 ÷ 5 = 52 ; médiane 25 : forte dispersion, aucune durée régulière démontrée.",
+      "tags": [
+        "duree"
+      ]
+    },
+    {
+      "id": "C5.5-Q3",
+      "type": "mcq",
+      "prompt": "Quel est l'âge, le 30/10/2026, d'une moyenne mensuelle de septembre 2026 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0 jour"
+        },
+        {
+          "id": "b",
+          "text": "30 jours (depuis la fin de la période)"
+        },
+        {
+          "id": "c",
+          "text": "60 jours"
+        },
+        {
+          "id": "d",
+          "text": "Il n'a pas d'âge"
+        }
+      ],
+      "correct": "b",
+      "explanation": "L'âge se mesure depuis la fin de la période (30/09), non depuis la publication.",
+      "tags": [
+        "age"
+      ]
+    },
+    {
+      "id": "C5.5-Q4",
+      "type": "mcq",
+      "prompt": "Scénarios 2 000 (30 %), 1 750 (50 %), 1 450 (20 %) : valeur attendue ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 850"
+        },
+        {
+          "id": "b",
+          "text": "1 733"
+        },
+        {
+          "id": "c",
+          "text": "1 765"
+        },
+        {
+          "id": "d",
+          "text": "1 450"
+        }
+      ],
+      "correct": "c",
+      "explanation": "0,3 × 2 000 + 0,5 × 1 750 + 0,2 × 1 450 = 1 765 ; ce n'est pas une prévision.",
+      "tags": [
+        "ev"
+      ]
+    },
+    {
+      "id": "C5.5-Q5",
+      "type": "mcq",
+      "prompt": "Probabilités 0,3 / 0,5 / 0,2 et résultat dans le troisième scénario : Brier ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,98"
+        },
+        {
+          "id": "b",
+          "text": "0,20"
+        },
+        {
+          "id": "c",
+          "text": "0,64"
+        },
+        {
+          "id": "d",
+          "text": "0,667"
+        }
+      ],
+      "correct": "a",
+      "explanation": "0,3² + 0,5² + (0,2 − 1)² = 0,09 + 0,25 + 0,64 = 0,98 ; la référence uniforme est 0,667.",
+      "tags": [
+        "brier"
+      ]
+    },
+    {
+      "id": "C5.5-Q6",
+      "type": "mcq",
+      "prompt": "Un squelette de thèse donne une valeur attendue de +0,4 % par rapport au prix. Que signifie-t-il ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La thèse est fausse"
+        },
+        {
+          "id": "b",
+          "text": "Il faut acheter"
+        },
+        {
+          "id": "c",
+          "text": "Il faut vendre"
+        },
+        {
+          "id": "d",
+          "text": "Presque aucun avantage chiffré : la thèse décrit l'incertitude"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Avec des probabilités inventées pour l'exercice, aucune recommandation n'en découle.",
+      "tags": [
+        "usage"
+      ]
+    }
+  ],
+  "revision": 1
+}

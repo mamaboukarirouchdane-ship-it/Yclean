@@ -1,0 +1,178 @@
+{
+  "chapterId": "3.1",
+  "module": 3,
+  "title": "Quiz de chapitre 3.1 — Cadre : calendriers, consensus, surprise standardisée (L3.01–L3.03)",
+  "passThreshold": 0.8,
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C3.1-Q1",
+      "type": "mcq",
+      "prompt": "À quelle heure (heure de l'Est) le BLS publie-t-il en général le rapport sur l'emploi ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "8 h 30"
+        },
+        {
+          "id": "b",
+          "text": "10 h 00"
+        },
+        {
+          "id": "c",
+          "text": "14 h 00"
+        },
+        {
+          "id": "d",
+          "text": "16 h 30"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le calendrier du BLS indique 8 h 30, heure de l'Est, pour l'emploi, le CPI et le PPI ; seuls certains rapports comme JOLTS paraissent à 10 h.",
+      "tags": [
+        "calendrier"
+      ]
+    },
+    {
+      "id": "C3.1-Q2",
+      "type": "mcq",
+      "prompt": "Le rapport sur l'emploi de septembre 2025 prévu le 3 octobre est paru le 20 novembre 2025. Quel retard ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "7 jours"
+        },
+        {
+          "id": "b",
+          "text": "17 jours"
+        },
+        {
+          "id": "c",
+          "text": "30 jours"
+        },
+        {
+          "id": "d",
+          "text": "48 jours"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Du 3 octobre au 20 novembre : 28 jours restants d'octobre + 20 jours de novembre = 48 jours, conséquence de l'interruption de financement de 2025.",
+      "tags": [
+        "arret-2025"
+      ]
+    },
+    {
+      "id": "C3.1-Q3",
+      "type": "mcq",
+      "prompt": "La collecte du CPI a été interrompue du 1er octobre au 12 novembre 2025 (inclus). Combien de jours ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "42 jours"
+        },
+        {
+          "id": "b",
+          "text": "43 jours"
+        },
+        {
+          "id": "c",
+          "text": "30 jours"
+        },
+        {
+          "id": "d",
+          "text": "12 jours"
+        }
+      ],
+      "correct": "b",
+      "explanation": "31 jours en octobre + 12 jours en novembre = 43 jours ; les indices d'octobre et de novembre 2025 en ont été affectés.",
+      "tags": [
+        "arret-2025"
+      ]
+    },
+    {
+      "id": "C3.1-Q4",
+      "type": "mcq",
+      "prompt": "Emploi publié +29 000 pour un consensus de +90 000. Quelle est la surprise ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−29 000"
+        },
+        {
+          "id": "b",
+          "text": "+61 000"
+        },
+        {
+          "id": "c",
+          "text": "−119 000"
+        },
+        {
+          "id": "d",
+          "text": "−61 000"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Surprise = publié − consensus = 29 000 − 90 000 = −61 000 ; ce chiffre dépend du consensus choisi, dont l'origine doit être citée.",
+      "tags": [
+        "surprise"
+      ]
+    },
+    {
+      "id": "C3.1-Q5",
+      "type": "mcq",
+      "prompt": "Écart-type d'échantillon des surprises (série fictive) : 35,60 milliers ; surprise du jour : −61. Quelle surprise standardisée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+1,71"
+        },
+        {
+          "id": "b",
+          "text": "−0,58"
+        },
+        {
+          "id": "c",
+          "text": "−1,71"
+        },
+        {
+          "id": "d",
+          "text": "−61"
+        }
+      ],
+      "correct": "c",
+      "explanation": "z = −61 ÷ 35,60 = −1,71 ; la série est une SIMULATION et le seuil de 1 écart-type est une convention de cours.",
+      "tags": [
+        "standardisation"
+      ]
+    },
+    {
+      "id": "C3.1-Q6",
+      "type": "mcq",
+      "prompt": "Pourquoi une surprise de même taille n'a-t-elle pas la même importance d'un indicateur à l'autre ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que la dispersion historique des surprises diffère : on standardise"
+        },
+        {
+          "id": "b",
+          "text": "Parce que les indicateurs sont publiés à la même heure"
+        },
+        {
+          "id": "c",
+          "text": "Parce que seuls les consensus comptent"
+        },
+        {
+          "id": "d",
+          "text": "Parce que les unités sont identiques"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Un écart de 0,1 point sur un indicateur très stable est grand, alors que 60 000 emplois sont modestes face à la dispersion du rapport sur l'emploi.",
+      "tags": [
+        "standardisation"
+      ]
+    }
+  ],
+  "revision": 1
+}

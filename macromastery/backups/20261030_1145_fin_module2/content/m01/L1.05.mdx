@@ -1,0 +1,260 @@
+---
+id: L1.05
+module: 1
+order: 5
+title: "Causes de l'inflation : demande, offre et anticipations"
+title_initial: "Causes de l'inflation"
+level: "débutant à intermédiaire"
+duration_hours: 3.0
+prerequisites: ["L1.02", "L1.03", "L1.04"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L1.05.quiz.json"
+sources: ["S-NYF-01", "S-FRBSF-02", "S-BLS-02"]
+---
+
+# L1.05 — Causes de l'inflation : demande, offre et anticipations
+
+> **Convention de lecture.** **[Fait]** = chiffre ou énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. distinguer l'inflation **par la demande**, **par l'offre (coûts)** et **par les anticipations** ;
+2. utiliser la **direction conjointe des prix et des quantités** pour classer un choc ;
+3. lire une **décomposition offre/demande** de l'inflation et ses limites ;
+4. expliquer ce qu'est l'**ancrage des anticipations** et distinguer anticipations **d'enquête**, **de marché** et **de prévisionnistes** ;
+5. calculer une **anticipation implicite de marché** (point mort d'inflation) à partir de deux taux ;
+6. lire une enquête d'anticipations sans la confondre avec l'objectif de la banque centrale.
+
+## 2. Prérequis
+
+L1.02 (écart de production), L1.03 (productivité, coût unitaire du travail) et L1.04 (indices, global/sous-jacent, taux réel).
+
+## 3. Explication intuitive
+
+Les prix montent parce qu'il y a **trop de demande pour la production disponible**, ou parce que **produire coûte plus cher**, ou parce que **tout le monde s'attend à ce que les prix montent** et agit en conséquence.
+
+Trois images :
+
+- **Demande** : trop d'argent poursuit trop peu de biens ; la production est déjà au maximum.
+- **Offre** : un choc (pétrole, chaîne logistique, récolte) rend la production plus chère ou plus rare.
+- **Anticipations** : les salariés demandent plus parce qu'ils s'attendent à plus d'inflation ; les entreprises relèvent leurs prix pour la même raison. La prévision devient en partie sa propre réalisation.
+
+Les trois se mélangent. L'analyste ne cherche pas « la » cause, mais la **part de chacune**, et surtout la **persistance** : une inflation d'offre transitoire n'appelle pas la même politique qu'une inflation de demande diffuse ou une dérive des anticipations.
+
+## 4. Développement technique
+
+### 4.1 Inflation par la demande
+
+**[Définition]** Elle apparaît quand la demande globale dépasse la capacité de production (écart de production positif, L1.02). Facteurs possibles : relance budgétaire (module 1, L1.11), crédit abondant, baisse des taux, boom de la richesse, demande extérieure.
+
+**Signature (hypothèse d'analyse) :** les **prix et les quantités montent ensemble**, le chômage est bas, les salaires accélèrent, la hausse des prix est **diffuse** (beaucoup de postes).
+
+### 4.2 Inflation par l'offre (ou par les coûts)
+
+**[Définition]** Elle apparaît quand les coûts de production augmentent ou que l'offre se contracte : prix de l'énergie, matières premières, perturbations logistiques, pénuries de main-d'œuvre, droits de douane. Elle peut aussi venir des salaires si ceux-ci augmentent plus vite que la productivité (coût unitaire du travail, L1.03).
+
+**Signature (hypothèse d'analyse) :** les **prix montent et les quantités baissent**, la hausse est **concentrée** sur certains postes, la croissance ralentit.
+
+**Données réelles.** **[Fait, S-BLS-02, résumé automatique, L1.04]** Pour septembre 2026, l'énergie du CPI augmente de **+20,4 %** sur douze mois alors que l'indice hors alimentation et énergie progresse de **+2,6 %**. **[Interprétation]** Un tel écart est compatible avec un **choc concentré sur l'énergie** ; il ne dit pas s'il s'agit d'un choc d'offre, d'une demande forte ou d'un mélange, ni s'il se diffusera aux autres postes (effets de second tour). La leçon ne tranche pas.
+
+### 4.3 Classer un choc : prix et quantités
+
+**[Définition, méthode de la Fed de San Francisco, voir §6.5]** Pour une catégorie de dépenses, on compare le **changement de prix** et le **changement de quantité** par rapport à ce qui était attendu :
+
+| Prix (écart à l'attendu) | Quantité (écart à l'attendu) | Lecture |
+| --- | --- | --- |
+| ↑ | ↑ | **Demande** plus forte |
+| ↑ | ↓ | **Offre** réduite |
+| ↓ | ↑ | **Offre** accrue |
+| ↓ | ↓ | **Demande** plus faible |
+
+**Exemple (SIMULATION).** Voyages : prix +8 %, quantités +5 % → demande. Meubles : prix +6 %, quantités −4 % → offre. Logiciels : prix −2 %, quantités +7 % → offre accrue. **Limite :** chaque observation peut être ambiguë (écart insignifiant, chocs simultanés).
+
+### 4.4 Anticipations d'inflation
+
+**[Définition]** Les **anticipations d'inflation** sont ce que les agents s'attendent à voir comme inflation future. Elles comptent car :
+
+1. les salaires et contrats se négocient en fonction d'elles ;
+2. elles influencent les prix pratiqués par les entreprises ;
+3. elles déterminent le **taux réel anticipé** (taux nominal − inflation anticipée, L0.07), donc les décisions de dépense et d'épargne.
+
+On parle d'**ancrage** des anticipations quand elles restent proches de l'objectif de la banque centrale malgré des chocs ; elles sont **désancrées** quand elles dérivent avec l'inflation observée.
+
+**Trois sources de mesure :**
+
+- **Enquêtes de ménages** (par exemple l'enquête de la Fed de New York) ;
+- **Prévisionnistes professionnels** ;
+- **Marchés** : l'écart entre un taux nominal et un taux réel de même échéance donne l'**anticipation implicite** ou **point mort d'inflation** (*breakeven*).
+
+**[Définition] Point mort d'inflation** ≈ taux nominal − taux réel (même échéance). Plus exactement, (1 + nominal) ÷ (1 + réel) − 1. Il mêle l'inflation anticipée et des **primes** (de risque d'inflation, de liquidité) : ce n'est donc pas une anticipation « pure ».
+
+**Exemple (SIMULATION).** Nominal à 10 ans 4,40 %, réel (obligation indexée) 1,90 % : point mort ≈ 4,40 − 1,90 = **2,50 %** (exact : 1,044 ÷ 1,019 − 1 = 2,45 %). **La leçon n'a pas lu de données de marché réelles de point mort.**
+
+### 4.5 Les anticipations d'enquête de septembre 2026
+
+**[Fait, S-NYF-01, résumé automatique du communiqué du 7 octobre 2026]** Enquête de la Fed de New York auprès des consommateurs, médianes de septembre 2026 :
+
+| Horizon | Septembre 2026 | Variation sur le mois |
+| --- | --- | --- |
+| 1 an | **3,9 %** | +0,3 point (de 3,6 %) |
+| 3 ans | **3,3 %** | +0,1 point (de 3,2 %) |
+| 5 ans | **3,0 %** | inchangée |
+
+Le communiqué indique que l'anticipation à un an est **la plus élevée depuis mai 2023**. Autres résultats : croissance des dépenses des ménages anticipée **5,5 %** ; croissance des gains anticipée (médiane) **2,6 %** (baisse de 0,3 point depuis 2,9 %) ; probabilité de trouver un emploi en cas de perte **46,1 %** ; probabilité de perte d'emploi sur douze mois **13,5 %**.
+
+**[Calcul de l'auteur]** Anticipation d'inflation à un an (3,9 %) moins anticipation de croissance des gains (2,6 %) : un salarié moyen anticipe un **recul de pouvoir d'achat** d'environ 1,3 point. Cette lecture est une comparaison de médianes de questions différentes, avec des échantillons non identiques : c'est indicatif.
+
+**[Interprétation]** La hausse à un an est plus marquée que celle à trois ans (+0,1) et à cinq ans (0) : les ménages semblent anticiper un choc plutôt **temporaire** (cohérent avec l'hypothèse d'un choc d'énergie du §4.2), mais les niveaux à trois ans et cinq ans (3,3 % et 3,0 %) restent supérieurs à l'objectif de 2 % de la Fed (L1.04). **Ne pas comparer directement une médiane d'enquête de ménages à l'objectif PCE** : les ménages anticipent « l'inflation » telle qu'ils la perçoivent, pas l'indice PCE ; les niveaux ont tendance à différer des anticipations de marché et de prévisionnistes. Cette dernière affirmation est une **remarque générale non sourcée** dans cette leçon.
+
+### 4.6 La boucle prix-salaires
+
+**[Définition]** Une **boucle prix-salaires** apparaît quand la hausse des prix provoque des hausses de salaires, qui renchérissent les coûts, qui provoquent de nouvelles hausses de prix. Son importance dépend du pouvoir de négociation, des indexations, des anticipations.
+
+**Exemple (SIMULATION).** Salaires nominaux +4,0 %, inflation +3,7 % : salaire réel = 1,04 ÷ 1,037 − 1 = **+0,29 %**. Si la productivité est +1,4 % (L1.03), le coût unitaire du travail est 1,04 ÷ 1,014 − 1 = **+2,56 %**, ce qui laisse une pression sur les prix. **[Interprétation]** Mais la transmission dépend aussi des marges des entreprises : le coût du travail n'est pas le seul déterminant.
+
+### 4.7 Formation des anticipations : un modèle simple
+
+**[Définition]** Dans un modèle d'**anticipations adaptatives**, l'anticipation Eₜ est corrigée d'une fraction λ de l'erreur passée : Eₜ = Eₜ₋₁ + λ × (πₜ₋₁ − Eₜ₋₁).
+
+**Exemple (SIMULATION).** E₀ = 2 %, λ = 0,5, inflation observée 4 % deux périodes de suite : E₁ = 2 + 0,5 × (4 − 2) = **3,0 %** ; E₂ = 3,0 + 0,5 × (4 − 3,0) = **3,5 %**. Si λ est grand, les anticipations suivent l'inflation passée ; si λ est petit, elles sont **ancrées**. Les économistes utilisent aussi des modèles à anticipations dites rationnelles ; ce cours n'en développe pas la théorie. **[Interprétation]** Ce modèle est un outil pédagogique, pas une description empirique.
+
+## 5. Définitions essentielles
+
+- **Inflation par la demande / par l'offre** : voir §4.1–4.2.
+- **Choc d'offre** : événement qui modifie les coûts ou la capacité de production.
+- **Effet de second tour** : propagation d'un choc initial aux salaires et aux autres prix.
+- **Anticipations d'inflation** : inflation future attendue par un groupe d'agents.
+- **Ancrage** : stabilité des anticipations autour de l'objectif.
+- **Point mort d'inflation** : nominal − réel (même échéance), qui inclut des primes.
+- **Boucle prix-salaires** : spirale entre prix et salaires.
+
+## 6. Exemples chiffrés
+
+**A.** Classement SIMULATION : voyages (demande), meubles (offre), logiciels (offre accrue) (§4.3).
+**B.** Point mort simulé : 4,40 − 1,90 = 2,50 % (§4.4).
+**C.** Enquête NY Fed de septembre 2026 : 3,9 / 3,3 / 3,0 (§4.5).
+**D.** Boucle simulée : salaire réel +0,29 %, CUT +2,56 % (§4.6).
+**E.** Anticipations adaptatives : 2 → 3,0 → 3,5 % (§4.7).
+
+### 6.5 Cas historique documenté — qui a fait monter l'inflation en 2021–2022 ? (Fed de San Francisco)
+
+**[Fait, S-FRBSF-02, résumé automatique]** Dans la Lettre économique 2022-15 du 21 juin 2022, Adam Hale Shapiro (Fed de San Francisco) classe plus de **100 catégories de dépenses** du PCE comme tirées par la **demande** (prix et quantités inattendus dans le **même sens**), par l'**offre** (sens **opposés**) ou **ambiguës** (écarts non distinguables de zéro), à partir de régressions glissantes sur dix ans.
+
+Résultats pour l'indice PCE global : l'inflation moyenne de 2010–2019 est de **1,5 %** ; celle d'avril 2022 est de **6,3 %**, soit un écart de **4,8 points**. L'offre contribue **2,5 points** de plus que sa moyenne d'avant la pandémie, la demande **1,4 point** de plus. L'offre explique « un peu plus de la moitié » de l'écart, la demande environ **un tiers**, le reste est ambigu. Pour le PCE hors alimentation et énergie : écart de 3,3 points, offre et demande expliquant chacune environ **45 %**.
+
+**[Calcul de l'auteur]** 2,5 + 1,4 = 3,9 points ; 4,8 − 3,9 = **0,9 point** ambigu ; parts : offre 52 %, demande 29 %, ambigu 19 %.
+
+**Précautions de l'auteur de l'étude (résumé) :** la part ambiguë est non négligeable ; les perturbations d'offre étaient « largement attendues pour s'atténuer » en 2022 mais cela était « très incertain ». **Ce que la leçon n'a pas pu confirmer :** l'évolution réelle après juin 2022, la validité des régressions, et les résultats des mises à jour ultérieures éventuelles. **[Interprétation]** Cet exemple montre qu'une inflation peut avoir plusieurs causes simultanées et qu'une décomposition est un **modèle**, avec sa part d'ambiguïté. Il ne dit rien sur l'inflation de 2026.
+
+## 7. Application au Forex et à l'or
+
+- **Forex** : la nature de l'inflation oriente la **réaction de la banque centrale** : une inflation de demande diffuse appelle plus de resserrement qu'un choc d'offre transitoire, que la banque centrale peut « regarder à travers » (module 2). La réaction de la devise dépend alors des anticipations de taux, pas de l'inflation seule.
+- **Or** : les anticipations d'inflation montent, mais si les taux nominaux montent plus, le taux réel s'élève, ce qui pèse sur l'or ; si les taux nominaux sont retenus, le taux réel baisse et l'or peut être soutenu (module 5). **Sens non automatique.**
+- **Méthode** : pour chaque surprise d'inflation, se demander : *diffuse ou concentrée ? offre, demande ou mélange ? anticipations stables ou en dérive ? que dit la banque centrale ?*
+- **Rappel** : **une bonne analyse ne garantit pas une transaction gagnante.**
+
+## 8. Erreurs courantes
+
+- **Chercher une cause unique.**
+- **Confondre choc d'offre transitoire et inflation persistante.**
+- **Comparer une anticipation d'enquête de ménages à l'objectif PCE.**
+- **Lire le point mort comme une anticipation pure** (il contient des primes).
+- **Ignorer la persistance** (second tour, anticipations).
+- **Conclure qu'une décomposition offre/demande est un fait** : c'est un modèle.
+- **Ignorer que le même choc peut avoir des effets opposés sur l'or et sur une devise.**
+- **Annoncer l'effet d'un chiffre d'inflation sur une devise sans regarder les anticipations de taux.**
+
+## 9. Limites de l'interprétation
+
+- Sources lues par **résumé automatique** : enquête de la Fed de New York (7 octobre 2026), lettre de la Fed de San Francisco (21 juin 2022), CPI (L1.04).
+- Les valeurs précédentes de l'enquête sont **déduites** par soustraction (indiqué par le résumé).
+- Aucune donnée réelle de point mort ou d'anticipations de prévisionnistes n'a été lue.
+- L'étude de San Francisco concerne **avril 2022** ; elle n'est pas appliquée à 2026.
+- La classification offre/demande repose sur une méthode statistique avec une catégorie ambiguë.
+- Les effets sur les devises et l'or sont des **hypothèses**.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Classer.** Prix et quantités attendues vs observées (SIMULATION) : (a) hôtels : prix +7 %, quantités +4 % ; (b) pneus : prix +9 %, quantités −5 % ; (c) ordinateurs : prix −3 %, quantités +6 % ; (d) restaurants : prix −1 %, quantités −4 %. Classe chaque cas (demande ou offre) et donne la lecture.
+
+<details>
+<summary>Correction 1</summary>
+
+(a) Même sens (↑↑) → **demande plus forte**. (b) Sens opposés (↑↓) → **offre réduite**. (c) Sens opposés (↓↑) → **offre accrue**. (d) Même sens (↓↓) → **demande plus faible**. Chaque lecture reste ambiguë si l'écart est faible ou si les chocs sont simultanés.
+</details>
+
+**Exercice 2 — Décomposition de San Francisco.** À partir du §6.5 : (a) Part de l'offre dans l'écart de 4,8 points ? (b) Part de la demande ? (c) Part de l'ambigu ? (d) Que pèse la part ambiguë sur la confiance dans la conclusion ?
+
+<details>
+<summary>Correction 2</summary>
+
+(a) 2,5 ÷ 4,8 = **52 %**. (b) 1,4 ÷ 4,8 = **29 %**. (c) (4,8 − 2,5 − 1,4) ÷ 4,8 = 0,9 ÷ 4,8 = **19 %**. (d) Elle limite la conclusion « l'offre est responsable de la majorité » : près d'un cinquième ne peut pas être attribué avec certitude.
+</details>
+
+**Exercice 3 — Point mort.** Nominal à 5 ans : 4,20 % ; réel (indexé) : 1,70 %. (a) Point mort approximatif ? (b) Exact ? (c) Si le nominal reste à 4,20 % et le réel passe à 1,40 %, que devient le point mort ? (d) Que ne faut-il pas conclure ?
+
+<details>
+<summary>Correction 3</summary>
+
+(a) 4,20 − 1,70 = **2,50 %**. (b) 1,042 ÷ 1,017 − 1 = **2,46 %**. (c) 4,20 − 1,40 = **2,80 %** (exact : 1,042 ÷ 1,014 − 1 = 2,76 %). (d) Qu'il s'agit d'une anticipation d'inflation pure : le point mort inclut des primes (inflation, liquidité).
+</details>
+
+**Exercice 4 — Salaires et coûts.** Salaires nominaux +3,5 %, inflation +3,0 %, productivité +1,0 %. (a) Salaire réel ? (b) Coût unitaire du travail ? (c) Que peut-on dire d'une pression sur les prix ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) 1,035 ÷ 1,03 − 1 = **+0,49 %**. (b) 1,035 ÷ 1,01 − 1 = **+2,48 %**. (c) Le coût unitaire du travail augmente nettement plus vite qu'une inflation cible de 2 % : cela peut alimenter l'inflation, selon les marges des entreprises (grille d'analyse, non certitude).
+</details>
+
+**Exercice 5 — Anticipations adaptatives.** E₀ = 2,0 %, inflation observée 5 % pendant trois périodes. (a) Avec λ = 0,5, calcule E₁, E₂, E₃. (b) Avec λ = 0,2. (c) Quel cas représente des anticipations « plus ancrées » ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) E₁ = 2 + 0,5 × 3 = **3,5** ; E₂ = 3,5 + 0,5 × 1,5 = **4,25** ; E₃ = 4,25 + 0,5 × 0,75 = **4,625 %**. (b) E₁ = 2 + 0,2 × 3 = **2,6** ; E₂ = 2,6 + 0,2 × 2,4 = **3,08** ; E₃ = 3,08 + 0,2 × 1,92 = **3,464 %**. (c) λ = 0,2, car les anticipations réagissent moins à l'inflation observée.
+</details>
+
+**Exercice 6 — Lire l'enquête.** À partir du §4.5 : (a) De combien l'anticipation à un an a-t-elle varié, et à quel niveau est-elle ? (b) Les anticipations à 5 ans ont-elles bougé ? (c) Pourquoi ne pas conclure que « la Fed va rater son objectif » ? (d) Quel autre type d'anticipation faudrait-il lire pour compléter ?
+
+<details>
+<summary>Correction 6</summary>
+
+(a) +0,3 point, à **3,9 %** (la plus élevée depuis mai 2023). (b) Non : **3,0 %**, inchangée. (c) Il s'agit d'une enquête de ménages, pas de l'objectif PCE ; les niveaux ne sont pas comparables directement et un mois ne fait pas une tendance. (d) Anticipations de marché (points morts) et de prévisionnistes professionnels.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L1.05.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- **Demande** : prix et quantités montent ensemble ; **offre** : prix montent, quantités baissent ; **anticipations** : alimentent salaires et prix.
+- La **persistance** compte plus que la cause apparente : second tour, anticipations.
+- NY Fed (sept. 2026) : 3,9 % à 1 an (plus haut depuis mai 2023), 3,3 % à 3 ans, 3,0 % à 5 ans (enquête de ménages, non comparable à l'objectif PCE).
+- **Point mort** = nominal − réel, avec des primes : pas une anticipation pure.
+- SF Fed (2022) : écart de 4,8 points ; offre 2,5, demande 1,4, ambigu 0,9.
+- Une décomposition est un **modèle** avec une part ambiguë.
+- Pour devises et or, seule la lecture de la **réaction de la banque centrale** et des **taux réels** permet de conclure, avec prudence.
+
+## 13. Critères de maîtrise
+
+- [ ] Classer un choc par prix/quantités (Exercice 1).
+- [ ] Lire une décomposition offre/demande avec ses limites (Exercice 2).
+- [ ] Calculer un point mort et sa mise en garde (Exercice 3).
+- [ ] Relier salaires, productivité, coût unitaire (Exercice 4).
+- [ ] Simuler des anticipations adaptatives (Exercice 5).
+- [ ] Lire une enquête sans sur-conclure (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-NYF-01** — Federal Reserve Bank of New York, communiqué de l'enquête *Survey of Consumer Expectations* (7 octobre 2026) : https://www.newyorkfed.org/newsevents/news/research/2026/20261007.html
+- **S-FRBSF-02** — A. H. Shapiro, *How Much Do Supply and Demand Drive Inflation?*, FRBSF Economic Letter 2022-15 (21 juin 2022) : https://www.frbsf.org/research-and-insights/publications/economic-letter/2022/06/how-much-do-supply-and-demand-drive-inflation/
+- **S-BLS-02** — BLS, CPI de septembre 2026 (voir L1.04) : https://www.bls.gov/news.release/archives/cpi_10142026.htm
+
+**Définitions de cours non rattachées à une source officielle lue :** typologie demande/offre/anticipations, point mort, boucle prix-salaires, anticipations adaptatives. **Points non vérifiés :** points morts réels, prévisions professionnelles, évolutions après juin 2022, validité statistique de la méthode de San Francisco.

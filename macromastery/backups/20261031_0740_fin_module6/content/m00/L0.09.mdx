@@ -1,0 +1,295 @@
+---
+id: L0.09
+module: 0
+order: 9
+title: "Lire un graphique sans se faire piéger : bougies, échelles et rendements"
+title_initial: "Lire un graphique sans se faire piéger"
+level: débutant
+duration_hours: 2.5
+prerequisites: ["L0.03", "L0.07"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L0.09.quiz.json"
+sources: ["S-ECB-04", "S-BIS-06"]
+---
+
+# L0.09 — Lire un graphique sans se faire piéger : bougies, échelles et rendements
+
+> **Convention de lecture.** **[Fait]** = vérifié dans une source citée ; **[Définition]** = convention de vocabulaire ; **[Calcul de l'auteur]** = calcul fait à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. **Particularité de cette leçon :** les conventions de lecture des graphiques (bougies, couleurs, échelles) sont des **usages de la profession**, et **aucune source officielle n'a été retrouvée pour les définir** ; elles sont donc données comme **définitions de cours**. Ce qui est démontrable, c'est l'arithmétique des variations (rendements, échelles) et les distorsions visuelles : elles sont calculées. Cette leçon **ne prétend pas qu'un motif graphique prédit le prix**.
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. lire une **bougie** (ouverture, plus haut, plus bas, clôture) et calculer son amplitude, son corps et ses mèches ;
+2. dire ce qu'une bougie **ne montre pas** (chemin parcouru, volume réel, heure de clôture unique en change) ;
+3. distinguer **échelle arithmétique** et **échelle logarithmique**, et dire quand un graphique déforme la perception ;
+4. distinguer un **niveau**, une **variation absolue** (pips, points) et un **rendement** (pourcentage), et choisir le bon pour comparer deux séries ;
+5. calculer un **rendement simple** et un **rendement logarithmique**, et expliquer pourquoi les seconds s'additionnent ;
+6. repérer au moins **six biais visuels** (axe tronqué, fenêtre choisie, double axe, base 100, retrait de contexte, superposition) ;
+7. utiliser un graphique pour **poser une question** plutôt que pour conclure.
+
+## 2. Prérequis
+
+L0.03 (pip, cotation) et L0.07 (pourcentage, rendement). Aucun outil de graphique n'est nécessaire : tout se calcule à la main.
+
+## 3. Explication intuitive
+
+Un graphique est une **photo choisie** : celui qui le fabrique décide de la période, de l'axe, des couleurs, des séries à superposer. Deux graphiques tirés des mêmes données peuvent raconter deux histoires opposées. Le danger n'est pas que les graphiques mentent, mais que notre œil **conclut plus vite que notre raisonnement**.
+
+Pour s'en protéger, on pose toujours les mêmes questions, dans cet ordre :
+
+1. **Que mesure l'axe vertical, et où commence-t-il ?**
+2. **Quelle période est montrée, et pourquoi celle-là ?**
+3. **Mesure-t-on un niveau, une variation en unités ou un pourcentage ?**
+4. **D'où viennent les données, et à quelle heure sont-elles arrêtées ?**
+
+## 4. Développement technique
+
+### 4.1 Les types de graphiques de prix
+
+**[Définition]**
+
+- **Courbe** : relie les prix de clôture successifs.
+- **Barres OHLC** : chaque période est une barre verticale (du plus bas au plus haut) avec un petit trait pour l'ouverture et un pour la clôture.
+- **Bougies japonaises** (*candlesticks*) : même information que les barres OHLC ; un « corps » rectangulaire va de l'ouverture à la clôture, et deux « mèches » vont du corps jusqu'au plus haut et au plus bas.
+
+**OHLC** signifie *Open, High, Low, Close* : le prix d'**ouverture**, le **plus haut**, le **plus bas** et la **clôture** de la période (une minute, une heure, un jour…).
+
+### 4.2 Lire une bougie
+
+Pour une période donnée :
+
+- **amplitude** (*range*) = plus haut − plus bas ;
+- **corps** = |clôture − ouverture| ;
+- **mèche haute** = plus haut − max(ouverture, clôture) ;
+- **mèche basse** = min(ouverture, clôture) − plus bas ;
+- la bougie est **haussière** si clôture > ouverture, **baissière** sinon.
+
+**[Définition]** La **couleur** de la bougie (vert/rouge, blanc/noir, etc.) **dépend de la plateforme** : vérifie la légende.
+
+**Exemple (SIMULATION).** EUR/USD, une journée : ouverture 1,0800, plus haut 1,0850, plus bas 1,0780, clôture 1,0830.
+
+- Amplitude : 1,0850 − 1,0780 = 0,0070 = **70 pips**.
+- Corps : 1,0830 − 1,0800 = 0,0030 = **30 pips**, haussier.
+- Mèche haute : 1,0850 − 1,0830 = **20 pips**.
+- Mèche basse : 1,0800 − 1,0780 = **20 pips**.
+
+**Exemple (SIMULATION, yen).** USD/JPY : O 150,00, H 150,60, L 149,40, C 149,80. Amplitude = 1,20 = **120 pips** (1 pip = 0,01) ; corps = 0,20 = **20 pips**, baissier ; mèche haute = 0,60 = **60 pips** ; mèche basse = 0,40 = **40 pips**.
+
+**Ce qu'une bougie ne dit pas.**
+
+- **Le chemin.** Une bougie ne dit pas si le plus haut a été atteint avant le plus bas. Deux journées très différentes peuvent donner la même bougie.
+- **Le volume.** Le change de gré à gré n'a pas de marché central unique (L0.01, L0.04). Le « volume » affiché par une plateforme de détail est en général propre à cette plateforme **[Interprétation, non sourcée]** : ne l'assimile pas au volume du marché mondial.
+- **L'heure de clôture.** Le marché des changes est ouvert en continu (L0.04) : la « clôture quotidienne » est **définie par le fournisseur de données** (fuseau et heure de coupure). Deux plateformes peuvent afficher des bougies journalières légèrement différentes pour la même paire.
+- **Les prix retenus.** Un graphique peut être construit sur le prix *bid*, *ask* ou milieu ; le choix modifie légèrement le plus haut et le plus bas.
+
+**[Interprétation]** Une mèche très longue signale un mouvement extrême suivi d'un retour. C'est ainsi qu'un épisode comme le « flash event » de la livre du 7 octobre 2016 (L0.04) apparaîtrait sur des graphiques fins. Les sources lues ne donnent pas les prix d'ouverture, de plus haut, de plus bas et de clôture de cet épisode : **on ne peut donc pas en dessiner la bougie réelle**.
+
+### 4.3 Échelle arithmétique et échelle logarithmique
+
+**[Définition]**
+
+- Sur une échelle **arithmétique** (linéaire), une même distance verticale correspond à un même **écart en unités** (par exemple +100 points).
+- Sur une échelle **logarithmique**, une même distance verticale correspond à une même **variation en pourcentage** (par exemple +10 %).
+
+**Exemple (SIMULATION).** Un actif passe de 1 000 à 2 000, puis de 2 000 à 4 000.
+
+| Mouvement | Écart en unités | Variation en % | Distance sur échelle linéaire | Distance sur échelle log (ln) |
+| --- | --- | --- | --- | --- |
+| 1 000 → 2 000 | +1 000 | +100 % | 1 000 | 0,693 |
+| 2 000 → 4 000 | +2 000 | +100 % | 2 000 | 0,693 |
+
+Sur une échelle linéaire, la deuxième hausse paraît **deux fois plus grande** que la première ; sur une échelle logarithmique, elles sont **identiques**, ce qui correspond à leur variation en %. **[Interprétation]** Pour juger l'ampleur relative de mouvements sur une longue période et à des niveaux de prix très différents, l'échelle logarithmique est plus fidèle ; pour une fenêtre courte autour d'un même niveau, la différence est faible. Dans les deux cas, **vérifie l'échelle affichée**.
+
+### 4.4 Niveau, variation et rendement
+
+- Un **niveau** (EUR/USD = 1,1130) ne se compare pas à un autre niveau (USD/JPY = 150,00) : les unités diffèrent.
+- Une **variation absolue en pips** n'est pas comparable d'une paire à l'autre : 50 pips représentent 0,463 % pour EUR/USD à 1,0800 (50 × 0,0001 ÷ 1,0800) mais 0,333 % pour USD/JPY à 150,00 (50 × 0,01 ÷ 150,00).
+- Un **rendement** (variation en pourcentage) est comparable.
+
+**Rendement simple** : r = Pₜ ÷ Pₜ₋₁ − 1. **Rendement logarithmique** : ln(Pₜ ÷ Pₜ₋₁). **[Calcul de l'auteur]** Les rendements logarithmiques **s'additionnent** dans le temps (la somme des logs est le log du rapport total) ; les rendements simples se **composent** (on multiplie 1 + r).
+
+**Données réelles (taux de référence de la BCE, S-ECB-04, lus par résumé automatique).** EUR/USD : 27 octobre 2026 = 1,1150 ; 28 octobre = 1,1133 ; 29 octobre = 1,1130.
+
+| Jour | Taux | Variation (pips) | Rendement simple | Rendement log |
+| --- | --- | --- | --- | --- |
+| 28 oct. | 1,1133 | −17 | −0,1525 % | −0,15259 % |
+| 29 oct. | 1,1130 | −3 | −0,0269 % | −0,02695 % |
+| **Total 27 → 29** | | **−20** | **−0,1794 %** | **−0,17954 %** |
+
+Le rendement simple total (−0,1794 %) n'est pas la **somme** des deux rendements simples (ici −0,1525 % − 0,0269 % = −0,1794 % à quatre décimales, mais l'égalité n'est exacte que pour les rendements logarithmiques) ; en revanche le rendement log total (−0,17954 %) est **exactement** la somme des deux rendements log. *Limite : ces taux sont des taux de référence quotidiens, informatifs, non des prix de transaction ; la BCE déconseille leur usage pour des transactions (L0.05).*
+
+**Asymétrie** (rappel de L0.07). +25 % puis −20 % donnent 1,25 × 0,80 = 1,00, soit 0 % : un retour au départ ; −30 % exige une hausse de 1 ÷ 0,70 − 1 = **42,86 %** pour être compensé.
+
+### 4.5 Les pièges visuels
+
+| Piège | Ce que l'œil perçoit | Ce que les chiffres disent |
+| --- | --- | --- |
+| **Axe tronqué** (l'axe vertical ne part pas de zéro, en particulier sur un graphique en barres) | Une grande différence | Souvent une toute petite variation relative |
+| **Fenêtre choisie** (début au creux ou à un sommet) | Une tendance forte | Peut disparaître sur une autre période |
+| **Double axe** (deux séries, deux échelles) | Une corrélation « évidente » | L'échelle de chaque axe est arbitraire et peut être ajustée pour faire coïncider les courbes |
+| **Base 100** (indices ramenés à 100 à une date) | Comparaison équitable | Dépend de la date choisie comme base |
+| **Zoom extrême** (petit pas de temps) | Un mouvement spectaculaire | Du bruit, à l'échelle de l'amplitude de la journée |
+| **Superposition de nombreux indicateurs** | Une analyse sophistiquée | Un risque de choisir après coup ce qui « confirme » |
+| **Absence de contexte** (pas de date d'événement ni de source) | Un graphique « parlant » | Une histoire que le graphique seul ne démontre pas |
+
+**Exemple chiffré de l'axe tronqué (SIMULATION).** Deux barres : 1,0800 et 1,0850. La différence réelle est 0,0050 ÷ 1,0800 = **0,46 %**. Si l'axe commence à 1,0790, les hauteurs sont 0,0010 et 0,0060 : la seconde barre paraît **6 fois plus haute** que la première, alors qu'elle ne la dépasse que de 0,46 %.
+
+**[Interprétation]** L'œil humain voit facilement des motifs, même dans des séries aléatoires. Les motifs de l'analyse graphique ne sont **pas validés** dans ce cours : la validation statistique d'une règle (test hors échantillon, biais) fait l'objet du **module 14**.
+
+### 4.6 Utiliser les graphiques en analyse fondamentale
+
+En analyse fondamentale, un graphique sert à :
+
+1. **situer un niveau** dans son historique, avec une échelle et une période justifiées ;
+2. **dater la réaction** à un événement : marquer la date d'une publication ou d'une décision sur le graphique avant de regarder la réaction (modules 3 et 6) ;
+3. **comparer des séries** après les avoir mises sur une base comparable (rendements ou base 100 explicite) ;
+4. **formuler une hypothèse** (« le dollar et les rendements semblent liés depuis telle date ») qu'il faut ensuite tester.
+
+Un graphique **ne prouve pas** une relation de cause à effet (module 9).
+
+## 5. Définitions essentielles
+
+- **OHLC** : ouverture, plus haut, plus bas, clôture.
+- **Bougie / corps / mèche** : représentation de l'OHLC ; corps = ouverture-clôture ; mèches = extrêmes.
+- **Amplitude (*range*)** : plus haut − plus bas.
+- **Échelle arithmétique / logarithmique** : distance égale = écart égal / variation égale en %.
+- **Rendement simple / logarithmique** : Pₜ/Pₜ₋₁ − 1 / ln(Pₜ/Pₜ₋₁).
+- **Base 100** : série ramenée à 100 à une date de référence.
+- **Axe tronqué** : axe vertical qui ne commence pas à zéro.
+- **Double axe** : deux séries tracées sur deux échelles différentes.
+
+## 6. Exemples chiffrés
+
+**Exemple A — Bougie EUR/USD :** amplitude 70 pips, corps 30 pips, mèches 20 et 20 (§4.2).
+**Exemple B — Bougie USD/JPY :** 120 pips, 20 pips baissier, mèches 60 et 40 (§4.2).
+**Exemple C — Échelle :** deux hausses de +100 % : distances 1 000 et 2 000 sur échelle linéaire, 0,693 chacune sur échelle log (§4.3).
+**Exemple D — Rendements réels :** EUR/USD 27→29 octobre 2026 : −0,1794 % (§4.4).
+**Exemple E — Axe tronqué :** 0,46 % de différence rendus par un rapport de 6 (§4.5).
+
+### 6.5 Cas historique documenté — du flash event aux bougies, et la série de la BCE
+
+Deux cas documentés sont employés dans cette leçon : (1) le **rapport de la BRI sur le 7 octobre 2016** (S-BIS-06, L0.04), cité pour la notion de mèche extrême : **on ne dispose pas de ses prix OHLC dans les sources lues**, ce qui illustre le principe qu'une description écrite ne remplace pas la donnée ; (2) la **série des taux de référence de la BCE du 27 au 29 octobre 2026** (S-ECB-04), prise comme exemple de calcul de rendements. **[Interprétation]** Dans les deux cas, la bonne pratique est la même : citer la source, la date et l'unité avant d'interpréter la forme du graphique.
+
+## 7. Application au Forex et à l'or
+
+- **Forex** : compare les paires en **rendements**, pas en pips ; précise le fournisseur de données, le fuseau et la coupure quotidienne.
+- **Or** : un graphique de XAU/USD sur de nombreuses années gagne à être en échelle logarithmique pour juger l'ampleur relative des mouvements ; aucun prix actuel n'est utilisé dans cette leçon.
+- **Événements** : repère la date d'une publication ou d'une décision avant d'observer le graphique.
+- **Discipline** : un graphique est une hypothèse, pas une preuve. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante** ; un joli graphique non plus.
+
+## 8. Erreurs courantes
+
+- **Conclure d'une bougie à une tendance.**
+- **Comparer des pips entre paires** au lieu de pourcentages.
+- **Ne pas regarder l'échelle** ou l'origine de l'axe.
+- **Choisir la fenêtre qui confirme son idée.**
+- **Additionner des rendements simples sur plusieurs périodes** sans précaution.
+- **Interpréter un volume de plateforme de détail comme le volume du marché.**
+- **Superposer deux séries sur deux axes** pour « prouver » un lien.
+- **Croire qu'une longue mèche prédit le prix suivant.**
+
+## 9. Limites de l'interprétation
+
+- Les **définitions** de bougies, de couleurs et d'échelles sont des conventions sans source officielle consultée.
+- Les **données réelles** de la leçon (3 jours de taux de la BCE) sont lues sur un tableau par résumé automatique ; les graphiques de la BCE n'ont pas chargé.
+- Les **bougies** des exemples sont fictives.
+- Aucune relation entre une forme de graphique et un mouvement futur n'est démontrée ici.
+- Les **volumes** de change de détail ne sont pas documentés dans les sources de cette leçon.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Lire des bougies.** (a) EUR/USD : O 1,0820, H 1,0870, L 1,0800, C 1,0810. Calcule amplitude, corps, mèches (en pips) et le sens. (b) USD/JPY : O 148,50, H 149,30, L 148,40, C 149,20. Même demande. (c) Pour (a), dis ce que la bougie ne permet pas de savoir.
+
+<details>
+<summary>Correction 1</summary>
+
+(a) Amplitude : 1,0870 − 1,0800 = 0,0070 = **70 pips**. Corps : |1,0810 − 1,0820| = **10 pips**, baissier. Mèche haute : 1,0870 − 1,0820 = **50 pips**. Mèche basse : 1,0810 − 1,0800 = **10 pips**.
+(b) Amplitude : 149,30 − 148,40 = 0,90 = **90 pips** (1 pip = 0,01). Corps : 149,20 − 148,50 = 0,70 = **70 pips**, haussier. Mèche haute : 149,30 − 149,20 = **10 pips**. Mèche basse : 148,50 − 148,40 = **10 pips**.
+(c) Elle ne dit pas dans quel ordre le plus haut et le plus bas ont été atteints, ni le chemin intraday, ni le volume réel du marché, ni l'heure de clôture adoptée par le fournisseur.
+</details>
+
+**Exercice 2 — Rendements.** Taux de référence de la BCE (S-ECB-04) : EUR/USD 27/10/2026 = 1,1150 ; 28/10 = 1,1133 ; 29/10 = 1,1130. (a) Variation de chaque jour en pips et en %. (b) Rendement simple total 27 → 29. (c) Rendements log de chaque jour et leur somme. (d) La somme des deux rendements simples est-elle égale au rendement total ?
+
+<details>
+<summary>Correction 2</summary>
+
+(a) 28/10 : −0,0017 = **−17 pips** ; 1,1133 ÷ 1,1150 − 1 = **−0,1525 %**. 29/10 : −0,0003 = **−3 pips** ; 1,1130 ÷ 1,1133 − 1 = **−0,0269 %**.
+(b) 1,1130 ÷ 1,1150 − 1 = **−0,1794 %**.
+(c) ln(1,1133/1,1150) = **−0,15259 %** ; ln(1,1130/1,1133) = **−0,02695 %** ; somme = **−0,17954 %** = ln(1,1130/1,1150).
+(d) Presque (−0,1525 − 0,0269 = −0,1794) mais pas exactement en général : les rendements simples se composent (on multiplie 1 + r), les rendements log s'additionnent exactement.
+</details>
+
+**Exercice 3 — Échelle.** Un actif passe de 500 à 1 000, puis de 1 000 à 2 000, puis de 2 000 à 3 000 (SIMULATION). (a) Variation en % de chaque étape ? (b) Distances sur échelle linéaire ? (c) Distances sur échelle log (ln) ? (d) Sur quelle échelle la troisième étape paraît-elle aussi grande que les deux premières, et sur laquelle plus petite ?
+
+<details>
+<summary>Correction 3</summary>
+
+(a) +100 %, +100 %, +50 %.
+(b) 500, 1 000, 1 000 (linéaire).
+(c) ln 2 = 0,693 ; ln 2 = 0,693 ; ln 1,5 = 0,405.
+(d) Sur l'échelle **linéaire**, la 3ᵉ étape (1 000) paraît aussi grande que la 2ᵉ (1 000) et plus grande que la 1ʳᵉ (500), alors que sa variation relative est la plus faible (+50 %). Sur l'échelle **log**, elle paraît nettement plus petite (0,405 contre 0,693), en accord avec les pourcentages.
+</details>
+
+**Exercice 4 — Pips contre pourcentages ; asymétrie.** (a) Variation de 50 pips sur EUR/USD à 1,0800 et sur USD/JPY à 150,00 : calcule le pourcentage. (b) Après une baisse de 30 %, quelle hausse faut-il pour revenir au départ ? (c) +25 % puis −20 % : résultat net ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) EUR/USD : 50 × 0,0001 = 0,0050 ; 0,0050 ÷ 1,0800 = **0,463 %**. USD/JPY : 50 × 0,01 = 0,50 ; 0,50 ÷ 150,00 = **0,333 %**. Les pips ne sont pas comparables.
+(b) 1 ÷ 0,70 − 1 = **42,86 %**.
+(c) 1,25 × 0,80 = **1,00**, soit **0 %** : retour au départ.
+</details>
+
+**Exercice 5 — L'axe tronqué.** Deux barres représentent EUR/USD à 1,0800 et 1,0850. (a) Différence relative réelle ? (b) Si l'axe part de 1,0790, quelles hauteurs, et quel rapport ? (c) Si l'axe part de 0 ? (d) Quelle règle de lecture en tires-tu pour un graphique en barres ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) 0,0050 ÷ 1,0800 = **0,46 %**.
+(b) Hauteurs : 1,0800 − 1,0790 = 0,0010 et 1,0850 − 1,0790 = 0,0060 ; rapport = **6**.
+(c) Hauteurs 1,0800 et 1,0850 ; rapport = 1,0046.
+(d) Pour un graphique en barres, l'axe doit partir de zéro ; sinon la hauteur n'est plus proportionnelle à la valeur. Si l'axe est tronqué, lis les valeurs et non les hauteurs.
+</details>
+
+**Exercice 6 — Critique d'un graphique.** Un article présente un graphique « Le dollar et l'or évoluent ensemble ». Il montre deux courbes sur deux axes verticaux différents, de janvier à juin, à partir du creux de janvier ; aucune source ni date d'événement. (a) Liste au moins cinq problèmes possibles. (b) Quelles données demanderais-tu ? (c) Quelle conclusion peut-on tirer du graphique seul ?
+
+<details>
+<summary>Correction 6</summary>
+
+(a) Double axe (échelles arbitraires) ; fenêtre de six mois choisie à partir d'un creux ; pas de zéro ni d'échelle indiquée ; pas de source ni d'heure de clôture ; deux séries aux unités différentes comparées sans rendements ni base 100 explicite ; pas d'événements datés ; corrélation visuelle sans test.
+(b) Les deux séries brutes avec source et fuseau, sur une longue période et plusieurs fenêtres ; les rendements ; la méthode de mise à l'échelle ; les dates d'événements.
+(c) Aucune conclusion causale ; au mieux une hypothèse à tester (module 9, module 14).
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L0.09.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Une bougie = **OHLC** : amplitude, corps, mèches ; elle ne dit ni le chemin, ni le volume réel, ni une clôture unique en change.
+- En échelle **linéaire**, la même distance = le même écart en unités ; en échelle **log**, la même variation en %.
+- Compare des séries en **rendements** (ou base 100 explicite), jamais en pips d'une paire à l'autre.
+- **Simple** : se compose ; **log** : s'additionne.
+- Les pièges : **axe tronqué**, **fenêtre choisie**, **double axe**, **base 100**, **zoom**, **superpositions**, **absence de contexte**.
+- Un graphique pose une question ; il ne démontre pas une cause, et aucun motif n'est ici validé.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer amplitude, corps et mèches d'une bougie (Exercice 1).
+- [ ] Calculer rendements simples et logarithmiques (Exercice 2).
+- [ ] Comparer échelles arithmétique et logarithmique (Exercice 3).
+- [ ] Comparer deux paires en pourcentage et calculer l'asymétrie (Exercice 4).
+- [ ] Chiffrer l'effet d'un axe tronqué (Exercice 5).
+- [ ] Critiquer un graphique avec une liste de contrôle (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-ECB-04** — BCE, taux de référence euro/dollar (tableau d'octobre 2026) : https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html
+- **S-BIS-06** — BRI, Comité des marchés, *The sterling « flash event » of 7 October 2016* : https://www.bis.org/publ/mktc09.htm
+
+**Définitions de cours non rattachées à une source officielle :** OHLC, bougies, mèches, couleurs, échelle linéaire et logarithmique, rendements simple et logarithmique, base 100, axe tronqué, double axe. Des pages éducatives de sociétés privées ont été repérées par recherche et **non retenues** (non primaires, non lues). **Points non vérifiés :** pratiques de clôture quotidienne des fournisseurs de données, nature du « volume » des plateformes de détail, existence de motifs graphiques prédictifs (non traitée).

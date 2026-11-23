@@ -1,0 +1,233 @@
+{
+  "lessonId": "L4.10",
+  "title": "Quiz — Le carry trade",
+  "passThreshold": 0.8,
+  "note": "Seuil : 7 bonnes réponses sur 8.",
+  "questions": [
+    {
+      "id": "L4.10-Q1",
+      "type": "mcq",
+      "prompt": "Que mesure le point mort d'un carry trade ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La volatilité implicite"
+        },
+        {
+          "id": "b",
+          "text": "Le rendement total annuel"
+        },
+        {
+          "id": "c",
+          "text": "La variation de change qui annule le gain de portage"
+        },
+        {
+          "id": "d",
+          "text": "Le taux directeur"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le point mort est la variation du cours de la devise de placement qui annule exactement le différentiel de taux sur la période.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L4.10-Q2",
+      "type": "mcq",
+      "prompt": "Placement à 4,60 %, financement à 1,25 % : quel différentiel annuel ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "3,35 points"
+        },
+        {
+          "id": "b",
+          "text": "5,85 points"
+        },
+        {
+          "id": "c",
+          "text": "3,68 points"
+        },
+        {
+          "id": "d",
+          "text": "0,28 point"
+        }
+      ],
+      "correct": "a",
+      "explanation": "4,60 − 1,25 = 3,35 points par an, soit environ 0,28 point par mois ; ce sont des taux directeurs utilisés comme substituts.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.10-Q3",
+      "type": "mcq",
+      "prompt": "Quel est le point mort annuel de l'AUD/JPY avec 4,60 % et 1,25 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ −4,40 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ −3,35 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ +3,20 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ −3,20 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "1,0125 ÷ 1,046 − 1 = −3,20 % ; −4,40 % correspond à un financement en franc à taux nul.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.10-Q4",
+      "type": "mcq",
+      "prompt": "Différentiel de 3,35 points et volatilité implicite de 15 % : quel ratio portage/risque (simulation) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 0,34"
+        },
+        {
+          "id": "b",
+          "text": "≈ 0,22"
+        },
+        {
+          "id": "c",
+          "text": "≈ 5,0"
+        },
+        {
+          "id": "d",
+          "text": "≈ 0,15"
+        }
+      ],
+      "correct": "b",
+      "explanation": "3,35 ÷ 15 = 0,22 ; à 10 % de volatilité le ratio serait de 0,34 : plus de volatilité, moins d'attrait.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.10-Q5",
+      "type": "mcq",
+      "prompt": "Que dit la BRI sur la cause principale de la turbulence d'août 2024 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aucun choc n'a eu lieu"
+        },
+        {
+          "id": "b",
+          "text": "Le carry trade en est la seule cause"
+        },
+        {
+          "id": "c",
+          "text": "L'or en est la cause"
+        },
+        {
+          "id": "d",
+          "text": "Elle ne dit pas que le dénouement du carry trade en est la cause principale : elle le décrit comme un amplificateur"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La BRI décrit un choc déclenché par l'emploi américain, amplifié par plusieurs mécanismes dont le dénouement du portage.",
+      "tags": [
+        "bri"
+      ]
+    },
+    {
+      "id": "L4.10-Q6",
+      "type": "mcq",
+      "prompt": "Créances bancaires en yen de 133 000 milliards de yens (≈ 880 milliards de dollars) : quel taux de change implicite ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 0,0066"
+        },
+        {
+          "id": "b",
+          "text": "≈ 6,6"
+        },
+        {
+          "id": "c",
+          "text": "≈ 151,1 yens par dollar"
+        },
+        {
+          "id": "d",
+          "text": "≈ 880"
+        }
+      ],
+      "correct": "c",
+      "explanation": "133 000 ÷ 880 ≈ 151,1 ; le même calcul sur 66 000 et 435 donne ≈ 151,7 : les chiffres sont cohérents.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.10-Q7",
+      "type": "mcq",
+      "prompt": "Pourquoi les encours en yen de la BRI ne mesurent-ils pas directement le carry trade ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une partie n'est pas du carry trade (l'emprunt « peut, mais ne doit pas » y être lié)"
+        },
+        {
+          "id": "b",
+          "text": "Parce qu'ils sont faux"
+        },
+        {
+          "id": "c",
+          "text": "Parce qu'ils sont en dollars"
+        },
+        {
+          "id": "d",
+          "text": "Parce qu'ils sont secrets"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Les encadrés avertissent que les créances et prêts en yen incluent des structures anciennes sans lien avec le portage.",
+      "tags": [
+        "limite"
+      ]
+    },
+    {
+      "id": "L4.10-Q8",
+      "type": "mcq",
+      "prompt": "Selon l'article secondaire de septembre 2026, quelle devise de financement gagne en attrait face au yen ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le dollar canadien"
+        },
+        {
+          "id": "b",
+          "text": "Le franc suisse"
+        },
+        {
+          "id": "c",
+          "text": "Le dollar américain"
+        },
+        {
+          "id": "d",
+          "text": "L'euro"
+        }
+      ],
+      "correct": "b",
+      "explanation": "L'article rapporte que le financement en franc a donné 14 % en 2026 et que le yen perd de son attrait ; information secondaire non vérifiée.",
+      "tags": [
+        "2026"
+      ]
+    }
+  ],
+  "revision": 1
+}

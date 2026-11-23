@@ -1,0 +1,178 @@
+{
+  "chapterId": "2.2",
+  "module": 2,
+  "title": "Quiz de chapitre 2.2 — Instruments : taux, bilan, communication (L2.03–L2.05)",
+  "passThreshold": 0.8,
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C2.2-Q1",
+      "type": "mcq",
+      "prompt": "Le 16 septembre 2026, la Fed passe de 3,50–3,75 % à 3,75–4,00 %. Quelle est la variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+2,5 points"
+        },
+        {
+          "id": "b",
+          "text": "+50 points de base"
+        },
+        {
+          "id": "c",
+          "text": "+0,025 point"
+        },
+        {
+          "id": "d",
+          "text": "+25 points de base"
+        }
+      ],
+      "correct": "d",
+      "explanation": "3,75 − 3,50 = 0,25 point, soit 25 points de base.",
+      "tags": [
+        "fed"
+      ]
+    },
+    {
+      "id": "C2.2-Q2",
+      "type": "mcq",
+      "prompt": "Facilité de dépôt 2,50 %, MRO 2,65 %, prêt marginal 2,90 % : quels sont les écarts par rapport à la facilité de dépôt ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "40 pb pour le MRO et 15 pb pour le prêt marginal"
+        },
+        {
+          "id": "b",
+          "text": "15 pb pour le MRO et 40 pb pour le prêt marginal"
+        },
+        {
+          "id": "c",
+          "text": "25 pb pour les deux"
+        },
+        {
+          "id": "d",
+          "text": "0 pb"
+        }
+      ],
+      "correct": "b",
+      "explanation": "2,65 − 2,50 = 0,15 et 2,90 − 2,50 = 0,40 : le corridor a une largeur de 0,40 point.",
+      "tags": [
+        "corridor"
+      ]
+    },
+    {
+      "id": "C2.2-Q3",
+      "type": "mcq",
+      "prompt": "Que change l'annonce de Volcker du 6 octobre 1979 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le Comité abandonne l'objectif d'inflation"
+        },
+        {
+          "id": "b",
+          "text": "Le Comité fixe un plafond de rendement"
+        },
+        {
+          "id": "c",
+          "text": "Le Comité supprime les réserves"
+        },
+        {
+          "id": "d",
+          "text": "Le Comité gère le volume des réserves plutôt que le taux des fonds fédéraux au jour le jour"
+        }
+      ],
+      "correct": "d",
+      "explanation": "L'objectif est de mieux contrôler la croissance monétaire ; le taux des fonds fédéraux atteint un record de 20 % fin 1980 et le chômage 10,8 % fin 1982.",
+      "tags": [
+        "volcker"
+      ]
+    },
+    {
+      "id": "C2.2-Q4",
+      "type": "mcq",
+      "prompt": "Bilan fictif : titres 900, réserves 600 avant. Un QE de 100 est mené. Que deviennent titres et réserves ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Titres 1 000 et réserves 600"
+        },
+        {
+          "id": "b",
+          "text": "Titres 900 et réserves 700"
+        },
+        {
+          "id": "c",
+          "text": "Titres 1 000 et réserves 700"
+        },
+        {
+          "id": "d",
+          "text": "Titres 800 et réserves 500"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Les achats augmentent l'actif (titres) et créent des réserves au passif : +100 de chaque côté.",
+      "tags": [
+        "qe"
+      ]
+    },
+    {
+      "id": "C2.2-Q5",
+      "type": "mcq",
+      "prompt": "Treasuries 4 572,7 et MBS 1 895,2 (H.4.1 du 21/10/2026). Quelle part des Treasuries dans ces deux postes ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "70,7 %"
+        },
+        {
+          "id": "b",
+          "text": "29,3 %"
+        },
+        {
+          "id": "c",
+          "text": "50 %"
+        },
+        {
+          "id": "d",
+          "text": "100 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "4 572,7 ÷ (4 572,7 + 1 895,2) = 70,7 % ; calcul de l'auteur sur deux postes seulement.",
+      "tags": [
+        "bilan"
+      ]
+    },
+    {
+      "id": "C2.2-Q6",
+      "type": "mcq",
+      "prompt": "Selon le billet de la Fed d'Atlanta, que s'est-il passé après la conférence de presse de juin 2013 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les rendements ont baissé de 40 pb"
+        },
+        {
+          "id": "b",
+          "text": "Le rendement à 10 ans a monté de 40 pb en six jours alors que les anticipations de taux directeurs ont à peine changé"
+        },
+        {
+          "id": "c",
+          "text": "La Fed a relevé son taux directeur de 40 pb"
+        },
+        {
+          "id": "d",
+          "text": "Les rendements n'ont pas bougé"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le cas du « taper tantrum » montre qu'une communication sur le bilan peut déplacer les taux longs sans modifier les anticipations de taux directeurs.",
+      "tags": [
+        "taper-tantrum"
+      ]
+    }
+  ],
+  "revision": 1
+}

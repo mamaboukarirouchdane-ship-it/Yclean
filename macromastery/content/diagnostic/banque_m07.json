@@ -1,0 +1,223 @@
+{
+  "bank": "diagnostic",
+  "module": 7,
+  "note": "Banque progressive : 4 paires de QCM parallèles (forme A = diagnostic initial, forme B = version finale alternative). Niveau : accessible avant le cours. Les modules 0 à 3 restent à alimenter. Données fictives sauf âges calculés sur dates réelles.",
+  "items": [
+    {
+      "id": "D7-A1",
+      "module": 7,
+      "form": "A",
+      "pair": 1,
+      "tag": "age",
+      "prompt": "Positions COT du mardi 13/10, publiées le vendredi 16/10. Âge de la donnée le 31/10 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "18 jours"
+        },
+        {
+          "id": "b",
+          "text": "3 jours"
+        },
+        {
+          "id": "c",
+          "text": "15 jours"
+        },
+        {
+          "id": "d",
+          "text": "21 jours"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D7-B1",
+      "module": 7,
+      "form": "B",
+      "pair": 1,
+      "tag": "age",
+      "prompt": "Positions COT du mardi 20/10, publiées le vendredi 23/10. Âge de la donnée le 31/10 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "11 jours"
+        },
+        {
+          "id": "b",
+          "text": "3 jours"
+        },
+        {
+          "id": "c",
+          "text": "8 jours"
+        },
+        {
+          "id": "d",
+          "text": "14 jours"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D7-A2",
+      "module": 7,
+      "form": "A",
+      "pair": 2,
+      "tag": "net",
+      "prompt": "Longs 142 000 et courts 22 000 (spreading 31 000). Quel est le net ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "120 000"
+        },
+        {
+          "id": "b",
+          "text": "151 000"
+        },
+        {
+          "id": "c",
+          "text": "164 000"
+        },
+        {
+          "id": "d",
+          "text": "89 000"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D7-B2",
+      "module": 7,
+      "form": "B",
+      "pair": 2,
+      "tag": "net",
+      "prompt": "Longs 150 000 et courts 20 000 (spreading 25 000). Quel est le net ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "130 000"
+        },
+        {
+          "id": "b",
+          "text": "170 000"
+        },
+        {
+          "id": "c",
+          "text": "195 000"
+        },
+        {
+          "id": "d",
+          "text": "105 000"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D7-A3",
+      "module": 7,
+      "form": "A",
+      "pair": 3,
+      "tag": "part de l'OI",
+      "prompt": "Net 120 000 et intérêt ouvert 600 000. Part de l'OI ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "20,0 %"
+        },
+        {
+          "id": "b",
+          "text": "5,0 %"
+        },
+        {
+          "id": "c",
+          "text": "50,0 %"
+        },
+        {
+          "id": "d",
+          "text": "120 %"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D7-B3",
+      "module": 7,
+      "form": "B",
+      "pair": 3,
+      "tag": "part de l'OI",
+      "prompt": "Net 130 000 et intérêt ouvert 650 000. Part de l'OI ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "20,0 %"
+        },
+        {
+          "id": "b",
+          "text": "5,0 %"
+        },
+        {
+          "id": "c",
+          "text": "50,0 %"
+        },
+        {
+          "id": "d",
+          "text": "130 %"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D7-A4",
+      "module": 7,
+      "form": "A",
+      "pair": 4,
+      "tag": "résidu de valorisation",
+      "prompt": "Encours 500 puis 520 Md$, flux +5 Md$. Résidu de valorisation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+15 Md$"
+        },
+        {
+          "id": "b",
+          "text": "+20 Md$"
+        },
+        {
+          "id": "c",
+          "text": "+5 Md$"
+        },
+        {
+          "id": "d",
+          "text": "−15 Md$"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D7-B4",
+      "module": 7,
+      "form": "B",
+      "pair": 4,
+      "tag": "résidu de valorisation",
+      "prompt": "Encours 600 puis 560 Md$, flux +10 Md$. Résidu de valorisation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−50 Md$"
+        },
+        {
+          "id": "b",
+          "text": "−40 Md$"
+        },
+        {
+          "id": "c",
+          "text": "+10 Md$"
+        },
+        {
+          "id": "d",
+          "text": "−30 Md$"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

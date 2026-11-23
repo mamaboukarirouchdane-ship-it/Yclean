@@ -1,0 +1,290 @@
+---
+id: L1.01
+module: 1
+order: 1
+title: "Le PIB : mesurer l'activité, distinguer nominal et réel, lire une croissance"
+title_initial: "Le PIB"
+level: "débutant à intermédiaire"
+duration_hours: 3.0
+prerequisites: ["L0.07", "L0.09"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L1.01.quiz.json"
+sources: ["S-BEA-01"]
+---
+
+# L1.01 — Le PIB : mesurer l'activité, distinguer nominal et réel, lire une croissance
+
+> **Convention de lecture.** **[Fait]** = chiffre ou énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul fait à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les chiffres réels de cette leçon proviennent d'un communiqué du Bureau of Economic Analysis (BEA) lu par **résumé automatique** : ils sont à confirmer sur le document original avant tout usage sérieux. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. définir le **PIB** et dire ce qu'il compte et ne compte pas ;
+2. décomposer le PIB par les **dépenses** (C + I + G + X − M) et calculer une **contribution à la croissance** ;
+3. distinguer PIB **nominal**, PIB **réel** et **déflateur**, et passer de l'un à l'autre ;
+4. convertir un **taux trimestriel en taux annualisé** et inversement ;
+5. lire un communiqué de PIB : **estimations successives**, **révisions**, mesures concurrentes (revenu intérieur brut) ;
+6. dire ce qu'un chiffre de PIB **peut et ne peut pas** annoncer pour une devise ou pour l'or.
+
+## 2. Prérequis
+
+L0.07 (pourcentages, composition, annualisation) et L0.09 (rendements, lecture critique d'un chiffre). Aucun outil spécifique.
+
+## 3. Explication intuitive
+
+Imagine une économie comme un grand commerce. Pour savoir si elle va bien, on veut un chiffre qui dit **combien elle produit** sur une période. C'est le **PIB** (produit intérieur brut) : la valeur de tout ce qui a été produit sur le territoire, en biens et services finaux, pendant un trimestre ou une année.
+
+Trois idées simples organisent toute la leçon :
+
+1. **Ce qui est produit est forcément acheté, ou stocké, ou exporté** : on peut donc compter le PIB par ce que chacun dépense.
+2. **Un montant en euros ou en dollars peut augmenter parce qu'on produit plus, ou parce que les prix montent.** Le PIB **réel** retire l'effet des prix ; le PIB **nominal** ne le retire pas.
+3. **Le chiffre est une estimation.** Il est publié trois fois (avancée, deuxième, troisième estimation) et ensuite révisé encore ; il décrit le passé, pas l'avenir.
+
+## 4. Développement technique
+
+### 4.1 Définition et périmètre
+
+**[Définition]** Le **produit intérieur brut (PIB)** est la valeur de marché des **biens et services finaux** produits sur le **territoire** d'un pays pendant une période donnée. Les points à retenir :
+
+- **Finaux** : on ne compte pas les biens intermédiaires (la farine d'un boulanger), sinon on compterait plusieurs fois la même valeur. On compte le pain.
+- **Intérieur** : on compte ce qui est produit **sur le territoire**, quelle que soit la nationalité du propriétaire de l'usine (à distinguer du revenu national).
+- **Brut** : avant déduction de l'usure du capital (amortissement).
+- **Marché** : on valorise aux prix auxquels les choses s'échangent. Les activités gratuites et hors marché (travail domestique non rémunéré) sont, en général, exclues ; certaines sont imputées par convention (par exemple le loyer fictif que se paie un propriétaire occupant, en comptabilité nationale usuelle).
+
+**[Interprétation]** Le PIB mesure une **activité de production**, pas le bien-être, ni la répartition, ni la soutenabilité écologique. Ce n'est pas un défaut du chiffre : c'est son objet.
+
+### 4.2 Trois façons de mesurer la même chose
+
+**[Définition]** On peut calculer le PIB de trois manières, qui doivent en théorie donner le même résultat :
+
+| Approche | Principe | Exemple de lecture |
+| --- | --- | --- |
+| **Production** | Somme des valeurs ajoutées | Industrie, services, agriculture… |
+| **Dépenses** | Somme de ce qui est acheté | C + I + G + X − M |
+| **Revenus** | Somme des revenus créés | Salaires, profits, impôts moins subventions |
+
+Dans la pratique, les trois sont estimées avec des sources différentes et ne coïncident jamais exactement. Le BEA publie ainsi le **PIB** (côté dépenses) **et le revenu intérieur brut (RIB, *GDI*)** (côté revenus). Dans le communiqué du 30 septembre 2026 (voir §6.5), pour le deuxième trimestre 2026, le **PIB réel** a augmenté de **2,2 %** et le **RIB réel** de **2,6 %** (taux annualisés) ; la **moyenne des deux** est de **2,4 %** **[Fait, S-BEA-01, résumé automatique]**.
+
+### 4.3 La décomposition par les dépenses
+
+**[Définition]** L'identité comptable du PIB par les dépenses est :
+
+**PIB = C + I + G + (X − M)**
+
+- **C** — consommation des ménages (*personal consumption expenditures*) ;
+- **I** — investissement privé (machines, bâtiments, logements neufs, **variation des stocks**) ;
+- **G** — dépenses publiques de consommation et d'investissement (hors transferts sociaux comme les retraites, qui ne rémunèrent pas une production) ;
+- **X** — exportations ; **M** — importations ; **X − M** — exportations nettes.
+
+**Pourquoi retrancher M ?** C, I et G incluent des achats de produits **importés**. Ces produits ne sont pas fabriqués sur le territoire : on les retire pour ne compter que la production intérieure. Une hausse des importations **réduit** donc la ligne X − M, mais elle n'est pas « mauvaise » en soi : quand les ménages achètent plus, ils achètent aussi plus de produits importés.
+
+**Exemple (SIMULATION).** Une économie fictive : C = 68, I = 18, G = 17, X = 11, M = 14 (en milliers de milliards).
+PIB = 68 + 18 + 17 + 11 − 14 = **100**. Parts : C 68 %, I 18 %, G 17 %, X − M = −3 %.
+
+### 4.4 Contribution à la croissance
+
+**[Définition]** La croissance du PIB est la somme des **contributions** de chaque composante : contribution ≈ (part de la composante dans le PIB) × (sa croissance en %). En points de pourcentage (pp).
+
+**Exemple (SIMULATION), même économie.** C +3 %, I −5 %, G +1 %, X +4 %, M +6 % :
+
+| Composante | Part (début) | Croissance | Contribution (pp) |
+| --- | --- | --- | --- |
+| C | 68 % | +3 % | +2,04 |
+| I | 18 % | −5 % | −0,90 |
+| G | 17 % | +1 % | +0,17 |
+| X | 11 % | +4 % | +0,44 |
+| M (soustrait) | 14 % | +6 % | −0,84 |
+| **Total** | | | **+0,91** |
+
+La croissance du PIB est d'environ **0,91 %** **[Calcul de l'auteur, approximation à parts initiales ; le BEA utilise des pondérations chaînées]**. Une composante peut être très volatile (investissement, stocks, exportations nettes) et dominer un trimestre sans que la tendance de fond change : on regarde donc aussi la demande finale privée.
+
+**[Fait, S-BEA-01, résumé automatique]** Pour le deuxième trimestre 2026 : les **ventes finales réelles aux acheteurs privés intérieurs** (*real final sales to private domestic purchasers*) ont augmenté de **4,6 %** (taux annualisé). Les composantes détaillées du graphique des contributions n'ont pas pu être lues avec leurs valeurs ; la leçon ne les cite pas.
+
+### 4.5 Nominal, réel et déflateur
+
+**[Définition]**
+
+- **PIB nominal** : valeur aux **prix courants**.
+- **PIB réel** : valeur aux **prix d'une année de référence** (en comptabilité nationale moderne, par chaînage), qui retire l'effet de l'inflation.
+- **Déflateur du PIB** = (PIB nominal ÷ PIB réel) × 100.
+
+**Relation de croissance.** (1 + croissance nominale) = (1 + croissance réelle) × (1 + inflation du déflateur). Donc :
+
+- croissance réelle = (1 + nominale) ÷ (1 + inflation) − 1 ;
+- approximation : réelle ≈ nominale − inflation (comme pour les taux d'intérêt, L0.07).
+
+**Exemple (SIMULATION).** Le PIB nominal passe de 1 000 à 1 060 (+6 %), le déflateur de 100 à 104 (+4 %). PIB réel = 1 060 ÷ 1,04 = **1 019,23**. Croissance réelle = 1,06 ÷ 1,04 − 1 = **1,92 %** (l'approximation 6 − 4 = 2 % donne un ordre de grandeur).
+
+**Données réelles.** **[Fait, S-BEA-01, résumé automatique]** Pour le deuxième trimestre 2026 (taux annualisés) : PIB nominal (« dollars courants ») **+8,5 %** ; PIB réel **+2,2 %**. **[Calcul de l'auteur]** La hausse implicite des prix est d'environ 1,085 ÷ 1,022 − 1 = **6,2 %** en rythme annualisé. Le communiqué (tel que résumé) donne comme indices de prix l'**indice des prix des achats intérieurs bruts** (+5,6 %), l'**indice des prix des dépenses de consommation (PCE)** (+5,0 %) et le **PCE hors alimentation et énergie** (+3,3 %). Le **déflateur du PIB lui-même** n'apparaissait pas dans le résumé lu : l'écart avec 6,2 % peut venir de la différence entre indices (les achats intérieurs bruts incluent les importations, pas les exportations) ou de l'arrondi. **La valeur exacte du déflateur est à vérifier sur le document original.**
+
+### 4.6 Le taux annualisé
+
+**[Définition]** Les statistiques américaines de PIB trimestriel sont présentées **en taux annualisé** : on suppose que la croissance du trimestre se répète quatre fois. Si q est la croissance trimestrielle, le taux annualisé vaut (1 + q)⁴ − 1. Inversement q = (1 + a)^(1/4) − 1.
+
+- q = 0,8 % → a = 1,008⁴ − 1 = **3,24 %** (alors que 4 × 0,8 = 3,2 % : l'approximation simple est légèrement inférieure).
+- a = 2,2 % → q = 1,022^(1/4) − 1 = **0,546 %**.
+
+**[Fait, S-BEA-01]** Le communiqué indique que le taux annualisé de 2,2 % correspond à **0,6 %** en taux trimestriel. **[Calcul de l'auteur]** 1,022^(1/4) − 1 = 0,546 %, qui s'arrondit à 0,5 % : la différence vient de l'arrondi du taux annualisé publié (un taux annualisé non arrondi d'environ 2,21 % ou plus donne 0,55 %, qui s'arrondit à 0,6 %). Le chiffre trimestriel publié est cohérent avec le chiffre annualisé arrondi.
+
+**Piège.** Un taux annualisé **amplifie** le bruit : un trimestre à +0,3 % devient +1,2 % annualisé. Ne compare jamais un taux annualisé (États-Unis) à un taux trimestriel brut ou en glissement annuel (certaines statistiques européennes) sans conversion.
+
+### 4.7 Estimations, révisions et mesures concurrentes
+
+Pour chaque trimestre, le BEA publie une **estimation avancée**, une **deuxième estimation** puis une **troisième**, avant des révisions annuelles. À chaque étape, des données plus complètes remplacent des données partielles.
+
+**[Fait, S-BEA-01, résumé automatique]** Pour le deuxième trimestre 2026, le PIB réel a été estimé à **1,5 %** (estimation avancée), **1,5 %** (deuxième) puis **2,2 %** (troisième) : une **révision à la hausse de 0,7 point**, attribuée dans le texte à une consommation, un investissement et des dépenses publiques plus élevés. Le PIB du premier trimestre 2026 est donné à **2,5 %** (révisé).
+
+**[Calcul de l'auteur]** En rythme trimestriel, 1,5 % annualisé = 0,373 % et 2,2 % annualisé = 0,546 % : la révision représente 0,17 point de pourcentage par trimestre. Elle est petite en niveau, mais elle **modifie le récit** (une croissance « modeste » devient « solide »).
+
+**[Interprétation]** Les révisions montrent que le chiffre initial n'est pas la vérité : il est une estimation. Pour une devise, c'est la **surprise du chiffre initial par rapport aux prévisions** qui compte à l'instant de la publication (module 3) ; pour une analyse de fond, ce sont les chiffres révisés.
+
+### 4.8 Ce que le PIB ne dit pas
+
+- Il est **en retard** : un trimestre est publié plus d'un mois après sa fin.
+- Il est **agrégé** : il masque la répartition entre secteurs, régions, revenus.
+- Il est **révisé**.
+- Il ne dit pas la **qualité** de la croissance (dette, inflation, déséquilibres).
+- Il ne dit **pas, à lui seul, l'évolution d'une devise** : voir 7.
+
+## 5. Définitions essentielles
+
+- **PIB** : valeur de marché des biens et services finaux produits sur un territoire pendant une période.
+- **Valeur ajoutée** : valeur produite moins consommations intermédiaires.
+- **C, I, G, X, M** : consommation, investissement, dépenses publiques, exportations, importations.
+- **Contribution** : part × croissance de la composante, en points de pourcentage.
+- **Nominal / réel / déflateur** : prix courants / prix constants / nominal ÷ réel × 100.
+- **Taux annualisé** : (1 + q)⁴ − 1 ; **SAAR** : corrigé des variations saisonnières, en taux annualisé.
+- **RIB (GDI)** : revenu intérieur brut, mesure par les revenus.
+- **Estimation avancée / deuxième / troisième** : étapes successives de publication.
+
+## 6. Exemples chiffrés
+
+**A.** Économie fictive : PIB = 100, parts C 68 %, I 18 %, G 17 %, X − M −3 % (§4.3).
+**B.** Contributions : +2,04 −0,90 +0,17 +0,44 −0,84 = +0,91 pp (§4.4).
+**C.** Nominal +6 %, déflateur +4 % : réel +1,92 % (§4.5).
+**D.** Trimestriel 0,8 % → annualisé 3,24 % (§4.6).
+**E.** Données BEA du T2 2026 : réel 2,2 %, nominal 8,5 %, prix implicite ≈ 6,2 % (§4.5).
+
+### 6.5 Cas historique documenté — le deuxième trimestre 2026 aux États-Unis : trois estimations
+
+**[Fait, S-BEA-01, résumé automatique du communiqué du 30 septembre 2026]** La troisième estimation du PIB du deuxième trimestre 2026 est publiée le **30 septembre 2026** à 8 h 30 (heure de l'Est). Le PIB réel augmente de **2,2 %** en rythme annualisé (**0,6 %** en rythme trimestriel) ; les estimations précédentes étaient de **1,5 %** (avancée et deuxième). Le RIB réel augmente de **2,6 %** et la moyenne des deux de **2,4 %**. Le PIB nominal augmente de **8,5 %** ; l'indice des prix des achats intérieurs bruts de **5,6 %** ; l'indice PCE de **5,0 %** ; le PCE hors alimentation et énergie de **3,3 %** (révisé à la baisse de 0,3 point). Les ventes finales réelles aux acheteurs privés intérieurs augmentent de **4,6 %**.
+
+**Ce que la leçon n'a pas pu confirmer :** les contributions de chaque composante (valeurs non lisibles dans le résumé), le déflateur du PIB, et le niveau du PIB en dollars. Le communiqué de l'**estimation avancée du troisième trimestre 2026** figure au calendrier du BEA pour le **29 octobre 2026** ; **son contenu n'a pas pu être lu** dans cette session.
+
+**[Interprétation]** Ce cas illustre trois principes : (1) un PIB nominal élevé n'est pas une croissance élevée si les prix montent vite ; (2) un chiffre peut être révisé de plusieurs dixièmes de point, ce qui change sa lecture ; (3) plusieurs mesures concurrentes (PIB, RIB, ventes finales) donnent des images voisines mais non identiques. La leçon **ne tire aucune conclusion sur le dollar** de ces chiffres.
+
+## 7. Application au Forex et à l'or
+
+- **Forex** : à long terme, une croissance supérieure et soutenue peut attirer des capitaux et soutenir la devise (module 4) ; à court terme, le PIB est un **chiffre retardé**, déjà largement anticipé par d'autres statistiques (emploi, ventes, enquêtes). La réaction d'une devise dépend de l'**écart entre le chiffre publié et la prévision**, de l'**interprétation de la banque centrale** et de l'**inflation** (modules 3 et 4). Un PIB fort avec une inflation forte peut conduire à une banque centrale plus restrictive, ce qui soutient parfois la devise, mais ce lien n'est ni automatique ni garanti.
+- **Or** : l'effet direct d'un chiffre de PIB est plus faible que celui des taux réels et du dollar (module 5) ; une croissance faible peut soutenir la demande de valeur refuge ou, au contraire, baisser les anticipations de taux — deux effets opposés.
+- **Discipline** : une décision d'analyse ne repose jamais sur un seul chiffre de PIB. **Une bonne analyse ne garantit pas une transaction gagnante.**
+
+## 8. Erreurs courantes
+
+- **Confondre PIB nominal et PIB réel.**
+- **Comparer un taux annualisé à un taux trimestriel brut.**
+- **Croire que les importations font baisser l'activité** parce qu'elles sont retranchées.
+- **Additionner des contributions sans tenir compte des parts.**
+- **Traiter le premier chiffre comme définitif.**
+- **Conclure d'une croissance forte à une devise forte** ou l'inverse.
+- **Confondre PIB et bien-être.**
+- **Définir une récession par « deux trimestres de baisse »** (voir L1.02).
+
+## 9. Limites de l'interprétation
+
+- Les chiffres réels sont lus **par résumé automatique** : les valeurs sont à confirmer sur le PDF original du BEA.
+- Les composantes de dépenses du deuxième trimestre 2026 ne sont **pas citées** (valeurs non lisibles).
+- Le **déflateur du PIB** n'est pas lu ; le calcul de 6,2 % est une approximation fondée sur les rythmes annualisés arrondis.
+- L'**estimation avancée du troisième trimestre 2026** (29 octobre 2026) n'a pas été lue.
+- Les exemples de décomposition sont **fictifs** et utilisent des parts initiales (pas de chaînage).
+- Les effets sur les devises décrits en 7 sont des **hypothèses d'analyse**, non des résultats.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Décomposition.** Une économie fictive : C = 600, I = 150, G = 200, X = 120, M = 170. (a) PIB ? (b) Parts de chaque composante ? (c) Les exportations nettes sont-elles positives ?
+
+<details>
+<summary>Correction 1</summary>
+
+(a) 600 + 150 + 200 + 120 − 170 = **900**.
+(b) C = 66,7 %, I = 16,7 %, G = 22,2 %, X = 13,3 %, M = 18,9 % (soustrait) ; X − M = −50 → **−5,6 %**.
+(c) Non : 120 − 170 = **−50**. Un solde négatif n'est pas une anomalie : il signifie que le pays importe plus qu'il n'exporte.
+</details>
+
+**Exercice 2 — Contributions.** Même économie (parts initiales de l'exercice 1). Croissances : C +2 %, I +4 %, G 0 %, X +3 %, M +5 %. Calcule les contributions et la croissance approximative.
+
+<details>
+<summary>Correction 2</summary>
+
+Contributions : C 0,667 × 2 = **+1,33** ; I 0,1667 × 4 = **+0,67** ; G **0** ; X 0,1333 × 3 = **+0,40** ; M −0,1889 × 5 = **−0,94**.
+Somme = 1,33 + 0,67 + 0 + 0,40 − 0,94 = **+1,46 %** environ.
+</details>
+
+**Exercice 3 — Nominal et réel.** Le PIB nominal passe de 2 000 à 2 160, le déflateur de 100 à 105. (a) Croissance nominale ? (b) Inflation du déflateur ? (c) PIB réel (base 100) et croissance réelle exacte ? (d) Approximation ?
+
+<details>
+<summary>Correction 3</summary>
+
+(a) 2 160 ÷ 2 000 − 1 = **8 %**. (b) **5 %**. (c) 2 160 ÷ 1,05 = **2 057,14** ; croissance réelle = 1,08 ÷ 1,05 − 1 = **2,857 %**. (d) 8 − 5 = 3 % (écart de 0,14 point avec l'exact).
+</details>
+
+**Exercice 4 — Annualisation.** (a) Un trimestre à +0,6 % : taux annualisé ? (b) Un taux annualisé de 3,0 % : taux trimestriel ? (c) Un trimestre à +0,2 % : annualisé ? (d) Pourquoi un taux annualisé est-il plus bruité qu'un taux trimestriel ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) 1,006⁴ − 1 = **2,42 %**. (b) 1,03^(1/4) − 1 = **0,742 %**. (c) 1,002⁴ − 1 = **0,80 %**. (d) Parce qu'un petit écart trimestriel est multiplié par environ quatre : une variation de 0,1 point trimestriel devient environ 0,4 point annualisé.
+</details>
+
+**Exercice 5 — Données réelles : lire le communiqué.** À partir du §6.5 : (a) De combien le PIB du T2 2026 a-t-il été révisé entre l'estimation avancée et la troisième ? (b) Le RIB est-il supérieur ou inférieur au PIB, et quelle est leur moyenne ? (c) Quel calcul a-t-on fait pour estimer la hausse implicite des prix, et pourquoi n'est-elle pas identique à l'indice des achats intérieurs bruts ? (d) Quelles données ne sont pas citées et pourquoi ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) De 1,5 % à 2,2 % : **+0,7 point** (en rythme annualisé).
+(b) RIB 2,6 % > PIB 2,2 % ; moyenne **2,4 %**.
+(c) 1,085 ÷ 1,022 − 1 = 6,2 %. L'indice des achats intérieurs bruts (5,6 %) inclut les importations et exclut les exportations, et le calcul de l'auteur part de chiffres arrondis : les deux mesures ne sont pas censées être identiques.
+(d) Les contributions par composante (illisibles dans le résumé), le déflateur du PIB et l'estimation avancée du T3 2026 : elles n'ont pas pu être lues ; la leçon ne les invente pas.
+</details>
+
+**Exercice 6 — Interpréter sans conclure.** Un article affirme : « Le PIB américain a été révisé à +2,2 % : le dollar va monter. » (a) Quels éléments de l'énoncé sont des faits, lesquels sont des hypothèses ? (b) Quelles informations supplémentaires faudrait-il ? (c) Reformule la phrase de manière prudente.
+
+<details>
+<summary>Correction 6</summary>
+
+(a) Fait : révision à 2,2 % (annualisé, deuxième à troisième estimation). Hypothèse : « le dollar va monter », qui n'est pas démontrée par le chiffre.
+(b) Les attentes du marché avant la publication (surprise), la réaction effective du dollar contre d'autres devises sur la même fenêtre, les prix et les anticipations de taux, la politique de la banque centrale, la situation des autres économies.
+(c) « Le PIB du T2 2026 a été révisé de 1,5 % à 2,2 % annualisé ; l'effet sur le dollar dépend de l'écart avec les attentes et de l'interprétation de la Réserve fédérale, ce qu'il faut mesurer séparément. »
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L1.01.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- **PIB** = valeur des biens et services finaux produits sur un territoire pendant une période ; il mesure l'activité, pas le bien-être.
+- **PIB = C + I + G + X − M** ; les importations sont retranchées parce que C, I et G en contiennent.
+- **Contribution** = part × croissance de la composante ; les composantes volatiles peuvent dominer un trimestre.
+- **Réel** = nominal corrigé des prix ; réel ≈ nominal − inflation (exact : division).
+- **Annualisé** = (1 + q)⁴ − 1 ; il amplifie le bruit.
+- Le chiffre est **révisé** : T2 2026, de 1,5 % à 2,2 % (résumé du communiqué du BEA).
+- PIB et RIB sont deux mesures voisines non identiques ; aucun chiffre isolé ne prédit une devise.
+
+## 13. Critères de maîtrise
+
+- [ ] Décomposer un PIB et calculer des contributions (Exercices 1–2).
+- [ ] Passer du nominal au réel et inversement (Exercice 3).
+- [ ] Annualiser et dé-annualiser un taux (Exercice 4).
+- [ ] Lire un communiqué en séparant faits, calculs et lacunes (Exercice 5).
+- [ ] Reformuler une affirmation hâtive de façon prudente (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Source consultée le **30 octobre 2026** :
+
+- **S-BEA-01** — BEA, communiqué « GDP (Third Estimate), Industries, Corporate Profits, State GDP, and State Personal Income, 2nd Quarter 2026 », 30 septembre 2026 : https://www.bea.gov/sites/default/files/2026-09/gdp2q26-3rd.pdf
+
+**Définitions de cours non rattachées à une source officielle lue :** identité C + I + G + X − M, contribution à la croissance, déflateur, annualisation, trois approches du PIB. **Points non vérifiés :** composantes de dépenses du T2 2026, déflateur du PIB, estimation avancée du T3 2026 du 29 octobre 2026, méthodes de chaînage du BEA.

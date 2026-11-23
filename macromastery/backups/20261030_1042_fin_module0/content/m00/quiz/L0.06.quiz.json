@@ -1,0 +1,239 @@
+{
+  "lessonId": "L0.06",
+  "title": "Quiz — L'or sur les marchés : once troy, spot, contrats à terme, ETF et or physique",
+  "passThreshold": 0.8,
+  "note": "Prix et frais des exemples : SIMULATION. Les conversions viennent de la LBMA (annexe 3), les contrats de CME Group, les chiffres de demande 2025 du World Gold Council (résumés automatiques, voir sources.md).",
+  "questions": [
+    {
+      "id": "L0.06-Q1",
+      "type": "mcq",
+      "prompt": "Quelle est la masse d'une once troy, selon l'annexe 3 du Code mondial des métaux précieux de la LBMA ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "28,35 grammes environ, comme l'once ordinaire"
+        },
+        {
+          "id": "b",
+          "text": "32,1507465 grammes"
+        },
+        {
+          "id": "c",
+          "text": "31,1034768 grammes"
+        },
+        {
+          "id": "d",
+          "text": "12,5 kilogrammes"
+        }
+      ],
+      "correct": "c",
+      "explanation": "L'annexe 3 de la LBMA donne 1 once troy = 31,1034768 g. 32,1507465 est le nombre d'onces troy dans 1 kg ; 12,5 kg est la masse approximative d'une barre de 400 onces.",
+      "tags": [
+        "once-troy",
+        "unites"
+      ]
+    },
+    {
+      "id": "L0.06-Q2",
+      "type": "mcq",
+      "prompt": "L'or vaut 3 110,35 USD l'once troy (valeur fictive). Quel est son prix par gramme ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "100,00 USD"
+        },
+        {
+          "id": "b",
+          "text": "96,77 USD"
+        },
+        {
+          "id": "c",
+          "text": "3,11 USD"
+        },
+        {
+          "id": "d",
+          "text": "111,14 USD"
+        }
+      ],
+      "correct": "a",
+      "explanation": "3 110,35 ÷ 31,1034768 ≈ 100,00 USD le gramme. On divise par le nombre de grammes dans l'once troy.",
+      "tags": [
+        "conversion"
+      ]
+    },
+    {
+      "id": "L0.06-Q3",
+      "type": "mcq",
+      "prompt": "XAU/USD = 4 860 et EUR/USD = 1,0800 (valeurs fictives). Combien vaut une once troy en euros ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "5 248,80 EUR"
+        },
+        {
+          "id": "b",
+          "text": "0,0002 EUR"
+        },
+        {
+          "id": "c",
+          "text": "4 860,00 EUR"
+        },
+        {
+          "id": "d",
+          "text": "4 500,00 EUR"
+        }
+      ],
+      "correct": "d",
+      "explanation": "XAU/EUR = XAU/USD ÷ EUR/USD = 4 860 ÷ 1,0800 = 4 500 EUR. On divise parce que les dollars doivent s'annuler (méthode des unités, L0.05).",
+      "tags": [
+        "croise",
+        "xau-eur"
+      ]
+    },
+    {
+      "id": "L0.06-Q4",
+      "type": "mcq",
+      "prompt": "Sur le marché de gré à gré de Londres, que possèdes-tu si tu détiens de l'or sur un compte non alloué ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Des barres identifiées à ton nom, avec la pleine propriété"
+        },
+        {
+          "id": "b",
+          "text": "Une créance sur le stock commun du teneur de compte, donc un risque de crédit sur cet établissement"
+        },
+        {
+          "id": "c",
+          "text": "Une part d'un fonds coté en bourse"
+        },
+        {
+          "id": "d",
+          "text": "Un contrat à terme standardisé de COMEX"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Selon l'annexe 3 de la LBMA, le compte non alloué donne une créance sur le stock général de l'établissement ; le compte alloué donne des barres identifiées en pleine propriété.",
+      "tags": [
+        "alloue",
+        "credit"
+      ]
+    },
+    {
+      "id": "L0.06-Q5",
+      "type": "mcq",
+      "prompt": "Un contrat COMEX Gold (GC) porte sur 100 onces troy. Le prix passe de 5 000 à 5 002 USD l'once. Quel est le gain d'une position longue d'un contrat ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2 USD"
+        },
+        {
+          "id": "b",
+          "text": "20 USD"
+        },
+        {
+          "id": "c",
+          "text": "2 000 USD"
+        },
+        {
+          "id": "d",
+          "text": "200 USD"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Gain = variation de prix × taille = 2 × 100 = 200 USD. Pour un Micro Gold (10 onces), ce serait 20 USD.",
+      "tags": [
+        "contrat",
+        "taille"
+      ]
+    },
+    {
+      "id": "L0.06-Q6",
+      "type": "mcq",
+      "prompt": "Que détient un investisseur qui achète des parts d'un ETF d'or adossé à de l'or physique ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Des barres identifiées à son nom qu'il peut retirer du coffre quand il veut"
+        },
+        {
+          "id": "b",
+          "text": "Un contrat à terme sans frais, réglé en espèces"
+        },
+        {
+          "id": "c",
+          "text": "Des parts d'un fonds : la création et le rachat passent par des participants autorisés, un dépositaire garde l'or ; les détails sont à vérifier dans le prospectus"
+        },
+        {
+          "id": "d",
+          "text": "Une créance sans risque sur la banque centrale"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Un ETF donne des parts du fonds. La page du World Gold Council évoque la création et le rachat, les participants autorisés, le dépositaire et l'administrateur ; elle ne donne pas les frais, qui sont dans chaque prospectus.",
+      "tags": [
+        "etf"
+      ]
+    },
+    {
+      "id": "L0.06-Q7",
+      "type": "mcq",
+      "prompt": "Selon le World Gold Council (2025), la demande d'investissement a été de 2 175 t dont 801 t d'ETF. Quelle est la part des ETF dans la demande d'investissement ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "36,8 %"
+        },
+        {
+          "id": "b",
+          "text": "16,0 %"
+        },
+        {
+          "id": "c",
+          "text": "43,5 %"
+        },
+        {
+          "id": "d",
+          "text": "63,2 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "801 ÷ 2 175 ≈ 36,8 %. Le 16,0 % est la part des ETF dans la demande totale de 5 002 t ; 63,2 % est la part des barres et pièces.",
+      "tags": [
+        "demande",
+        "pourcentage"
+      ]
+    },
+    {
+      "id": "L0.06-Q8",
+      "type": "mcq",
+      "prompt": "Tu achètes une pièce d'une once à 5 150 USD alors que le spot est à 5 000 USD, et tu la revends 4 950 USD. Quel est le coût de l'aller-retour en % du prix payé ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1,00 %"
+        },
+        {
+          "id": "b",
+          "text": "3,88 %"
+        },
+        {
+          "id": "c",
+          "text": "3,00 %"
+        },
+        {
+          "id": "d",
+          "text": "4,00 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le coût est 5 150 − 4 950 = 200 USD ; 200 ÷ 5 150 ≈ 3,88 %. Les 4,00 % divisent par le spot au lieu du prix payé. (Prime et décote fictives.)",
+      "tags": [
+        "prime",
+        "decote"
+      ]
+    }
+  ],
+  "revision": 1
+}

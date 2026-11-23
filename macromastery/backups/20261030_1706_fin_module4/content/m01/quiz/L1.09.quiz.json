@@ -1,0 +1,236 @@
+{
+  "lessonId": "L1.09",
+  "title": "Quiz — Consommation, investissement, immobilier",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : Census (20/10/2026), Freddie Mac (29/10/2026), BEA (30/09/2026), résumés automatiques.",
+  "questions": [
+    {
+      "id": "L1.09-Q1",
+      "type": "mcq",
+      "prompt": "Pourquoi la consommation des ménages est-elle en général moins volatile que l'investissement ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que les ménages ne dépensent pas"
+        },
+        {
+          "id": "b",
+          "text": "Parce que l'investissement est interdit"
+        },
+        {
+          "id": "c",
+          "text": "Parce que les ménages cherchent à lisser leur niveau de vie, alors que l'investissement amplifie les variations de la production"
+        },
+        {
+          "id": "d",
+          "text": "Parce que la consommation n'est pas mesurée"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Lissage de la consommation d'un côté, accélérateur de l'autre : l'investissement répond aux variations de la production plutôt qu'à son niveau.",
+      "tags": [
+        "lissage",
+        "accelerateur"
+      ]
+    },
+    {
+      "id": "L1.09-Q2",
+      "type": "mcq",
+      "prompt": "Avec un accélérateur v = 2 et une production qui passe de 100 à 102 puis à 106, quel est l'investissement net de la 2ᵉ variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "8"
+        },
+        {
+          "id": "b",
+          "text": "4"
+        },
+        {
+          "id": "c",
+          "text": "2"
+        },
+        {
+          "id": "d",
+          "text": "12"
+        }
+      ],
+      "correct": "a",
+      "explanation": "I = v × ΔY = 2 × (106 − 102) = 8 ; la première variation donnait 4.",
+      "tags": [
+        "accelerateur",
+        "calcul"
+      ]
+    },
+    {
+      "id": "L1.09-Q3",
+      "type": "mcq",
+      "prompt": "Prêt de 300 000 $ sur 30 ans : mensualité à 7,24 % comparée à 6,17 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ 5 000 $ contre 4 000 $"
+        },
+        {
+          "id": "b",
+          "text": "Identique"
+        },
+        {
+          "id": "c",
+          "text": "Environ 1 500 $ contre 1 400 $"
+        },
+        {
+          "id": "d",
+          "text": "Environ 2 044 $ contre 1 832 $ : +11,6 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Mensualité = L × i ÷ (1 − (1 + i)⁻ⁿ) : 2 044,49 $ contre 1 831,57 $, soit +212,92 $ et +11,6 % à emprunt identique.",
+      "tags": [
+        "mensualite"
+      ]
+    },
+    {
+      "id": "L1.09-Q4",
+      "type": "mcq",
+      "prompt": "Selon le Census Bureau (20/10/2026, résumé), les mises en chantier de septembre 2026 sont de :",
+      "options": [
+        {
+          "id": "a",
+          "text": "2 000 000"
+        },
+        {
+          "id": "b",
+          "text": "1 221 000 en taux annualisé, −5,2 % (± 11,8 %) par rapport à août révisé"
+        },
+        {
+          "id": "c",
+          "text": "500 000"
+        },
+        {
+          "id": "d",
+          "text": "1 400 000 (ce sont les permis)"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Mises en chantier : 1 221 000 (SAAR) ; les permis sont à 1 400 000 ; les achèvements à 1 192 000.",
+      "tags": [
+        "donnees-observees"
+      ]
+    },
+    {
+      "id": "L1.09-Q5",
+      "type": "mcq",
+      "prompt": "Pourquoi ne peut-on pas affirmer que les mises en chantier ont baissé de septembre à août ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que le chiffre est faux"
+        },
+        {
+          "id": "b",
+          "text": "Parce que la variation est de −50 %"
+        },
+        {
+          "id": "c",
+          "text": "Parce que le Census Bureau ne publie rien"
+        },
+        {
+          "id": "d",
+          "text": "Parce que la variation (−5,2 %) a une marge d'erreur de ± 11,8 % : l'intervalle va de −17,0 % à +6,6 % et contient zéro"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Quand l'intervalle contient zéro, la variation n'est pas statistiquement distinguable du bruit au niveau de confiance de la marge.",
+      "tags": [
+        "marge-erreur"
+      ]
+    },
+    {
+      "id": "L1.09-Q6",
+      "type": "mcq",
+      "prompt": "Permis, mises en chantier et achèvements : quel est l'ordre habituel ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Achèvements, mises en chantier, permis"
+        },
+        {
+          "id": "b",
+          "text": "Mises en chantier, achèvements, permis"
+        },
+        {
+          "id": "c",
+          "text": "Permis, mises en chantier, achèvements"
+        },
+        {
+          "id": "d",
+          "text": "Aucun ordre"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Les permis précèdent en général les mises en chantier, qui précèdent les achèvements. Tous les permis ne deviennent pas des chantiers.",
+      "tags": [
+        "vocabulaire"
+      ]
+    },
+    {
+      "id": "L1.09-Q7",
+      "type": "mcq",
+      "prompt": "Août 2026 (BEA, résumé) : revenu disponible +0,3 %, dépenses de consommation +0,9 %, taux d'épargne 4,1 %. Quelle lecture est prudente ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La consommation peut croître plus vite que le revenu un temps, financée par l'épargne ou le crédit, mais pas indéfiniment ; un mois ne fait pas une tendance"
+        },
+        {
+          "id": "b",
+          "text": "La consommation ne dépend pas du revenu"
+        },
+        {
+          "id": "c",
+          "text": "Le taux d'épargne ne peut pas varier"
+        },
+        {
+          "id": "d",
+          "text": "C'est une prévision de récession"
+        }
+      ],
+      "correct": "a",
+      "explanation": "L'écart entre dépenses et revenu est financé par l'épargne ou le crédit ; c'est un signal à surveiller, non une prévision. Le taux d'épargne du mois précédent n'est pas lu.",
+      "tags": [
+        "consommation"
+      ]
+    },
+    {
+      "id": "L1.09-Q8",
+      "type": "mcq",
+      "prompt": "Les taux hypothécaires sont passés de 6,17 % à 7,24 % en un an et les mises en chantier ont baissé de 7,4 % (± 11,5 %). Que peut-on conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que la hausse des taux a causé la baisse des chantiers"
+        },
+        {
+          "id": "b",
+          "text": "Que les deux évolutions sont compatibles avec un frein des taux sur le logement, mais la marge d'erreur et les autres facteurs empêchent d'établir un lien de cause à effet"
+        },
+        {
+          "id": "c",
+          "text": "Qu'il n'y a aucun lien possible"
+        },
+        {
+          "id": "d",
+          "text": "Que les prix du logement ont baissé"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Compatibilité n'est pas causalité ; prix, revenus, coûts de construction et offre existante ne sont pas dans les sources lues.",
+      "tags": [
+        "causalite",
+        "limites"
+      ]
+    }
+  ],
+  "revision": 1
+}

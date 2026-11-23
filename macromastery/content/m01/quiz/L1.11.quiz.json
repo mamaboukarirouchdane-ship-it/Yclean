@@ -1,0 +1,236 @@
+{
+  "lessonId": "L1.11",
+  "title": "Quiz — Politique budgétaire, déficit, dette",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : CBO (8/10/2026), CRFB, CNBC (2022), résumés automatiques.",
+  "questions": [
+    {
+      "id": "L1.11-Q1",
+      "type": "mcq",
+      "prompt": "Quelle est la différence entre déficit et dette ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aucune"
+        },
+        {
+          "id": "b",
+          "text": "Le déficit est un stock, la dette un flux"
+        },
+        {
+          "id": "c",
+          "text": "Le déficit est un flux annuel ; la dette est le stock accumulé des déficits passés"
+        },
+        {
+          "id": "d",
+          "text": "La dette est toujours nulle"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le déficit est l'écart annuel entre dépenses et recettes ; la dette est le stock de titres émis pour le financer.",
+      "tags": [
+        "definitions"
+      ]
+    },
+    {
+      "id": "L1.11-Q2",
+      "type": "mcq",
+      "prompt": "CBO, exercice 2026 (préliminaire) : recettes 5 403 Md$, dépenses 7 396 Md$. Déficit ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 993 Md$"
+        },
+        {
+          "id": "b",
+          "text": "12 799 Md$"
+        },
+        {
+          "id": "c",
+          "text": "1 143 Md$"
+        },
+        {
+          "id": "d",
+          "text": "850 Md$"
+        }
+      ],
+      "correct": "a",
+      "explanation": "7 396 − 5 403 = 1 993 Md$ ; 12 799 serait la somme, qui n'a pas de sens ici.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L1.11-Q3",
+      "type": "mcq",
+      "prompt": "Avec une charge nette d'intérêts de 1 143 Md$, quel est le déficit primaire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 993 Md$"
+        },
+        {
+          "id": "b",
+          "text": "1 143 Md$"
+        },
+        {
+          "id": "c",
+          "text": "3 136 Md$"
+        },
+        {
+          "id": "d",
+          "text": "850 Md$"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Déficit primaire = déficit − intérêts = 1 993 − 1 143 = 850 Md$.",
+      "tags": [
+        "primaire"
+      ]
+    },
+    {
+      "id": "L1.11-Q4",
+      "type": "mcq",
+      "prompt": "Que représente la charge d'intérêts par rapport aux recettes de l'exercice 2026 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ 2 %"
+        },
+        {
+          "id": "b",
+          "text": "Environ 21 %"
+        },
+        {
+          "id": "c",
+          "text": "Environ 50 %"
+        },
+        {
+          "id": "d",
+          "text": "Environ 100 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "1 143 ÷ 5 403 = 21,2 % ; elle représente 15,5 % des dépenses.",
+      "tags": [
+        "calcul",
+        "interets"
+      ]
+    },
+    {
+      "id": "L1.11-Q5",
+      "type": "mcq",
+      "prompt": "Si r > g et que le solde primaire est nul, la dette en part du PIB :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Baisse toujours"
+        },
+        {
+          "id": "b",
+          "text": "Disparaît"
+        },
+        {
+          "id": "c",
+          "text": "Reste exactement stable"
+        },
+        {
+          "id": "d",
+          "text": "Tend à augmenter d'elle-même"
+        }
+      ],
+      "correct": "d",
+      "explanation": "d(t+1) = d × (1 + r) ÷ (1 + g) − p : avec r > g et p = 0, d(t+1) > d(t).",
+      "tags": [
+        "dynamique"
+      ]
+    },
+    {
+      "id": "L1.11-Q6",
+      "type": "mcq",
+      "prompt": "Simulation : d = 100 %, r = 4 %, g = 3 %, p = 0. Que vaut d(t+1) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "103 %"
+        },
+        {
+          "id": "b",
+          "text": "104 %"
+        },
+        {
+          "id": "c",
+          "text": "100,97 %"
+        },
+        {
+          "id": "d",
+          "text": "99 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "100 × 1,04 ÷ 1,03 = 100,97 %. Pour stabiliser, il faudrait un excédent primaire d'environ 0,97 % du PIB.",
+      "tags": [
+        "calcul",
+        "simulation"
+      ]
+    },
+    {
+      "id": "L1.11-Q7",
+      "type": "mcq",
+      "prompt": "Pourquoi un déficit de 2 000 Md$ ne suffit-il pas pour conclure à une baisse du dollar ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que l'effet dépend des taux, de la confiance, de la politique monétaire et du financement ; aucune source lue ne mesure la réaction du dollar"
+        },
+        {
+          "id": "b",
+          "text": "Parce que le déficit n'existe pas"
+        },
+        {
+          "id": "c",
+          "text": "Parce que le dollar ne réagit jamais"
+        },
+        {
+          "id": "d",
+          "text": "Parce que le déficit est négatif"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le déficit est une donnée parmi d'autres ; l'effet de change n'est ni mécanique ni démontré ici.",
+      "tags": [
+        "interpretation"
+      ]
+    },
+    {
+      "id": "L1.11-Q8",
+      "type": "mcq",
+      "prompt": "Que montre le cas britannique de septembre 2022 (presse, résumé) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que les baisses d'impôt n'ont aucun effet"
+        },
+        {
+          "id": "b",
+          "text": "Qu'un choc budgétaire perçu comme non crédible peut provoquer une forte hausse des rendements longs et une intervention de la banque centrale"
+        },
+        {
+          "id": "c",
+          "text": "Que la livre a baissé de 10 % (chiffre lu)"
+        },
+        {
+          "id": "d",
+          "text": "Que la dette est toujours sans risque"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Les rendements longs ont fortement monté, la banque centrale a acheté des gilts pour restaurer des conditions ordonnées ; le mouvement de la livre n'est pas dans le résumé lu.",
+      "tags": [
+        "cas-historique",
+        "uk-2022"
+      ]
+    }
+  ],
+  "revision": 1
+}

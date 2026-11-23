@@ -1,0 +1,238 @@
+{
+  "lessonId": "L2.04",
+  "title": "Quiz — Bilan, QE et QT",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : Fed (H.4.1 22/10/2026, bilan mai 2026), Fed de New York (LSAP), BoE, résumés automatiques.",
+  "questions": [
+    {
+      "id": "L2.04-Q1",
+      "type": "mcq",
+      "prompt": "Quelle est l'écriture de bilan de la banque centrale lors d'un achat de titres de 100 à un fonds client de la banque B ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Seul l'actif augmente"
+        },
+        {
+          "id": "b",
+          "text": "Actif −100, passif −100"
+        },
+        {
+          "id": "c",
+          "text": "Actif +100 (titres), passif +100 (réserves de B)"
+        },
+        {
+          "id": "d",
+          "text": "Aucune écriture"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La banque centrale crédite les réserves de la banque B (passif) et enregistre les titres (actif) ; B crédite le fonds d'un dépôt.",
+      "tags": [
+        "qe",
+        "bilan"
+      ]
+    },
+    {
+      "id": "L2.04-Q2",
+      "type": "mcq",
+      "prompt": "Selon la Banque d'Angleterre, le QE est-il de l'« argent gratuit » pour les banques ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Non : le dépôt créé est un passif qui porte des intérêts, et les réserves ne sont pas multipliées en prêts"
+        },
+        {
+          "id": "b",
+          "text": "Oui, entièrement"
+        },
+        {
+          "id": "c",
+          "text": "Oui, car elles prêtent tout"
+        },
+        {
+          "id": "d",
+          "text": "Non, car il n'y a aucune création de monnaie"
+        }
+      ],
+      "correct": "a",
+      "explanation": "L'article précise que le QE vise à contourner les banques et à soutenir les dépenses via les prix d'actifs, sans garantir plus de crédit.",
+      "tags": [
+        "qe",
+        "boe"
+      ]
+    },
+    {
+      "id": "L2.04-Q3",
+      "type": "mcq",
+      "prompt": "Quel est le total des trois programmes d'achats de la Fed (S-NYF-02) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ 100 Md$"
+        },
+        {
+          "id": "b",
+          "text": "Environ 600 Md$"
+        },
+        {
+          "id": "c",
+          "text": "Environ 20 billions de dollars"
+        },
+        {
+          "id": "d",
+          "text": "Environ 3,9 billions de dollars (3 938 Md$)"
+        }
+      ],
+      "correct": "d",
+      "explanation": "QE1 : 1 725 ; QE2 : 600 ; QE3 : 1 613 ; total 3 938 Md$.",
+      "tags": [
+        "qe",
+        "montants"
+      ]
+    },
+    {
+      "id": "L2.04-Q4",
+      "type": "mcq",
+      "prompt": "Quel fut le montant annoncé de QE2 et son rythme mensuel ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 000 Md$ de MBS"
+        },
+        {
+          "id": "b",
+          "text": "600 Md$ de Treasuries, environ 75 Md$ par mois"
+        },
+        {
+          "id": "c",
+          "text": "100 Md$ par jour"
+        },
+        {
+          "id": "d",
+          "text": "45 Md$ par mois pendant dix ans"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Annoncé le 3 novembre 2010 : 600 Md$ de Treasuries, soit huit mois à 75 Md$ par mois.",
+      "tags": [
+        "qe2"
+      ]
+    },
+    {
+      "id": "L2.04-Q5",
+      "type": "mcq",
+      "prompt": "De combien les avoirs en titres de la Fed ont-ils baissé du 1ᵉʳ juin 2022 au 31 octobre 2025 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ 10 billions de dollars"
+        },
+        {
+          "id": "b",
+          "text": "Environ 22 milliards de dollars"
+        },
+        {
+          "id": "c",
+          "text": "Aucune baisse"
+        },
+        {
+          "id": "d",
+          "text": "Environ 2,2 billions de dollars"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le rapport de mai 2026 sur le bilan indique une baisse de 2,2 billions de dollars sur cette période.",
+      "tags": [
+        "qt"
+      ]
+    },
+    {
+      "id": "L2.04-Q6",
+      "type": "mcq",
+      "prompt": "Que décide le FOMC le 10 décembre 2025 selon le rapport de mai 2026 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "De supprimer les réserves"
+        },
+        {
+          "id": "b",
+          "text": "De vendre tous ses titres"
+        },
+        {
+          "id": "c",
+          "text": "D'acheter, au besoin, des titres du Trésor à court terme pour maintenir des réserves amples"
+        },
+        {
+          "id": "d",
+          "text": "De fixer le taux de change"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Achats de gestion des réserves, dimensionnés sur la demande tendancielle et les variations saisonnières.",
+      "tags": [
+        "reserves-amples"
+      ]
+    },
+    {
+      "id": "L2.04-Q7",
+      "type": "mcq",
+      "prompt": "H.4.1 du 21 octobre 2026 : Treasuries 4 572 654 M$ et MBS 1 895 177 M$. Quelle est la part des Treasuries dans ces deux catégories ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ 70,7 %"
+        },
+        {
+          "id": "b",
+          "text": "Environ 29,3 %"
+        },
+        {
+          "id": "c",
+          "text": "Environ 50 %"
+        },
+        {
+          "id": "d",
+          "text": "Environ 100 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "4 572 654 ÷ 6 467 831 = 70,7 % ; le reste est composé de MBS.",
+      "tags": [
+        "h41",
+        "calcul"
+      ]
+    },
+    {
+      "id": "L2.04-Q8",
+      "type": "mcq",
+      "prompt": "Un QT passif consiste à :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Vendre la monnaie"
+        },
+        {
+          "id": "b",
+          "text": "Ne pas réinvestir les titres arrivant à échéance"
+        },
+        {
+          "id": "c",
+          "text": "Fixer les taux au jour le jour"
+        },
+        {
+          "id": "d",
+          "text": "Augmenter les réserves obligatoires"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Les titres échus ne sont pas remplacés : actif et réserves diminuent, toutes choses égales par ailleurs.",
+      "tags": [
+        "qt",
+        "definition"
+      ]
+    }
+  ],
+  "revision": 1
+}

@@ -1,0 +1,222 @@
+---
+id: L3.02
+module: 3
+order: 2
+title: "Consensus, surprise et bruit : ce que mesure l'écart entre une donnée et ce qu'on attendait"
+title_initial: "Consensus, surprise et bruit"
+level: "intermédiaire"
+duration_hours: 3
+prerequisites: ["L1.07", "L2.11", "L3.01"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L3.02.quiz.json"
+sources: ["S-FDS-01", "S-FTP-02", "S-BLS-04", "S-FED-24"]
+---
+
+# L3.02 — Consensus, surprise et bruit : ce que mesure l'écart entre une donnée et ce qu'on attendait
+
+> **Convention de lecture.** **[Fait]** = énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. définir le **consensus** et la **surprise** d'une publication ;
+2. calculer une surprise et la situer dans la **dispersion** des prévisions ;
+3. distinguer **surprise**, **révision** et **bruit statistique** ;
+4. expliquer le **biais d'ancrage** des prévisions et pourquoi le marché en tient compte ;
+5. lire le rapport sur l'emploi de septembre 2026 comme un cas de surprise négative accompagnée de révisions ;
+6. dire ce que l'on ne sait pas : origine du consensus, licence, incertitude d'échantillonnage.
+
+## 2. Prérequis
+
+- Emploi et marge d'erreur (L1.07) ; surprise et prix (L2.11) ; calendrier (L3.01).
+
+## 3. Explication intuitive
+
+Un prix de marché intègre déjà ce que les participants **attendent**. Quand un chiffre est publié, ce qui bouge le prix n'est pas le niveau du chiffre mais **l'écart avec l'attente** : la surprise. Pour mesurer cet écart, il faut une attente observable : le **consensus**, c'est-à-dire la médiane (ou la moyenne) de prévisions d'économistes recueillies avant la publication.
+
+Mais une surprise n'est pas toujours de l'information. Un chiffre peut s'écarter du consensus par **bruit** (erreur d'échantillonnage, composantes volatiles), puis être **révisé**. Savoir séparer ce qui est signal de ce qui est bruit est l'essentiel du métier.
+
+## 4. Développement technique
+
+### 4.1 Définitions
+
+**[Définition]**
+- **Consensus** : médiane des prévisions d'un échantillon d'économistes, recueillies avant la publication.
+- **Surprise** = valeur publiée − consensus (dans l'unité de l'indicateur).
+- **Dispersion** : écart entre prévisions extrêmes (minimum, maximum) ou écart-type des prévisions.
+- **Bruit** : part de l'écart qui ne reflète pas un changement durable de l'économie (échantillonnage, saisonnalité, événements ponctuels).
+- **Révision** : modification ultérieure du chiffre publié (L3.01).
+
+### 4.2 Un exemple réel : l'emploi de septembre 2026
+
+**[Fait]** (S-FDS-01, FactSet Insight, 1er octobre 2026, source secondaire, résumé automatique) : consensus **médian** de **+90 000** emplois salariés non agricoles pour septembre 2026, sur **27 estimations**, de **60 000 à 130 000** (écart de 70 000) ; chômage attendu à **4,1 %** (28 estimations, de 4,0 % à 4,2 %).
+
+**[Fait]** (S-BLS-04, rapport du BLS du 2 octobre 2026, résumé automatique) : emploi salarié **+29 000** ; juillet révisé à **−10 000** (contre +21 000) ; août à **+133 000** (contre +162 000) ; chômage **4,2 %** ; moyenne sur 12 mois **+45 000**. **[Fait]** (S-FTP-02, First Trust, secondaire) : le chiffre était **inférieur** au consensus de 90 000 ; chômage non arrondi de 4,175 % contre 4,141 % en août ; emploi privé +46 000.
+
+**[Calcul de l'auteur]**
+- surprise de l'emploi : 29 000 − 90 000 = **−61 000** ;
+- écart au minimum des prévisions : 29 000 − 60 000 = **−31 000** : le chiffre est **sous la plus basse prévision** de l'échantillon lu ;
+- surprise rapportée à la dispersion : 61 ÷ 70 = **0,87** fois l'écart entre extrêmes ;
+- révisions de juillet et août : (−10 000 − 21 000) + (133 000 − 162 000) = −31 000 − 29 000 = **−60 000** ;
+- emploi net de révisions : 29 000 − 60 000 = **−31 000** ;
+- surprise du chômage : 4,2 − 4,1 = **+0,1 point** (en valeurs arrondies) ; variation non arrondie 4,175 − 4,141 = **+0,034 point**.
+
+**[Interprétation]** Trois lectures sont possibles et non exclusives : (1) un **signal** de ralentissement de l'emploi (surprise forte, révisions négatives, chômage en hausse) ; (2) du **bruit** (l'écart d'échantillonnage du chiffre mensuel est large, voir L1.07) ; (3) un effet de **composition** (santé, construction, industrie en hausse ; soins infirmiers et finance en baisse selon S-BLS-04). Les trois signaux convergent ici dans le même sens, ce qui renforce la lecture (1) sans la prouver. **Limites** : l'origine du consensus (FactSet) est une source secondaire ; la marge d'erreur du chiffre de septembre n'a pas été lue ; la réaction des marchés du 2 octobre n'est pas documentée ici.
+
+### 4.3 Le biais d'ancrage des prévisions
+
+**[Fait]** (S-FED-24, Campbell et Sharpe, « Anchoring Bias in Consensus Forecasts and its Effect on Market Prices », Fed, FEDS 2007-12, résumé automatique d'une partie du texte) :
+- données : prévisions de consensus de **Money Market Services** pour huit publications mensuelles américaines (dont emploi, CPI, ISM manufacturier, production industrielle), échantillons de 1992-1996 à mars 2006 ;
+- les prévisions semblent donner en moyenne environ **30 %** de poids aux valeurs passées (environ **40 %** pour la confiance des consommateurs) ;
+- les rendements obligataires réagissent fortement à la partie **imprévisible** de la surprise, mais pas à la partie prévisible par l'ancrage : le marché « anticipe le biais d'ancrage » des experts ;
+- réactions mesurées de 5 minutes avant à 10 minutes après la publication ; les surprises expliquent environ **20 à 50 %** de la variation des rendements autour des publications.
+
+**[Interprétation]** Un consensus n'est pas une prévision parfaite : il tend vers le chiffre précédent. Une « surprise » brute contient donc une partie attendue par le marché. Cela justifie de **standardiser** (L3.03) et de **ne pas lire la surprise brute comme l'information pure**. **Limites** : étude ancienne (2007), États-Unis, enquête aujourd'hui disparue ; les derniers 35 000 caractères du document n'ont pas été lus ; les résultats ne sont pas extrapolés à 2026.
+
+### 4.4 Surprise, révision, bruit : trois choses distinctes
+
+**[Définition]**
+- *Surprise* : mesurée au moment de la publication.
+- *Révision* : modifie le niveau de référence **après** coup (ici −60 000 sur deux mois).
+- *Bruit* : se juge par l'incertitude statistique (marges d'erreur) et par la persistance (la surprise se confirme-t-elle le mois suivant ?).
+
+**[Interprétation]** Une règle prudente : **ne conclure à un changement de tendance qu'après avoir regardé** (a) la moyenne sur plusieurs mois, (b) les révisions, (c) la cohérence avec d'autres indicateurs (chômage, salaires, enquêtes). Ici la moyenne sur 12 mois (+45 000) est elle-même faible (S-BLS-04).
+
+### 4.5 Où trouver un consensus ?
+
+**[Fait]** (S-FDS-01) : FactSet publie des consensus sur son site (source secondaire). **[Interprétation]** Les consensus de marché sont en général sous **licence payante** (voir programme du module 3). Deux solutions pour l'académie : (1) saisir à la main un consensus **avec son origine et sa date** ; (2) travailler sur des **cas historiques publics** (par exemple l'article de FactSet ci-dessus). Un consensus saisi sans origine est inutilisable.
+
+## 5. Définitions essentielles
+
+- **Consensus** : médiane de prévisions d'économistes.
+- **Surprise** : valeur publiée moins consensus.
+- **Dispersion** : écart entre les prévisions extrêmes ou écart-type.
+- **Bruit** : variation non informative durable.
+- **Révision** : modification d'un chiffre déjà publié.
+- **Biais d'ancrage** : tendance des prévisions à se rapprocher de valeurs passées.
+
+## 6. Exemples chiffrés
+
+**6.1 Surprise.** 29 000 − 90 000 = −61 000.
+**6.2 Dispersion.** Écart entre extrêmes : 130 000 − 60 000 = 70 000 ; surprise ÷ écart = 0,87.
+**6.3 Révisions.** −31 000 (juillet) et −29 000 (août) = −60 000 ; emploi net −31 000.
+**6.4 Taux de chômage (SIMULATION).** Consensus 4,3 ; publié 4,0 : surprise −0,3 point ; la dispersion des prévisions 4,2–4,4 (écart 0,2) : surprise = 1,5 fois l'écart.
+
+### 6.5 Cas historique documenté — l'emploi de septembre 2026 (2 octobre 2026)
+
+**[Fait]** (S-FDS-01, S-BLS-04, S-FTP-02) : voir 4.2. Consensus +90 000 (27 estimations, 60 000–130 000) ; publié +29 000 ; révisions −60 000 ; chômage 4,2 % contre 4,1 % attendu.
+
+**[Calcul de l'auteur]** Surprise −61 000 ; −31 000 sous la plus basse prévision ; emploi net de révisions −31 000.
+
+**[Interprétation]** Le cas combine une surprise forte, des révisions négatives et un chômage plus élevé que prévu : un ensemble cohérent, qui pèse sur la lecture « marché du travail proche du plein emploi » du communiqué de la Fed de septembre (L2.11). Mais l'inflation, objet principal de la Fed en octobre, reste élevée (module 2) : la fonction de réaction pondère les deux. **Limites** : pas de réaction de marché lue ; pas de marge d'erreur du chiffre lue ; une surprise isolée ne fait pas une tendance.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Avant** : noter le consensus, sa dispersion, sa source et sa date ; décider à l'avance ce qui serait une surprise « grande » (par exemple au-delà de l'écart entre extrêmes).
+- **Pendant** : lire le chiffre principal, les révisions, le chômage et les composantes avant de conclure.
+- **Après** : comparer la réaction avec la surprise ; si le marché réagit à l'inverse, chercher ce qui a pesé davantage (révisions, inflation, anticipations de la banque centrale).
+- **Dollar et or** : une surprise faible sur l'emploi pèse sur les taux attendus ; effet sur l'or via les taux réels (module 5), hypothèse à tester.
+- **Prudence** : une surprise isolée n'est pas une tendance.
+
+## 8. Erreurs courantes
+
+1. Lire le niveau sans le consensus.
+2. Prendre la surprise brute pour de l'information pure.
+3. Ignorer les révisions des mois précédents.
+4. Oublier l'incertitude d'échantillonnage.
+5. Utiliser un consensus sans origine ni date.
+6. Conclure à une tendance sur un seul mois.
+7. Confondre l'écart-type des prévisions et l'écart entre extrêmes.
+
+## 9. Limites de l'interprétation
+
+- Le consensus de FactSet et le résumé de First Trust sont des **sources secondaires** ; le rapport du BLS est lu par résumé.
+- La marge d'erreur du chiffre d'emploi de septembre n'a pas été lue.
+- L'étude de Campbell et Sharpe (2007) date d'avant 2007, porte sur une enquête de l'époque, et n'a été lue que sur ses 100 000 premiers caractères.
+- Aucune donnée de marché (rendements, change) du 2 octobre n'a été lue.
+- Un autre consensus (Bloomberg, Reuters) peut différer de celui de FactSet.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Surprise.** Consensus +90 000, publié +29 000. (a) Surprise ? (b) Écart au minimum (60 000) ? (c) Surprise rapportée à l'écart entre extrêmes (70 000) ?
+
+<details>
+<summary>Correction 1</summary>
+
+(a) 29 000 − 90 000 = **−61 000**. (b) 29 000 − 60 000 = **−31 000**. (c) 61 ÷ 70 = **0,87**.
+</details>
+
+**Exercice 2 — Révisions.** Juillet : de +21 000 à −10 000 ; août : de +162 000 à +133 000. (a) Révision de chaque mois ? (b) Cumul ? (c) Emploi de septembre net des révisions ?
+
+<details>
+<summary>Correction 2</summary>
+
+(a) **−31 000** et **−29 000**. (b) **−60 000**. (c) 29 000 − 60 000 = **−31 000**.
+</details>
+
+**Exercice 3 — Chômage.** Consensus 4,1 ; publié 4,2 (4,175 non arrondi) ; août 4,141. (a) Surprise arrondie ? (b) Variation non arrondie ? (c) Pourquoi la surprise arrondie exagère-t-elle ?
+
+<details>
+<summary>Correction 3</summary>
+
+(a) **+0,1 point**. (b) 4,175 − 4,141 = **+0,034 point**. (c) L'arrondi transforme un écart de 0,034 en 0,1 ; la variation réelle est plus petite.
+</details>
+
+**Exercice 4 — Simulation.** Consensus de chômage 4,3 ; publié 4,0 ; prévisions de 4,2 à 4,4. (a) Surprise ? (b) Rapportée à l'écart entre extrêmes ? (c) Dans quel sens pèse-t-elle sur la décision attendue d'une banque centrale ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) 4,0 − 4,3 = **−0,3 point**. (b) 0,3 ÷ 0,2 = **1,5** fois. (c) Un chômage plus bas que prévu pèse dans un sens plus restrictif (toutes choses égales), mais l'inflation et d'autres données comptent aussi.
+</details>
+
+**Exercice 5 — Ancrage.** Une prévision donne 30 % de poids au chiffre précédent (+45 000) et 70 % à une estimation propre de +100 000. Quelle est la prévision ? (SIMULATION)
+
+<details>
+<summary>Correction 5</summary>
+
+0,3 × 45 000 + 0,7 × 100 000 = 13 500 + 70 000 = **83 500**. La prévision est tirée vers le chiffre précédent.
+</details>
+
+**Exercice 6 — Critique.** « Le chiffre est sous le consensus : le marché du travail s'effondre. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) Une surprise isolée peut être du bruit (incertitude d'échantillonnage). (2) La moyenne sur douze mois et la tendance comptent. (3) Les révisions peuvent changer la lecture. (4) Le chômage ne varie que de 0,034 point en valeur non arrondie. (5) Le consensus est une source secondaire avec ses propres biais.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L3.02.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Surprise = publié − consensus ; ce qui bouge les prix est l'écart avec l'attente.
+- Mesurer la surprise par rapport à la dispersion des prévisions.
+- Distinguer surprise, révision et bruit.
+- Les prévisions sont tirées vers le passé (ancrage) ; le marché le sait.
+- Septembre 2026 : +29 000 contre +90 000 attendus, révisions −60 000, chômage 4,2 %.
+- Un consensus sans origine ni date est inutilisable.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer une surprise et la rapporter à la dispersion.
+- [ ] Chiffrer des révisions et un chiffre net.
+- [ ] Expliquer le biais d'ancrage.
+- [ ] Distinguer signal et bruit.
+- [ ] Lire le cas de septembre 2026 avec ses limites.
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-FDS-01** — FactSet Insight, prévision de l'emploi de septembre 2026 : https://insight.factset.com/total-nonfarm-payrolls-for-september-2026-are-projected-to-rise-by-90000
+- **S-FTP-02** — First Trust, « Nonfarm payrolls increased 29,000 in September » (secondaire) : https://www.ftportfolios.com/Commentary/EconomicResearch/2026/10/2/nonfarm-payrolls-increased-29,000-in-september
+- **S-BLS-04** — BLS, The Employment Situation, septembre 2026 : https://www.bls.gov/news.release/archives/empsit_10022026.htm
+- **S-FED-24** — Campbell et Sharpe, FEDS 2007-12 : https://www.federalreserve.gov/pubs/feds/2007/200712/index.html
+
+**Définitions de cours non rattachées à une source officielle lue :** surprise, dispersion, bruit (définitions de cours). **Points non vérifiés :** marge d'erreur du chiffre de septembre, réaction de marché du 2 octobre, consensus d'autres fournisseurs.

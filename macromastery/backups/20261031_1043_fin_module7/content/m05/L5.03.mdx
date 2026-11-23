@@ -1,0 +1,273 @@
+---
+id: L5.03
+module: 5
+order: 3
+title: "L'or et les taux réels : mécanisme, preuves, ruptures et scénarios conditionnels"
+title_initial: "L'or et les taux réels"
+level: "intermédiaire"
+duration_hours: 3.5
+prerequisites: ["L4.03", "L5.01", "L5.02"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L5.03.quiz.json"
+sources: ["S-FRD-01", "S-TIP-01", "S-TOT-01", "S-TWT-01", "S-MTL-01", "S-ISA-01", "S-WGC-05", "S-WGC-07"]
+---
+
+# L5.03 — L'or et les taux réels
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Statut des sources : la série FRED (données de la Réserve fédérale) est **primaire**, mais lue par **résumé automatique** et seulement en **moyennes mensuelles** ; la mécanique des TIPS vient d'un article **secondaire** (la page du Trésor n'a pas pu être lue) ; les prix de l'or sont **secondaires**. **Une relation statistique n'est pas une loi, et une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais répondre à trois questions :
+
+1. **Pourquoi une hausse des taux réels américains peut-elle pénaliser l'or ?** (coût d'opportunité, comparaison avec un actif sans rendement courant) ;
+2. **Dans quelles circonstances l'or peut-il progresser malgré cette hausse ?** (dollar, achats officiels, flux d'investissement, risques) ;
+3. **Comment construire un scénario conditionnel** sur XAU/USD à partir des taux réels, sans en faire un indicateur unique ?
+
+Tu sais aussi : distinguer nominal, inflation observée et anticipée ; lire un TIPS et un point mort ; calculer un coût d'opportunité ; distinguer **corrélation** et **causalité** ; repérer une **rupture** de relation.
+
+## 2. Prérequis
+
+- Taux réels, TIPS et point mort (L4.03) ; histoire monétaire et prix de l'or (L5.01) ; offre et demande physiques (L5.02).
+
+## 3. Explication intuitive
+
+L'or ne verse ni coupon ni dividende. Détenir une once, c'est renoncer à l'intérêt qu'on aurait touché ailleurs. Si une obligation d'État protégée de l'inflation rapporte beaucoup en termes réels, le « loyer » de l'or sur ses autres usages est plus cher, et l'or devient moins attrayant, **toutes choses égales par ailleurs**. Si ce rendement réel baisse, c'est l'inverse. C'est une **intuition**, pas une loi : d'autres forces (dollar, banques centrales, flux d'ETF, crises) agissent en même temps, et la relation peut disparaître pendant des années. La leçon enseigne le mécanisme, ses preuves, ses limites, puis comment l'utiliser **avec prudence**.
+
+## 4. Développement technique
+
+*(Les huit blocs du plan de la leçon sont les sous-sections 4.1 à 4.8.)*
+
+### 4.1 Définir le taux réel
+
+**[Définition]** Relation de Fisher exacte : (1 + i) = (1 + r) × (1 + π), soit r = (1 + i) ÷ (1 + π) − 1. Trois objets à ne pas mélanger : le **taux nominal** i (rendement affiché d'une obligation), l'**inflation observée** π (publiée a posteriori, L3 et L4.03), l'**inflation anticipée** (non observable directement ; le **point mort** nominal − réel en est une mesure de marché imparfaite, contaminée par des primes de liquidité et de risque).
+
+**[Fait]** (S-TWT-01, TIPSwatch, 17/09/2026, secondaire citant le Trésor, déjà lu en L4.03) : TIPS à 10 ans, rendement réel **2,653 %**, nominal **4,95 %**, point mort **2,30 %**.
+
+**[Calcul de l'auteur]** 4,95 − 2,653 = **2,297 points**, soit 2,30. Avec Fisher exact : 1,0495 ÷ 1,02653 − 1 = **2,238 %** d'inflation implicite contre 2,297 % par la soustraction : l'approximation « nominal − réel » **surestime** légèrement l'écart (≈ 6 pb ici).
+
+### 4.2 Pourquoi les taux réels influencent l'or : le coût d'opportunité
+
+**[Définition]** Le **coût d'opportunité** de détenir un actif sans revenu courant est le rendement auquel on renonce sur un placement alternatif comparable. Pour l'or, l'alternative habituelle est un titre d'État **indexé** : son rendement réel mesure ce qu'on gagne **au-dessus de l'inflation**.
+
+**[Calcul de l'auteur]** À 2,64 % de rendement réel (moyenne de septembre 2026, 4.3) et un prix de l'or de 4 060 $ (S-ISA-01, 28/10/2026), le revenu réel renoncé par once est 4 060 × 0,0264 = **107,2 $ par an**. À 2,04 % (moyenne de mai) : 4 060 × 0,0204 = **82,8 $** ; la hausse du rendement réel de **60 points de base** augmente donc ce « loyer » d'environ **24,4 $** par once et par an (hypothèse de calcul : même prix de référence).
+
+**[Interprétation]** L'argument est **comparatif** : il ne dit pas que l'or « vaut » 107 $ de moins. Les coûts de stockage, de frais d'ETF ou d'assurance, non lus ici, s'ajoutent. Le taux réel de **court** terme et celui de **long** terme ne mesurent pas la même chose ; la littérature utilise souvent le 10 ans, mais ce choix est une convention.
+
+### 4.3 Taux réels américains et prix de l'or : ce que disent les données lues
+
+**[Fait]** (S-FRD-01, FRED, série FII10 « Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis, Inflation-Indexed », mensuelle, source : Conseil des gouverneurs de la Réserve fédérale, publication H.15, mise à jour du **1er octobre 2026**, résumé automatique) :
+
+| Mois 2026 | Rendement réel 10 ans (%) |
+|---|---|
+| Mai | 2,04 |
+| Juin | 2,18 |
+| Juillet | 2,35 |
+| Août | 2,40 |
+| Septembre | 2,64 |
+
+Cette série mensuelle est la **seule** donnée primaire de rendement réel lue. La série quotidienne DFII10 a été ouverte, mais le tableau lu était tronqué (il s'arrêtait en 2009) : **aucune valeur quotidienne n'a été vérifiée**. La page annonce une prochaine publication le 30 octobre 2026 : octobre n'est donc pas disponible.
+
+**[Fait]** Prix de l'or (secondaires) : 4 540,53 $ le 29 mai 2026 (S-MTL-01), environ 4 050 $ fin juin (S-MTL-01), 4 060 $ le 28 octobre 2026 (S-ISA-01), record de 5 595 $ le 29 janvier 2026 (S-MTL-01, contradictoire avec 5 589 $ dans S-MTL-02, voir L5.01).
+
+**[Calcul de l'auteur]** Rendement réel : 2,64 − 2,04 = **+0,60 point** (60 pb) de mai à septembre (moyennes mensuelles). Or : 4 060 ÷ 4 540,53 − 1 = **−10,6 %** entre le 29 mai et le 28 octobre (points, non moyennes) ; 4 540,53 ÷ 5 595 − 1 = **−18,8 %** du record à fin mai.
+
+**[Interprétation]** Dans cette fenêtre, la **direction** est cohérente avec la relation inverse (rendement réel en hausse, or plus bas). **Ce que cette observation ne permet pas** : (1) parler de corrélation, avec deux prix seulement et des moyennes mensuelles comparées à des points journaliers ; (2) isoler les taux réels d'un dollar plus fort et d'un resserrement monétaire concomitants (S-ISA-01 les associe, sans les distinguer) ; (3) estimer une sensibilité (−10,6 % pour 60 pb n'est pas un « −0,18 % par point de base ») ; (4) conclure sur janvier 2026 : **aucune valeur de rendement réel de janvier n'a été lue**, donc le comportement autour du record reste non testé.
+
+### 4.4 Le rendement réel des obligations du Trésor : les TIPS
+
+**[Fait]** (S-TIP-01, NerdWallet, mise à jour le 9 avril 2026, secondaire ; la page TreasuryDirect, bloquée par ses règles d'accès, n'a pas été lue) : le principal d'un TIPS suit l'indice des prix à la consommation ; le coupon est **fixe** mais s'applique au principal **ajusté** ; les intérêts sont versés deux fois par an (la moitié du coupon fois le principal ajusté) ; échéances de 5, 10 et 30 ans ; à l'échéance, l'investisseur reçoit le plus élevé du principal ajusté et du principal d'origine ; principal ajusté = ratio d'indice × principal d'origine.
+
+**[Définition]** Le **rendement réel** d'un TIPS est le rendement de marché au-dessus de l'inflation mesurée par l'indice. Ses déterminants sont le prix du titre et le coupon, pas l'inflation passée. Il peut donc être **négatif** : l'investisseur accepte alors une perte réelle contre la garantie d'indexation.
+
+**[Calcul de l'auteur]** Exemple (S-TWT-01) : coupon 2,375 % sur 1 000 $ de principal d'origine ; si le ratio d'indice est 1,10, le principal ajusté vaut **1 100 $**, l'intérêt semestriel est 0,5 × 2,375 % × 1 100 = **13,06 $** (contre 11,88 $ sans ajustement) ; en cas de déflation cumulée (ratio 0,95), le remboursement à l'échéance est le plus élevé de 950 $ et de 1 000 $, soit **1 000 $**.
+
+**[Interprétation]** La protection de l'échéance est asymétrique : elle protège le capital d'origine, non le niveau de l'indice entre-temps. Le rendement réel de marché est un **prix**, soumis aux flux d'offre et de demande de TIPS (adjudications, ratio de couverture), non un simple calcul comptable.
+
+### 4.5 Anticipations du marché et décisions de la Fed
+
+**[Définition]** Distinguer : (1) le **taux directeur actuel**, connu ; (2) la **trajectoire anticipée**, déduite des prix (futures, contrats de taux, rendements) ; (3) la **réaction à l'annonce**, qui dépend de l'écart entre annonce et anticipation (L3, L4.06).
+
+**[Fait]** (S-TWT-01) : le FOMC a relevé ses taux le **16 septembre 2026** ; le rendement réel de l'adjudication du 17 septembre est de 2,653 %, soit **+22 pb** par rapport à celle du 23 juillet (2,438 %) et **+75 pb** par rapport à celle du 19 mars (1,896 %). (S-ISA-01, 28/10/2026) : mention d'une probabilité de hausse en décembre supérieure à 80 % selon CME FedWatch, source secondaire non recoupée.
+
+**[Calcul de l'auteur]** 2,653 − 2,438 = **0,215** point ; 2,653 − 1,896 = **0,757** point ; ordre de grandeur cohérent avec les +22 et +75 pb publiés (arrondis).
+
+**[Interprétation]** Un rendement réel qui monte avant une décision reflète **déjà** les anticipations. Ce n'est pas la hausse annoncée qui compte pour le rendement réel et l'or, mais son écart avec ce qui était attendu. **Ce qu'on ne peut pas conclure** : l'effet isolé de la décision du 16 septembre, faute de cotations intrajournalières et de consensus d'avant-réunion lus.
+
+### 4.6 Quand l'or monte malgré des taux réels élevés
+
+**[Fait]** (S-TOT-01, Totality, 28 octobre 2025, secondaire, résumé automatique) : historiquement, l'or et les rendements réels évoluent en sens inverse, mais ce lien s'est **affaibli depuis 2022** ; l'or a monté depuis mi-2023 alors que le rendement réel du 10 ans est resté souvent supérieur à 2 % (2,05 % en octobre 2025, avec un record de 4 010 $ à l'époque) ; facteurs cités : risques géopolitiques et incertitude budgétaire, diversification hors des références de rendement, achats des banques centrales (environ 290 t au deuxième trimestre 2025, plus de 1 000 t sur 12 mois), flux d'ETF (3 838 t d'encours fin T3 2025, record mensuel de +146 t en septembre), demande physique en Asie et en Australie, positions spéculatives (environ 250 000 contrats nets longs en septembre 2025). L'article souligne que ces scénarios sont **hypothétiques**.
+
+**[Fait]** (S-WGC-05 et S-WGC-07, déjà lus en L5.02) : banques centrales et autres institutions : **863,3 t en 2025** ; au T2 2026, **288,9 t** (56,5 t au T1) ; ETF en sortie nette de **44,8 t** au T2 2026.
+
+**[Calcul de l'auteur]** Entre octobre 2025 et septembre 2026, le rendement réel moyen passe de 2,05 (point d'octobre 2025, S-TOT-01) à 2,64 (moyenne de septembre 2026) : +0,59 point. Entre ces deux dates le prix passe de 4 010 à 4 060 (+1,2 %) **en passant par 5 595**, ce qui interdit toute lecture linéaire. (Comparaison indicative : un point d'octobre 2025 de source secondaire et une moyenne mensuelle ne sont pas de même nature.)
+
+**[Interprétation]** Quatre explications candidates (non testées ici, non exclusives) :
+1. **Demande officielle** insensible au rendement (réserves, diversification) ;
+2. **Dollar** : un dollar plus faible tend à aider l'or, un plus fort à le pénaliser (L5.04) ;
+3. **Flux d'investissement** (ETF, barres) qui suivent le prix (momentum) ;
+4. **Risques** géopolitiques et budgétaires qui augmentent la demande de refuge.
+Une **rupture de relation** n'est pas une erreur du mécanisme : le mécanisme est le coût d'opportunité ; la rupture signale que **d'autres forces dominent** sur une période. **Ce qu'on ne peut pas conclure** : le poids relatif de chaque explication ; la date de fin de la rupture.
+
+### 4.7 Application au trading de XAU/USD : un scénario conditionnel
+
+**[Définition]** Un **scénario conditionnel** est une description « si A et B, alors C plus probable », avec **invalidation** explicite. Ce n'est ni un signal ni une prévision.
+
+**[SIMULATION]** (chiffres fictifs, rédigés après coup) : le lundi, XAU/USD cote 4 000 $, le rendement réel à 10 ans 2,50 %. Trois scénarios sur la semaine :
+
+| Scénario | Condition | Effet attendu sur l'or | Probabilité (fictive) | Invalidation |
+|---|---|---|---|---|
+| A | Rendement réel +20 pb, dollar plus fort, flux d'ETF en sortie | 3 940 $ (−1,5 %) | 40 % | Rendement réel monte mais achats officiels annoncés |
+| B | Rendement réel stable, dollar stable | 4 000 $ (0 %) | 35 % | Sortie de la fourchette ±1 % |
+| C | Rendement réel +20 pb mais dollar en baisse et crise | 4 060 $ (+1,5 %) | 25 % | Dollar remonte nettement |
+
+**[Calcul de l'auteur]** Espérance fictive : 0,4 × (−1,5) + 0,35 × 0 + 0,25 × 1,5 = **−0,225 %**, soit **≈ −9 $**. Cet écart est **inférieur au bruit** d'une semaine ; la valeur du cadre est ailleurs : il force à **nommer les conditions et l'invalidation** avant d'agir.
+
+**[Interprétation]** Règles de méthode : (1) toujours croiser le rendement réel avec le **dollar**, les **flux** et le **calendrier** (L3, L4.06) ; (2) définir la **taille** par la gestion du risque (module 11), non par la conviction ; (3) accepter qu'aucun des trois scénarios ne se réalise ; (4) consigner la prévision pour la comparer au résultat (cf. Brier, L4.12).
+
+### 4.8 Étude de cas et évaluation : deux sous-périodes fictives
+
+**[SIMULATION]** Variations mensuelles du rendement réel (en pb) : +10, +20, −5, +15, −10, +25 (identiques dans les deux périodes). Variations de l'or (%) : **période 1** : −1,5 ; −3,0 ; +0,5 ; −2,0 ; +1,0 ; −3,5 ; **période 2** : +1,5 ; +2,5 ; +0,5 ; +2,0 ; −0,5 ; +3,0.
+
+**[Calcul de l'auteur]** Corrélation de Pearson : période 1 = **−0,998** ; période 2 = **+0,991** ; sur les 12 observations réunies = **−0,118**.
+
+**[Interprétation]** Une corrélation globale proche de zéro peut masquer **deux régimes** de sens opposé ; une corrélation très forte sur six points ne prouve ni causalité ni stabilité. Pour tester la relation réelle, il faudrait des séries longues, des **variations** (non des niveaux), plusieurs sous-périodes, et un contrôle du dollar, des flux et de l'inflation, ce que cette leçon **ne fait pas** (données quotidiennes non lues).
+
+**Évaluation de fin de leçon** : voir 10 (exercices 4 à 6) et le quiz.
+
+## 5. Définitions essentielles
+
+- **Taux réel** : rendement corrigé de l'inflation (Fisher).
+- **Point mort (*breakeven*)** : nominal − réel à même échéance ; mesure de marché de l'inflation anticipée, imparfaite.
+- **TIPS** : obligations du Trésor américain dont le principal suit l'inflation (CPI).
+- **Coût d'opportunité** : revenu auquel on renonce en détenant un actif sans revenu courant.
+- **Corrélation** : mesure d'association linéaire entre deux séries ; ne prouve pas la causalité.
+- **Rupture de relation** : changement de signe ou de force sur une sous-période.
+- **Scénario conditionnel** : description « si… alors… » avec invalidation.
+
+## 6. Exemples chiffrés
+
+**6.1 Fisher.** Nominal 4,95 %, réel 2,653 % : inflation implicite 2,238 % (exact) contre 2,297 % (soustraction).
+**6.2 Coût d'opportunité.** 4 060 × 2,64 % = 107,2 $ par an.
+**6.3 TIPS.** Principal 1 000 $, ratio 1,10 : 1 100 $ ; intérêt semestriel 13,06 $ à 2,375 %.
+**6.4 Direction.** Réel +0,60 pt (mai→sept., moyennes) ; or −10,6 % (29/05→28/10, points).
+
+### 6.5 Cas historique documenté — 2026 : rendement réel en hausse, or en baisse depuis le record (avec réserves)
+
+**[Fait]** (S-FRD-01, S-MTL-01, S-ISA-01, S-TWT-01) : voir 4.3 et 4.5.
+
+**[Calcul de l'auteur]** Rendement réel : 2,04 → 2,18 → 2,35 → 2,40 → 2,64 (mai à septembre) ; or : 5 595 (29/01) → 4 540,53 (29/05) → ≈ 4 050 (fin juin) → 4 060 (28/10) ; baisse du record : −18,8 % à fin mai, −27,4 % au 28 octobre.
+
+**[Interprétation]** La **direction** est celle du mécanisme (taux réels en hausse, or sous son record). Mais aucune valeur de rendement réel de janvier 2026 (moment du record) n'a été lue ; entre fin juin et fin octobre l'or est quasi stable (≈ 4 050 → 4 060) alors que le rendement réel monte encore ; et l'épisode d'octobre 2025 montre un or record avec un rendement réel élevé. **Ce qu'on ne peut pas conclure** : une causalité, ni une sensibilité, ni la part du dollar et des flux. **Limites** : moyennes mensuelles contre points quotidiens ; résumés automatiques ; sources de prix secondaires ; série quotidienne non lue.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **XAU/USD** : le rendement réel est un **filtre de contexte**, pas un déclencheur ; le lire avec le dollar (L5.04) et les flux (L5.06, L5.07).
+- **Forex** : le même taux réel américain nourrit le dollar (L4.03) ; or et dollar partagent donc un facteur commun, ce qui complique l'attribution.
+- **Calendrier** : décisions du FOMC, CPI, adjudications de TIPS ; toujours comparer à l'anticipation, pas au niveau.
+- **Ruptures** : surveiller si le sens de la relation sur 3 à 6 mois s'inverse ; ne pas supposer la stabilité.
+- **Prudence** : un scénario sert à se préparer, pas à garantir un gain.
+
+## 8. Erreurs courantes
+
+1. Appeler « loi » une corrélation observée.
+2. Comparer des niveaux au lieu de variations.
+3. Confondre point mort et inflation future certaine.
+4. Ignorer le dollar et les flux.
+5. Mélanger moyenne mensuelle et prix du jour.
+6. Lire une hausse de la Fed comme un signal vendeur automatique.
+7. Dire que « l'or ne suit plus les taux réels » sans préciser la période.
+
+## 9. Limites de l'interprétation
+
+- Série FRED lue en moyennes mensuelles par résumé automatique ; série quotidienne tronquée, non vérifiée.
+- Mécanique des TIPS par source secondaire ; page du Trésor non lue.
+- Prix de l'or secondaires ; aucune série de prix longue ni calcul de corrélation réelle.
+- Le lien avec l'or n'est montré que par des repères isolés ; pas d'étude statistique.
+- L'article de Totality (octobre 2025) est un point de vue d'un cabinet, non une démonstration.
+- Les scénarios chiffrés de 4.7 et 4.8 sont fictifs.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Fisher.** Nominal 4,95 %, réel 2,653 %. Calcule l'inflation anticipée exacte et par soustraction.
+
+<details>
+<summary>Correction 1</summary>
+
+Exact : 1,0495 ÷ 1,02653 − 1 = **2,238 %** ; par soustraction : 4,95 − 2,653 = **2,297 %**. L'approximation surestime d'environ **6 pb**. Dans les deux cas, il s'agit d'une inflation **implicite de marché** (avec primes), non d'une prévision.
+</details>
+
+**Exercice 2 — Coût d'opportunité.** Prix 4 060 $ ; rendement réel 2,64 % puis 2,04 %. Revenu réel renoncé par once et différence.
+
+<details>
+<summary>Correction 2</summary>
+
+4 060 × 0,0264 = **107,2 $** ; 4 060 × 0,0204 = **82,8 $** ; différence **24,4 $** par once et par an.
+</details>
+
+**Exercice 3 — TIPS.** Principal 1 000 $, coupon 2,375 %, ratio d'indice 1,10. Principal ajusté et intérêt semestriel ? Et si le ratio est 0,95 à l'échéance ?
+
+<details>
+<summary>Correction 3</summary>
+
+1 000 × 1,10 = **1 100 $** ; intérêt 0,5 × 0,02375 × 1 100 = **13,06 $**. Avec 0,95 : principal ajusté 950 $ ; remboursement = max(950 ; 1 000) = **1 000 $**.
+</details>
+
+**Exercice 4 — Direction.** Rendement réel 2,04 → 2,64 ; or 4 540,53 → 4 060. Variations ? Quelle conclusion est permise ?
+
+<details>
+<summary>Correction 4</summary>
+
+Réel : **+0,60 pt** ; or : 4 060 ÷ 4 540,53 − 1 = **−10,6 %**. Permis : « direction cohérente avec la relation inverse sur cette fenêtre ». Non permis : corrélation (deux points), causalité, sensibilité (−0,18 % par pb), car moyennes mensuelles et points journaliers diffèrent et le dollar n'est pas contrôlé.
+</details>
+
+**Exercice 5 — Régimes.** Sur la simulation 4.8, que montre une corrélation globale de −0,118 alors que les sous-périodes valent −0,998 et +0,991 ?
+
+<details>
+<summary>Correction 5</summary>
+
+Elle montre que deux **régimes** opposés peuvent se compenser dans une statistique globale. Une corrélation faible ne signifie pas « pas de relation » ; une corrélation forte sur six points ne prouve pas la causalité. Il faut des sous-périodes et des contrôles.
+</details>
+
+**Exercice 6 — Scénarios.** Reprends le tableau 4.7 avec des probabilités 30 %, 40 %, 30 % (A, B, C). Espérance ? Que concluez-vous ?
+
+<details>
+<summary>Correction 6</summary>
+
+0,30 × (−1,5) + 0,40 × 0 + 0,30 × 1,5 = **0 %**. Conclusion : sous ces probabilités le cadre est neutre ; l'intérêt est de **nommer les conditions et l'invalidation**, pas de produire un signal. Les probabilités sont fictives (SIMULATION).
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L5.03.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Taux réel = rendement corrigé de l'inflation ; le point mort (nominal − réel) approxime l'inflation anticipée.
+- Mécanisme : coût d'opportunité d'un actif sans revenu ; relation inverse **souvent** observée, mais affaiblie depuis 2022 selon une source secondaire.
+- Données lues : rendement réel mensuel 2,04 → 2,64 % (mai à septembre 2026) ; or 4 540,53 → 4 060 $ ; direction cohérente, mais pas de corrélation ni de causalité établie.
+- L'or peut monter malgré des taux réels élevés : banques centrales, ETF, risques, dollar.
+- Scénario conditionnel : conditions, invalidation, taille par le risque, croisement avec le dollar et les flux.
+
+## 13. Critères de maîtrise
+
+- [ ] Répondre aux trois questions de la leçon avec nuances (section 1).
+- [ ] Calculer un coût d'opportunité (Exercice 2) et un TIPS (Exercice 3).
+- [ ] Lire une direction sans conclure à la corrélation ni à la causalité (Exercice 4).
+- [ ] Expliquer un changement de régime (Exercice 5).
+- [ ] Construire un scénario avec invalidation (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-FRD-01** — FRED (Réserve fédérale de Saint-Louis), série FII10, rendement réel du 10 ans, mensuelle : https://fred.stlouisfed.org/series/FII10 (série quotidienne DFII10 : https://fred.stlouisfed.org/data/DFII10, tableau tronqué, non vérifiée).
+- **S-TIP-01** — NerdWallet (secondaire), « Treasury Inflation-Protected Securities: What are TIPS? » : https://www.nerdwallet.com/investing/learn/treasury-inflation-protected-securities-tips
+- **S-TOT-01** — Totality (secondaire), « Gold's tug of war with real yields » (28/10/2025) : https://www.totality.com.au/content/golds-tug-of-war-with-real-yields
+- **S-TWT-01** — TIPSwatch (secondaire), adjudication du 17/09/2026 (déjà lu en L4.03).
+- **S-MTL-01**, **S-ISA-01** — prix de l'or (secondaires, déjà lus en L5.01).
+- **S-WGC-05**, **S-WGC-07** — World Gold Council et reprise de presse (déjà lus en L5.02).
+
+**Définitions de cours non rattachées à une source lue :** coût d'opportunité appliqué à l'or, scénario conditionnel, régimes. **Points non vérifiés :** série quotidienne du rendement réel, rendement réel de janvier 2026, page du Trésor sur les TIPS, étude statistique de la relation or / taux réels, prix de l'or de septembre 2026.

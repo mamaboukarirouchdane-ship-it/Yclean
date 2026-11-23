@@ -1,0 +1,233 @@
+{
+  "lessonId": "L3.02",
+  "title": "Quiz — Consensus, surprise et bruit",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : FactSet (secondaire), BLS, Fed (FEDS 2007-12), First Trust (secondaire).",
+  "questions": [
+    {
+      "id": "L3.02-Q1",
+      "type": "mcq",
+      "prompt": "Comment se calcule la surprise d'une publication ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Valeur publiée divisée par le PIB"
+        },
+        {
+          "id": "b",
+          "text": "Consensus moins valeur de l'an dernier"
+        },
+        {
+          "id": "c",
+          "text": "Valeur publiée moins consensus"
+        },
+        {
+          "id": "d",
+          "text": "Valeur révisée moins valeur préliminaire"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La surprise est l'écart entre le chiffre publié et le consensus recueilli avant la publication, dans l'unité de l'indicateur.",
+      "tags": [
+        "surprise"
+      ]
+    },
+    {
+      "id": "L3.02-Q2",
+      "type": "mcq",
+      "prompt": "Consensus +90 000 ; publié +29 000. Quelle est la surprise ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−61 000"
+        },
+        {
+          "id": "b",
+          "text": "+61 000"
+        },
+        {
+          "id": "c",
+          "text": "−119 000"
+        },
+        {
+          "id": "d",
+          "text": "−29 000"
+        }
+      ],
+      "correct": "a",
+      "explanation": "29 000 − 90 000 = −61 000 ; le chiffre est aussi 31 000 sous la plus basse prévision (60 000).",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.02-Q3",
+      "type": "mcq",
+      "prompt": "Les prévisions allaient de 60 000 à 130 000. Que vaut la surprise de −61 000 rapportée à cet écart ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Exactement 1 fois"
+        },
+        {
+          "id": "b",
+          "text": "Environ 2 fois"
+        },
+        {
+          "id": "c",
+          "text": "Environ 0,1 fois"
+        },
+        {
+          "id": "d",
+          "text": "Environ 0,87 fois l'écart entre extrêmes"
+        }
+      ],
+      "correct": "d",
+      "explanation": "61 ÷ 70 = 0,87 : la surprise est presque aussi large que toute la dispersion des prévisions.",
+      "tags": [
+        "dispersion"
+      ]
+    },
+    {
+      "id": "L3.02-Q4",
+      "type": "mcq",
+      "prompt": "Quel est le total des révisions de juillet et août 2026 selon le BLS ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+60 000"
+        },
+        {
+          "id": "b",
+          "text": "−60 000"
+        },
+        {
+          "id": "c",
+          "text": "−31 000"
+        },
+        {
+          "id": "d",
+          "text": "0"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Juillet de +21 000 à −10 000 (−31 000) et août de +162 000 à +133 000 (−29 000) donnent −60 000.",
+      "tags": [
+        "revision"
+      ]
+    },
+    {
+      "id": "L3.02-Q5",
+      "type": "mcq",
+      "prompt": "Que montre l'étude de Campbell et Sharpe (2007) sur les rendements obligataires ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ils anticipent le chiffre exact"
+        },
+        {
+          "id": "b",
+          "text": "Ils ne réagissent jamais"
+        },
+        {
+          "id": "c",
+          "text": "Ils réagissent à la surprise brute uniquement"
+        },
+        {
+          "id": "d",
+          "text": "Ils réagissent à la partie imprévisible de la surprise, car le marché anticipe le biais d'ancrage"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Les prévisions sont tirées vers les valeurs passées ; le marché semble en tenir compte et réagit à la part imprévisible.",
+      "tags": [
+        "ancrage"
+      ]
+    },
+    {
+      "id": "L3.02-Q6",
+      "type": "mcq",
+      "prompt": "Que signifie le biais d'ancrage ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le consensus est fixé par l'agence"
+        },
+        {
+          "id": "b",
+          "text": "Les prévisions sont toujours exactes"
+        },
+        {
+          "id": "c",
+          "text": "Les prévisions sont tirées vers des valeurs passées"
+        },
+        {
+          "id": "d",
+          "text": "La surprise est toujours nulle"
+        }
+      ],
+      "correct": "c",
+      "explanation": "L'étude estime qu'environ 30 % du poids des prévisions porte sur les valeurs passées en moyenne.",
+      "tags": [
+        "ancrage"
+      ]
+    },
+    {
+      "id": "L3.02-Q7",
+      "type": "mcq",
+      "prompt": "Pourquoi la surprise arrondie du chômage (+0,1 point) peut-elle exagérer ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que la variation non arrondie n'est que de 0,034 point"
+        },
+        {
+          "id": "b",
+          "text": "Parce que le chômage ne s'arrondit jamais"
+        },
+        {
+          "id": "c",
+          "text": "Parce que le BLS ne publie pas le chômage"
+        },
+        {
+          "id": "d",
+          "text": "Parce qu'elle vaut 1 point"
+        }
+      ],
+      "correct": "a",
+      "explanation": "4,175 − 4,141 = 0,034 point : l'arrondi à une décimale grossit l'écart.",
+      "tags": [
+        "arrondi"
+      ]
+    },
+    {
+      "id": "L3.02-Q8",
+      "type": "mcq",
+      "prompt": "Quelle règle prudente suivre avant de conclure à un changement de tendance ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Se fier à la seule surprise du mois"
+        },
+        {
+          "id": "b",
+          "text": "Regarder la moyenne sur plusieurs mois, les révisions et la cohérence avec d'autres indicateurs"
+        },
+        {
+          "id": "c",
+          "text": "Ignorer les révisions"
+        },
+        {
+          "id": "d",
+          "text": "Attendre le consensus du mois suivant"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Une surprise isolée peut être du bruit ; la moyenne, les révisions et la cohérence sont des garde-fous.",
+      "tags": [
+        "methode"
+      ]
+    }
+  ],
+  "revision": 1
+}

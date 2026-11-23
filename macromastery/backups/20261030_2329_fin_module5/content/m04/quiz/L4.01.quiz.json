@@ -1,0 +1,233 @@
+{
+  "lessonId": "L4.01",
+  "title": "Quiz — Parité des taux d'intérêt",
+  "passThreshold": 0.8,
+  "note": "Quiz de la leçon L4.01",
+  "questions": [
+    {
+      "id": "L4.01-Q1",
+      "type": "mcq",
+      "prompt": "Que dit la parité couverte des taux d'intérêt ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les taux sont toujours égaux"
+        },
+        {
+          "id": "b",
+          "text": "Le cours futur est égal au cours à terme"
+        },
+        {
+          "id": "c",
+          "text": "Les différentiels de taux sont compensés par l'écart entre cours à terme et cours au comptant, sinon il y aurait un arbitrage sans risque"
+        },
+        {
+          "id": "d",
+          "text": "Le change ne dépend pas des taux"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La BRI la décrit comme presque une loi physique : sans risque de change, un écart de taux non compensé permettrait un gain sans risque.",
+      "tags": [
+        "cip"
+      ]
+    },
+    {
+      "id": "L4.01-Q2",
+      "type": "mcq",
+      "prompt": "S = 1,1130 ; facteur dollar 1,00975 ; facteur euro 1,00625. Quel est le cours à terme à trois mois ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ 1,11687"
+        },
+        {
+          "id": "b",
+          "text": "Environ 1,1130"
+        },
+        {
+          "id": "c",
+          "text": "Environ 1,1240"
+        },
+        {
+          "id": "d",
+          "text": "Environ 1,1000"
+        }
+      ],
+      "correct": "a",
+      "explanation": "F = 1,1130 × 1,00975 ÷ 1,00625 = 1,11687 ; l'euro, à taux plus bas, se négocie avec une prime à terme.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.01-Q3",
+      "type": "mcq",
+      "prompt": "Pourquoi l'euro a-t-il une prime à terme contre le dollar quand ses taux sont plus bas ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que le dollar est interdit"
+        },
+        {
+          "id": "b",
+          "text": "Parce que l'euro est plus risqué"
+        },
+        {
+          "id": "c",
+          "text": "Parce que la BCE le décide"
+        },
+        {
+          "id": "d",
+          "text": "Pour compenser le gain de taux du dollar : l'euro se reconvertit plus cher à terme"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La prime à terme égalise le rendement couvert des deux placements : la différence de taux se retrouve dans les points de terme.",
+      "tags": [
+        "prime"
+      ]
+    },
+    {
+      "id": "L4.01-Q4",
+      "type": "mcq",
+      "prompt": "Selon la BRI, que signifie un basis de change négatif ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les dollars sont moins chers par swap"
+        },
+        {
+          "id": "b",
+          "text": "Emprunter des dollars par swap de change coûte plus que les emprunter directement"
+        },
+        {
+          "id": "c",
+          "text": "Les taux sont négatifs"
+        },
+        {
+          "id": "d",
+          "text": "La parité couverte est parfaite"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Un basis négatif est observé depuis 2007 pour la plupart des devises, dont l'euro et le yen ; il indique une violation de la parité couverte.",
+      "tags": [
+        "basis"
+      ]
+    },
+    {
+      "id": "L4.01-Q5",
+      "type": "mcq",
+      "prompt": "Quelles causes la BRI avance-t-elle pour la persistance du basis ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'or"
+        },
+        {
+          "id": "b",
+          "text": "Une erreur de mesure"
+        },
+        {
+          "id": "c",
+          "text": "Des taux nuls"
+        },
+        {
+          "id": "d",
+          "text": "Une demande de couverture déséquilibrée et des limites de l'arbitrage"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Hedging demand importante et limites de l'arbitrage (bilans, régulation) expliquent que les écarts ne se referment pas.",
+      "tags": [
+        "basis"
+      ]
+    },
+    {
+      "id": "L4.01-Q6",
+      "type": "mcq",
+      "prompt": "Que vaut le coefficient β dans le test de Fama sous parité non couverte et anticipations rationnelles ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−1"
+        },
+        {
+          "id": "b",
+          "text": "0"
+        },
+        {
+          "id": "c",
+          "text": "1"
+        },
+        {
+          "id": "d",
+          "text": "2"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La régression de la variation du cours sur le différentiel de taux donne β = 1 sous UIP ; Fama trouve un β négatif.",
+      "tags": [
+        "fama"
+      ]
+    },
+    {
+      "id": "L4.01-Q7",
+      "type": "mcq",
+      "prompt": "Quel coefficient l'article de Chinn et autres donne-t-il pour l'euro sur 1999–2021 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ −1,019, rejetant β = 1"
+        },
+        {
+          "id": "b",
+          "text": "Environ +1,0"
+        },
+        {
+          "id": "c",
+          "text": "Environ 0"
+        },
+        {
+          "id": "d",
+          "text": "Environ +5"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le coefficient est négatif et le test rejette l'égalité à 1 au seuil de 1 % ; cela concerne cet échantillon, pas l'avenir.",
+      "tags": [
+        "fama"
+      ]
+    },
+    {
+      "id": "L4.01-Q8",
+      "type": "mcq",
+      "prompt": "Pourquoi une prime à terme n'est-elle pas une prévision du change ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce qu'elle est toujours nulle"
+        },
+        {
+          "id": "b",
+          "text": "Elle reflète le différentiel de taux et le basis, non un cours futur anticipé de façon fiable"
+        },
+        {
+          "id": "c",
+          "text": "Parce qu'elle est fixée par le Trésor"
+        },
+        {
+          "id": "d",
+          "text": "Parce qu'elle ne dépend pas des taux"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La parité non couverte est en moyenne rejetée : le cours à terme n'est pas un bon prédicteur sans biais du cours futur.",
+      "tags": [
+        "prudence"
+      ]
+    }
+  ],
+  "revision": 1
+}

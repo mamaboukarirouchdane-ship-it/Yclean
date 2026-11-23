@@ -1,0 +1,234 @@
+{
+  "lessonId": "L1.08",
+  "title": "Quiz — Courbe de Phillips et limites",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : Fed de San Francisco (2019), Federal Reserve History, données 2026 déjà sourcées.",
+  "questions": [
+    {
+      "id": "L1.08-Q1",
+      "type": "mcq",
+      "prompt": "Dans π = πᵉ − β (u − u*) + ε, que représente u − u* ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'inflation anticipée"
+        },
+        {
+          "id": "b",
+          "text": "Le salaire réel"
+        },
+        {
+          "id": "c",
+          "text": "L'écart entre le chômage courant et le taux non cyclique (naturel)"
+        },
+        {
+          "id": "d",
+          "text": "La pente"
+        }
+      ],
+      "correct": "c",
+      "explanation": "u − u* est l'écart de chômage : négatif quand le chômage est inférieur au taux de référence (marché tendu), positif quand il est supérieur.",
+      "tags": [
+        "formule"
+      ]
+    },
+    {
+      "id": "L1.08-Q2",
+      "type": "mcq",
+      "prompt": "πᵉ = 2,0 %, u* = 4,2 %, u = 3,2 %, β = 0,15. Quelle inflation donne la formule ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2,15 %"
+        },
+        {
+          "id": "b",
+          "text": "1,85 %"
+        },
+        {
+          "id": "c",
+          "text": "2,50 %"
+        },
+        {
+          "id": "d",
+          "text": "3,20 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "π = 2,0 − 0,15 × (3,2 − 4,2) = 2,0 + 0,15 = 2,15 %.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L1.08-Q3",
+      "type": "mcq",
+      "prompt": "Selon la Lettre 2019-05 de la Fed de San Francisco (résumé), la pente de la courbe de Phillips est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Très élevée après 2008"
+        },
+        {
+          "id": "b",
+          "text": "Négative"
+        },
+        {
+          "id": "c",
+          "text": "Toujours égale à 1"
+        },
+        {
+          "id": "d",
+          "text": "Proche de zéro avant et après la Grande Récession ; 0,15 sur 1975–1996"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La lettre conclut à un aplatissement : un lien quasi disparu entre marge de capacité et inflation ; 0,15 est la valeur de comparaison de 1975–1996.",
+      "tags": [
+        "sf-fed"
+      ]
+    },
+    {
+      "id": "L1.08-Q4",
+      "type": "mcq",
+      "prompt": "Selon la même lettre, quelle variable serait devenue le déterminant dominant de l'inflation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le prix du café"
+        },
+        {
+          "id": "b",
+          "text": "Les anticipations d'inflation"
+        },
+        {
+          "id": "c",
+          "text": "Le taux de change"
+        },
+        {
+          "id": "d",
+          "text": "Le nombre d'heures travaillées"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Les anticipations seraient devenues le déterminant dominant ; leur contribution aurait presque doublé depuis la Grande Récession.",
+      "tags": [
+        "anticipations"
+      ]
+    },
+    {
+      "id": "L1.08-Q5",
+      "type": "mcq",
+      "prompt": "Une hausse imprévue de 1 point de l'inflation augmente l'inflation du trimestre suivant de 0,45 point aujourd'hui contre 0,71 avant 2007. Que cela signifie-t-il ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La pente a augmenté"
+        },
+        {
+          "id": "b",
+          "text": "L'inflation est devenue plus persistante"
+        },
+        {
+          "id": "c",
+          "text": "L'inflation ne bouge plus"
+        },
+        {
+          "id": "d",
+          "text": "L'inflation est devenue moins persistante dans cette étude"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Un coefficient de 0,45 contre 0,71 indique une persistance plus faible. Résultat propre à ce modèle et à cette période.",
+      "tags": [
+        "persistance"
+      ]
+    },
+    {
+      "id": "L1.08-Q6",
+      "type": "mcq",
+      "prompt": "Pourquoi ne faut-il pas appliquer les coefficients de 2019 à l'inflation de 2026 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que l'inflation de 2026 est inconnue"
+        },
+        {
+          "id": "b",
+          "text": "Parce que la Fed interdit de le faire"
+        },
+        {
+          "id": "c",
+          "text": "Parce que la relation est instable, estimée sur d'autres périodes avec des incertitudes et un taux naturel non observé"
+        },
+        {
+          "id": "d",
+          "text": "Parce que le chômage n'existe plus"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La lettre date de 2019, porte sur un modèle précis et signale elle-même que les estimations sont incertaines et que la courbe change dans le temps.",
+      "tags": [
+        "limites"
+      ]
+    },
+    {
+      "id": "L1.08-Q7",
+      "type": "mcq",
+      "prompt": "Chômage de septembre 2026 : 4,2 % ; taux non cyclique de la CBO : 4,2 %. Quel est l'écart de chômage au sens de la leçon ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0"
+        },
+        {
+          "id": "b",
+          "text": "+4,2 point"
+        },
+        {
+          "id": "c",
+          "text": "−4,2 point"
+        },
+        {
+          "id": "d",
+          "text": "+1 point"
+        }
+      ],
+      "correct": "a",
+      "explanation": "4,2 − 4,2 = 0 : pas de tension particulière signalée par le modèle de base. C'est une hypothèse d'analyse, le taux non cyclique étant estimé.",
+      "tags": [
+        "donnees-observees",
+        "2026"
+      ]
+    },
+    {
+      "id": "L1.08-Q8",
+      "type": "mcq",
+      "prompt": "Les années 1970 (Federal Reserve History) montrent que :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le chômage a toujours baissé quand l'inflation montait"
+        },
+        {
+          "id": "b",
+          "text": "Inflation et chômage ont pu monter ensemble, ce qui contredit une relation stable à pente négative"
+        },
+        {
+          "id": "c",
+          "text": "Il n'y a pas eu de chocs d'offre"
+        },
+        {
+          "id": "d",
+          "text": "La courbe de Phillips est une loi physique"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Inflation au-dessus de 12 % et chômage au-dessus de 7 % dix ans après 1964 : la stagflation est un contre-exemple à une relation inverse stable.",
+      "tags": [
+        "stagflation"
+      ]
+    }
+  ],
+  "revision": 1
+}

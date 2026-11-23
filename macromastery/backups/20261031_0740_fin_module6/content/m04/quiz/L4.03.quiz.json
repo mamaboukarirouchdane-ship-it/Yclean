@@ -1,0 +1,233 @@
+{
+  "lessonId": "L4.03",
+  "title": "Quiz — Taux réels",
+  "passThreshold": 0.8,
+  "note": "Quiz de la leçon L4.03",
+  "questions": [
+    {
+      "id": "L4.03-Q1",
+      "type": "mcq",
+      "prompt": "Quelle est la relation de Fisher ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "r = i + π"
+        },
+        {
+          "id": "b",
+          "text": "i = r × π"
+        },
+        {
+          "id": "c",
+          "text": "(1 + i) = (1 + r) × (1 + π)"
+        },
+        {
+          "id": "d",
+          "text": "i = r − π"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le taux nominal composé égale le taux réel composé avec l'inflation ; l'approximation r ≈ i − π en découle pour de petits taux.",
+      "tags": [
+        "fisher"
+      ]
+    },
+    {
+      "id": "L4.03-Q2",
+      "type": "mcq",
+      "prompt": "i = 5,0 % et π = 4,0 % : quel est le taux réel exact ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ 0,96 %"
+        },
+        {
+          "id": "b",
+          "text": "1,00 % exactement"
+        },
+        {
+          "id": "c",
+          "text": "9,0 %"
+        },
+        {
+          "id": "d",
+          "text": "20 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "1,050 ÷ 1,040 − 1 = 0,96 % ; l'approximation 5,0 − 4,0 = 1,0 % surestime légèrement.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.03-Q3",
+      "type": "mcq",
+      "prompt": "Quelle différence entre taux réel ex post et ex ante ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ex ante : toujours négatif"
+        },
+        {
+          "id": "b",
+          "text": "Ex post : TIPS ; ex ante : CPI"
+        },
+        {
+          "id": "c",
+          "text": "Aucune"
+        },
+        {
+          "id": "d",
+          "text": "Ex post : inflation observée ; ex ante : inflation attendue"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le taux réel ex post se calcule avec l'inflation observée, l'ex ante avec l'inflation attendue (TIPS comme mesure de marché).",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L4.03-Q4",
+      "type": "mcq",
+      "prompt": "Nominal 4,96 % et rendement réel TIPS 2,64 % : quel point mort simple ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "7,60 %"
+        },
+        {
+          "id": "b",
+          "text": "2,32 %"
+        },
+        {
+          "id": "c",
+          "text": "1,88 %"
+        },
+        {
+          "id": "d",
+          "text": "0 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "4,96 − 2,64 = 2,32 % ; le point mort exact vaut environ 2,26 %.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.03-Q5",
+      "type": "mcq",
+      "prompt": "Que n'est PAS un point mort d'inflation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un indicateur incluant des primes"
+        },
+        {
+          "id": "b",
+          "text": "Une mesure de marché"
+        },
+        {
+          "id": "c",
+          "text": "Une différence nominal − réel"
+        },
+        {
+          "id": "d",
+          "text": "Une prévision pure de l'inflation"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Il mélange inflation attendue, prime de risque d'inflation et effets de liquidité ; il ne prévoit pas l'inflation.",
+      "tags": [
+        "breakeven"
+      ]
+    },
+    {
+      "id": "L4.03-Q6",
+      "type": "mcq",
+      "prompt": "Le rendement réel du TIPS à 10 ans est passé de 1,896 % (mars) à 2,653 % (septembre). Quelle hausse ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+7,57 points"
+        },
+        {
+          "id": "b",
+          "text": "+0,057 point"
+        },
+        {
+          "id": "c",
+          "text": "+0,757 point"
+        },
+        {
+          "id": "d",
+          "text": "−0,757 point"
+        }
+      ],
+      "correct": "c",
+      "explanation": "2,653 − 1,896 = 0,757 point, soit environ 76 points de base.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.03-Q7",
+      "type": "mcq",
+      "prompt": "Pays A : nominal 5,0 %, inflation 3,0 % ; pays B : nominal 3,5 %, inflation 1,0 %. Quel pays a le taux réel le plus élevé ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "B (2,48 % contre 1,94 %)"
+        },
+        {
+          "id": "b",
+          "text": "A (5,0 %)"
+        },
+        {
+          "id": "c",
+          "text": "Les deux sont égaux"
+        },
+        {
+          "id": "d",
+          "text": "On ne peut pas calculer"
+        }
+      ],
+      "correct": "a",
+      "explanation": "A : 1,050 ÷ 1,030 − 1 = 1,94 % ; B : 1,035 ÷ 1,010 − 1 = 2,48 % : le nominal plus bas n'empêche pas un réel plus élevé.",
+      "tags": [
+        "comparaison"
+      ]
+    },
+    {
+      "id": "L4.03-Q8",
+      "type": "mcq",
+      "prompt": "Pourquoi ne peut-on pas conclure à l'effet du taux réel sur l'or à partir de ce seul cas ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que l'or paie un taux réel"
+        },
+        {
+          "id": "b",
+          "text": "Le rendement réel élevé coexistait avec un or cher ; la relation est une tendance historique, pas une loi"
+        },
+        {
+          "id": "c",
+          "text": "Parce que le taux réel est nul"
+        },
+        {
+          "id": "d",
+          "text": "Parce que l'or est un taux"
+        }
+      ],
+      "correct": "b",
+      "explanation": "L'or cotait autour de 4 162–4 214 dollars début octobre alors que le rendement réel approchait son plus haut depuis 2008 : la relation reste à tester.",
+      "tags": [
+        "or"
+      ]
+    }
+  ],
+  "revision": 1
+}

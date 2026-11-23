@@ -1,0 +1,233 @@
+{
+  "lessonId": "L4.02",
+  "title": "Quiz — Différentiels de taux et attentes",
+  "passThreshold": 0.8,
+  "note": "Quiz de la leçon L4.02",
+  "questions": [
+    {
+      "id": "L4.02-Q1",
+      "type": "mcq",
+      "prompt": "Fed : fourchette 3,75–4,00 % ; BCE : dépôt 2,50 %. Quel est l'écart avec le milieu de la fourchette de la Fed ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,25 point"
+        },
+        {
+          "id": "b",
+          "text": "1,50 point"
+        },
+        {
+          "id": "c",
+          "text": "1,375 point"
+        },
+        {
+          "id": "d",
+          "text": "6,375 points"
+        }
+      ],
+      "correct": "c",
+      "explanation": "3,875 − 2,50 = 1,375 ; avec la borne haute, l'écart est de 1,50 : il faut préciser la convention.",
+      "tags": [
+        "niveau"
+      ]
+    },
+    {
+      "id": "L4.02-Q2",
+      "type": "mcq",
+      "prompt": "Pourquoi un taux directeur et un rendement à 10 ans ne se comparent-ils qu'avec prudence ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le premier est administré au jour le jour, le second intègre anticipations, prime de terme et offre de titres"
+        },
+        {
+          "id": "b",
+          "text": "Parce qu'ils sont identiques"
+        },
+        {
+          "id": "c",
+          "text": "Parce que le 10 ans est interdit"
+        },
+        {
+          "id": "d",
+          "text": "Parce que la BCE ne publie pas de taux"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Deux instruments de nature différente : le taux directeur est une décision, le rendement à 10 ans est un prix de marché.",
+      "tags": [
+        "methode"
+      ]
+    },
+    {
+      "id": "L4.02-Q3",
+      "type": "mcq",
+      "prompt": "Probabilité de hausse de 25 pb : 68,5 %. Quelle espérance de variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,685 point de base"
+        },
+        {
+          "id": "b",
+          "text": "68,5 points de base"
+        },
+        {
+          "id": "c",
+          "text": "25 points de base"
+        },
+        {
+          "id": "d",
+          "text": "Environ 17,1 points de base"
+        }
+      ],
+      "correct": "d",
+      "explanation": "0,685 × 25 = 17,1 pb : espérance de la variation selon les probabilités de marché.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.02-Q4",
+      "type": "mcq",
+      "prompt": "Le marché pricait 85 % d'une hausse de 25 pb ; la banque maintient. Quelle surprise ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+3,75 pb"
+        },
+        {
+          "id": "b",
+          "text": "−21,25 pb"
+        },
+        {
+          "id": "c",
+          "text": "0 pb"
+        },
+        {
+          "id": "d",
+          "text": "−25 pb"
+        }
+      ],
+      "correct": "b",
+      "explanation": "0 − 0,85 × 25 = −21,25 pb : le maintien est nettement moins restrictif que le prix.",
+      "tags": [
+        "surprise"
+      ]
+    },
+    {
+      "id": "L4.02-Q5",
+      "type": "mcq",
+      "prompt": "Fed : milieu 3,875 % + 4 hausses ; BCE : dépôt 2,50 % + 3 hausses de 0,25. Quel différentiel anticipé ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2,0 points"
+        },
+        {
+          "id": "b",
+          "text": "1,375 point"
+        },
+        {
+          "id": "c",
+          "text": "0,25 point"
+        },
+        {
+          "id": "d",
+          "text": "1,625 point"
+        }
+      ],
+      "correct": "d",
+      "explanation": "4,875 − 3,25 = 1,625 ; il dépasse de 0,25 le différentiel actuel de 1,375, sous les hypothèses de marché citées.",
+      "tags": [
+        "trajectoire"
+      ]
+    },
+    {
+      "id": "L4.02-Q6",
+      "type": "mcq",
+      "prompt": "Du 25/09 au 29/10/2026, EUR/USD passe de 1,1400 à 1,1130. Quelle variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ −0,027 %"
+        },
+        {
+          "id": "b",
+          "text": "Environ +2,37 %"
+        },
+        {
+          "id": "c",
+          "text": "Environ −2,37 %"
+        },
+        {
+          "id": "d",
+          "text": "Environ −27 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "1,1130 ÷ 1,1400 − 1 = −2,37 % ; les deux cours viennent de sources différentes.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.02-Q7",
+      "type": "mcq",
+      "prompt": "Que montre la séquence du 25/09 au 29/10/2026 sur le lien différentiel – change ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que le sens du différentiel de court terme ne dicte pas celui du change"
+        },
+        {
+          "id": "b",
+          "text": "Que le différentiel prédit toujours le change"
+        },
+        {
+          "id": "c",
+          "text": "Que le change ne dépend pas de la politique monétaire"
+        },
+        {
+          "id": "d",
+          "text": "Que la Fed a relevé en octobre"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le dollar s'est renforcé alors que la probabilité d'une hausse proche de la Fed baissait ; d'autres facteurs interviennent et rien n'est démontré.",
+      "tags": [
+        "limite"
+      ]
+    },
+    {
+      "id": "L4.02-Q8",
+      "type": "mcq",
+      "prompt": "Que faut-il toujours préciser quand on cite un différentiel de taux ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Seulement le résultat"
+        },
+        {
+          "id": "b",
+          "text": "Les instruments, les dates, la convention (borne haute ou milieu) et les sources"
+        },
+        {
+          "id": "c",
+          "text": "Seulement la devise"
+        },
+        {
+          "id": "d",
+          "text": "Rien"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Sans instruments ni dates, deux calculs ne sont pas comparables ; la traçabilité est la condition de la fiabilité.",
+      "tags": [
+        "methode"
+      ]
+    }
+  ],
+  "revision": 1
+}

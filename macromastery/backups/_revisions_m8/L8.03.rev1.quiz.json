@@ -1,0 +1,233 @@
+{
+  "lessonId": "L8.03",
+  "title": "Quiz — Élections et changements de politique",
+  "passThreshold": 0.8,
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L8.03-Q1",
+      "type": "mcq",
+      "prompt": "Le marché donne 90 % de chances au candidat A, qui gagne. Dans le modèle jouet de la leçon (A fait 1 950 $, B 2 050 $), quelle réaction de l'or est attendue ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Nulle, quelle que soit la probabilité"
+        },
+        {
+          "id": "b",
+          "text": "Forte (environ −3 %), car le résultat est important"
+        },
+        {
+          "id": "c",
+          "text": "Faible (environ −0,5 %), car la surprise est de seulement 10 %"
+        },
+        {
+          "id": "d",
+          "text": "Positive, car l'incertitude disparaît"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Prix avant 1 960 $, après 1 950 $ : −0,51 %. Avec 40 % de chances, la réaction serait de −2,99 % : la surprise fait la réaction, non le résultat.",
+      "tags": [
+        "surprise"
+      ]
+    },
+    {
+      "id": "L8.03-Q2",
+      "type": "mcq",
+      "prompt": "Quelle distinction est correcte pour une politique économique ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Promesse, décision officielle, adoption juridique et application effective sont quatre étapes distinctes"
+        },
+        {
+          "id": "b",
+          "text": "Une promesse électorale équivaut à une décision"
+        },
+        {
+          "id": "c",
+          "text": "La date de signature est toujours la date d'effet"
+        },
+        {
+          "id": "d",
+          "text": "L'adoption juridique est immédiate"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le H.R. 1 est introduit le 2/11/2017 et sa dernière action date du 22/12/2017, soit 409 jours après le scrutin de 2016 ; une signature ne dit pas la date d'effet.",
+      "tags": [
+        "etapes"
+      ]
+    },
+    {
+      "id": "L8.03-Q3",
+      "type": "mcq",
+      "prompt": "Après l'élection de novembre 2024, l'or au comptant baisse de 2,8 % le 6 novembre (rapporté). Que peut-on conclure sur la cause ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que la Fed a causé la baisse"
+        },
+        {
+          "id": "b",
+          "text": "Que l'élection a causé la baisse"
+        },
+        {
+          "id": "c",
+          "text": "Que l'or baisse toujours après une élection"
+        },
+        {
+          "id": "d",
+          "text": "Rien de causal : la coïncidence ne suffit pas, d'autres facteurs (dollar, Fed du 7/11) sont simultanés"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La règle de contrôle interdit de déduire la cause de la seule succession temporelle ; deux cas ne font pas une loi.",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "id": "L8.03-Q4",
+      "type": "mcq",
+      "prompt": "En 2016, l'or perd plus de 8 % en novembre, puis touche 1 126,48 $ le 15/12 et finit l'année à 1 151,91 $. Quelle variation du plus bas à la fin décembre ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ −2,3 %"
+        },
+        {
+          "id": "b",
+          "text": "Environ +2,3 %"
+        },
+        {
+          "id": "c",
+          "text": "Environ +8 %"
+        },
+        {
+          "id": "d",
+          "text": "Environ +9 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "1 151,91 ÷ 1 126,48 − 1 ≈ +2,3 % ; le rebond est limité. Le +9 % rapporté concerne l'année 2016 entière.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L8.03-Q5",
+      "type": "mcq",
+      "prompt": "Quelle est la bonne lecture du fixing LBMA du 30/10/2024 à 2 783,95 $ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "C'est le prix du 5/11"
+        },
+        {
+          "id": "b",
+          "text": "C'est une clôture confirmée de l'après-midi"
+        },
+        {
+          "id": "c",
+          "text": "C'est un contrat à terme"
+        },
+        {
+          "id": "d",
+          "text": "C'est un fixing du matin, à ne pas comparer sans précaution à un fixing de l'après-midi ou à un cours au comptant"
+        }
+      ],
+      "correct": "d",
+      "explanation": "LBMA précise qu'il s'agit d'un fixing du matin ; mélanger fixings, comptant et contrats à terme crée des écarts de base.",
+      "tags": [
+        "bases"
+      ]
+    },
+    {
+      "id": "L8.03-Q6",
+      "type": "mcq",
+      "prompt": "Le FMI (avril 2025) prévoit une croissance mondiale de 2,8 % pour 2025 contre 3,3 % en janvier. De quelle nature est cette information ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un fait établi"
+        },
+        {
+          "id": "b",
+          "text": "Une observation"
+        },
+        {
+          "id": "c",
+          "text": "Une prévision conditionnelle à des hypothèses, non une observation"
+        },
+        {
+          "id": "d",
+          "text": "Une mesure de l'effet de l'élection"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le FMI présente un scénario de référence fondé sur l'information disponible au 4 avril 2025 ; l'écart avec janvier s'explique en partie par les droits de douane et l'incertitude, mais reste une prévision.",
+      "tags": [
+        "prevision"
+      ]
+    },
+    {
+      "id": "L8.03-Q7",
+      "type": "mcq",
+      "prompt": "Pourquoi la réaction de l'or à un résultat d'élection peut-elle être opposée à l'idée d'un refuge ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le résultat peut lever l'incertitude et faire monter dollar et rendements, qui pèsent sur l'or"
+        },
+        {
+          "id": "b",
+          "text": "Parce que l'or réagit toujours à la hausse"
+        },
+        {
+          "id": "c",
+          "text": "Parce que les élections n'ont aucun effet"
+        },
+        {
+          "id": "d",
+          "text": "Parce que les banques centrales sont fermées"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Les canaux du dollar et des taux réels peuvent dominer ; LBMA interprète le repli de 2024 comme une aversion des marchés à l'incertitude, ce qui reste une interprétation.",
+      "tags": [
+        "canaux"
+      ]
+    },
+    {
+      "id": "L8.03-Q8",
+      "type": "mcq",
+      "prompt": "Quelle formulation est acceptable après la lecture de la leçon ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les élections font toujours baisser l'or"
+        },
+        {
+          "id": "b",
+          "text": "Après les scrutins de 2016 et de 2024, l'or rapporté a baissé dans les jours suivants ; les données lues ne permettent ni règle générale ni isolement de l'effet de l'élection"
+        },
+        {
+          "id": "c",
+          "text": "L'élection de 2024 explique la hausse de 62,9 % de 2025"
+        },
+        {
+          "id": "d",
+          "text": "L'or monte après toute élection"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La seule formulation prudente énonce l'observation, ses limites et ce qui manque ; les autres généralisent ou attribuent sans preuve.",
+      "tags": [
+        "refus"
+      ]
+    }
+  ],
+  "revision": 1
+}

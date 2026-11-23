@@ -1,0 +1,235 @@
+{
+  "lessonId": "L6.03",
+  "title": "Quiz — Réactions asymétriques",
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L6.03-Q1",
+      "type": "mcq",
+      "prompt": "Quelles sont les trois dimensions d'une réaction à une annonce ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Date, heure, source"
+        },
+        {
+          "id": "b",
+          "text": "Prix, volume, volatilité"
+        },
+        {
+          "id": "c",
+          "text": "Direction, amplitude, durée"
+        },
+        {
+          "id": "d",
+          "text": "Taux, dollar, or"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le signe, la taille et la persistance (ou l'inversion) du mouvement sont analysés séparément.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L6.03-Q2",
+      "type": "mcq",
+      "prompt": "Prix de départ 4 000 ; 3 996 après 30 minutes. Quel rendement de fenêtre ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−0,10 %"
+        },
+        {
+          "id": "b",
+          "text": "+0,10 %"
+        },
+        {
+          "id": "c",
+          "text": "−0,40 %"
+        },
+        {
+          "id": "d",
+          "text": "−4 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "(3 996 ÷ 4 000 − 1) × 100 = −0,10 % ; la fenêtre doit être fixée avant l'analyse.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L6.03-Q3",
+      "type": "mcq",
+      "prompt": "Quelle différence y a-t-il entre surprise économique et surprise monétaire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'une concerne l'or, l'autre le dollar"
+        },
+        {
+          "id": "b",
+          "text": "Aucune"
+        },
+        {
+          "id": "c",
+          "text": "L'une est positive, l'autre négative"
+        },
+        {
+          "id": "d",
+          "text": "L'une porte sur une donnée publiée, l'autre sur la décision ou son ton par rapport aux probabilités"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Une inflation inattendue est une surprise économique ; la décision de la banque centrale est mesurée contre les probabilités de marché.",
+      "tags": [
+        "surprises"
+      ]
+    },
+    {
+      "id": "L6.03-Q4",
+      "type": "mcq",
+      "prompt": "Scénario A : taux réels +5 pb, or −0,6 % ; scénario B : −2 pb, or +0,2 %. Que montre la comparaison des sensibilités (−0,12 contre −0,10 %/pb) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une forte asymétrie"
+        },
+        {
+          "id": "b",
+          "text": "L'amplitude diffère surtout parce que les chocs diffèrent ; la sensibilité est presque la même"
+        },
+        {
+          "id": "c",
+          "text": "Que l'or ne réagit pas aux taux"
+        },
+        {
+          "id": "d",
+          "text": "Que le dollar est sans effet"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Rapport 1,2 : avant de parler d'asymétrie, on compare des réactions par unité de choc.",
+      "tags": [
+        "sensibilite"
+      ]
+    },
+    {
+      "id": "L6.03-Q5",
+      "type": "mcq",
+      "prompt": "Cinq décisions de la Fed en 2026 donnent des variations de séance de −1,40 ; −0,94 ; +1,30 ; +0,38 ; −0,60 %. Moyenne ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−1,26 %"
+        },
+        {
+          "id": "b",
+          "text": "+0,252 %"
+        },
+        {
+          "id": "c",
+          "text": "−0,60 %"
+        },
+        {
+          "id": "d",
+          "text": "−0,252 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La somme vaut −1,26 ; divisée par 5, la moyenne est −0,252 % (la médiane est −0,60 %).",
+      "tags": [
+        "stats"
+      ]
+    },
+    {
+      "id": "L6.03-Q6",
+      "type": "mcq",
+      "prompt": "Avec cinq événements, quelle est la plus petite valeur-p exacte de permutation possible pour un groupe réduit à un événement ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,01"
+        },
+        {
+          "id": "b",
+          "text": "0,05"
+        },
+        {
+          "id": "c",
+          "text": "0,20"
+        },
+        {
+          "id": "d",
+          "text": "0,50"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Il y a seulement cinq affectations possibles de l'étiquette : la plus petite valeur-p est 1/5 = 0,20.",
+      "tags": [
+        "pvaleur"
+      ]
+    },
+    {
+      "id": "L6.03-Q7",
+      "type": "mcq",
+      "prompt": "Le groupe « conforme » (avril, juin, septembre, octobre) a une moyenne de −0,64 % et juillet +1,30 %. Que peut-on conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une observation seulement ; aucune causalité ni asymétrie démontrée"
+        },
+        {
+          "id": "b",
+          "text": "Que l'or réagit plus fort aux surprises accommodantes"
+        },
+        {
+          "id": "c",
+          "text": "Que la Fed ne compte pas"
+        },
+        {
+          "id": "d",
+          "text": "Que le test est significatif"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Un groupe à un seul événement, des variations de séance et des événements concomitants non contrôlés interdisent une conclusion causale.",
+      "tags": [
+        "niveaux"
+      ]
+    },
+    {
+      "id": "L6.03-Q8",
+      "type": "mcq",
+      "prompt": "Pourquoi le protocole de l'étude est-il qualifié de « partiellement » fixé d'avance ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce qu'il n'a pas de règles"
+        },
+        {
+          "id": "b",
+          "text": "Les cas de juillet et d'octobre étaient déjà lus avant qu'il soit écrit"
+        },
+        {
+          "id": "c",
+          "text": "Parce qu'il est trop long"
+        },
+        {
+          "id": "d",
+          "text": "Parce qu'il utilise des fenêtres de 5 minutes"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Seuls avril, juin et septembre ont été lus après l'écriture du protocole ; le risque de sélection existe.",
+      "tags": [
+        "protocole"
+      ]
+    }
+  ],
+  "revision": 1
+}

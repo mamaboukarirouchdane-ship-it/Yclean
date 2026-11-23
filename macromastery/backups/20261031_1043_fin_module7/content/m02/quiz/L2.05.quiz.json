@@ -1,0 +1,234 @@
+{
+  "lessonId": "L2.05",
+  "title": "Quiz — Orientation prospective et communication",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : Fed (communiqués, minutes, SEP de septembre 2026), Fed d'Atlanta (2021), résumés automatiques.",
+  "questions": [
+    {
+      "id": "L2.05-Q1",
+      "type": "mcq",
+      "prompt": "Quand les minutes du FOMC sont-elles en général publiées ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le jour de la décision"
+        },
+        {
+          "id": "b",
+          "text": "Un an après"
+        },
+        {
+          "id": "c",
+          "text": "Environ trois semaines après la décision"
+        },
+        {
+          "id": "d",
+          "text": "Avant la réunion"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Les minutes du 15-16 septembre 2026 ont été publiées le 7 octobre 2026, soit 21 jours plus tard.",
+      "tags": [
+        "minutes"
+      ]
+    },
+    {
+      "id": "L2.05-Q2",
+      "type": "mcq",
+      "prompt": "Que signifie une orientation prospective conditionnelle (dépendante des données) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une indication subordonnée à l'évolution de l'économie, sans engagement automatique"
+        },
+        {
+          "id": "b",
+          "text": "Un engagement ferme sur une date"
+        },
+        {
+          "id": "c",
+          "text": "L'absence de communication"
+        },
+        {
+          "id": "d",
+          "text": "Un taux fixe pour dix ans"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Les minutes disent qu'une nouvelle hausse serait probablement appropriée d'ici la fin de l'année selon la plupart des participants, avec des décisions dépendant des données.",
+      "tags": [
+        "guidance"
+      ]
+    },
+    {
+      "id": "L2.05-Q3",
+      "type": "mcq",
+      "prompt": "Que reflète le tableau de projections (SEP) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les décisions du Comité"
+        },
+        {
+          "id": "b",
+          "text": "Des promesses de taux"
+        },
+        {
+          "id": "c",
+          "text": "Les prévisions officielles du Trésor"
+        },
+        {
+          "id": "d",
+          "text": "Les vues individuelles des participants sur la politique appropriée"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Chaque participant projette selon sa vue de la politique appropriée ; 18 participants ont remis des projections en septembre 2026.",
+      "tags": [
+        "sep"
+      ]
+    },
+    {
+      "id": "L2.05-Q4",
+      "type": "mcq",
+      "prompt": "Taux médian du SEP pour 2027 : septembre 4,1 %, juin 3,6 %. Quelle est la révision ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−0,5 point"
+        },
+        {
+          "id": "b",
+          "text": "+0,5 point"
+        },
+        {
+          "id": "c",
+          "text": "+0,1 point"
+        },
+        {
+          "id": "d",
+          "text": "0 point"
+        }
+      ],
+      "correct": "b",
+      "explanation": "4,1 − 3,6 = +0,5 ; la trajectoire médiane a été relevée.",
+      "tags": [
+        "sep",
+        "calcul"
+      ]
+    },
+    {
+      "id": "L2.05-Q5",
+      "type": "mcq",
+      "prompt": "Entre les communiqués du 16 septembre et du 28 octobre 2026, qu'est-ce qui a changé dans la description de l'activité ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'activité n'est plus mentionnée"
+        },
+        {
+          "id": "b",
+          "text": "De « soutenu » à « faible »"
+        },
+        {
+          "id": "c",
+          "text": "Rien"
+        },
+        {
+          "id": "d",
+          "text": "De « solide » à « soutenu » (strong pace)"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le communiqué d'octobre parle d'une activité « en expansion à un rythme soutenu », avec deux dissidents pour une hausse.",
+      "tags": [
+        "diff"
+      ]
+    },
+    {
+      "id": "L2.05-Q6",
+      "type": "mcq",
+      "prompt": "Que signifie un vote de 10–2 le 28 octobre 2026 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une baisse a été décidée"
+        },
+        {
+          "id": "b",
+          "text": "Une hausse a été décidée"
+        },
+        {
+          "id": "c",
+          "text": "Le maintien a été décidé avec deux dissidents favorables à une hausse de ¼ point"
+        },
+        {
+          "id": "d",
+          "text": "Aucun vote"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Lisa D. Cook et Beth M. Hammack ont voté pour une hausse ; la dissidence informe sur le biais du Comité.",
+      "tags": [
+        "vote"
+      ]
+    },
+    {
+      "id": "L2.05-Q7",
+      "type": "mcq",
+      "prompt": "En juin 2013, après la conférence de presse de Bernanke, le rendement à 10 ans a monté de :",
+      "options": [
+        {
+          "id": "a",
+          "text": "40 points de base en six jours"
+        },
+        {
+          "id": "b",
+          "text": "4 points de base en six jours"
+        },
+        {
+          "id": "c",
+          "text": "400 points de base en un jour"
+        },
+        {
+          "id": "d",
+          "text": "Il a baissé de 40 points de base"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Selon l'article de la Fed d'Atlanta, +40 pb en six jours alors que les anticipations de trajectoire de taux avaient à peine changé.",
+      "tags": [
+        "taper-tantrum"
+      ]
+    },
+    {
+      "id": "L2.05-Q8",
+      "type": "mcq",
+      "prompt": "Pourquoi ne peut-on pas affirmer que la conférence de juin 2013 a « causé » la hausse de 40 points de base ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce qu'il n'y a pas eu de hausse"
+        },
+        {
+          "id": "b",
+          "text": "Parce que le rendement montait déjà depuis mai et que l'article n'isole pas l'effet de cette seule conférence"
+        },
+        {
+          "id": "c",
+          "text": "Parce que la Fed n'a rien dit"
+        },
+        {
+          "id": "d",
+          "text": "Parce que les données sont fausses"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le rendement à 10 ans montait depuis le 1ᵉʳ mai 2013 ; d'autres informations ont pu jouer.",
+      "tags": [
+        "causalite"
+      ]
+    }
+  ],
+  "revision": 1
+}

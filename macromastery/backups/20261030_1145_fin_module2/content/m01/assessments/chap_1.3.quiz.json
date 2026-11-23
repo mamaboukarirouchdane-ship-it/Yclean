@@ -1,0 +1,178 @@
+{
+  "chapterId": "1.3",
+  "module": 1,
+  "title": "Quiz de chapitre 1.3 — Marché du travail et courbe de Phillips (L1.07–L1.08)",
+  "passThreshold": 0.8,
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C1.3-Q1",
+      "type": "mcq",
+      "prompt": "Le taux de chômage est égal à :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Chômeurs ÷ population totale"
+        },
+        {
+          "id": "b",
+          "text": "Chômeurs ÷ population active"
+        },
+        {
+          "id": "c",
+          "text": "Emplois ÷ population"
+        },
+        {
+          "id": "d",
+          "text": "Inactifs ÷ chômeurs"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Taux de chômage = chômeurs ÷ population active (emploi + chômeurs).",
+      "tags": [
+        "chomage"
+      ]
+    },
+    {
+      "id": "C1.3-Q2",
+      "type": "mcq",
+      "prompt": "Septembre 2026 (BLS, résumé) : 7,109 millions de chômeurs et taux de 4,2 %. Population active approximative ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ 500 millions"
+        },
+        {
+          "id": "b",
+          "text": "Environ 30 millions"
+        },
+        {
+          "id": "c",
+          "text": "Environ 7,1 millions"
+        },
+        {
+          "id": "d",
+          "text": "Environ 169 millions"
+        }
+      ],
+      "correct": "d",
+      "explanation": "7,109 ÷ 0,042 ≈ 169,3 millions (calcul de l'auteur, sensible à l'arrondi du taux).",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "C1.3-Q3",
+      "type": "mcq",
+      "prompt": "Un travailleur découragé est classé :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parmi les chômeurs"
+        },
+        {
+          "id": "b",
+          "text": "Parmi les salariés"
+        },
+        {
+          "id": "c",
+          "text": "Hors de la population active"
+        },
+        {
+          "id": "d",
+          "text": "Parmi les indépendants"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Un travailleur découragé ne cherche plus activement : il est hors de la population active, d'où des limites au taux de chômage.",
+      "tags": [
+        "decourage"
+      ]
+    },
+    {
+      "id": "C1.3-Q4",
+      "type": "mcq",
+      "prompt": "Dans la courbe de Phillips augmentée, que s'ajoute à la relation chômage-inflation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les anticipations d'inflation"
+        },
+        {
+          "id": "b",
+          "text": "Le prix de l'or uniquement"
+        },
+        {
+          "id": "c",
+          "text": "Le taux de change uniquement"
+        },
+        {
+          "id": "d",
+          "text": "Rien"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Forme augmentée : l'inflation dépend des anticipations, de l'écart de chômage et des chocs d'offre.",
+      "tags": [
+        "phillips"
+      ]
+    },
+    {
+      "id": "C1.3-Q5",
+      "type": "mcq",
+      "prompt": "Pourquoi la relation de Phillips est-elle jugée instable ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce qu'elle ne dépend pas du chômage"
+        },
+        {
+          "id": "b",
+          "text": "À cause des anticipations, des chocs d'offre, du taux naturel inconnu et des non-linéarités"
+        },
+        {
+          "id": "c",
+          "text": "Parce qu'elle est toujours verticale"
+        },
+        {
+          "id": "d",
+          "text": "Parce qu'elle n'a jamais été observée"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Ces facteurs font varier la pente et la position de la relation ; les années 1970 en sont un contre-exemple.",
+      "tags": [
+        "instabilite"
+      ]
+    },
+    {
+      "id": "C1.3-Q6",
+      "type": "mcq",
+      "prompt": "Emploi +29 000 en septembre 2026 pour un emploi d'équilibre estimé à 5 200 par mois au T4. Que peut-on conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que l'économie est en récession"
+        },
+        {
+          "id": "b",
+          "text": "Qu'il y a surchauffe certaine"
+        },
+        {
+          "id": "c",
+          "text": "Que l'emploi reste au-dessus de l'équilibre estimé, avec une incertitude large"
+        },
+        {
+          "id": "d",
+          "text": "Rien, car l'emploi est inobservable"
+        }
+      ],
+      "correct": "c",
+      "explanation": "29 000 − 5 200 = 23 800 ; l'intervalle à 90 % de l'équilibre (−117 000 à +127 000) rend toute conclusion tranchée imprudente.",
+      "tags": [
+        "emploi-equilibre"
+      ]
+    }
+  ],
+  "revision": 1
+}

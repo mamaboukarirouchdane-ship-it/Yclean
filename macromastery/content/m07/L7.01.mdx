@@ -1,0 +1,241 @@
+---
+id: L7.01
+module: 7
+order: 1
+title: "Comprendre le positionnement et les flux : qui détient quoi, dans quelle proportion, avec quelle évolution — et ce qu'on ne peut pas en conclure"
+title_initial: "Lire un rapport COT"
+level: "avancé"
+duration_hours: 3.0
+prerequisites: ["L5.06", "L5.07", "L6.01", "L6.05"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L7.01.quiz.json"
+sources: ["S-CFTC-01", "S-CFTC-02", "S-CFTC-03", "S-CFTC-06", "S-CFTC-07", "S-CFTC-08", "S-SAX-01", "S-WGC-05", "S-WGC-10"]
+---
+
+# L7.01 — Comprendre le positionnement et les flux
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée, avec sa date ; **[Définition]** ; **[Calcul de l'auteur]** ; **[Interprétation]** ; **[Hypothèse]** ; **[SIMULATION]** = données fictives. Les chiffres de positionnement viennent d'un **fichier officiel de la CFTC** lu par résumé automatique ; les commentaires de marché sont des sources secondaires. **Cette leçon ne prédit aucune direction : une bonne analyse fondamentale ne garantit pas une transaction gagnante, et le positionnement n'est jamais un signal autonome.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. distinguer une **position** (un stock à une date) d'un **flux** (une variation sur une période) ;
+2. situer les acteurs du marché de l'or : spéculateurs, couvertures commerciales, intermédiaires, banques centrales, ETF, marché physique ;
+3. lire une ligne du rapport **COT** de la CFTC : longs, courts, « spreading », position nette, part de l'intérêt ouvert, équivalent en tonnes ;
+4. dater correctement une donnée de positionnement (date d'observation, date de publication, âge) ;
+5. répondre à la question centrale : **qui détient les positions, dans quelle proportion, avec quelle évolution récente, et quelles conclusions peut-on raisonnablement en tirer** ;
+6. tenir un **registre des données indisponibles** et des **conclusions impossibles**, et éviter six pièges classiques.
+
+## 2. Prérequis
+
+- Banques centrales acheteuses (L5.06), ETF d'or (L5.07), attendu et publié (L6.01), probabilités et enregistrement (L6.05).
+
+## 3. Explication intuitive
+
+Imagine une salle où chacun mise sur la direction d'un prix. Savoir **qui** parie, **combien**, et **comment cela a changé** depuis la semaine dernière aide à comprendre la fragilité ou la solidité d'un mouvement. Mais on ne voit qu'un instantané ancien, pour une seule salle (les contrats à terme de New York), alors que d'autres acteurs achètent de l'or physique, des ETF ou des réserves officielles, ailleurs. La discipline consiste à regarder ce que l'instantané montre, à dire **quand** il a été pris, et à écrire en face ce qu'on ne sait pas.
+
+## 4. Développement technique
+
+### 4.1 Position et flux
+**[Définition de cours]** Une **position** est une exposition détenue à une date (par exemple 128 542 contrats acheteurs au 13/10/2026). Un **flux** est une variation sur une période (par exemple −1 705 contrats acheteurs entre le 6 et le 13/10). Position et flux peuvent raconter des histoires différentes : une position énorme peut avoir peu varié ; un flux modeste peut changer une position faible.
+**Sur un marché à terme, chaque contrat a deux côtés.** **[Fait]** (S-CFTC-07, rapport légal, résumé automatique) : « l'intérêt ouvert agrégé long est égal à l'intérêt ouvert agrégé court » ; les positions « non rapportables » sont calculées en soustrayant les positions rapportables de l'intérêt ouvert. Une position nette acheteuse d'une catégorie a donc **toujours** une contrepartie nette vendeuse ailleurs.
+
+### 4.2 Les acteurs de l'or et ce que le COT ne voit pas
+| Acteur | Instrument | Visible dans le COT ? | Source de la mesure |
+|---|---|---|---|
+| Fonds gérés (Managed Money) | contrats à terme COMEX | **oui** (contrats) | CFTC |
+| Producteurs, négociants, utilisateurs | contrats à terme COMEX | **oui** | CFTC |
+| Opérateurs de swaps | contrats à terme (couverture de swaps) | **oui** | CFTC |
+| Autres déclarants | contrats à terme | **oui** | CFTC |
+| Non déclarants (petites positions) | contrats à terme | **déduit** (différence) | CFTC |
+| ETF adossés à l'or | or physique en coffre | **non** | World Gold Council (L5.07) |
+| Banques centrales | réserves officielles | **non** | déclarations, estimations (L5.06) |
+| Bijouterie, lingots et pièces, technologie | or physique | **non** | WGC (L5.01) |
+| Marché de gré à gré de Londres | or physique et dérivés | **non** | non lue ici |
+**[Interprétation]** Le COT décrit **une partie du marché financier de l'or** : le contrat COMEX de 100 onces. Il ne mesure ni la demande physique, ni les ETF, ni les réserves officielles ; les **flux physiques** et les **flux financiers** se lisent dans des sources différentes.
+
+### 4.3 Deux classifications : « legacy » et « désagrégée »
+**[Fait]** Rapport *legacy* (S-CFTC-07, résumé automatique) : un opérateur est **commercial** s'il utilise les contrats pour couvrir une activité (déclaration Form 40, « engaged in business activities hedged… ») ; les autres sont **non commerciaux**. La source **ne dit pas** que les non-commerciaux sont des spéculateurs : elle les définit seulement comme « non commerciaux ». Un même opérateur ne peut pas être à la fois commercial et non commercial pour une matière première ; des entités distinctes d'un même groupe le peuvent. Les positions rapportables couvrent « généralement 70 à 90 % » de l'intérêt ouvert.
+**[Fait]** Rapport *désagrégé* (S-CFTC-06, résumé automatique) : **Producer/Merchant/Processor/User** (produit, traite ou manipule la matière première et couvre ses risques) ; **Swap Dealer** (traite surtout des swaps et couvre par des contrats à terme ; ses contreparties peuvent être des spéculateurs ou des clients commerciaux) ; **Managed Money** (CTA enregistré, CPO enregistré ou fonds non enregistré identifié par la CFTC) ; **Other Reportables** (tous les autres déclarants). Les catégories sont attribuées d'après l'**activité principale** de l'opérateur, pas d'après chaque transaction ; les classifications peuvent changer ; avant 2006, l'historique est recalculé avec les classifications récentes (« backcast »), ce qui réduit sa précision.
+**[Interprétation]** Dire « les spéculateurs » pour parler de Managed Money ou des non-commerciaux est une **simplification**. Un opérateur de swaps peut être vendeur net parce qu'il couvre des clients, sans pari directionnel.
+
+### 4.4 Lire une ligne du rapport : le cas du 13 octobre 2026
+**[Fait]** (S-CFTC-08, fichier « Disaggregated Futures and Options Combined », positions au **mardi 13/10/2026**, mise à jour indiquée « 16/10/2026 », résumé automatique ; contrat COMEX de **100 onces troy**) : **intérêt ouvert 526 276 contrats**.
+| Catégorie | Longs | Courts | Spreading | % IO long | % IO court | Net (long − court) |
+|---|---|---|---|---|---|---|
+| Producer/Merchant/Processor/User | 22 180 | 39 861 | — | 4,2 % | 7,6 % | −17 681 |
+| Swap Dealers | 12 706 | 231 189 | 54 517 | 2,4 % | 43,9 % | −218 483 |
+| Managed Money | 128 542 | 17 463 | 45 810 | 24,4 % | 3,3 % | **+111 079** |
+| Other Reportables | 106 765 | 18 110 | 99 475 | 20,3 % | 3,4 % | +88 655 |
+**[Calcul de l'auteur]** Positions rapportables longues (y compris spreading) : 270 193 + 199 802 = **469 995** ; courtes : 306 623 + 199 802 = **506 425**. Non rapportables (par différence, selon la définition de la CFTC) : longs 526 276 − 469 995 = **56 281** (10,7 %) ; courts 526 276 − 506 425 = **19 851** (3,8 %). Somme des positions nettes de toutes les catégories (non rapportables comprises) : −17 681 − 218 483 + 111 079 + 88 655 + (56 281 − 19 851) = **0** : chaque contrat a deux côtés. **Précision (révision 2) :** comme les non rapportables sont *déduits* de l'intérêt ouvert, cette nullité est une **identité par construction**, pas un test indépendant des données ; les tests indépendants sont, par exemple, les pourcentages de l'intérêt ouvert publiés par la CFTC (qui concordent avec ceux recalculés) et les variations hebdomadaires publiées (L7.02). Les positions rapportables représentent **89,3 %** de l'intérêt ouvert côté longs et **96,2 %** côté courts (la source parle de « généralement 70 à 90 % » : ce n'est pas une règle stricte).
+**Lecture.** Le « spreading » est une compensation de positions longues et courtes d'un même opérateur : il ne donne **pas** de direction. La position nette de Managed Money (+111 079 contrats) ne représente que la différence entre ses longs et ses courts hors spreading. **Qui est de l'autre côté ?** Surtout les opérateurs de swaps (net −218 483), dont la position est liée à des contrats avec leurs clients, et les producteurs/négociants (−17 681).
+
+### 4.5 Proportions et équivalents en tonnes
+**[Calcul de l'auteur]** Un contrat = 100 onces ; 1 tonne = 32 150,7 onces. Intérêt ouvert : 526 276 × 100 ÷ 32 150,7 = **1 636,9 t**. Longs de Managed Money : **399,8 t** ; position nette de Managed Money : **345,5 t** ; courts des opérateurs de swaps : **719,1 t**.
+**Comparaison prudente [Fait]** : avoirs des ETF d'or **4 256 t** fin septembre 2026 (S-WGC-10) ; demande mondiale de 2025 : **5 002,3 t** (S-WGC-05). **[Interprétation]** Ces tonnes sont **de nature différente** : des contrats à terme (exposition au prix, dont l'immense majorité n'aboutit pas à une livraison) contre de l'or physique en coffre. On n'additionne pas ces nombres ; on dit seulement que le COT décrit **une fraction** de l'ensemble des acteurs.
+
+### 4.6 L'évolution récente : variation hebdomadaire
+**[Fait]** (S-CFTC-08) : variations du 6 au 13/10 de Managed Money : longs −1 705, courts +2 036, spreading +1 068.
+**[Calcul de l'auteur]** Net au 13/10 : 128 542 − 17 463 = **111 079**. Net au 6/10 : (128 542 + 1 705) − (17 463 − 2 036) = 130 247 − 15 427 = **114 820**. Variation : **−3 741 contrats (−3,3 %)**, soit −2 036 par augmentation des courts et −1 705 par réduction des longs : les deux jambes contribuent.
+**Recoupement [Fait]** (S-SAX-01, article de Saxo Bank du 12/10/2026, marketing, secondaire) : le « net long des spéculateurs » du COMEX, au 6/10, était de **115 000 contrats** (« plus bas depuis trois mois », en baisse de 8 %) ; cela est cohérent avec 114 820 calculés. **[Interprétation]** Sur deux semaines, le net long de Managed Money a baissé (≈ 125 000 → 114 820 → 111 079) ; **cela ne dit rien**, à ce stade, sur le prix de l'or qui suivra.
+
+### 4.7 Dater le positionnement : observation, publication, âge
+**[Fait]** (S-CFTC-01, S-CFTC-03) : positions arrêtées le **mardi**, reçues le mercredi, **généralement publiées le vendredi à 15 h 30 (heure de l'Est)**, soit trois jours de traitement. (S-CFTC-02, communiqué du 27/10/2026) : la CFTC **prévoit** de publier le COT **deux fois par semaine** « d'ici la fin de 2026 » (délai de deux jours) ; c'est un **plan**, non un changement en vigueur ; aucune date de début.
+**[Calcul de l'auteur]** Pour le rapport lu : observation mardi 13/10, publication vendredi 16/10 : **3 jours** de décalage ; âge au 31/10 : **18 jours** (des rapports plus récents, au 20/10 et au 27/10, existent mais n'ont pas été lus). **Règle de chronologie** : une note rédigée le 16/10 à 10 h 00 (heure de l'Est) ne peut **pas** utiliser les positions du 13/10, publiées à 15 h 30 ; les positions du 6/10 le peuvent.
+**[Interprétation]** Un COT n'est jamais une donnée « en temps réel » : entre le mardi et le vendredi, les positions et les prix ont pu changer sans qu'on le voie.
+
+### 4.8 La question centrale et la fiche de positionnement
+**[Définition de cours]** Fiche en quatre blocs, avec la date d'observation et la date de publication de chaque donnée :
+1. **Qui ?** catégorie (selon la classification de la source), nombre d'opérateurs.
+2. **Dans quelle proportion ?** contrats, % de l'intérêt ouvert, équivalent en tonnes.
+3. **Quelle évolution récente ?** variation d'une semaine (et sur une plus longue fenêtre définie à l'avance), net et jambes.
+4. **Quelles conclusions raisonnables ?** et, à part, **conclusions impossibles** et **données indisponibles**.
+**[Exemple appliqué au 13/10/2026]** *Qui* : Managed Money, 84 opérateurs longs, 23 courts (S-CFTC-08). *Proportion* : 24,4 % de l'intérêt ouvert en longs ; net +111 079 contrats ≈ 345,5 t. *Évolution* : net −3 741 sur une semaine. *Conclusions raisonnables* : le net long des fonds a un peu baissé au début d'octobre ; les opérateurs de swaps sont le principal côté vendeur. *Conclusions impossibles* : que l'or va baisser ou monter ; que les fonds « sortent » de l'or en général ; que les ETF suivent la même tendance. *Données indisponibles* : prix de l'or au 13/10 et au 16/10 ; rapports du 20/10 et du 27/10 ; série historique pour calculer un percentile.
+
+### 4.9 Six pièges
+| Piège | Pourquoi c'est faux ou non démontré |
+|---|---|
+| « Net long élevé ⇒ l'or va baisser » | un extrême peut persister ; une inversion a besoin d'un déclencheur (S-SAX-01 : les extrêmes « rarement » inversent seuls) |
+| « Plus d'achats des banques centrales ⇒ hausse immédiate » | les achats sont mesurés avec retard, révisés, et le prix dépend aussi du dollar, des taux réels, des ETF (L5.06) |
+| « Les ETF représentent toute la demande » | le WGC mesure à part la bijouterie, les barres et pièces, la technologie, les banques centrales (S-WGC-05) |
+| « Intérêt ouvert en hausse ⇒ plus de positions acheteuses » | une hausse peut venir de nouveaux achats **et** de nouvelles ventes (§ 5) |
+| « Le COT est en temps réel » | décalage de 3 jours et âge de plusieurs jours à la lecture |
+| « Corrélation = cause = anticipation » | une coïncidence de dates ne prouve pas une cause, et une cause ne prouve pas qu'on pouvait l'anticiper |
+
+## 5. Définitions essentielles
+
+- **Intérêt ouvert** : nombre de contrats entrés et non encore dénoués ; longs agrégés = courts agrégés.
+- **Position nette** : longs − courts d'une catégorie (hors spreading).
+- **Spreading** : positions longues et courtes qui se compensent chez un même opérateur.
+- **Non rapportable** : intérêt ouvert − positions rapportables.
+- **Commercial / non commercial** : classement *legacy* selon l'usage en couverture.
+- **Managed Money, Swap Dealer, Producer/Merchant, Other Reportables** : catégories du rapport désagrégé.
+- **Flux** : variation sur une période ; **position** : stock à une date.
+
+**Effet sur l'intérêt ouvert [Définition de cours].**
+| Transaction | Effet sur l'intérêt ouvert |
+|---|---|
+| nouvel acheteur et nouveau vendeur | + |
+| acheteur existant vend à un nouvel acheteur | 0 |
+| acheteur existant vend à un vendeur qui rachète (les deux dénouent) | − |
+| un vendeur existant rachète à un nouveau vendeur | 0 |
+
+## 6. Exemples chiffrés
+
+**6.1** Net Managed Money 13/10 : 128 542 − 17 463 = 111 079.
+**6.2** Variation : 114 820 → 111 079 = −3 741 (−3,3 %).
+**6.3** % IO long : 128 542 ÷ 526 276 = 24,4 %.
+**6.4** Tonnes : 111 079 × 100 ÷ 32 150,7 = 345,5 t.
+**6.6 (SIMULATION)** Un jour, 1 000 nouveaux contrats sont échangés entre un nouvel acheteur et un nouveau vendeur : intérêt ouvert +1 000 ; le net de n'importe quelle catégorie peut monter, baisser ou rester stable selon son identité.
+
+### 6.5 Cas historique documenté — la semaine du 6 au 13 octobre 2026
+**[Fait]** Net long de Managed Money : environ 115 000 (6/10, « plus bas depuis trois mois », S-SAX-01) puis 111 079 (13/10, S-CFTC-08) ; rapport publié le 16/10 ; avoirs des ETF d'or à un **record** (4 256 t fin septembre, S-WGC-10) ; Saxo : « les avoirs totaux à un plus haut de quatre ans » alors que les spéculateurs réduisent. **[Interprétation]** Deux familles de détenteurs ont évolué dans des sens différents sur des horizons différents (fonds sur contrats à terme en baisse, ETF en hausse) : un seul indicateur donnerait une image partielle. **Ce qu'on ne peut pas conclure** : que les fonds aient raison ou tort ; que les ETF « absorbent » les ventes des fonds ; que le prix de l'or ait suivi l'une ou l'autre série (les prix des 6, 13 et 16/10 n'ont pas été lus). **Limites** : trois sources de statuts différents, données de dates différentes, aucune série historique.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **XAU/USD** : toute thèse (L5.12, L6.08) peut inclure une fiche de positionnement datée, jamais comme argument unique.
+- **Dollar et devises** : le même cadre existe pour les contrats de change (rapport TFF, S-CFTC-01), avec d'autres catégories (Asset Manager, Leveraged Funds) ; Saxo (S-SAX-01) cite par exemple un net vendeur de l'euro proche d'un plus haut de 2020, **non vérifié** dans le fichier officiel.
+- **Risque** : un positionnement chargé augmente la **sensibilité** à un choc (L6.06), pas la direction.
+
+## 8. Erreurs courantes
+
+1. Confondre position et flux.
+2. Appeler « spéculateurs » toute une catégorie sans le justifier.
+3. Utiliser un COT publié après l'heure de la note.
+4. Additionner contrats à terme et or physique.
+5. Conclure d'une hausse d'intérêt ouvert à une hausse des achats.
+6. Oublier le registre des données indisponibles.
+
+## 9. Limites de l'interprétation
+
+- Fichier CFTC lu par résumé automatique ; non rapportables et pourcentages recalculés par l'auteur.
+- Une seule date (13/10) et une variation d'une semaine ; aucune série historique ni percentile.
+- Prix de l'or aux dates des positions non lus.
+- Plan de publication bihebdomadaire non encore en vigueur selon les sources lues.
+- Les catégories dépendent de la classification de la CFTC (activité principale) et peuvent changer.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Position ou flux ?** Classe : (a) « 128 542 contrats acheteurs au 13/10 » ; (b) « −1 705 contrats acheteurs en une semaine » ; (c) « les ETF ont acheté 67 t en septembre » ; (d) « les ETF détiennent 4 256 t ».
+
+<details>
+<summary>Correction 1</summary>
+
+(a) **position** ; (b) **flux** ; (c) **flux** ; (d) **position** (stock à une date).
+</details>
+
+**Exercice 2 — Lire une ligne.** Managed Money au 13/10 : longs 128 542, courts 17 463, intérêt ouvert 526 276. Calcule le net, la part des longs dans l'intérêt ouvert et l'équivalent en tonnes du net (1 contrat = 100 oz ; 1 t = 32 150,7 oz).
+
+<details>
+<summary>Correction 2</summary>
+
+Net = 128 542 − 17 463 = **111 079** ; part des longs = 128 542 ÷ 526 276 = **24,4 %** ; tonnes = 111 079 × 100 ÷ 32 150,7 = **345,5 t**.
+</details>
+
+**Exercice 3 — Non rapportables.** Positions rapportables longues 469 995 et courtes 506 425 (spreading compris) pour un intérêt ouvert de 526 276. Calcule les non-rapportables longs et courts, puis constate que la somme des positions nettes de toutes les catégories est nulle (identité par construction) (nets : −17 681 ; −218 483 ; +111 079 ; +88 655).
+
+<details>
+<summary>Correction 3</summary>
+
+Longs : 526 276 − 469 995 = **56 281** ; courts : 526 276 − 506 425 = **19 851** ; net non rapportable = **+36 430**. Somme des nets déclarés = −17 681 − 218 483 + 111 079 + 88 655 = **−36 430** ; en ajoutant +36 430 on obtient **0** : c'est une identité par construction (les non rapportables sont déduits), non une vérification indépendante.
+</details>
+
+**Exercice 4 — Intérêt ouvert.** Dans chaque cas, l'intérêt ouvert monte, baisse ou reste stable ? (a) un nouvel acheteur achète à un nouveau vendeur ; (b) un acheteur existant vend à un nouvel acheteur ; (c) un acheteur existant vend à un vendeur existant qui rachète. Que conclure d'une hausse d'intérêt ouvert sur la direction des positions ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) **hausse** ; (b) **stable** ; (c) **baisse**. Une hausse n'indique ni davantage d'acheteurs, ni davantage de vendeurs : elle compte les deux côtés. Elle ne dit rien sur la direction.
+</details>
+
+**Exercice 5 — Chronologie.** Les positions du 13/10 ont été publiées le 16/10 à 15 h 30 (heure de l'Est). Une note est rédigée le 16/10 à 10 h 00. Peut-elle les utiliser ? Quel décalage observation–publication ? Quel âge ont-elles au 31/10 ?
+
+<details>
+<summary>Correction 5</summary>
+
+**Non** : elles ne sont pas encore publiées ; la note peut utiliser les positions du 6/10. Décalage : 16 − 13 = **3 jours**. Âge au 31/10 : **18 jours**. Un rapport plus récent peut exister : à lire avant toute analyse du jour.
+</details>
+
+**Exercice 6 — Fiche de positionnement.** Complète la fiche (qui / proportion / évolution / conclusions raisonnables / conclusions impossibles / données indisponibles) pour Managed Money au 13/10 et dis laquelle de ces phrases est autorisée : (i) « les fonds vendent, donc l'or baisse » ; (ii) « le net long de Managed Money a baissé de 3,3 % en une semaine, à 111 079 contrats » ; (iii) « les ETF ont dopé le cours ».
+
+<details>
+<summary>Correction 6</summary>
+
+Qui : Managed Money (84 longs, 23 courts). Proportion : 24,4 % de l'intérêt ouvert en longs, net ≈ 345,5 t. Évolution : −3 741 (−3,3 %). Conclusions raisonnables : le net long a un peu baissé. Impossibles : direction du prix, causes, généralisation aux ETF. Indisponibles : prix du 13 et du 16/10, rapports plus récents, série historique. Phrase autorisée : **(ii)** ; (i) et (iii) affirment une causalité non démontrée.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L7.01.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Position (stock) ≠ flux (variation) ; chaque contrat a deux côtés.
+- Le COT décrit une partie du marché de l'or (contrat COMEX de 100 oz), pas les ETF, banques centrales ni le physique.
+- Au 13/10/2026 : intérêt ouvert 526 276 ; Managed Money net +111 079 (≈ 345,5 t), −3,3 % sur une semaine ; opérateurs de swaps net −218 483.
+- Données arrêtées le mardi, publiées le vendredi : âge et décalage à dater toujours.
+- La fiche de positionnement sépare faits, conclusions raisonnables, conclusions impossibles et données indisponibles.
+
+## 13. Critères de maîtrise
+
+- [ ] Distinguer position et flux (Exercice 1).
+- [ ] Lire une ligne du COT et calculer net, part et tonnes (Exercice 2).
+- [ ] Retrouver les non-rapportables et vérifier la somme nulle (Exercice 3).
+- [ ] Interpréter l'intérêt ouvert (Exercice 4).
+- [ ] Respecter la chronologie de publication (Exercice 5).
+- [ ] Remplir une fiche de positionnement sans sur-interpréter (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **31 octobre 2026** :
+
+- **S-CFTC-06** — CFTC, notes explicatives du rapport désagrégé (primaire, résumé automatique) : https://www.cftc.gov/MarketReports/CommitmentsofTraders/DisaggregatedExplanatoryNotes/index.htm
+- **S-CFTC-07** — CFTC, notes explicatives du rapport *legacy* (primaire, résumé automatique) : https://cftc.gov/MarketReports/CommitmentsofTraders/ExplanatoryNotes/index.htm
+- **S-CFTC-08** — CFTC, rapport désagrégé futures et options combinés au 13/10/2026 (primaire, résumé automatique) : https://www.cftc.gov/files/dea/cotarchives/2026/options/other_sof101326.htm
+- **S-SAX-01** — Saxo Bank (marketing, secondaire), « COT on forex and commodities — week to 6 October 2026 » (12/10/2026) : https://www.home.saxo/de-ch/content/articles/commodities/cot-on-forex-and-commodities---week-to-6-october-2026-12102026
+- **S-CFTC-01**, **S-CFTC-02**, **S-CFTC-03**, **S-WGC-05**, **S-WGC-10** — déjà lues.
+
+**Définitions de cours non rattachées à une source lue :** distinction position/flux, effet des transactions sur l'intérêt ouvert, fiche de positionnement. **Points non vérifiés :** rapports du 20/10 et du 27/10, nonreportable du fichier (calculé), calendrier officiel de publication, prix de l'or aux dates des positions.

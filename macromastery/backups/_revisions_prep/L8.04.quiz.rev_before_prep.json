@@ -1,0 +1,233 @@
+{
+  "lessonId": "L8.04",
+  "title": "Quiz — Commerce, droits de douane et fragmentation",
+  "passThreshold": 0.8,
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L8.04-Q1",
+      "type": "mcq",
+      "prompt": "Quel est l'ordre correct pour un droit de douane ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Adoption, annonce, invalidation"
+        },
+        {
+          "id": "b",
+          "text": "Application effective, annonce, adoption"
+        },
+        {
+          "id": "c",
+          "text": "Annonce, adoption, entrée en vigueur, application effective (puis suspension, modification ou invalidation éventuelles)"
+        },
+        {
+          "id": "d",
+          "text": "Il n'y a qu'une seule étape"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Chaque étape a une date et un statut distincts ; en 2025, l'adoption du 2/04 est modifiée le 9/04 puis suspendue en partie le 12/05.",
+      "tags": [
+        "statuts"
+      ]
+    },
+    {
+      "id": "L8.04-Q2",
+      "type": "mcq",
+      "prompt": "Un droit de 25 % frappe 40 % des importations d'un pays fictif. Quel est le taux effectif moyen et que dit-il ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "10 % : le droit moyen sur l'ensemble des importations, qui diffère du taux annoncé"
+        },
+        {
+          "id": "b",
+          "text": "25 %, identique au taux annoncé"
+        },
+        {
+          "id": "c",
+          "text": "40 %, la part visée"
+        },
+        {
+          "id": "d",
+          "text": "65 %, la somme"
+        }
+      ],
+      "correct": "a",
+      "explanation": "0,25 × 0,40 = 0,10 ; le taux effectif dépend des produits visés, des exemptions et de la composition des importations.",
+      "tags": [
+        "taux_effectif"
+      ]
+    },
+    {
+      "id": "L8.04-Q3",
+      "type": "mcq",
+      "prompt": "Le FMI prévoit en avril 2025 une croissance mondiale de 2,8 % pour 2025, puis 3,0 % en juillet. De quelle nature sont ces chiffres ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Des clôtures de marché"
+        },
+        {
+          "id": "b",
+          "text": "Des résultats observés"
+        },
+        {
+          "id": "c",
+          "text": "Deux mesures de l'effet des droits"
+        },
+        {
+          "id": "d",
+          "text": "Des prévisions publiées à des dates différentes, sous des hypothèses différentes, non des résultats observés"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le FMI révise en juillet en citant le front-loading, un taux effectif plus bas et la trêve avec la Chine ; le résultat de 2025 n'a pas été lu.",
+      "tags": [
+        "prevision"
+      ]
+    },
+    {
+      "id": "L8.04-Q4",
+      "type": "mcq",
+      "prompt": "Entre le fixing du matin du 8/04/2025 (3 002,70 $) et celui du 22/04/2025 (3 454,70 $), quelle est la variation, et pourquoi la paire est-elle permise ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ +15,1 % ; on peut aussi la comparer à un fixing de l'après-midi"
+        },
+        {
+          "id": "b",
+          "text": "Environ +15,1 % ; même instrument et même horaire (fixings du matin)"
+        },
+        {
+          "id": "c",
+          "text": "Environ +31 % ; même base"
+        },
+        {
+          "id": "d",
+          "text": "Aucun calcul n'est jamais permis"
+        }
+      ],
+      "correct": "b",
+      "explanation": "3 454,70 ÷ 3 002,70 − 1 ≈ +15,1 % ; mélanger matin, après-midi, comptant ou contrats à terme est interdit.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L8.04-Q5",
+      "type": "mcq",
+      "prompt": "Dans la leçon, quel contraste montre que deux épisodes de droits de douane n'ont pas produit les mêmes effets ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les deux épisodes ont duré 40 jours"
+        },
+        {
+          "id": "b",
+          "text": "Le dollar a monté dans les deux cas"
+        },
+        {
+          "id": "c",
+          "text": "L'or a baissé dans les deux cas"
+        },
+        {
+          "id": "d",
+          "text": "Dollar en hausse et or en perte annuelle en 2018, dollar en baisse inhabituelle et or très haussier en 2025"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Reuters rapporte un dollar soutenu en 2018 et une première perte annuelle de l'or depuis 2015 ; en 2025, le FMI note une dépréciation inhabituelle du dollar et LBMA un or à +62,9 %.",
+      "tags": [
+        "comparaison"
+      ]
+    },
+    {
+      "id": "L8.04-Q6",
+      "type": "mcq",
+      "prompt": "En 2025, l'or a été exclu de la liste des droits de douane (2-3 avril). Que faut-il en retenir ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les droits expliquent la totalité de la hausse de l'or"
+        },
+        {
+          "id": "b",
+          "text": "L'or ne peut pas être influencé par les droits"
+        },
+        {
+          "id": "c",
+          "text": "La mesure commerciale ne frappe pas directement ce bien : un lien entre droits et prix de l'or passe par d'autres canaux (dollar, taux, incertitude, refuge)"
+        },
+        {
+          "id": "d",
+          "text": "L'exclusion prouve une dédollarisation"
+        }
+      ],
+      "correct": "c",
+      "explanation": "LBMA indique que l'exclusion a mis fin à une prime de New York sur Londres ; elle ne dit rien de la valeur de fond.",
+      "tags": [
+        "exclusion"
+      ]
+    },
+    {
+      "id": "L8.04-Q7",
+      "type": "mcq",
+      "prompt": "La déclaration de Genève du 12/05/2025 fait passer le droit « réciproque » américain sur la Chine de 125 % à 10 %, avec 20 % « fentanyl » maintenus. Quel est le total pendant la pause ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "30 %"
+        },
+        {
+          "id": "b",
+          "text": "10 %"
+        },
+        {
+          "id": "c",
+          "text": "125 %"
+        },
+        {
+          "id": "d",
+          "text": "145 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "10 + 20 = 30 % ; avant la pause 125 + 20 = 145 % ; la source est un résumé d'un cabinet d'avocats, le texte complet n'a pas été lu.",
+      "tags": [
+        "geneve"
+      ]
+    },
+    {
+      "id": "L8.04-Q8",
+      "type": "mcq",
+      "prompt": "Quelle formulation est acceptable après la lecture de la leçon ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les droits de douane font toujours monter l'or"
+        },
+        {
+          "id": "b",
+          "text": "Dans les épisodes lus, le dollar et l'or n'ont pas réagi de la même façon aux droits de douane ; les données lues ne permettent ni de conclure à des effets identiques ni d'isoler l'effet des droits"
+        },
+        {
+          "id": "c",
+          "text": "Les droits de douane font toujours baisser le dollar"
+        },
+        {
+          "id": "d",
+          "text": "La hausse de l'or en 2025 est entièrement due aux droits"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La seule formulation prudente énonce l'observation, ses limites et ce qui manque ; les autres généralisent ou attribuent sans preuve.",
+      "tags": [
+        "refus"
+      ]
+    }
+  ],
+  "revision": 1
+}

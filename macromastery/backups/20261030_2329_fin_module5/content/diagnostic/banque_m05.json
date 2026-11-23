@@ -1,0 +1,223 @@
+{
+  "bank": "diagnostic",
+  "module": 5,
+  "note": "Banque progressive : 4 paires de QCM parallèles (forme A = diagnostic initial, forme B = version finale alternative). Niveau : accessible avant le cours. Les modules 0 à 3 restent à alimenter. Données fictives.",
+  "items": [
+    {
+      "id": "D5-A1",
+      "module": 5,
+      "form": "A",
+      "pair": 1,
+      "tag": "taux réel",
+      "prompt": "Taux nominal de 5 % et inflation attendue de 2 % : quel est le taux réel approximatif ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "3 %"
+        },
+        {
+          "id": "b",
+          "text": "7 %"
+        },
+        {
+          "id": "c",
+          "text": "2,5 %"
+        },
+        {
+          "id": "d",
+          "text": "10 %"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D5-B1",
+      "module": 5,
+      "form": "B",
+      "pair": 1,
+      "tag": "taux réel",
+      "prompt": "Taux nominal de 4 % et inflation attendue de 1,5 % : quel est le taux réel approximatif ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2,5 %"
+        },
+        {
+          "id": "b",
+          "text": "5,5 %"
+        },
+        {
+          "id": "c",
+          "text": "2,7 %"
+        },
+        {
+          "id": "d",
+          "text": "6 %"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D5-A2",
+      "module": 5,
+      "form": "A",
+      "pair": 2,
+      "tag": "or en euros",
+      "prompt": "L'or vaut 2 000 $ et l'EUR/USD vaut 1,25. Combien vaut l'or en euros ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 600 €"
+        },
+        {
+          "id": "b",
+          "text": "2 500 €"
+        },
+        {
+          "id": "c",
+          "text": "1 250 €"
+        },
+        {
+          "id": "d",
+          "text": "2 000 €"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D5-B2",
+      "module": 5,
+      "form": "B",
+      "pair": 2,
+      "tag": "or en euros",
+      "prompt": "L'or vaut 3 000 $ et l'EUR/USD vaut 1,20. Combien vaut l'or en euros ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2 500 €"
+        },
+        {
+          "id": "b",
+          "text": "3 600 €"
+        },
+        {
+          "id": "c",
+          "text": "1 800 €"
+        },
+        {
+          "id": "d",
+          "text": "3 000 €"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D5-A3",
+      "module": 5,
+      "form": "A",
+      "pair": 3,
+      "tag": "contrat",
+      "prompt": "Un contrat à terme porte sur 100 onces et l'or vaut 2 000 $. Quelle est la valeur notionnelle du contrat ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "200 000 $"
+        },
+        {
+          "id": "b",
+          "text": "20 000 $"
+        },
+        {
+          "id": "c",
+          "text": "2 000 $"
+        },
+        {
+          "id": "d",
+          "text": "2 M$"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D5-B3",
+      "module": 5,
+      "form": "B",
+      "pair": 3,
+      "tag": "contrat",
+      "prompt": "Un contrat à terme porte sur 100 onces et l'or vaut 3 000 $. Quelle est la valeur notionnelle du contrat ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "300 000 $"
+        },
+        {
+          "id": "b",
+          "text": "30 000 $"
+        },
+        {
+          "id": "c",
+          "text": "3 000 $"
+        },
+        {
+          "id": "d",
+          "text": "3 M$"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D5-A4",
+      "module": 5,
+      "form": "A",
+      "pair": 4,
+      "tag": "cycle",
+      "prompt": "Un cycle de l'or de durée fixe est-il démontré par l'histoire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Non : les phases baissières durent de 21 à 141 mois dans l'étude lue"
+        },
+        {
+          "id": "b",
+          "text": "Oui, 8 ans"
+        },
+        {
+          "id": "c",
+          "text": "Oui, 5 ans"
+        },
+        {
+          "id": "d",
+          "text": "Oui, 20 ans"
+        }
+      ],
+      "correct": "a"
+    },
+    {
+      "id": "D5-B4",
+      "module": 5,
+      "form": "B",
+      "pair": 4,
+      "tag": "cycle",
+      "prompt": "Peut-on prévoir la fin d'une phase de l'or à partir de sa seule durée passée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Non : les durées observées sont très dispersées"
+        },
+        {
+          "id": "b",
+          "text": "Oui, toujours"
+        },
+        {
+          "id": "c",
+          "text": "Oui, après 8 ans"
+        },
+        {
+          "id": "d",
+          "text": "Oui, après 3 ans"
+        }
+      ],
+      "correct": "a"
+    }
+  ]
+}

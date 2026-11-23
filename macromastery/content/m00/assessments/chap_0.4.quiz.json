@@ -1,0 +1,180 @@
+{
+  "chapterId": "0.4",
+  "module": 0,
+  "title": "Quiz de chapitre 0.4 — Taux et obligations (L0.07–L0.08)",
+  "passThreshold": 0.8333333333333334,
+  "requiredCorrect": 5,
+  "passRule": "5 bonnes réponses sur 6 (règle R1 : ⌈0,8 × 6⌉ = 5 ; seuil pédagogique provisoire)",
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C0.4-Q1",
+      "type": "mcq",
+      "prompt": "1 000 placés 3 ans à 5 % par an en intérêts composés valent :",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 150,00"
+        },
+        {
+          "id": "b",
+          "text": "1 050,00"
+        },
+        {
+          "id": "c",
+          "text": "1 125,00"
+        },
+        {
+          "id": "d",
+          "text": "1 157,63"
+        }
+      ],
+      "correct": "d",
+      "explanation": "1 000 × 1,05³ = 1 157,63. Les intérêts simples donneraient 1 150.",
+      "tags": [
+        "compose"
+      ]
+    },
+    {
+      "id": "C0.4-Q2",
+      "type": "mcq",
+      "prompt": "25 points de base (pb) valent :",
+      "options": [
+        {
+          "id": "a",
+          "text": "25 %"
+        },
+        {
+          "id": "b",
+          "text": "2,5 %"
+        },
+        {
+          "id": "c",
+          "text": "0,25 point de pourcentage"
+        },
+        {
+          "id": "d",
+          "text": "0,025 point"
+        }
+      ],
+      "correct": "c",
+      "explanation": "1 pb = 0,01 point de pourcentage ; 25 pb = 0,25 point.",
+      "tags": [
+        "pb"
+      ]
+    },
+    {
+      "id": "C0.4-Q3",
+      "type": "mcq",
+      "prompt": "Taux nominal 4,5 %, inflation 2,5 % : taux réel exact ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1,95 %"
+        },
+        {
+          "id": "b",
+          "text": "2,00 %"
+        },
+        {
+          "id": "c",
+          "text": "7,00 %"
+        },
+        {
+          "id": "d",
+          "text": "1,00 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "(1,045 ÷ 1,025) − 1 = 1,95 % ; l'approximation « nominal − inflation » donne 2,0 %.",
+      "tags": [
+        "taux-reel"
+      ]
+    },
+    {
+      "id": "C0.4-Q4",
+      "type": "mcq",
+      "prompt": "Quand le rendement exigé monte, le prix d'une obligation à taux fixe :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Monte"
+        },
+        {
+          "id": "b",
+          "text": "Baisse"
+        },
+        {
+          "id": "c",
+          "text": "Ne change pas"
+        },
+        {
+          "id": "d",
+          "text": "Devient nul"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Rendement ↑ → prix ↓.",
+      "tags": [
+        "relation-inverse"
+      ]
+    },
+    {
+      "id": "C0.4-Q5",
+      "type": "mcq",
+      "prompt": "Obligation nominale 1 000, coupon 5 %, 3 ans, rendement exigé 6 % : prix ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 000,00"
+        },
+        {
+          "id": "b",
+          "text": "1 027,75"
+        },
+        {
+          "id": "c",
+          "text": "973,27"
+        },
+        {
+          "id": "d",
+          "text": "950,00"
+        }
+      ],
+      "correct": "c",
+      "explanation": "50 ÷ 1,06 + 50 ÷ 1,06² + 1 050 ÷ 1,06³ = 973,27 (décote).",
+      "tags": [
+        "prix"
+      ]
+    },
+    {
+      "id": "C0.4-Q6",
+      "type": "mcq",
+      "prompt": "Le 30 juin 2026, selon la courbe du Trésor lue : 3,87 % à 3 mois et 4,44 % à 10 ans. La pente 10 ans − 3 mois vaut :",
+      "options": [
+        {
+          "id": "a",
+          "text": "+57 pb"
+        },
+        {
+          "id": "b",
+          "text": "−57 pb"
+        },
+        {
+          "id": "c",
+          "text": "+30 pb"
+        },
+        {
+          "id": "d",
+          "text": "+4,44 pb"
+        }
+      ],
+      "correct": "a",
+      "explanation": "4,44 − 3,87 = 0,57 point = 57 pb (donnée observée, lecture par résumé automatique).",
+      "tags": [
+        "courbe"
+      ]
+    }
+  ],
+  "revision": 1
+}

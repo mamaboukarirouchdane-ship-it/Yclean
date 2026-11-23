@@ -1,0 +1,211 @@
+---
+id: L6.01
+module: 6
+order: 1
+title: "Information et prix : efficience, attentes, surprises et « acheter la rumeur, vendre la nouvelle »"
+title_initial: "Information et prix"
+level: "intermédiaire"
+duration_hours: 3.0
+prerequisites: ["L2.01", "L5.03", "L5.04", "L5.11", "L5.12"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L6.01.quiz.json"
+sources: ["S-ECL-01", "S-KIT-05", "S-MIN-02", "S-FED-26", "S-KIT-04", "S-RTR-01", "S-WGC-10"]
+---
+
+# L6.01 — Information et prix
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée, avec sa date ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Toutes les sources sont lues par **résumé automatique** (une encyclopédie en ligne, deux articles de presse spécialisée, un communiqué primaire de la Fed). L'article de Fama (1970) **n'a pas été lu directement** : seule une présentation secondaire l'a été. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. énoncer l'**hypothèse d'efficience** et ses trois formes, et en tirer la conséquence pour les annonces ;
+2. distinguer **résultat attendu**, **résultat publié** et **surprise**, et calculer une surprise de taux ;
+3. expliquer le mécanisme « acheter la rumeur, vendre la nouvelle » **sans en faire une règle** ;
+4. expliquer pourquoi une surprise de même signe peut avoir des effets opposés sur l'or ;
+5. distinguer la **variation de la séance** de la **réaction à une annonce** ;
+6. remplir une **fiche d'événement** dont les fenêtres de mesure sont fixées **avant** l'analyse.
+
+## 2. Prérequis
+
+- Banques centrales et décisions de taux (module 2), taux réels (L5.03), dollar (L5.04), tableau de bord et thèse (L5.11, L5.12).
+
+## 3. Explication intuitive
+
+Imagine un prix comme une moyenne de ce que tout le monde attend. Quand une annonce tombe, ce qui fait bouger le prix n'est pas qu'elle soit « bonne » ou « mauvaise » en soi, mais qu'elle soit **meilleure ou pire que ce qui était déjà attendu**. Si tout le monde pense que la Fed ne bougera pas et qu'elle ne bouge pas, il n'y a rien de nouveau à intégrer. Parfois, le prix bouge quand même, parce que d'autres éléments de l'annonce (un vote partagé, une phrase) modifient les attentes pour la **suite**. La leçon apprend à poser les bonnes questions avant de regarder le graphique : qu'attendait-on ? qu'a-t-on appris ? sur quelle fenêtre mesure-t-on ?
+
+## 4. Développement technique
+
+### 4.1 L'hypothèse d'efficience
+**[Fait]** (S-ECL-01, présentation de Jones et Netter dans une encyclopédie en ligne, résumé automatique) : selon la théorie des marchés efficients, le prix d'un actif reflète toute l'information pertinente sur sa valeur ; la concurrence rend l'investissement un « jeu équitable » où l'on ne peut pas, de façon durable, obtenir des rendements anormaux ajustés du risque. Trois formes, attribuées à la synthèse de Fama (1970) : **faible** (les rendements futurs ne se prédisent pas à partir des rendements passés ni du volume), **semi-forte** (les prix reflètent toute l'information publique), **forte** (les prix reflètent aussi l'information privée, cas limite).
+**[Interprétation]** Pour une annonce publique, la forme semi-forte implique que le prix réagit à la **partie imprévue** de l'annonce, pas à son contenu déjà connu. C'est une **hypothèse**, pas un fait : l'entrée lue signale des anomalies attribuées à une mauvaise spécification des modèles ou à des frictions. Nous l'utilisons comme **grille de lecture**, non comme loi.
+
+### 4.2 Attendu, publié, surprise
+**[Définition]** **Surprise = valeur publiée − valeur attendue**, dans l'**unité** de la donnée (points de pourcentage, milliers d'emplois, points de base). **[Définition de cours]** Une surprise **standardisée** divise par l'écart-type historique des surprises de cette donnée, pour comparer des indicateurs différents.
+**Surprise de taux directeur.** **[Définition]** Attendu = Σ (probabilité × variation) ; surprise = décision − attendu. **[Calcul de l'auteur]** Avec 38 % de chances d'une hausse de 25 pb : attendu = 0,38 × 25 = **9,5 pb** ; si la banque maintient, la surprise est **−9,5 pb** (plus accommodante que prévu).
+**Contrainte de rigueur.** La valeur « attendue » doit être celle **disponible avant** l'annonce (consensus d'enquête, prix de marché), pas une valeur reconstituée après coup.
+
+### 4.3 « Acheter la rumeur, vendre la nouvelle »
+**[Définition de cours]** Expression décrivant un prix qui monte avant un événement attendu, puis recule à sa réalisation. **[Interprétation]** Si les participants anticipent un résultat X, le prix intègre X **avant** ; à la publication de X, il n'y a plus de nouvelle, et ceux qui ont acheté pour le résultat peuvent vendre. Le mécanisme est possible, mais ce n'est **pas** une règle : si l'événement est une **vraie surprise**, le prix bouge dans le sens de la surprise ; si l'anticipation n'était pas complète, il continue.
+**[SIMULATION]** Un actif fictif monte de 2 % sur cinq jours avant un événement attendu, puis recule de 0,5 % à la publication : 1,02 × 0,995 − 1 = **+1,49 %** au total. Le « sell the news » peut donc coexister avec un gain cumulé : le recul est relatif à la hausse précédente, pas une perte globale.
+
+### 4.4 Application à l'or : le signe d'une surprise n'est pas fixe
+**[Interprétation]** Pour XAU/USD, une surprise peut agir par plusieurs canaux (L5.03, L5.04) :
+- **Surprise de politique monétaire plus restrictive** : taux réels et dollar plus hauts, pression baissière possible ; mais si elle signale aussi un risque d'inflation, un soutien est possible.
+- **Inflation supérieure aux attentes** : soutien si la crainte d'inflation domine ; pression si elle fait anticiper un resserrement.
+- **Emploi supérieur aux attentes** : taux plus hauts (pression) ou croissance (effet ambigu).
+Le tableau ne donne **aucun signe garanti** : le signe dépend du canal dominant à la date, inconnu a priori. On écrit les **deux hypothèses**, puis on teste lesquelles les données du jour appuient.
+
+### 4.5 Deux réunions de la Fed, deux réactions : 29 juillet et 28 octobre 2026
+| Élément | 29/07/2026 | 28/10/2026 |
+|---|---|---|
+| Fourchette | 3,50–3,75 %, maintenue (5ᵉ maintien de suite) | 3¾–4 %, maintenue |
+| Vote | 9–3 ; trois voix pour une hausse de ¼ point (Hammack, Kashkari, Logan) | 10–2 ; deux voix pour une hausse (Cook, Hammack) |
+| Attentes avant | swaps : ≈ 38 % de hausse ; presque tous les économistes sondés par Bloomberg : maintien | maintien attendu « par le consensus du marché » ; Reuters (21/10) : maintien en octobre, hausse en décembre à 88 % (FedWatch) |
+| Prix de l'or | ≈ 4 040 (dérivé) avant ; 4 080,80 (Comex) à 14 h 15 de New York ; plus bas du matin 3 993,80 | 4 035,48 en spot à la rédaction, « −0,60 % sur la séance » |
+| Sources | S-MIN-02 (presse spécialisée) | S-KIT-05 (presse spécialisée), S-FED-26 (communiqué) |
+
+**[Fait]** Juillet : « 4 080,80 $ à 14 h 15 » après le communiqué, hausse d'environ 1 % par rapport au règlement de la veille. Octobre : « 4 035,48 $, en baisse de 0,60 % sur la séance » ; l'article ne donne ni le prix avant le communiqué ni d'horaires de mouvement.
+**[Calcul de l'auteur]** Juillet : 4 080,80 ÷ 1,01 = **4 040,4** (prix de veille implicite) ; plus bas du matin → 4 080,80 : **+2,18 %**. Octobre : 4 035,48 ÷ (1 − 0,006) = **4 059,8** (point de comparaison implicite de la séance). Hausse de 25 pb de la fourchette entre les deux dates (3,75 − 3,50), d'où un cycle de resserrement que la source de juillet ne détaille pas.
+**[Interprétation]** Deux « maintiens avec votes dissidents en faveur d'une hausse », deux mouvements de signes opposés dans les articles lus. Ce contraste illustre l'asymétrie des réactions, mais ne l'explique pas : attentes différentes (38 % de hausse avant juillet, probabilité d'octobre non lue), contexte de taux différent, autres informations du jour. **Ce qu'on ne peut pas conclure** : que la fourchette des attentes ou le vote ait causé le mouvement ; aucune mesure à 5 min, 30 min ou 4 h n'a été lue.
+
+### 4.6 Séance contre réaction
+**[Définition de cours]** La **variation de la séance** (ou depuis le règlement de la veille) mélange tout ce qui s'est passé dans la journée. La **réaction à une annonce** se mesure entre un prix juste **avant** l'heure officielle et un prix à des délais **fixés d'avance**. **[Interprétation]** Les deux articles lus donnent surtout des variations de séance ; elles ne sont pas des réactions au sens strict.
+**Fenêtres.** **[Définition de cours]** Fenêtres de la leçon : **5 minutes**, **30 minutes** et **4 heures** après l'heure officielle du communiqué (14 h, heure de New York, soit 18 h UTC et 19 h à Cotonou ; les États-Unis restent à l'heure d'été jusqu'au 1ᵉʳ novembre 2026). Elles sont **fixées avant** l'analyse pour ne pas retenir seulement celles qui confirment une hypothèse.
+
+### 4.7 La fiche d'événement
+**[Définition de cours]** Pour chaque annonce : (1) date, heure et fuseau ; (2) consensus disponible avant publication ; (3) valeur publiée ; (4) surprise et unité ; (5) prix de XAU/USD juste avant ; (6) réaction à 5 min, 30 min, 4 h ; (7) dollar et taux réels concomitants ; (8) interprétation retenue **et** explications concurrentes ; (9) sources, dates de consultation, limites.
+**Application aux deux cas lus** : (1) renseigné, (2) partiellement, (3) renseigné, (4) calculable en juillet seulement, (5) à 14 h non lu, (6) non lu, (7) non lu, (8) possible, (9) renseigné. **[Interprétation]** Une fiche incomplète est une réponse honnête : elle marque la limite de ce qui peut être conclu.
+
+## 5. Définitions essentielles
+
+- **Hypothèse d'efficience (forme semi-forte)** : les prix reflètent l'information publique disponible.
+- **Attendu / consensus** : valeur anticipée avant l'annonce (enquête, prix de marché).
+- **Surprise** : valeur publiée moins valeur attendue, avec son unité.
+- **Surprise de taux** : décision − Σ (probabilité × variation).
+- **Variation de séance** : mouvement depuis le règlement de la veille ou l'ouverture.
+- **Réaction** : mouvement entre un prix juste avant l'annonce et un délai fixé d'avance.
+- **Fenêtre pré-enregistrée** : délai de mesure choisi avant l'analyse.
+
+## 6. Exemples chiffrés
+
+**6.1 Attendu.** 0,38 × 25 = 9,5 pb ; maintien : surprise −9,5 pb.
+**6.2 Prix implicite d'octobre.** 4 035,48 ÷ 0,994 = 4 059,8.
+**6.3 Prix implicite de juillet.** 4 080,80 ÷ 1,01 = 4 040,4 ; 3 993,80 → 4 080,80 : +2,18 %.
+**6.4 Fenêtres (SIMULATION).** Prix de départ 4 000 ; 4 012 à 5 min (+0,30 %) ; 3 996 à 30 min (−0,10 %) ; 4 040 à 4 h (+1,00 %) : le signe change selon la fenêtre.
+
+### 6.5 Cas historique documenté — 29 février 2012 : un renversement le jour d'une déclaration
+**[Fait]** (S-RTR-01, récapitulatif Reuters de 2013, résumé automatique) : le 29/02/2012, l'or atteint **1 790,30 $** puis tombe **sous 1 690 $** le même jour, un « renversement brutal » après des commentaires du président de la Fed de l'époque, Ben Bernanke. En septembre 2012, un sommet de 1 795,69 $ suit de nouvelles mesures de relance de la Fed.
+**[Calcul de l'auteur]** 1 690 ÷ 1 790,30 − 1 = **−5,6 %** au plus (le prix est « inférieur » à 1 690) ; en comparaison, la relance de septembre coïncide avec un sommet 0,3 % au-dessus de 1 790,30 (1 795,69 ÷ 1 790,30 − 1).
+**[Interprétation]** Le même acteur (la Fed) est associé à un renversement en février et à un sommet en septembre, mais le récapitulatif ne dit ni quelles étaient les attentes, ni l'heure exacte du mouvement, ni les autres informations du jour. **Ce qu'on ne peut pas conclure** : que les commentaires aient causé le recul, ou que la relance ait causé le sommet ; la qualité des attentes est inconnue. **Limites** : récapitulatif secondaire, résumé automatique, prix de séance.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **XAU/USD** : lire une annonce de la Fed comme un **changement d'attentes sur la trajectoire**, pas comme un niveau.
+- **Forex** : la même grille s'applique à EUR/USD autour d'une réunion de la BCE : consensus, surprise, fenêtre.
+- **Prudence** : une réaction observée aujourd'hui ne dicte pas la réaction de la prochaine annonce.
+- **Routine** : remplir la fiche, écrire les deux hypothèses de signe, fixer les fenêtres, puis seulement regarder le prix.
+
+## 8. Erreurs courantes
+
+1. Juger une annonce « bonne » ou « mauvaise » sans connaître le consensus.
+2. Reconstituer le consensus après coup.
+3. Prendre la variation de la séance pour la réaction à l'annonce.
+4. Choisir la fenêtre de mesure après avoir vu le graphique.
+5. Ériger « acheter la rumeur, vendre la nouvelle » en règle.
+6. Attribuer le mouvement à l'événement le plus visible.
+7. Ignorer l'unité de la surprise.
+
+## 9. Limites de l'interprétation
+
+- Sources lues par **résumé automatique** ; Fama (1970) non lu directement.
+- Les articles lus donnent des variations de séance et très peu d'horaires.
+- La probabilité de hausse avant la réunion d'octobre est inconnue : la surprise d'octobre n'est pas calculable.
+- Dollar, taux réels et positionnement concomitants non lus.
+- Deux événements ne suffisent pas pour juger une asymétrie.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Attendu.** 38 % de chances d'une hausse de 25 pb, 62 % de maintien. Calcule l'attendu et la surprise si la banque maintient.
+
+<details>
+<summary>Correction 1</summary>
+
+0,38 × 25 + 0,62 × 0 = **9,5 pb** ; surprise = 0 − 9,5 = **−9,5 pb** (plus accommodante que prévu).
+</details>
+
+**Exercice 2 — Prix implicites.** Octobre : 4 035,48 $, « −0,60 % sur la séance ». Juillet : 4 080,80 $, « +1 % par rapport au règlement de la veille ». Calcule les points de comparaison. S'agit-il de réactions ?
+
+<details>
+<summary>Correction 2</summary>
+
+4 035,48 ÷ 0,994 = **4 059,8** ; 4 080,80 ÷ 1,01 = **4 040,4**. Ce sont des variations **de séance** depuis un point de comparaison de la journée, pas des réactions mesurées depuis l'instant du communiqué.
+</details>
+
+**Exercice 3 — Surprise standardisée.** Inflation attendue 3,0 %, publiée 3,3 % ; écart-type historique des surprises : 0,15 point. Calcule la surprise et sa version standardisée.
+
+<details>
+<summary>Correction 3</summary>
+
+Surprise : 3,3 − 3,0 = **+0,3 point** ; standardisée : 0,3 ÷ 0,15 = **2,0** écarts-types. Le signe de l'effet sur l'or n'est pas donné par ce calcul (§ 4.4).
+</details>
+
+**Exercice 4 — Fenêtres.** Prix de départ 4 000 ; 4 012 à 5 min ; 3 996 à 30 min ; 4 040 à 4 h (SIMULATION). Calcule les trois variations. Que conclure sur le choix de la fenêtre ?
+
+<details>
+<summary>Correction 4</summary>
+
++0,30 % ; −0,10 % ; +1,00 %. Le signe change selon la fenêtre : fixer les fenêtres **avant** l'analyse évite de choisir celle qui confirme l'hypothèse.
+</details>
+
+**Exercice 5 — Rumeur et nouvelle.** Un actif fictif monte de 2 % avant un événement attendu, puis recule de 0,5 % à la publication. Quelle variation cumulée ?
+
+<details>
+<summary>Correction 5</summary>
+
+1,02 × 0,995 − 1 = **+1,49 %**. Le recul de « vendre la nouvelle » est relatif à la hausse préalable ; le cumul reste positif dans cet exemple fictif.
+</details>
+
+**Exercice 6 — Critique.** « L'or a baissé après un maintien de la Fed avec deux voix pour une hausse, donc un maintien divisé est baissier. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) En juillet, un maintien avec trois voix dissidentes est associé à une hausse des prix lus. (2) Les attentes d'octobre (probabilité de hausse) ne sont pas lues. (3) Les articles donnent des variations de séance, non des réactions mesurées aux fenêtres fixées. (4) Dollar, taux réels et autres informations du jour sont inconnus. (5) Deux événements ne démontrent aucune règle.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L6.01.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Le prix réagit à la **partie imprévue** d'une information, selon la forme semi-forte de l'efficience (hypothèse).
+- Surprise = publié − attendu, avec son unité ; le consensus doit être antérieur à l'annonce.
+- « Acheter la rumeur, vendre la nouvelle » est un mécanisme possible, pas une règle.
+- Pour l'or, le signe d'une surprise dépend du canal dominant (taux réels, dollar, inflation).
+- Deux maintiens de la Fed (juillet, octobre 2026) avec votes dissidents : mouvements de signes opposés dans les articles lus, sans réaction mesurée aux fenêtres fixées.
+- La fiche d'événement et les fenêtres pré-enregistrées protègent contre la sélection a posteriori.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer un attendu et une surprise de taux (Exercice 1).
+- [ ] Distinguer variation de séance et réaction (Exercice 2).
+- [ ] Standardiser une surprise et en nommer la limite (Exercice 3).
+- [ ] Montrer la dépendance au choix de fenêtre (Exercice 4).
+- [ ] Calculer un effet cumulé rumeur/nouvelle (Exercice 5).
+- [ ] Critiquer une règle tirée de deux événements (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **31 octobre 2026** :
+
+- **S-ECL-01** — Jones et Netter, « Efficient Capital Markets », Concise Encyclopedia of Economics (Econlib ; dernière modification affichée : 09/11/2021) : https://www.econlib.org/library/Enc/EfficientCapitalMarkets.html
+- **S-KIT-05** — Kitco, « Gold price drops to $4,035/oz as Fed votes 10-2 in favor of rate hold » (28/10/2026) : https://www.kitco.com/news/article/2026-10-28/gold-price-drops-4035oz-fed-votes-10-2-favor-rate-hold
+- **S-MIN-02** — Mining.com, « Gold price rebounds from sub-$4,000 dip as split Fed holds fire, silver jumps » (29/07/2026) : https://www.mining.com/gold-price-rebounds-from-sub-4000-dip-as-split-fed-holds-fire-silver-jumps/
+- **S-FED-26**, **S-KIT-04**, **S-RTR-01**, **S-WGC-10** — déjà lues (L5.10, L5.11, L5.07).
+
+**Définitions de cours non rattachées à une source lue :** surprise standardisée, fenêtre pré-enregistrée, fiche d'événement, variation de séance contre réaction. **Points non vérifiés :** texte de Fama (1970), consensus d'enquête chiffré d'octobre, probabilité de hausse avant octobre, prix de XAU/USD aux fenêtres de 5 min, 30 min et 4 h, dollar et taux réels concomitants, horaire exact de la déclaration de février 2012.

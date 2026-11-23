@@ -1,0 +1,233 @@
+{
+  "lessonId": "L3.07",
+  "title": "Quiz — PCE, PPI et déflateur",
+  "passThreshold": 0.8,
+  "note": "Quiz de la leçon L3.07",
+  "questions": [
+    {
+      "id": "L3.07-Q1",
+      "type": "mcq",
+      "prompt": "Quel indice la Fed utilise-t-elle pour mesurer son objectif d'inflation de 2 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le PPI de demande finale"
+        },
+        {
+          "id": "b",
+          "text": "Le CPI d'ensemble"
+        },
+        {
+          "id": "c",
+          "text": "L'indice des prix PCE"
+        },
+        {
+          "id": "d",
+          "text": "Le déflateur des importations"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La déclaration sur les objectifs de long terme mesure l'inflation par la variation annuelle de l'indice des prix PCE.",
+      "tags": [
+        "fed"
+      ]
+    },
+    {
+      "id": "L3.07-Q2",
+      "type": "mcq",
+      "prompt": "Quelle différence de principe sépare le CPI du PCE ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le CPI part de ce que les ménages achètent, le PCE de ce que les entreprises vendent et couvre plus de dépenses"
+        },
+        {
+          "id": "b",
+          "text": "Le CPI est trimestriel"
+        },
+        {
+          "id": "c",
+          "text": "Le PCE ne couvre que l'alimentation"
+        },
+        {
+          "id": "d",
+          "text": "Il n'y en a aucune"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Selon l'article de la Fed de Cleveland, le CPI repose sur les achats des ménages et le PCE sur les ventes des entreprises.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L3.07-Q3",
+      "type": "mcq",
+      "prompt": "PCE septembre 2026 : +0,5 % sur le mois. Quelle annualisation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ 3,66 %"
+        },
+        {
+          "id": "b",
+          "text": "Environ 0,5 %"
+        },
+        {
+          "id": "c",
+          "text": "Environ 5,0 %"
+        },
+        {
+          "id": "d",
+          "text": "Environ 6,17 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "(1 + 0,005)¹² − 1 = 6,17 % ; 3,66 % est l'annualisation de +0,3 %, le cœur.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.07-Q4",
+      "type": "mcq",
+      "prompt": "Cœur CPI à 2,6 % et cœur PCE à 3,1 % sur 12 mois : quel est l'écart CPI − PCE ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+0,5 point"
+        },
+        {
+          "id": "b",
+          "text": "−0,5 point"
+        },
+        {
+          "id": "c",
+          "text": "+0,1 point"
+        },
+        {
+          "id": "d",
+          "text": "0 point"
+        }
+      ],
+      "correct": "b",
+      "explanation": "2,6 − 3,1 = −0,5 point ; le cœur PCE est supérieur au cœur CPI en septembre 2026.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.07-Q5",
+      "type": "mcq",
+      "prompt": "Que peut-on conclure de ce que le cœur PCE dépasse le cœur CPI en septembre 2026 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que l'inflation a disparu"
+        },
+        {
+          "id": "b",
+          "text": "Que le BLS s'est trompé"
+        },
+        {
+          "id": "c",
+          "text": "Que le BEA s'est trompé"
+        },
+        {
+          "id": "d",
+          "text": "Rien sur la cause : pondérations, couverture ou collecte sont des hypothèses non vérifiées"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Les sources lues ne donnent pas la cause ; plusieurs explications sont possibles et restent à tester.",
+      "tags": [
+        "prudence"
+      ]
+    },
+    {
+      "id": "L3.07-Q6",
+      "type": "mcq",
+      "prompt": "Logement +0,4 %, autres +0,2 % ; poids CPI 35/65 et poids PCE 15/85. Quel écart CPI − PCE ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−0,04 point"
+        },
+        {
+          "id": "b",
+          "text": "+0,27 point"
+        },
+        {
+          "id": "c",
+          "text": "+0,04 point"
+        },
+        {
+          "id": "d",
+          "text": "0,23 point"
+        }
+      ],
+      "correct": "c",
+      "explanation": "CPI 0,35 × 0,4 + 0,65 × 0,2 = 0,27 ; PCE 0,15 × 0,4 + 0,85 × 0,2 = 0,23 ; écart 0,04 point.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.07-Q7",
+      "type": "mcq",
+      "prompt": "Pourquoi un PPI de demande finale élevé n'annonce-t-il pas mécaniquement un CPI élevé ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Transfert partiel et décalé, marges de commerce volatiles et paniers différents"
+        },
+        {
+          "id": "b",
+          "text": "Parce que le PPI est toujours faux"
+        },
+        {
+          "id": "c",
+          "text": "Parce que le CPI est calculé avant le PPI"
+        },
+        {
+          "id": "d",
+          "text": "Parce que le PPI ne mesure que les loyers"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le PPI inclut des services de commerce et des biens intermédiaires ; la répercussion sur les consommateurs est partielle.",
+      "tags": [
+        "methode"
+      ]
+    },
+    {
+      "id": "L3.07-Q8",
+      "type": "mcq",
+      "prompt": "Nominal +5,0 % et réel +1,8 % : quel déflateur implicite ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ 3,8 %"
+        },
+        {
+          "id": "b",
+          "text": "Environ 3,14 %"
+        },
+        {
+          "id": "c",
+          "text": "Environ 6,8 %"
+        },
+        {
+          "id": "d",
+          "text": "Environ 1,8 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "1,050 ÷ 1,018 − 1 = 3,14 % ; la soustraction (3,2) est une approximation, pas le calcul exact.",
+      "tags": [
+        "calcul"
+      ]
+    }
+  ],
+  "revision": 1
+}

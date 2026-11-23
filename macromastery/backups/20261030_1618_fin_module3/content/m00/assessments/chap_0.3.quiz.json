@@ -1,0 +1,178 @@
+{
+  "chapterId": "0.3",
+  "module": 0,
+  "title": "Quiz de chapitre 0.3 — L'or (L0.06)",
+  "passThreshold": 0.8,
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C0.3-Q1",
+      "type": "mcq",
+      "prompt": "1 once troy vaut :",
+      "options": [
+        {
+          "id": "a",
+          "text": "28,35 g"
+        },
+        {
+          "id": "b",
+          "text": "31,1034768 g"
+        },
+        {
+          "id": "c",
+          "text": "100 g"
+        },
+        {
+          "id": "d",
+          "text": "1 kg"
+        }
+      ],
+      "correct": "b",
+      "explanation": "1 once troy = 31,1034768 grammes (≠ once avoirdupois, environ 28,35 g).",
+      "tags": [
+        "unites"
+      ]
+    },
+    {
+      "id": "C0.3-Q2",
+      "type": "mcq",
+      "prompt": "Un compte d'or non alloué est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Des barres identifiées au nom du client"
+        },
+        {
+          "id": "b",
+          "text": "Un contrat à terme"
+        },
+        {
+          "id": "c",
+          "text": "Un ETF"
+        },
+        {
+          "id": "d",
+          "text": "Une créance sur l'établissement"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Non alloué : créance sur l'établissement, sans barres identifiées. Alloué : barres identifiées.",
+      "tags": [
+        "alloue"
+      ]
+    },
+    {
+      "id": "C0.3-Q3",
+      "type": "mcq",
+      "prompt": "Un contrat COMEX MGC porte sur :",
+      "options": [
+        {
+          "id": "a",
+          "text": "100 onces"
+        },
+        {
+          "id": "b",
+          "text": "1 once"
+        },
+        {
+          "id": "c",
+          "text": "10 onces"
+        },
+        {
+          "id": "d",
+          "text": "1 kg"
+        }
+      ],
+      "correct": "c",
+      "explanation": "GC = 100 onces, MGC = 10 onces, 1OZ = 1 once.",
+      "tags": [
+        "contrats"
+      ]
+    },
+    {
+      "id": "C0.3-Q4",
+      "type": "mcq",
+      "prompt": "Le règlement comptant sur le marché de gros de Londres se fait en général :",
+      "options": [
+        {
+          "id": "a",
+          "text": "À deux jours ouvrés"
+        },
+        {
+          "id": "b",
+          "text": "Immédiatement"
+        },
+        {
+          "id": "c",
+          "text": "À un mois"
+        },
+        {
+          "id": "d",
+          "text": "À un an"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Comptant à deux jours ouvrés.",
+      "tags": [
+        "lbma"
+      ]
+    },
+    {
+      "id": "C0.3-Q5",
+      "type": "mcq",
+      "prompt": "En 2025, la demande d'or selon le WGC a atteint :",
+      "options": [
+        {
+          "id": "a",
+          "text": "500 t"
+        },
+        {
+          "id": "b",
+          "text": "5 002 t"
+        },
+        {
+          "id": "c",
+          "text": "50 000 t"
+        },
+        {
+          "id": "d",
+          "text": "50 t"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le WGC publie 5 002 tonnes pour 2025 ; on ne compare pas ce chiffre à la seule production minière.",
+      "tags": [
+        "wgc"
+      ]
+    },
+    {
+      "id": "C0.3-Q6",
+      "type": "mcq",
+      "prompt": "Quelle différence entre un ETF d'or et l'or physique ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aucune"
+        },
+        {
+          "id": "b",
+          "text": "L'ETF est toujours moins cher"
+        },
+        {
+          "id": "c",
+          "text": "L'ETF donne des parts d'un fonds avec des frais ; le physique a prime, décote et coûts de garde"
+        },
+        {
+          "id": "d",
+          "text": "Le physique est sans risque"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Chaque forme d'exposition a ses coûts et ses risques propres ; aucune n'est sans risque.",
+      "tags": [
+        "etf"
+      ]
+    }
+  ],
+  "revision": 1
+}

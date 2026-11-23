@@ -1,0 +1,185 @@
+{
+  "chapterId": "8.3",
+  "module": 8,
+  "title": "Quiz de chapitre 8.3 — Régimes de risque et durée des chocs (L8.05–L8.06)",
+  "passThreshold": 0.8333333333333334,
+  "passRule": "5 bonnes réponses sur 6 (seuil pédagogique provisoire)",
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C8.3-Q1",
+      "type": "mcq",
+      "prompt": "SIMULATION : six indicateurs ; quatre confirment un régime risk-off, un est neutre, un contredit (l'or). La règle fixée d'avance exige un score ≥ +4. Quel verdict ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Risk-off : quatre signaux sur six confirment le régime"
+        },
+        {
+          "id": "b",
+          "text": "Régime non tranché (score +3, sous le seuil de +4 fixé d'avance)"
+        },
+        {
+          "id": "c",
+          "text": "Risk-on : le signal de l'or contredit les quatre autres"
+        },
+        {
+          "id": "d",
+          "text": "Risk-off, après abaissement du seuil à +3 pour pouvoir conclure"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Score = 4 − 1 = +3 < +4 : « non tranché ». Changer la règle après avoir vu les prix la viderait de son sens.",
+      "tags": [
+        "matrice",
+        "regle"
+      ]
+    },
+    {
+      "id": "C8.3-Q2",
+      "type": "mcq",
+      "prompt": "T0 = 11/09/2001. Quelle est la date T0 + 90 jours, et que dit la grille de couverture si la seule valeur lue est une clôture du 16/11 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "10/12/2001 ; horizon couvert, car le 16/11 est postérieur à T0"
+        },
+        {
+          "id": "b",
+          "text": "11/12/2001 ; horizon partiellement couvert par la clôture du 16/11"
+        },
+        {
+          "id": "c",
+          "text": "09/12/2001 ; horizon couvert, une clôture proche suffisant"
+        },
+        {
+          "id": "d",
+          "text": "10/12/2001 ; horizon de 90 jours non couvert (le 16/11 est le jour 66)"
+        }
+      ],
+      "correct": "d",
+      "explanation": "11/09 + 90 jours = 10/12/2001. Une valeur au jour 66 ne couvre pas l'horizon de 90 jours : on ne l'interpole pas.",
+      "tags": [
+        "horizons",
+        "couverture"
+      ]
+    },
+    {
+      "id": "C8.3-Q3",
+      "type": "mcq",
+      "prompt": "Le VIX est-il une mesure de comportement ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui : il mesure le prix de l'or exprimé en points de volatilité"
+        },
+        {
+          "id": "b",
+          "text": "Oui : il mesure les ventes réelles des portefeuilles pendant la séance de négociation"
+        },
+        {
+          "id": "c",
+          "text": "Non : volatilité attendue déduite de prix d'options, donc une mesure de perception"
+        },
+        {
+          "id": "d",
+          "text": "Oui : il mesure la fuite observée des capitaux vers le dollar"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La méthodologie CBOE décrit une volatilité attendue à 30 jours déduite d'options sur le S&P 500 ; les flux et prix réels sont d'autres mesures.",
+      "tags": [
+        "vix",
+        "perception"
+      ]
+    },
+    {
+      "id": "C8.3-Q4",
+      "type": "mcq",
+      "prompt": "Fixings de l'après-midi de l'or : 1 910 $ (28/02/2022) et 2 069 $ (08/03/2022). Quelle variation, et que dit-elle du 7e jour après T0 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ +8,3 % ; elle ne couvre pas l'horizon de 7 jours (le 08/03 est le jour 12)"
+        },
+        {
+          "id": "b",
+          "text": "≈ +8,3 % ; elle couvre l'horizon de 7 jours, le 08/03 étant proche du 7e jour"
+        },
+        {
+          "id": "c",
+          "text": "≈ −8,3 % ; la baisse mesure la normalisation après le choc initial"
+        },
+        {
+          "id": "d",
+          "text": "Aucun calcul n'est permis entre deux fixings de l'après-midi"
+        }
+      ],
+      "correct": "a",
+      "explanation": "2 069/1 910 − 1 = 0,0832 ; même instrument et même horaire. Mais 03/03 (jour 7) n'est pas lu : la case reste non couverte.",
+      "tags": [
+        "calcul",
+        "2022"
+      ]
+    },
+    {
+      "id": "C8.3-Q5",
+      "type": "mcq",
+      "prompt": "Deux sources donnent des pics du pétrole de ≈ 40 $ et de 46 $ en octobre 1990. Que fait la méthode du chapitre ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Retenir la valeur la plus élevée, parce qu'elle correspond au pic de séance"
+        },
+        {
+          "id": "b",
+          "text": "Conserver les deux, signaler l'anomalie et calculer séparément par source"
+        },
+        {
+          "id": "c",
+          "text": "Faire la moyenne des deux pics pour obtenir une valeur centrale"
+        },
+        {
+          "id": "d",
+          "text": "Supprimer l'épisode de 1990 du tableau comparatif des trois épisodes"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Choisir ou moyenner masque une contradiction de source ; la méthode du chapitre est de conserver et d'étiqueter.",
+      "tags": [
+        "anomalie",
+        "1990"
+      ]
+    },
+    {
+      "id": "C8.3-Q6",
+      "type": "mcq",
+      "prompt": "Pourquoi l'or peut-il baisser pendant un stress de marché ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que l'or n'a jamais joué le rôle de refuge dans aucun des trois épisodes étudiés au chapitre"
+        },
+        {
+          "id": "b",
+          "text": "Parce que tout stress de marché est d'abord un stress de liquidité, ce qu'aucun épisode étudié ne contredit"
+        },
+        {
+          "id": "c",
+          "text": "Liquidité, dollar et taux en hausse, nature du choc, positionnement : hypothèses à documenter, aucune démontrée par un épisode seul"
+        },
+        {
+          "id": "d",
+          "text": "Parce que les banques centrales interdisent aux investisseurs la vente d'or pendant les périodes de crise"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Les épisodes lus (mars 2020 selon un gestionnaire, 2022 selon le WGC) montrent des baisses de l'or, expliquées par des mécanismes possibles ; la part de chacun n'est pas mesurée.",
+      "tags": [
+        "or",
+        "mecanismes"
+      ]
+    }
+  ],
+  "revision": 2
+}

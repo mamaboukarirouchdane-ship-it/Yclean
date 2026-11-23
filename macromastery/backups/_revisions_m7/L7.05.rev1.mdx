@@ -1,0 +1,314 @@
+---
+id: L7.05
+module: 7
+order: 5
+title: "Effets de fin de mois et de fin de trimestre : rééquilibrage, expiration, roulement, couverture, fixing — et savoir distinguer un effet calendaire d'une coïncidence"
+title_initial: "Liquidité et calendriers de flux"
+level: "avancé"
+duration_hours: 3.0
+prerequisites: ["L5.06", "L5.07", "L7.01", "L7.04", "L6.06"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L7.05.quiz.json"
+sources: ["S-CME-02", "S-CME-04", "S-CME-08", "S-GSC-01", "S-NBR-01", "S-CXO-01", "S-GUL-01", "S-LBMA-04", "S-WGC-20", "S-IAU-01", "S-CFTC-08", "S-CFTC-09", "S-CFTC-10", "S-CFTC-11", "S-CFTC-12", "S-CFTC-13"]
+---
+
+# L7.05 — Effets de fin de mois et de fin de trimestre
+
+> **Convention de lecture.** **[Fait]** = chiffre ou énoncé lu dans une source citée, avec sa date ; **[Calcul de l'auteur]** ; **[Définition]** ; **[Interprétation]** ; **[Hypothèse]** ; **[SIMULATION]** = données fictives. **Titre du curriculum : « Liquidité et calendriers de flux »** (conservé ; l'intitulé long décrit le contenu demandé par l'utilisateur sans modifier les objectifs). **Données consultées** : règles et fiches du CME (lues par résumé automatique), une page d'un fournisseur d'indice, un document de travail du NBER, un résumé secondaire d'une étude de saisonnalité, un article académique sur l'or, la page « prix et données » du LBMA et les rapports COT de L7.02. **Ce qui manque** : **aucune série quotidienne de l'or n'a pu être lue** (l'historique du LBMA a été retiré à la demande de l'administrateur du prix et son téléchargement exige une licence ; la page du WGC n'affiche aucune valeur) ; aucun volume quotidien ; aucun open interest quotidien. **L'analyse empirique réelle est donc impossible** : la leçon fournit un protocole fixé d'avance, un exemple fictif calculé et un seul constat réel (intérêt ouvert hebdomadaire de l'or COMEX). **Une bonne analyse fondamentale ne garantit pas une transaction gagnante, et aucun effet calendaire n'est établi ici.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. distinguer **quatre mécanismes** qui ne sont pas des synonymes — rééquilibrage, expiration, roulement (*rollover*), couverture — et situer le *fixing* comme procédure de référence ;
+2. calculer le **calendrier** des fins de mois, des fins de trimestre et des derniers jours de négociation des contrats à terme sur l'or, et voir qu'ils ne coïncident pas ;
+3. montrer que le **signe** d'un rééquilibrage dépend de la performance relative de l'or, et estimer son **ordre de grandeur** ;
+4. fixer **avant** de regarder les résultats les fenêtres, l'échantillon, les séances de comparaison et la règle de décision ;
+5. calculer moyenne, médiane, dispersion et écart standardisé sur un échantillon, et reconnaître la **sélection de dates** ;
+6. conclure par **« effet probable », « effet non démontré » ou « données insuffisantes »**, et lister ce qui est impossible à conclure.
+
+## 2. Prérequis
+
+- Banques centrales et ETF d'or (L5.06, L5.07) ; positionnement, COT et chronologie de publication (L7.01) ; flux d'ETF (L7.04) ; volatilité et événements (L6.06).
+- **Non repris ici** : mécanismes généraux des investisseurs institutionnels et des ETF (traités en L5.07 et L7.04).
+
+## 3. Explication intuitive
+
+Beaucoup de marchés montrent des rythmes liés au calendrier : à date fixe, des fonds ajustent leurs poids, des contrats arrivent à terme, des investisseurs déplacent leurs positions d'une échéance à la suivante. Si ces opérations sont assez grosses et assez prévisibles, elles pourraient laisser une trace dans le prix. Mais le calendrier est aussi plein d'autres choses : des annonces macroéconomiques, des séances de faible liquidité, des événements géopolitiques. Un mouvement de l'or le dernier jour d'un trimestre n'est donc qu'**une observation compatible avec plusieurs explications**. L'enjeu de la leçon n'est pas de « découvrir » un effet, mais de savoir **ce qu'il faudrait** pour en démontrer un — et de reconnaître honnêtement quand on ne peut pas.
+
+## 4. Développement technique
+
+### 4.1 Effet calendaire ou coïncidence : la question à poser
+
+**[Définition de cours]** Un **effet calendaire** est une régularité de rendement, de volatilité ou de volume liée à une **position fixe dans le calendrier** (dernier jour du mois, dernier jour du trimestre), qui se répète d'une période à l'autre, **au-delà de ce que le hasard produirait** et **après contrôle** des autres causes connues (annonces, événements).
+
+Un mouvement observé *un* jour de fin de trimestre ne prouve rien : il faut des **répétitions** (plusieurs fins de mois, plusieurs fins de trimestre), une **comparaison** avec des séances ordinaires, une **règle fixée d'avance** et un **mécanisme plausible** testé avec des données indépendantes.
+
+### 4.2 Les mécanismes, un par un
+
+| Mécanisme | Ce que c'est | Calendrier propre | Observable | Ce que la leçon sait établir |
+|---|---|---|---|---|
+| **Rééquilibrage** | Ajustement des poids d'un portefeuille vers des cibles | souvent à date fixe (mois, trimestre) ou quand les poids dérivent | flux sur actifs liquides ; rendement du lendemain | une étude sur actions et obligations (S-NBR-01) ; **rien lu sur l'or** |
+| **Expiration** | Fin de vie d'un contrat à terme (dernier jour de négociation, livraison) | règle du contrat | fin de l'intérêt ouvert du contrat | règles du contrat COMEX or (S-CME-02, S-CME-04, S-CME-08) |
+| **Roulement (*rollover*)** | Transfert d'une position d'un contrat vers un autre | choisi par le détenteur ou fixé par la méthodologie d'un indice | volumes et open interest répartis entre échéances | calendrier d'un indice de matières premières (S-GSC-01) ; **or non mentionné sur la page** |
+| **Couverture (*hedging*)** | Ajustement d'une exposition pour réduire un risque | lié au risque couvert, pas au calendrier | positions de couverture (COT, producteurs) ; fonds en devises couvertes | fonds suisses couverts en change (S-WGC-10) ; COT *Producer/Merchant* (L7.02) |
+| **Fixing** | Procédure fournissant un prix de référence | horaires de la procédure | prix de référence ; valorisation des fonds | enchères du LBMA Gold Price à 10 h 30 et 15 h 00 de Londres (S-LBMA-04) |
+
+**Pourquoi ils ne sont pas des synonymes.** Le *rééquilibrage* est une **décision d'allocation** (peut se faire sur n'importe quel instrument liquide). L'*expiration* est une **règle de contrat** qui s'impose à tous. Le *roulement* est le **déplacement d'une position pour éviter** (ou accompagner) l'expiration ; il se produit **avant** la date d'expiration. La *couverture* est une **motivation** : réduire un risque existant. On peut rééquilibrer en roulant un contrat, couvrir par un contrat qui expire, etc. : les mécanismes se combinent, ils ne se confondent pas.
+
+### 4.3 Clôture mensuelle et clôture trimestrielle
+
+**[Définition de cours — hypothèses, non sourcées pour l'or]** Une **clôture mensuelle** est une date de valorisation et de mesure de performance ; une **clôture trimestrielle** est en outre une date de revue d'allocation et de reporting. Dans les deux cas, on peut imaginer des ajustements. **Aucune source lue ne documente leur ampleur sur l'or.** Surtout : **fin de mois ≠ fin de trimestre**. Tout trimestre se termine avec un mois, mais les mécanismes évoqués (revue d'allocation, expiration d'un contrat de mois pair, etc.) ne se superposent pas systématiquement.
+
+**Le fixing comme instrument de mesure.** **[Fait]** (S-IAU-01) : l'iShares Gold Trust valorise son or au *LBMA Gold Price PM* ; (S-LBMA-04) le LBMA Gold Price est fixé par des enchères indépendantes administrées par ICE Benchmark Administration à 10 h 30 et 15 h 00 de Londres. **[Interprétation]** Le « prix de fin de mois » dépend de l'instrument de mesure : fixing de Londres, règlement du COMEX, prix au comptant à une autre heure ne sont pas interchangeables (rappel de L5.08). Calculer un rendement « de fin de mois » avec deux conventions donne deux résultats.
+
+### 4.4 Le calendrier 2026 : les dates ne coïncident pas
+
+**[Fait]** (S-CME-02, fiche du CME d'environ mars 2019, non datée explicitement ; S-CME-04) : le contrat GC cesse d'être négocié le **troisième dernier jour ouvré** du mois de livraison ; mois de cotation : le mois courant, les deux suivants, février, avril, août et octobre sur 23 mois, juin et décembre sur 72 mois. **Les règles actuelles peuvent différer de ce document** (point ouvert).
+
+**[Calcul de l'auteur]** (jours ouvrés du lundi au vendredi, **jours fériés non traités**) :
+
+| Mois 2026 | Dernier jour ouvré (fin de mois) | Troisième dernier jour ouvré (dernier jour de négociation GC du mois) | Écart en jours ouvrés |
+|---|---|---|---|
+| mars (fin de T1) | mar. 31/03 | ven. 27/03 | 2 |
+| avril | jeu. 30/04 | mar. 28/04 | 2 |
+| juin (fin de T2) | mar. 30/06 | ven. 26/06 | 2 |
+| août | lun. 31/08 | jeu. 27/08 | 2 |
+| septembre (fin de T3) | mer. 30/09 | lun. 28/09 | 2 |
+| octobre | ven. 30/10 | mer. 28/10 | 2 |
+| décembre (fin de T4) | jeu. 31/12 | mar. 29/12 | 2 |
+
+**Conséquence.** Le dernier jour de négociation du contrat du mois tombe **toujours 2 jours ouvrés avant** la fin du mois. Une fenêtre qui chevauche la fin du mois ou du trimestre chevauche donc aussi l'expiration du contrat du mois. **Les deux calendriers sont presque confondus** : sans choix de fenêtre, on ne peut pas attribuer un effet à l'un ou à l'autre. (Le roulement d'indice de matières premières suit un autre calendrier : cinquième au neuvième jour ouvré, selon la page lue ; or non mentionné, page non datée.)
+
+### 4.5 Le signe d'un rééquilibrage dépend de la performance relative
+
+**[SIMULATION]** Un fonds fictif de 100 : actions 60, obligations 35, or 5. Pendant le trimestre : actions −6 %, obligations +1 %, or −8 %.
+
+| | Début | Fin avant ajustement | Poids |
+|---|---|---|---|
+| Actions | 60 | 56,40 | 58,54 % |
+| Obligations | 35 | 35,35 | 36,69 % |
+| Or | 5 | 4,60 | 4,77 % |
+| Total | 100 | 96,35 | 100 % |
+
+Cible d'or 5 % de 96,35 = 4,8175 ; l'or est **sous-pondéré** : le fonds **achète** 4,8175 − 4,60 = **0,2175** (≈ 0,22 % du portefeuille initial). **Si l'or avait monté** de 20 % (6,0 contre 5), l'or serait **sur-pondéré** et le fonds **vendrait**. **Le rééquilibrage vend ce qui a surperformé** : il n'implique donc pas « hausse de l'or en fin de trimestre ». C'est une relation de **signe** et d'**ordre de grandeur** : avec un univers fictif de 1 000 Md$ de tels fonds, 0,2175 % = **2,2 Md$**, à comparer aux **430 Md$ par jour** de volume de marché de l'or rapportés par le WGC pour août 2026 (S-WGC-20) : **0,5 %** du volume quotidien.
+
+**[Fait]** (S-NBR-01, document de travail NBER 33554, mars 2025, révisé janvier 2026, résumé automatique) : les investisseurs institutionnels réalisent des rééquilibrages réguliers ; quand les actions sont sur-pondérées, les fonds vendent des actions et achètent des obligations, ce qui est associé à un rendement des actions plus faible de **17 points de base le jour suivant**, contrôle fait du momentum, des renversements et de l'information macroéconomique. **Gold et matières premières ne sont pas mentionnés** dans le résumé lu.
+
+### 4.6 Ce que dit la littérature lue sur l'or
+
+- **Saisonnalité mensuelle (S-CXO-01, résumé secondaire d'une étude de Baur, SSRN, janvier 2012)** : échantillon 1981–2010, prix du fixing de Londres et contrats COMEX ; septembre et novembre ressortent significativement ; l'article n'étudie **pas** l'effet de début ou de fin de mois ; ambiguïté signalée sur « rendements mensuels ou quotidiens ».
+- **Effet de fin d'année (S-GUL-01, Gülseven, 2016)** : prix de fin de mois du WGC, janvier 1979–février 2016 ; janvier ressort positif, juillet négatif ; l'article présente des **incohérences internes** et un ajustement médiocre ; il ne teste **ni** fin de mois **ni** fin de trimestre.
+
+**[Interprétation]** La littérature lue porte sur la **saisonnalité calendaire par mois**, pas sur les jours entourant les clôtures. Elle **ne fournit aucune preuve** d'un effet de fin de mois ou de trimestre sur l'or, ni d'ailleurs de son absence.
+
+### 4.7 Un protocole fixé d'avance
+
+**[Définition de cours]** À écrire **avant** de regarder un seul résultat :
+
+1. **Date de clôture t₀** : dernier jour ouvré du mois (ou du trimestre).
+2. **Fenêtres** : F1 = rendement de la séance t₀ ; F2 = rendement de t₀ − 1 à t₀ + 1. Une seule mesure de prix (par ex. fixing PM de Londres) pour toute l'étude.
+3. **Séances de comparaison** : toutes les séances qui ne sont ni dans une fenêtre de clôture, ni dans une fenêtre d'expiration (t₀ − 2 à t₀ + 1), ni un jour de publication majeure (CPI, emploi, décision de la Fed, etc.).
+4. **Échantillon minimal** (seuil de cours arbitraire, déclaré) : 36 fins de mois dont 12 fins de trimestre.
+5. **Statistiques** : n, moyenne, médiane, écart-type, écart standardisé (moyenne des clôtures − moyenne des ordinaires, divisée par l'erreur-type) ; part de périodes de même signe ; volumes et open interest si disponibles.
+6. **Contrôles** : refaire l'étude sans les jours d'annonce, avec une fenêtre décalée, avec un autre prix de référence.
+7. **Règle de conclusion** :
+   - **données insuffisantes** : échantillon sous le seuil, ou prix/volumes inaccessibles ;
+   - **effet non démontré** : échantillon suffisant mais écart non distinct du bruit, ou non robuste aux contrôles ;
+   - **effet probable** : écart distinct du bruit, de même signe dans la majorité des périodes, robuste aux contrôles, avec un mécanisme plausible **corroboré par une donnée indépendante** (flux, positions, volumes).
+
+**Pourquoi fixer d'avance ?** Parce que, une fois les résultats vus, on peut toujours choisir la fenêtre qui « marche » (sélection de dates, *data snooping*).
+
+### 4.8 Exemple fictif calculé
+
+**[SIMULATION]** Douze rendements fictifs (%) de séances de fin de mois (dont quatre fins de trimestre, en positions 3, 6, 9, 12) : 0,4 ; −0,2 ; 0,9 ; 0,1 ; −0,3 ; 0,6 ; 0,2 ; 1,1 ; −0,5 ; 0,3 ; 0,7 ; −0,1. Vingt rendements fictifs de séances ordinaires : 0,1 ; −0,3 ; 0,2 ; 0,0 ; −0,4 ; 0,5 ; −0,1 ; 0,3 ; −0,2 ; 0,1 ; 0,4 ; −0,5 ; 0,2 ; −0,1 ; 0,0 ; 0,3 ; −0,3 ; 0,1 ; −0,2 ; 0,2.
+
+**[Calcul de l'auteur]**
+
+| Échantillon | n | Moyenne | Médiane | Écart-type |
+|---|---|---|---|---|
+| Fins de mois | 12 | +0,267 % | +0,25 % | 0,496 % |
+| Séances ordinaires | 20 | +0,015 % | +0,05 % | 0,274 % |
+
+Écart de moyennes : **+0,252 point** ; erreur-type = √(0,496² ÷ 12 + 0,274² ÷ 20) ; écart standardisé ≈ **1,62**. Fins de trimestre seules (0,9 ; 0,6 ; −0,5 ; −0,1) : moyenne **+0,225 %**. **Sélection de dates** : si l'on ne retient que les quatre meilleurs mois (0,6 ; 0,7 ; 0,9 ; 1,1), la moyenne vaut **+0,825 %** — trois fois plus que l'échantillon complet. **Lecture** : l'écart standardisé de 1,62 est faible pour 12 observations et sans contrôle des annonces ; le tri des « bonnes » dates produit un effet artificiel. Verdict du protocole : n = 12 < 36 → **données insuffisantes** ; l'écart n'est pas une preuve.
+
+### 4.9 Le seul constat réel disponible : l'intérêt ouvert hebdomadaire autour du 29/9/2026
+
+**[Fait]** (S-CFTC-08 à S-CFTC-13, résumés automatiques, déjà lus en L7.02) : intérêt ouvert de l'or COMEX aux dates de positions : 8/9 : 582 664 ; 15/9 : 577 454 ; 22/9 : 571 291 ; 29/9 : 541 982 ; 6/10 : 527 641 ; 13/10 : 526 276.
+
+**[Calculs de l'auteur]** Variations hebdomadaires : −5 210 (−0,89 %) ; −6 163 (−1,07 %) ; **−29 309 (−5,13 %)** ; −14 341 (−2,65 %) ; −1 365 (−0,26 %). La plus forte baisse est celle de la semaine finissant le 29/9, la veille de la fin du troisième trimestre.
+
+**Hypothèses compatibles** (aucune ne peut être départagée avec ces données) : (a) **expiration** du contrat de septembre, dont le dernier jour de négociation calculé est le lundi 28/09 (sous réserve des règles actuelles) ; (b) **roulement** de positions avant l'expiration ; (c) **rééquilibrage** ou réduction de risque de fin de trimestre ; (d) un mouvement sans rapport avec le calendrier (la baisse continue depuis le 8/9 et se poursuit le 6/10 : −14 341). **Ce qui est impossible à conclure** : que la baisse de 29 309 contrats soit due à une cause calendaire ; un seul trimestre ne dit rien de la récurrence. **Contre-exemple** : sur la même semaine, l'intérêt ouvert du Euro FX monte de 54 533 contrats (L7.03).
+
+### 4.10 Quelles données départageraient les hypothèses ?
+
+| Question | Donnée nécessaire | État |
+|---|---|---|
+| Le rendement de t₀ est-il anormal ? | prix quotidiens sur plusieurs années (mêmes instruments) | **indisponible** |
+| Le mouvement est-il intrajournalier, autour des enchères (10 h 30, 15 h 00 Londres) ? | prix intrajournaliers | **indisponible** |
+| Y a-t-il eu une annonce ? | calendrier macroéconomique de la date | disponible en principe (L3.x) |
+| Expiration ou roulement ? | open interest et volume par échéance | **indisponible** |
+| Rééquilibrage ? | flux d'ETF journaliers, positions COT, flux de fonds multi-actifs | partiel (mensuel/hebdomadaire) |
+| Autre cause ? | taux réels, dollar, événements géopolitiques à la date | partiel |
+
+## 5. Définitions essentielles
+
+- **Effet calendaire** : régularité liée à une position fixe dans le calendrier, au-delà du hasard et des autres causes.
+- **Rééquilibrage** : ajustement des poids vers des cibles ; son signe dépend de la performance relative.
+- **Expiration** : fin de vie d'un contrat à terme.
+- **Roulement (*rollover*)** : transfert d'une position d'une échéance à la suivante.
+- **Couverture** : ajustement d'exposition pour réduire un risque.
+- **Fixing** : procédure d'enchères produisant un prix de référence.
+- **Sélection de dates** : choix des observations après avoir vu les résultats.
+- **Écart standardisé** : (moyenne A − moyenne B) ÷ erreur-type de l'écart.
+
+## 6. Exemples chiffrés
+
+### 6.1 Dernier jour de négociation
+
+Septembre 2026 : dernier jour ouvré mer. 30/09 ; troisième dernier : lun. 28/09. Octobre : ven. 30/10 ; mer. 28/10.
+
+### 6.2 Rééquilibrage
+
+Voir § 4.5 : achat de 0,2175 pour 100 de portefeuille initial.
+
+### 6.3 Ordre de grandeur
+
+2,2 Md$ ÷ 430 Md$/jour = **0,51 %** du volume quotidien (SIMULATION pour le numérateur).
+
+### 6.4 Écart standardisé
+
+(0,267 − 0,015) ÷ √(0,496² ÷ 12 + 0,274² ÷ 20) = **1,62**.
+
+### 6.5 Cas historique documenté — l'intérêt ouvert de l'or COMEX, 8 septembre – 13 octobre 2026
+
+**[Fait]** (CFTC, S-CFTC-08 à S-CFTC-13, résumés automatiques) : l'intérêt ouvert baisse de 582 664 à 526 276 contrats (−9,7 %), avec une baisse de 5,13 % dans la semaine finissant le 29/9. **Ce que les données permettent** : constater la baisse et sa concentration sur une semaine contenant la fin de T3 et, d'après les règles de contrat, le dernier jour de négociation du contrat de septembre. **Ce qu'elles ne permettent pas** : attribuer la baisse à l'expiration, au roulement, au rééquilibrage ou à autre chose ; juger de la récurrence ; lier la baisse à un prix de l'or (aucun prix quotidien lu).
+
+### 6.6 (SIMULATION) — petits échantillons, grandes illusions
+
+Voir § 4.8 : de 12 observations, quatre sélectionnées multiplient par trois la moyenne.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Fiche calendaire** (suite des fiches de L7.01 à L7.04) : date de clôture, type de clôture (mois / trimestre), dernier jour de négociation du contrat, annonces du jour, mesure de prix utilisée, hypothèses candidates, données qui les départageraient, conclusion parmi les trois catégories.
+- **XAU/USD** : un mouvement de fin de période se lit avec le dollar, les taux réels et les annonces de la date, jamais seul.
+- **Forex** : le même raisonnement vaut pour les fins de mois sur les devises (fixings de référence, couvertures de portefeuilles), mais aucune donnée de devises n'est lue ici.
+- **Risque** : des séances de fin de période peuvent être moins liquides ou plus agitées ; l'exécution (spread, glissement) se traite avec L6.06.
+
+## 8. Erreurs courantes
+
+1. Affirmer que toute hausse de fin de mois vient des rééquilibrages.
+2. Oublier que le rééquilibrage **vend** ce qui a surperformé.
+3. Confondre fin de mois et fin de trimestre.
+4. Confondre expiration et roulement, ou l'un des deux avec la couverture.
+5. Ne retenir que les dates qui confirment l'hypothèse.
+6. Ignorer les annonces macroéconomiques et les événements géopolitiques.
+7. Déduire une causalité d'une corrélation.
+8. Utiliser des mesures de prix différentes selon les dates.
+9. Tirer d'un seul trimestre une régularité.
+
+## 9. Limites de l'interprétation
+
+- Aucune série quotidienne de prix, de volume ou d'open interest lue : analyse empirique réelle impossible.
+- Règles COMEX tirées d'une fiche non datée (environ mars 2019) et d'un document de livraison de janvier 2025, lus par résumé automatique ; règles actuelles non confirmées.
+- Calendrier calculé sans jours fériés.
+- L'étude sur le rééquilibrage porte sur actions et obligations ; les deux études sur l'or portent sur la saisonnalité mensuelle, avec des faiblesses signalées.
+- Un seul trimestre d'intérêt ouvert hebdomadaire.
+- Seuils de cours (36 fins de mois, fenêtres) arbitraires et déclarés.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Calendrier (obligatoire).** Pour décembre 2026 (dernier jour ouvré jeu. 31/12), donne le dernier jour de négociation du contrat GC de décembre selon la règle « troisième dernier jour ouvré » et l'écart avec la fin du trimestre. Que conclus-tu pour une fenêtre autour du 31/12 ?
+
+<details>
+<summary>Correction 1</summary>
+
+Jours ouvrés en remontant : jeu. 31 (1ᵉʳ dernier), mer. 30 (2ᵉ), **mar. 29/12** (3ᵉ). Écart : 2 jours ouvrés. Une fenêtre centrée sur le 31/12 inclut l'expiration du contrat de décembre : fin de trimestre et expiration sont confondues. Sous réserve des règles en vigueur et des jours fériés.
+</details>
+
+**Exercice 2 — Rééquilibrage.** Un fonds fictif 60/35/5 (actions/obligations/or). Trimestre : actions +4 %, obligations 0 %, or +20 %. Calcule les poids avant ajustement et le sens du rééquilibrage sur l'or.
+
+<details>
+<summary>Correction 2</summary>
+
+Valeurs : actions 62,4 ; obligations 35 ; or 6,0 ; total 103,4. Poids de l'or : 6,0 ÷ 103,4 = **5,80 %** > 5 % : sur-pondéré. Cible 5 % × 103,4 = 5,17 : le fonds **vend** 6,0 − 5,17 = **0,83** (≈ 0,83 % du portefeuille initial). Le rééquilibrage pèse ici **à la baisse** sur l'or, après une hausse.
+</details>
+
+**Exercice 3 — Ordre de grandeur.** 0,83 % d'un univers fictif de 500 Md$ de tels fonds : montant ? Comparé à 430 Md$ par jour ?
+
+<details>
+<summary>Correction 3</summary>
+
+0,83 % × 500 = **4,15 Md$** ; 4,15 ÷ 430 = **0,97 %** du volume quotidien. Un ordre de grandeur qui suggère que, seul, un tel flux serait petit devant le volume — mais le volume du marché n'est pas la liquidité disponible au moment précis, et l'univers de fonds est fictif.
+</details>
+
+**Exercice 4 — Statistiques.** Séances de fin de trimestre fictives : 0,9 ; 0,6 ; −0,5 ; −0,1. Moyenne, médiane, écart-type. Peux-tu parler d'effet ?
+
+<details>
+<summary>Correction 4</summary>
+
+Moyenne = **0,225** ; médiane = (−0,1 + 0,6) ÷ 2 = **0,25** ; écart-type (n − 1) = **0,6397**. Avec n = 4 et un écart-type près de trois fois la moyenne, on ne peut rien conclure : **données insuffisantes**.
+</details>
+
+**Exercice 5 — Sélection de dates.** Dans l'échantillon de fins de mois du § 4.8, tu ne gardes que les quatre meilleures observations. Quelle moyenne, et quelle erreur de méthode ?
+
+<details>
+<summary>Correction 5</summary>
+
+Meilleures : 0,6 ; 0,7 ; 0,9 ; 1,1 → moyenne **0,825 %** contre 0,267 % sur les douze. Erreur : sélection a posteriori ; la fenêtre et l'échantillon doivent être fixés avant de voir les résultats, et toutes les observations conservées.
+</details>
+
+**Exercice 6 — Intérêt ouvert.** Intérêt ouvert de l'or : 571 291 (22/9) et 541 982 (29/9). Variation et pourcentage ; quatre hypothèses ; qu'est-il impossible de conclure ?
+
+<details>
+<summary>Correction 6</summary>
+
+−29 309 contrats, **−5,13 %**. Hypothèses : expiration du contrat de septembre, roulement, rééquilibrage/réduction de risque, baisse sans rapport avec le calendrier. Impossible : choisir l'une d'elles ; conclure à une régularité avec un seul trimestre ; relier la baisse à un prix ou à une direction du cours.
+</details>
+
+**Exercice 7 — Atelier : l'or monte fortement le dernier jour d'un trimestre (SIMULATION).** Données fictives : trimestre terminant le 30/06 d'une année X ; XAU/USD de 4 000 à 4 092 $ le dernier jour (**+2,3 %**) ; sur le trimestre, l'or a perdu 8 %, les actions 6 %, les obligations ont gagné 1 % ; le matin même, l'indice PCE est inférieur de 0,2 point au consensus ; le rendement réel à 10 ans baisse de 8 points de base ; l'indice du dollar recule de 0,4 % ; le contrat de juin a cessé d'être négocié deux jours ouvrés plus tôt (calcul selon la règle du troisième dernier jour). Détermine : (1) si le mouvement est compatible avec un rééquilibrage ; (2) quelles autres explications sont possibles ; (3) quelles données départageraient ; (4) ce qu'il est impossible de conclure.
+
+<details>
+<summary>Correction 7</summary>
+
+(1) **Compatible dans le signe, non démontré dans l'ampleur** : un fonds 60/35/5 dont l'or a perdu 8 % est sous-pondéré (4,77 %) et achèterait environ 0,22 % du portefeuille ; pour 1 000 Md$ de tels fonds, ≈ 2,2 Md$, soit ≈ 0,5 % du volume quotidien de 430 Md$ : peu probable de produire seul +2,3 %. (2) Surprise du PCE à la baisse ; baisse des rendements réels de 8 pb ; dollar plus faible ; événement géopolitique ou de risque non listé ; liquidité réduite en fin de trimestre ; débouclage de positions. (3) Prix intrajournaliers (le saut a-t-il suivi la publication du PCE, ou les enchères de 10 h 30 / 15 h 00 de Londres ?) ; réactions de l'or aux autres surprises du PCE hors fin de trimestre ; volumes et open interest ; flux d'ETF du jour ; comparaison avec les fins de trimestre précédentes. (4) Impossible de dire quelle part vient du rééquilibrage, ni que le calendrier ait joué un rôle ; **conclusion du protocole : données insuffisantes** (un seul jour, aucune récurrence, causes concurrentes dont l'annonce du matin).
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L7.05.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Rééquilibrage, expiration, roulement et couverture sont quatre mécanismes distincts ; le fixing est une procédure de prix de référence.
+- Le rééquilibrage vend ce qui a surperformé : son signe dépend de la performance relative, et son ordre de grandeur doit être estimé.
+- Le dernier jour de négociation du contrat GC tombe 2 jours ouvrés avant la fin du mois : fins de mois, fins de trimestre et expirations se chevauchent.
+- Aucun prix quotidien lu : pas d'analyse empirique réelle ; protocole fixé d'avance, simulation et constat d'intérêt ouvert (−5,13 % la semaine finissant le 29/9, cause indéterminée).
+- Conclusions possibles : effet probable, effet non démontré, données insuffisantes ; ici : **données insuffisantes**.
+
+## 13. Critères de maîtrise
+
+- [ ] Distinguer les quatre mécanismes et le fixing (§ 4.2).
+- [ ] Calculer un calendrier de clôtures et d'expirations (Exercice 1).
+- [ ] Déterminer le sens et l'ordre de grandeur d'un rééquilibrage (Exercices 2 et 3).
+- [ ] Calculer moyenne, médiane et dispersion, et refuser un effet sur n trop petit (Exercice 4).
+- [ ] Reconnaître la sélection de dates (Exercice 5).
+- [ ] Mener l'atelier avec hypothèses, données et limites (Exercice 7).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **31 octobre 2026** :
+
+- **S-CME-02** — CME Group, fiche « Gold futures and options » (non datée, code PM264/0319) : https://www.cmegroup.com/trading/metals/files/fact-card-gold-futures-options.pdf
+- **S-CME-04** — Règlement COMEX, chapitre 113 (déjà lu).
+- **S-CME-08** — CME Group, « Precious Metals Physical Delivery Process » (janvier 2025) : https://cmegroup.com/trading/metals/files/precious-metals-physical-delivery-process-2025.pdf
+- **S-GSC-01** — Goldman Sachs, page « Roll Period » (indice de matières premières, non datée) : https://www.goldmansachs.com/what-we-do/FICC-and-equities/business-groups/sts-folder/gsci/roll-period.html
+- **S-NBR-01** — Harvey, Mazzoleni, Melone, *The Unintended Consequences of Rebalancing*, NBER WP 33554 (mars 2025, révisé janvier 2026) : https://www.nber.org/papers/w33554
+- **S-CXO-01** — CXO Advisory, « Gold Seasonality Drivers » (30/01/2012, secondaire) : https://cxoadvisory.com/calendar-effects/gold-seasonality-drivers
+- **S-GUL-01** — Gülseven (2016), « Turn-of-the Year Affect in Gold Prices: Decomposition Analysis » : https://arxiv.org/pdf/2003.11027
+- **S-LBMA-04** — LBMA, page « prices and data » : https://www.lbma.org.uk/cn/prices-and-data
+- **S-WGC-20**, **S-IAU-01**, **S-WGC-10**, **S-CFTC-08** à **S-CFTC-13** — déjà lues.
+
+**Définitions de cours non rattachées à une source lue :** effet calendaire, clôture mensuelle/trimestrielle, protocole et seuils (36 fins de mois, fenêtres), écart standardisé, contrôle des annonces. **Points non vérifiés :** prix, volumes et open interest quotidiens ; règles actuelles du COMEX ; calendrier avec jours fériés ; ampleur des rééquilibrages sur l'or ; étude de Baur lue seulement par résumé secondaire.

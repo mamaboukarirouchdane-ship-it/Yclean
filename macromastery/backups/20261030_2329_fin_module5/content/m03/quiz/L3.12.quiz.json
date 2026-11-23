@@ -1,0 +1,233 @@
+{
+  "lessonId": "L3.12",
+  "title": "Quiz — Ta grille de lecture d'une publication",
+  "passThreshold": 0.8,
+  "note": "Quiz de la leçon L3.12",
+  "questions": [
+    {
+      "id": "L3.12-Q1",
+      "type": "mcq",
+      "prompt": "Combien de rubriques compte la grille de lecture du cours ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Trois"
+        },
+        {
+          "id": "b",
+          "text": "Cinq"
+        },
+        {
+          "id": "c",
+          "text": "Douze"
+        },
+        {
+          "id": "d",
+          "text": "Vingt"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La grille comprend douze rubriques : identité, source, chiffre, attente, surprise, révisions, composition, cohérence, contexte, réaction, interprétation, inconnues.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L3.12-Q2",
+      "type": "mcq",
+      "prompt": "Quel est le budget de temps total de la grille ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "15 minutes"
+        },
+        {
+          "id": "b",
+          "text": "5 minutes"
+        },
+        {
+          "id": "c",
+          "text": "60 minutes"
+        },
+        {
+          "id": "d",
+          "text": "2 heures"
+        }
+      ],
+      "correct": "a",
+      "explanation": "1 + 4 + 4 + 3 + 3 = 15 minutes ; en cas de dépassement, on consigne l'inconnue.",
+      "tags": [
+        "methode"
+      ]
+    },
+    {
+      "id": "L3.12-Q3",
+      "type": "mcq",
+      "prompt": "Pourquoi la rubrique « inconnues » est-elle indispensable ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle est facultative"
+        },
+        {
+          "id": "b",
+          "text": "Elle rallonge la grille"
+        },
+        {
+          "id": "c",
+          "text": "Elle remplace l'interprétation"
+        },
+        {
+          "id": "d",
+          "text": "Elle dit ce qui n'a pas été lu ou vérifié et protège contre les récits artificiels"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Une grille sans case « non vérifié » est une grille qui ment : elle rend la lecture traçable.",
+      "tags": [
+        "prudence"
+      ]
+    },
+    {
+      "id": "L3.12-Q4",
+      "type": "mcq",
+      "prompt": "Emploi −61 000, CPI +0,1 point, ISM −0,5 : peut-on les additionner ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui, le total est −61 000,4"
+        },
+        {
+          "id": "b",
+          "text": "Non, les unités sont différentes ; il faut standardiser sur des séries"
+        },
+        {
+          "id": "c",
+          "text": "Oui, en valeur absolue"
+        },
+        {
+          "id": "d",
+          "text": "Oui, après conversion en dollars"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Ce sont des grandeurs d'unités différentes ; la comparaison passe par la standardisation (L3.03).",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.12-Q5",
+      "type": "mcq",
+      "prompt": "Notes : 2, 2, 2, 1, 2, 2, 1, 2, 1, 0, 2, 2. Quel est le score sur 24 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "17"
+        },
+        {
+          "id": "b",
+          "text": "20"
+        },
+        {
+          "id": "c",
+          "text": "24"
+        },
+        {
+          "id": "d",
+          "text": "19"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La somme vaut 19 ; les rubriques 4, 7 et 9 sont partielles et la rubrique 10 est absente.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.12-Q6",
+      "type": "mcq",
+      "prompt": "Que mesure le score d'auto-évaluation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le rendement d'une stratégie"
+        },
+        {
+          "id": "b",
+          "text": "La justesse de la prévision"
+        },
+        {
+          "id": "c",
+          "text": "La complétude de la grille, pas la justesse de l'analyse"
+        },
+        {
+          "id": "d",
+          "text": "La rapidité"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Un score parfait peut cacher une mauvaise interprétation ; la complétude n'est pas la justesse.",
+      "tags": [
+        "prudence"
+      ]
+    },
+    {
+      "id": "L3.12-Q7",
+      "type": "mcq",
+      "prompt": "Pourquoi relier la rubrique 9 à la banque centrale ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que l'effet d'une publication passe par la fonction de réaction de la banque centrale"
+        },
+        {
+          "id": "b",
+          "text": "Parce que la banque centrale publie l'ISM"
+        },
+        {
+          "id": "c",
+          "text": "Parce que la banque centrale fixe le consensus"
+        },
+        {
+          "id": "d",
+          "text": "Parce que c'est obligatoire"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Les marchés réagissent à ce que la publication change dans les attentes de politique monétaire.",
+      "tags": [
+        "methode"
+      ]
+    },
+    {
+      "id": "L3.12-Q8",
+      "type": "mcq",
+      "prompt": "Que doit contenir la rubrique 11 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une prévision de décision de la banque centrale"
+        },
+        {
+          "id": "b",
+          "text": "Trois phrases : faits, calculs, hypothèse ; jamais une prévision de prix"
+        },
+        {
+          "id": "c",
+          "text": "Un conseil de trading"
+        },
+        {
+          "id": "d",
+          "text": "Un résumé de presse"
+        }
+      ],
+      "correct": "b",
+      "explanation": "L'interprétation sépare faits, calculs et hypothèse testable ; elle ne garantit pas le résultat d'une transaction.",
+      "tags": [
+        "methode"
+      ]
+    }
+  ],
+  "revision": 1
+}

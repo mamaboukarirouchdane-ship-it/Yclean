@@ -1,0 +1,782 @@
+{
+  "examId": "EX0",
+  "module": 0,
+  "title": "Examen du module 0 — Fondations des marchés financiers",
+  "durationMinutes": 120,
+  "passThreshold": 0.7,
+  "note": "25 QCM (1 point) + 5 calculs (3 points) = 40 points ; seuil de réussite 28/40. Les données sont fictives (SIMULATION) sauf mention contraire.",
+  "questions": [
+    {
+      "id": "EX0-Q1",
+      "type": "mcq",
+      "prompt": "Quelle fonction n'est PAS l'une des quatre fonctions d'un marché financier ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Financement"
+        },
+        {
+          "id": "b",
+          "text": "Découverte du prix"
+        },
+        {
+          "id": "c",
+          "text": "Garantie de gain"
+        },
+        {
+          "id": "d",
+          "text": "Transfert du risque"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Les quatre fonctions : financement, découverte du prix, liquidité, transfert du risque. Aucun marché ne garantit de gain.",
+      "tags": [
+        "fonctions"
+      ]
+    },
+    {
+      "id": "EX0-Q2",
+      "type": "mcq",
+      "prompt": "Une vente d'actions en bourse entre deux investisseurs est une opération :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Secondaire"
+        },
+        {
+          "id": "b",
+          "text": "Primaire"
+        },
+        {
+          "id": "c",
+          "text": "Sans prix"
+        },
+        {
+          "id": "d",
+          "text": "Réservée à l'émetteur"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le titre change de main, le vendeur reçoit l'argent : marché secondaire.",
+      "tags": [
+        "secondaire"
+      ]
+    },
+    {
+      "id": "EX0-Q3",
+      "type": "mcq",
+      "prompt": "Le spread correspond à :",
+      "options": [
+        {
+          "id": "a",
+          "text": "La somme de l'ask et du bid"
+        },
+        {
+          "id": "b",
+          "text": "L'écart entre deux devises"
+        },
+        {
+          "id": "c",
+          "text": "Le volume échangé"
+        },
+        {
+          "id": "d",
+          "text": "L'écart entre ask et bid"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Spread = ask − bid ; c'est un coût réel, non le seul (commissions, slippage).",
+      "tags": [
+        "spread"
+      ]
+    },
+    {
+      "id": "EX0-Q4",
+      "type": "mcq",
+      "prompt": "La motivation « tenue de marché » signifie :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Spéculer sur une tendance"
+        },
+        {
+          "id": "b",
+          "text": "Coter des prix acheteur et vendeur"
+        },
+        {
+          "id": "c",
+          "text": "Couvrir un risque commercial"
+        },
+        {
+          "id": "d",
+          "text": "Gérer une réserve de change"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le teneur de marché cote bid et ask et tire un revenu du spread.",
+      "tags": [
+        "acteurs"
+      ]
+    },
+    {
+      "id": "EX0-Q5",
+      "type": "mcq",
+      "prompt": "Dans USD/JPY = 150,00, un mouvement de 50 pips vaut :",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,05"
+        },
+        {
+          "id": "b",
+          "text": "0,0050"
+        },
+        {
+          "id": "c",
+          "text": "5,00"
+        },
+        {
+          "id": "d",
+          "text": "0,50"
+        }
+      ],
+      "correct": "d",
+      "explanation": "1 pip = 0,01 pour le yen ; 50 pips = 0,50.",
+      "tags": [
+        "pip"
+      ]
+    },
+    {
+      "id": "EX0-Q6",
+      "type": "mcq",
+      "prompt": "Le comptant en change se règle en général sous :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le jour même toujours"
+        },
+        {
+          "id": "b",
+          "text": "Un mois"
+        },
+        {
+          "id": "c",
+          "text": "Deux jours ouvrés"
+        },
+        {
+          "id": "d",
+          "text": "Un an"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Règlement du comptant sous deux jours ouvrés.",
+      "tags": [
+        "comptant"
+      ]
+    },
+    {
+      "id": "EX0-Q7",
+      "type": "mcq",
+      "prompt": "Une parité fixe signifie que :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le taux est fixé par rapport à une autre monnaie"
+        },
+        {
+          "id": "b",
+          "text": "Le taux est librement flottant"
+        },
+        {
+          "id": "c",
+          "text": "La monnaie n'a pas de valeur"
+        },
+        {
+          "id": "d",
+          "text": "Le taux change chaque minute"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Exemple : XOF rattaché à l'euro à 655,957.",
+      "tags": [
+        "xof"
+      ]
+    },
+    {
+      "id": "EX0-Q8",
+      "type": "mcq",
+      "prompt": "Le dernier regard (last look) est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un type de graphique"
+        },
+        {
+          "id": "b",
+          "text": "Une dernière occasion d'accepter ou refuser une transaction"
+        },
+        {
+          "id": "c",
+          "text": "Un indicateur"
+        },
+        {
+          "id": "d",
+          "text": "Une taxe"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le Code mondial demande qu'il soit transparent.",
+      "tags": [
+        "lastlook"
+      ]
+    },
+    {
+      "id": "EX0-Q9",
+      "type": "mcq",
+      "prompt": "La marge est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "La perte maximale"
+        },
+        {
+          "id": "b",
+          "text": "Un gain garanti"
+        },
+        {
+          "id": "c",
+          "text": "Un dépôt exigé pour détenir une position à effet de levier"
+        },
+        {
+          "id": "d",
+          "text": "Le spread"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Marge ≠ risque ≠ levier.",
+      "tags": [
+        "marge"
+      ]
+    },
+    {
+      "id": "EX0-Q10",
+      "type": "mcq",
+      "prompt": "Selon la CFTC, la marge minimale usuelle pour les paires majeures est de :",
+      "options": [
+        {
+          "id": "a",
+          "text": "2 %"
+        },
+        {
+          "id": "b",
+          "text": "20 %"
+        },
+        {
+          "id": "c",
+          "text": "50 %"
+        },
+        {
+          "id": "d",
+          "text": "0 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Rappel de L0.04 : 2 % pour les paires majeures, 5 % pour les autres (levier maximal de 50:1 et 20:1).",
+      "tags": [
+        "cftc",
+        "marge"
+      ]
+    },
+    {
+      "id": "EX0-Q11",
+      "type": "mcq",
+      "prompt": "Le prix d'une barre d'or de 400 onces à 2 000 $/once (SIMULATION) est de :",
+      "options": [
+        {
+          "id": "a",
+          "text": "80 000 $"
+        },
+        {
+          "id": "b",
+          "text": "2 000 $"
+        },
+        {
+          "id": "c",
+          "text": "8 000 $"
+        },
+        {
+          "id": "d",
+          "text": "800 000 $"
+        }
+      ],
+      "correct": "d",
+      "explanation": "400 × 2 000 = 800 000 $.",
+      "tags": [
+        "or"
+      ]
+    },
+    {
+      "id": "EX0-Q12",
+      "type": "mcq",
+      "prompt": "Un ETF d'or est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un contrat à terme obligatoire"
+        },
+        {
+          "id": "b",
+          "text": "Un fonds dont on détient des parts, avec des frais"
+        },
+        {
+          "id": "c",
+          "text": "Une pièce"
+        },
+        {
+          "id": "d",
+          "text": "Un compte de dépôt"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Parts d'un fonds ; frais de gestion.",
+      "tags": [
+        "etf"
+      ]
+    },
+    {
+      "id": "EX0-Q13",
+      "type": "mcq",
+      "prompt": "Le COMEX 1OZ porte sur :",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 kg"
+        },
+        {
+          "id": "b",
+          "text": "10 onces"
+        },
+        {
+          "id": "c",
+          "text": "100 onces"
+        },
+        {
+          "id": "d",
+          "text": "1 once"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Les contrats COMEX GC, MGC et 1OZ portent respectivement sur 100, 10 et 1 once : 1OZ = 1 once.",
+      "tags": [
+        "contrats"
+      ]
+    },
+    {
+      "id": "EX0-Q14",
+      "type": "mcq",
+      "prompt": "L'or cote sur le marché de gros de Londres en :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Euros par gramme"
+        },
+        {
+          "id": "b",
+          "text": "Francs CFA par kg"
+        },
+        {
+          "id": "c",
+          "text": "Dollars par once"
+        },
+        {
+          "id": "d",
+          "text": "Yens par tonne"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Dollars par once troy.",
+      "tags": [
+        "lbma"
+      ]
+    },
+    {
+      "id": "EX0-Q15",
+      "type": "mcq",
+      "prompt": "Une obligation au pair a un rendement exigé :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Égal au coupon"
+        },
+        {
+          "id": "b",
+          "text": "Supérieur au coupon"
+        },
+        {
+          "id": "c",
+          "text": "Inférieur au coupon"
+        },
+        {
+          "id": "d",
+          "text": "Nul"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Rendement exigé = coupon → prix = nominal.",
+      "tags": [
+        "pair"
+      ]
+    },
+    {
+      "id": "EX0-Q16",
+      "type": "mcq",
+      "prompt": "Un taux composé annuel de 6 % pendant 12 ans multiplie le capital par :",
+      "options": [
+        {
+          "id": "a",
+          "text": "1,72"
+        },
+        {
+          "id": "b",
+          "text": "2,01"
+        },
+        {
+          "id": "c",
+          "text": "1,06"
+        },
+        {
+          "id": "d",
+          "text": "6,00"
+        }
+      ],
+      "correct": "b",
+      "explanation": "1,06¹² = 2,012 : environ le double. La règle de 72 donne 72 ÷ 6 = 12 ans.",
+      "tags": [
+        "compose",
+        "72"
+      ]
+    },
+    {
+      "id": "EX0-Q17",
+      "type": "mcq",
+      "prompt": "−40 % puis +40 % donne :",
+      "options": [
+        {
+          "id": "a",
+          "text": "0 %"
+        },
+        {
+          "id": "b",
+          "text": "+16 %"
+        },
+        {
+          "id": "c",
+          "text": "−16 %"
+        },
+        {
+          "id": "d",
+          "text": "−40 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "0,6 × 1,4 = 0,84, soit −16 %.",
+      "tags": [
+        "asymetrie"
+      ]
+    },
+    {
+      "id": "EX0-Q18",
+      "type": "mcq",
+      "prompt": "La valeur actuelle de 1 000 reçus dans 2 ans à 5 % est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "907,03"
+        },
+        {
+          "id": "b",
+          "text": "1 102,50"
+        },
+        {
+          "id": "c",
+          "text": "900,00"
+        },
+        {
+          "id": "d",
+          "text": "1 000"
+        }
+      ],
+      "correct": "a",
+      "explanation": "1 000 ÷ 1,05² = 907,03.",
+      "tags": [
+        "va"
+      ]
+    },
+    {
+      "id": "EX0-Q19",
+      "type": "mcq",
+      "prompt": "Une courbe des taux inversée signifie que :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les prix montent"
+        },
+        {
+          "id": "b",
+          "text": "Les taux longs sont supérieurs aux taux courts"
+        },
+        {
+          "id": "c",
+          "text": "Tous les taux sont nuls"
+        },
+        {
+          "id": "d",
+          "text": "Les taux courts sont supérieurs aux taux longs"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Pente négative = inversion ; signal historique d'alerte, jamais une prévision datée.",
+      "tags": [
+        "courbe"
+      ]
+    },
+    {
+      "id": "EX0-Q20",
+      "type": "mcq",
+      "prompt": "Quelle est la durée d'une obligation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sa date d'échéance"
+        },
+        {
+          "id": "b",
+          "text": "Une mesure approximative de sa sensibilité aux taux"
+        },
+        {
+          "id": "c",
+          "text": "Son coupon"
+        },
+        {
+          "id": "d",
+          "text": "Son prix"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Durée ≈ variation en % du prix pour 1 point de taux.",
+      "tags": [
+        "duree"
+      ]
+    },
+    {
+      "id": "EX0-Q21",
+      "type": "mcq",
+      "prompt": "Une bougie baissière est telle que :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Clôture > ouverture"
+        },
+        {
+          "id": "b",
+          "text": "Elle n'a pas de mèche"
+        },
+        {
+          "id": "c",
+          "text": "Plus haut = plus bas"
+        },
+        {
+          "id": "d",
+          "text": "Clôture < ouverture"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Baissière : clôture sous l'ouverture (les couleurs dépendent de la plateforme).",
+      "tags": [
+        "bougie"
+      ]
+    },
+    {
+      "id": "EX0-Q22",
+      "type": "mcq",
+      "prompt": "Une échelle logarithmique représente des distances égales pour :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Des écarts en unités égaux"
+        },
+        {
+          "id": "b",
+          "text": "Des volumes égaux"
+        },
+        {
+          "id": "c",
+          "text": "Des variations en % égales"
+        },
+        {
+          "id": "d",
+          "text": "Des heures égales"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Même distance = même pourcentage.",
+      "tags": [
+        "echelle"
+      ]
+    },
+    {
+      "id": "EX0-Q23",
+      "type": "mcq",
+      "prompt": "Les rendements logarithmiques :",
+      "options": [
+        {
+          "id": "a",
+          "text": "S'additionnent dans le temps"
+        },
+        {
+          "id": "b",
+          "text": "Se multiplient"
+        },
+        {
+          "id": "c",
+          "text": "Sont toujours négatifs"
+        },
+        {
+          "id": "d",
+          "text": "Sont égaux aux pips"
+        }
+      ],
+      "correct": "a",
+      "explanation": "ln(P₂/P₀) = ln(P₁/P₀) + ln(P₂/P₁).",
+      "tags": [
+        "log"
+      ]
+    },
+    {
+      "id": "EX0-Q24",
+      "type": "mcq",
+      "prompt": "Un compte perd 50 %. Gain nécessaire pour récupérer :",
+      "options": [
+        {
+          "id": "a",
+          "text": "50 %"
+        },
+        {
+          "id": "b",
+          "text": "100 %"
+        },
+        {
+          "id": "c",
+          "text": "150 %"
+        },
+        {
+          "id": "d",
+          "text": "25 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Gain nécessaire = 1 ÷ 0,5 − 1 = 100 % : l'asymétrie des pourcentages rend les pertes profondes difficiles à effacer.",
+      "tags": [
+        "drawdown"
+      ]
+    },
+    {
+      "id": "EX0-Q25",
+      "type": "mcq",
+      "prompt": "Une volatilité journalière de 0,5 % annualisée (252 jours) vaut environ :",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,5 %"
+        },
+        {
+          "id": "b",
+          "text": "126 %"
+        },
+        {
+          "id": "c",
+          "text": "7,9 %"
+        },
+        {
+          "id": "d",
+          "text": "15,9 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "0,5 × √252 = 0,5 × 15,87 = 7,94 %.",
+      "tags": [
+        "annualisation"
+      ]
+    }
+  ],
+  "calculations": [
+    {
+      "id": "EX0-K1",
+      "type": "calc",
+      "prompt": "Taille de position. Capital risqué : 150 $ ; stop : 30 pips ; valeur du pip : 10 $ par lot. Combien de lots ?",
+      "answer": 0.5,
+      "tolerance": 0.005,
+      "unit": "lot",
+      "solution": "150 ÷ (30 × 10) = 0,5 lot.",
+      "tags": [
+        "lots"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX0-K2",
+      "type": "calc",
+      "prompt": "Taux croisé (SIMULATION). EUR/USD = 1,0900 ; USD/JPY = 148,00. Calcule EUR/JPY.",
+      "answer": 161.32,
+      "tolerance": 0.01,
+      "unit": "JPY par EUR",
+      "solution": "1,0900 × 148,00 = 161,32.",
+      "tags": [
+        "croise"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX0-K3",
+      "type": "calc",
+      "prompt": "Or (SIMULATION). XAU/USD = 2 000 $ par once troy. Prix en dollars par gramme (1 once troy = 31,1034768 g) ?",
+      "answer": 64.3,
+      "tolerance": 0.01,
+      "unit": "$ par g",
+      "solution": "2 000 ÷ 31,1034768 = 64,3015 ≈ 64,30 $ le gramme.",
+      "tags": [
+        "or",
+        "unites"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX0-K4",
+      "type": "calc",
+      "prompt": "Obligation : nominal 1 000, coupon annuel 5 %, 3 ans, rendement exigé 4 %. Prix ?",
+      "answer": 1027.75,
+      "tolerance": 0.01,
+      "unit": "",
+      "solution": "50 ÷ 1,04 + 50 ÷ 1,04² + 1 050 ÷ 1,04³ = 48,08 + 46,23 + 933,45 = 1 027,75 (prime).",
+      "tags": [
+        "prix"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX0-K5",
+      "type": "calc",
+      "prompt": "Baisse maximale. Valeurs d'un compte (SIMULATION) : 100, 108, 102, 112, 104, 109. Donne la baisse maximale en % (valeur absolue, 2 décimales).",
+      "answer": 7.14,
+      "tolerance": 0.01,
+      "unit": "%",
+      "solution": "108→102 : −5,56 % ; 112→104 : 104 ÷ 112 − 1 = −7,14 % (la plus grande).",
+      "tags": [
+        "drawdown"
+      ],
+      "points": 3
+    }
+  ],
+  "totalPoints": 40,
+  "revision": 1
+}

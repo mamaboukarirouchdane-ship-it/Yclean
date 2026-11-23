@@ -1,0 +1,305 @@
+---
+id: L0.08
+module: 0
+order: 8
+title: "Obligations et courbe des taux : prix, rendement et pente"
+title_initial: "Obligations et courbe des taux"
+level: débutant
+duration_hours: 3
+prerequisites: ["L0.07"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L0.08.quiz.json"
+sources: ["S-SEC-03", "S-FINRA-01", "S-UST-03", "S-FRBSF-01", "S-CFPB-01"]
+---
+
+# L0.08 — Obligations et courbe des taux : prix, rendement et pente
+
+> **Convention de lecture.** **[Fait]** = vérifié dans une source citée ; **[Définition]** = convention de vocabulaire ; **[Calcul de l'auteur]** = calcul fait à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Cette leçon s'appuie sur L0.07 (valeur actuelle). Elle est le premier contact avec le **marché obligataire**, dont les rendements sont, pour la suite de la formation, la variable la plus utilisée pour expliquer le dollar, l'euro et l'or.
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. décrire une **obligation** (valeur nominale, coupon, échéance, prix) et dire qui emprunte, qui prête ;
+2. **calculer le prix** d'une obligation comme une somme de valeurs actuelles ;
+3. expliquer et **chiffrer la relation inverse** entre prix et rendement, y compris le cas d'une obligation à coupon zéro ;
+4. expliquer pourquoi une obligation **longue** réagit plus aux taux qu'une obligation courte (notion de durée) ;
+5. distinguer **rendement actuel** et **rendement à l'échéance**, et dire si une obligation cote au pair, avec décote ou avec prime ;
+6. **lire une courbe des taux**, calculer sa **pente** (10 ans − 2 ans, 10 ans − 3 mois) et nommer ses formes (normale, plate, inversée) ;
+7. dire ce que la recherche officielle (Fed de San Francisco, 2018) affirme — et n'affirme pas — sur la pente comme indicateur de récession.
+
+## 2. Prérequis
+
+L0.07 (valeur actuelle, taux effectif, point de base). Puissances et sommes.
+
+## 3. Explication intuitive
+
+Une obligation est une **reconnaissance de dette négociable** : un État ou une entreprise emprunte une somme (la **valeur nominale**), promet de verser des intérêts réguliers (les **coupons**) et de rembourser à une date fixée (l'**échéance**). Celui qui achète l'obligation prête de l'argent. Comme elle est négociable, on peut la **revendre** avant l'échéance, à un prix qui change tous les jours.
+
+Pourquoi le prix change-t-il ? Imagine que tu détiens un titre qui te verse 40 par an. Si, demain, les nouveaux titres du même type versent 50 par an, plus personne ne voudra payer le même prix pour le tien : son prix doit **baisser** pour que son rendement rejoigne celui des nouveaux. Si au contraire les nouveaux titres versent 30, le tien devient précieux, son prix **monte**. D'où la règle centrale : **quand les taux montent, les prix des obligations existantes baissent ; quand les taux baissent, ils montent.**
+
+Enfin, les rendements ne sont pas les mêmes selon la durée du prêt : prêter pour trois mois, deux ans ou dix ans ne rapporte pas pareil. L'ensemble de ces rendements, classés par durée, forme la **courbe des taux**. Sa forme résume ce que le marché attend et exige en échange du temps.
+
+## 4. Développement technique
+
+### 4.1 Vocabulaire d'une obligation
+
+**[Définition]**
+
+- **Valeur nominale** (ou valeur faciale, *face value*) : montant remboursé à l'échéance, par exemple 1 000.
+- **Coupon** : intérêt périodique, exprimé en % de la valeur nominale (coupon de 4 % sur 1 000 = 40 par an).
+- **Échéance** : date de remboursement.
+- **Prix** : ce que coûte l'obligation aujourd'hui sur le marché (peut être supérieur, égal ou inférieur à la valeur nominale).
+- **Rendement à l'échéance** (*yield to maturity*, YTM) : taux unique qui, appliqué aux flux restants (coupons et remboursement), donne exactement le prix payé.
+- **Rendement actuel** : coupon annuel ÷ prix.
+- **Obligation à coupon zéro** : ne verse pas de coupon ; achetée en dessous de sa valeur nominale, remboursée à la valeur nominale.
+- **Au pair / avec décote / avec prime** : prix égal / inférieur / supérieur à la valeur nominale.
+
+### 4.2 Le prix d'une obligation : une somme de valeurs actuelles
+
+**[Calcul de l'auteur, application de L0.07]** Le prix est la somme des valeurs actuelles des flux restants, actualisés au rendement *y* :
+
+**Prix = coupon/(1+y) + coupon/(1+y)² + … + (coupon + nominal)/(1+y)ⁿ.**
+
+**Exemple (SIMULATION).** Obligation de nominal 1 000, coupon annuel de 4 % (40), échéance 5 ans. Rendement exigé *y* = 5 % :
+
+| Année | Flux | Valeur actuelle à 5 % |
+| --- | --- | --- |
+| 1 | 40 | 38,10 |
+| 2 | 40 | 36,28 |
+| 3 | 40 | 34,55 |
+| 4 | 40 | 32,91 |
+| 5 | 1 040 | 814,87 |
+| **Total** | | **956,71** |
+
+Le prix de 956,71 est inférieur à 1 000 : l'obligation cote **avec une décote**. Si le rendement exigé est de 4 % (égal au coupon), le prix est exactement **1 000 (au pair)** ; s'il est de 3 %, le prix est **1 045,80 (avec une prime)**.
+
+### 4.3 La relation inverse entre prix et rendement
+
+Le tableau suivant montre le prix de la même obligation à 4 % de coupon (nominal 1 000, coupons annuels) pour plusieurs échéances et plusieurs rendements :
+
+| Rendement | 5 ans | 10 ans | 30 ans |
+| --- | --- | --- | --- |
+| 3 % | 1 045,80 | 1 085,30 | 1 196,00 |
+| 4 % | 1 000,00 | 1 000,00 | 1 000,00 |
+| 5 % | 956,71 | 922,78 | 846,28 |
+| 6 % | 915,75 | 852,80 | 724,70 |
+
+Lecture **[Calcul de l'auteur]** :
+
+- Le prix baisse quand le rendement monte, **dans toutes les colonnes**.
+- Le prix est **plus sensible pour les échéances longues** : une hausse du rendement de 4 % à 5 % fait baisser le prix de **4,33 %** (5 ans), **7,72 %** (10 ans) et **15,37 %** (30 ans).
+- La relation est **courbe**, pas linéaire : pour la 30 ans, une baisse du rendement de 4 % à 3 % fait monter le prix de **19,60 %**, davantage que la baisse de 15,37 % causée par une hausse équivalente. La sensibilité n'est donc pas symétrique (ce phénomène, la convexité, est traité plus tard dans la formation).
+
+**Cas d'une obligation à coupon zéro.** Une obligation zéro à 10 ans vaut 1 000 ÷ 1,04¹⁰ = **675,56** à 4 % et 1 000 ÷ 1,05¹⁰ = **613,91** à 5 %, soit **−9,13 %** pour une hausse de 1 point de rendement. Toute sa valeur dépend d'un remboursement lointain : elle est très sensible au taux.
+
+**[Fait, S-SEC-03, lu par résumé automatique]** Le bulletin d'information de la SEC pour les investisseurs sur le risque de taux (SEC Pub. n° 151, juin 2013) déclare que les taux d'intérêt de marché et les prix des obligations évoluent généralement en sens opposé. Il donne deux exemples sur une obligation de **10 ans, valeur nominale 1 000 $, coupon de 3 % versé semestriellement, un an après l'achat** : si le taux de marché passe de 3 % à 2 %, le prix monte à **1 082 $** ; s'il passe de 3 % à 4 %, le prix tombe à **925 $**. **[Calcul de l'auteur]** En actualisant 18 coupons semestriels de 15 et le remboursement de 1 000 à 1 % puis à 2 % par semestre, je retrouve **1 081,99** et **925,04** : les chiffres de la SEC sont reproduits. Le bulletin précise aussi que les obligations longues portent plus de risque de taux, et que, si on les conserve jusqu'à l'échéance, les variations de prix quotidiennes comptent moins (on reçoit les coupons et la valeur nominale), tandis qu'une vente avant l'échéance peut entraîner une perte.
+
+### 4.4 La durée : mesurer la sensibilité
+
+**[Fait, S-FINRA-01, article de FINRA du 19 septembre 2024, lu par résumé automatique]** La FINRA décrit la **durée** comme une mesure de la sensibilité de la valeur d'une obligation aux variations de taux : une durée de 10 signifie qu'une hausse de 1 point de pourcentage des taux fait baisser le prix d'environ 10 %, et une baisse de 1 point le fait monter d'environ 10 %. La durée est distincte de l'échéance ; des échéances plus longues et des coupons plus faibles tendent à l'augmenter. *La page ne détaille pas le calcul de la durée.*
+
+**[Calcul de l'auteur]** Pour notre obligation à 4 % de coupon, la durée modifiée (calculée numériquement au rendement de 4 %) est d'environ **4,45** (5 ans), **8,11** (10 ans) et **17,29** (30 ans). Elle prédit une variation de prix pour +1 point de rendement de −4,45 %, −8,11 % et −17,29 % : l'ordre de grandeur est bon (variations réelles : −4,33 %, −7,72 %, −15,37 %) ; la durée surestime la perte car elle est une approximation de premier ordre.
+
+### 4.5 Rendement actuel et rendement à l'échéance
+
+Pour l'obligation du §4.2 achetée 956,71 :
+
+- **rendement actuel** = 40 ÷ 956,71 = **4,18 %** ;
+- **rendement à l'échéance** = **5 %** (celui qui a servi à calculer le prix).
+
+Les deux diffèrent parce que le rendement à l'échéance inclut le **gain en capital** de 1 000 − 956,71 = 43,29 que l'on touche si on conserve jusqu'à l'échéance. Retenir le rendement actuel pour comparer des obligations est une erreur : seul le rendement à l'échéance tient compte de toute la vie du titre (sous réserve que l'émetteur paie).
+
+### 4.6 La courbe des taux
+
+**[Définition]** La **courbe des taux** relie les rendements d'obligations de même qualité d'émetteur pour des échéances différentes (3 mois, 2 ans, 10 ans, etc.). Sa **pente** est l'écart entre un rendement long et un rendement court, souvent **10 ans − 2 ans** ou **10 ans − 3 mois**.
+
+Trois formes classiques **[Définition]** :
+
+| Forme | Description | Signification habituelle |
+| --- | --- | --- |
+| **Normale** | Les rendements croissent avec l'échéance | Compensation de la durée |
+| **Plate** | Peu d'écart entre court et long | Transition |
+| **Inversée** | Les rendements courts dépassent les longs | Taux courts élevés par rapport aux attentes futures |
+
+**Pourquoi les rendements diffèrent selon l'échéance** **[Interprétation, développée en M2 et L9.06]** Deux facteurs sont généralement avancés : (1) les **anticipations** sur la trajectoire future des taux courts (si la banque centrale doit baisser ses taux, les taux longs sont plus bas) ; (2) une **prime de terme** (*term premium*), compensation demandée pour immobiliser l'argent plus longtemps. La Fed de San Francisco rappelle que ces deux composantes coexistent (S-FRBSF-01).
+
+**Données observées.** **[Fait, S-UST-03, table « Daily Treasury Par Yield Curve Rates » du Trésor américain, 2026, lue par résumé automatique ; la page était tronquée au 1er juillet 2026, les dates suivantes n'ont pas pu être lues]** Rendements du 30 juin 2026 (en %) :
+
+| 3 mois | 6 mois | 1 an | 2 ans | 3 ans | 5 ans | 7 ans | 10 ans | 20 ans | 30 ans |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 3,87 | 4,01 | 3,98 | 4,14 | 4,15 | 4,19 | 4,30 | 4,44 | 4,93 | 4,91 |
+
+(Les échéances de 1, 1,5, 2 et 4 mois, également lues, valent respectivement 3,70, 3,74, 3,77 et 3,92 ; ce sont des taux « par », c'est-à-dire pour des titres cotant au pair.)
+
+**[Calcul de l'auteur]** Pente 10 ans − 2 ans = 4,44 − 4,14 = **0,30 point (30 pb)** ; 10 ans − 3 mois = 4,44 − 3,87 = **0,57 point (57 pb)** ; 5 ans − 3 mois = 0,32 point. La courbe est globalement **normale** (ascendante), avec de petites irrégularités : 6 mois (4,01) > 1 an (3,98), et 20 ans (4,93) > 30 ans (4,91). **[Interprétation]** Une courbe n'est pas une ligne parfaite ; de petits accrocs locaux ne changent pas sa forme d'ensemble.
+
+*Limites :* un seul jour, observé par résumé automatique ; aucune comparaison avec d'autres dates n'est faite ici ; le Trésor décrit une courbe de titres américains, pas un taux unique du marché.
+
+### 4.7 Ce que la pente peut — et ne peut pas — dire
+
+**[Fait, S-FRBSF-01, Fed de San Francisco, Economic Letter 2018-20, Bauer et Mertens, 27 août 2018, lu par résumé automatique]** Les auteurs concluent que la courbe des taux « a été un indicateur fiable » des récessions et que l'écart **10 ans − 3 mois** est la mesure de pente la plus fiable parmi celles testées (les écarts testés ont tous une aire sous la courbe ROC de 0,85 à 0,89, avec une prévision à 12 mois sur des données mensuelles de 1972 à juillet 2018) ; les écarts **s'inversent généralement un à deux ans avant** une récession ; la relation repose sur une **inversion** effective, pas sur un simple aplatissement. Ils soulignent que **corrélation n'est pas causalité** (l'inversion pourrait résulter d'anticipations de récession autant que les provoquer), que l'effet des **achats de titres par la banque centrale** sur les rendements longs est très incertain, et que les différences de précision entre les écarts sont **faibles**.
+
+*Ce que le résumé lu ne donne pas :* le nombre de récessions précédées d'une inversion, le taux de faux signaux, la distribution des délais.
+
+**[Interprétation]** Pour un apprenant : une pente **négative** est un signal d'alerte historique, pas une date ; une pente **positive** (comme celle du 30 juin 2026, +57 pb en 10 ans − 3 mois) **ne garantit rien** ; et aucun des deux ne dit comment réagira le dollar ou l'or.
+
+### 4.8 Lien avec le Forex et l'or (aperçu)
+
+- **Forex** : les rendements des obligations d'État d'un pays déterminent en partie l'attrait de sa monnaie ; l'écart de rendements entre deux pays est suivi en permanence (**L4.02**, **L4.03**).
+- **Or** : l'or ne verse pas de coupon (L0.07) ; quand les rendements réels montent, détenir de l'or coûte plus cher en renonciation (**L5.03**).
+- **Banques centrales** : leurs décisions agissent surtout sur les taux courts ; les taux longs dépendent aussi des anticipations et de la prime de terme (**modules 2 et 6**).
+
+## 5. Définitions essentielles
+
+- **Obligation** : dette négociable qui verse des coupons et rembourse un nominal à l'échéance.
+- **Valeur nominale / coupon / échéance** : montant remboursé / intérêt périodique / date de remboursement.
+- **Rendement à l'échéance (YTM)** : taux unique égalisant la valeur actuelle des flux restants et le prix.
+- **Rendement actuel** : coupon annuel ÷ prix.
+- **Au pair / décote / prime** : prix égal / inférieur / supérieur au nominal.
+- **Obligation à coupon zéro** : sans coupon, achetée sous le nominal.
+- **Durée** : sensibilité du prix aux taux (≈ % de variation du prix pour 1 point de rendement).
+- **Courbe des taux** : rendements en fonction de l'échéance.
+- **Pente** : rendement long − rendement court.
+- **Courbe inversée** : rendements courts supérieurs aux longs.
+- **Prime de terme** : compensation demandée pour immobiliser l'argent plus longtemps.
+
+## 6. Exemples chiffrés
+
+**Exemple A — Prix de l'obligation 4 %, 5 ans, à 5 % :** 956,71 (§4.2).
+**Exemple B — Sensibilité :** +1 point de rendement → −4,33 % (5 ans), −7,72 % (10 ans), −15,37 % (30 ans) (§4.3).
+**Exemple C — Coupon zéro 10 ans :** 675,56 à 4 % ; 613,91 à 5 % ; −9,13 % (§4.3).
+**Exemple D — Chiffres de la SEC reproduits :** 1 081,99 (taux 2 %) et 925,04 (taux 4 %) (§4.3).
+**Exemple E — Pente du 30 juin 2026 :** 10 ans − 2 ans = +0,30 point ; 10 ans − 3 mois = +0,57 point (§4.6).
+
+### 6.5 Cas historique documenté — l'indicateur de la courbe (2018)
+
+Voir §4.7 : la Fed de San Francisco (27 août 2018) documente que l'inversion de la courbe a précédé les récessions américaines sur la période étudiée (1972 – juillet 2018), avec un délai de un à deux ans et plusieurs réserves. Au moment de la rédaction de l'article, la courbe n'était pas inversée et l'écart 10 ans − 3 mois n'était qu'un peu au-dessus de l'inversion. **[Interprétation]** Cet exemple illustre comment un indicateur macroéconomique sérieux est présenté par une institution : avec son horizon, ses limites et l'avertissement que corrélation n'est pas causalité. Les épisodes précis (années, nombre de récessions) seront étudiés avec leurs sources en **L9.06**.
+
+## 7. Application au Forex et à l'or
+
+- **Lire un rendement comme un prix** : un rendement qui monte signifie un prix d'obligation qui baisse ; garde ce réflexe pour lire la presse financière.
+- **Comparer des rendements de même échéance** entre pays avant de parler d'« attrait » d'une devise.
+- **Surveiller la pente** comme résumé de l'état du cycle monétaire, sans en faire un signal d'achat ou de vente.
+- **Pour l'or** : un mouvement des rendements réels (L4.03) compte plus qu'un mouvement des rendements nominaux.
+- **Une bonne analyse fondamentale ne garantit pas une transaction gagnante** ; les relations entre rendements, dollar et or varient selon les périodes (module 9).
+
+## 8. Erreurs courantes
+
+- **Croire qu'une hausse des taux fait monter le prix des obligations** (c'est l'inverse).
+- **Confondre coupon, rendement actuel et rendement à l'échéance.**
+- **Comparer des obligations d'échéances différentes avec la seule différence de coupon.**
+- **Oublier que la sensibilité augmente avec l'échéance.**
+- **Considérer la pente comme une prévision datée.**
+- **Lire la courbe en un seul point** (un jour, une échéance).
+- **Confondre « taux directeur » et « rendement de l'obligation à 10 ans ».**
+- **Penser qu'une obligation d'État est sans risque de prix** : le risque de taux existe même sans risque de défaut.
+
+## 9. Limites de l'interprétation
+
+- Les **exemples de prix** supposent des coupons annuels et un rendement unique ; le marché réel a des conventions (coupons semestriels, calendriers de jours) non traitées ici.
+- Les **données du Trésor** sont celles d'une seule journée (30 juin 2026), lues par résumé automatique d'une page tronquée.
+- Le **bulletin de la SEC (2013)** et l'**article de la FINRA (2024)** sont éducatifs et ne détaillent pas les formules.
+- L'étude de la **Fed de San Francisco** date de 2018 ; elle ne couvre pas les données postérieures.
+- La **durée** est une approximation d'ordre un ; la convexité n'est pas traitée.
+- Aucune de ces relations n'est une prévision de l'évolution du taux de change ou du prix de l'or.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Prix d'une obligation.** Obligation de nominal 1 000, coupon annuel de 5 %, échéance 3 ans. Calcule son prix pour un rendement de (a) 4 %, (b) 5 %, (c) 6 %. (d) Classe chaque cas : au pair, décote ou prime.
+
+<details>
+<summary>Correction 1</summary>
+
+Flux : 50, 50, 1 050.
+(a) 50/1,04 + 50/1,04² + 1 050/1,04³ = 48,08 + 46,23 + 933,45 = **1 027,75** → **prime**.
+(b) **1 000,00** → **au pair** (rendement = coupon).
+(c) 50/1,06 + 50/1,06² + 1 050/1,06³ = 47,17 + 44,50 + 881,60 = **973,27** → **décote**.
+</details>
+
+**Exercice 2 — Obligation à coupon zéro.** Une obligation zéro à 5 ans, nominal 1 000. (a) Prix à 3 % ? (b) Prix à 4 % ? (c) Variation en % ? (d) Compare à l'obligation à coupon de 4 %, 5 ans, dont le prix passe de 1 000 à 956,71 quand le rendement passe de 4 % à 5 % (−4,33 %) : laquelle est la plus sensible ? Pourquoi ?
+
+<details>
+<summary>Correction 2</summary>
+
+(a) 1 000 ÷ 1,03⁵ = **862,61**. (b) 1 000 ÷ 1,04⁵ = **821,93**.
+(c) 821,93 ÷ 862,61 − 1 = **−4,72 %** pour +1 point de rendement (de 3 % à 4 %).
+(d) Les deux bases de comparaison ne sont pas les mêmes (3 % → 4 % contre 4 % → 5 %) ; calculons le zéro de 4 % à 5 % : 1 000 ÷ 1,05⁵ = 783,53 ; 783,53 ÷ 821,93 − 1 = **−4,67 %** : le zéro est un peu plus sensible que l'obligation à coupon (−4,33 %), car il n'a aucun flux intermédiaire : toute sa valeur se trouve à l'échéance.
+</details>
+
+**Exercice 3 — Reproduire la SEC.** Obligation de 10 ans, nominal 1 000 $, coupon de 3 % versé semestriellement (15 $ par semestre). Un an après l'achat, il reste 9 ans, soit 18 semestres. (a) Prix si le taux de marché est de 2 % ? (b) de 4 % ? (c) Compare aux chiffres de la SEC.
+
+<details>
+<summary>Correction 3</summary>
+
+(a) Taux semestriel 1 % : 15 × (1 − 1,01⁻¹⁸) ÷ 0,01 + 1 000 ÷ 1,01¹⁸ = 15 × 16,398 + 836,0 ≈ **1 081,99**.
+(b) Taux semestriel 2 % : 15 × 14,992 + 700,16 ≈ **925,04**.
+(c) La SEC indique 1 082 $ et 925 $ : cohérent (arrondi à l'unité). Les chiffres de la SEC sont ainsi **retrouvés par le calcul**.
+</details>
+
+**Exercice 4 — Rendement actuel et à l'échéance.** Tu achètes 956,71 une obligation de nominal 1 000, coupon 4 %, 5 ans (rendement à l'échéance de 5 %). (a) Rendement actuel ? (b) Gain en capital si conservée jusqu'à l'échéance ? (c) Pourquoi le rendement actuel est-il inférieur au rendement à l'échéance ? (d) Si tu l'avais achetée 1 045,80, quel serait le rendement actuel, et que dirais-tu du rendement à l'échéance ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) 40 ÷ 956,71 = **4,18 %**.
+(b) 1 000 − 956,71 = **43,29**.
+(c) Parce que l'écart entre le prix et la valeur nominale est un gain supplémentaire, ignoré par le rendement actuel.
+(d) 40 ÷ 1 045,80 = **3,82 %** ; le rendement à l'échéance est de 3 % (le prix de 1 045,80 correspond à 3 %) : ici, le rendement actuel (3,82 %) dépasse le rendement à l'échéance parce que le prix payé au-dessus de 1 000 produit une perte en capital à l'échéance.
+</details>
+
+**Exercice 5 — Lire la courbe du 30 juin 2026.** Données (en %) : 3 mois 3,87 ; 6 mois 4,01 ; 1 an 3,98 ; 2 ans 4,14 ; 5 ans 4,19 ; 10 ans 4,44 ; 30 ans 4,91. (a) Pentes 10 ans − 2 ans et 10 ans − 3 mois, en pb ? (b) Entre quelles échéances la courbe baisse-t-elle ? (c) Forme d'ensemble ? (d) Que ne peux-tu pas conclure d'un seul jour ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) 4,44 − 4,14 = 0,30 point = **30 pb** ; 4,44 − 3,87 = 0,57 point = **57 pb**.
+(b) Entre 6 mois (4,01) et 1 an (3,98) : −3 pb ; entre 20 ans (4,93) et 30 ans (4,91) : −2 pb (le 20 ans figure dans la table lue).
+(c) Ascendante, donc **normale**, avec de petites irrégularités locales.
+(d) Aucune tendance : un seul jour ne dit pas si la courbe se pentifie ou s'aplatit ; ni ce qu'elle annonce ; les données viennent d'un résumé automatique d'une page tronquée.
+</details>
+
+**Exercice 6 — Interpréter sans surinterpréter.** Un article écrit : « La pente 10 ans − 3 mois est de +57 pb : aucune récession n'est à craindre. » D'après la Fed de San Francisco (2018), (a) à quel niveau de pente l'indicateur historique envoie-t-il un signal ? (b) Que dit-elle sur la causalité ? (c) Qu'est-ce qui est faux dans la phrase de l'article ?
+
+<details>
+<summary>Correction 6</summary>
+
+(a) Il repose sur une **inversion** effective (pente négative) ; l'inversion survient en général 1 à 2 ans avant une récession.
+(b) Corrélation n'est pas causalité : l'inversion peut refléter des anticipations autant qu'elle peut résulter de la politique monétaire.
+(c) L'article conclut à l'absence de risque à partir d'une pente positive. L'étude ne dit pas qu'une pente positive exclut une récession ; elle décrit un signal d'alerte quand la pente est négative, avec ses réserves. Une prévision certaine n'est justifiée ni dans un sens ni dans l'autre.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L0.08.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Une obligation est une dette négociable : **nominal, coupon, échéance, prix**.
+- **Prix = valeur actuelle des flux restants** au rendement exigé.
+- **Rendement ↑ → prix ↓** ; la sensibilité augmente avec l'échéance (durée) et la relation est courbe.
+- Les chiffres de la SEC (1 082 $ et 925 $) sont retrouvés par le calcul (1 081,99 et 925,04).
+- **Rendement actuel ≠ rendement à l'échéance** ; seul le second tient compte du gain ou de la perte en capital.
+- La **courbe des taux** relie rendements et échéances ; sa pente se mesure en pb (30 juin 2026 : 10 ans − 3 mois = +57 pb).
+- La pente négative est un signal historique d'alerte (Fed de San Francisco, 2018), jamais une prévision datée ni une explication du dollar ou de l'or.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer le prix d'une obligation à partir de son rendement (Exercices 1 et 3).
+- [ ] Chiffrer la relation inverse et comparer des échéances (§4.3, Exercice 2).
+- [ ] Distinguer rendement actuel et à l'échéance (Exercice 4).
+- [ ] Calculer et interpréter la pente d'une courbe (Exercice 5).
+- [ ] Citer ce que la recherche officielle affirme et n'affirme pas sur la pente (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-SEC-03** — SEC (Office of Investor Education and Advocacy), *Investor Bulletin: Interest Rate Risk — When Interest Rates Go Up, Prices of Fixed-Rate Bonds Fall*, SEC Pub. n° 151 (juin 2013) : https://www.sec.gov/files/ib_interestraterisk.pdf
+- **S-FINRA-01** — FINRA, *Brush Up on Bonds: Interest Rate Changes and Duration* (19 septembre 2024) : https://www.finra.org/investors/insights/bonds-interest-rate-changes-duration
+- **S-UST-03** — U.S. Department of the Treasury, *Daily Treasury Par Yield Curve Rates*, table 2026 : https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026
+- **S-FRBSF-01** — Federal Reserve Bank of San Francisco, *Economic Letter* 2018-20, M. Bauer et T. Mertens, « Information in the Yield Curve about Future Recessions » (27 août 2018) : https://www.frbsf.org/research-and-insights/publications/economic-letter/2018/08/information-in-yield-curve-about-future-recessions/
+- **S-CFPB-01** : voir L0.07.
+
+**Définitions et formules de cours non rattachées à une source :** vocabulaire obligataire, formule du prix, rendement actuel, convexité (évoquée), formes de courbe, durée calculée numériquement. **Points non vérifiés :** valeurs du Trésor après le 30 juin 2026 ; nombre de récessions précédées d'une inversion et taux de faux signaux ; détails des conventions de coupons.

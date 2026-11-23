@@ -1,0 +1,183 @@
+{
+  "chapterId": "8.4",
+  "module": 8,
+  "title": "Quiz de chapitre 8.4 — Crises financières et décision (L8.07–L8.08)",
+  "passThreshold": 0.8333333333333334,
+  "passRule": "5 bonnes réponses sur 6 (seuil pédagogique provisoire)",
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C8.4-Q1",
+      "type": "mcq",
+      "prompt": "Une banque a des actifs supérieurs à ses dettes mais ne peut payer 40 de retraits avec 30 de liquidités. De quoi s'agit-il ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un problème souverain : l'État émetteur ne peut plus refinancer sa dette"
+        },
+        {
+          "id": "b",
+          "text": "Un excès de capital : les actifs dépassent déjà les dettes de la banque"
+        },
+        {
+          "id": "c",
+          "text": "Une insolvabilité certaine : la banque ne peut pas payer ses retraits à l'échéance"
+        },
+        {
+          "id": "d",
+          "text": "Un manque de liquidité (10) tant que les actifs ne sont pas bradés"
+        }
+      ],
+      "correct": "d",
+      "explanation": "L'illiquidité diffère de l'insolvabilité : les actifs détenus valent plus que les dettes, mais les fonds disponibles manquent ; une vente forcée à décote peut changer le diagnostic.",
+      "tags": [
+        "liquidite"
+      ]
+    },
+    {
+      "id": "C8.4-Q2",
+      "type": "mcq",
+      "prompt": "Quelle est la variation entre les moyennes mensuelles de l'or de septembre (827 $) et de novembre 2008 (759 $), même source ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ −20 % ; la source citée confirme le chiffre du commentaire sur la même période"
+        },
+        {
+          "id": "b",
+          "text": "≈ +8,2 % ; la moyenne de novembre 2008 est supérieure à celle de septembre 2008, de la même source"
+        },
+        {
+          "id": "c",
+          "text": "≈ −8,2 % ; non comparable au « −20 % » d'un commentaire non sourcé, les deux estimations étant conservées"
+        },
+        {
+          "id": "d",
+          "text": "Aucun calcul n'est permis entre deux moyennes mensuelles d'une même source, quelle que soit la période"
+        }
+      ],
+      "correct": "c",
+      "explanation": "759/827 − 1 = −0,0822. Deux mesures différentes de la baisse de l'or en 2008 coexistent ; la méthode du module interdit de choisir.",
+      "tags": [
+        "or2008",
+        "anomalie"
+      ]
+    },
+    {
+      "id": "C8.4-Q3",
+      "type": "mcq",
+      "prompt": "Pourquoi une crise peut-elle d'abord provoquer une vente d'or, et pourquoi n'est-ce pas systématique ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Besoin de liquidités et dollar en hausse peuvent faire vendre l'or ; l'ordre est une hypothèse, non une loi"
+        },
+        {
+          "id": "b",
+          "text": "L'or est systématiquement vendu au début de toute crise financière, puis racheté ensuite par les mêmes acteurs"
+        },
+        {
+          "id": "c",
+          "text": "L'or monte systématiquement dès le début de toute crise financière, par effet de refuge"
+        },
+        {
+          "id": "d",
+          "text": "L'or n'est pas un actif financier et ne réagit donc jamais aux tensions bancaires"
+        }
+      ],
+      "correct": "a",
+      "explanation": "2008 (moyennes mensuelles, commentaire) et mars 2023 (WGC) montrent des comportements différents ; les facteurs concurrents ne sont pas mesurés.",
+      "tags": [
+        "or",
+        "hypothese"
+      ]
+    },
+    {
+      "id": "C8.4-Q4",
+      "type": "mcq",
+      "prompt": "Que peut-on attribuer au discours de Draghi à Londres de juillet 2012 d'après les sources lues ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une citation exacte du discours et un effet mesuré sur les rendements souverains"
+        },
+        {
+          "id": "b",
+          "text": "Rien de précis : date non établie (deux dates sur la page de la BRI), texte non lu, aucune citation ni aucun effet attribué"
+        },
+        {
+          "id": "c",
+          "text": "Une date unique, le 26/07, confirmée par la page de la BRI consultée"
+        },
+        {
+          "id": "d",
+          "text": "Le contenu détaillé du dispositif OMT annoncé le 06/09/2012"
+        }
+      ],
+      "correct": "b",
+      "explanation": "L'OMT est annoncé le 06/09/2012 avec « aucune limite ex ante » ; le discours de Londres est un autre document, dont seules des métadonnées ont été lues.",
+      "tags": [
+        "sources",
+        "bce"
+      ]
+    },
+    {
+      "id": "C8.4-Q5",
+      "type": "mcq",
+      "prompt": "Quelle est la différence entre « attendre » et « ne pas intervenir » dans le protocole de L8.08 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il n'existe aucune différence : les deux décisions suspendent l'analyse jusqu'à la prochaine publication"
+        },
+        {
+          "id": "b",
+          "text": "Attendre signifie déjà agir : la position est ouverte à taille réduite, sans déclencheur particulier"
+        },
+        {
+          "id": "c",
+          "text": "Attendre exige un déclencheur précis et daté ; ne pas intervenir : critères non remplis même avec plus d'information"
+        },
+        {
+          "id": "d",
+          "text": "Ne pas intervenir veut dire attendre un mois avant de réévaluer la situation"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le journal exige une raison écrite pour chaque abstention ; une abstention sans déclencheur ni critère est un signal de biais.",
+      "tags": [
+        "decision"
+      ]
+    },
+    {
+      "id": "C8.4-Q6",
+      "type": "mcq",
+      "prompt": "Espérance de trois scénarios fictifs : A (0,5) +2 %, B (0,3) −1 %, C (0,2) −3 %. Quelle conclusion de robustesse ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+0,1 % ; avec 10 points de A vers C : −0,4 %, décision non robuste, donc attendre ou ne pas intervenir"
+        },
+        {
+          "id": "b",
+          "text": "+1 % ; la décision est robuste car l'espérance reste positive après un déplacement de probabilités"
+        },
+        {
+          "id": "c",
+          "text": "−0,1 % ; la décision est robuste car le scénario central domine après un déplacement de probabilités"
+        },
+        {
+          "id": "d",
+          "text": "0 % ; la décision est robuste car les scénarios s'annulent"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le signe change avec un déplacement de 10 points de probabilité ; une espérance fragile n'est pas une base d'action.",
+      "tags": [
+        "sensibilite",
+        "simulation"
+      ]
+    }
+  ],
+  "revision": 2
+}

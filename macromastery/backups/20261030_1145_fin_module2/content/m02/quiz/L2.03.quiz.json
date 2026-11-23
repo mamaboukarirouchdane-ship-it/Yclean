@@ -1,0 +1,238 @@
+{
+  "lessonId": "L2.03",
+  "title": "Quiz — Taux directeurs et transmission",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : Fed (16/09 et 28/10/2026), BCE, Federal Reserve History, résumés automatiques.",
+  "questions": [
+    {
+      "id": "L2.03-Q1",
+      "type": "mcq",
+      "prompt": "Fed, septembre 2026 : quelle est la fourchette cible après la décision du 16 septembre ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "3,50 – 3,75 %"
+        },
+        {
+          "id": "b",
+          "text": "4,00 – 4,25 %"
+        },
+        {
+          "id": "c",
+          "text": "3,75 – 4,00 %"
+        },
+        {
+          "id": "d",
+          "text": "3,25 – 3,50 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le FOMC a relevé la fourchette de ¼ point à 3¾–4 % par 12 voix contre 0 ; elle a été maintenue le 28 octobre par 10 voix contre 2.",
+      "tags": [
+        "fed",
+        "decision"
+      ]
+    },
+    {
+      "id": "L2.03-Q2",
+      "type": "mcq",
+      "prompt": "Dans la note d'application du 16 septembre 2026, où se situe le taux ON RRP par rapport à la fourchette 3,75 – 4,00 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "À la borne basse (3,75 %)"
+        },
+        {
+          "id": "b",
+          "text": "Au milieu"
+        },
+        {
+          "id": "c",
+          "text": "À la borne haute (4,00 %)"
+        },
+        {
+          "id": "d",
+          "text": "Hors de la fourchette"
+        }
+      ],
+      "correct": "a",
+      "explanation": "ON RRP 3,75 %, IORB 3,90 %, taux d'escompte 4,00 % (borne haute).",
+      "tags": [
+        "fed",
+        "implementation"
+      ]
+    },
+    {
+      "id": "L2.03-Q3",
+      "type": "mcq",
+      "prompt": "Que souhaitaient Lisa D. Cook et Beth M. Hammack lors du FOMC du 28 octobre 2026 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une baisse de ¼ point"
+        },
+        {
+          "id": "b",
+          "text": "Une hausse de ½ point"
+        },
+        {
+          "id": "c",
+          "text": "Le maintien"
+        },
+        {
+          "id": "d",
+          "text": "Une hausse de ¼ point"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Elles ont dissenti en faveur d'une hausse de ¼ point (vote 10–2) ; une dissidence est une information, non une décision.",
+      "tags": [
+        "fed",
+        "dissidence"
+      ]
+    },
+    {
+      "id": "L2.03-Q4",
+      "type": "mcq",
+      "prompt": "Quels sont les taux de la BCE en vigueur depuis le 16 septembre 2026 (page officielle lue) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Dépôt 2,00 %, MRO 2,15 %, prêt marginal 2,40 %"
+        },
+        {
+          "id": "b",
+          "text": "Dépôt 2,50 %, MRO 2,65 %, prêt marginal 2,90 %"
+        },
+        {
+          "id": "c",
+          "text": "Dépôt 3,00 %, MRO 3,15 %, prêt marginal 3,40 %"
+        },
+        {
+          "id": "d",
+          "text": "Dépôt 4,00 %, MRO 4,00 %, prêt marginal 4,00 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Facilité de dépôt 2,50 % ; MRO 2,65 % (+0,15) ; prêt marginal 2,90 % (+0,40).",
+      "tags": [
+        "bce",
+        "taux"
+      ]
+    },
+    {
+      "id": "L2.03-Q5",
+      "type": "mcq",
+      "prompt": "Selon la BCE, comment qualifier les délais de la transmission de la politique monétaire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Courts et fixes"
+        },
+        {
+          "id": "b",
+          "text": "Toujours de six mois"
+        },
+        {
+          "id": "c",
+          "text": "Nuls"
+        },
+        {
+          "id": "d",
+          "text": "Longs, variables et incertains"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La page parle de délais « longs, variables et incertains » sans donner de durée précise.",
+      "tags": [
+        "transmission",
+        "delais"
+      ]
+    },
+    {
+      "id": "L2.03-Q6",
+      "type": "mcq",
+      "prompt": "Pourquoi le taux hypothécaire américain (7,24 % au 29/10/2026) n'est-il pas égal au taux directeur ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce qu'il est fixé par le gouvernement"
+        },
+        {
+          "id": "b",
+          "text": "Parce qu'il est toujours deux fois plus élevé"
+        },
+        {
+          "id": "c",
+          "text": "Parce qu'il dépend des rendements longs, des anticipations, de la prime de terme et du risque"
+        },
+        {
+          "id": "d",
+          "text": "Parce que la banque centrale ne le regarde pas"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La banque centrale influence le taux court ; les taux longs intègrent des anticipations et des primes.",
+      "tags": [
+        "hypotheque"
+      ]
+    },
+    {
+      "id": "L2.03-Q7",
+      "type": "mcq",
+      "prompt": "Taux nominal de 3,875 % et inflation de 3,4 % : taux réel ex post approximatif ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+0,475 point"
+        },
+        {
+          "id": "b",
+          "text": "+7,3 points"
+        },
+        {
+          "id": "c",
+          "text": "−0,475 point"
+        },
+        {
+          "id": "d",
+          "text": "0 point"
+        }
+      ],
+      "correct": "a",
+      "explanation": "3,875 − 3,4 = 0,475 : approximation sur inflation passée et milieu de fourchette.",
+      "tags": [
+        "taux-reel"
+      ]
+    },
+    {
+      "id": "L2.03-Q8",
+      "type": "mcq",
+      "prompt": "Quel enseignement du cas du 6 octobre 1979 (Volcker) est documenté par la source lue ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une désinflation sans aucun coût"
+        },
+        {
+          "id": "b",
+          "text": "Une désinflation possible mais au prix d'une récession sévère (chômage de 10,8 % fin 1982) et d'un taux des fonds fédéraux record de 20 %"
+        },
+        {
+          "id": "c",
+          "text": "Aucune variation de l'inflation"
+        },
+        {
+          "id": "d",
+          "text": "Une baisse des taux dès 1979"
+        }
+      ],
+      "correct": "b",
+      "explanation": "L'inflation est tombée à 6,1 % début 1982 puis 3,7 % ; le coût fut une récession sévère, avec un assouplissement en juillet 1982.",
+      "tags": [
+        "volcker"
+      ]
+    }
+  ],
+  "revision": 1
+}

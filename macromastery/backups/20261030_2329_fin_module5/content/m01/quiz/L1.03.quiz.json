@@ -1,0 +1,235 @@
+{
+  "lessonId": "L1.03",
+  "title": "Quiz — Productivité et croissance potentielle",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : BLS (3/09/2026) et CBO (28/07/2026), résumés automatiques.",
+  "questions": [
+    {
+      "id": "L1.03-Q1",
+      "type": "mcq",
+      "prompt": "Comment le BLS définit-il la productivité du travail dans le communiqué lu ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Production nominale ÷ nombre de salariés"
+        },
+        {
+          "id": "b",
+          "text": "Salaire horaire ÷ prix"
+        },
+        {
+          "id": "c",
+          "text": "Indice de production réelle ÷ indice des heures travaillées par tous les travailleurs"
+        },
+        {
+          "id": "d",
+          "text": "Bénéfices ÷ capital"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La productivité du travail est la production par heure : un indice de production réelle divisé par un indice des heures travaillées (salariés, indépendants, aides familiaux).",
+      "tags": [
+        "productivite"
+      ]
+    },
+    {
+      "id": "L1.03-Q2",
+      "type": "mcq",
+      "prompt": "Production +3,0 % et heures travaillées +1,0 % : croissance exacte de la productivité ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1,98 %"
+        },
+        {
+          "id": "b",
+          "text": "2,0 % exactement"
+        },
+        {
+          "id": "c",
+          "text": "4,0 %"
+        },
+        {
+          "id": "d",
+          "text": "3,0 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "1,03 ÷ 1,01 − 1 = 1,98 % (l'approximation 3 − 1 = 2 % est proche).",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L1.03-Q3",
+      "type": "mcq",
+      "prompt": "Rémunération horaire +4,0 %, productivité +1,5 %. Le coût unitaire du travail augmente d'environ :",
+      "options": [
+        {
+          "id": "a",
+          "text": "5,5 %"
+        },
+        {
+          "id": "b",
+          "text": "0 %"
+        },
+        {
+          "id": "c",
+          "text": "4,0 %"
+        },
+        {
+          "id": "d",
+          "text": "2,46 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "1,04 ÷ 1,015 − 1 = 2,46 % : la rémunération augmente plus vite que la productivité.",
+      "tags": [
+        "cut"
+      ]
+    },
+    {
+      "id": "L1.03-Q4",
+      "type": "mcq",
+      "prompt": "Selon la CBO (février 2026), la croissance annuelle moyenne 2026–2036 du PIB potentiel réel est de 1,9 %. Elle se décompose en :",
+      "options": [
+        {
+          "id": "a",
+          "text": "1,5 % de main-d'œuvre et 0,4 % de productivité"
+        },
+        {
+          "id": "b",
+          "text": "0,4 % de main-d'œuvre potentielle et 1,5 % de productivité potentielle"
+        },
+        {
+          "id": "c",
+          "text": "1,9 % de capital"
+        },
+        {
+          "id": "d",
+          "text": "Aucune décomposition possible"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Main-d'œuvre potentielle 0,4 % + productivité du travail potentielle 1,5 % = 1,9 %.",
+      "tags": [
+        "cbo",
+        "decomposition"
+      ]
+    },
+    {
+      "id": "L1.03-Q5",
+      "type": "mcq",
+      "prompt": "La productivité globale des facteurs (PGF) est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "La quantité de capital"
+        },
+        {
+          "id": "b",
+          "text": "Le salaire minimum"
+        },
+        {
+          "id": "c",
+          "text": "Le nombre d'heures"
+        },
+        {
+          "id": "d",
+          "text": "Un résidu : la part de croissance non expliquée par le travail et le capital"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La PGF est un résidu de comptabilité de la croissance (progrès technique, organisation, institutions…), donc une mesure incertaine.",
+      "tags": [
+        "pgf"
+      ]
+    },
+    {
+      "id": "L1.03-Q6",
+      "type": "mcq",
+      "prompt": "1,9 % de croissance par an contre 3,1 % pendant 20 ans : le niveau final est environ :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Identique"
+        },
+        {
+          "id": "b",
+          "text": "2 % plus élevé dans le second cas"
+        },
+        {
+          "id": "c",
+          "text": "26 % plus élevé dans le second cas"
+        },
+        {
+          "id": "d",
+          "text": "100 % plus élevé dans le second cas"
+        }
+      ],
+      "correct": "c",
+      "explanation": "1,019²⁰ = 1,457 et 1,031²⁰ = 1,842 : écart de niveau de 26 % pour 1,2 point de croissance annuelle.",
+      "tags": [
+        "niveaux"
+      ]
+    },
+    {
+      "id": "L1.03-Q7",
+      "type": "mcq",
+      "prompt": "Dans le tableau de la CBO lu, quelle période a la productivité du travail potentielle la plus basse ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1974–1981"
+        },
+        {
+          "id": "b",
+          "text": "1950–1973"
+        },
+        {
+          "id": "c",
+          "text": "1991–2001"
+        },
+        {
+          "id": "d",
+          "text": "2008–2025"
+        }
+      ],
+      "correct": "a",
+      "explanation": "0,7 % en 1974–1981 ; la source lue ne donne pas les causes de cette évolution.",
+      "tags": [
+        "historique"
+      ]
+    },
+    {
+      "id": "L1.03-Q8",
+      "type": "mcq",
+      "prompt": "Quelle affirmation sur la croissance potentielle et la politique monétaire est la plus prudente ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le potentiel dicte exactement les taux"
+        },
+        {
+          "id": "b",
+          "text": "Le potentiel est un repère estimé et incertain : une croissance durablement supérieure peut faire monter le risque d'inflation, mais la banque centrale regarde aussi inflation, anticipations et emploi"
+        },
+        {
+          "id": "c",
+          "text": "Le potentiel n'intéresse jamais les banques centrales"
+        },
+        {
+          "id": "d",
+          "text": "Le potentiel est observé directement"
+        }
+      ],
+      "correct": "b",
+      "explanation": "C'est une hypothèse d'analyse : le potentiel est estimé, et la banque centrale se fonde sur un ensemble d'informations (modules 2 et 3).",
+      "tags": [
+        "monnaie",
+        "limites"
+      ]
+    }
+  ],
+  "revision": 1
+}

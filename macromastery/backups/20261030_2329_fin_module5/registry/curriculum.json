@@ -1,0 +1,4331 @@
+{
+ "version": 1,
+ "built": "2026-10-30",
+ "source": {
+  "document": "MacroMastery Academy — Phase 2 : inventaire pédagogique (Claude Docs, révision 25)",
+  "sha256_export": "cb2e233ed6c5ebe1c27f6d79ba398360f133fae4e1984780bec989ff7b4e2913"
+ },
+ "decisions": [
+  {
+   "date": "2026-10-30",
+   "id": "D1",
+   "text": "Module 15 révisé adopté : 12 leçons obligatoires + projet final de 12 h. 150 leçons obligatoires au total ; ~469 h de leçons ; ~562 h au total (provisoire, à recalculer)."
+  },
+  {
+   "date": "2026-10-30",
+   "id": "D2",
+   "text": "Les 8 anciennes leçons facultatives du module 15 sont conservées dans l'archive pédagogique (registry/archive_m15_ancien.json), hors parcours obligatoire. Aucune trace de l'ancienne architecture n'est supprimée."
+  },
+  {
+   "date": "2026-10-30",
+   "id": "D3",
+   "text": "Réorganisation L0.04 (prix, liquidité, sessions + taille de position/lots), L0.05 (taux croisés, conversions, cohérence des cotations, applications), L0.06 (or : once troy, contrats, ETF, marché physique), sous réserve de préserver les objectifs initiaux. Les notions des pilotes sont rappelées brièvement puis approfondies sous un angle différent."
+  },
+  {
+   "date": "2026-10-30",
+   "id": "D4",
+   "text": "Durées détaillées par leçon retenues. Modules 1 et 2 : totaux 34 h et 35 h conservés ; les sommes annoncées dans l'inventaire (33,5 h et 35,5 h) sont consignées comme écarts historiques sans modification."
+  },
+  {
+   "date": "2026-10-30",
+   "id": "D5",
+   "text": "Quiz de chapitre, examens de module, projets pratiques et grilles, corrections, critères de maîtrise, diagnostic initial + version alternative finale, projet de clôture : produits progressivement avec les modules, non reportés."
+  },
+  {
+   "date": "2026-10-30",
+   "id": "D6",
+   "text": "Cas historiques et données choisis par l'auteur : sources primaires consultées avant usage, dates et références, distinction faits/interprétations/calculs/simulations, sources inaccessibles signalées, aucune référence inventée."
+  },
+  {
+   "date": "2026-10-30",
+   "id": "D7",
+   "text": "Agents distincts autorisés pour les audits (vérification financière, contrôle des sources, qualité pédagogique, cohérence globale) ; ils ne remplacent pas l'audit final."
+  },
+  {
+   "date": "2026-10-30",
+   "id": "D8",
+   "text": "Production module par module sans validation individuelle ; pilotes L0.01-L0.03 intacts ; contrôle intermédiaire fin M5 ; bilan concis à la fin de chaque module. Interdits : GitHub, site, publication, dépense, installation de dépendance."
+  }
+ ],
+ "totals": {
+  "lessons": 150,
+  "mandatory": 150,
+  "lesson_hours": 469.0,
+  "provisional_total_hours_user": 562,
+  "note": "Total de 562 h = leçons + 32 h examens + révisions + 2 h diagnostic + 12 h projet : provisoire, à recalculer."
+ },
+ "discrepancies": [
+  {
+   "id": "E1",
+   "text": "Module 1 : durée annoncée 33,5 h dans l'inventaire ; somme des 12 leçons = 34,0 h. Retenu : 34,0 h (décision D4).",
+   "declared": 33.5,
+   "rows": 34.0
+  },
+  {
+   "id": "E2",
+   "text": "Module 2 : durée annoncée 35,5 h ; somme des 12 leçons = 35,0 h. Retenu : 35,0 h (décision D4).",
+   "declared": 35.5,
+   "rows": 35.0
+  },
+  {
+   "id": "E3",
+   "text": "Totaux du résumé de l'inventaire (152 leçons, 144 obligatoires, 534 h) antérieurs à la révision du module 15 ; remplacés par 150 / 150 / ~469 h de leçons (décisions D1).",
+   "old": {
+    "lessons": 152,
+    "mandatory": 144,
+    "hours": 534
+   }
+  },
+  {
+   "id": "E4",
+   "text": "Pilotes : titres et durées réalisés différents de l'inventaire (voir pilot_deltas dans les entrées L0.01-L0.03)."
+  }
+ ],
+ "modules": [
+  {
+   "module": 0,
+   "title": "Fondations des marchés financiers",
+   "lessons": 10,
+   "hours_rows": 24.5,
+   "hours_declared_initial": 24.5,
+   "prerequis_module_texte": "aucun",
+   "niveau": "A",
+   "duree_texte": "24,5 h (10 leçons).",
+   "objectif_module": "comprendre le fonctionnement des marchés, du Forex et de l'or, et maîtriser le vocabulaire et les calculs de base nécessaires à tous les modules suivants.",
+   "chapitres_texte": "0.1 Marchés et acteurs (L0.01 à L0.02) · 0.2 Le marché des changes (L0.03 à L0.05) · 0.3 L'or (L0.06) · 0.4 Taux et obligations (L0.07 à L0.08) · 0.5 Lire un marché et mesurer le risque (L0.09 à L0.10).",
+   "exercices_evaluations_initiaux": "3 à 6 exercices corrigés par leçon (calculs de pips, lots, taux croisés, prix d'obligation) ; quiz de chapitre ; examen de module de 2 h (25 QCM et 5 calculs) ; **mini-projet :** fiche d'identité d'une paire de devises et de l'or (cotation, sessions, coûts de transaction) à partir de documents publics.",
+   "familles_sources_initiales": "enquête triennale de la BIS sur le change ; ressources pédagogiques de la Federal Reserve ; US Treasury (taux et courbe des rendements) ; CME Group (spécifications des contrats sur l'or) ; LBMA ; World Gold Council.",
+   "criteres_validation_module": [
+    "Calcul du pip et de la valeur d'un lot sans erreur sur 10 paires.",
+    "Lien prix et rendement d'une obligation expliqué et calculé.",
+    "Spread, taux croisé et effet de levier expliqués par écrit en termes simples."
+   ],
+   "chapters": [
+    {
+     "id": "0.1",
+     "title": "Marchés et acteurs",
+     "first": "L0.01",
+     "last": "L0.02"
+    },
+    {
+     "id": "0.2",
+     "title": "Le marché des changes",
+     "first": "L0.03",
+     "last": "L0.05"
+    },
+    {
+     "id": "0.3",
+     "title": "L'or",
+     "first": "L0.06",
+     "last": "L0.06"
+    },
+    {
+     "id": "0.4",
+     "title": "Taux et obligations",
+     "first": "L0.07",
+     "last": "L0.08"
+    },
+    {
+     "id": "0.5",
+     "title": "Lire un marché et mesurer le risque",
+     "first": "L0.09",
+     "last": "L0.10"
+    }
+   ],
+   "modules_prerequis_parse": []
+  },
+  {
+   "module": 1,
+   "title": "Macroéconomie appliquée aux marchés",
+   "lessons": 12,
+   "hours_rows": 34.0,
+   "hours_declared_initial": 33.5,
+   "prerequis_module_texte": "module 0",
+   "niveau": "A à B",
+   "duree_texte": "33,5 h (12 leçons).",
+   "objectif_module": "lire l'état d'une économie (croissance, inflation, emploi, comptes extérieurs, finances publiques) et relier chaque grandeur à ses effets sur les taux et les devises.",
+   "chapitres_texte": "1.1 Mesurer l'économie (L1.01 à L1.03) · 1.2 Prix et inflation (L1.04 à L1.06) · 1.3 Emploi (L1.07 à L1.08) · 1.4 Demande et échanges (L1.09 à L1.10) · 1.5 Budget et synthèse (L1.11 à L1.12).",
+   "exercices_evaluations_initiaux": "calculs de croissance réelle et nominale, de déflateur et d'inflation ; comparaison CPI et PCE sur données officielles ; datation d'un cycle ; fiche pays ; quiz de chapitre ; examen de 2 h ; **mini-projet :** tableau de bord macro des États-Unis et de la zone euro (12 indicateurs, sources, date de mise à jour).",
+   "familles_sources_initiales": "BEA (comptes nationaux, PIB) ; BLS (CPI, rapport sur l'emploi, manuel de méthodes) ; comité de datation des cycles du NBER ; Federal Reserve ; CBO ; US Treasury (Fiscal Data) ; Eurostat ; portail de données de la BCE ; FMI (World Economic Outlook).",
+   "criteres_validation_module": [
+    "Croissance réelle et inflation calculées sans erreur sur données officielles.",
+    "Trois types d'inflation distingués correctement sur des cas fournis.",
+    "Tableau de bord de deux économies cohérent, sourcé et daté."
+   ],
+   "chapters": [
+    {
+     "id": "1.1",
+     "title": "Mesurer l'économie",
+     "first": "L1.01",
+     "last": "L1.03"
+    },
+    {
+     "id": "1.2",
+     "title": "Prix et inflation",
+     "first": "L1.04",
+     "last": "L1.06"
+    },
+    {
+     "id": "1.3",
+     "title": "Emploi",
+     "first": "L1.07",
+     "last": "L1.08"
+    },
+    {
+     "id": "1.4",
+     "title": "Demande et échanges",
+     "first": "L1.09",
+     "last": "L1.10"
+    },
+    {
+     "id": "1.5",
+     "title": "Budget et synthèse",
+     "first": "L1.11",
+     "last": "L1.12"
+    }
+   ],
+   "modules_prerequis_parse": [
+    0
+   ]
+  },
+  {
+   "module": 2,
+   "title": "Banques centrales et politique monétaire",
+   "lessons": 12,
+   "hours_rows": 35.0,
+   "hours_declared_initial": 35.5,
+   "prerequis_module_texte": "module 1 (L1.04 et L1.07 indispensables)",
+   "niveau": "B",
+   "duree_texte": "35,5 h (12 leçons).",
+   "objectif_module": "comprendre ce que font les banques centrales, comment elles décident, et comment leurs décisions se transmettent aux taux, au change et à l'or.",
+   "chapitres_texte": "2.1 Fondements (L2.01 à L2.02) · 2.2 Instruments (L2.03 à L2.05) · 2.3 Règles et fonction de réaction (L2.06 à L2.07) · 2.4 Les grandes banques centrales (L2.08 à L2.10) · 2.5 Pratique et transmission (L2.11 à L2.12).",
+   "exercices_evaluations_initiaux": "calcul de la règle de Taylor avec données réelles ; comparaison ligne à ligne de deux communiqués FOMC ; lecture guidée de procès-verbaux ; quiz de chapitre ; examen de 2 h ; **mini-projet :** tableau comparatif des quatre banques (mandat, outils, calendrier, communication) et note d'une page « ce que la Fed regarde ».",
+   "familles_sources_initiales": "Federal Reserve (loi, déclarations FOMC, procès-verbaux, projections, rapport de politique monétaire, bilan) ; BCE (déclarations, conférences de presse, bulletin économique, revue de stratégie) ; BoJ ; BoE ; BIS ; estimations du taux neutre de la Fed de New York ; Taylor (1993).",
+   "criteres_validation_module": [
+    "Règle de Taylor appliquée à des données réelles et ses limites discutées.",
+    "Changement entre deux communiqués résumé en cinq points exacts.",
+    "Trois canaux de transmission expliqués sur un exemple."
+   ],
+   "chapters": [
+    {
+     "id": "2.1",
+     "title": "Fondements",
+     "first": "L2.01",
+     "last": "L2.02"
+    },
+    {
+     "id": "2.2",
+     "title": "Instruments",
+     "first": "L2.03",
+     "last": "L2.05"
+    },
+    {
+     "id": "2.3",
+     "title": "Règles et fonction de réaction",
+     "first": "L2.06",
+     "last": "L2.07"
+    },
+    {
+     "id": "2.4",
+     "title": "Les grandes banques centrales",
+     "first": "L2.08",
+     "last": "L2.10"
+    },
+    {
+     "id": "2.5",
+     "title": "Pratique et transmission",
+     "first": "L2.11",
+     "last": "L2.12"
+    }
+   ],
+   "modules_prerequis_parse": [
+    1
+   ]
+  },
+  {
+   "module": 3,
+   "title": "Publications économiques et surprises statistiques",
+   "lessons": 12,
+   "hours_rows": 36.0,
+   "hours_declared_initial": 36.0,
+   "prerequis_module_texte": "modules 1 et 2 (L2.03 et L2.07)",
+   "niveau": "B",
+   "duree_texte": "36 h (12 leçons).",
+   "objectif_module": "lire une publication économique, mesurer sa « surprise » par rapport aux attentes et anticiper la réaction typique des marchés.",
+   "chapitres_texte": "3.1 Cadre (L3.01 à L3.03) · 3.2 Emploi (L3.04 à L3.05) · 3.3 Inflation (L3.06 à L3.07) · 3.4 Activité (L3.08 à L3.09) · 3.5 Zone euro (L3.10) · 3.6 Pratique (L3.11 à L3.12).",
+   "exercices_evaluations_initiaux": "calcul de surprises standardisées sur séries historiques officielles ; six lectures de publications guidées ; quiz de chapitre ; examen de 2 h avec deux publications à analyser ; **mini-projet :** grille de lecture personnelle et trois cas reconstitués avec sources.",
+   "familles_sources_initiales": "BLS (calendrier, rapport sur l'emploi, CPI) ; BEA (calendrier, PIB, PCE) ; Census Bureau ; ISM et S&P Global (méthodologies des enquêtes) ; Eurostat (indicateurs euro) ; Federal Reserve. **Limite connue :** les consensus de marché sont en général sous licence payante. Au départ, ils sont saisis manuellement avec leur origine, ou remplacés par des cas historiques publics.",
+   "criteres_validation_module": [
+    "Surprise standardisée calculée correctement.",
+    "Variation du chiffre principal distinguée de celle des composantes et des révisions.",
+    "Une publication analysée avec la grille en 15 minutes, sans erreur factuelle."
+   ],
+   "chapters": [
+    {
+     "id": "3.1",
+     "title": "Cadre",
+     "first": "L3.01",
+     "last": "L3.03"
+    },
+    {
+     "id": "3.2",
+     "title": "Emploi",
+     "first": "L3.04",
+     "last": "L3.05"
+    },
+    {
+     "id": "3.3",
+     "title": "Inflation",
+     "first": "L3.06",
+     "last": "L3.07"
+    },
+    {
+     "id": "3.4",
+     "title": "Activité",
+     "first": "L3.08",
+     "last": "L3.09"
+    },
+    {
+     "id": "3.5",
+     "title": "Zone euro",
+     "first": "L3.10",
+     "last": "L3.10"
+    },
+    {
+     "id": "3.6",
+     "title": "Pratique",
+     "first": "L3.11",
+     "last": "L3.12"
+    }
+   ],
+   "modules_prerequis_parse": [
+    1,
+    2
+   ]
+  },
+  {
+   "module": 4,
+   "title": "Analyse fondamentale du Forex",
+   "lessons": 12,
+   "hours_rows": 35.5,
+   "hours_declared_initial": 35.5,
+   "prerequis_module_texte": "modules 2 et 3",
+   "niveau": "B à C",
+   "duree_texte": "35,5 h (12 leçons).",
+   "objectif_module": "construire une thèse fondamentale sur une paire de devises à partir des taux, de l'inflation, des flux et du contexte macroéconomique.",
+   "chapitres_texte": "4.1 Taux et valorisation (L4.01 à L4.03) · 4.2 Balance des paiements (L4.04 à L4.05) · 4.3 Les grandes devises (L4.06 à L4.09) · 4.4 Stratégies fondamentales (L4.10 à L4.11) · 4.5 Synthèse (L4.12).",
+   "exercices_evaluations_initiaux": "calcul de parité couverte ; tableau de différentiels sur cinq paires ; fiche par devise ; exercice de carry ; quiz de chapitre ; examen de 2 h ; **mini-projet :** thèse EUR/USD sur une période passée, comparée ensuite au résultat réel (exercice d'analyse, pas un conseil de trading).",
+   "familles_sources_initiales": "BIS (enquête triennale, Quarterly Review) ; FMI (manuel de la balance des paiements, COFER, statistiques financières) ; US Treasury (flux TIC, rendements, TIPS) ; BCE (rôle international de l'euro) ; BoJ ; BNS ; BoE ; Eurostat ; Meese et Rogoff (1983) ; Fama (1984).",
+   "criteres_validation_module": [
+    "Thèse EUR/USD structurée, appuyée sur des preuves sourcées, avec conditions d'invalidation.",
+    "Calcul du carry et des différentiels exact.",
+    "Limites des modèles de change expliquées (faible pouvoir prédictif à court terme)."
+   ],
+   "chapters": [
+    {
+     "id": "4.1",
+     "title": "Taux et valorisation",
+     "first": "L4.01",
+     "last": "L4.03"
+    },
+    {
+     "id": "4.2",
+     "title": "Balance des paiements",
+     "first": "L4.04",
+     "last": "L4.05"
+    },
+    {
+     "id": "4.3",
+     "title": "Les grandes devises",
+     "first": "L4.06",
+     "last": "L4.09"
+    },
+    {
+     "id": "4.4",
+     "title": "Stratégies fondamentales",
+     "first": "L4.10",
+     "last": "L4.11"
+    },
+    {
+     "id": "4.5",
+     "title": "Synthèse",
+     "first": "L4.12",
+     "last": "L4.12"
+    }
+   ],
+   "modules_prerequis_parse": [
+    2,
+    3
+   ]
+  },
+  {
+   "module": 5,
+   "title": "Analyse fondamentale approfondie de l'or",
+   "lessons": 12,
+   "hours_rows": 36.5,
+   "hours_declared_initial": 36.5,
+   "prerequis_module_texte": "modules 2 et 4 (L4.03 indispensable)",
+   "niveau": "B à C",
+   "duree_texte": "36,5 h (12 leçons).",
+   "objectif_module": "expliquer les moteurs de l'or (taux réels, dollar, demande officielle et d'investissement, risques) et leurs limites, sans idée reçue non vérifiée.",
+   "chapitres_texte": "5.1 Nature de l'or (L5.01 à L5.02) · 5.2 Moteurs financiers (L5.03 à L5.05) · 5.3 Demande officielle et d'investissement (L5.06 à L5.07) · 5.4 Régimes et structure de marché (L5.08 à L5.09) · 5.5 Synthèse (L5.10 à L5.12).",
+   "exercices_evaluations_initiaux": "comparaison graphique or et taux réels sur données officielles avec interprétation écrite ; test d'idées reçues avec verdict argumenté ; fiches « moteurs » ; quiz de chapitre ; examen de 2 h ; **mini-projet :** dossier fondamental XAU/USD (tableau de bord, thèse, conditions d'invalidation).",
+   "familles_sources_initiales": "World Gold Council (demande, statistiques des banques centrales) ; FMI (réserves officielles) ; LBMA ; CME Group ; US Treasury (rendements réels, TIPS) ; USGS (synthèse sur l'or) ; Federal Reserve ; Erb et Harvey (2013).",
+   "criteres_validation_module": [
+    "Relation or et taux réels expliquée avec ses limites et ses périodes d'exception.",
+    "Une idée reçue nuancée ou rejetée à partir de données sourcées.",
+    "Dossier XAU/USD complet et cohérent."
+   ],
+   "chapters": [
+    {
+     "id": "5.1",
+     "title": "Nature de l'or",
+     "first": "L5.01",
+     "last": "L5.02"
+    },
+    {
+     "id": "5.2",
+     "title": "Moteurs financiers",
+     "first": "L5.03",
+     "last": "L5.05"
+    },
+    {
+     "id": "5.3",
+     "title": "Demande officielle et d'investissement",
+     "first": "L5.06",
+     "last": "L5.07"
+    },
+    {
+     "id": "5.4",
+     "title": "Régimes et structure de marché",
+     "first": "L5.08",
+     "last": "L5.09"
+    },
+    {
+     "id": "5.5",
+     "title": "Synthèse",
+     "first": "L5.10",
+     "last": "L5.12"
+    }
+   ],
+   "modules_prerequis_parse": [
+    2,
+    4
+   ]
+  },
+  {
+   "module": 6,
+   "title": "Anticipations et réactions des marchés",
+   "lessons": 8,
+   "hours_rows": 25.5,
+   "hours_declared_initial": 25.5,
+   "prerequis_module_texte": "modules 3 et 4",
+   "niveau": "C",
+   "duree_texte": "25,5 h (8 leçons).",
+   "objectif_module": "distinguer ce qui est déjà dans les prix de ce qui ne l'est pas, et raisonner en scénarios probabilistes.",
+   "chapitres_texte": "6.1 Prix et information (L6.01 à L6.02) · 6.2 Réactions asymétriques et régimes (L6.03 à L6.04) · 6.3 Scénarios et volatilité (L6.05 à L6.06) · 6.4 Pratique (L6.07 à L6.08).",
+   "exercices_evaluations_initiaux": "calcul d'une probabilité implicite à partir d'un prix de contrat ; scénarios chiffrés ; trois cas de réunions reconstitués ; quiz de chapitre ; examen de 2 h ; **mini-projet :** note de scénarios (trois scénarios, probabilités, signaux de confirmation) sur un événement passé.",
+   "familles_sources_initiales": "CME Group (contrats sur les fonds fédéraux, méthodologie des probabilités) ; Federal Reserve ; BCE ; Fama (1970) ; Kuttner (2001) ; Bernanke et Kuttner (2005).",
+   "criteres_validation_module": [
+    "Probabilité implicite calculée correctement depuis un prix de contrat.",
+    "Trois scénarios aux probabilités cohérentes (somme égale à 100 %) et à signaux distincts.",
+    "Explication d'une réaction « contre-intuitive » sur un cas documenté."
+   ],
+   "chapters": [
+    {
+     "id": "6.1",
+     "title": "Prix et information",
+     "first": "L6.01",
+     "last": "L6.02"
+    },
+    {
+     "id": "6.2",
+     "title": "Réactions asymétriques et régimes",
+     "first": "L6.03",
+     "last": "L6.04"
+    },
+    {
+     "id": "6.3",
+     "title": "Scénarios et volatilité",
+     "first": "L6.05",
+     "last": "L6.06"
+    },
+    {
+     "id": "6.4",
+     "title": "Pratique",
+     "first": "L6.07",
+     "last": "L6.08"
+    }
+   ],
+   "modules_prerequis_parse": [
+    3,
+    4
+   ]
+  },
+  {
+   "module": 7,
+   "title": "Positionnement et flux",
+   "lessons": 8,
+   "hours_rows": 24.0,
+   "hours_declared_initial": 24.0,
+   "prerequis_module_texte": "module 6 (L6.01 et L6.05)",
+   "niveau": "C",
+   "duree_texte": "24 h (8 leçons).",
+   "objectif_module": "lire le positionnement des acteurs et les flux, et en comprendre l'utilité et les limites.",
+   "chapitres_texte": "7.1 Rapports COT (L7.01 à L7.03) · 7.2 Flux et liquidité (L7.04 à L7.06) · 7.3 Pratique (L7.07 à L7.08).",
+   "exercices_evaluations_initiaux": "lecture de rapports COT historiques ; calcul de position nette et de percentile historique ; quiz de chapitre ; examen de 2 h ; **mini-projet :** indicateur COT documenté pour l'or et un dollar-pair, avec ses limites.",
+   "familles_sources_initiales": "CFTC (rapports COT, environnement public de consultation des données, calendrier de publication) ; World Gold Council (avoirs des ETF) ; Federal Reserve ; BIS.",
+   "criteres_validation_module": [
+    "Un rapport COT lu et résumé sans erreur de catégorie.",
+    "Percentile calculé et interprété avec ses limites.",
+    "Positionnement intégré à une thèse sans le traiter comme un signal autonome."
+   ],
+   "chapters": [
+    {
+     "id": "7.1",
+     "title": "Rapports COT",
+     "first": "L7.01",
+     "last": "L7.03"
+    },
+    {
+     "id": "7.2",
+     "title": "Flux et liquidité",
+     "first": "L7.04",
+     "last": "L7.06"
+    },
+    {
+     "id": "7.3",
+     "title": "Pratique",
+     "first": "L7.07",
+     "last": "L7.08"
+    }
+   ],
+   "modules_prerequis_parse": [
+    6
+   ]
+  },
+  {
+   "module": 8,
+   "title": "Géopolitique et risques mondiaux",
+   "lessons": 8,
+   "hours_rows": 23.5,
+   "hours_declared_initial": 23.5,
+   "prerequis_module_texte": "modules 5 et 6",
+   "niveau": "C",
+   "duree_texte": "23,5 h (8 leçons).",
+   "objectif_module": "évaluer un choc géopolitique ou un risque mondial sans surréagir, en séparant l'événement de ses canaux économiques et de sa durée.",
+   "chapitres_texte": "8.1 Cadre (L8.01) · 8.2 Chocs et canaux (L8.02 à L8.04) · 8.3 Refuge et risque (L8.05 à L8.06) · 8.4 Risques financiers et décision (L8.07 à L8.08).",
+   "exercices_evaluations_initiaux": "application du cadre à deux événements passés ; frise « choc, canal, durée » ; quiz de chapitre ; examen de 2 h ; **mini-projet :** fiche d'analyse d'un événement géopolitique passé, comparant attentes initiales et effets observés, sources à l'appui.",
+   "familles_sources_initiales": "FMI ; Banque mondiale (matières premières) ; EIA (énergie) ; OFAC du US Treasury (sanctions) ; indice de risque géopolitique de Caldara et Iacoviello (Federal Reserve) ; BIS ; rapport de stabilité financière de la Fed.",
+   "criteres_validation_module": [
+    "Cadre appliqué à deux événements avec des canaux identifiés et sourcés.",
+    "Choc passager distingué d'un choc durable, preuves à l'appui.",
+    "Aucune prévision présentée comme certitude."
+   ],
+   "chapters": [
+    {
+     "id": "8.1",
+     "title": "Cadre",
+     "first": "L8.01",
+     "last": "L8.01"
+    },
+    {
+     "id": "8.2",
+     "title": "Chocs et canaux",
+     "first": "L8.02",
+     "last": "L8.04"
+    },
+    {
+     "id": "8.3",
+     "title": "Refuge et risque",
+     "first": "L8.05",
+     "last": "L8.06"
+    },
+    {
+     "id": "8.4",
+     "title": "Risques financiers et décision",
+     "first": "L8.07",
+     "last": "L8.08"
+    }
+   ],
+   "modules_prerequis_parse": [
+    5,
+    6
+   ]
+  },
+  {
+   "module": 9,
+   "title": "Interactions macroéconomiques avancées",
+   "lessons": 8,
+   "hours_rows": 26.5,
+   "hours_declared_initial": 26.5,
+   "prerequis_module_texte": "modules 4, 5 et 6 (modules 7 et 8 recommandés)",
+   "niveau": "C",
+   "duree_texte": "26,5 h (8 leçons).",
+   "objectif_module": "raisonner en système : relier taux, dollar, or, inflation, croissance et politiques dans des régimes qui changent.",
+   "chapitres_texte": "9.1 Raisonner en système (L9.01 à L9.03) · 9.2 Régimes et chocs (L9.04 à L9.07) · 9.3 Intégration (L9.08).",
+   "exercices_evaluations_initiaux": "cartes causales à compléter ; mesure de corrélations glissantes sur données officielles avec interprétation ; matrice de régimes ; quiz de chapitre ; examen de 2 h ; **mini-projet :** analyse intégrée d'un épisode historique, avec carte causale et limites.",
+   "familles_sources_initiales": "notes de recherche de la Federal Reserve (FEDS) ; prime de terme publiée par la Fed de New York et par le Conseil des gouverneurs de la Fed ; FMI ; BIS ; BLS et BEA.",
+   "criteres_validation_module": [
+    "Explication argumentée de la raison pour laquelle une corrélation change de signe ou d'ampleur.",
+    "Matrice de régimes cohérente avec les données de l'épisode étudié.",
+    "Épisode analysé avec effets de second ordre identifiés."
+   ],
+   "chapters": [
+    {
+     "id": "9.1",
+     "title": "Raisonner en système",
+     "first": "L9.01",
+     "last": "L9.03"
+    },
+    {
+     "id": "9.2",
+     "title": "Régimes et chocs",
+     "first": "L9.04",
+     "last": "L9.07"
+    },
+    {
+     "id": "9.3",
+     "title": "Intégration",
+     "first": "L9.08",
+     "last": "L9.08"
+    }
+   ],
+   "modules_prerequis_parse": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  {
+   "module": 10,
+   "title": "Analyse fondamentale appliquée",
+   "lessons": 8,
+   "hours_rows": 27.5,
+   "hours_declared_initial": 27.5,
+   "prerequis_module_texte": "modules 4 à 9",
+   "niveau": "C",
+   "duree_texte": "27,5 h (8 leçons).",
+   "objectif_module": "produire une analyse fondamentale complète, structurée et falsifiable, puis l'évaluer honnêtement.",
+   "chapitres_texte": "10.1 Méthode (L10.01 à L10.04) · 10.2 Études de cas (L10.05 à L10.07) · 10.3 Évaluation (L10.08).",
+   "exercices_evaluations_initiaux": "trois analyses complètes sur des épisodes passés dont l'issue est cachée jusqu'à la remise ; grille d'évaluation de note ; quiz de chapitre ; examen de 2 h ; **projet du module :** dossier de trois analyses avec invalidations et bilan comparant scénarios et réalité.",
+   "familles_sources_initiales": "celles des modules 1 à 9 ; rapport de politique monétaire de la Fed ; BIS ; BCE ; notes de recherche des banques centrales.",
+   "criteres_validation_module": [
+    "Trois analyses notées à 75 % ou plus sur la grille (cohérence, sources, invalidation).",
+    "Bilan honnête : écarts entre scénarios et réalité attribués à leurs causes.",
+    "Chaque analyse distingue données observées, prévisions, interprétations et hypothèses."
+   ],
+   "chapters": [
+    {
+     "id": "10.1",
+     "title": "Méthode",
+     "first": "L10.01",
+     "last": "L10.04"
+    },
+    {
+     "id": "10.2",
+     "title": "Études de cas",
+     "first": "L10.05",
+     "last": "L10.07"
+    },
+    {
+     "id": "10.3",
+     "title": "Évaluation",
+     "first": "L10.08",
+     "last": "L10.08"
+    }
+   ],
+   "modules_prerequis_parse": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "module": 11,
+   "title": "Gestion du risque et discipline",
+   "lessons": 8,
+   "hours_rows": 23.0,
+   "hours_declared_initial": 23.0,
+   "prerequis_module_texte": "modules 0 et 10",
+   "niveau": "B à C",
+   "duree_texte": "23 h (8 leçons).",
+   "objectif_module": "gérer le risque, dimensionner une position et séparer la qualité d'une analyse du résultat d'une transaction. Contenu éducatif, sans recommandation de transaction.",
+   "chapitres_texte": "11.1 Dimensionnement et coûts (L11.01 à L11.04) · 11.2 Événements et comportement (L11.05 à L11.08).",
+   "exercices_evaluations_initiaux": "calculs de taille de position ; simulation de 1 000 séquences dans un tableur ; analyse de scénarios de levier ; plan écrit ; quiz de chapitre ; examen de 2 h ; **mini-projet :** plan de gestion du risque personnel avec limites chiffrées.",
+   "familles_sources_initiales": "Kahneman et Tversky (1979) ; Barber et Odean (2000) ; avertissements publics de la NFA et de la CFTC sur le levier ; mesures de l'ESMA sur les produits à effet de levier pour particuliers.",
+   "criteres_validation_module": [
+    "Taille de position et risque de ruine calculés sans erreur.",
+    "Simulation de séquences correctement construite et interprétée.",
+    "Plan écrit avec limites de perte, règles autour des événements et règles d'arrêt."
+   ],
+   "chapters": [
+    {
+     "id": "11.1",
+     "title": "Dimensionnement et coûts",
+     "first": "L11.01",
+     "last": "L11.04"
+    },
+    {
+     "id": "11.2",
+     "title": "Événements et comportement",
+     "first": "L11.05",
+     "last": "L11.08"
+    }
+   ],
+   "modules_prerequis_parse": [
+    0,
+    10
+   ]
+  },
+  {
+   "module": 12,
+   "title": "Recherche macroéconomique professionnelle",
+   "lessons": 6,
+   "hours_rows": 19.5,
+   "hours_declared_initial": 19.5,
+   "prerequis_module_texte": "module 10",
+   "niveau": "C",
+   "duree_texte": "19,5 h (6 leçons).",
+   "objectif_module": "lire de façon critique une recherche macroéconomique et en rédiger une, sourcée et communicable.",
+   "chapitres_texte": "12.1 Lire (L12.01 à L12.03) · 12.2 Écrire et communiquer (L12.04 à L12.06).",
+   "exercices_evaluations_initiaux": "critique guidée de deux notes publiques de banques centrales ; rédaction de notes avec grille ; quiz de chapitre ; examen de 2 h ; **livrable :** une note macro hebdomadaire complète sur la semaine en cours.",
+   "familles_sources_initiales": "FEDS de la Federal Reserve ; documents de travail de la BCE et de la BIS ; NBER ; documents de travail du FMI ; FRED pour la consultation (jamais pour le stockage).",
+   "criteres_validation_module": [
+    "Note hebdomadaire notée à 75 % ou plus sur la grille.",
+    "Chaque chiffre relié à une source datée ; chaque prévision étiquetée comme telle.",
+    "Critique d'une note externe identifiant au moins trois limites réelles."
+   ],
+   "chapters": [
+    {
+     "id": "12.1",
+     "title": "Lire",
+     "first": "L12.01",
+     "last": "L12.03"
+    },
+    {
+     "id": "12.2",
+     "title": "Écrire et communiquer",
+     "first": "L12.04",
+     "last": "L12.06"
+    }
+   ],
+   "modules_prerequis_parse": [
+    10
+   ]
+  },
+  {
+   "module": 13,
+   "title": "Salle de marché virtuelle et simulations",
+   "lessons": 6,
+   "hours_rows": 20.0,
+   "hours_declared_initial": 20.0,
+   "prerequis_module_texte": "modules 10 et 11",
+   "niveau": "C",
+   "duree_texte": "20 h (6 leçons).",
+   "objectif_module": "pratiquer l'analyse et la prise de décision en conditions réalistes, sans argent réel, avec un protocole strict.",
+   "chapitres_texte": "13.1 Cadre (L13.01 à L13.02) · 13.2 Simulations (L13.03 à L13.05) · 13.3 Bilan (L13.06).",
+   "exercices_evaluations_initiaux": "plan écrit avant chaque simulation ; journal de décision horodaté ; examen pratique de 2 h sur un rejeu inédit ; **livrable :** bilan de période avec attribution (analyse, exécution, chance).",
+   "familles_sources_initiales": "données officielles historiques des modules précédents ; sources de prix historiques à valider en phase 8 (disponibilité et licence à vérifier avant tout engagement).",
+   "criteres_validation_module": [
+    "Plan écrit avant chaque simulation, respecté ou écart justifié.",
+    "Limite de risque fixée respectée sur toutes les simulations.",
+    "Bilan distinguant qualité de l'analyse, exécution et part de hasard."
+   ],
+   "chapters": [
+    {
+     "id": "13.1",
+     "title": "Cadre",
+     "first": "L13.01",
+     "last": "L13.02"
+    },
+    {
+     "id": "13.2",
+     "title": "Simulations",
+     "first": "L13.03",
+     "last": "L13.05"
+    },
+    {
+     "id": "13.3",
+     "title": "Bilan",
+     "first": "L13.06",
+     "last": "L13.06"
+    }
+   ],
+   "modules_prerequis_parse": [
+    10,
+    11
+   ]
+  },
+  {
+   "module": 14,
+   "title": "Recherche quantitative et validation",
+   "lessons": 8,
+   "hours_rows": 32.0,
+   "hours_declared_initial": 32.0,
+   "prerequis_module_texte": "modules 3 et 11 (L0.10 indispensable)",
+   "niveau": "C",
+   "duree_texte": "32 h (8 leçons).",
+   "objectif_module": "tester une hypothèse macroéconomique sans se tromper soi-même : statistiques de base, études d'événements, biais et validation hors échantillon.",
+   "chapitres_texte": "14.1 Statistiques et séries (L14.01 à L14.03) · 14.2 Études d'événements et biais (L14.04 à L14.05) · 14.3 Backtest et robustesse (L14.06 à L14.08).",
+   "exercices_evaluations_initiaux": "calculs de statistiques et de régressions sur données officielles ; étude d'événements sur publications du module 3 ; détection de biais dans des exemples fournis ; quiz de chapitre ; examen de 2 h ; **projet du module :** rapport de test d'une hypothèse macro, résultats négatifs inclus. **Outil :** tableur au départ ; Python dans le navigateur à étudier et à te faire valider.",
+   "familles_sources_initiales": "Campbell, Lo et MacKinlay (1997) ; MacKinlay (1997) ; Hamilton (1994) ; Harvey, Liu et Zhu (2016) ; Bailey et López de Prado sur la probabilité de surapprentissage d'un backtest ; données officielles des modules 1 à 7.",
+   "criteres_validation_module": [
+    "Test reproductible : données, règles et fenêtres documentées.",
+    "Validation sur données hors échantillon effectuée et rapportée.",
+    "Rapport honnête incluant l'incertitude, les coûts et les résultats négatifs."
+   ],
+   "chapters": [
+    {
+     "id": "14.1",
+     "title": "Statistiques et séries",
+     "first": "L14.01",
+     "last": "L14.03"
+    },
+    {
+     "id": "14.2",
+     "title": "Études d'événements et biais",
+     "first": "L14.04",
+     "last": "L14.05"
+    },
+    {
+     "id": "14.3",
+     "title": "Backtest et robustesse",
+     "first": "L14.06",
+     "last": "L14.08"
+    }
+   ],
+   "modules_prerequis_parse": [
+    3,
+    11
+   ]
+  },
+  {
+   "module": 15,
+   "title": "Spécialisation avancée — Macro avancée appliquée au Forex et à l'or (version révisée)",
+   "lessons": 12,
+   "hours_rows": 46.0,
+   "hours_declared_initial": 46.0,
+   "prerequis_module_texte": "modules 2, 4, 5, 6, 9, 10 et 12 (le module 11 pour la discipline de risque)",
+   "niveau": "C",
+   "objectif_module": "produire une analyse macroéconomique complète d'une paire de devises ou de l'or, de la donnée à la thèse écrite, en reliant des raisonnements déjà appris sans les répéter.",
+   "chapitres_texte": "à définir",
+   "chapters": [],
+   "exercices_evaluations_initiaux": "examen 2 h ; projet final 12 h (note de recherche complète)",
+   "familles_sources_initiales": "à définir",
+   "criteres_validation_module": [
+    "quiz à 80 %, examen à 75 %, aucun bloc sous 60 %, rappel à 70 %, projet final évalué sur grille, validation par l'utilisateur"
+   ],
+   "modules_prerequis_parse": [
+    2,
+    4,
+    5,
+    6,
+    9,
+    10,
+    12
+   ],
+   "project_final_hours": 12,
+   "exam_hours": 2,
+   "reviews_hours": 4.6
+  }
+ ],
+ "lessons": [
+  {
+   "id": "L0.01",
+   "module": 0,
+   "chapter": "0.1",
+   "chapter_title": "Marchés et acteurs",
+   "title_initial": "À quoi servent les marchés financiers",
+   "objective_initial": "Expliquer les trois fonctions d'un marché (financement, formation des prix, transfert de risque) et situer les grandes classes d'actifs.",
+   "duration_hours_initial": 2.0,
+   "level": "A",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "aucun",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "enquête triennale de la BIS sur le change ; ressources pédagogiques de la Federal Reserve ; US Treasury (taux et courbe des rendements) ; CME Group (spécifications des contrats sur l'or) ; LBMA ; World Gold Council.",
+   "archive": false,
+   "pilot": true,
+   "pilot_delta": {
+    "title_current": "Les marchés financiers et leur rôle",
+    "duration_hours_current": 3.0
+   }
+  },
+  {
+   "id": "L0.02",
+   "module": 0,
+   "chapter": "0.1",
+   "chapter_title": "Marchés et acteurs",
+   "title_initial": "Les acteurs et leurs motivations",
+   "objective_initial": "Distinguer banques centrales, banques, fonds, entreprises et spéculateurs, et leurs horizons.",
+   "duration_hours_initial": 2.0,
+   "level": "A",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "aucun",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "enquête triennale de la BIS sur le change ; ressources pédagogiques de la Federal Reserve ; US Treasury (taux et courbe des rendements) ; CME Group (spécifications des contrats sur l'or) ; LBMA ; World Gold Council.",
+   "archive": false,
+   "pilot": true,
+   "pilot_delta": {
+    "title_current": "Les acteurs des marchés et leurs motivations",
+    "duration_hours_current": 2.5
+   }
+  },
+  {
+   "id": "L0.03",
+   "module": 0,
+   "chapter": "0.2",
+   "chapter_title": "Le marché des changes",
+   "title_initial": "Anatomie du Forex",
+   "objective_initial": "Lire une cotation, calculer pips, valeur du pip, taille de lot et spread.",
+   "duration_hours_initial": 2.5,
+   "level": "A",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "aucun",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "enquête triennale de la BIS sur le change ; ressources pédagogiques de la Federal Reserve ; US Treasury (taux et courbe des rendements) ; CME Group (spécifications des contrats sur l'or) ; LBMA ; World Gold Council.",
+   "archive": false,
+   "pilot": true,
+   "pilot_delta": {
+    "title_current": "L'anatomie du marché des changes (Forex)",
+    "duration_hours_current": 3.0
+   }
+  },
+  {
+   "id": "L0.04",
+   "module": 0,
+   "chapter": "0.2",
+   "chapter_title": "Le marché des changes",
+   "title_initial": "Qui fait le prix : liquidité et sessions",
+   "objective_initial": "Expliquer marché interbancaire, rôle des courtiers, liquidité et sessions de forte volatilité.",
+   "duration_hours_initial": 2.0,
+   "level": "A",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "aucun",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "enquête triennale de la BIS sur le change ; ressources pédagogiques de la Federal Reserve ; US Treasury (taux et courbe des rendements) ; CME Group (spécifications des contrats sur l'or) ; LBMA ; World Gold Council.",
+   "archive": false,
+   "decision_notes": [
+    "D3 : intègre la taille de position/de lot (objectif initial de L0.03 non couvert par le pilote) et les sessions de marché."
+   ],
+   "pilot": false
+  },
+  {
+   "id": "L0.05",
+   "module": 0,
+   "chapter": "0.2",
+   "chapter_title": "Le marché des changes",
+   "title_initial": "Taux croisés et parité",
+   "objective_initial": "Calculer un taux croisé, convertir des montants, comprendre l'idée de pouvoir d'achat.",
+   "duration_hours_initial": 2.5,
+   "level": "A",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "aucun",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "enquête triennale de la BIS sur le change ; ressources pédagogiques de la Federal Reserve ; US Treasury (taux et courbe des rendements) ; CME Group (spécifications des contrats sur l'or) ; LBMA ; World Gold Council.",
+   "archive": false,
+   "decision_notes": [
+    "D3 : le pilote L0.03 traite déjà le calcul de base d'un taux croisé ; L0.05 le rappelle brièvement puis approfondit conversions de montants, cohérence des cotations, pouvoir d'achat et applications."
+   ],
+   "pilot": false
+  },
+  {
+   "id": "L0.06",
+   "module": 0,
+   "chapter": "0.3",
+   "chapter_title": "L'or",
+   "title_initial": "L'or sur les marchés",
+   "objective_initial": "Décrire XAU/USD, l'once troy, le spot, les contrats à terme, les ETF et le physique, et leurs différences.",
+   "duration_hours_initial": 2.5,
+   "level": "A",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "aucun",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "enquête triennale de la BIS sur le change ; ressources pédagogiques de la Federal Reserve ; US Treasury (taux et courbe des rendements) ; CME Group (spécifications des contrats sur l'or) ; LBMA ; World Gold Council.",
+   "archive": false,
+   "decision_notes": [
+    "D3 : le pilote L0.03 introduit XAU/USD ; L0.06 rappelle brièvement puis approfondit once troy, spot, contrats, ETF, physique et leurs différences."
+   ],
+   "pilot": false
+  },
+  {
+   "id": "L0.07",
+   "module": 0,
+   "chapter": "0.4",
+   "chapter_title": "Taux et obligations",
+   "title_initial": "Intérêt et valeur temps de l'argent",
+   "objective_initial": "Calculer intérêts simples et composés, actualisation et rendement.",
+   "duration_hours_initial": 2.5,
+   "level": "A",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "aucun",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "enquête triennale de la BIS sur le change ; ressources pédagogiques de la Federal Reserve ; US Treasury (taux et courbe des rendements) ; CME Group (spécifications des contrats sur l'or) ; LBMA ; World Gold Council.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L0.08",
+   "module": 0,
+   "chapter": "0.4",
+   "chapter_title": "Taux et obligations",
+   "title_initial": "Obligations et courbe des taux",
+   "objective_initial": "Montrer la relation inverse prix et rendement, lire une courbe des taux et sa pente.",
+   "duration_hours_initial": 3.0,
+   "level": "A",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "aucun",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "enquête triennale de la BIS sur le change ; ressources pédagogiques de la Federal Reserve ; US Treasury (taux et courbe des rendements) ; CME Group (spécifications des contrats sur l'or) ; LBMA ; World Gold Council.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L0.09",
+   "module": 0,
+   "chapter": "0.5",
+   "chapter_title": "Lire un marché et mesurer le risque",
+   "title_initial": "Lire un graphique sans se faire piéger",
+   "objective_initial": "Interpréter chandeliers et échelles, distinguer rendement et variation, repérer les biais visuels.",
+   "duration_hours_initial": 2.5,
+   "level": "A",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "aucun",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "enquête triennale de la BIS sur le change ; ressources pédagogiques de la Federal Reserve ; US Treasury (taux et courbe des rendements) ; CME Group (spécifications des contrats sur l'or) ; LBMA ; World Gold Council.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L0.10",
+   "module": 0,
+   "chapter": "0.5",
+   "chapter_title": "Lire un marché et mesurer le risque",
+   "title_initial": "Risque, rendement et probabilité",
+   "objective_initial": "Calculer espérance, écart-type et baisse maximale simple, et interpréter une distribution.",
+   "duration_hours_initial": 3.0,
+   "level": "A",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "aucun",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "enquête triennale de la BIS sur le change ; ressources pédagogiques de la Federal Reserve ; US Treasury (taux et courbe des rendements) ; CME Group (spécifications des contrats sur l'or) ; LBMA ; World Gold Council.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L1.01",
+   "module": 1,
+   "chapter": "1.1",
+   "chapter_title": "Mesurer l'économie",
+   "title_initial": "Le PIB",
+   "objective_initial": "Décomposer le PIB (consommation, investissement, dépenses publiques, exportations nettes), distinguer nominal et réel, calculer croissance et déflateur.",
+   "duration_hours_initial": 3.0,
+   "level": "A à B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 0",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BEA (comptes nationaux, PIB) ; BLS (CPI, rapport sur l'emploi, manuel de méthodes) ; comité de datation des cycles du NBER ; Federal Reserve ; CBO ; US Treasury (Fiscal Data) ; Eurostat ; portail de données de la BCE ; FMI (World Economic Outlook).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L1.02",
+   "module": 1,
+   "chapter": "1.1",
+   "chapter_title": "Mesurer l'économie",
+   "title_initial": "Cycle économique et récessions",
+   "objective_initial": "Identifier les phases du cycle, l'écart de production et la manière dont les récessions sont datées.",
+   "duration_hours_initial": 3.0,
+   "level": "A à B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 0",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BEA (comptes nationaux, PIB) ; BLS (CPI, rapport sur l'emploi, manuel de méthodes) ; comité de datation des cycles du NBER ; Federal Reserve ; CBO ; US Treasury (Fiscal Data) ; Eurostat ; portail de données de la BCE ; FMI (World Economic Outlook).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L1.03",
+   "module": 1,
+   "chapter": "1.1",
+   "chapter_title": "Mesurer l'économie",
+   "title_initial": "Productivité et croissance potentielle",
+   "objective_initial": "Expliquer ce qui fixe la croissance de long terme et pourquoi elle borne la politique monétaire.",
+   "duration_hours_initial": 2.5,
+   "level": "A à B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 0",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BEA (comptes nationaux, PIB) ; BLS (CPI, rapport sur l'emploi, manuel de méthodes) ; comité de datation des cycles du NBER ; Federal Reserve ; CBO ; US Treasury (Fiscal Data) ; Eurostat ; portail de données de la BCE ; FMI (World Economic Outlook).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L1.04",
+   "module": 1,
+   "chapter": "1.2",
+   "chapter_title": "Prix et inflation",
+   "title_initial": "Mesurer l'inflation",
+   "objective_initial": "Calculer et comparer CPI, PCE et déflateur ; distinguer inflation globale et sous-jacente.",
+   "duration_hours_initial": 3.0,
+   "level": "A à B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 0",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BEA (comptes nationaux, PIB) ; BLS (CPI, rapport sur l'emploi, manuel de méthodes) ; comité de datation des cycles du NBER ; Federal Reserve ; CBO ; US Treasury (Fiscal Data) ; Eurostat ; portail de données de la BCE ; FMI (World Economic Outlook).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L1.05",
+   "module": 1,
+   "chapter": "1.2",
+   "chapter_title": "Prix et inflation",
+   "title_initial": "Causes de l'inflation",
+   "objective_initial": "Distinguer inflation par la demande, par l'offre et par les anticipations ; lire les anticipations.",
+   "duration_hours_initial": 3.0,
+   "level": "A à B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 0",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BEA (comptes nationaux, PIB) ; BLS (CPI, rapport sur l'emploi, manuel de méthodes) ; comité de datation des cycles du NBER ; Federal Reserve ; CBO ; US Treasury (Fiscal Data) ; Eurostat ; portail de données de la BCE ; FMI (World Economic Outlook).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L1.06",
+   "module": 1,
+   "chapter": "1.2",
+   "chapter_title": "Prix et inflation",
+   "title_initial": "Déflation, désinflation, stagflation",
+   "objective_initial": "Définir chaque régime et les reconnaître sur des données.",
+   "duration_hours_initial": 2.5,
+   "level": "A à B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 0",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BEA (comptes nationaux, PIB) ; BLS (CPI, rapport sur l'emploi, manuel de méthodes) ; comité de datation des cycles du NBER ; Federal Reserve ; CBO ; US Treasury (Fiscal Data) ; Eurostat ; portail de données de la BCE ; FMI (World Economic Outlook).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L1.07",
+   "module": 1,
+   "chapter": "1.3",
+   "chapter_title": "Emploi",
+   "title_initial": "Le marché du travail",
+   "objective_initial": "Lire chômage, participation, emploi, salaires, et la notion de chômage structurel.",
+   "duration_hours_initial": 3.0,
+   "level": "A à B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 0",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BEA (comptes nationaux, PIB) ; BLS (CPI, rapport sur l'emploi, manuel de méthodes) ; comité de datation des cycles du NBER ; Federal Reserve ; CBO ; US Treasury (Fiscal Data) ; Eurostat ; portail de données de la BCE ; FMI (World Economic Outlook).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L1.08",
+   "module": 1,
+   "chapter": "1.3",
+   "chapter_title": "Emploi",
+   "title_initial": "Courbe de Phillips et limites",
+   "objective_initial": "Expliquer le lien inflation et chômage et pourquoi il est instable.",
+   "duration_hours_initial": 2.5,
+   "level": "A à B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 0",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BEA (comptes nationaux, PIB) ; BLS (CPI, rapport sur l'emploi, manuel de méthodes) ; comité de datation des cycles du NBER ; Federal Reserve ; CBO ; US Treasury (Fiscal Data) ; Eurostat ; portail de données de la BCE ; FMI (World Economic Outlook).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L1.09",
+   "module": 1,
+   "chapter": "1.4",
+   "chapter_title": "Demande et échanges",
+   "title_initial": "Consommation, investissement, immobilier",
+   "objective_initial": "Relier ménages, entreprises et logement au cycle.",
+   "duration_hours_initial": 2.5,
+   "level": "A à B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 0",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BEA (comptes nationaux, PIB) ; BLS (CPI, rapport sur l'emploi, manuel de méthodes) ; comité de datation des cycles du NBER ; Federal Reserve ; CBO ; US Treasury (Fiscal Data) ; Eurostat ; portail de données de la BCE ; FMI (World Economic Outlook).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L1.10",
+   "module": 1,
+   "chapter": "1.4",
+   "chapter_title": "Demande et échanges",
+   "title_initial": "Commerce extérieur et flux de capitaux",
+   "objective_initial": "Lire la balance courante et son financement, et les relier à une devise.",
+   "duration_hours_initial": 3.0,
+   "level": "A à B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 0",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BEA (comptes nationaux, PIB) ; BLS (CPI, rapport sur l'emploi, manuel de méthodes) ; comité de datation des cycles du NBER ; Federal Reserve ; CBO ; US Treasury (Fiscal Data) ; Eurostat ; portail de données de la BCE ; FMI (World Economic Outlook).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L1.11",
+   "module": 1,
+   "chapter": "1.5",
+   "chapter_title": "Budget et synthèse",
+   "title_initial": "Politique budgétaire, déficit et dette",
+   "objective_initial": "Expliquer déficit et dette, et leur effet sur les rendements et la prime de risque.",
+   "duration_hours_initial": 3.0,
+   "level": "A à B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 0",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BEA (comptes nationaux, PIB) ; BLS (CPI, rapport sur l'emploi, manuel de méthodes) ; comité de datation des cycles du NBER ; Federal Reserve ; CBO ; US Treasury (Fiscal Data) ; Eurostat ; portail de données de la BCE ; FMI (World Economic Outlook).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L1.12",
+   "module": 1,
+   "chapter": "1.5",
+   "chapter_title": "Budget et synthèse",
+   "title_initial": "Tableau de bord macro d'un pays",
+   "objective_initial": "Synthétiser en une page l'état d'une économie à partir de sources officielles.",
+   "duration_hours_initial": 3.0,
+   "level": "A à B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 0",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BEA (comptes nationaux, PIB) ; BLS (CPI, rapport sur l'emploi, manuel de méthodes) ; comité de datation des cycles du NBER ; Federal Reserve ; CBO ; US Treasury (Fiscal Data) ; Eurostat ; portail de données de la BCE ; FMI (World Economic Outlook).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L2.01",
+   "module": 2,
+   "chapter": "2.1",
+   "chapter_title": "Fondements",
+   "title_initial": "Rôle, mandats et indépendance",
+   "objective_initial": "Comparer les mandats de la Fed, de la BCE, de la BoJ et de la BoE.",
+   "duration_hours_initial": 2.5,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 1 (L1.04 et L1.07 indispensables)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Federal Reserve (loi, déclarations FOMC, procès-verbaux, projections, rapport de politique monétaire, bilan) ; BCE (déclarations, conférences de presse, bulletin économique, revue de stratégie) ; BoJ ; BoE ; BIS ; estimations du taux neutre de la Fed de New York ; Taylor (1993).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L2.02",
+   "module": 2,
+   "chapter": "2.1",
+   "chapter_title": "Fondements",
+   "title_initial": "Banques, monnaie et réserves",
+   "objective_initial": "Expliquer la création monétaire par le crédit et le rôle des réserves.",
+   "duration_hours_initial": 2.5,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 1 (L1.04 et L1.07 indispensables)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Federal Reserve (loi, déclarations FOMC, procès-verbaux, projections, rapport de politique monétaire, bilan) ; BCE (déclarations, conférences de presse, bulletin économique, revue de stratégie) ; BoJ ; BoE ; BIS ; estimations du taux neutre de la Fed de New York ; Taylor (1993).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L2.03",
+   "module": 2,
+   "chapter": "2.2",
+   "chapter_title": "Instruments",
+   "title_initial": "Taux directeurs et transmission",
+   "objective_initial": "Décrire le corridor de taux, les taux effectifs et la transmission aux taux de marché.",
+   "duration_hours_initial": 3.0,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 1 (L1.04 et L1.07 indispensables)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Federal Reserve (loi, déclarations FOMC, procès-verbaux, projections, rapport de politique monétaire, bilan) ; BCE (déclarations, conférences de presse, bulletin économique, revue de stratégie) ; BoJ ; BoE ; BIS ; estimations du taux neutre de la Fed de New York ; Taylor (1993).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L2.04",
+   "module": 2,
+   "chapter": "2.2",
+   "chapter_title": "Instruments",
+   "title_initial": "Bilan, QE et QT",
+   "objective_initial": "Expliquer achats d'actifs, réduction du bilan et effets sur liquidité et primes de risque.",
+   "duration_hours_initial": 3.0,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 1 (L1.04 et L1.07 indispensables)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Federal Reserve (loi, déclarations FOMC, procès-verbaux, projections, rapport de politique monétaire, bilan) ; BCE (déclarations, conférences de presse, bulletin économique, revue de stratégie) ; BoJ ; BoE ; BIS ; estimations du taux neutre de la Fed de New York ; Taylor (1993).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L2.05",
+   "module": 2,
+   "chapter": "2.2",
+   "chapter_title": "Instruments",
+   "title_initial": "Orientation prospective et communication",
+   "objective_initial": "Distinguer annonce, indication prospective et conditionnalité.",
+   "duration_hours_initial": 2.5,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 1 (L1.04 et L1.07 indispensables)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Federal Reserve (loi, déclarations FOMC, procès-verbaux, projections, rapport de politique monétaire, bilan) ; BCE (déclarations, conférences de presse, bulletin économique, revue de stratégie) ; BoJ ; BoE ; BIS ; estimations du taux neutre de la Fed de New York ; Taylor (1993).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L2.06",
+   "module": 2,
+   "chapter": "2.3",
+   "chapter_title": "Règles et fonction de réaction",
+   "title_initial": "Taux neutre et règle de Taylor",
+   "objective_initial": "Calculer une règle de Taylor simple, comprendre le taux neutre et son incertitude.",
+   "duration_hours_initial": 3.5,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 1 (L1.04 et L1.07 indispensables)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Federal Reserve (loi, déclarations FOMC, procès-verbaux, projections, rapport de politique monétaire, bilan) ; BCE (déclarations, conférences de presse, bulletin économique, revue de stratégie) ; BoJ ; BoE ; BIS ; estimations du taux neutre de la Fed de New York ; Taylor (1993).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L2.07",
+   "module": 2,
+   "chapter": "2.3",
+   "chapter_title": "Règles et fonction de réaction",
+   "title_initial": "La fonction de réaction",
+   "objective_initial": "Décrire comment inflation, emploi et risques déplacent une décision.",
+   "duration_hours_initial": 3.0,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 1 (L1.04 et L1.07 indispensables)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Federal Reserve (loi, déclarations FOMC, procès-verbaux, projections, rapport de politique monétaire, bilan) ; BCE (déclarations, conférences de presse, bulletin économique, revue de stratégie) ; BoJ ; BoE ; BIS ; estimations du taux neutre de la Fed de New York ; Taylor (1993).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L2.08",
+   "module": 2,
+   "chapter": "2.4",
+   "chapter_title": "Les grandes banques centrales",
+   "title_initial": "La Fed en détail",
+   "objective_initial": "Lire FOMC, déclaration, projections (SEP) et procès-verbaux, et leur calendrier.",
+   "duration_hours_initial": 3.0,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 1 (L1.04 et L1.07 indispensables)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Federal Reserve (loi, déclarations FOMC, procès-verbaux, projections, rapport de politique monétaire, bilan) ; BCE (déclarations, conférences de presse, bulletin économique, revue de stratégie) ; BoJ ; BoE ; BIS ; estimations du taux neutre de la Fed de New York ; Taylor (1993).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L2.09",
+   "module": 2,
+   "chapter": "2.4",
+   "chapter_title": "Les grandes banques centrales",
+   "title_initial": "La BCE en détail",
+   "objective_initial": "Décrire Conseil des gouverneurs, déclaration, conférence de presse et instruments de protection de la transmission.",
+   "duration_hours_initial": 3.0,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 1 (L1.04 et L1.07 indispensables)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Federal Reserve (loi, déclarations FOMC, procès-verbaux, projections, rapport de politique monétaire, bilan) ; BCE (déclarations, conférences de presse, bulletin économique, revue de stratégie) ; BoJ ; BoE ; BIS ; estimations du taux neutre de la Fed de New York ; Taylor (1993).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L2.10",
+   "module": 2,
+   "chapter": "2.4",
+   "chapter_title": "Les grandes banques centrales",
+   "title_initial": "BoJ, BoE et autres",
+   "objective_initial": "Identifier les particularités de politique et de contexte de chaque banque.",
+   "duration_hours_initial": 3.0,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 1 (L1.04 et L1.07 indispensables)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Federal Reserve (loi, déclarations FOMC, procès-verbaux, projections, rapport de politique monétaire, bilan) ; BCE (déclarations, conférences de presse, bulletin économique, revue de stratégie) ; BoJ ; BoE ; BIS ; estimations du taux neutre de la Fed de New York ; Taylor (1993).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L2.11",
+   "module": 2,
+   "chapter": "2.5",
+   "chapter_title": "Pratique et transmission",
+   "title_initial": "Lire un communiqué et une conférence de presse",
+   "objective_initial": "Comparer deux communiqués consécutifs et extraire ce qui a changé.",
+   "duration_hours_initial": 3.0,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 1 (L1.04 et L1.07 indispensables)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Federal Reserve (loi, déclarations FOMC, procès-verbaux, projections, rapport de politique monétaire, bilan) ; BCE (déclarations, conférences de presse, bulletin économique, revue de stratégie) ; BoJ ; BoE ; BIS ; estimations du taux neutre de la Fed de New York ; Taylor (1993).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L2.12",
+   "module": 2,
+   "chapter": "2.5",
+   "chapter_title": "Pratique et transmission",
+   "title_initial": "Politique monétaire, change et or",
+   "objective_initial": "Tracer les canaux de transmission vers devises et or.",
+   "duration_hours_initial": 3.0,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 1 (L1.04 et L1.07 indispensables)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Federal Reserve (loi, déclarations FOMC, procès-verbaux, projections, rapport de politique monétaire, bilan) ; BCE (déclarations, conférences de presse, bulletin économique, revue de stratégie) ; BoJ ; BoE ; BIS ; estimations du taux neutre de la Fed de New York ; Taylor (1993).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L3.01",
+   "module": 3,
+   "chapter": "3.1",
+   "chapter_title": "Cadre",
+   "title_initial": "Calendrier économique et agences statistiques",
+   "objective_initial": "Savoir où et quand les données sont publiées, et distinguer première estimation et révisions.",
+   "duration_hours_initial": 2.0,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 1 et 2 (L2.03 et L2.07)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BLS (calendrier, rapport sur l'emploi, CPI) ; BEA (calendrier, PIB, PCE) ; Census Bureau ; ISM et S&P Global (méthodologies des enquêtes) ; Eurostat (indicateurs euro) ; Federal Reserve. **Limite connue :** les consensus de marché sont en général sous licence payante. Au départ, ils sont saisis manuellement avec leur origine, ou remplacés par des cas historiques publics.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L3.02",
+   "module": 3,
+   "chapter": "3.1",
+   "chapter_title": "Cadre",
+   "title_initial": "Consensus, surprise et bruit",
+   "objective_initial": "Définir consensus, surprise, révision et marge d'erreur statistique.",
+   "duration_hours_initial": 3.0,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 1 et 2 (L2.03 et L2.07)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BLS (calendrier, rapport sur l'emploi, CPI) ; BEA (calendrier, PIB, PCE) ; Census Bureau ; ISM et S&P Global (méthodologies des enquêtes) ; Eurostat (indicateurs euro) ; Federal Reserve. **Limite connue :** les consensus de marché sont en général sous licence payante. Au départ, ils sont saisis manuellement avec leur origine, ou remplacés par des cas historiques publics.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L3.03",
+   "module": 3,
+   "chapter": "3.1",
+   "chapter_title": "Cadre",
+   "title_initial": "La surprise standardisée",
+   "objective_initial": "Calculer une surprise standardisée et mesurer une réaction de marché.",
+   "duration_hours_initial": 3.5,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 1 et 2 (L2.03 et L2.07)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BLS (calendrier, rapport sur l'emploi, CPI) ; BEA (calendrier, PIB, PCE) ; Census Bureau ; ISM et S&P Global (méthodologies des enquêtes) ; Eurostat (indicateurs euro) ; Federal Reserve. **Limite connue :** les consensus de marché sont en général sous licence payante. Au départ, ils sont saisis manuellement avec leur origine, ou remplacés par des cas historiques publics.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L3.04",
+   "module": 3,
+   "chapter": "3.2",
+   "chapter_title": "Emploi",
+   "title_initial": "Le rapport américain sur l'emploi",
+   "objective_initial": "Distinguer enquête auprès des établissements et des ménages ; lire les titres (NFP, chômage).",
+   "duration_hours_initial": 3.0,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 1 et 2 (L2.03 et L2.07)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BLS (calendrier, rapport sur l'emploi, CPI) ; BEA (calendrier, PIB, PCE) ; Census Bureau ; ISM et S&P Global (méthodologies des enquêtes) ; Eurostat (indicateurs euro) ; Federal Reserve. **Limite connue :** les consensus de marché sont en général sous licence payante. Au départ, ils sont saisis manuellement avec leur origine, ou remplacés par des cas historiques publics.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L3.05",
+   "module": 3,
+   "chapter": "3.2",
+   "chapter_title": "Emploi",
+   "title_initial": "Lire le rapport en dix minutes",
+   "objective_initial": "Prioriser salaires, révisions, participation et heures travaillées.",
+   "duration_hours_initial": 3.0,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 1 et 2 (L2.03 et L2.07)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BLS (calendrier, rapport sur l'emploi, CPI) ; BEA (calendrier, PIB, PCE) ; Census Bureau ; ISM et S&P Global (méthodologies des enquêtes) ; Eurostat (indicateurs euro) ; Federal Reserve. **Limite connue :** les consensus de marché sont en général sous licence payante. Au départ, ils sont saisis manuellement avec leur origine, ou remplacés par des cas historiques publics.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L3.06",
+   "module": 3,
+   "chapter": "3.3",
+   "chapter_title": "Inflation",
+   "title_initial": "L'indice des prix à la consommation (CPI)",
+   "objective_initial": "Décomposer le CPI, l'inflation sous-jacente et le logement.",
+   "duration_hours_initial": 3.0,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 1 et 2 (L2.03 et L2.07)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BLS (calendrier, rapport sur l'emploi, CPI) ; BEA (calendrier, PIB, PCE) ; Census Bureau ; ISM et S&P Global (méthodologies des enquêtes) ; Eurostat (indicateurs euro) ; Federal Reserve. **Limite connue :** les consensus de marché sont en général sous licence payante. Au départ, ils sont saisis manuellement avec leur origine, ou remplacés par des cas historiques publics.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L3.07",
+   "module": 3,
+   "chapter": "3.3",
+   "chapter_title": "Inflation",
+   "title_initial": "PCE, PPI et déflateur",
+   "objective_initial": "Expliquer pourquoi la Fed suit le PCE et ses différences avec le CPI.",
+   "duration_hours_initial": 3.0,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 1 et 2 (L2.03 et L2.07)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BLS (calendrier, rapport sur l'emploi, CPI) ; BEA (calendrier, PIB, PCE) ; Census Bureau ; ISM et S&P Global (méthodologies des enquêtes) ; Eurostat (indicateurs euro) ; Federal Reserve. **Limite connue :** les consensus de marché sont en général sous licence payante. Au départ, ils sont saisis manuellement avec leur origine, ou remplacés par des cas historiques publics.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L3.08",
+   "module": 3,
+   "chapter": "3.4",
+   "chapter_title": "Activité",
+   "title_initial": "PMI et ISM",
+   "objective_initial": "Interpréter des indices d'enquête : seuil de 50, composantes, limites.",
+   "duration_hours_initial": 3.0,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 1 et 2 (L2.03 et L2.07)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BLS (calendrier, rapport sur l'emploi, CPI) ; BEA (calendrier, PIB, PCE) ; Census Bureau ; ISM et S&P Global (méthodologies des enquêtes) ; Eurostat (indicateurs euro) ; Federal Reserve. **Limite connue :** les consensus de marché sont en général sous licence payante. Au départ, ils sont saisis manuellement avec leur origine, ou remplacés par des cas historiques publics.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L3.09",
+   "module": 3,
+   "chapter": "3.4",
+   "chapter_title": "Activité",
+   "title_initial": "PIB, ventes au détail, production industrielle",
+   "objective_initial": "Lire les chiffres d'activité et leurs révisions.",
+   "duration_hours_initial": 3.0,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 1 et 2 (L2.03 et L2.07)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BLS (calendrier, rapport sur l'emploi, CPI) ; BEA (calendrier, PIB, PCE) ; Census Bureau ; ISM et S&P Global (méthodologies des enquêtes) ; Eurostat (indicateurs euro) ; Federal Reserve. **Limite connue :** les consensus de marché sont en général sous licence payante. Au départ, ils sont saisis manuellement avec leur origine, ou remplacés par des cas historiques publics.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L3.10",
+   "module": 3,
+   "chapter": "3.5",
+   "chapter_title": "Zone euro",
+   "title_initial": "Publications de la zone euro",
+   "objective_initial": "Lire HICP, PMI, chômage et estimation rapide du PIB (Eurostat).",
+   "duration_hours_initial": 3.0,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 1 et 2 (L2.03 et L2.07)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BLS (calendrier, rapport sur l'emploi, CPI) ; BEA (calendrier, PIB, PCE) ; Census Bureau ; ISM et S&P Global (méthodologies des enquêtes) ; Eurostat (indicateurs euro) ; Federal Reserve. **Limite connue :** les consensus de marché sont en général sous licence payante. Au départ, ils sont saisis manuellement avec leur origine, ou remplacés par des cas historiques publics.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L3.11",
+   "module": 3,
+   "chapter": "3.6",
+   "chapter_title": "Pratique",
+   "title_initial": "Reconstituer une réaction de marché",
+   "objective_initial": "À partir d'une publication passée documentée, relier surprise et mouvements de marché (cas sélectionnés et sourcés en phase 4).",
+   "duration_hours_initial": 3.5,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 1 et 2 (L2.03 et L2.07)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BLS (calendrier, rapport sur l'emploi, CPI) ; BEA (calendrier, PIB, PCE) ; Census Bureau ; ISM et S&P Global (méthodologies des enquêtes) ; Eurostat (indicateurs euro) ; Federal Reserve. **Limite connue :** les consensus de marché sont en général sous licence payante. Au départ, ils sont saisis manuellement avec leur origine, ou remplacés par des cas historiques publics.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L3.12",
+   "module": 3,
+   "chapter": "3.6",
+   "chapter_title": "Pratique",
+   "title_initial": "Sa grille de lecture d'une publication",
+   "objective_initial": "Construire une liste de contrôle avant, pendant et après la publication.",
+   "duration_hours_initial": 3.0,
+   "level": "B",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 1 et 2 (L2.03 et L2.07)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BLS (calendrier, rapport sur l'emploi, CPI) ; BEA (calendrier, PIB, PCE) ; Census Bureau ; ISM et S&P Global (méthodologies des enquêtes) ; Eurostat (indicateurs euro) ; Federal Reserve. **Limite connue :** les consensus de marché sont en général sous licence payante. Au départ, ils sont saisis manuellement avec leur origine, ou remplacés par des cas historiques publics.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L4.01",
+   "module": 4,
+   "chapter": "4.1",
+   "chapter_title": "Taux et valorisation",
+   "title_initial": "Parité des taux d'intérêt",
+   "objective_initial": "Distinguer parité couverte et non couverte, et lire la prime à terme.",
+   "duration_hours_initial": 3.0,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 3",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BIS (enquête triennale, Quarterly Review) ; FMI (manuel de la balance des paiements, COFER, statistiques financières) ; US Treasury (flux TIC, rendements, TIPS) ; BCE (rôle international de l'euro) ; BoJ ; BNS ; BoE ; Eurostat ; Meese et Rogoff (1983) ; Fama (1984).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L4.02",
+   "module": 4,
+   "chapter": "4.1",
+   "chapter_title": "Taux et valorisation",
+   "title_initial": "Différentiels de taux et attentes",
+   "objective_initial": "Calculer des différentiels nominaux et d'anticipations.",
+   "duration_hours_initial": 3.0,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 3",
+    "lesson_level_initial": [
+     "L2.07"
+    ],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BIS (enquête triennale, Quarterly Review) ; FMI (manuel de la balance des paiements, COFER, statistiques financières) ; US Treasury (flux TIC, rendements, TIPS) ; BCE (rôle international de l'euro) ; BoJ ; BNS ; BoE ; Eurostat ; Meese et Rogoff (1983) ; Fama (1984).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L4.03",
+   "module": 4,
+   "chapter": "4.1",
+   "chapter_title": "Taux et valorisation",
+   "title_initial": "Taux réels",
+   "objective_initial": "Calculer des taux réels ex post et ex ante et les comparer entre pays.",
+   "duration_hours_initial": 3.0,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 3",
+    "lesson_level_initial": [
+     "L1.04"
+    ],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BIS (enquête triennale, Quarterly Review) ; FMI (manuel de la balance des paiements, COFER, statistiques financières) ; US Treasury (flux TIC, rendements, TIPS) ; BCE (rôle international de l'euro) ; BoJ ; BNS ; BoE ; Eurostat ; Meese et Rogoff (1983) ; Fama (1984).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L4.04",
+   "module": 4,
+   "chapter": "4.2",
+   "chapter_title": "Balance des paiements",
+   "title_initial": "Balance des paiements",
+   "objective_initial": "Distinguer compte courant, compte financier et position extérieure.",
+   "duration_hours_initial": 3.0,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 3",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BIS (enquête triennale, Quarterly Review) ; FMI (manuel de la balance des paiements, COFER, statistiques financières) ; US Treasury (flux TIC, rendements, TIPS) ; BCE (rôle international de l'euro) ; BoJ ; BNS ; BoE ; Eurostat ; Meese et Rogoff (1983) ; Fama (1984).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L4.05",
+   "module": 4,
+   "chapter": "4.2",
+   "chapter_title": "Balance des paiements",
+   "title_initial": "Termes de l'échange et matières premières",
+   "objective_initial": "Relier prix des matières premières et devises exportatrices.",
+   "duration_hours_initial": 2.5,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 3",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BIS (enquête triennale, Quarterly Review) ; FMI (manuel de la balance des paiements, COFER, statistiques financières) ; US Treasury (flux TIC, rendements, TIPS) ; BCE (rôle international de l'euro) ; BoJ ; BNS ; BoE ; Eurostat ; Meese et Rogoff (1983) ; Fama (1984).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L4.06",
+   "module": 4,
+   "chapter": "4.3",
+   "chapter_title": "Les grandes devises",
+   "title_initial": "Le dollar",
+   "objective_initial": "Expliquer le statut de monnaie de réserve, l'indice dollar et les logiques de risque.",
+   "duration_hours_initial": 3.0,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 3",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BIS (enquête triennale, Quarterly Review) ; FMI (manuel de la balance des paiements, COFER, statistiques financières) ; US Treasury (flux TIC, rendements, TIPS) ; BCE (rôle international de l'euro) ; BoJ ; BNS ; BoE ; Eurostat ; Meese et Rogoff (1983) ; Fama (1984).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L4.07",
+   "module": 4,
+   "chapter": "4.3",
+   "chapter_title": "Les grandes devises",
+   "title_initial": "L'euro",
+   "objective_initial": "Décrire l'architecture de la zone euro, les divergences et les écarts de rendement.",
+   "duration_hours_initial": 3.0,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 3",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BIS (enquête triennale, Quarterly Review) ; FMI (manuel de la balance des paiements, COFER, statistiques financières) ; US Treasury (flux TIC, rendements, TIPS) ; BCE (rôle international de l'euro) ; BoJ ; BNS ; BoE ; Eurostat ; Meese et Rogoff (1983) ; Fama (1984).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L4.08",
+   "module": 4,
+   "chapter": "4.3",
+   "chapter_title": "Les grandes devises",
+   "title_initial": "Yen, livre, franc suisse",
+   "objective_initial": "Comprendre les spécificités : refuge, politique de taux, interventions.",
+   "duration_hours_initial": 3.0,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 3",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BIS (enquête triennale, Quarterly Review) ; FMI (manuel de la balance des paiements, COFER, statistiques financières) ; US Treasury (flux TIC, rendements, TIPS) ; BCE (rôle international de l'euro) ; BoJ ; BNS ; BoE ; Eurostat ; Meese et Rogoff (1983) ; Fama (1984).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L4.09",
+   "module": 4,
+   "chapter": "4.3",
+   "chapter_title": "Les grandes devises",
+   "title_initial": "Devises de matières premières et émergentes",
+   "objective_initial": "Cerner la sensibilité du CAD, de l'AUD, du NOK et des émergentes aux cycles.",
+   "duration_hours_initial": 2.5,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 3",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BIS (enquête triennale, Quarterly Review) ; FMI (manuel de la balance des paiements, COFER, statistiques financières) ; US Treasury (flux TIC, rendements, TIPS) ; BCE (rôle international de l'euro) ; BoJ ; BNS ; BoE ; Eurostat ; Meese et Rogoff (1983) ; Fama (1984).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L4.10",
+   "module": 4,
+   "chapter": "4.4",
+   "chapter_title": "Stratégies fondamentales",
+   "title_initial": "Le carry trade",
+   "objective_initial": "Expliquer le rendement, les risques et le débouclage.",
+   "duration_hours_initial": 3.5,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 3",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BIS (enquête triennale, Quarterly Review) ; FMI (manuel de la balance des paiements, COFER, statistiques financières) ; US Treasury (flux TIC, rendements, TIPS) ; BCE (rôle international de l'euro) ; BoJ ; BNS ; BoE ; Eurostat ; Meese et Rogoff (1983) ; Fama (1984).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L4.11",
+   "module": 4,
+   "chapter": "4.4",
+   "chapter_title": "Stratégies fondamentales",
+   "title_initial": "Régimes de change et interventions",
+   "objective_initial": "Distinguer les régimes et reconnaître les signes d'intervention.",
+   "duration_hours_initial": 2.5,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 3",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BIS (enquête triennale, Quarterly Review) ; FMI (manuel de la balance des paiements, COFER, statistiques financières) ; US Treasury (flux TIC, rendements, TIPS) ; BCE (rôle international de l'euro) ; BoJ ; BNS ; BoE ; Eurostat ; Meese et Rogoff (1983) ; Fama (1984).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L4.12",
+   "module": 4,
+   "chapter": "4.5",
+   "chapter_title": "Synthèse",
+   "title_initial": "Thèse guidée sur EUR/USD",
+   "objective_initial": "Construire une thèse complète sur des données historiques fournies.",
+   "duration_hours_initial": 3.5,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 3",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "BIS (enquête triennale, Quarterly Review) ; FMI (manuel de la balance des paiements, COFER, statistiques financières) ; US Treasury (flux TIC, rendements, TIPS) ; BCE (rôle international de l'euro) ; BoJ ; BNS ; BoE ; Eurostat ; Meese et Rogoff (1983) ; Fama (1984).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L5.01",
+   "module": 5,
+   "chapter": "5.1",
+   "chapter_title": "Nature de l'or",
+   "title_initial": "Histoire monétaire de l'or",
+   "objective_initial": "Situer l'or dans les systèmes monétaires, de l'étalon-or à aujourd'hui.",
+   "duration_hours_initial": 2.5,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 4 (L4.03 indispensable)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "World Gold Council (demande, statistiques des banques centrales) ; FMI (réserves officielles) ; LBMA ; CME Group ; US Treasury (rendements réels, TIPS) ; USGS (synthèse sur l'or) ; Federal Reserve ; Erb et Harvey (2013).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L5.02",
+   "module": 5,
+   "chapter": "5.1",
+   "chapter_title": "Nature de l'or",
+   "title_initial": "Offre et demande physiques",
+   "objective_initial": "Décomposer mines, recyclage, bijouterie, industrie et investissement.",
+   "duration_hours_initial": 3.0,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 4 (L4.03 indispensable)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "World Gold Council (demande, statistiques des banques centrales) ; FMI (réserves officielles) ; LBMA ; CME Group ; US Treasury (rendements réels, TIPS) ; USGS (synthèse sur l'or) ; Federal Reserve ; Erb et Harvey (2013).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L5.03",
+   "module": 5,
+   "chapter": "5.2",
+   "chapter_title": "Moteurs financiers",
+   "title_initial": "L'or et les taux réels",
+   "objective_initial": "Expliquer le coût d'opportunité et tester la relation avec des données de taux réels.",
+   "duration_hours_initial": 3.5,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 4 (L4.03 indispensable)",
+    "lesson_level_initial": [
+     "L4.03"
+    ],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "World Gold Council (demande, statistiques des banques centrales) ; FMI (réserves officielles) ; LBMA ; CME Group ; US Treasury (rendements réels, TIPS) ; USGS (synthèse sur l'or) ; Federal Reserve ; Erb et Harvey (2013).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L5.04",
+   "module": 5,
+   "chapter": "5.2",
+   "chapter_title": "Moteurs financiers",
+   "title_initial": "L'or et le dollar",
+   "objective_initial": "Étudier la relation et les conditions où elle tient ou se rompt.",
+   "duration_hours_initial": 3.0,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 4 (L4.03 indispensable)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "World Gold Council (demande, statistiques des banques centrales) ; FMI (réserves officielles) ; LBMA ; CME Group ; US Treasury (rendements réels, TIPS) ; USGS (synthèse sur l'or) ; Federal Reserve ; Erb et Harvey (2013).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L5.05",
+   "module": 5,
+   "chapter": "5.2",
+   "chapter_title": "Moteurs financiers",
+   "title_initial": "Or, inflation et anticipations",
+   "objective_initial": "Tester avec des données l'idée que l'or protège de l'inflation.",
+   "duration_hours_initial": 3.0,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 4 (L4.03 indispensable)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "World Gold Council (demande, statistiques des banques centrales) ; FMI (réserves officielles) ; LBMA ; CME Group ; US Treasury (rendements réels, TIPS) ; USGS (synthèse sur l'or) ; Federal Reserve ; Erb et Harvey (2013).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L5.06",
+   "module": 5,
+   "chapter": "5.3",
+   "chapter_title": "Demande officielle et d'investissement",
+   "title_initial": "Banques centrales acheteuses",
+   "objective_initial": "Lire les données de réserves officielles et la diversification.",
+   "duration_hours_initial": 3.0,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 4 (L4.03 indispensable)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "World Gold Council (demande, statistiques des banques centrales) ; FMI (réserves officielles) ; LBMA ; CME Group ; US Treasury (rendements réels, TIPS) ; USGS (synthèse sur l'or) ; Federal Reserve ; Erb et Harvey (2013).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L5.07",
+   "module": 5,
+   "chapter": "5.3",
+   "chapter_title": "Demande officielle et d'investissement",
+   "title_initial": "ETF d'or et flux",
+   "objective_initial": "Lire les flux d'ETF et leur lien avec le prix.",
+   "duration_hours_initial": 3.0,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 4 (L4.03 indispensable)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "World Gold Council (demande, statistiques des banques centrales) ; FMI (réserves officielles) ; LBMA ; CME Group ; US Treasury (rendements réels, TIPS) ; USGS (synthèse sur l'or) ; Federal Reserve ; Erb et Harvey (2013).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L5.08",
+   "module": 5,
+   "chapter": "5.4",
+   "chapter_title": "Régimes et structure de marché",
+   "title_initial": "L'or en période de crise",
+   "objective_initial": "Étudier des cas documentés : refuge, liquidité, exceptions (cas sélectionnés en phase 4).",
+   "duration_hours_initial": 3.0,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 4 (L4.03 indispensable)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "World Gold Council (demande, statistiques des banques centrales) ; FMI (réserves officielles) ; LBMA ; CME Group ; US Treasury (rendements réels, TIPS) ; USGS (synthèse sur l'or) ; Federal Reserve ; Erb et Harvey (2013).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L5.09",
+   "module": 5,
+   "chapter": "5.4",
+   "chapter_title": "Régimes et structure de marché",
+   "title_initial": "Courbe à terme, base et coût de portage",
+   "objective_initial": "Expliquer l'écart entre spot et contrats à terme.",
+   "duration_hours_initial": 3.0,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 4 (L4.03 indispensable)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "World Gold Council (demande, statistiques des banques centrales) ; FMI (réserves officielles) ; LBMA ; CME Group ; US Treasury (rendements réels, TIPS) ; USGS (synthèse sur l'or) ; Federal Reserve ; Erb et Harvey (2013).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L5.10",
+   "module": 5,
+   "chapter": "5.5",
+   "chapter_title": "Synthèse",
+   "title_initial": "Les grands cycles de l'or",
+   "objective_initial": "Analyser les grands cycles sur longue période avec un regard critique.",
+   "duration_hours_initial": 3.0,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 4 (L4.03 indispensable)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "World Gold Council (demande, statistiques des banques centrales) ; FMI (réserves officielles) ; LBMA ; CME Group ; US Treasury (rendements réels, TIPS) ; USGS (synthèse sur l'or) ; Federal Reserve ; Erb et Harvey (2013).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L5.11",
+   "module": 5,
+   "chapter": "5.5",
+   "chapter_title": "Synthèse",
+   "title_initial": "Tableau de bord fondamental XAU/USD",
+   "objective_initial": "Construire un tableau de bord daté, relié aux sources.",
+   "duration_hours_initial": 3.0,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 4 (L4.03 indispensable)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "World Gold Council (demande, statistiques des banques centrales) ; FMI (réserves officielles) ; LBMA ; CME Group ; US Treasury (rendements réels, TIPS) ; USGS (synthèse sur l'or) ; Federal Reserve ; Erb et Harvey (2013).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L5.12",
+   "module": 5,
+   "chapter": "5.5",
+   "chapter_title": "Synthèse",
+   "title_initial": "Thèse guidée sur XAU/USD",
+   "objective_initial": "Écrire une thèse avec scénarios sur un cas historique.",
+   "duration_hours_initial": 3.5,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 2 et 4 (L4.03 indispensable)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "World Gold Council (demande, statistiques des banques centrales) ; FMI (réserves officielles) ; LBMA ; CME Group ; US Treasury (rendements réels, TIPS) ; USGS (synthèse sur l'or) ; Federal Reserve ; Erb et Harvey (2013).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L6.01",
+   "module": 6,
+   "chapter": "6.1",
+   "chapter_title": "Prix et information",
+   "title_initial": "Information et prix",
+   "objective_initial": "Expliquer l'hypothèse d'efficience et l'idée « acheter la rumeur, vendre la nouvelle ».",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 3 et 4",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "CME Group (contrats sur les fonds fédéraux, méthodologie des probabilités) ; Federal Reserve ; BCE ; Fama (1970) ; Kuttner (2001) ; Bernanke et Kuttner (2005).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L6.02",
+   "module": 6,
+   "chapter": "6.1",
+   "chapter_title": "Prix et information",
+   "title_initial": "Anticipations de taux",
+   "objective_initial": "Lire les contrats à terme de taux et en déduire des probabilités implicites.",
+   "duration_hours_initial": 3.5,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 3 et 4",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "CME Group (contrats sur les fonds fédéraux, méthodologie des probabilités) ; Federal Reserve ; BCE ; Fama (1970) ; Kuttner (2001) ; Bernanke et Kuttner (2005).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L6.03",
+   "module": 6,
+   "chapter": "6.2",
+   "chapter_title": "Réactions asymétriques et régimes",
+   "title_initial": "Réactions asymétriques",
+   "objective_initial": "Expliquer pourquoi une bonne nouvelle peut faire baisser une devise.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 3 et 4",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "CME Group (contrats sur les fonds fédéraux, méthodologie des probabilités) ; Federal Reserve ; BCE ; Fama (1970) ; Kuttner (2001) ; Bernanke et Kuttner (2005).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L6.04",
+   "module": 6,
+   "chapter": "6.2",
+   "chapter_title": "Réactions asymétriques et régimes",
+   "title_initial": "Régimes de marché",
+   "objective_initial": "Identifier ce que le marché « regarde » : inflation, croissance ou risque.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 3 et 4",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "CME Group (contrats sur les fonds fédéraux, méthodologie des probabilités) ; Federal Reserve ; BCE ; Fama (1970) ; Kuttner (2001) ; Bernanke et Kuttner (2005).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L6.05",
+   "module": 6,
+   "chapter": "6.3",
+   "chapter_title": "Scénarios et volatilité",
+   "title_initial": "Scénarios et probabilités",
+   "objective_initial": "Construire des scénarios et mettre à jour leurs probabilités (règle de Bayes intuitive).",
+   "duration_hours_initial": 3.5,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 3 et 4",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "CME Group (contrats sur les fonds fédéraux, méthodologie des probabilités) ; Federal Reserve ; BCE ; Fama (1970) ; Kuttner (2001) ; Bernanke et Kuttner (2005).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L6.06",
+   "module": 6,
+   "chapter": "6.3",
+   "chapter_title": "Scénarios et volatilité",
+   "title_initial": "Volatilité et événements",
+   "objective_initial": "Lire la volatilité implicite et le mouvement attendu autour d'un événement.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 3 et 4",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "CME Group (contrats sur les fonds fédéraux, méthodologie des probabilités) ; Federal Reserve ; BCE ; Fama (1970) ; Kuttner (2001) ; Bernanke et Kuttner (2005).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L6.07",
+   "module": 6,
+   "chapter": "6.4",
+   "chapter_title": "Pratique",
+   "title_initial": "Études de cas : réunions de banque centrale",
+   "objective_initial": "Reconstituer anticipations et décision (cas sélectionnés et sourcés en phase 4).",
+   "duration_hours_initial": 3.5,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 3 et 4",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "CME Group (contrats sur les fonds fédéraux, méthodologie des probabilités) ; Federal Reserve ; BCE ; Fama (1970) ; Kuttner (2001) ; Bernanke et Kuttner (2005).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L6.08",
+   "module": 6,
+   "chapter": "6.4",
+   "chapter_title": "Pratique",
+   "title_initial": "Atelier : scénario contre consensus",
+   "objective_initial": "Évaluer un scénario par rapport au consensus de marché.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 3 et 4",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "CME Group (contrats sur les fonds fédéraux, méthodologie des probabilités) ; Federal Reserve ; BCE ; Fama (1970) ; Kuttner (2001) ; Bernanke et Kuttner (2005).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L7.01",
+   "module": 7,
+   "chapter": "7.1",
+   "chapter_title": "Rapports COT",
+   "title_initial": "Lire un rapport COT",
+   "objective_initial": "Distinguer catégories de traders, positions nettes et intérêt ouvert.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 6 (L6.01 et L6.05)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "CFTC (rapports COT, environnement public de consultation des données, calendrier de publication) ; World Gold Council (avoirs des ETF) ; Federal Reserve ; BIS.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L7.02",
+   "module": 7,
+   "chapter": "7.1",
+   "chapter_title": "Rapports COT",
+   "title_initial": "Positionnement extrême",
+   "objective_initial": "Définir un extrême et discuter son utilité et ses limites.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 6 (L6.01 et L6.05)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "CFTC (rapports COT, environnement public de consultation des données, calendrier de publication) ; World Gold Council (avoirs des ETF) ; Federal Reserve ; BIS.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L7.03",
+   "module": 7,
+   "chapter": "7.1",
+   "chapter_title": "Rapports COT",
+   "title_initial": "COT sur l'or et le dollar",
+   "objective_initial": "Appliquer la lecture à des cas pratiques.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 6 (L6.01 et L6.05)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "CFTC (rapports COT, environnement public de consultation des données, calendrier de publication) ; World Gold Council (avoirs des ETF) ; Federal Reserve ; BIS.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L7.04",
+   "module": 7,
+   "chapter": "7.2",
+   "chapter_title": "Flux et liquidité",
+   "title_initial": "Flux d'ETF et d'investisseurs",
+   "objective_initial": "Interpréter flux de fonds et d'ETF.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 6 (L6.01 et L6.05)",
+    "lesson_level_initial": [
+     "L5.07"
+    ],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "CFTC (rapports COT, environnement public de consultation des données, calendrier de publication) ; World Gold Council (avoirs des ETF) ; Federal Reserve ; BIS.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L7.05",
+   "module": 7,
+   "chapter": "7.2",
+   "chapter_title": "Flux et liquidité",
+   "title_initial": "Liquidité et calendriers de flux",
+   "objective_initial": "Repérer les effets de fin de mois, de trimestre et de rééquilibrage.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 6 (L6.01 et L6.05)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "CFTC (rapports COT, environnement public de consultation des données, calendrier de publication) ; World Gold Council (avoirs des ETF) ; Federal Reserve ; BIS.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L7.06",
+   "module": 7,
+   "chapter": "7.2",
+   "chapter_title": "Flux et liquidité",
+   "title_initial": "Horizons de flux",
+   "objective_initial": "Distinguer flux de court terme et de long terme.",
+   "duration_hours_initial": 2.5,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 6 (L6.01 et L6.05)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "CFTC (rapports COT, environnement public de consultation des données, calendrier de publication) ; World Gold Council (avoirs des ETF) ; Federal Reserve ; BIS.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L7.07",
+   "module": 7,
+   "chapter": "7.3",
+   "chapter_title": "Pratique",
+   "title_initial": "Combiner positionnement et fondamentaux",
+   "objective_initial": "Intégrer le positionnement dans une thèse.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 6 (L6.01 et L6.05)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "CFTC (rapports COT, environnement public de consultation des données, calendrier de publication) ; World Gold Council (avoirs des ETF) ; Federal Reserve ; BIS.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L7.08",
+   "module": 7,
+   "chapter": "7.3",
+   "chapter_title": "Pratique",
+   "title_initial": "Atelier : un indicateur COT",
+   "objective_initial": "Construire un indicateur à partir des données publiques de la CFTC.",
+   "duration_hours_initial": 3.5,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 6 (L6.01 et L6.05)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "CFTC (rapports COT, environnement public de consultation des données, calendrier de publication) ; World Gold Council (avoirs des ETF) ; Federal Reserve ; BIS.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L8.01",
+   "module": 8,
+   "chapter": "8.1",
+   "chapter_title": "Cadre",
+   "title_initial": "Cadre d'analyse du risque géopolitique",
+   "objective_initial": "Structurer probabilité, ampleur, canaux de transmission et durée.",
+   "duration_hours_initial": 2.5,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 5 et 6",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FMI ; Banque mondiale (matières premières) ; EIA (énergie) ; OFAC du US Treasury (sanctions) ; indice de risque géopolitique de Caldara et Iacoviello (Federal Reserve) ; BIS ; rapport de stabilité financière de la Fed.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L8.02",
+   "module": 8,
+   "chapter": "8.2",
+   "chapter_title": "Chocs et canaux",
+   "title_initial": "Guerres, sanctions et énergie",
+   "objective_initial": "Analyser les effets sur l'énergie, l'inflation et les devises.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 5 et 6",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FMI ; Banque mondiale (matières premières) ; EIA (énergie) ; OFAC du US Treasury (sanctions) ; indice de risque géopolitique de Caldara et Iacoviello (Federal Reserve) ; BIS ; rapport de stabilité financière de la Fed.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L8.03",
+   "module": 8,
+   "chapter": "8.2",
+   "chapter_title": "Chocs et canaux",
+   "title_initial": "Élections et changements de politique",
+   "objective_initial": "Évaluer effets attendus et incertitude.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 5 et 6",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FMI ; Banque mondiale (matières premières) ; EIA (énergie) ; OFAC du US Treasury (sanctions) ; indice de risque géopolitique de Caldara et Iacoviello (Federal Reserve) ; BIS ; rapport de stabilité financière de la Fed.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L8.04",
+   "module": 8,
+   "chapter": "8.2",
+   "chapter_title": "Chocs et canaux",
+   "title_initial": "Commerce, droits de douane et fragmentation",
+   "objective_initial": "Analyser les canaux commerciaux et leurs effets de change.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 5 et 6",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FMI ; Banque mondiale (matières premières) ; EIA (énergie) ; OFAC du US Treasury (sanctions) ; indice de risque géopolitique de Caldara et Iacoviello (Federal Reserve) ; BIS ; rapport de stabilité financière de la Fed.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L8.05",
+   "module": 8,
+   "chapter": "8.3",
+   "chapter_title": "Refuge et risque",
+   "title_initial": "Risk-on et risk-off",
+   "objective_initial": "Définir le régime, reconnaître ses signes et les valeurs refuges.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 5 et 6",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FMI ; Banque mondiale (matières premières) ; EIA (énergie) ; OFAC du US Treasury (sanctions) ; indice de risque géopolitique de Caldara et Iacoviello (Federal Reserve) ; BIS ; rapport de stabilité financière de la Fed.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L8.06",
+   "module": 8,
+   "chapter": "8.3",
+   "chapter_title": "Refuge et risque",
+   "title_initial": "Durée des effets d'un choc",
+   "objective_initial": "Étudier des épisodes documentés et la durée de leurs effets (cas sélectionnés en phase 4).",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 5 et 6",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FMI ; Banque mondiale (matières premières) ; EIA (énergie) ; OFAC du US Treasury (sanctions) ; indice de risque géopolitique de Caldara et Iacoviello (Federal Reserve) ; BIS ; rapport de stabilité financière de la Fed.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L8.07",
+   "module": 8,
+   "chapter": "8.4",
+   "chapter_title": "Risques financiers et décision",
+   "title_initial": "Crises bancaires et de dette souveraine",
+   "objective_initial": "Analyser les risques financiers et leur transmission.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 5 et 6",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FMI ; Banque mondiale (matières premières) ; EIA (énergie) ; OFAC du US Treasury (sanctions) ; indice de risque géopolitique de Caldara et Iacoviello (Federal Reserve) ; BIS ; rapport de stabilité financière de la Fed.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L8.08",
+   "module": 8,
+   "chapter": "8.4",
+   "chapter_title": "Risques financiers et décision",
+   "title_initial": "Décider sans surréagir",
+   "objective_initial": "Appliquer un cadre de décision à un choc.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 5 et 6",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FMI ; Banque mondiale (matières premières) ; EIA (énergie) ; OFAC du US Treasury (sanctions) ; indice de risque géopolitique de Caldara et Iacoviello (Federal Reserve) ; BIS ; rapport de stabilité financière de la Fed.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L9.01",
+   "module": 9,
+   "chapter": "9.1",
+   "chapter_title": "Raisonner en système",
+   "title_initial": "Raisonnement systémique",
+   "objective_initial": "Identifier boucles de rétroaction et effets de second ordre.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 4, 5 et 6 (modules 7 et 8 recommandés)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "notes de recherche de la Federal Reserve (FEDS) ; prime de terme publiée par la Fed de New York et par le Conseil des gouverneurs de la Fed ; FMI ; BIS ; BLS et BEA.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L9.02",
+   "module": 9,
+   "chapter": "9.1",
+   "chapter_title": "Raisonner en système",
+   "title_initial": "Taux réels, dollar et or",
+   "objective_initial": "Construire un modèle conceptuel de leurs interactions.",
+   "duration_hours_initial": 3.5,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 4, 5 et 6 (modules 7 et 8 recommandés)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "notes de recherche de la Federal Reserve (FEDS) ; prime de terme publiée par la Fed de New York et par le Conseil des gouverneurs de la Fed ; FMI ; BIS ; BLS et BEA.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L9.03",
+   "module": 9,
+   "chapter": "9.1",
+   "chapter_title": "Raisonner en système",
+   "title_initial": "Corrélations instables",
+   "objective_initial": "Reconnaître les changements de régime et les limites d'une corrélation.",
+   "duration_hours_initial": 3.5,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 4, 5 et 6 (modules 7 et 8 recommandés)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "notes de recherche de la Federal Reserve (FEDS) ; prime de terme publiée par la Fed de New York et par le Conseil des gouverneurs de la Fed ; FMI ; BIS ; BLS et BEA.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L9.04",
+   "module": 9,
+   "chapter": "9.2",
+   "chapter_title": "Régimes et chocs",
+   "title_initial": "Stagflation, désinflation, récession",
+   "objective_initial": "Construire une matrice régimes et actifs.",
+   "duration_hours_initial": 3.5,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 4, 5 et 6 (modules 7 et 8 recommandés)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "notes de recherche de la Federal Reserve (FEDS) ; prime de terme publiée par la Fed de New York et par le Conseil des gouverneurs de la Fed ; FMI ; BIS ; BLS et BEA.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L9.05",
+   "module": 9,
+   "chapter": "9.2",
+   "chapter_title": "Régimes et chocs",
+   "title_initial": "Politique budgétaire et monétaire combinées",
+   "objective_initial": "Analyser leur combinaison et ses effets.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 4, 5 et 6 (modules 7 et 8 recommandés)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "notes de recherche de la Federal Reserve (FEDS) ; prime de terme publiée par la Fed de New York et par le Conseil des gouverneurs de la Fed ; FMI ; BIS ; BLS et BEA.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L9.06",
+   "module": 9,
+   "chapter": "9.2",
+   "chapter_title": "Régimes et chocs",
+   "title_initial": "Courbe des taux, prime de terme et récession",
+   "objective_initial": "Lire pente, prime de terme et signaux associés.",
+   "duration_hours_initial": 3.5,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 4, 5 et 6 (modules 7 et 8 recommandés)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "notes de recherche de la Federal Reserve (FEDS) ; prime de terme publiée par la Fed de New York et par le Conseil des gouverneurs de la Fed ; FMI ; BIS ; BLS et BEA.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L9.07",
+   "module": 9,
+   "chapter": "9.2",
+   "chapter_title": "Régimes et chocs",
+   "title_initial": "Chocs d'offre et chocs de demande",
+   "objective_initial": "Les distinguer et en déduire les implications pour la politique et les marchés.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 4, 5 et 6 (modules 7 et 8 recommandés)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "notes de recherche de la Federal Reserve (FEDS) ; prime de terme publiée par la Fed de New York et par le Conseil des gouverneurs de la Fed ; FMI ; BIS ; BLS et BEA.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L9.08",
+   "module": 9,
+   "chapter": "9.3",
+   "chapter_title": "Intégration",
+   "title_initial": "Un épisode intégré",
+   "objective_initial": "Analyser un épisode historique complet de bout en bout (cas sélectionné et sourcé en phase 4).",
+   "duration_hours_initial": 3.5,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 4, 5 et 6 (modules 7 et 8 recommandés)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "notes de recherche de la Federal Reserve (FEDS) ; prime de terme publiée par la Fed de New York et par le Conseil des gouverneurs de la Fed ; FMI ; BIS ; BLS et BEA.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L10.01",
+   "module": 10,
+   "chapter": "10.1",
+   "chapter_title": "Méthode",
+   "title_initial": "La méthode en entonnoir",
+   "objective_initial": "Aller du monde au pays puis à la paire.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 4 à 9",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "celles des modules 1 à 9 ; rapport de politique monétaire de la Fed ; BIS ; BCE ; notes de recherche des banques centrales.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L10.02",
+   "module": 10,
+   "chapter": "10.1",
+   "chapter_title": "Méthode",
+   "title_initial": "Scénario central et scénarios alternatifs",
+   "objective_initial": "Construire des scénarios avec probabilités.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 4 à 9",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "celles des modules 1 à 9 ; rapport de politique monétaire de la Fed ; BIS ; BCE ; notes de recherche des banques centrales.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L10.03",
+   "module": 10,
+   "chapter": "10.1",
+   "chapter_title": "Méthode",
+   "title_initial": "Signaux de confirmation et d'invalidation",
+   "objective_initial": "Définir à l'avance les conditions de révision d'une thèse.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 4 à 9",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "celles des modules 1 à 9 ; rapport de politique monétaire de la Fed ; BIS ; BCE ; notes de recherche des banques centrales.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L10.04",
+   "module": 10,
+   "chapter": "10.1",
+   "chapter_title": "Méthode",
+   "title_initial": "Rédiger une note d'analyse",
+   "objective_initial": "Produire une note structurée, sourcée et datée.",
+   "duration_hours_initial": 3.5,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 4 à 9",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "celles des modules 1 à 9 ; rapport de politique monétaire de la Fed ; BIS ; BCE ; notes de recherche des banques centrales.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L10.05",
+   "module": 10,
+   "chapter": "10.2",
+   "chapter_title": "Études de cas",
+   "title_initial": "Cas EUR/USD",
+   "objective_initial": "Analyse complète sur un épisode historique.",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 4 à 9",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "celles des modules 1 à 9 ; rapport de politique monétaire de la Fed ; BIS ; BCE ; notes de recherche des banques centrales.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L10.06",
+   "module": 10,
+   "chapter": "10.2",
+   "chapter_title": "Études de cas",
+   "title_initial": "Cas USD/JPY",
+   "objective_initial": "Analyse complète sur un épisode historique.",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 4 à 9",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "celles des modules 1 à 9 ; rapport de politique monétaire de la Fed ; BIS ; BCE ; notes de recherche des banques centrales.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L10.07",
+   "module": 10,
+   "chapter": "10.2",
+   "chapter_title": "Études de cas",
+   "title_initial": "Cas XAU/USD",
+   "objective_initial": "Analyse complète sur un épisode historique.",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 4 à 9",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "celles des modules 1 à 9 ; rapport de politique monétaire de la Fed ; BIS ; BCE ; notes de recherche des banques centrales.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L10.08",
+   "module": 10,
+   "chapter": "10.3",
+   "chapter_title": "Évaluation",
+   "title_initial": "Évaluer ses analyses",
+   "objective_initial": "Tenir un journal, attribuer l'erreur et calibrer ses probabilités.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 4 à 9",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "celles des modules 1 à 9 ; rapport de politique monétaire de la Fed ; BIS ; BCE ; notes de recherche des banques centrales.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L11.01",
+   "module": 11,
+   "chapter": "11.1",
+   "chapter_title": "Dimensionnement et coûts",
+   "title_initial": "Risque par transaction et taille de position",
+   "objective_initial": "Calculer une taille de position à partir d'un risque fixé.",
+   "duration_hours_initial": 3.0,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 0 et 10",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Kahneman et Tversky (1979) ; Barber et Odean (2000) ; avertissements publics de la NFA et de la CFTC sur le levier ; mesures de l'ESMA sur les produits à effet de levier pour particuliers.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L11.02",
+   "module": 11,
+   "chapter": "11.1",
+   "chapter_title": "Dimensionnement et coûts",
+   "title_initial": "Ratio gain sur risque, espérance, taux de réussite",
+   "objective_initial": "Relier ces trois grandeurs et calculer une espérance.",
+   "duration_hours_initial": 3.0,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 0 et 10",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Kahneman et Tversky (1979) ; Barber et Odean (2000) ; avertissements publics de la NFA et de la CFTC sur le levier ; mesures de l'ESMA sur les produits à effet de levier pour particuliers.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L11.03",
+   "module": 11,
+   "chapter": "11.1",
+   "chapter_title": "Dimensionnement et coûts",
+   "title_initial": "Baisse maximale, risque de ruine, séries perdantes",
+   "objective_initial": "Simuler des séquences et mesurer le risque de ruine.",
+   "duration_hours_initial": 3.5,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 0 et 10",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Kahneman et Tversky (1979) ; Barber et Odean (2000) ; avertissements publics de la NFA et de la CFTC sur le levier ; mesures de l'ESMA sur les produits à effet de levier pour particuliers.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L11.04",
+   "module": 11,
+   "chapter": "11.1",
+   "chapter_title": "Dimensionnement et coûts",
+   "title_initial": "Levier, marge et coûts",
+   "objective_initial": "Calculer l'effet du levier et des coûts (écart, swap, glissement).",
+   "duration_hours_initial": 3.0,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 0 et 10",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Kahneman et Tversky (1979) ; Barber et Odean (2000) ; avertissements publics de la NFA et de la CFTC sur le levier ; mesures de l'ESMA sur les produits à effet de levier pour particuliers.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L11.05",
+   "module": 11,
+   "chapter": "11.2",
+   "chapter_title": "Événements et comportement",
+   "title_initial": "Le risque d'événement",
+   "objective_initial": "Évaluer le risque autour des publications et des décisions de banque centrale.",
+   "duration_hours_initial": 3.0,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 0 et 10",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Kahneman et Tversky (1979) ; Barber et Odean (2000) ; avertissements publics de la NFA et de la CFTC sur le levier ; mesures de l'ESMA sur les produits à effet de levier pour particuliers.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L11.06",
+   "module": 11,
+   "chapter": "11.2",
+   "chapter_title": "Événements et comportement",
+   "title_initial": "Biais cognitifs",
+   "objective_initial": "Reconnaître les principaux biais de décision et leurs remèdes.",
+   "duration_hours_initial": 2.5,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 0 et 10",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Kahneman et Tversky (1979) ; Barber et Odean (2000) ; avertissements publics de la NFA et de la CFTC sur le levier ; mesures de l'ESMA sur les produits à effet de levier pour particuliers.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L11.07",
+   "module": 11,
+   "chapter": "11.2",
+   "chapter_title": "Événements et comportement",
+   "title_initial": "Plan de trading et journal",
+   "objective_initial": "Rédiger un plan écrit et tenir un journal exploitable.",
+   "duration_hours_initial": 2.5,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 0 et 10",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Kahneman et Tversky (1979) ; Barber et Odean (2000) ; avertissements publics de la NFA et de la CFTC sur le levier ; mesures de l'ESMA sur les produits à effet de levier pour particuliers.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L11.08",
+   "module": 11,
+   "chapter": "11.2",
+   "chapter_title": "Événements et comportement",
+   "title_initial": "Qualité de l'analyse contre résultat",
+   "objective_initial": "Séparer la qualité du processus de l'issue d'une transaction.",
+   "duration_hours_initial": 2.5,
+   "level": "B à C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 0 et 10",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Kahneman et Tversky (1979) ; Barber et Odean (2000) ; avertissements publics de la NFA et de la CFTC sur le levier ; mesures de l'ESMA sur les produits à effet de levier pour particuliers.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L12.01",
+   "module": 12,
+   "chapter": "12.1",
+   "chapter_title": "Lire",
+   "title_initial": "Anatomie d'une note de recherche",
+   "objective_initial": "Repérer thèse, preuves, hypothèses et risques dans une note.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 10",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FEDS de la Federal Reserve ; documents de travail de la BCE et de la BIS ; NBER ; documents de travail du FMI ; FRED pour la consultation (jamais pour le stockage).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L12.02",
+   "module": 12,
+   "chapter": "12.1",
+   "chapter_title": "Lire",
+   "title_initial": "Sources de données et hygiène analytique",
+   "objective_initial": "Choisir, documenter et versionner ses sources.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 10",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FEDS de la Federal Reserve ; documents de travail de la BCE et de la BIS ; NBER ; documents de travail du FMI ; FRED pour la consultation (jamais pour le stockage).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L12.03",
+   "module": 12,
+   "chapter": "12.1",
+   "chapter_title": "Lire",
+   "title_initial": "Lire de façon critique",
+   "objective_initial": "Évaluer la solidité d'un argument et détecter les failles.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 10",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FEDS de la Federal Reserve ; documents de travail de la BCE et de la BIS ; NBER ; documents de travail du FMI ; FRED pour la consultation (jamais pour le stockage).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L12.04",
+   "module": 12,
+   "chapter": "12.2",
+   "chapter_title": "Écrire et communiquer",
+   "title_initial": "Rédiger une note macro hebdomadaire",
+   "objective_initial": "Produire une note complète, datée et sourcée.",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 10",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FEDS de la Federal Reserve ; documents de travail de la BCE et de la BIS ; NBER ; documents de travail du FMI ; FRED pour la consultation (jamais pour le stockage).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L12.05",
+   "module": 12,
+   "chapter": "12.2",
+   "chapter_title": "Écrire et communiquer",
+   "title_initial": "Visualiser et communiquer une thèse",
+   "objective_initial": "Choisir graphiques et formulations qui ne trompent pas.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 10",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FEDS de la Federal Reserve ; documents de travail de la BCE et de la BIS ; NBER ; documents de travail du FMI ; FRED pour la consultation (jamais pour le stockage).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L12.06",
+   "module": 12,
+   "chapter": "12.2",
+   "chapter_title": "Écrire et communiquer",
+   "title_initial": "Atelier : relecture critique de sa propre note",
+   "objective_initial": "Réviser une note selon une grille de relecture.",
+   "duration_hours_initial": 3.5,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "module 10",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FEDS de la Federal Reserve ; documents de travail de la BCE et de la BIS ; NBER ; documents de travail du FMI ; FRED pour la consultation (jamais pour le stockage).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L13.01",
+   "module": 13,
+   "chapter": "13.1",
+   "chapter_title": "Cadre",
+   "title_initial": "Règles du simulateur et protocole",
+   "objective_initial": "Appliquer les règles de risque, de journal et d'honnêteté de la salle.",
+   "duration_hours_initial": 2.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 10 et 11",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "données officielles historiques des modules précédents ; sources de prix historiques à valider en phase 8 (disponibilité et licence à vérifier avant tout engagement).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L13.02",
+   "module": 13,
+   "chapter": "13.1",
+   "chapter_title": "Cadre",
+   "title_initial": "Le briefing du matin",
+   "objective_initial": "Préparer sa journée : calendrier, attentes, scénarios, risques.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 10 et 11",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "données officielles historiques des modules précédents ; sources de prix historiques à valider en phase 8 (disponibilité et licence à vérifier avant tout engagement).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L13.03",
+   "module": 13,
+   "chapter": "13.2",
+   "chapter_title": "Simulations",
+   "title_initial": "Simulation d'une publication sur l'emploi",
+   "objective_initial": "Agir sur un rejeu historique documenté, plan écrit avant l'événement.",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 10 et 11",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "données officielles historiques des modules précédents ; sources de prix historiques à valider en phase 8 (disponibilité et licence à vérifier avant tout engagement).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L13.04",
+   "module": 13,
+   "chapter": "13.2",
+   "chapter_title": "Simulations",
+   "title_initial": "Simulation CPI et réunion de banque centrale",
+   "objective_initial": "Même protocole sur une inflation et une décision de politique.",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 10 et 11",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "données officielles historiques des modules précédents ; sources de prix historiques à valider en phase 8 (disponibilité et licence à vérifier avant tout engagement).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L13.05",
+   "module": 13,
+   "chapter": "13.2",
+   "chapter_title": "Simulations",
+   "title_initial": "Simulation d'un scénario géopolitique",
+   "objective_initial": "Réagir à un choc (cas historique ou SIMULATION déclarée).",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 10 et 11",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "données officielles historiques des modules précédents ; sources de prix historiques à valider en phase 8 (disponibilité et licence à vérifier avant tout engagement).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L13.06",
+   "module": 13,
+   "chapter": "13.3",
+   "chapter_title": "Bilan",
+   "title_initial": "Bilan de période et attribution",
+   "objective_initial": "Mesurer résultats et décisions, et en attribuer les causes.",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 10 et 11",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "données officielles historiques des modules précédents ; sources de prix historiques à valider en phase 8 (disponibilité et licence à vérifier avant tout engagement).",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L14.01",
+   "module": 14,
+   "chapter": "14.1",
+   "chapter_title": "Statistiques et séries",
+   "title_initial": "Statistiques descriptives et rendements",
+   "objective_initial": "Décrire une distribution de rendements et ses queues épaisses.",
+   "duration_hours_initial": 3.5,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 3 et 11 (L0.10 indispensable)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Campbell, Lo et MacKinlay (1997) ; MacKinlay (1997) ; Hamilton (1994) ; Harvey, Liu et Zhu (2016) ; Bailey et López de Prado sur la probabilité de surapprentissage d'un backtest ; données officielles des modules 1 à 7.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L14.02",
+   "module": 14,
+   "chapter": "14.1",
+   "chapter_title": "Statistiques et séries",
+   "title_initial": "Corrélation et régression simple",
+   "objective_initial": "Estimer, interpréter et reconnaître les pièges.",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 3 et 11 (L0.10 indispensable)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Campbell, Lo et MacKinlay (1997) ; MacKinlay (1997) ; Hamilton (1994) ; Harvey, Liu et Zhu (2016) ; Bailey et López de Prado sur la probabilité de surapprentissage d'un backtest ; données officielles des modules 1 à 7.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L14.03",
+   "module": 14,
+   "chapter": "14.1",
+   "chapter_title": "Statistiques et séries",
+   "title_initial": "Séries temporelles",
+   "objective_initial": "Distinguer tendance, stationnarité et fausse relation.",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 3 et 11 (L0.10 indispensable)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Campbell, Lo et MacKinlay (1997) ; MacKinlay (1997) ; Hamilton (1994) ; Harvey, Liu et Zhu (2016) ; Bailey et López de Prado sur la probabilité de surapprentissage d'un backtest ; données officielles des modules 1 à 7.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L14.04",
+   "module": 14,
+   "chapter": "14.2",
+   "chapter_title": "Études d'événements et biais",
+   "title_initial": "L'étude d'événements",
+   "objective_initial": "Mesurer la réaction à un événement avec une fenêtre et un échantillon propres.",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 3 et 11 (L0.10 indispensable)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Campbell, Lo et MacKinlay (1997) ; MacKinlay (1997) ; Hamilton (1994) ; Harvey, Liu et Zhu (2016) ; Bailey et López de Prado sur la probabilité de surapprentissage d'un backtest ; données officielles des modules 1 à 7.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L14.05",
+   "module": 14,
+   "chapter": "14.2",
+   "chapter_title": "Études d'événements et biais",
+   "title_initial": "Les biais",
+   "objective_initial": "Reconnaître surapprentissage, regard dans le futur, biais de survie et fouille de données.",
+   "duration_hours_initial": 3.5,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 3 et 11 (L0.10 indispensable)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Campbell, Lo et MacKinlay (1997) ; MacKinlay (1997) ; Hamilton (1994) ; Harvey, Liu et Zhu (2016) ; Bailey et López de Prado sur la probabilité de surapprentissage d'un backtest ; données officielles des modules 1 à 7.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L14.06",
+   "module": 14,
+   "chapter": "14.3",
+   "chapter_title": "Backtest et robustesse",
+   "title_initial": "Un backtest honnête",
+   "objective_initial": "Concevoir un test avec règles fixées avant les données et coûts inclus.",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 3 et 11 (L0.10 indispensable)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Campbell, Lo et MacKinlay (1997) ; MacKinlay (1997) ; Hamilton (1994) ; Harvey, Liu et Zhu (2016) ; Bailey et López de Prado sur la probabilité de surapprentissage d'un backtest ; données officielles des modules 1 à 7.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L14.07",
+   "module": 14,
+   "chapter": "14.3",
+   "chapter_title": "Backtest et robustesse",
+   "title_initial": "Hors échantillon et robustesse",
+   "objective_initial": "Valider une règle sur des données non utilisées pour la construire.",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 3 et 11 (L0.10 indispensable)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Campbell, Lo et MacKinlay (1997) ; MacKinlay (1997) ; Hamilton (1994) ; Harvey, Liu et Zhu (2016) ; Bailey et López de Prado sur la probabilité de surapprentissage d'un backtest ; données officielles des modules 1 à 7.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L14.08",
+   "module": 14,
+   "chapter": "14.3",
+   "chapter_title": "Backtest et robustesse",
+   "title_initial": "Projet : valider ou réfuter une hypothèse",
+   "objective_initial": "Conduire un test complet et en rendre compte.",
+   "duration_hours_initial": 5.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "modules 3 et 11 (L0.10 indispensable)",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "Campbell, Lo et MacKinlay (1997) ; MacKinlay (1997) ; Hamilton (1994) ; Harvey, Liu et Zhu (2016) ; Bailey et López de Prado sur la probabilité de surapprentissage d'un backtest ; données officielles des modules 1 à 7.",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L15.01",
+   "module": 15,
+   "chapter": "à définir",
+   "chapter_title": "à définir",
+   "title_initial": "Processus de recherche reproductible",
+   "objective_initial": "Cadre unique de travail (question, données, hypothèses, test, conclusion), journal de recherche versionné",
+   "duration_hours_initial": 3.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "M10, M12",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir",
+    "note": "liens « s'appuie sur » au niveau des modules ; numéros de leçons à ajouter quand ces modules seront rédigés"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FMI ; BIS ; CFTC ; EIA ; World Gold Council ; banques centrales ; articles académiques sélectionnés et vérifiés (famille de l'ancienne version, à préciser)",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L15.02",
+   "module": 15,
+   "chapter": "à définir",
+   "chapter_title": "à définir",
+   "title_initial": "Anticipations de taux avancées",
+   "objective_initial": "Lecture croisée des prix de marché et des communications ; ne réexplique pas le fonctionnement des banques centrales",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "M2, M6",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir",
+    "note": "liens « s'appuie sur » au niveau des modules ; numéros de leçons à ajouter quand ces modules seront rédigés"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FMI ; BIS ; CFTC ; EIA ; World Gold Council ; banques centrales ; articles académiques sélectionnés et vérifiés (famille de l'ancienne version, à préciser)",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L15.03",
+   "module": 15,
+   "chapter": "à définir",
+   "chapter_title": "à définir",
+   "title_initial": "Décisions contre anticipations",
+   "objective_initial": "Décomposer l'écart entre décision et attente, cas où le marché a eu tort ou raison",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "M2, M3, M6",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir",
+    "note": "liens « s'appuie sur » au niveau des modules ; numéros de leçons à ajouter quand ces modules seront rédigés"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FMI ; BIS ; CFTC ; EIA ; World Gold Council ; banques centrales ; articles académiques sélectionnés et vérifiés (famille de l'ancienne version, à préciser)",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L15.04",
+   "module": 15,
+   "chapter": "à définir",
+   "chapter_title": "à définir",
+   "title_initial": "Communication des banques centrales",
+   "objective_initial": "Comparer des textes sur plusieurs réunions et mesurer un changement de ton, sans refaire le cours sur les mandats",
+   "duration_hours_initial": 3.5,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "M2",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir",
+    "note": "liens « s'appuie sur » au niveau des modules ; numéros de leçons à ajouter quand ces modules seront rédigés"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FMI ; BIS ; CFTC ; EIA ; World Gold Council ; banques centrales ; articles académiques sélectionnés et vérifiés (famille de l'ancienne version, à préciser)",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L15.05",
+   "module": 15,
+   "chapter": "à définir",
+   "chapter_title": "à définir",
+   "title_initial": "Taux réels, inflation attendue, prime de terme",
+   "objective_initial": "Décomposer un taux long en composantes et discuter les limites de chaque mesure",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "M1, M2, M5",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir",
+    "note": "liens « s'appuie sur » au niveau des modules ; numéros de leçons à ajouter quand ces modules seront rédigés"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FMI ; BIS ; CFTC ; EIA ; World Gold Council ; banques centrales ; articles académiques sélectionnés et vérifiés (famille de l'ancienne version, à préciser)",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L15.06",
+   "module": 15,
+   "chapter": "à définir",
+   "chapter_title": "à définir",
+   "title_initial": "Le dollar : taux réels, différentiels, flux",
+   "objective_initial": "Hiérarchiser des facteurs en concurrence pour le dollar",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "M4, M7, M9",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir",
+    "note": "liens « s'appuie sur » au niveau des modules ; numéros de leçons à ajouter quand ces modules seront rédigés"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FMI ; BIS ; CFTC ; EIA ; World Gold Council ; banques centrales ; articles académiques sélectionnés et vérifiés (famille de l'ancienne version, à préciser)",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L15.07",
+   "module": 15,
+   "chapter": "à définir",
+   "chapter_title": "à définir",
+   "title_initial": "De la macro au Forex selon le régime",
+   "objective_initial": "Montrer que la même donnée n'a pas le même effet selon le contexte (inflation, croissance, aversion au risque)",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "M4, M9",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir",
+    "note": "liens « s'appuie sur » au niveau des modules ; numéros de leçons à ajouter quand ces modules seront rédigés"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FMI ; BIS ; CFTC ; EIA ; World Gold Council ; banques centrales ; articles académiques sélectionnés et vérifiés (famille de l'ancienne version, à préciser)",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L15.08",
+   "module": 15,
+   "chapter": "à définir",
+   "chapter_title": "à définir",
+   "title_initial": "De la macro à l'or : quand la relation tient ou se rompt",
+   "objective_initial": "Tester l'hypothèse taux réels–or sur des périodes et en lister les ruptures, sans refaire la leçon de base du module 5",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "M5, M9",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir",
+    "note": "liens « s'appuie sur » au niveau des modules ; numéros de leçons à ajouter quand ces modules seront rédigés"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FMI ; BIS ; CFTC ; EIA ; World Gold Council ; banques centrales ; articles académiques sélectionnés et vérifiés (famille de l'ancienne version, à préciser)",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L15.09",
+   "module": 15,
+   "chapter": "à définir",
+   "chapter_title": "à définir",
+   "title_initial": "Scénarios haussiers et baissiers chiffrés",
+   "objective_initial": "Construire des scénarios avec probabilités indicatives et conditions de bascule ; scénarios fictifs signalés SIMULATION",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "M6, M10",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir",
+    "note": "liens « s'appuie sur » au niveau des modules ; numéros de leçons à ajouter quand ces modules seront rédigés"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FMI ; BIS ; CFTC ; EIA ; World Gold Council ; banques centrales ; articles académiques sélectionnés et vérifiés (famille de l'ancienne version, à préciser)",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L15.10",
+   "module": 15,
+   "chapter": "à définir",
+   "chapter_title": "à définir",
+   "title_initial": "Construire une thèse",
+   "objective_initial": "Hypothèses, catalyseurs, risques et invalidation écrits d'avance",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "M10, M11",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir",
+    "note": "liens « s'appuie sur » au niveau des modules ; numéros de leçons à ajouter quand ces modules seront rédigés"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FMI ; BIS ; CFTC ; EIA ; World Gold Council ; banques centrales ; articles académiques sélectionnés et vérifiés (famille de l'ancienne version, à préciser)",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L15.11",
+   "module": 15,
+   "chapter": "à définir",
+   "chapter_title": "à définir",
+   "title_initial": "Note de recherche de niveau professionnel",
+   "objective_initial": "Rédaction, sourcing et distinction faits, estimations et interprétations ; réutilise le gabarit du module 12",
+   "duration_hours_initial": 4.0,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "M12",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir",
+    "note": "liens « s'appuie sur » au niveau des modules ; numéros de leçons à ajouter quand ces modules seront rédigés"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FMI ; BIS ; CFTC ; EIA ; World Gold Council ; banques centrales ; articles académiques sélectionnés et vérifiés (famille de l'ancienne version, à préciser)",
+   "archive": false,
+   "pilot": false
+  },
+  {
+   "id": "L15.12",
+   "module": 15,
+   "chapter": "à définir",
+   "chapter_title": "à définir",
+   "title_initial": "Atelier de relecture",
+   "objective_initial": "Relire et critiquer la note d'un autre ou la sienne selon une grille",
+   "duration_hours_initial": 3.5,
+   "level": "C",
+   "mandatory": true,
+   "status_initial": "Planifiée",
+   "prerequisites": {
+    "module_level": "M12",
+    "lesson_level_initial": [],
+    "lesson_level_proposed": "à définir",
+    "note": "liens « s'appuie sur » au niveau des modules ; numéros de leçons à ajouter quand ces modules seront rédigés"
+   },
+   "objectives_detailed": "à définir",
+   "key_concepts": "à définir",
+   "historical_case": "à définir",
+   "sources_planned": "FMI ; BIS ; CFTC ; EIA ; World Gold Council ; banques centrales ; articles académiques sélectionnés et vérifiés (famille de l'ancienne version, à préciser)",
+   "archive": false,
+   "pilot": false
+  }
+ ]
+}

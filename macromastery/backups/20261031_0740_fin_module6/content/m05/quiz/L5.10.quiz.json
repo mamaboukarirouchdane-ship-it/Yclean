@@ -1,0 +1,233 @@
+{
+  "lessonId": "L5.10",
+  "title": "Quiz — Les grands cycles de l'or",
+  "passThreshold": 0.8,
+  "note": "Seuil : 7 bonnes réponses sur 8.",
+  "questions": [
+    {
+      "id": "L5.10-Q1",
+      "type": "mcq",
+      "prompt": "Quelle est la définition d'un marché baissier de l'or dans l'étude du WGC de 2025 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un prix sous 1 000 $"
+        },
+        {
+          "id": "b",
+          "text": "Un recul de 10 % en une séance"
+        },
+        {
+          "id": "c",
+          "text": "Un recul de plus de 20 % sur le prix de fin de mois du fixing de l'après-midi de la LBMA"
+        },
+        {
+          "id": "d",
+          "text": "Une baisse de plus de 50 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La règle est chiffrée (plus de 20 %) et porte sur des prix de fin de mois, non sur des plus hauts de séance.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L5.10-Q2",
+      "type": "mcq",
+      "prompt": "Pic de 667 $ (septembre 1980) et creux de 318 $ (juin 1982) : baisse ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ −52 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ −32 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ −48 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ −20 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "318 ÷ 667 − 1 = −52,3 % : pic de fin de mois contre creux de fin de mois.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.10-Q3",
+      "type": "mcq",
+      "prompt": "Durées des cinq marchés baissiers : 21, 21, 25, 141, 52 mois. Que montre la dispersion ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que tous durent 21 mois"
+        },
+        {
+          "id": "b",
+          "text": "Un cycle régulier de 52 mois"
+        },
+        {
+          "id": "c",
+          "text": "Un cycle de 8 ans"
+        },
+        {
+          "id": "d",
+          "text": "Aucune régularité de durée n'est démontrée : le rapport max/min est de l'ordre de 6,7"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Moyenne 52, médiane 25 : forte dispersion sur cinq observations.",
+      "tags": [
+        "duree"
+      ]
+    },
+    {
+      "id": "L5.10-Q4",
+      "type": "mcq",
+      "prompt": "Pourquoi 850 $ (janvier 1980) et 667 $ (septembre 1980) ne sont-ils pas contradictoires ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'un est faux"
+        },
+        {
+          "id": "b",
+          "text": "L'un est un record de séance, l'autre un pic de fin de mois du fixing de Londres"
+        },
+        {
+          "id": "c",
+          "text": "L'un est réel, l'autre nominal"
+        },
+        {
+          "id": "d",
+          "text": "Ce sont deux métaux"
+        }
+      ],
+      "correct": "b",
+      "explanation": "850 ÷ 667 − 1 = 27,4 % : la mesure change le niveau.",
+      "tags": [
+        "mesure"
+      ]
+    },
+    {
+      "id": "L5.10-Q5",
+      "type": "mcq",
+      "prompt": "Quels facteurs reviennent dans 4 des 5 épisodes baissiers cités par l'étude ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hausse de la demande de bijoux"
+        },
+        {
+          "id": "b",
+          "text": "Ventes des banques centrales"
+        },
+        {
+          "id": "c",
+          "text": "Sorties d'ETF"
+        },
+        {
+          "id": "d",
+          "text": "Taux réels en hausse et dollar plus fort"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Les ventes officielles (1989-1999) et les sorties d'ETF (2013-2015) ne concernent qu'un épisode chacun.",
+      "tags": [
+        "causes"
+      ]
+    },
+    {
+      "id": "L5.10-Q6",
+      "type": "mcq",
+      "prompt": "Record de séance 5 595 $ et prix de 4 060 $ : peut-on dire qu'un marché baissier au sens du WGC a eu lieu en 2026 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Non, la baisse est inférieure à 20 %"
+        },
+        {
+          "id": "b",
+          "text": "Oui, c'est démontré"
+        },
+        {
+          "id": "c",
+          "text": "Non démontrable : la règle porte sur des prix de fin de mois qui n'ont pas été lus"
+        },
+        {
+          "id": "d",
+          "text": "Oui, car 4 060 est sous 5 000"
+        }
+      ],
+      "correct": "c",
+      "explanation": "−27,4 % en séance dépasse 20 %, mais la définition exige des prix de fin de mois du fixing de Londres.",
+      "tags": [
+        "2026"
+      ]
+    },
+    {
+      "id": "L5.10-Q7",
+      "type": "mcq",
+      "prompt": "Ventes officielles de 3 554 t en 11 ans ; en 2025, achats officiels de 863,3 t. Rapport annuel approximatif ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 2,7 fois"
+        },
+        {
+          "id": "b",
+          "text": "≈ 0,27 fois"
+        },
+        {
+          "id": "c",
+          "text": "≈ 27 fois"
+        },
+        {
+          "id": "d",
+          "text": "≈ 1 fois"
+        }
+      ],
+      "correct": "a",
+      "explanation": "3 554 ÷ 11 ≈ 323 t/an ; 863,3 ÷ 323 ≈ 2,7 ; flux de natures différentes.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.10-Q8",
+      "type": "mcq",
+      "prompt": "Un vendeur de métaux affirme que 850 $ de 1980 valent ≈ 3 200 $ aujourd'hui. Que peut-on en conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que l'or est cher en termes réels"
+        },
+        {
+          "id": "b",
+          "text": "Rien d'établi : indice, date et méthode ne sont pas donnés"
+        },
+        {
+          "id": "c",
+          "text": "Que l'inflation a été de 376 % exactement"
+        },
+        {
+          "id": "d",
+          "text": "Que l'or est bon marché"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le facteur implicite (3,76) n'est pas vérifié ; un indice des prix manque.",
+      "tags": [
+        "reel"
+      ]
+    }
+  ],
+  "revision": 1
+}

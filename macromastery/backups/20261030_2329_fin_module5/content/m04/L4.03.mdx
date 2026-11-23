@@ -1,0 +1,227 @@
+---
+id: L4.03
+module: 4
+order: 3
+title: "Les taux réels : ex post, ex ante, TIPS et comparaison entre pays"
+title_initial: "Taux réels"
+level: "intermédiaire à avancé"
+duration_hours: 3
+prerequisites: ["L1.04", "L3.06", "L4.01", "L4.02"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L4.03.quiz.json"
+sources: ["S-TWT-01", "S-CFW-01", "S-EUS-01", "S-BLS-02", "S-TRN-01", "S-YHF-01"]
+---
+
+# L4.03 — Les taux réels : ex post, ex ante, TIPS et comparaison entre pays
+
+> **Convention de lecture.** **[Fait]** = énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. calculer un **taux réel exact** avec la relation de Fisher et l'approximation ;
+2. distinguer **taux réel ex post** (inflation observée) et **ex ante** (inflation attendue) ;
+3. lire un **rendement réel des obligations indexées** (TIPS) et en déduire un **point mort d'inflation** (*breakeven*) ;
+4. comparer des taux réels **entre pays** et nommer les pièges (dates, indices, horizons) ;
+5. rapprocher taux réels, **dollar** et **or** sans conclure à une causalité ;
+6. identifier les **limites** de chaque mesure.
+
+## 2. Prérequis
+
+- Inflation et taux nominaux (L1.04) ; CPI et PCE (L3.06, L3.07) ; différentiels (L4.02).
+
+## 3. Explication intuitive
+
+Un taux nominal de 5 % semble généreux. Mais si les prix montent de 4 %, le pouvoir d'achat gagné n'est que d'environ 1 %. Le **taux réel** retire l'inflation : c'est lui qui mesure la rémunération réelle de l'épargne et le coût réel de l'emprunt. Deux questions se posent : quelle inflation retirer ? **Celle qu'on vient d'observer** (ex post, facile à mesurer, tournée vers le passé) ou **celle qu'on attend** (ex ante, ce qui compte pour une décision mais qu'on ne voit pas directement) ? Les obligations indexées sur l'inflation fournissent une mesure de marché du taux réel ex ante. Pour le change et pour l'or, ce sont les taux **réels** et non les taux nominaux qui sont au centre de beaucoup d'hypothèses, mais ces hypothèses sont **à tester**, jamais acquises.
+
+## 4. Développement technique
+
+### 4.1 La relation de Fisher
+
+**[Définition]** (convention de cours) : (1 + i) = (1 + r) × (1 + π), d'où **r = (1 + i) ÷ (1 + π) − 1**. L'approximation **r ≈ i − π** est utilisable pour de petits taux ; l'écart augmente avec l'inflation.
+
+**[Calcul de l'auteur]** i = 4,96 % ; π = 3,7 % : approximation 4,96 − 3,70 = **1,26** ; exact : 1,0496 ÷ 1,037 − 1 = **1,215 %**.
+
+### 4.2 Taux réel ex post : avec l'inflation observée
+
+**[Fait]** (S-BLS-02, CPI de septembre 2026 : +3,7 % sur 12 mois ; S-CFW-01, article du 22/10/2026 reprenant des données du Trésor américain : rendement nominal à 10 ans de **4,96 %**, source secondaire) :
+
+**[Calcul de l'auteur]** taux réel ex post du 10 ans américain : 1,0496 ÷ 1,037 − 1 = **+1,22 %**.
+
+**[Fait]** (S-TRN-01, 25/09/2026, secondaire : Bund à 10 ans **3,57 %** le 23/09 ; S-EUS-01 : IPCH de septembre **3,8 %**, S-EUS-01 est publié le 02/10 en estimation rapide) :
+
+**[Calcul de l'auteur]** taux réel ex post du Bund : 1,0357 ÷ 1,038 − 1 = **−0,22 %** (approximation : 3,57 − 3,8 = −0,23). **Attention** : le rendement est du 23/09 et l'inflation de septembre n'était pas publiée à cette date ; la comparaison **mélange des dates**.
+
+**[Interprétation]** Avec l'inflation observée, le taux réel du 10 ans américain est **positif** (+1,2 %) et celui du Bund **légèrement négatif** : une différence d'environ **1,4 point** en faveur des États-Unis, mais calculée avec des inflations de **définitions différentes** (CPI contre IPCH), des dates différentes et des sources secondaires. À manier comme un ordre de grandeur.
+
+### 4.3 Taux réel ex ante : TIPS et point mort d'inflation
+
+**[Fait]** (S-TWT-01, article de TIPSwatch du 17/09/2026, secondaire citant les résultats du Trésor) : réouverture d'un TIPS à 10 ans de 19 milliards de dollars ; **rendement réel 2,653 %**, le plus élevé pour cette échéance depuis octobre 2008 (2,85 %) ; coupon 2,375 % ; **rendement nominal du 10 ans 4,95 %** à la clôture de l'adjudication ; point mort d'inflation **2,30 %** ; ratio de couverture 2,24 (le plus bas en un an) ; comparaisons : +22 points de base par rapport à l'adjudication du 23/07 (2,438 %) et +75 points de base par rapport à celle du 19/03 (1,896 %) ; le FOMC a relevé ses taux le 16/09.
+
+**[Fait]** (S-CFW-01, 22/10/2026, source secondaire citant les courbes du Trésor) :
+
+| Échéance | Rendement réel (TIPS) | Rendement nominal (par) | Point mort (nominal − réel) |
+|---|---|---|---|
+| 5 ans | 2,33 % | 4,78 % | 2,45 % |
+| 10 ans | 2,64 % | 4,96 % | 2,32 % |
+| 30 ans | 3,05 % | 5,29 % | 2,24 % |
+
+**[Calcul de l'auteur]**
+- point mort simple : 4,96 − 2,64 = **2,32** ✓ ; 4,95 − 2,653 = **2,297 ≈ 2,30** ✓ ; point mort **exact** à 10 ans : 1,0496 ÷ 1,0264 − 1 = **2,26 %** ;
+- hausse du rendement réel à 10 ans entre mars et septembre : 2,653 − 1,896 = **+0,757 point** ; entre juillet et septembre : **+0,215** ;
+- variation du réel à 10 ans entre le 17/09 (2,653) et le 22/10 (2,64) : **−0,013 point**, soit −1,3 point de base ;
+- pente de la courbe réelle : 3,05 − 2,33 = **+0,72 point** (30 ans moins 5 ans) ;
+- écart entre taux réel ex ante (2,64 %) et ex post (1,22 %) : **1,42 point**, car l'inflation observée (3,7 %) est bien supérieure au point mort (2,32 %).
+
+**[Interprétation]** Le **point mort** n'est pas une prévision de l'inflation : il mélange l'inflation attendue, une prime de risque d'inflation et des effets de liquidité (L4.02 pour la logique ; module 6 pour les anticipations). Il valait **2,32 %** à 10 ans le 22/10, alors que le CPI observé était de **3,7 %** : le marché n'anticipe pas la persistance de l'inflation actuelle, ou exige une prime, ou les deux ; **aucune lecture n'est démontrée ici**.
+
+### 4.4 Comparer deux pays
+
+**[Définition]** (convention de cours) : pour comparer deux taux réels, on fixe : (1) la **même échéance** ; (2) la **même méthode** (tous deux ex post ou tous deux ex ante) ; (3) la **même date** ; (4) des **indices comparables** (ou on le signale).
+
+**[Interprétation]** Ici, la comparaison américano-européenne est **asymétrique** : un taux réel ex ante est disponible pour les États-Unis (TIPS) mais **aucun rendement indexé de la zone euro n'a été lu**. Seul l'ex post peut être comparé, avec les réserves de 4.2.
+
+### 4.5 Taux réels, dollar et or : ce que l'on peut dire
+
+**[Fait]** (S-YHF-01, bandeau du 02/10/2026, secondaire) : or à **4 162,30 $** ; (S-TRN-01) : EUR/USD **1,1400** le 25/09 ; (S-ECB-04, L4.01) : **1,1130** le 29/10.
+
+**[Interprétation]**
+- Le rendement réel à 10 ans, à 2,64–2,65 %, est **proche de son plus haut depuis octobre 2008** (S-TWT-01) ; l'or cote autour de 4 162 à 4 214 dollars début octobre (L3.11) : **un rendement réel élevé n'a pas fait disparaître un prix de l'or élevé**. La relation « taux réels plus hauts, or plus bas » est donc **une tendance historique, non une règle**, et son test relève du module 5.
+- Entre le 17/09 et le 22/10, le rendement réel à 10 ans est quasi stable (−1,3 point de base) alors que l'EUR/USD baisse de 2,4 % : **le niveau du taux réel américain n'explique pas à lui seul le mouvement du change** sur cette période.
+
+## 5. Définitions essentielles
+
+- **Taux réel ex post** : taux nominal corrigé de l'inflation observée.
+- **Taux réel ex ante** : taux nominal corrigé de l'inflation attendue.
+- **TIPS** : obligations du Trésor américain indexées sur l'inflation.
+- **Rendement réel** : rendement d'une obligation indexée.
+- **Point mort d'inflation** : rendement nominal moins rendement réel.
+- **Relation de Fisher** : (1 + i) = (1 + r)(1 + π).
+- **Prime de risque d'inflation** : rémunération exigée pour l'incertitude sur l'inflation.
+
+## 6. Exemples chiffrés
+
+**6.1 Fisher.** 1,0496 ÷ 1,037 − 1 = 1,215 %.
+**6.2 Point mort.** 4,96 − 2,64 = 2,32 ; exact : 2,26 %.
+**6.3 Hausse du réel.** 2,653 − 1,896 = +0,757 point.
+**6.4 Comparaison (SIMULATION).** Pays A : nominal 5,0 %, inflation 3,0 % ; pays B : nominal 3,5 %, inflation 1,0 %. Réels exacts : A = 1,050 ÷ 1,030 − 1 = **1,94 %** ; B = 1,035 ÷ 1,010 − 1 = **2,48 %** : le pays B offre un taux réel plus élevé malgré un nominal plus bas.
+
+### 6.5 Cas historique documenté — l'adjudication TIPS du 17 septembre 2026
+
+**[Fait]** (S-TWT-01) : rendement réel 2,653 % (plus haut depuis octobre 2008), point mort 2,30 %, ratio de couverture 2,24 ; le lendemain d'une hausse de la Fed.
+
+**[Calcul de l'auteur]** +75,7 points de base par rapport à mars ; point mort 4,95 − 2,653 = 2,297 ; écart au CPI de 3,7 % : **1,4 point**.
+
+**[Interprétation]** L'épisode montre que le **rendement réel** à long terme a fortement monté en 2026, avec une demande modeste, et que le point mort restait bas par rapport à l'inflation observée. **Limites** : source secondaire (qui cite les résultats du Trésor) ; aucun point mort lu à d'autres dates ; nominal du 10 ans lu à 4,95–4,96 % dans ces sources, mais **5,28 % (2 octobre, bandeau) et 5,304 % (mi-octobre, source secondaire) dans d'autres** : un écart de 30 points de base entre sources que **je n'ai pas pu réconcilier** (instruments, heures ou erreurs) ; le résultat de ce cas dépend de cette cohérence.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Dollar** : un rendement réel américain élevé est cohérent avec un dollar soutenu, **mais** la relation est instable (4.5) et dépend des anticipations.
+- **Différentiel réel** : à calculer avec des instruments identiques ; ici impossible côté euro faute de rendement indexé lu.
+- **Or** : l'or ne rapporte rien ; le rendement réel mesure le coût d'opportunité (module 5) ; **hypothèse à tester**.
+- **Vérification des données** : avant tout calcul, réconcilier les cotations (4.4).
+- **Prudence** : aucun niveau de taux réel ne garantit la direction d'une devise ou de l'or.
+
+## 8. Erreurs courantes
+
+1. Utiliser i − π pour de forts niveaux sans signaler l'approximation.
+2. Confondre ex post et ex ante.
+3. Lire le point mort comme une prévision de l'inflation.
+4. Comparer des rendements et des inflations de dates différentes.
+5. Comparer des CPI et des IPCH comme s'ils étaient identiques.
+6. Oublier que les sources secondaires peuvent diverger.
+7. Conclure d'un niveau de taux réel à un sens de variation.
+
+## 9. Limites de l'interprétation
+
+- Tous les rendements réels viennent de **sources secondaires** ; les pages du Trésor lues ne contenaient pas les données d'octobre.
+- Le rendement nominal du 10 ans diffère de 30 points de base entre sources (4,96 contre 5,28–5,30) : **non réconcilié**.
+- Aucun rendement indexé de la zone euro n'a été lu.
+- Le taux réel ex post du Bund mélange des dates.
+- Le point mort inclut des primes ; il ne prévoit pas l'inflation.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Fisher.** i = 5,0 % ; π = 4,0 %. Taux réel exact et approximatif ?
+
+<details>
+<summary>Correction 1</summary>
+
+Exact : 1,050 ÷ 1,040 − 1 = **0,96 %** ; approximation : 5,0 − 4,0 = **1,00 %**.
+</details>
+
+**Exercice 2 — Point mort.** Nominal 4,96 % ; réel 2,64 %. Point mort simple et exact ?
+
+<details>
+<summary>Correction 2</summary>
+
+Simple : 4,96 − 2,64 = **2,32 %** ; exact : 1,0496 ÷ 1,0264 − 1 = **2,26 %**.
+</details>
+
+**Exercice 3 — Variation du réel.** Rendement réel : 1,896 % (mars), 2,438 % (juillet), 2,653 % (septembre). Variations ?
+
+<details>
+<summary>Correction 3</summary>
+
+Mars → septembre : **+0,757 point** ; juillet → septembre : **+0,215 point** ; mars → juillet : +0,542.
+</details>
+
+**Exercice 4 — Comparaison (SIMULATION).** Pays A : nominal 5,0 %, inflation 3,0 % ; pays B : nominal 3,5 %, inflation 1,0 %. Réels exacts et classement ?
+
+<details>
+<summary>Correction 4</summary>
+
+A : 1,050 ÷ 1,030 − 1 = **1,94 %** ; B : 1,035 ÷ 1,010 − 1 = **2,48 %** ; B offre le taux réel le plus élevé.
+</details>
+
+**Exercice 5 — Ex ante contre ex post.** Taux réel ex ante 2,64 % ; ex post 1,22 %. Écart ? Que signifie-t-il ?
+
+<details>
+<summary>Correction 5</summary>
+
+2,64 − 1,22 = **1,42 point** : l'inflation observée (3,7 %) dépasse nettement le point mort (2,32 %) ; le marché n'anticipe pas, ou exige une prime sur, la persistance de l'inflation actuelle.
+</details>
+
+**Exercice 6 — Critique.** « Le rendement réel est au plus haut depuis 2008 : l'or va nécessairement baisser. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) L'or cotait à plus de 4 100 dollars au même moment. (2) La relation est une tendance historique, non une loi. (3) Un seul indicateur ne résume pas le contexte (risque, dollar, flux). (4) Les rendements réels lus sont de source secondaire. (5) Le test relève du module 5.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L4.03.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Fisher : r = (1 + i) ÷ (1 + π) − 1 ; l'approximation i − π surestime légèrement.
+- Ex post : inflation observée ; ex ante : inflation attendue (TIPS).
+- Le 10 ans américain : réel 2,64 % ; point mort 2,32 % ; réel ex post ≈ 1,22 %.
+- Le rendement réel a monté de 0,757 point entre mars et septembre 2026 ; plus haut depuis 2008.
+- Comparer deux pays exige mêmes dates, échéances et méthodes ; ici, un seul pays a une mesure ex ante.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer un taux réel exact (Exercice 1).
+- [ ] Déduire un point mort (Exercice 2).
+- [ ] Mesurer une variation du taux réel (Exercice 3).
+- [ ] Comparer deux pays correctement (Exercice 4).
+- [ ] Distinguer ex ante et ex post (Exercice 5).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-TWT-01** — TIPSwatch, adjudication du TIPS à 10 ans du 17/09/2026 (secondaire) : https://tipswatch.com/2026/09/17/10-year-tips-reopening-gets-real-yield-of-2-653-highest-in-nearly-18-years/
+- **S-CFW-01** — Crowdfunded Wealth, 22/10/2026 (secondaire, données du Trésor) : https://www.crowdfundedwealth.com/articles/treasury-tips-ladder-rungs-after-tax-fdic-cd-limit-2026
+- **S-EUS-01** — Eurostat, IPCH de septembre 2026 (voir L3.10).
+- **S-BLS-02** — BLS, CPI de septembre 2026.
+- **S-TRN-01** — TradingNews (voir L4.02).
+- **S-YHF-01** — Yahoo Finance (voir L3.11).
+
+**Définitions de cours non rattachées à une source officielle lue :** relation de Fisher, conventions de comparaison. **Points non vérifiés :** rendements réels de source primaire, écart de 30 points de base sur le 10 ans, rendements indexés de la zone euro.

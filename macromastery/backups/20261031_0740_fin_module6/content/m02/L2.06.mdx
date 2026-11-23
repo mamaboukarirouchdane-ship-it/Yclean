@@ -1,0 +1,249 @@
+---
+id: L2.06
+module: 2
+order: 6
+title: "Taux neutre et règle de Taylor : un repère, pas une machine à décider"
+title_initial: "Taux neutre et règle de Taylor"
+level: "intermédiaire à avancé"
+duration_hours: 3.5
+prerequisites: ["L1.03", "L1.07", "L1.08", "L2.03", "L2.05"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L2.06.quiz.json"
+sources: ["S-NYF-03", "S-FED-15", "S-FED-17", "S-FED-18", "S-FED-19", "S-BEA-02", "S-BLS-04", "S-FED-09"]
+---
+
+# L2.06 — Taux neutre et règle de Taylor : un repère, pas une machine à décider
+
+> **Convention de lecture.** **[Fait]** = chiffre ou énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. définir le **taux neutre** r* et expliquer pourquoi il n'est pas observable ;
+2. écrire les règles de **Taylor (1993)**, d'**approche équilibrée** et de **différence première** utilisées par la Fed ;
+3. calculer la prescription d'une règle et en mesurer la **sensibilité** aux hypothèses ;
+4. comparer taux nominal et taux réel au taux neutre sans confondre les deux ;
+5. citer les **limites** d'une règle (données en temps réel, inflation de base, chocs) ;
+6. décrire le débat de Bernanke (2010) sur la règle de Taylor et la bulle immobilière.
+
+## 2. Prérequis
+
+- Inflation, chômage, taux naturel (L1.07, L1.08) ; taux directeurs (L2.03) ; communication et SEP (L2.05).
+
+## 3. Explication intuitive
+
+Pour savoir si la politique monétaire est « serrée » ou « lâche », il faut un point de repère : **le taux qui ne freine ni ne stimule l'économie**, quand l'inflation est à la cible et l'emploi à son niveau soutenable. C'est le taux neutre. Une **règle de Taylor** traduit cette idée en formule : partir du taux neutre, ajouter l'inflation actuelle, puis corriger selon deux écarts : inflation au-dessus de la cible, chômage au-dessus (ou en dessous) de son niveau soutenable.
+
+La règle ne remplace pas la décision. C'est une **boussole** : utile pour comparer des périodes, repérer des écarts et discuter, mais sensible à des chiffres qu'on ne connaît pas avec certitude.
+
+## 4. Développement technique
+
+### 4.1 Le taux neutre r*
+
+**[Fait]** (S-NYF-03, page *r-star* de la Fed de New York, résumé automatique) : les modèles de Laubach-Williams et de Holston-Laubach-Williams définissent r* comme « le taux d'intérêt réel à court terme attendu lorsque l'économie est à pleine puissance », l'inflation étant alors stable. La page ne donne **aucune valeur numérique dans son texte** (les estimations figurent dans des graphiques et tableurs) et précise que ces estimations **ne sont pas des prévisions officielles** de la Fed de New York, du Système ou du FOMC ; elles existent en versions « temps réel » et « actuelles », qui diffèrent à cause des révisions de données.
+
+**[Fait]** (S-FED-15, SEP de septembre 2026) : taux des fonds fédéraux **de long terme** médian = **3,2 %** (3,1 % en juin) ; inflation PCE de long terme = **2,0 %** ; chômage de long terme = **4,2 %**.
+
+**[Calcul de l'auteur]** Taux réel de long terme implicite des médianes : 3,2 − 2,0 = **1,2 %** (juin : 3,1 − 2,0 = 1,1 %). C'est une lecture des opinions de participants, **pas** une estimation de r* publiée par la Fed.
+
+**[Interprétation]** r* dépend de la croissance potentielle, de la démographie, de l'épargne et de la prime de risque ; il change dans le temps. Aucun de ces déterminants n'a été quantifié dans cette leçon.
+
+### 4.2 Les règles utilisées par la Fed
+
+**[Fait]** (S-FED-17, rapport de politique monétaire de juillet 2026, encadré 4, résumé automatique). Notations : R = taux des fonds fédéraux ; π = inflation de base PCE sur quatre trimestres ; π* = 2 % ; u = taux de chômage ; u* = taux de chômage de long terme ; r* = taux neutre réel de long terme.
+
+| Règle | Formule |
+|---|---|
+| Taylor (1993) | R = r* + π + 0,5 (π − π*) + (u* − u) |
+| Approche équilibrée | R = r* + π + 0,5 (π − π*) + 2 (u* − u) |
+| Taylor (1993) ajustée | R = max{R_Taylor − Z, ELB}, Z = déficit cumulé passé lorsque la règle prescrit un taux sous la borne plancher (12,5 pb) |
+| Différence première | R_t = R_(t−1) + 0,5 (π − π*) − (u_t − u_(t−4)) |
+
+Précisions du résumé : l'écart de chômage remplace l'écart de production (loi d'Okun) ; l'inflation de base est utilisée parce qu'elle prédit mieux l'inflation totale à moyen terme ; r* provient d'enquêtes (valeur non donnée) ; la règle en différence première n'utilise pas r*. Le texte indique que les prescriptions du premier trimestre 2026 étaient « un peu au-dessus de la fourchette cible actuelle ».
+
+**[Fait]** (S-FED-19, discours de Bernanke, 3 janvier 2010) : la règle de Taylor d'origine a deux coefficients de **0,5** et un taux réel de long terme d'environ **2 %**.
+
+**[Fait]** (S-FED-18, rapport de juillet 2026, texte complet partiel) : « les considérations pratiques rendent indésirable, pour l'instant, que le FOMC adhère strictement aux prescriptions d'une seule règle » ; les règles « ne peuvent pas capter toutes les considérations » d'une politique appropriée.
+
+### 4.3 Une prescription illustrative, avec ses hypothèses
+
+**[Calcul de l'auteur]** (illustratif, **pas** la prescription de la Fed) :
+
+Hypothèses : chômage u = 4,2 % (septembre 2026, S-BLS-04) ; u* = 4,2 % (SEP) → écart de chômage = **0** ; π = 3,0 % (PCE de base sur 12 mois, août 2026, S-BEA-02) ou 3,4 % (projection du SEP pour le quatrième trimestre 2026, S-FED-15). Avec un écart de chômage nul, les règles de Taylor et d'approche équilibrée donnent la même valeur : R = r* + π + 0,5 (π − 2).
+
+| r* (réel) | π = 3,0 % | π = 3,4 % |
+|---|---|---|
+| 0,5 % | 0,5 + 3,0 + 0,5 = **4,0 %** | 0,5 + 3,4 + 0,7 = **4,6 %** |
+| 1,0 % | **4,5 %** | **5,1 %** |
+| 1,2 % | **4,7 %** | **5,3 %** |
+
+Le milieu de la fourchette actuelle est de **3,875 %** (S-FED-09). Les prescriptions illustratives vont donc de **+0,125 à +1,425 point** au-dessus du taux en vigueur.
+
+**Règle en différence première** : avec R_(t−1) = 3,625 % (milieu de la fourchette 3,50–3,75 %, S-FED-18) et un chômage quasi inchangé sur un an (le rapport de juillet indique 4,2 % « peu changé depuis l'été dernier », donc u_t − u_(t−4) ≈ 0, hypothèse) : R = 3,625 + 0,5 × (3,0 − 2) − 0 = **4,125 %** (π = 3,0) ou 3,625 + 0,5 × 1,4 = **4,325 %** (π = 3,4).
+
+**[Interprétation]** Dans ces exemples, la plupart des prescriptions sont **au-dessus** du taux de 3,875 %, cohérent avec la remarque du rapport de juillet (prescriptions « un peu au-dessus »), avec la hausse de septembre et avec les médianes du SEP (4,1 % fin 2026). **Mais** la plage de résultats (4,0 % à 5,3 %) montre que **r* et l'inflation retenue changent la conclusion de plus d'un point**. Les valeurs d'entrée de la Fed (r* issu d'enquêtes, 4 trimestres de PCE de base) ne sont pas celles-ci.
+
+### 4.4 Nominal contre réel : un piège classique
+
+**[Calcul de l'auteur]**
+- Comparaison **nominale** : taux en vigueur 3,875 % contre taux de long terme médian 3,2 % → écart **+0,675** point ; le taux paraît **au-dessus** du neutre.
+- Comparaison **réelle (ex post)** : 3,875 − 3,0 (PCE de base) = **+0,875** ; 3,875 − 3,4 (PCE total d'août) = **+0,475** ; à comparer à r* ≈ 1,2 % → le taux réel est **en dessous** du taux neutre de **0,325 à 0,725** point.
+
+**[Interprétation]** Les deux comparaisons donnent des signes opposés. Le taux neutre nominal de 3,2 % suppose une inflation de **2 %** ; avec 3,0-3,4 % d'inflation, le taux nominal neutre « équivalent » serait plus élevé. Conclusion prudente : **toujours comparer réel à réel** et préciser l'inflation retenue. Le résultat dépend de r* (non observé) et de l'inflation anticipée (non observée).
+
+### 4.5 Limites d'une règle
+
+**[Interprétation]** (avec référence aux éléments lus)
+1. **r* et u*** sont inconnus et révisés (S-NYF-03).
+2. **Mesure de l'inflation** : PCE ou CPI, total ou de base ; Bernanke note que l'inflation de base PCE de 2003 a d'abord été publiée à environ 1 %, contre environ 2 % pour le CPI de base (S-FED-19).
+3. **Données en temps réel** : l'écart de production est difficile à mesurer en temps réel.
+4. **Inflation courante contre prévision** : la politique agit avec retard, d'où l'intérêt d'une inflation prévue ; Bernanke soutient que les décideurs réagissent moins aux hausses temporaires (énergie).
+5. **Chocs d'offre** : une inflation due à l'énergie (L1.04) n'appelle pas forcément la même réponse qu'une inflation diffuse.
+6. **Borne plancher** et stabilité financière : une règle simple ne les gère pas (d'où la règle ajustée).
+7. **Coefficients** : Bernanke note que certaines études favorisent un coefficient de l'écart de production supérieur à 0,5.
+
+## 5. Définitions essentielles
+
+- **Taux neutre (r*)** : taux d'intérêt réel qui ne stimule ni ne freine l'économie à pleine puissance et à inflation stable.
+- **Règle de Taylor** : formule reliant le taux directeur à l'inflation et à l'écart de ressources.
+- **Approche équilibrée** : règle donnant un poids double à l'écart de chômage.
+- **Règle en différence première** : règle qui modifie le taux précédent selon l'inflation et la variation du chômage.
+- **Écart de chômage** : u* − u ; positif quand le chômage est sous son niveau soutenable.
+- **Borne plancher (ELB)** : niveau minimal de taux (12,5 pb dans l'encadré).
+- **Taux réel ex post** : taux nominal moins inflation observée.
+
+## 6. Exemples chiffrés
+
+**6.1 Taylor d'origine (SIMULATION).** r* = 2, π = 3,0, écart de production = −1 : R = 2 + 3,0 + 0,5 × (3,0 − 2) + 0,5 × (−1) = 2 + 3,0 + 0,5 − 0,5 = **5,0 %**.
+
+**6.2 Approche équilibrée (SIMULATION).** r* = 1, π = 2,5, u* = 4,5, u = 5,0 : R = 1 + 2,5 + 0,25 + 2 × (−0,5) = **2,75 %**.
+
+**6.3 Différence première (SIMULATION).** R_(t−1) = 4,0 ; π = 3,0 ; u_t − u_(t−4) = +0,4 : R = 4,0 + 0,5 − 0,4 = **4,1 %**.
+
+**6.4 Sensibilité.** Avec π = 3,0 % et un écart de chômage nul : passer de r* = 0,5 à r* = 1,2 ajoute **0,7 point** à la prescription.
+
+### 6.5 Cas historique documenté — Bernanke (2010) : la règle de Taylor et la bulle immobilière
+
+**[Fait]** (S-FED-19, discours « Monetary Policy and the Housing Bubble », 3 janvier 2010, résumé automatique) :
+- le taux cible est passé de **6,5 %** (fin 2000) à **1,75 %** (décembre 2001), puis à **1 %** (juin 2003), où il est resté un an ; il remonte à partir de juin 2004 jusqu'à **5,25 %** en juin 2006 ;
+- avec la règle standard (inflation CPI courante, cible de 2 %, écart de production en temps réel), le taux réel observé était en moyenne **environ 200 points de base en dessous** de la prescription sur les cinq années ;
+- avec l'**inflation prévue** (prévisions en temps réel, PCE), la trajectoire prescrite est proche de celle observée ;
+- une simulation de la règle de 1993 pour 2003-2005 donnerait un taux des fonds fédéraux supérieur de **70 points de base** en moyenne ; le taux initial d'un prêt à taux variable aurait été d'environ **0,71 point** plus élevé, soit environ **75 $** de mensualité de plus ;
+- sur 20 pays industrialisés, les différences de politique expliquaient environ **5 %** de la variation de l'appréciation des prix immobiliers, contre environ **31 %** pour la variation du compte courant ;
+- Bernanke conclut que la politique était accommodante mais « pas inappropriée » au regard des objectifs de moyen terme et que la meilleure réponse à une bulle relève de la **régulation** (normes de souscription et gestion du risque).
+
+**[Calcul de l'auteur]** 200 pb = 2,0 points ; écart de 31 − 5 = **26 points de pourcentage** entre les parts de variation expliquées (compte courant et politique).
+
+**[Interprétation]** Le cas montre que **le choix de l'inflation (courante contre prévue) et la mesure des données changent le verdict** : une règle peut indiquer un écart de 2 points ou presque aucun. **Limites** : c'est le point de vue de l'auteur du discours (le président de la Fed de l'époque), non un résultat neutre ; d'autres économistes contestent cette lecture (sources non lues ici) ; le résumé ne donne pas les séries utilisées.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Écart règle-taux** : un écart positif durable entre la prescription et le taux en vigueur est lu par certains comme un biais de resserrement ; ce n'est pas une prévision de décision (le Comité ne suit pas strictement une règle).
+- **Dollar** : le marché réagit à la **trajectoire** anticipée (SEP, minutes, futures) plus qu'à la prescription d'une règle ; les futures de taux ont été cités par le rapport de juillet (environ 4 % attendu fin 2026) : lecture à reprendre au module 6.
+- **Taux réel et or** : un taux réel inférieur au taux neutre peut être lu comme une orientation peu restrictive ; l'effet sur l'or est une hypothèse (module 5).
+- **Comparaisons internationales** : la BCE et d'autres banques n'ont pas été analysées ici ; ne pas appliquer ces coefficients à la zone euro sans source.
+- **Méthode** : produire un petit tableau de sensibilité (r*, inflation, chômage) et ne retenir que les conclusions robustes.
+
+## 8. Erreurs courantes
+
+1. Présenter r* comme une donnée observée.
+2. Comparer un taux nominal à un neutre réel (ou l'inverse).
+3. Utiliser une règle sans préciser l'inflation retenue (totale ou de base, courante ou prévue).
+4. Croire que la Fed suit une règle mécaniquement.
+5. Oublier la sensibilité aux hypothèses.
+6. Appliquer les coefficients américains à une autre économie sans preuve.
+7. Lire une prescription comme une prévision de décision.
+
+## 9. Limites de l'interprétation
+
+- L'encadré 4 du rapport de juillet 2026 est lu par résumé ; les prescriptions numériques et la valeur de r* n'y sont pas données dans le résumé.
+- Les valeurs de r* de la Fed de New York n'ont pas été lues (graphiques/tableurs).
+- Les calculs de la §4.3 sont illustratifs, avec des entrées différentes de celles de la Fed.
+- Le cas de 2010 est un point de vue d'auteur, non un consensus.
+- Aucune prévision de décision ne peut être déduite.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Taylor d'origine (SIMULATION).** r* = 2 ; π = 4,0 ; écart de production = +1. Calcule R avec 0,5 et 0,5.
+
+<details>
+<summary>Correction 1</summary>
+
+R = 2 + 4,0 + 0,5 × (4,0 − 2) + 0,5 × 1 = 2 + 4,0 + 1,0 + 0,5 = **7,5 %**.
+</details>
+
+**Exercice 2 — Approche équilibrée (SIMULATION).** r* = 1,0 ; π = 3,0 ; u* = 4,5 ; u = 4,0. Calcule R.
+
+<details>
+<summary>Correction 2</summary>
+
+Écart de chômage = u* − u = +0,5. R = 1,0 + 3,0 + 0,5 × (3,0 − 2) + 2 × 0,5 = 1,0 + 3,0 + 0,5 + 1,0 = **5,5 %**.
+</details>
+
+**Exercice 3 — Différence première (SIMULATION).** R_(t−1) = 3,5 ; π = 2,6 ; chômage inchangé sur un an. Calcule R.
+
+<details>
+<summary>Correction 3</summary>
+
+R = 3,5 + 0,5 × (2,6 − 2) − 0 = 3,5 + 0,3 = **3,8 %**.
+</details>
+
+**Exercice 4 — Sensibilité.** Reprends le tableau de la §4.3 : (a) prescription avec r* = 0,8 et π = 3,0 ; (b) avec r* = 0,8 et π = 3,4 ; (c) écart entre (a) et (b) ; (d) écart avec le milieu de 3,875.
+
+<details>
+<summary>Correction 4</summary>
+
+(a) 0,8 + 3,0 + 0,5 = **4,3 %**. (b) 0,8 + 3,4 + 0,7 = **4,9 %**. (c) **0,6 point**. (d) 4,3 − 3,875 = **+0,425** ; 4,9 − 3,875 = **+1,025**.
+</details>
+
+**Exercice 5 — Nominal contre réel.** Taux de long terme médian 3,2 % ; inflation de long terme 2,0 % ; taux en vigueur 3,875 % ; PCE de base 3,0 %. (a) Taux neutre réel implicite ? (b) Taux réel ex post ? (c) Écart (b) − (a) ? (d) Pourquoi la comparaison nominale peut-elle être trompeuse ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) 3,2 − 2,0 = **1,2 %**. (b) 3,875 − 3,0 = **0,875 %**. (c) 0,875 − 1,2 = **−0,325 point** : taux réel sous le neutre. (d) Le neutre nominal de 3,2 % suppose 2 % d'inflation ; avec une inflation de 3 %, le neutre nominal équivalent serait d'environ 4,2 % ; la comparaison nominale (+0,675) donne un signe opposé.
+</details>
+
+**Exercice 6 — Critique.** « Les règles de Taylor montrent que la Fed est en retard : elle doit monter à 5,3 %. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) 5,3 % n'est qu'une des prescriptions possibles (r* = 1,2 et π = 3,4) ; avec r* = 0,5 et π = 3,0 on obtient 4,0 %. (2) r* est non observé (S-NYF-03). (3) Le FOMC déclare qu'il ne suit pas strictement une règle. (4) Le choix de l'inflation (courante ou prévue, de base ou totale) change le résultat de plus d'un point. (5) Les prescriptions n'incluent pas les chocs d'offre ni la stabilité financière.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L2.06.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- r* est le taux réel qui ne stimule ni ne freine l'économie à pleine puissance ; non observé, estimé, révisé.
+- Règles de la Fed : Taylor (1993), approche équilibrée (poids 2 sur l'écart de chômage), version ajustée à la borne plancher, différence première.
+- Prescription illustrative 2026 : de 4,0 % à 5,3 % selon r* et l'inflation, contre un taux en vigueur de 3,875 % : la **sensibilité** est la leçon.
+- Comparer réel à réel : taux réel ex post (0,475 à 0,875) sous le neutre implicite de 1,2 %.
+- Bernanke (2010) : le verdict de la règle change selon l'inflation retenue.
+- Le Comité déclare ne pas suivre strictement une règle.
+
+## 13. Critères de maîtrise
+
+- [ ] Définir r* et dire pourquoi il est incertain.
+- [ ] Écrire et appliquer les trois règles principales (Exercices 1 à 3).
+- [ ] Construire un tableau de sensibilité (Exercice 4).
+- [ ] Comparer nominal et réel sans erreur (Exercice 5).
+- [ ] Critiquer une prescription présentée comme certaine (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-NYF-03** — Federal Reserve Bank of New York, *r-star: Natural Rate of Interest* : https://www.newyorkfed.org/research/policy/rstar
+- **S-FED-17** — Federal Reserve, Monetary Policy Report de juillet 2026, partie 2 (encadré 4) : https://www.federalreserve.gov/monetarypolicy/2026-07-mpr-part2.htm
+- **S-FED-18** — Federal Reserve, Monetary Policy Report du 10 juillet 2026 (PDF complet, lu jusqu'à l'encadré 3) : https://www.federalreserve.gov/monetarypolicy/files/20260710_mprfullreport.pdf
+- **S-FED-19** — Ben S. Bernanke, « Monetary Policy and the Housing Bubble », 3 janvier 2010 : https://www.federalreserve.gov/newsevents/speech/bernanke20100103a.htm
+- **S-FED-15**, **S-FED-09**, **S-BEA-02**, **S-BLS-04** — voir L2.05, L2.03, L1.04 et L1.07.
+
+**Définitions de cours non rattachées à une source officielle lue :** signification du taux neutre dans les déterminants, taux réel ex post, sensibilité, exemples fictifs. **Points non vérifiés :** valeur de r* de la Fed de New York, prescriptions numériques de l'encadré 4, lecture de la BCE, critiques du discours de 2010.

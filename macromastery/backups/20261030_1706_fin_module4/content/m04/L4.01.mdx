@@ -1,0 +1,220 @@
+---
+id: L4.01
+module: 4
+order: 1
+title: "La parité des taux d'intérêt : couverte, non couverte et prime à terme"
+title_initial: "Parité des taux d'intérêt"
+level: "intermédiaire à avancé"
+duration_hours: 3
+prerequisites: ["L2.03", "L2.07", "L3.07"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L4.01.quiz.json"
+sources: ["S-BIS-07", "S-BCFH-01", "S-ECB-02", "S-ECB-04", "S-ECB-06", "S-FED-10"]
+---
+
+# L4.01 — La parité des taux d'intérêt : couverte, non couverte et prime à terme
+
+> **Convention de lecture.** **[Fait]** = énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. écrire la **parité des taux couverte** et calculer un **cours à terme** théorique ;
+2. définir la **prime (ou décote) à terme** et la relier au différentiel de taux ;
+3. expliquer le **« basis » de change** (cross-currency basis) et son signe ;
+4. écrire la **parité non couverte** et la distinguer de la parité couverte ;
+5. décrire le **test de Fama** et son résultat (coefficient négatif) ;
+6. dire ce que ces relations **permettent** et **ne permettent pas** de conclure sur l'EUR/USD.
+
+## 2. Prérequis
+
+- Taux directeurs de la Fed et de la BCE (L2.03) ; fonction de réaction (L2.07) ; indices de prix (L3.07).
+
+## 3. Explication intuitive
+
+Prête un euro et un dollar pour trois mois. Le dollar rapporte plus que l'euro. Faut-il tout placer en dollars ? Pas forcément : pour les convertir, il faut échanger des euros contre des dollars aujourd'hui, puis reconvertir plus tard. Si tu fixes **aujourd'hui** le cours de la reconversion (contrat à terme), le gain de taux est compensé par le cours à terme : l'euro se reconvertit **plus cher** en dollars. C'est la **parité couverte** : sans risque de change, plus de gain gratuit. Si tu ne fixes pas le cours, tu peux gagner plus (si le dollar ne se déprécie pas) ou perdre (s'il se déprécie). C'est la **parité non couverte** : elle dit qu'**en moyenne** le gain de taux serait compensé par la dépréciation attendue de la monnaie à haut rendement. La première relation tient presque toujours ; la seconde est en général **démentie par les données**, ce qui est à l'origine du carry trade (L4.10).
+
+## 4. Développement technique
+
+### 4.1 La parité couverte
+
+**[Définition]** (convention de cours) : on note **S** le cours au comptant EUR/USD (dollars par euro), **F** le cours à terme à l'échéance τ (en fraction d'année), **i_USD** et **i_EUR** les taux des dépôts de même durée en dollars et en euros.
+
+F = S × (1 + i_USD × τ) ÷ (1 + i_EUR × τ)
+
+Convention du marché monétaire (hypothèse de calcul, non sourcée ici) : base jours exacts sur 360 pour les deux devises, donc τ = 90 ÷ 360 = 0,25 pour trois mois.
+
+**[Fait]** (S-ECB-02, glossaire de la BCE) : un contrat à terme de change est un échange de montants à un prix fixé à la date du contrat avec livraison à une date future précisée ; le cours à terme égale le cours au comptant plus ou moins une prime ou décote convenue. (S-BIS-07, BRI, Quarterly Review de septembre 2016) : « Covered interest parity verges on a physical law in international finance » : les différentiels de taux de deux devises doivent égaler l'écart entre cours à terme et cours au comptant, faute de quoi des arbitragistes gagneraient sans risque.
+
+### 4.2 Un calcul avec des données de fin octobre 2026
+
+**[Fait]**
+- Cours de référence de la BCE EUR/USD du 29/10/2026 : **1,1130** (S-ECB-04, lecture de tableau par résumé automatique ; valeur non confirmée sur le jeu de données en ligne) ; ce cours est indicatif, à ne pas utiliser pour des transactions selon la BCE (S-ECB-03).
+- Fed : IORB **3,90 %** depuis le 17/09/2026 (S-FED-10) ; BCE : facilité de dépôt **2,50 %** depuis le 16/09/2026 (S-ECB-06).
+
+**[Calcul de l'auteur]** (les taux directeurs servent ici de **substituts** aux taux de dépôt à trois mois, que **nous n'avons pas lus** ; le résultat est donc un ordre de grandeur) :
+- facteur dollar : 1 + 0,039 × 0,25 = **1,00975** ; facteur euro : 1 + 0,025 × 0,25 = **1,00625** ; rapport : **1,003478** ;
+- cours à terme à trois mois théorique : F = 1,1130 × 1,003478 = **1,11687** ;
+- points de terme : F − S = **+0,00387**, soit **+38,7 pips** ;
+- prime annualisée : (F ÷ S − 1) × 4 = **1,39 %** ≈ différentiel de taux 3,90 − 2,50 = **1,40 point**.
+
+**[Interprétation]** L'euro, devise à taux plus bas, se négocie **à terme avec une prime** par rapport au dollar : le cours à terme est supérieur au comptant. Un investisseur en dollars qui couvre son placement en euros renonce, via la prime, à l'écart de taux.
+
+### 4.3 Le « basis » de change
+
+**[Fait]** (S-BIS-07) : le **cross-currency basis** est l'écart entre le coût d'emprunt d'une devise en passant par un swap de change et son coût d'emprunt direct sur le marché au comptant ; un basis non nul indique une violation de la parité couverte. **Convention de signe de la source** : un basis **négatif** signifie que emprunter des dollars par swap de change coûte **plus** que les emprunter directement ; c'est le cas, depuis 2007, pour la plupart des devises, notamment l'euro et le yen ; un basis positif, observé par exemple pour le dollar australien, signifie l'inverse. L'article attribue la persistance des écarts à la **demande de couverture**, importante et déséquilibrée entre devises, combinée aux **limites de l'arbitrage** (contraintes de bilan et de régulation) ; l'effet des annonces d'assouplissement de la BCE et de la BoJ est aussi cité. Aucun niveau de basis n'a été lu (valeurs seulement dans des graphiques).
+
+**[SIMULATION]** Taux d'emprunt direct en dollars : 3,90 % ; basis de −30 points de base : coût du dollar par swap = 3,90 + 0,30 = **4,20 %**.
+
+**[Interprétation]** Pour lire un cours à terme réel, il faut donc **ajouter** le basis à la formule ; la parité couverte « de manuel » est une référence, non une identité observée en tout temps.
+
+### 4.4 La parité non couverte (UIP)
+
+**[Définition]** (convention de cours) : sous parité non couverte et anticipations rationnelles, le cours à terme est un estimateur sans biais du cours futur : **E[S(t+τ)] = F**. Autrement dit, la monnaie à taux élevé devrait se déprécier **en moyenne** du différentiel de taux.
+
+**[Calcul de l'auteur]** différentiel 1,40 point, donc un EUR/USD attendu en hausse d'environ **1,4 %** sur un an : 1,1130 × 1,014 = **1,1286** (sous parité non couverte, **hypothèse** et non prévision).
+
+### 4.5 Le test de Fama et la prime à terme
+
+**[Fait]** (S-BCFH-01, article de Chinn et autres, 2022, résumé automatique) : le test de Fama (1984) régresse la variation du cours sur l'écart de taux : s(t+h) − s(t) = α + β(i − i*) + u ; sous parité non couverte et anticipations rationnelles, **β = 1**. Fama trouve **β négatif** : le différentiel de taux désigne le **mauvais sens** de la variation ultérieure. Fama l'attribue à une **prime de risque variable**, explication qui a « peu de vérification empirique ». Estimations de la littérature citées : moyenne ≈ **−0,88** (Froot et Thaler, 1990) ; **plus positifs** pour les marchés émergents ; positifs et proches de 1 aux horizons de 5 à 10 ans pour le G7 (Chinn et Meredith, 2004). Dans l'échantillon de l'article (huit devises contre le dollar, données mensuelles de janvier 1999 à septembre 2021, horizon 12 mois), la plupart des coefficients sont négatifs ; **euro : −1,019**, ce qui rejette β = 1 au seuil de 1 % ; sur 1999–2006, tous les coefficients sont négatifs (de −2,1 à −5,2) ; ajouter l'indice VIX comme mesure du risque ne modifie pas les résultats.
+
+**[Calcul de l'auteur]** Si β était égal à −1,019 et le différentiel à 1,40 point, la variation moyenne de l'EUR/USD sur douze mois serait **−1,43 %** (−1,019 × 1,40), contre **+1,40 %** sous β = 1 : l'euro se **déprécierait** en moyenne alors que la parité non couverte annonce une appréciation. Ce calcul est **illustratif** : le coefficient est estimé sur 1999–2021 et ne dit rien de la période à venir.
+
+**[Interprétation]** Cette régularité moyenne est à l'origine du **carry** (emprunter la devise à taux bas, placer dans la devise à taux haut) : le gain de taux n'est **pas** toujours compensé par une variation de change. Elle est instable (variable selon les périodes, les paires et l'horizon) et ne garantit rien pour un trade donné.
+
+## 5. Définitions essentielles
+
+- **Cours à terme** : cours fixé aujourd'hui pour un échange futur.
+- **Points de terme** : écart F − S.
+- **Prime / décote à terme** : (F − S) rapporté à S, annualisé.
+- **Parité couverte (CIP)** : lien entre taux, cours au comptant et cours à terme sans risque de change.
+- **Parité non couverte (UIP)** : égalité entre cours à terme et cours futur anticipé.
+- **Basis de change** : écart entre coût d'un emprunt par swap et emprunt direct.
+- **Prime de risque** : rémunération du risque de change, variable dans le temps.
+
+## 6. Exemples chiffrés
+
+**6.1 Cours à terme.** 1,1130 × 1,00975 ÷ 1,00625 = 1,11687.
+**6.2 Prime annualisée.** (1,11687 ÷ 1,1130 − 1) × 4 = 1,39 %.
+**6.3 Arbitrage (SIMULATION).** Cours à terme coté 1,1180 contre 1,11687 théorique : écart 0,00113 par euro, soit 1 129 dollars sur 1 million d'euros, avant coûts et contraintes de bilan.
+**6.4 Basis (SIMULATION).** 3,90 + 0,30 = 4,20 %.
+
+### 6.5 Cas historique documenté — la parité couverte après 2007 et le test de Fama sur 1999–2021
+
+**[Fait]** (S-BIS-07) : un basis négatif persistant sur la plupart des devises depuis 2007, élargi depuis 2014, attribué à la demande de couverture et aux limites de l'arbitrage. **[Fait]** (S-BCFH-01) : coefficients de Fama négatifs sur huit devises (1999–2021), euro à −1,019.
+
+**[Calcul de l'auteur]** Sous β = 1, un différentiel de 1,40 point implique +1,4 % ; sous −1,019, −1,43 % : l'écart entre les deux hypothèses est de **2,83 points** par an.
+
+**[Interprétation]** Le cas montre que la parité couverte, bien que dite « presque une loi physique », peut s'écarter de sa valeur théorique durablement quand la demande de couverture est déséquilibrée, et que la parité non couverte, elle, est en moyenne **rejetée** par les données. **Limites** : résumés automatiques ; aucun niveau de basis n'a été lu ; les articles n'ont pas été relus dans leur intégralité ; rien n'est dit sur 2026 ; l'explication par la prime de risque n'est pas confirmée.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **EUR/USD** : un différentiel de politique monétaire en faveur du dollar n'implique **pas** une hausse du dollar ; l'histoire statistique est ambiguë (L4.02, L4.10).
+- **Couverture** : le coût d'une couverture à terme est lié au différentiel de taux et au basis ; il pèse sur le rendement des investisseurs étrangers (module 7).
+- **Or** : l'or ne paie pas de taux ; le coût d'opportunité se compare au taux sans risque (module 5) ; la parité est cohérente avec l'idée qu'on ne peut pas juger un actif sans le coût du financement.
+- **Usage prudent** : une prime à terme n'est pas une prévision du change.
+- **Prudence** : aucune lecture de ces relations ne garantit le résultat d'un trade.
+
+## 8. Erreurs courantes
+
+1. Confondre cours à terme et prévision du cours futur.
+2. Oublier la convention de calcul (jours sur 360) et l'échéance.
+3. Utiliser un taux directeur comme taux de dépôt à trois mois sans le signaler.
+4. Ignorer le basis, surtout en cas de tension sur le dollar.
+5. Penser que la parité non couverte est une loi vérifiée.
+6. Lire le signe du basis à l'envers.
+7. Présenter un coefficient historique comme garanti pour l'avenir.
+
+## 9. Limites de l'interprétation
+
+- Le cours EUR/USD du 29/10/2026 est lu par un résumé de tableau non confirmé sur le jeu de données en ligne.
+- Les taux utilisés sont des **taux directeurs**, non des taux de dépôt à trois mois.
+- Aucun niveau de basis ni aucun cours à terme observé n'a été lu.
+- Les articles de la BRI (2016) et de Chinn et autres (2022) ont été lus par résumé ; leurs résultats ne sont pas ceux de 2026.
+- L'explication de Fama par une prime de risque variable est discutée et non démontrée.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Cours à terme.** S = 1,0800 ; i_USD = 4,0 % ; i_EUR = 2,0 % ; échéance 6 mois (τ = 0,5). Calcule F et les points de terme.
+
+<details>
+<summary>Correction 1</summary>
+
+F = 1,0800 × (1 + 0,04 × 0,5) ÷ (1 + 0,02 × 0,5) = 1,0800 × 1,02 ÷ 1,01 = **1,09069** ; points de terme **+0,01069**, soit **+106,9 pips**.
+</details>
+
+**Exercice 2 — Prime annualisée.** Avec les données de l'exercice 1, calcule la prime annualisée.
+
+<details>
+<summary>Correction 2</summary>
+
+(1,09069 ÷ 1,0800 − 1) × 2 = 0,009898 × 2 = **1,98 %**, proche du différentiel de 2,0 points.
+</details>
+
+**Exercice 3 — Arbitrage (SIMULATION).** Cours à terme coté à 6 mois : 1,0930 ; théorique : 1,09069. Quel écart par euro ? Quel gain sur 2 millions d'euros avant coûts ?
+
+<details>
+<summary>Correction 3</summary>
+
+1,0930 − 1,09069 = **0,00231** par euro ; × 2 000 000 = **4 620 dollars**, avant coûts de transaction, contraintes de bilan et risque de contrepartie.
+</details>
+
+**Exercice 4 — Basis (SIMULATION).** Emprunt direct en dollars : 4,10 % ; basis : −45 points de base. Coût du dollar par swap ?
+
+<details>
+<summary>Correction 4</summary>
+
+Un basis négatif renchérit le dollar par swap : 4,10 + 0,45 = **4,55 %**.
+</details>
+
+**Exercice 5 — Parité non couverte.** Différentiel de 1,4 point en faveur du dollar ; EUR/USD à 1,1130. Quelle valeur attendue à un an sous parité non couverte ? Et sous β = −1,019 ?
+
+<details>
+<summary>Correction 5</summary>
+
+Sous β = 1 : 1,1130 × 1,014 = **1,1286**. Sous β = −1,019 : variation de −1,4266 % : 1,1130 × (1 − 0,014266) = **1,0971** (illustration, non prévision).
+</details>
+
+**Exercice 6 — Critique.** « Les taux américains sont supérieurs aux taux européens : le dollar va donc se déprécier, comme l'impose la parité. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) La parité **non couverte** n'est pas une loi : les tests de Fama donnent β négatif en moyenne. (2) La parité couverte parle du cours à terme, pas du cours futur. (3) Les taux directeurs ne sont pas les taux de dépôt de même durée. (4) Le basis peut dévier durablement. (5) Une relation moyenne ne garantit pas un résultat sur une période donnée.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L4.01.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- La parité couverte relie taux, cours au comptant et cours à terme : F = S × (1 + i_USD τ) ÷ (1 + i_EUR τ).
+- Avec des taux plus bas, l'euro a une prime à terme sur le dollar (≈ 38,7 pips à trois mois dans l'illustration).
+- Un basis négatif signifie que le dollar coûte plus cher par swap que directement.
+- La parité non couverte (β = 1) est en moyenne rejetée par les données (β négatif de Fama).
+- Une prime à terme n'est pas une prévision du change.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer un cours à terme et la prime (Exercices 1 et 2).
+- [ ] Identifier un écart d'arbitrage (Exercice 3).
+- [ ] Lire le signe d'un basis (Exercice 4).
+- [ ] Distinguer parité couverte et non couverte (Exercice 5).
+- [ ] Critiquer une conclusion hâtive (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-BIS-07** — BRI, Quarterly Review, septembre 2016, « Covered interest parity lost: understanding the cross-currency basis » : https://bis.org/publ/qtrpdf/r_qt1609e.htm
+- **S-BCFH-01** — Chinn et autres, article de 2022 sur le puzzle de Fama (version en ligne) : https://users.ssc.wisc.edu/~mchinn/BCFH_IMFER_2022.pdf
+- **S-ECB-02** — BCE, glossaire (contrat à terme de change).
+- **S-ECB-04** — BCE, taux de référence euro/dollar (octobre 2026).
+- **S-ECB-06** — BCE, taux directeurs.
+- **S-FED-10** — Réserve fédérale, note d'application du 16/09/2026.
+
+**Définitions de cours non rattachées à une source officielle lue :** formule de la parité couverte (version avec τ), convention de jours, formulation de la parité non couverte. **Points non vérifiés :** taux de dépôt à trois mois, cours à terme observé, niveau du basis, version intégrale des articles.

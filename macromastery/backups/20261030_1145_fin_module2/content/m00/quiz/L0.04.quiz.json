@@ -1,0 +1,238 @@
+{
+  "lessonId": "L0.04",
+  "title": "Quiz — Qui fait le prix : liquidité, sessions et taille des positions",
+  "passThreshold": 0.8,
+  "note": "Chiffres des questions de calcul : SIMULATION. Les faits sur le dernier regard, l'étude de la RBA et le 7 octobre 2016 viennent de sources lues via des résumés automatiques (voir sources.md).",
+  "questions": [
+    {
+      "id": "L0.04-Q1",
+      "type": "mcq",
+      "prompt": "Sur le marché des changes de gré à gré, que signifie « le prix de EUR/USD » ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un prix officiel unique fixé chaque jour par une bourse centrale"
+        },
+        {
+          "id": "b",
+          "text": "Le prix moyen de toutes les transactions de la veille"
+        },
+        {
+          "id": "c",
+          "text": "La cotation d'un participant, pour une taille et un instant donnés"
+        },
+        {
+          "id": "d",
+          "text": "Le prix fixé par la banque centrale de la zone euro"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Il n'y a pas de bourse centrale : le prix naît des cotations (bid/ask) de teneurs de marché et d'autres participants, pour une taille et un instant donnés. Deux fournisseurs peuvent donc afficher des prix légèrement différents.",
+      "tags": [
+        "prix",
+        "gre-a-gre"
+      ]
+    },
+    {
+      "id": "L0.04-Q2",
+      "type": "mcq",
+      "prompt": "Un courtier agit en « principal ». Quelle conséquence pour toi ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il est ta contrepartie et prend un risque de marché : un conflit d'intérêts est possible"
+        },
+        {
+          "id": "b",
+          "text": "Il exécute ton ordre chez un tiers et ne prend aucun risque de marché"
+        },
+        {
+          "id": "c",
+          "text": "Il garantit que ta transaction sera gagnante"
+        },
+        {
+          "id": "d",
+          "text": "Il est obligé de te donner le meilleur prix disponible sur tout le marché"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le principal traite pour son propre compte (Code mondial du change, Principe 8) : il est de l'autre côté de ta transaction. Ce n'est pas illégitime, mais ses intérêts ne coïncident pas toujours avec les tiens. La SEC (2011) note que les courtiers sont souvent teneurs de marché et ne donnent pas toujours le meilleur prix.",
+      "tags": [
+        "principal-agent"
+      ]
+    },
+    {
+      "id": "L0.04-Q3",
+      "type": "mcq",
+      "prompt": "Que désigne le « dernier regard » (last look) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La dernière chance du client d'annuler son ordre"
+        },
+        {
+          "id": "b",
+          "text": "La dernière publication quotidienne d'un taux de référence"
+        },
+        {
+          "id": "c",
+          "text": "Le moment où la banque centrale vérifie les cotations"
+        },
+        {
+          "id": "d",
+          "text": "Une dernière occasion, pour le destinataire d'une demande, de l'accepter ou de la rejeter à son prix coté"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Définition du GFXC (2021) : pratique du trading électronique où un participant a une dernière occasion d'accepter ou de rejeter une demande à son prix coté. Le Principe 17 du Code demande de la transparence sur son usage.",
+      "tags": [
+        "last-look"
+      ]
+    },
+    {
+      "id": "L0.04-Q4",
+      "type": "mcq",
+      "prompt": "Compte en USD. Tu trades 1 lot de 100 000 USD sur USD/CHF à 0,9000 (pip = 0,0001). Quelle est la valeur d'un pip en USD, arrondie au centime ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "10,00 USD"
+        },
+        {
+          "id": "b",
+          "text": "11,11 USD"
+        },
+        {
+          "id": "c",
+          "text": "9,00 USD"
+        },
+        {
+          "id": "d",
+          "text": "0,90 USD"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le pip vaut 0,0001 × 100 000 = 10 CHF. La devise de cotation est le franc : on convertit en dollars en divisant par 0,9000, soit 10 ÷ 0,9000 ≈ 11,11 USD. (Chiffres fictifs : SIMULATION.)",
+      "tags": [
+        "valeur-pip",
+        "conversion"
+      ]
+    },
+    {
+      "id": "L0.04-Q5",
+      "type": "mcq",
+      "prompt": "Compte de 10 000 USD, risque accepté 2 % par transaction. Tu trades EUR/USD (pip = 10 USD par lot de 100 000) avec un stop à 50 pips. Quelle taille de position ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,2 lot"
+        },
+        {
+          "id": "b",
+          "text": "2 lots"
+        },
+        {
+          "id": "c",
+          "text": "1 lot"
+        },
+        {
+          "id": "d",
+          "text": "0,4 lot"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Risque = 10 000 × 0,02 = 200 USD. Taille = 200 ÷ (50 × 10) = 0,4 lot. Contrôle : 50 × 0,4 × 10 = 200 USD.",
+      "tags": [
+        "dimensionnement",
+        "risque"
+      ]
+    },
+    {
+      "id": "L0.04-Q6",
+      "type": "mcq",
+      "prompt": "Tu ouvres 50 000 EUR de EUR/USD à 1,0800 avec un dépôt de garantie de 2 % du notionnel. Quelle marge est exigée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "540 USD"
+        },
+        {
+          "id": "b",
+          "text": "2 000 USD"
+        },
+        {
+          "id": "c",
+          "text": "1 080 USD"
+        },
+        {
+          "id": "d",
+          "text": "54 000 USD"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Notionnel = 50 000 × 1,0800 = 54 000 USD. Marge = 54 000 × 0,02 = 1 080 USD, soit un levier de position de 50 pour 1.",
+      "tags": [
+        "marge",
+        "levier"
+      ]
+    },
+    {
+      "id": "L0.04-Q7",
+      "type": "mcq",
+      "prompt": "Quelle affirmation est cohérente avec ce que disent les sources de la leçon sur l'heure de la journée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une étude de la RBA (données 2007, paires du dollar australien) observe une volatilité plus forte hors de Sydney, notamment quand Londres et New York sont ouverts ; elle ne permet pas de généraliser à toutes les paires aujourd'hui"
+        },
+        {
+          "id": "b",
+          "text": "Le chevauchement Londres–New York garantit un spread minimal et des transactions gagnantes"
+        },
+        {
+          "id": "c",
+          "text": "Le rapport de la BRI sur le 7 octobre 2016 conclut que la chute de la livre avait une seule cause : une erreur d'un fournisseur"
+        },
+        {
+          "id": "d",
+          "text": "Le marché au comptant a un horaire officiel unique fixé par la BRI"
+        }
+      ],
+      "correct": "a",
+      "explanation": "L'étude de la RBA (S-RBA-01) est datée de 2007 et porte sur des paires liées au dollar australien. Le rapport de la BRI sur le 7 octobre 2016 conclut à une combinaison de facteurs, avec un poids sur l'heure de la journée. Il n'existe pas d'horaire officiel unique du marché au comptant, et aucune heure ne garantit un gain.",
+      "tags": [
+        "sessions",
+        "limites"
+      ]
+    },
+    {
+      "id": "L0.04-Q8",
+      "type": "mcq",
+      "prompt": "Un levier maximal de 50 pour 1 est disponible. Qu'est-ce qui détermine ta perte maximale sur une transaction avec stop ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La marge exigée par le fournisseur"
+        },
+        {
+          "id": "b",
+          "text": "La distance du stop en pips multipliée par la valeur du pip et par la taille de la position"
+        },
+        {
+          "id": "c",
+          "text": "Le levier maximal disponible"
+        },
+        {
+          "id": "d",
+          "text": "Le spread à l'ouverture de la transaction"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le risque est la perte si le stop est touché : pips du stop × valeur du pip × lots. La marge est un dépôt, le levier un rapport notionnel/marge ; ni l'un ni l'autre ne fixe la perte (hors glissement et écart de prix à l'exécution).",
+      "tags": [
+        "risque-vs-marge"
+      ]
+    }
+  ],
+  "revision": 1
+}

@@ -1,0 +1,235 @@
+{
+  "lessonId": "L7.04",
+  "title": "Quiz — Flux d'ETF et d'investisseurs",
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L7.04-Q1",
+      "type": "mcq",
+      "prompt": "Qu'est-ce qui modifie réellement les avoirs en or d'un ETF physique ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le volume de négociation du jour"
+        },
+        {
+          "id": "b",
+          "text": "Tout achat ou vente de parts en bourse"
+        },
+        {
+          "id": "c",
+          "text": "Les créations et rachats de parts par les participants autorisés"
+        },
+        {
+          "id": "d",
+          "text": "La variation du prix de l'or"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Les échanges de parts entre investisseurs sur le marché secondaire laissent l'or détenu inchangé ; seuls les créations et rachats font entrer ou sortir de l'or du fonds.",
+      "tags": [
+        "mecanique"
+      ]
+    },
+    {
+      "id": "L7.04-Q2",
+      "type": "mcq",
+      "prompt": "Un fonds détient 14 880 715,81 oz. Combien de tonnes (1 t = 32 150,7466 oz) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 462,84 t"
+        },
+        {
+          "id": "b",
+          "text": "≈ 4 628 t"
+        },
+        {
+          "id": "c",
+          "text": "≈ 46,28 t"
+        },
+        {
+          "id": "d",
+          "text": "≈ 480,6 t"
+        }
+      ],
+      "correct": "a",
+      "explanation": "14 880 715,81 ÷ 32 150,7466 = 462,84 t, ce que la fiche de l'iShares Gold Trust affiche aussi.",
+      "tags": [
+        "conversion"
+      ]
+    },
+    {
+      "id": "L7.04-Q3",
+      "type": "mcq",
+      "prompt": "Septembre 2026 : flux +10 Md$, encours de 615 à 574 Md$. Quel est l'effet de valorisation (Δ encours − flux) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ +10 Md$"
+        },
+        {
+          "id": "b",
+          "text": "≈ +51 Md$"
+        },
+        {
+          "id": "c",
+          "text": "≈ −41 Md$"
+        },
+        {
+          "id": "d",
+          "text": "≈ −51 Md$"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Δ encours = 574 − 615 = −41 ; valorisation = −41 − 10 = −51 Md$ : les entrées ont été plus que compensées par la baisse du prix, à l'arrondi près.",
+      "tags": [
+        "decomposition"
+      ]
+    },
+    {
+      "id": "L7.04-Q4",
+      "type": "mcq",
+      "prompt": "Dans la simulation (1 000 t à 4 000 $, retraits de 50 t, prix final 4 600 $), pourquoi l'encours monte-t-il ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que les investisseurs ont acheté"
+        },
+        {
+          "id": "b",
+          "text": "Parce que l'effet de prix (+18,6 Md$) dépasse les retraits (−6,75 Md$)"
+        },
+        {
+          "id": "c",
+          "text": "Parce que les avoirs ont augmenté"
+        },
+        {
+          "id": "d",
+          "text": "Parce que l'encours ne dépend pas du prix"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Les avoirs baissent de 5 %, mais le prix monte de 15 % : l'encours passe de 128,60 à 140,50 Md$ (+9,3 %).",
+      "tags": [
+        "simulation"
+      ]
+    },
+    {
+      "id": "L7.04-Q5",
+      "type": "mcq",
+      "prompt": "Que couvrent les statistiques de flux du World Gold Council citées dans la leçon ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Seulement les ETF américains"
+        },
+        {
+          "id": "b",
+          "text": "Toute la demande d'investissement en or"
+        },
+        {
+          "id": "c",
+          "text": "Les contrats à terme sur l'or"
+        },
+        {
+          "id": "d",
+          "text": "Des titres réglementés détenant de l'or physique, donc ni les ETN ni les barres et pièces"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Les ETF comptés détiennent de l'or physique ; un ETN est une créance sur l'émetteur (Investor.gov) et les barres et pièces forment une autre ligne de la demande d'investissement.",
+      "tags": [
+        "portee"
+      ]
+    },
+    {
+      "id": "L7.04-Q6",
+      "type": "mcq",
+      "prompt": "Achats de 100 t à 4 500 $/oz puis ventes de 60 t à 4 000 $/oz (fictif). Le rapport flux net ÷ variation d'avoirs vaut-il un prix de marché ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui, 4 250 $/oz"
+        },
+        {
+          "id": "b",
+          "text": "Oui, 4 500 $/oz"
+        },
+        {
+          "id": "c",
+          "text": "Non : il vaut ≈ 5 250 $/oz, ni 4 500 ni 4 000"
+        },
+        {
+          "id": "d",
+          "text": "Oui, 4 000 $/oz"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Flux net 6,752 Md$ pour +40 t donne 5 250 $/oz ; avec des achats et des ventes à des prix différents, le ratio n'est pas un prix.",
+      "tags": [
+        "ratio"
+      ]
+    },
+    {
+      "id": "L7.04-Q7",
+      "type": "mcq",
+      "prompt": "Sur avril–septembre 2026 (flux contre variation du prix implicite), combien de mois ont des signes identiques et que conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "5 sur 6 ; septembre diverge ; six points et prix dérivés ne permettent aucune conclusion causale"
+        },
+        {
+          "id": "b",
+          "text": "6 sur 6, donc les flux déterminent le prix"
+        },
+        {
+          "id": "c",
+          "text": "0 sur 6"
+        },
+        {
+          "id": "d",
+          "text": "5 sur 6, donc le prix suit toujours les flux"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Les signes concordent en avril, mai, juin, juillet et août ; en septembre, le flux est positif et le prix implicite baisse de 8,1 % ; six observations sont insuffisantes.",
+      "tags": [
+        "diagnostic"
+      ]
+    },
+    {
+      "id": "L7.04-Q8",
+      "type": "mcq",
+      "prompt": "Peut-on conclure qu'une forte entrée dans les ETF garantit une hausse de l'or ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui"
+        },
+        {
+          "id": "b",
+          "text": "Non : un flux est un fait observé, il ne garantit pas une direction et ne révèle pas l'intention des investisseurs"
+        },
+        {
+          "id": "c",
+          "text": "Oui si l'entrée dépasse 10 Md$"
+        },
+        {
+          "id": "d",
+          "text": "Oui si les avoirs sont à un record"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Septembre 2026 a combiné des entrées de 10 Md$ et un prix implicite en baisse de 8,1 % ; une bonne analyse fondamentale ne garantit pas une transaction gagnante.",
+      "tags": [
+        "limite"
+      ]
+    }
+  ],
+  "revision": 1
+}

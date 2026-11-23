@@ -1,0 +1,300 @@
+---
+id: L8.05
+module: 8
+order: 5
+title: "Risk-on et risk-off : définir deux régimes comme des co-mouvements observés, séparer la perception du risque du comportement des prix, et comprendre pourquoi l'or ne monte pas à tout coup quand le stress monte"
+title_initial: "Risk-on et risk-off"
+level: "avancé"
+duration_hours: 3.0
+prerequisites: ["L8.01", "L8.03", "L8.04", "L6.01", "L6.05"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L8.05.quiz.json"
+sources: ["S-CBOE-01", "S-CEPR-01", "S-SNB-02", "S-WT-01", "S-DAWN-01", "S-DAWN-02", "S-WGC-26", "S-WGC-27", "S-GPR-02"]
+---
+
+# L8.05 — Risk-on et risk-off
+
+> **Convention de lecture.** **[Fait]** = chiffre ou énoncé lu dans une source citée ; **[Calcul de l'auteur]** ; **[Définition de cours]** ; **[Interprétation]** ; **[Hypothèse]** ; **[SIMULATION]** = données fictives. **Toutes les lectures web de cette leçon sont des résumés automatiques, jamais des lectures intégrales.** La source sur l'épisode de mars 2020 est le commentaire d'un gestionnaire d'actifs (WisdomTree), dont les chiffres ne sont pas sourcés dans le texte : ils sont rapportés, non vérifiés. Les prix de l'or sont de bases hétérogènes : **aucun rendement n'est calculé entre instruments ou horaires différents.** **L4.11 et L5.08 restent des points critiques ouverts ; la leçon ne s'appuie sur aucune des deux. L'anomalie de périmètre CFTC reste ouverte et n'intervient pas ici.** **Une bonne analyse fondamentale ne garantit pas une transaction gagnante. Règle centrale : un régime « risk-on » ou « risk-off » est une description de ce que les prix ont fait ensemble, pas une explication ni une prévision.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. définir **risk-on** et **risk-off** comme deux régimes de co-mouvement de prix, avec leurs limites ;
+2. lister les indicateurs observables (volatilité implicite, actions, obligations d'État, dollar, devises refuges, or) et dire ce que chacun mesure réellement ;
+3. distinguer la **perception du risque** (mesures implicites, enquêtes, nouvelles) du **comportement observé** (prix et flux) ;
+4. expliquer pourquoi l'or **ne monte pas systématiquement** quand le stress monte (liquidité, taux, dollar, positionnement, nature du choc) ;
+5. construire une **matrice de confirmation et de contradiction** des signaux avec une règle fixée avant l'observation ;
+6. lire trois épisodes documentés (septembre 2001, mars 2020, 2022) sans conclure à une règle universelle ;
+7. écrire trois scénarios SIMULATION avec invalidations et refuser de déduire un régime d'un seul indicateur.
+
+## 2. Prérequis
+
+- Cadre d'analyse d'un choc géopolitique (L8.01), distinction résultat/surprise (L8.03) et règles de calcul de L8.04 (même instrument, même horaire).
+- Notions de rendements obligataires, taux réels et dollar (modules 4 à 6).
+- Savoir lire une variation en pourcentage et en points.
+
+## 3. Explication intuitive
+
+Les opérateurs disent « le marché est risk-off » quand les actifs risqués baissent, la volatilité monte et certains actifs jugés sûrs montent. C'est un **raccourci de langage**. Il résume une séance, pas une cause. Une même journée peut contenir un indicateur qui confirme, un autre qui contredit : le dollar monte, l'or baisse, les rendements baissent. Savoir dire **quels signaux concordent, lesquels contredisent, et combien il en faut**, vaut mieux que l'étiquette.
+
+L'or illustre le piège : il est souvent présenté comme un refuge, mais les sources lues montrent des épisodes où il a **monté puis reflué** (2001), **baissé avec les actions** (mars 2020, selon un gestionnaire) ou **baissé pendant une guerre** (2022). Le stress n'a pas un seul visage : stress de liquidité, de croissance, d'inflation et de taux n'envoient pas les mêmes signaux.
+
+## 4. Développement technique
+
+### 4.1 Deux régimes : définition de travail
+
+**[Définition de cours]** Un régime **risk-off** est une période où, sur un ensemble d'indicateurs choisis à l'avance, la majorité évolue dans le sens de la **réduction d'exposition au risque** : actions en baisse, volatilité implicite en hausse, rendements des obligations d'État sûres en baisse, certaines devises refuges en hausse. Un régime **risk-on** est le miroir. Ce n'est ni un état unique ni une cause : c'est un **résumé de co-mouvements**.
+
+Trois précisions :
+- Le régime dépend de l'**horizon** (une séance, une semaine) et de l'**ensemble d'indicateurs** retenu ; deux analystes avec des ensembles différents n'obtiennent pas le même verdict.
+- Un régime ne dit rien de la **cause** (croissance, géopolitique, liquidité, inflation).
+- Un régime observé hier ne **prédit** pas celui de demain.
+
+### 4.2 Indicateurs observables et ce qu'ils mesurent
+
+| Indicateur | Ce qu'il mesure réellement | Sens attendu en risk-off | Limites |
+|---|---|---|---|
+| Volatilité implicite des actions américaines (VIX) | Volatilité attendue de l'indice S&P 500 à **constante de maturité de 30 jours**, calculée à partir de prix d'options sur l'indice (méthodologie CBOE) | Hausse | C'est une **attente impliquée par des prix d'options**, pas un comportement de portefeuille ; la lecture « annualisée en pourcentage » est la convention courante, non confirmée par le résumé lu |
+| Actions | Prix des actions (indices) | Baisse | Dépend des secteurs, des dividendes, des rotations |
+| Rendements des obligations d'État sûres | Rémunération des titres d'État à une maturité donnée | Baisse (prix en hausse) | Un choc d'inflation ou de prime de terme peut les faire **monter** |
+| Dollar | Cours du dollar contre un panier ou une paire | Souvent hausse | Dépend des paires et de l'époque (voir 4.3) |
+| Devises refuges (franc suisse, yen) | Appréciation lors des pics de risque | Hausse | Comportement **hétérogène selon la paire** et le temps (voir 4.3) |
+| Or | Prix du métal (comptant, fixing, contrat à terme) | Hausse **possible** | Voir 4.4 : ni systématique ni immédiat |
+
+**[Fait, S-CBOE-01]** Le document CBOE lu (méthodologie de l'indice VIXMO, variante « mensuelle seule » à 30 jours) indique que l'indice « mesure une volatilité attendue à maturité constante de l'indice S&P 500 », calculée avec des options SPX, selon la même méthodologie que le VIX ; les formules détaillées renvoient à un autre document, non lu. La formule affichée est illisible dans le résumé : seuls ses éléments sont confirmés (prix à terme implicite, taux sans risque, strikes, milieu de fourchette des options).
+
+### 4.3 Devises refuges : une hiérarchie instable
+
+**[Fait, S-CEPR-01]** Une chronique CEPR sur données de 2000 à 2013 indique que le franc suisse et le yen sont les devises refuges les plus nettes, qui s'apprécient lorsque le risque culmine ; que des nouvelles macroéconomiques négatives les apprécient ; que la sensibilité a fortement augmenté après 2007 ; que le yen réagit davantage aux nouvelles américaines et le franc aux nouvelles européennes. Elle utilise deux mesures du risque, le VIX et un indice de nouvelles (Bloomberg), « fortement corrélés mais parfois divergents ». **L'euro et le dollar n'y sont pas identifiés comme refuges.**
+
+**[Fait, S-SNB-02]** Un document de travail de la Banque nationale suisse (2013) conclut que le franc se comporte en refuge **contre certaines devises seulement** : il s'apprécie contre l'euro et contre des devises de portage comme le dollar australien, mais se déprécie contre le dollar américain, le yen et la livre quand le risque global monte ; la relation varie dans le temps et est plus forte en période de stress. Période exacte, mesures de risque et ampleurs non lues.
+
+**[Interprétation]** « Devise refuge » n'est donc pas un attribut de la devise seule : c'est un **comportement par paire et par période**. Les deux sources ne se contredisent pas strictement (échantillons, méthodes et paires différents), mais elles interdisent de poser « franc = refuge » sans préciser contre quoi.
+
+### 4.4 Pourquoi l'or ne monte pas systématiquement en période de stress
+
+Cinq mécanismes **possibles**, aucun n'étant démontré par une seule source :
+
+1. **Liquidité.** **[Fait rapporté, S-WT-01]** Selon un gestionnaire d'actifs, lors des fortes volatilités, des investisseurs vendent des actifs liquides, l'or et les bons du Trésor compris, pour répondre à des appels de marge ; l'or a ainsi baissé avec les actions en mars 2020 et en 2008. Chiffres non vérifiés (voir 6.2).
+2. **Taux réels et dollar.** **[Fait, S-WGC-26]** Le WGC (22/09/2022) explique la faiblesse de l'or en 2022 par un dollar « le plus fort depuis 20 ans » et des taux en hausse, malgré inflation et tensions géopolitiques. **[Hypothèse]** Un choc qui fait monter les taux réels et le dollar neutralise le rôle de refuge.
+3. **Nature du choc.** **[Fait rapporté, S-DAWN-02]** En novembre 2001, des opérateurs cités estiment que la « prime de guerre » s'était dissipée et que le marché était suracheté après le rallye de septembre : un choc ne soutient pas durablement le prix s'il n'apporte pas de nouvelle économique.
+4. **Positionnement.** Des positions déjà acheteuses limitent l'achat additionnel (L7.01-L7.03) ; non mesuré ici.
+5. **Corrélation faible et instable.** **[Fait rapporté, S-WT-01]** La corrélation or-actions sur 1980-2020 serait de −0,15 (non sourcée, commentaire de gestionnaire) : faible, donc l'or n'est pas un contrepoids garanti.
+
+**[Interprétation]** L'or peut jouer un rôle de refuge quand le stress est **d'incertitude** et que taux réels et dollar n'offrent pas de contrepoids ; il peut être vendu quand le stress est de **liquidité** ou de **taux**.
+
+### 4.5 La matrice de confirmation et de contradiction
+
+**[Définition de cours]** Pour chaque indicateur, on fixe **avant** l'observation : un **sens attendu** en risk-off, un **seuil de mouvement** en dessous duquel le signal est « neutre », et un **horizon**. On classe ensuite chaque indicateur : **confirme** (+1), **contredit** (−1), **neutre** (0).
+
+| Indicateur | Sens attendu (risk-off) | Seuil (exemple SIMULATION) |
+|---|---|---|
+| VIX | hausse | ≥ +10 % |
+| S&P 500 | baisse | ≤ −1 % |
+| Rendement du 10 ans | baisse | ≤ −5 pb |
+| Dollar (panier) | hausse | ≥ +0,3 % |
+| Franc suisse contre euro | hausse | ≥ +0,3 % |
+| Or (même fixing) | hausse | ≥ +0,5 % |
+
+**Règle de verdict (fixée d'avance).** Risk-off si score ≥ +4 sur 6 et aucun signal central contredit ; risk-on si score ≤ −4 et aucun signal central contredit ; sinon **« régime non tranché »**. **Signal central (définition de cours, convention pédagogique non validée scientifiquement).** Un signal central est un indicateur désigné comme tel **avant l'observation** parmi les six de la matrice ; dans cette leçon, ce sont le **VIX** et le **S&P 500**, parce qu'ils mesurent directement la perception et le comportement du risque sur le marché des actions. Un signal central est « contredit » lorsqu'il est classé −1 ; un signal neutre (0) ne le contredit pas. **L'or n'est jamais un signal central** : le choisir comme tel rendrait la définition du régime dépendante du comportement de l'actif dont on veut ensuite expliquer la réaction (raisonnement circulaire). Si l'ensemble des signaux centraux est modifié, il l'est avant l'observation et la modification est consignée ; changer cet ensemble après avoir vu les prix est interdit. Le but n'est pas de trouver la bonne règle, mais d'**empêcher de choisir la règle après avoir vu les prix**.
+
+### 4.6 Perception contre comportement
+
+**Perception** : ce que les mesures reflètent des **attentes** (VIX, enquêtes, indices de nouvelles). **Comportement** : ce que les prix et les flux montrent. **[Fait, S-CEPR-01]** Les deux mesures de risque de la chronique sont corrélées mais divergent parfois : une mesure de perception peut s'écarter d'une autre, et aucune ne dit ce que les portefeuilles ont réellement fait. **[Fait, S-GPR-02]** L'indice de risque géopolitique de L8.01 mesure l'attention de la presse, pas des prix : autre mesure de perception.
+
+## 5. Définitions essentielles
+
+- **Risk-on / risk-off** : régimes de co-mouvement de prix, définis par un ensemble d'indicateurs et un horizon.
+- **Volatilité implicite** : volatilité attendue déduite de prix d'options.
+- **Devise refuge** : devise qui s'apprécie lors des pics de risque, **par paire et par période**.
+- **Fuite vers la qualité** : demande accrue d'actifs jugés sûrs ; description, non cause.
+- **Pénurie de liquidité (liquidity squeeze)** : vente d'actifs liquides pour financer des besoins de trésorerie.
+- **Signal confirmant / contredisant / neutre** : classement d'un indicateur par rapport au sens attendu et à un seuil fixé d'avance.
+- **Régime non tranché** : verdict légitime quand la règle d'avance ne conclut pas.
+
+## 6. Exemples chiffrés
+
+### 6.1 SIMULATION — une séance, six signaux
+
+**[SIMULATION]** Données fictives, un seul jour, mêmes seuils que 4.5.
+
+| Indicateur | Variation | Classement |
+|---|---|---|
+| VIX | de 15,0 à 24,0 | +60 % ≥ 10 % : **confirme** (+1) |
+| S&P 500 | −2,5 % | ≤ −1 % : **confirme** (+1) |
+| Rendement du 10 ans | −12 pb | ≤ −5 pb : **confirme** (+1) |
+| Dollar (panier) | +0,8 % | **confirme** (+1) |
+| Franc suisse contre euro | +0,1 % | < 0,3 % : **neutre** (0) |
+| Or (même fixing) | −0,4 % | hausse attendue : **contredit** (−1) |
+
+**Calculs [Calcul de l'auteur].** VIX : 24/15 − 1 = **+60 %**, soit **+9 points** ; score : 1 + 1 + 1 + 1 + 0 − 1 = **+3**. Règle : ≥ +4 requis → **« régime non tranché »**, bien que quatre signaux sur six concordent. **Lecture.** Le raccourci « risk-off » aurait été faux selon la règle d'avance ; l'or contredit sans être un signal central ; c'est le score (+3 < +4) qui laisse le verdict ouvert, et les deux signaux centraux (VIX et S&P 500) ne sont pas contredits.
+
+### 6.2 Cas historique documenté — mars 2020 : l'or baisse avec les actions (commentaire d'un gestionnaire d'actifs)
+
+**Cas historique documenté — semaine du 9 au 16 mars 2020.** **[Fait rapporté, S-WT-01]** Selon WisdomTree (26/03/2020, commentaire de gestionnaire, chiffres non sourcés) : l'or a baissé de **10 %** sur la semaine du 9 au 16 mars, le S&P 500 de **13 %**, le DAX de **18 %** et l'IBEX 35 de **20 %** ; l'or aurait aussi chuté de près de **20 %** de septembre à novembre 2008, puis monté de **170 %** jusqu'à un sommet en 2011. Explication de l'auteur : un resserrement de liquidité, l'or et les bons du Trésor étant vendus ensemble.
+
+**Ce que la leçon n'établit pas.** Les séries n'ont pas été lues ; l'instrument de l'or (comptant, fixing, contrat) n'est pas précisé ; le dollar n'est pas mentionné dans le commentaire. **Aucun rendement n'est recalculé.** **[Interprétation]** Cet épisode, s'il est exact, montre que « stress » ne suffit pas à prévoir le signe de l'or ; il ne démontre pas la cause (liquidité) qu'avance l'auteur.
+
+### 6.3 Cas historique documenté — septembre à novembre 2001 : un refuge qui refluxe
+
+**Cas historique documenté — l'or après le 11 septembre 2001.** **[Fait rapporté, S-DAWN-01, S-DAWN-02]** (agence Reuters, relais de presse) : le contrat de décembre du COMEX a atteint **300 $** le 14/09/2001, première séance après les attaques ; le 13/11/2001 il a terminé à **278,60 $** (plus haut de 282,50 $ le matin, après un accident d'avion à New York qui a ravivé un réflexe de refuge, puis retombé) ; le 16/11/2001 il a clôturé à **275,30 $** (plus bas de séance 274,70 $, le plus bas depuis le 11/09) et le comptant valait 275,00 $ ; le marché est décrit comme suracheté et la prime de guerre comme dissipée.
+
+**Calculs [Calcul de l'auteur].** Même contrat (décembre COMEX), mêmes clôtures : 275,30 / 278,60 − 1 = **−1,18 %** entre le 13 et le 16/11/2001. **Aucun rendement entre le 300 $ du 14/09 (un plus haut) et ces clôtures** n'est calculé : valeur extrême contre clôture. Le détail horizon par horizon est dans L8.06.
+
+**Lecture.** Le prix a atteint un niveau élevé puis est revenu ; l'**explication** (« prime de guerre ») est celle d'opérateurs cités, non démontrée.
+
+### 6.4 Cas historique documenté — 2022 : l'or baisse pendant une guerre
+
+**Cas historique documenté — l'or du 8 mars au 30 septembre 2022.** **[Fait rapporté, S-WGC-26, S-WGC-27]** (prix LBMA de l'après-midi cités par le WGC, valeurs non confirmées indépendamment) : 2 069 $ le 08/03/2022 et 1 672 $ le 30/09/2022, alors que le WGC évoque le dollar « le plus fort depuis 20 ans » et des hausses de taux de la Fed.
+
+**Calcul [Calcul de l'auteur].** 1 672 / 2 069 − 1 = **−19,2 %** (même instrument, même horaire). **Lecture.** La guerre continue, l'or baisse, le dollar monte et les taux montent : **une guerre n'implique pas une hausse de l'or**. Le poids de chaque facteur n'est pas mesuré.
+
+### 6.5 Volatilité implicite : conversion d'ordre de grandeur
+
+**[Définition de cours]** Si un indice de volatilité de 24 est lu comme volatilité annualisée en pourcentage, alors l'écart-type attendu sur 30 jours est de l'ordre de 24 × √(30/365) ≈ **6,9 %**, et sur un jour de 24/√252 ≈ **1,5 %**. **Limite :** ces conversions supposent des rendements indépendants et une volatilité constante ; elles donnent un **ordre de grandeur**, non une prévision du mouvement.
+
+### 6.6 SIMULATION — trois scénarios pour l'or dans un stress fictif
+
+**[SIMULATION]** Un choc fictif fait monter le VIX de 14 à 28.
+
+| Scénario | Description | Or | Signaux associés | Invalidation |
+|---|---|---|---|---|
+| A. Fuite vers la qualité | Rendements en baisse, dollar stable | Hausse modérée | Rendements −15 pb, or +1,5 % | Si les rendements montent, A est invalidé |
+| B. Resserrement de liquidité | Tout le monde vend l'actif qui se vend | Baisse avec les actions | Or −3 %, dollar +1 %, rendements stables | Si des appels de marge ne sont pas documentés et l'or remonte vite, B est affaibli |
+| C. Choc de taux | Rendements et dollar montent | Baisse | Rendements +20 pb, dollar +1,2 %, or −2 % | Si les taux réels baissent, C est invalidé |
+
+Aucune probabilité n'est donnée : les scénarios ordonnent des hypothèses, pas des prévisions.
+
+## 7. Application au Forex et à l'or
+
+- **Forex.** Pour une paire avec franc ou yen, dire **contre quelle devise** et sur **quelle période** la devise est supposée refuge ; une même devise peut être refuge contre l'euro et pas contre le dollar. Les écarts de taux restent un facteur concurrent.
+- **Or.** Toujours demander : quel type de stress (incertitude, liquidité, taux, inflation) ? Quel fixing ? Quels sont les taux réels et le dollar le même jour ?
+- **Méthode.** Écrire la matrice (sens, seuils, horizon, règle de verdict) **avant** d'ouvrir les prix ; classer ; refuser le verdict si la règle ne conclut pas.
+- **Gestion du risque.** Le diagnostic de régime ne dimensionne aucune position ; une analyse correcte ne garantit pas une transaction gagnante.
+
+## 8. Erreurs courantes
+
+1. **Définir le régime après avoir vu les prix** (choisir les indicateurs qui confirment).
+2. **Prendre le VIX pour un comportement** alors que c'est une attente impliquée par des options.
+3. **Poser « franc ou yen = refuge » sans préciser la paire.**
+4. **Poser « stress → or monte »** : refuser quand le stress est de liquidité ou de taux.
+5. **Confondre régime et cause.**
+6. **Conclure d'une séance à une tendance.**
+7. **Mêler fixings, comptant et contrats** pour calculer un rendement.
+8. **Prendre une chronique de gestionnaire d'actifs pour une source primaire.**
+9. **Ignorer les signaux neutres** dans le score.
+10. **Prévoir le régime de demain à partir d'hier.**
+
+## 9. Limites de l'interprétation
+
+- **Résumés automatiques.** Aucune lecture intégrale ; le document CBOE lu est celui du VIXMO (variante), pas la méthodologie complète du VIX.
+- **Séries de marché non lues** : aucune série de VIX, de rendements, du dollar ou de l'or n'a été lue ; les épisodes reposent sur des articles de presse et un commentaire de gestionnaire.
+- **Chiffres de mars 2020 et de 2008 non sourcés** dans le commentaire cité ; instruments non précisés.
+- **Devises refuges** : échantillons 2000-2013 ; hiérarchie postérieure non lue ; ampleurs des effets du document BNS non lues.
+- **Seuils et règle de verdict** : conventions pédagogiques, non des résultats de recherche.
+- **Facteurs concurrents** (dollar, taux réels, positionnement) non mesurés pour 2001 et mars 2020.
+- **Anomalie consignée** : le contrat de décembre du COMEX a « atteint 300 $ » le 14/09/2001 (Reuters) alors qu'un site de données donne un plus haut de septembre 2001 de 295 $ (moyenne de clôtures, base différente) : deux bases, **les deux valeurs sont conservées**.
+- **Aucun contrefactuel** ; trois épisodes ne font pas une règle.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Définir un régime.** Écris en deux phrases ce qu'est un régime risk-off et ce qu'il n'est pas. Donne trois précisions qui limitent l'usage du mot.
+
+<details>
+<summary>Correction</summary>
+
+Un régime risk-off est un résumé de co-mouvements de prix (actions et rendements en baisse, volatilité implicite et certaines devises refuges en hausse) sur un ensemble d'indicateurs et un horizon donnés ; ce n'est ni une cause, ni une prévision. Précisions : dépend de l'ensemble d'indicateurs et de l'horizon ; ne dit rien de la cause ; hier ne prédit pas demain.
+</details>
+
+**Exercice 2 — Perception ou comportement ?** Classe : (a) le VIX ; (b) la variation du dollar contre le franc ; (c) un indice de nouvelles ; (d) une sortie d'ETF d'or ; (e) un sondage de gérants.
+
+<details>
+<summary>Correction</summary>
+
+(a) Perception (attente impliquée par des options). (b) Comportement de prix. (c) Perception (attention de la presse). (d) Comportement (flux). (e) Perception (opinion déclarée). Un indicateur de perception ne dit pas ce que les portefeuilles ont fait.
+</details>
+
+**Exercice 3 — Appliquer la matrice (SIMULATION).** Mêmes seuils que 4.5. VIX de 18 à 19,5 ; S&P 500 −1,4 % ; rendement du 10 ans −8 pb ; dollar +0,5 % ; franc/euro +0,5 % ; or +0,9 %. Calcule le score et le verdict.
+
+<details>
+<summary>Correction</summary>
+
+VIX : 19,5/18 − 1 = +8,3 % < 10 % : neutre (0). S&P : −1,4 % ≤ −1 % : confirme (+1). Rendement : −8 pb : confirme (+1). Dollar : +0,5 % ≥ 0,3 % : confirme (+1). Franc : +0,5 % : confirme (+1). Or : +0,9 % ≥ 0,5 % : confirme (+1). Score = **+5** ≥ +4, aucun signal contredit : **risk-off** selon la règle d'avance. Observation : le VIX est neutre ; le verdict ne tient pas à lui seul.
+</details>
+
+**Exercice 4 — Quand la règle ne conclut pas (SIMULATION).** Score de +2 sur 6 avec deux signaux contredisants. Quel verdict, et pourquoi est-il légitime ?
+
+<details>
+<summary>Correction</summary>
+
+« Régime non tranché » : +2 < +4 et la règle ne conclut pas. C'est un verdict légitime : il évite de forcer une étiquette ; les deux contradictions sont à documenter (quels indicateurs, quels niveaux).
+</details>
+
+**Exercice 5 — L'or contredit.** Dans l'exercice 6.1, l'or baisse de 0,4 % alors que quatre signaux concordent. Donne trois hypothèses distinctes, avec ce qu'il faudrait observer pour chacune.
+
+<details>
+<summary>Correction</summary>
+
+(1) Liquidité : ventes forcées documentées (appels de marge), corrélation positive avec les actions le même jour. (2) Dollar et taux réels : dollar en hausse sans baisse des taux réels (les rendements nominaux baissent, les anticipations d'inflation aussi). (3) Positionnement : positions déjà acheteuses fortes (COT) sans achat additionnel. Aucune n'est démontrée par les seules données ; chaque hypothèse demande une mesure absente de l'énoncé.
+</details>
+
+**Exercice 6 — Volatilité implicite.** Un indice de volatilité vaut 20. Convertis-le en écart-type attendu sur 30 jours et sur 1 jour, et dis ce que ces nombres ne disent pas.
+
+<details>
+<summary>Correction</summary>
+
+30 jours : 20 × √(30/365) = 20 × 0,2867 ≈ **5,7 %**. 1 jour : 20/√252 = 20/15,875 ≈ **1,26 %**. Ces nombres supposent une volatilité constante et des rendements indépendants ; ils ne donnent ni la direction ni la probabilité d'un mouvement donné.
+</details>
+
+**Exercice 7 — Auditer une conclusion.** Un commentaire écrit : « La guerre a fait baisser l'or de 19 % en 2022 ; l'or n'est donc pas un refuge. » Relève trois défauts.
+
+<details>
+<summary>Correction</summary>
+
+(1) La baisse de 19,2 % est calculée entre deux fixings de l'après-midi (8/03 et 30/09) : elle décrit une variation de prix, pas l'effet de la guerre. (2) Les sources lues attribuent la faiblesse au dollar fort et aux taux en hausse : facteurs concurrents non mesurés. (3) Un épisode ne prouve pas une règle générale. Reformulation : « Entre le 8/03 et le 30/09/2022, l'or a baissé de 19,2 % (fixings de l'après-midi rapportés par le WGC) malgré la guerre ; les sources évoquent le dollar et les taux ; la part de chaque facteur n'est pas mesurée. »
+</details>
+
+**Exercice 8 — Refuser un calcul.** Un élève calcule le rendement entre le « 300 $ » atteint le 14/09/2001 et la clôture de 275,30 $ du 16/11/2001. Que réponds-tu ? Quel calcul est permis ?
+
+<details>
+<summary>Correction</summary>
+
+Le 300 $ est un plus haut (valeur extrême) ; 275,30 $ est une clôture : bases différentes. Permis : 275,30/278,60 − 1 = −1,18 % entre deux clôtures du même contrat (13 et 16/11). Pour la période du 14/09, il manque la clôture du 14/09 : la leçon ne la reconstitue pas.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L8.05.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Risk-on et risk-off sont des **régimes de co-mouvement**, définis par un ensemble d'indicateurs et un horizon ; ni cause, ni prévision.
+- La **perception** (VIX, indices de nouvelles) n'est pas le **comportement** (prix, flux).
+- Le franc suisse et le yen sont des refuges **par paire et par période**.
+- L'or **ne monte pas systématiquement** : liquidité, dollar, taux, nature du choc, positionnement.
+- Une matrice avec **règle fixée d'avance** peut conclure « régime non tranché ».
+- Épisodes lus : septembre-novembre 2001 (reflux), mars 2020 (baisse avec les actions, selon un gestionnaire), 2022 (−19,2 % pendant la guerre).
+- **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 13. Critères de maîtrise
+
+- [ ] Définir risk-on et risk-off sans en faire une cause (Exercice 1).
+- [ ] Séparer perception et comportement (Exercice 2).
+- [ ] Appliquer la matrice et conclure, y compris « non tranché » (Exercices 3 et 4).
+- [ ] Formuler des hypothèses distinctes quand l'or contredit (Exercice 5).
+- [ ] Convertir une volatilité implicite en ordre de grandeur (Exercice 6).
+- [ ] Auditer une conclusion causale hâtive (Exercice 7).
+- [ ] Refuser un rendement entre bases différentes (Exercice 8).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+- **S-CBOE-01** — Cboe, méthodologie de l'indice de volatilité VIXMO (résumé automatique) : https://cdn.cboe.com/api/global/us_indices/governance/Volatility_Index_methodology_VIXMO_only.pdf
+- **S-CEPR-01** — CEPR / VoxEU, « Risk, surprises and safe haven currencies » : https://cepr.org/voxeu/columns/risk-surprises-and-safe-haven-currencies
+- **S-SNB-02** — Banque nationale suisse, document de travail 2013-04, « On financial risk and the safe haven characteristics of Swiss franc exchange rates » : https://snb.ch/de/mmr/papers/id/working_paper_2013_04
+- **S-WT-01** — WisdomTree (via Financial Investigator), commentaire du 26/03/2020 : https://www.financialinvestigator.nl/en/nieuws-detailpagina/2020/03/26/WisdomTree-What-does-the-recent-sell-off-tell-us-about-gold-as-a-safe-haven
+- **S-DAWN-01** — Dawn / Reuters, 14/11/2001 : https://www.dawn.com/news/6127
+- **S-DAWN-02** — Dawn / Reuters, 17/11/2001 : https://www.dawn.com/news/6606
+- **S-WGC-26**, **S-WGC-27** — World Gold Council, 22/09/2022 et 06/10/2022 (voir L8.02).
+- **S-GPR-02** — Indice de risque géopolitique (voir L8.01).

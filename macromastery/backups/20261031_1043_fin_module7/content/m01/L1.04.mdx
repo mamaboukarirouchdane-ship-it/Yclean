@@ -1,0 +1,275 @@
+---
+id: L1.04
+module: 1
+order: 4
+title: "Mesurer l'inflation : CPI, PCE, déflateur, inflation globale et sous-jacente"
+title_initial: "Mesurer l'inflation"
+level: "débutant à intermédiaire"
+duration_hours: 3.0
+prerequisites: ["L0.07", "L1.01"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L1.04.quiz.json"
+sources: ["S-BLS-02", "S-BEA-02", "S-BEA-01", "S-CLE-01", "S-FED-01"]
+---
+
+# L1.04 — Mesurer l'inflation : CPI, PCE, déflateur, inflation globale et sous-jacente
+
+> **Convention de lecture.** **[Fait]** = chiffre ou énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les communiqués sont lus par **résumé automatique** et sont à confirmer sur les documents originaux. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. définir l'**inflation** et la calculer à partir d'un indice de prix (glissement annuel, variation mensuelle, annualisation) ;
+2. expliquer comment se construit un **indice de prix** (panier, pondérations) et ce qu'est l'effet de **substitution** ;
+3. comparer le **CPI**, le **PCE** et le **déflateur du PIB** : champ, producteur, usage ;
+4. distinguer **inflation globale** (*headline*) et **sous-jacente** (*core*) et lire l'apport de l'énergie et de l'alimentation ;
+5. repérer un **effet de base** ;
+6. lire un communiqué d'inflation en séparant faits, calculs et incohérences apparentes.
+
+## 2. Prérequis
+
+L0.07 (pourcentages, annualisation, taux réel) et L1.01 (nominal/réel, déflateur du PIB, mesures concurrentes).
+
+## 3. Explication intuitive
+
+L'inflation, c'est la hausse générale et durable des prix. Mais « les prix » n'existent pas : il existe des millions de prix. On construit donc un **indice** : on fixe un panier de dépenses, on suit son coût dans le temps, et on mesure comment ce coût évolue.
+
+Trois difficultés guident la leçon :
+
+1. **Qui mesure, et quel panier ?** L'indice des prix à la consommation (CPI) et l'indice des dépenses de consommation (PCE) n'ont ni le même producteur, ni le même champ, ni les mêmes pondérations.
+2. **Quelle fréquence ?** Une variation mensuelle est bruyante ; une variation sur douze mois est plus lisse mais reflète aussi ce qui s'est passé il y a un an (effet de base).
+3. **Avec ou sans énergie et alimentation ?** Ces prix sont volatils, d'où l'indicateur « sous-jacent » (hors alimentation et énergie), qui n'est pas la « vraie » inflation mais un outil.
+
+## 4. Développement technique
+
+### 4.1 Calculer l'inflation
+
+**[Définition]** Si Pₜ est un indice de prix :
+
+- **inflation sur 12 mois (glissement annuel)** = Pₜ ÷ Pₜ₋₁₂ − 1 ;
+- **variation mensuelle** = Pₜ ÷ Pₜ₋₁ − 1 ;
+- **mensuel annualisé** = (1 + m)¹² − 1.
+
+**Exemple (SIMULATION).** Pₜ₋₁₂ = 290,0 et Pₜ = 300,7 : glissement annuel = 300,7 ÷ 290,0 − 1 = **3,69 %**. Une variation mensuelle de +0,6 % annualise à 1,006¹² − 1 = **7,44 %** ; +0,3 % à **3,66 %** ; +0,2 % à **2,43 %**. Un seul mois ne fait pas une tendance.
+
+### 4.2 Construire un indice : panier, pondérations, substitution
+
+**[Définition]** L'**indice de Laspeyres** compare le coût d'un panier **fixe** (quantités de la période de base) à deux dates : Σ(p₁ × q₀) ÷ Σ(p₀ × q₀). L'**indice de Paasche** utilise les quantités de la période courante : Σ(p₁ × q₁) ÷ Σ(p₀ × q₁). Les indices modernes utilisent des formules qui actualisent les paniers.
+
+**Exemple (SIMULATION).** Trois postes : alimentation (A), énergie (B), services (C).
+
+| Poste | Prix p₀ | Prix p₁ | Quantités q₀ | Quantités q₁ |
+| --- | --- | --- | --- | --- |
+| A | 2,00 | 2,20 | 100 | 100 |
+| B | 1,50 | 1,80 | 60 | 40 |
+| C | 10,00 | 10,50 | 40 | 45 |
+
+- **Laspeyres** : (2,20 × 100 + 1,80 × 60 + 10,50 × 40) ÷ (2,00 × 100 + 1,50 × 60 + 10,00 × 40) = 748 ÷ 690 = 1,0841, soit **+8,41 %**.
+- **Paasche** : (2,20 × 100 + 1,80 × 40 + 10,50 × 45) ÷ (2,00 × 100 + 1,50 × 40 + 10,00 × 45) = 764,5 ÷ 710 = 1,0768, soit **+7,68 %**.
+
+Les consommateurs ont réduit l'énergie, dont le prix a le plus augmenté : c'est l'**effet de substitution**. Un panier fixe l'ignore et **surestime** légèrement le coût de la vie ; l'indice actualisé le prend en compte.
+
+### 4.3 CPI, PCE, déflateur : les différences
+
+**[Fait, S-CLE-01, résumé automatique d'un article de 2014 de la Fed de Cleveland]**
+
+- Le **CPI** est publié par le **BLS** à partir d'une **enquête sur ce que les ménages achètent**. Le **PCE** est publié par le **BEA** à partir d'enquêtes sur **ce que les entreprises vendent**.
+- **Champ** : le CPI ne couvre que les dépenses **à la charge du consommateur** ; il exclut les soins payés par l'assurance de l'employeur, Medicare et Medicaid, que le PCE inclut.
+- **Pondérations** (*weight effect*) : chaque indice pondère les postes par leur part dans les dépenses, mais avec des estimations différentes du panier. Selon l'article, c'est en général la différence la plus importante et elle tend à **pousser le CPI plus haut**.
+- **Formule** (*formula effect*) : le PCE tient compte de la substitution quand un bien devient plus cher ; le CPI utilise à peu près le même panier qu'avant.
+- **Objectif de la Fed** : l'article dit que la Réserve fédérale énonce son objectif en termes de PCE.
+- **Écarts historiques cités** (jusqu'en 2014) : depuis 2000, prix +39 % (CPI) contre +31 % (PCE) ; inflation annuelle moyenne 2,4 % contre 1,9 %.
+
+**[Interprétation]** L'écart est **historiquement** favorable à une inflation CPI plus élevée que PCE, mais il n'est **pas une loi** : l'article est ancien (2014), et la relation peut changer selon les périodes et les postes. L'article contient aussi une incohérence interne signalée par le résumé (valeurs de l'inflation sous-jacente depuis 2000 données à la fois à 2,0 % / 1,7 % et à 3,9 % / 3,4 %), que la leçon ne tranche pas et n'utilise pas.
+
+**Le déflateur du PIB** (L1.01) mesure le prix de **tout ce qui est produit sur le territoire**, y compris l'investissement et les exportations, et exclut les importations ; le PCE mesure les prix de ce que **consomment** les ménages, y compris les produits importés. Ils peuvent diverger, notamment quand les prix de l'énergie ou des importations changent.
+
+### 4.4 Inflation globale et sous-jacente
+
+**[Définition]** L'**inflation globale** (*headline*) porte sur tous les postes. L'**inflation sous-jacente** (*core*) exclut l'**alimentation et l'énergie**, dont les prix sont plus volatils.
+
+**Pourquoi cet indicateur ?** Pour distinguer une hausse **passagère** (choc pétrolier) d'une hausse **diffuse** et plus persistante. **Limites** : (1) l'énergie et l'alimentation pèsent dans le budget des ménages et influencent leurs anticipations (L1.05) ; (2) la sous-jacente n'est pas à l'abri des chocs (l'énergie entre dans les coûts) ; (3) il n'y a pas une seule définition de « core » dans le monde.
+
+### 4.5 Un cas chiffré : le CPI de septembre 2026
+
+**[Fait, S-BLS-02, résumé automatique du communiqué du 14 octobre 2026]** CPI-U, septembre 2026 :
+
+| Indice | Variation mensuelle (corrigée) | Sur 12 mois (non corrigée) |
+| --- | --- | --- |
+| Ensemble | **+0,6 %** | **+3,7 %** |
+| Hors alimentation et énergie | **+0,3 %** | **+2,6 %** |
+| Alimentation | 0,0 % | +2,5 % |
+| Énergie | **+5,2 %** | **+20,4 %** |
+| Logement (*shelter*) | +0,4 % | +3,2 % |
+
+**[Calcul de l'auteur]** L'écart entre l'inflation globale (3,7 %) et sous-jacente (2,6 %) est de **1,1 point** ; il vient presque entièrement de l'énergie. En notant w_e et w_f les poids de l'énergie et de l'alimentation : 3,7 = w_e × 20,4 + w_f × 2,5 + (1 − w_e − w_f) × 2,6. Avec l'hypothèse **non lue dans la source** w_f = 13 %, on obtient w_e ≈ (1,1 + 0,1 × 0,13) ÷ 17,8 = **6,3 %**. C'est un ordre de grandeur **déduit** de chiffres arrondis, non le poids officiel, que la leçon n'a pas lu.
+
+Le résumé ne signale aucun problème de collecte de données.
+
+### 4.6 Un cas chiffré : le PCE d'août 2026
+
+**[Fait, S-BEA-02, résumé automatique du communiqué du 30 septembre 2026]** Août 2026 : indice des prix PCE **+0,3 %** sur le mois et **+3,4 %** sur douze mois ; PCE hors alimentation et énergie **+0,2 %** et **+3,0 %** ; dépenses de consommation **+0,9 %** en nominal et **+0,6 %** en réel. **[Calcul de l'auteur]** 1,009 ÷ 1,003 − 1 = **0,598 %** : la dépense réelle (+0,6 %) est cohérente avec la dépense nominale (+0,9 %) déflatée par le prix (+0,3 %).
+
+**[Fait, S-BEA-01, L1.01]** Pour le deuxième trimestre 2026, l'indice des prix PCE a progressé de **5,0 %** en taux annualisé et le PCE hors alimentation et énergie de **3,3 %**.
+
+### 4.7 Lire les écarts entre indices
+
+Comparons (données lues par résumé automatique) :
+
+| Indice | Période | Sur 12 mois |
+| --- | --- | --- |
+| CPI global | septembre 2026 | 3,7 % |
+| PCE global | août 2026 | 3,4 % |
+| CPI sous-jacent | septembre 2026 | 2,6 % |
+| PCE sous-jacent | août 2026 | 3,0 % |
+
+**[Interprétation]** Les mois diffèrent (août / septembre) et la comparaison directe est donc fragile. Surtout, le **PCE sous-jacent (3,0 %) paraît supérieur au CPI sous-jacent (2,6 %)**, alors que l'article de 2014 décrit un CPI plutôt supérieur au PCE. Cela peut refléter des périodes, des postes (par exemple des services de santé ou financiers présents dans le PCE) ou une erreur de lecture du résumé automatique. **La leçon ne tranche pas** : elle signale l'écart et demande une vérification sur les documents originaux (« à vérifier »). L'exercice 4 s'y consacre.
+
+### 4.8 L'effet de base
+
+**[Définition]** Le glissement annuel compare le mois courant au même mois un an plus tôt : un mois très haut ou très bas **il y a douze mois** sort du calcul et fait varier le glissement annuel même si le mois courant est calme.
+
+**Exemple (SIMULATION).** Pₜ₋₁₂ = 290,0 ; Pₜ = 300,7 (3,69 %). Au mois suivant : Pₜ₊₁ = 301,2 (+0,17 % sur le mois) et Pₜ₋₁₁ = 290,6 : glissement annuel = 301,2 ÷ 290,6 − 1 = **3,65 %**. Il baisse de 0,04 point alors que le mois a été en hausse : le point de comparaison a augmenté de 0,21 %.
+
+### 4.9 Le cas d'un objectif explicite : l'objectif de 2 % de la Fed
+
+**[Fait, S-FED-01, résumé automatique]** La déclaration de la Fed sur les objectifs de long terme définit l'objectif d'inflation comme « inflation at the rate of 2 percent », mesurée par la variation annuelle de l'indice des prix des dépenses de consommation personnelles. Elle est entrée en vigueur le **24 janvier 2012** et a été modifiée pour la dernière fois le **22 août 2025** (selon la page lue).
+
+## 5. Définitions essentielles
+
+- **Inflation** : hausse générale et durable du niveau des prix.
+- **Indice des prix** : coût d'un panier relatif à une base.
+- **Glissement annuel / mensuel / annualisé** : variation sur 12 mois / sur un mois / mensuel porté à l'année.
+- **Laspeyres / Paasche** : panier de la base / panier courant.
+- **Substitution** : report vers les biens relativement moins chers.
+- **CPI, PCE, déflateur du PIB** : prix à la consommation (ménages, BLS), prix des dépenses de consommation (BEA), prix de la production intérieure (BEA).
+- **Inflation globale / sous-jacente** : tous postes / hors alimentation et énergie.
+- **Effet de base** : influence, sur le glissement annuel, du niveau de l'indice il y a douze mois.
+
+## 6. Exemples chiffrés
+
+**A.** Glissement annuel : 300,7 ÷ 290,0 − 1 = 3,69 % (§4.1).
+**B.** Annualisation : +0,6 % par mois → 7,44 % (§4.1).
+**C.** Laspeyres +8,41 % contre Paasche +7,68 % (§4.2).
+**D.** CPI de septembre 2026 : global 3,7 %, sous-jacent 2,6 %, énergie +20,4 % (§4.5).
+**E.** Effet de base : 3,69 % → 3,65 % malgré une hausse mensuelle (§4.8).
+
+### 6.5 Cas historique documenté — l'objectif d'inflation de 2 % mesuré par le PCE (Fed, 2012)
+
+**[Fait, S-FED-01, résumé automatique]** La Fed a adopté, effective le 24 janvier 2012, une déclaration sur ses objectifs de long terme qui exprime l'objectif d'inflation de 2 % en termes de PCE ; la déclaration a été modifiée pour la dernière fois effectivement le 22 août 2025. **[Fait, S-CLE-01]** Un article de 2014 de la Fed de Cleveland expliquait déjà que la Fed énonce son objectif en PCE et décrivait les différences avec le CPI (champ, pondérations, formule).
+
+**Ce que la leçon n'a pas pu confirmer :** le texte complet de la déclaration, le contenu de la modification de 2025 et les raisons exactes du choix du PCE. **[Interprétation]** Ce cas montre qu'« inflation » n'est pas un chiffre unique : quand une banque centrale fixe une cible, elle choisit un **indice précis**, et c'est celui-là qu'il faut suivre pour anticiper ses décisions (module 2). Il ne dit rien sur le niveau futur de l'inflation.
+
+## 7. Application au Forex et à l'or
+
+- **Forex** : à l'instant de la publication, la réaction d'une devise dépend de l'écart du chiffre (global, sous-jacent, mensuel) **avec la prévision**, et de la manière dont il modifie les anticipations de taux directeur (modules 2, 3, 4). Le CPI est publié avant le PCE ; le marché suit les deux, mais la banque centrale se réfère à son indice cible.
+- **Or** : l'inflation agit surtout par les **taux réels** (taux nominal − inflation, L0.07) ; une inflation forte avec des taux nominaux qui montent peut laisser les taux réels inchangés ou en hausse, ce qui n'est pas favorable à l'or toutes choses égales par ailleurs (module 5). L'idée populaire « l'or protège de l'inflation » est une **hypothèse à tester**, non un fait établi ici.
+- **Méthode** : toujours identifier **quel indice, quel mois, quelle période de comparaison** et si l'on parle de global ou de sous-jacent.
+- **Rappel** : **une bonne analyse ne garantit pas une transaction gagnante.**
+
+## 8. Erreurs courantes
+
+- **Comparer un chiffre mensuel à un chiffre annuel.**
+- **Annualiser un seul mois comme une tendance.**
+- **Confondre CPI et PCE** et leurs périodes de publication.
+- **Croire que le sous-jacent est « la vraie inflation ».**
+- **Ignorer l'effet de base.**
+- **Comparer des indices de mois différents sans le signaler.**
+- **Reprendre un chiffre d'une source qui se contredit.**
+- **Supposer que l'or protège automatiquement de l'inflation.**
+
+## 9. Limites de l'interprétation
+
+- Communiqués du BLS et du BEA et pages de la Fed lus par **résumé automatique**.
+- L'article de la Fed de Cleveland date de **2014** et contient une incohérence interne ; il sert à décrire les types de différences, non les écarts actuels.
+- Les poids de l'énergie et de l'alimentation dans le CPI **n'ont pas été lus** ; l'estimation de 6,3 % est un calcul de l'auteur fondé sur une hypothèse.
+- L'écart PCE sous-jacent / CPI sous-jacent n'est **pas expliqué** ici.
+- Le PCE de septembre 2026 n'a pas été lu (non cherché dans cette session).
+- Les effets sur les devises et l'or sont des **hypothèses d'analyse**.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Laspeyres et Paasche.** Reprends le tableau de §4.2 mais avec p₁ pour l'énergie = 2,10 (au lieu de 1,80). (a) Laspeyres ? (b) Paasche ? (c) Lequel est le plus élevé et pourquoi ?
+
+<details>
+<summary>Correction 1</summary>
+
+(a) (2,20 × 100 + 2,10 × 60 + 10,50 × 40) ÷ 690 = (220 + 126 + 420) ÷ 690 = 766 ÷ 690 = 1,1101, soit **+11,01 %**.
+(b) (220 + 2,10 × 40 + 472,5) ÷ 710 = (220 + 84 + 472,5) ÷ 710 = 776,5 ÷ 710 = 1,0937, soit **+9,37 %**.
+(c) Laspeyres : il garde les quantités d'énergie élevées (60) alors que les consommateurs ont réduit (40) ; l'écart de substitution est plus grand quand la hausse relative est plus forte.
+</details>
+
+**Exercice 2 — Annualiser.** Variations mensuelles : +0,2 % ; +0,3 % ; +0,6 %. (a) Annualise chacune. (b) Un journaliste écrit « l'inflation est de 7,4 % » à partir de la troisième : critique.
+
+<details>
+<summary>Correction 2</summary>
+
+(a) 1,002¹² − 1 = **2,43 %** ; 1,003¹² − 1 = **3,66 %** ; 1,006¹² − 1 = **7,44 %**. (b) Un seul mois bruyant n'est pas une tendance ; l'énergie à +5,2 % ce mois-là (cas du §4.5) explique l'essentiel ; le glissement sur 12 mois (3,7 %) est une meilleure base de comparaison, avec ses propres limites.
+</details>
+
+**Exercice 3 — Contribution de l'énergie.** Poids : énergie 7 %, alimentation 13 %, reste 80 %. Variations sur 12 mois : énergie +20,4 %, alimentation +2,5 %, reste +2,6 %. (a) Inflation globale approximative ? (b) Contribution de l'énergie ? (c) Compare au chiffre publié de 3,7 % et conclus sur les poids.
+
+<details>
+<summary>Correction 3</summary>
+
+(a) 0,07 × 20,4 + 0,13 × 2,5 + 0,80 × 2,6 = 1,428 + 0,325 + 2,08 = **3,83 %**. (b) **1,43 point**. (c) Le chiffre publié (3,7 %) est un peu plus bas : le poids réel de l'énergie est probablement inférieur à 7 % (calcul du §4.5 : environ 6,3 % avec w_f = 13 %). Les poids officiels ne sont pas lus : à vérifier.
+</details>
+
+**Exercice 4 — Lire un écart.** Données de §4.7. (a) Calcule PCE sous-jacent − CPI sous-jacent. (b) Cet écart est-il cohérent avec l'article de Cleveland de 2014 ? (c) Cite trois explications possibles à ne PAS affirmer sans vérification et la démarche de contrôle.
+
+<details>
+<summary>Correction 4</summary>
+
+(a) 3,0 − 2,6 = **+0,4 point**. (b) Non : l'article décrit une inflation CPI plutôt plus élevée que PCE sur ses périodes. (c) Mois différents (août / septembre) ; composition (poste présent dans le PCE et pas dans le CPI) ; erreur de lecture du résumé automatique. Contrôle : relire les deux communiqués originaux, aligner les mois, comparer les composantes.
+</details>
+
+**Exercice 5 — Effet de base.** Indices (SIMULATION) : il y a douze mois 120,0 ; il y a onze mois 121,5 ; aujourd'hui 124,8 ; le mois prochain 125,1. (a) Glissement annuel d'aujourd'hui ? (b) Glissement annuel du mois prochain ? (c) Explique l'écart.
+
+<details>
+<summary>Correction 5</summary>
+
+(a) 124,8 ÷ 120,0 − 1 = **4,00 %**. (b) 125,1 ÷ 121,5 − 1 = **2,96 %**. (c) Le mois de comparaison a bondi de 1,25 % (120 → 121,5) : l'effet de base fait baisser le glissement annuel de plus d'un point, alors que le mois courant a augmenté de 0,24 %.
+</details>
+
+**Exercice 6 — Nominal, réel, prix.** Dépenses de consommation nominales +0,9 % en août 2026 ; prix PCE +0,3 %. (a) Croissance réelle exacte ? (b) Que serait la dépense réelle si le prix avait augmenté de 0,9 % ? (c) Pourquoi la Fed s'intéresse-t-elle à l'indice de prix PCE ?
+
+<details>
+<summary>Correction 6</summary>
+
+(a) 1,009 ÷ 1,003 − 1 = **0,598 %**, soit 0,6 % (cohérent avec la publication). (b) 1,009 ÷ 1,009 − 1 = **0 %**. (c) Parce que son objectif de 2 % est exprimé en variation annuelle de l'indice des prix PCE (déclaration de janvier 2012, modifiée en août 2025 selon la page lue).
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L1.04.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- **Inflation** = variation d'un indice de prix ; glissement annuel = Pₜ/Pₜ₋₁₂ − 1 ; un mois annualisé est bruyant.
+- **CPI (BLS, ménages)** ≠ **PCE (BEA, ventes des entreprises)** : champ, pondérations, formule ; la Fed vise 2 % en **PCE**.
+- Le **déflateur du PIB** mesure les prix de la production intérieure.
+- **Sous-jacent** = hors alimentation et énergie : outil, non « vérité » ; septembre 2026 : CPI 3,7 % contre 2,6 % ; énergie +20,4 %.
+- L'**effet de base** peut faire baisser le glissement annuel malgré un mois en hausse.
+- Un écart PCE/CPI inattendu se **signale et se vérifie**, il ne s'explique pas par conjecture.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer glissement annuel, mensuel, annualisé (Exercices 2, 5).
+- [ ] Construire Laspeyres et Paasche et expliquer la substitution (Exercice 1).
+- [ ] Décomposer global et sous-jacent (Exercice 3).
+- [ ] Lire des écarts entre indices avec prudence (Exercice 4).
+- [ ] Relier nominal, réel et prix (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-BLS-02** — BLS, *Consumer Price Index, September 2026* (communiqué du 14 octobre 2026) : https://www.bls.gov/news.release/archives/cpi_10142026.htm
+- **S-BEA-02** — BEA, *Personal Income and Outlays, August 2026* (30 septembre 2026) : https://www.bea.gov/sites/default/files/2026-09/pi0826.pdf
+- **S-BEA-01** — BEA, communiqué du PIB du T2 2026 (voir L1.01) : https://www.bea.gov/sites/default/files/2026-09/gdp2q26-3rd.pdf
+- **S-CLE-01** — Federal Reserve Bank of Cleveland, *PCE and CPI Inflation: What's the Difference?* (17 avril 2014) : https://www.clevelandfed.org/publications/economic-trends/2014/et-20140417-pce-and-cpi-inflation-difference
+- **S-FED-01** — Réserve fédérale, *Statement on Longer-Run Goals and Monetary Policy Strategy* (version 2025) : https://www.federalreserve.gov/monetarypolicy/monetary-policy-strategy-tools-and-communications-statement-on-longer-run-goals-monetary-policy-strategy-2025.htm
+
+**Définitions de cours non rattachées à une source officielle lue :** formules de glissement annuel, d'annualisation, de Laspeyres et de Paasche, effet de base. **Points non vérifiés :** poids officiels des postes du CPI et du PCE, PCE de septembre 2026, explication de l'écart PCE/CPI sous-jacent, texte complet de la déclaration de la Fed.

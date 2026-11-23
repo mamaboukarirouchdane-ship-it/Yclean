@@ -1,0 +1,232 @@
+---
+id: L6.03
+module: 6
+order: 3
+title: "Réactions asymétriques : amplitude, direction, durée et contexte, avec un protocole d'échantillon fixé d'avance"
+title_initial: "Réactions asymétriques"
+level: "avancé"
+duration_hours: 3.0
+prerequisites: ["L6.01", "L6.02", "L5.03", "L5.04"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L6.03.quiz.json"
+sources: ["S-KIT-06", "S-KIT-07", "S-KIT-08", "S-MPL-01", "S-KIT-05", "S-MIN-02", "S-ADM-04", "S-CME-05"]
+---
+
+# L6.03 — Réactions asymétriques
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée, avec sa date ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[Hypothèse]** ; **[SIMULATION]** = chiffres fictifs. Toutes les sources sont des articles de presse spécialisée lus par **résumé automatique** ; aucune ne donne de prix aux fenêtres de 5 minutes, 30 minutes et 4 heures. **L'étude empirique de cette leçon est donc dégradée : elle porte sur des variations de séance et sur cinq événements, et ne permet aucune conclusion statistique.** **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. distinguer **direction**, **amplitude** et **durée** d'une réaction, et les quatre asymétries (directionnelle, d'amplitude, temporelle, de contexte) ;
+2. distinguer **surprise économique** et **surprise monétaire**, et mesurer une réaction par un rendement R = (P_t ÷ P₀ − 1) × 100 sur une fenêtre fixée ;
+3. séparer asymétrie réelle et simple **différence de taille du choc** ;
+4. écrire un **protocole d'échantillon** avant de sélectionner les événements, avec exclusions documentées ;
+5. expliquer pourquoi **cinq événements** ne démontrent aucune asymétrie (plus petite valeur-p possible) ;
+6. distinguer observation, interprétation et conclusion causale.
+
+## 2. Prérequis
+
+- Attendu, publié, surprise et fiche d'événement (L6.01), probabilités implicites (L6.02), taux réels et dollar (L5.03, L5.04).
+
+## 3. Explication intuitive
+
+On aimerait dire : « une bonne nouvelle fait monter, une mauvaise fait baisser, de façon symétrique ». Le marché ne se comporte pas comme une balance. Une même taille de surprise peut produire 0,2 % un jour et 1 % un autre ; une décision conforme peut quand même faire bouger le prix parce que le **ton** change les attentes pour la suite ; un mouvement initial peut s'inverser une demi-heure plus tard. Mais la tentation inverse existe aussi : voir de l'asymétrie partout à partir de deux ou trois souvenirs. La leçon donne une **grille** pour la chercher et un **protocole** pour la tester, puis montre honnêtement ce qu'on peut — et ne peut pas — conclure avec les données lues.
+
+## 4. Développement technique
+
+### 4.1 Définir l'asymétrie
+**[Définition de cours]** Une réaction a trois dimensions : **direction** (signe), **amplitude** (taille), **durée** (persistance ou inversion). Quatre asymétries à distinguer :
+- **Directionnelle** : une surprise favorable au dollar peut peser sur l'or, mais une surprise défavorable au dollar n'entraîne pas forcément une hausse équivalente.
+- **D'amplitude** : une surprise de même taille produit 0,2 % dans un cas et 1 % dans un autre.
+- **Temporelle** : le mouvement initial s'inverse dans les 30 minutes ou les 4 heures suivantes.
+- **De contexte** : la même surprise d'inflation est lue différemment selon les anticipations de taux, les taux réels, le dollar et les risques géopolitiques.
+**[Interprétation]** Ces catégories sont une **grille d'analyse** ; leur existence théorique ne prouve pas qu'une asymétrie soit systématique sur l'or.
+
+### 4.2 Surprises positives et négatives
+**[Définition]** Surprise = publié − attendu (L6.01). **Surprise économique** : écart d'une donnée (inflation, emploi). **Surprise monétaire** : écart de la décision (ou de son ton) par rapport aux probabilités de marché (L6.02). Ne pas les confondre : une inflation plus forte que prévu est une surprise économique ; la hausse de taux qu'elle entraîne en est une conséquence anticipée ou non.
+**Mesure.** **[Définition]** R_t = (P_t ÷ P₀ − 1) × 100, avec P₀ le prix au début de la fenêtre et P_t à sa fin. Les moyennes et médianes des R_t se comparent par groupe de surprises, **sur une même fenêtre**.
+
+### 4.3 L'asymétrie des annonces de la Fed : cinq décisions de 2026
+**[Fait]** Données de presse (spot, variation **de séance** après le communiqué ; aucune n'a d'horaire précis) :
+
+| Réunion | Décision | Attendue ? | Vote | Spot | Variation de séance | Source |
+|---|---|---|---|---|---|---|
+| 29/04/2026 | maintien à 3,50–3,75 % | oui (consensus) | 11–1 (Miran pour −¼ ; Hammack, Kashkari, Logan contre le biais d'assouplissement du texte) | 4 532,32 | −1,40 % | S-KIT-06 |
+| 17/06/2026 | maintien | oui (consensus) | 12–0 ; première réunion sous Warsh ; 9 des 19 prévoient une hausse en 2026 | 4 290,52 | −0,94 % | S-KIT-07 |
+| 29/07/2026 | maintien | swaps ≈ 38 % de hausse | 9–3 (trois voix pour une hausse) | 4 081,10 | +1,3 % | S-MIN-02 |
+| 16/09/2026 | **hausse de 25 pb** à 3,75–4,00 % | oui (consensus) | 12–0 ; 16 des 18 prévoient une autre hausse en 2026 | 4 310,10 | +0,38 % (titre : « drops ») | S-KIT-08 |
+| 28/10/2026 | maintien à 3¾–4 % | oui (FedWatch : maintien 90,6 %) | 10–2 (deux voix pour une hausse) | 4 035,48 | −0,60 % | S-KIT-05, S-ADM-04 |
+
+**[Calcul de l'auteur]** Surprise de taux : 29/07 : −9,5 pb (0,38 × 25 ; L6.01) ; 28/10 : −2,35 pb (sous hypothèse, L6.02) ; autres : « conforme » sans probabilité chiffrée lue. **[Interprétation]** La surprise monétaire **mesurable** est nulle ou faible dans quatre cas sur cinq ; les mouvements de séance observés (0,38 à 1,40 % en valeur absolue) ne s'expliquent donc pas par elle seule : ils mêlent le ton, la suite des projections et toutes les autres nouvelles du jour.
+
+### 4.4 Régimes de marché
+**[Interprétation]** Le contexte macroéconomique modifie l'effet d'une même nouvelle. En 2026, les articles lus évoquent un conflit au Moyen-Orient, un cycle de hausses de la Fed (une hausse en septembre) et des attentes de nouvelles hausses ; dans un tel contexte, une décision « conforme » peut être lue comme **plus restrictive ou moins restrictive que le ton espéré**. **[Hypothèse]** Ces lectures ne sont pas démontrées par les données lues. **Ce qu'on ne peut pas conclure** : qu'un « régime » donné produise une réaction donnée.
+
+### 4.5 Anticipations déjà intégrées
+**[Interprétation]** Une annonce majeure peut produire une réaction limitée si son contenu est déjà dans les prix. Quatre décisions sur cinq étaient qualifiées d'« attendues » par les sources ; seule celle de juillet comportait une probabilité de hausse chiffrée (≈ 38 %, donc un maintien à ≈ 62 %). Les variations de séance restent pourtant de l'ordre de 1 % : d'où l'intérêt de **fenêtres courtes** autour de l'heure officielle, que les sources lues ne fournissent pas.
+
+### 4.6 Application à XAU/USD : scénarios conditionnels
+**[SIMULATION]** Exemple fictif :
+
+| Variable | Scénario A | Scénario B |
+|---|---|---|
+| Surprise économique | positive | négative |
+| Dollar | +0,4 % | −0,3 % |
+| Taux réels | +5 pb | −2 pb |
+| XAU/USD à 30 min | −0,6 % | +0,2 % |
+
+**[Calcul de l'auteur]** Sensibilité par point de base de taux réel : A : −0,6 ÷ 5 = **−0,12 %/pb** ; B : +0,2 ÷ (−2) = **−0,10 %/pb**. Rapport A/B = **1,2**. **[Interprétation]** L'amplitude diffère (0,6 contre 0,2), mais la **sensibilité** est presque la même : l'« asymétrie » vient surtout de la **taille différente du choc** de taux réel, non d'une réaction intrinsèquement asymétrique. Avant de parler d'asymétrie, on compare des réactions **par unité de choc**. L'exemple fictif n'établit rien sur le comportement réel de l'or.
+
+### 4.7 Étude empirique : protocole et résultats
+**Protocole (fixé avant le calcul).** **[Définition de cours]**
+1. **Population** : décisions du FOMC de 2026 pour lesquelles un article de presse spécialisée donne le prix spot après le communiqué, la variation de séance et le caractère attendu ou non.
+2. **Mesure** : variation de séance du spot rapportée par la source (faute de fenêtres de 5 min, 30 min, 4 h).
+3. **Groupes** : décision plus accommodante, conforme, plus restrictive que prévu (d'après le consensus ou les probabilités rapportés).
+4. **Exclusions documentées.** 28/01/2026 : article sans vote, sans probabilités, sans variation de séance (S-MPL-01 : record proche de 5 400 $, clôture près du sommet) ; 18/03/2026 : aucun article exploitable lu ; 09/12/2026 : réunion future.
+**Réserve de rigueur.** **[Fait de procédure]** Les cas de juillet et d'octobre étaient déjà lus en L6.01 quand ce protocole a été écrit ; seuls avril, juin et septembre ont été lus après. Le protocole n'est donc **que partiellement** fixé d'avance.
+
+**Résultats (n = 5).** **[Calcul de l'auteur]** Variations : −1,40 ; −0,94 ; +1,30 ; +0,38 ; −0,60 %. Moyenne **−0,252 %**, médiane **−0,60 %**, écart-type d'échantillon **1,086**, étendue **2,70 points**, moyenne des valeurs absolues **0,924 %**. Groupes : accommodante (juillet) : +1,30 % (n = 1) ; conforme (avril, juin, septembre, octobre) : moyenne **−0,64 %** (n = 4) ; restrictive : aucun événement. Écart de moyennes : 1,30 − (−0,64) = **+1,94 point**.
+**Test de permutation (n = 5).** Pour chacune des cinq affectations possibles de l'étiquette « accommodante » à un seul événement, l'écart absolu observé de juillet (1,94) est le plus grand ; la valeur-p exacte est donc **1/5 = 0,20**, **la plus petite possible** avec cinq événements : on ne peut jamais atteindre 0,05.
+**Trois niveaux de conclusion.** *Observation* : les moyennes diffèrent (juillet +1,30 %, autres −0,64 %). *Interprétation* : cela pourrait refléter une surprise accommodante en juillet, ou le contexte. *Conclusion causale* : non permise (n = 1 dans un groupe, séances, événements concomitants non contrôlés).
+
+### 4.8 Cinq contrôles de rigueur
+1. Ne pas confondre surprise économique et surprise monétaire.
+2. Ne pas qualifier un mouvement d'asymétrique à partir de deux événements.
+3. Ne pas mélanger des fenêtres de mesure.
+4. Ne pas présenter une association comme une causalité.
+5. Ne pas transformer une asymétrie historique en signal automatique.
+
+## 5. Définitions essentielles
+
+- **Asymétrie** : réaction de direction, d'amplitude ou de durée différente selon le signe ou le contexte d'une surprise.
+- **Rendement de fenêtre** : R_t = (P_t ÷ P₀ − 1) × 100.
+- **Sensibilité** : réaction rapportée à la taille du choc (par exemple %/pb de taux réel).
+- **Valeur-p exacte de permutation** : part des réaffectations aussi extrêmes que l'observation.
+- **Protocole pré-enregistré** : règles de sélection et de mesure écrites avant le calcul.
+
+## 6. Exemples chiffrés
+
+**6.1 Rendement.** Prix de départ 4 000, prix à la fin 4 012 : (4 012 ÷ 4 000 − 1) × 100 = +0,30 %.
+**6.2 Moyenne et médiane.** Variations de séance −1,40 ; −0,94 ; +1,30 ; +0,38 ; −0,60 : moyenne −0,252 ; médiane −0,60.
+**6.3 Sensibilité (SIMULATION).** −0,12 %/pb contre −0,10 %/pb ; rapport 1,2.
+**6.4 Plus petite valeur-p.** 1 ÷ 5 = 0,20.
+
+### 6.5 Cas historique documenté — 16 septembre 2026 : une hausse « attendue » et des sources qui divergent
+**[Fait]** (S-KIT-08, résumé) : la Fed relève de 25 pb la fourchette à 3,75–4,00 % (« comme attendu par le consensus ») ; vote 12–0 ; 16 des 18 participants qui ont répondu prévoient une autre hausse en 2026 (six en juin) ; pas de guidage ; spot 4 310,10 $, **+0,38 %** sur la séance, tandis que le titre dit « drops » et que le corps parle de « baisse marquée » après l'annonce ; un analyste décrit un dollar « légèrement plus ferme ».
+**[Calcul de l'auteur]** Point de comparaison implicite de la séance : 4 310,10 ÷ 1,0038 = **4 293,8** ; un mouvement de +0,38 % depuis ce point peut cacher une baisse après 14 h suivie d'un rebond (non mesuré).
+**[Interprétation]** La même décision conforme est présentée comme baissière par le titre et haussière par la variation de séance : un cas typique où la **fenêtre de mesure** change le sens apparent. **Ce qu'on ne peut pas conclure** : l'ampleur de la réaction initiale ; si les projections plus restrictives (de 6 à 16 voix) ont causé quoi que ce soit. **Limites** : article unique, résumé automatique, chiffres de séance, incohérence interne.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **XAU/USD** : mesurer la réaction **par unité de choc** (taux réels, dollar) avant de parler d'asymétrie.
+- **Forex** : la même grille s'applique à EUR/USD autour de la BCE.
+- **Journal** : tenir un tableau d'événements avec exclusions, mesures, fenêtres, jusqu'à un échantillon assez grand pour un test.
+- **Prudence** : aucune asymétrie observée ici n'est un signal.
+
+## 8. Erreurs courantes
+
+1. Conclure à une asymétrie avec deux ou cinq événements.
+2. Confondre surprise économique et surprise monétaire.
+3. Mélanger variation de séance et fenêtre courte.
+4. Oublier de comparer par unité de choc.
+5. Choisir les événements après avoir vu les réactions.
+6. Ne pas documenter les exclusions.
+7. Transformer une différence de moyennes en causalité.
+
+## 9. Limites de l'interprétation
+
+- Cinq événements ; un groupe réduit à un seul ; un groupe vide.
+- Variations de **séance**, non des fenêtres fixées ; horaires inconnus.
+- Protocole partiellement fixé d'avance (juillet et octobre déjà lus).
+- Exclusions : 28/01 (informations incomplètes), 18/03 (aucun article lu).
+- Consensus non chiffré pour trois réunions.
+- Dollar et taux réels concomitants non lus.
+- Sources de presse, résumés automatiques, incohérence interne dans l'une d'elles.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Rendement.** P₀ = 4 000 ; prix à 5 min 4 012 ; à 30 min 3 996 ; à 4 h 4 040 (SIMULATION). Calcule les trois rendements.
+
+<details>
+<summary>Correction 1</summary>
+
++0,30 % ; −0,10 % ; +1,00 %. Le signe change selon la fenêtre : ne jamais mélanger les fenêtres.
+</details>
+
+**Exercice 2 — Statistiques.** Variations de séance : −1,40 ; −0,94 ; +1,30 ; +0,38 ; −0,60 %. Calcule la moyenne, la médiane et la moyenne des valeurs absolues.
+
+<details>
+<summary>Correction 2</summary>
+
+Moyenne **−0,252 %** ; médiane **−0,60 %** ; moyenne des valeurs absolues (1,40 + 0,94 + 1,30 + 0,38 + 0,60) ÷ 5 = **0,924 %**.
+</details>
+
+**Exercice 3 — Groupes.** Juillet seul dans le groupe « accommodante » (+1,30 %) ; avril, juin, septembre, octobre dans « conforme ». Calcule l'écart de moyennes et la plus petite valeur-p de permutation possible avec 5 événements.
+
+<details>
+<summary>Correction 3</summary>
+
+Moyenne « conforme » : (−1,40 − 0,94 + 0,38 − 0,60) ÷ 4 = **−0,64 %** ; écart **1,94 point** ; plus petite valeur-p : 1 ÷ 5 = **0,20** > 0,05 : aucune conclusion statistique possible.
+</details>
+
+**Exercice 4 — Sensibilité (SIMULATION).** Scénario A : taux réels +5 pb, or −0,6 % ; scénario B : −2 pb, or +0,2 %. Compare les sensibilités. Asymétrie ou différence de choc ?
+
+<details>
+<summary>Correction 4</summary>
+
+−0,6 ÷ 5 = **−0,12 %/pb** ; 0,2 ÷ (−2) = **−0,10 %/pb** ; rapport **1,2**. Les amplitudes diffèrent surtout parce que les chocs diffèrent ; la sensibilité est presque la même.
+</details>
+
+**Exercice 5 — Types de surprise.** Le 29/04/2026, la Fed maintient comme attendu mais trois membres refusent le biais d'assouplissement du texte ; l'or perd 1,40 % sur la séance. Surprise de taux ? Surprise monétaire possible ? Que ne sait-on pas ?
+
+<details>
+<summary>Correction 5</summary>
+
+Surprise de **taux nulle** (maintien attendu). Une surprise de **communication** (ton, dissensions) est possible mais non mesurée. On ne sait pas l'ampleur à 5 min/30 min/4 h, ni le rôle du dollar, des taux réels et des autres nouvelles du jour ; la variation de séance ne suffit pas.
+</details>
+
+**Exercice 6 — Critique.** « Juillet +1,3 % après un maintien accommodant, avril −1,4 % : l'or réagit plus fort aux mauvaises nouvelles. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) Deux événements ne font pas un échantillon. (2) Variations de séance, non de fenêtres fixées. (3) Surprises monétaires différentes (−9,5 pb contre nulle) donc chocs différents ; comparer par unité de choc. (4) Taux réels, dollar et autres nouvelles non lus. (5) Même avec cinq événements, la valeur-p minimale est 0,20.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L6.03.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Quatre asymétries : directionnelle, d'amplitude, temporelle, de contexte — une **grille**, pas une loi.
+- Distinguer surprise économique et surprise monétaire ; mesurer par R = (P_t ÷ P₀ − 1) × 100 sur des fenêtres fixes.
+- Comparer les réactions **par unité de choc** avant de parler d'asymétrie.
+- Cinq décisions de la Fed de 2026 : variations de séance de −1,40 à +1,30 % ; écart de moyennes 1,94 point ; valeur-p minimale 0,20 : rien n'est démontré.
+- Observation, interprétation, causalité : trois niveaux à ne pas confondre ; aucun signal automatique.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer des rendements de fenêtre (Exercice 1).
+- [ ] Calculer moyenne, médiane, valeurs absolues (Exercice 2).
+- [ ] Expliquer la plus petite valeur-p possible (Exercice 3).
+- [ ] Comparer des sensibilités (Exercice 4).
+- [ ] Distinguer les surprises (Exercice 5).
+- [ ] Critiquer une conclusion tirée de deux événements (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **31 octobre 2026** :
+
+- **S-KIT-06** — Kitco, « Gold dips as Fed votes 11-1 in favor of rate hold… » (29/04/2026) : https://www.kitco.com/news/article/2026-04-29/gold-dips-fed-votes-11-1-favor-rate-hold-two-dissent-easing-bias
+- **S-KIT-07** — Kitco, « Gold drops below $4,300/oz as Fed votes 12-0 in favor of rate hold… » (17/06/2026) : https://www.kitco.com/news/article/2026-06-17/gold-drops-below-4300oz-fed-votes-12-0-favor-rate-hold-nearly-half
+- **S-KIT-08** — Kitco, « Gold price drops to $4,310/oz as Fed votes 12-0 in favor of 25 bps rate hike… » (16/09/2026) : https://www.kitco.com/news/article/2026-09-16/gold-price-drops-4310oz-fed-votes-12-0-favor-25-bps-rate-hike-16-18
+- **S-MPL-01** — MarketPulse (OANDA), « The Fed holds rates steady – North American session market wrap for January 28 » (28/01/2026) : https://www.marketpulse.com/markets/market-wrap-jan-28-2026/
+- **S-KIT-05**, **S-MIN-02**, **S-ADM-04**, **S-CME-05** — déjà lues (L6.01, L6.02).
+
+**Définitions de cours non rattachées à une source lue :** asymétrie, sensibilité, protocole pré-enregistré, valeur-p exacte de permutation (calcul de l'auteur). **Points non vérifiés :** prix aux fenêtres de 5 min, 30 min et 4 h, consensus chiffrés d'avril, juin et septembre, réunion du 18/03/2026, dollar et taux réels concomitants, contenu des projections au-delà de ce que résument les articles.

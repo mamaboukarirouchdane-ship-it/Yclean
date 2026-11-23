@@ -1,0 +1,180 @@
+{
+  "chapterId": "0.2",
+  "module": 0,
+  "title": "Quiz de chapitre 0.2 — Le marché des changes (L0.03–L0.05)",
+  "passThreshold": 0.8333333333333334,
+  "requiredCorrect": 5,
+  "passRule": "5 bonnes réponses sur 6 (règle R1 : ⌈0,8 × 6⌉ = 5 ; seuil pédagogique provisoire)",
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C0.2-Q1",
+      "type": "mcq",
+      "prompt": "Dans EUR/USD = 1,0800, que signifie ce prix ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 dollar vaut 1,0800 euro"
+        },
+        {
+          "id": "b",
+          "text": "1 dollar vaut 0,9259 dollar"
+        },
+        {
+          "id": "c",
+          "text": "1 euro vaut 0,0800 dollar"
+        },
+        {
+          "id": "d",
+          "text": "1 euro vaut 1,0800 dollar"
+        }
+      ],
+      "correct": "d",
+      "explanation": "BASE/COTATION : 1 unité de base (euro) vaut 1,0800 unité de cotation (dollar).",
+      "tags": [
+        "cotation"
+      ]
+    },
+    {
+      "id": "C0.2-Q2",
+      "type": "mcq",
+      "prompt": "Quelle est la valeur d'un pip pour USD/JPY ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,0001"
+        },
+        {
+          "id": "b",
+          "text": "0,01"
+        },
+        {
+          "id": "c",
+          "text": "0,1"
+        },
+        {
+          "id": "d",
+          "text": "1"
+        }
+      ],
+      "correct": "b",
+      "explanation": "1 pip = 0,0001 pour la plupart des paires et 0,01 pour le yen.",
+      "tags": [
+        "pip"
+      ]
+    },
+    {
+      "id": "C0.2-Q3",
+      "type": "mcq",
+      "prompt": "EUR/USD = 1,0800 et USD/JPY = 150,00. Que vaut EUR/JPY (taux croisé) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "138,89"
+        },
+        {
+          "id": "b",
+          "text": "0,0072"
+        },
+        {
+          "id": "c",
+          "text": "1,0800 × 150 = 16 200"
+        },
+        {
+          "id": "d",
+          "text": "162,00"
+        }
+      ],
+      "correct": "d",
+      "explanation": "EUR/JPY = EUR/USD × USD/JPY = 1,0800 × 150,00 = 162,00 : les dollars se simplifient.",
+      "tags": [
+        "croise"
+      ]
+    },
+    {
+      "id": "C0.2-Q4",
+      "type": "mcq",
+      "prompt": "Le XOF est rattaché à l'euro à :",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 $ = 655,957 XOF"
+        },
+        {
+          "id": "b",
+          "text": "1 € = 565,957 XOF"
+        },
+        {
+          "id": "c",
+          "text": "1 € = 655,957 XOF"
+        },
+        {
+          "id": "d",
+          "text": "1 € = 100 XOF"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Parité fixe depuis 1999 (BCEAO) : 1 euro = 655,957 XOF. Tout taux XOF contre une autre devise est un croisé via l'euro.",
+      "tags": [
+        "xof"
+      ]
+    },
+    {
+      "id": "C0.2-Q5",
+      "type": "mcq",
+      "prompt": "Taille de position : risque accepté 100 $, stop de 25 pips, valeur du pip 10 $ par lot standard. Quelle taille ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,4 lot"
+        },
+        {
+          "id": "b",
+          "text": "4 lots"
+        },
+        {
+          "id": "c",
+          "text": "2,5 lots"
+        },
+        {
+          "id": "d",
+          "text": "0,04 lot"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Taille = 100 ÷ (25 × 10) = 0,4 lot.",
+      "tags": [
+        "lots"
+      ]
+    },
+    {
+      "id": "C0.2-Q6",
+      "type": "mcq",
+      "prompt": "Un écart durable entre trois cotations liées (arbitrage triangulaire) est en pratique :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Impossible à observer"
+        },
+        {
+          "id": "b",
+          "text": "Rapidement corrigé par le marché"
+        },
+        {
+          "id": "c",
+          "text": "Permanent"
+        },
+        {
+          "id": "d",
+          "text": "Garanti de rapporter"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Les écarts théoriques sont rapidement corrigés ; les coûts et la vitesse d'exécution limitent la possibilité de les exploiter.",
+      "tags": [
+        "arbitrage"
+      ]
+    }
+  ],
+  "revision": 1
+}

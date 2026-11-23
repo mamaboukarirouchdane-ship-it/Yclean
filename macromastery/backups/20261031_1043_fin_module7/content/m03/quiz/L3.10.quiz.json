@@ -1,0 +1,233 @@
+{
+  "lessonId": "L3.10",
+  "title": "Quiz — Publications de la zone euro",
+  "passThreshold": 0.8,
+  "note": "Quiz de la leçon L3.10",
+  "questions": [
+    {
+      "id": "L3.10-Q1",
+      "type": "mcq",
+      "prompt": "Que mesure l'IPCH ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le PIB nominal"
+        },
+        {
+          "id": "b",
+          "text": "Les prix à la production"
+        },
+        {
+          "id": "c",
+          "text": "Les prix à la consommation selon une méthode harmonisée entre pays de l'Union"
+        },
+        {
+          "id": "d",
+          "text": "Les salaires"
+        }
+      ],
+      "correct": "c",
+      "explanation": "L'indice des prix à la consommation harmonisé sert à comparer l'inflation des pays de l'Union ; il diffère du CPI américain.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L3.10-Q2",
+      "type": "mcq",
+      "prompt": "Septembre 2026 : IPCH 3,8 % contre 3,2 % en août. Quelle variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+0,6 point"
+        },
+        {
+          "id": "b",
+          "text": "+0,6 %"
+        },
+        {
+          "id": "c",
+          "text": "+3,8 points"
+        },
+        {
+          "id": "d",
+          "text": "−0,6 point"
+        }
+      ],
+      "correct": "a",
+      "explanation": "3,8 − 3,2 = 0,6 point de pourcentage ; ce n'est pas une variation en pourcentage de l'indice.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.10-Q3",
+      "type": "mcq",
+      "prompt": "Quelle composante explique surtout la hausse de l'IPCH d'ensemble en septembre 2026 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les biens industriels"
+        },
+        {
+          "id": "b",
+          "text": "Les services"
+        },
+        {
+          "id": "c",
+          "text": "L'alimentation transformée"
+        },
+        {
+          "id": "d",
+          "text": "L'énergie (14,3 % puis 18,9 %)"
+        }
+      ],
+      "correct": "d",
+      "explanation": "L'énergie passe de 14,3 % à 18,9 % sur 12 mois, tandis que le cœur ne monte que de 2,4 % à 2,5 %.",
+      "tags": [
+        "lecture"
+      ]
+    },
+    {
+      "id": "L3.10-Q4",
+      "type": "mcq",
+      "prompt": "Ensemble 3,8 % et cœur 2,5 % : quel écart, et que signifie-t-il ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,3 point : aucun effet"
+        },
+        {
+          "id": "b",
+          "text": "1,3 point : alimentation et énergie pèsent sur l'ensemble"
+        },
+        {
+          "id": "c",
+          "text": "2,5 points : le cœur est faux"
+        },
+        {
+          "id": "d",
+          "text": "Aucun écart"
+        }
+      ],
+      "correct": "b",
+      "explanation": "3,8 − 2,5 = 1,3 point ; le cœur écarte l'énergie, l'alimentation, l'alcool et le tabac.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.10-Q5",
+      "type": "mcq",
+      "prompt": "Estimation préliminaire du PIB du T2 : 0,4 % ; estimation suivante : 0,6 %. Quelle révision ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+2 points"
+        },
+        {
+          "id": "b",
+          "text": "+0,4 point"
+        },
+        {
+          "id": "c",
+          "text": "−0,2 point"
+        },
+        {
+          "id": "d",
+          "text": "+0,2 point par trimestre"
+        }
+      ],
+      "correct": "d",
+      "explanation": "0,6 − 0,4 = 0,2 point ; en rythme annualisé, 1,61 % devient 2,42 %.",
+      "tags": [
+        "revision"
+      ]
+    },
+    {
+      "id": "L3.10-Q6",
+      "type": "mcq",
+      "prompt": "Pourquoi le chiffre du PIB irlandais compte-t-il pour l'agrégat ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce qu'elle est hors zone euro"
+        },
+        {
+          "id": "b",
+          "text": "Parce que l'Irlande a 50 % du PIB"
+        },
+        {
+          "id": "c",
+          "text": "Un petit pays très volatil (+3,9 % sur le trimestre, −5,6 % sur un an) peut déplacer l'agrégat"
+        },
+        {
+          "id": "d",
+          "text": "Parce qu'elle fixe les taux"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le texte lu donne ces variations de l'Irlande ; la contribution exacte n'a pas été lue mais le mécanisme est connu.",
+      "tags": [
+        "lecture"
+      ]
+    },
+    {
+      "id": "L3.10-Q7",
+      "type": "mcq",
+      "prompt": "Pourquoi une hausse du chômage de 6,3 % à 6,4 % est-elle difficile à interpréter ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,1 point est de l'ordre des révisions (juin a été révisé de 6,3 % à 6,4 %)"
+        },
+        {
+          "id": "b",
+          "text": "Parce que le chômage n'est pas publié"
+        },
+        {
+          "id": "c",
+          "text": "Parce que le chômage est fixe"
+        },
+        {
+          "id": "d",
+          "text": "Parce que c'est un indice de prix"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le communiqué d'Eurostat révise juin de 6,3 % à 6,4 % ; un mouvement de 0,1 point ne se distingue pas de ces révisions.",
+      "tags": [
+        "prudence"
+      ]
+    },
+    {
+      "id": "L3.10-Q8",
+      "type": "mcq",
+      "prompt": "Pourquoi la comparaison IPCH / CPI américain doit-elle rester qualitative ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que l'un est en euros et l'autre en dollars"
+        },
+        {
+          "id": "b",
+          "text": "Paniers, pondérations, traitement du logement et définition du cœur diffèrent"
+        },
+        {
+          "id": "c",
+          "text": "Parce qu'ils sont identiques"
+        },
+        {
+          "id": "d",
+          "text": "Parce que le CPI n'existe pas"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le cœur de l'IPCH écarte aussi l'alcool et le tabac ; les paniers et le logement diffèrent ; le rapprochement est donc approximatif.",
+      "tags": [
+        "methode"
+      ]
+    }
+  ],
+  "revision": 1
+}

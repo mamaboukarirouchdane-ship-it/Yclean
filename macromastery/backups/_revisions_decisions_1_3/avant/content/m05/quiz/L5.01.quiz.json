@@ -1,0 +1,233 @@
+{
+  "lessonId": "L5.01",
+  "title": "Quiz — Histoire monétaire de l'or",
+  "passThreshold": 0.8,
+  "note": "Seuil : 7 bonnes réponses sur 8.",
+  "questions": [
+    {
+      "id": "L5.01-Q1",
+      "type": "mcq",
+      "prompt": "Quel prix légal de l'or fixe le Gold Reserve Act du 30 janvier 1934 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "38 dollars l'once"
+        },
+        {
+          "id": "b",
+          "text": "20,67 dollars l'once"
+        },
+        {
+          "id": "c",
+          "text": "35 dollars l'once"
+        },
+        {
+          "id": "d",
+          "text": "42 dollars l'once"
+        }
+      ],
+      "correct": "c",
+      "explanation": "L'essai de la Réserve fédérale indique 35 dollars l'once contre 20,67 sous la loi de 1900 ; 38 et 42 sont les prix de 1971 et de 1973.",
+      "tags": [
+        "1934"
+      ]
+    },
+    {
+      "id": "L5.01-Q2",
+      "type": "mcq",
+      "prompt": "Le prix légal passe de 20,67 à 35 dollars : quelle valeur-or garde le dollar par rapport à 1900 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 59 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ 69 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ 41 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ 169 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "20,67 ÷ 35 = 59,06 % ; la hausse du prix est de 69,3 % : deux lectures de la même mesure.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.01-Q3",
+      "type": "mcq",
+      "prompt": "Que prévoit le système de Bretton Woods de 1944 pour les autres monnaies ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elles sont toutes à 35 dollars"
+        },
+        {
+          "id": "b",
+          "text": "Elles flottent librement"
+        },
+        {
+          "id": "c",
+          "text": "Elles sont directement convertibles en or par les particuliers"
+        },
+        {
+          "id": "d",
+          "text": "Elles sont fixes mais ajustables par rapport au dollar, dans une bande de 1 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le dollar est convertible à 35 dollars l'once ; les autres monnaies sont ancrées au dollar avec une bande de 1 %.",
+      "tags": [
+        "bw"
+      ]
+    },
+    {
+      "id": "L5.01-Q4",
+      "type": "mcq",
+      "prompt": "Que se passe-t-il le 15 août 1971 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le prix de l'or passe à 42 dollars"
+        },
+        {
+          "id": "b",
+          "text": "Le guichet de l'or se ferme : les gouvernements étrangers ne peuvent plus échanger leurs dollars contre de l'or"
+        },
+        {
+          "id": "c",
+          "text": "Le FMI est créé"
+        },
+        {
+          "id": "d",
+          "text": "Le système de Bretton Woods est fondé"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Nixon annonce la fin de la convertibilité du dollar en or pour les gouvernements étrangers, avec un gel de 90 jours des salaires et des prix.",
+      "tags": [
+        "1971"
+      ]
+    },
+    {
+      "id": "L5.01-Q5",
+      "type": "mcq",
+      "prompt": "Smithsonian (décembre 1971) : prix de 35 à 38 dollars. Quelle hausse du prix officiel ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+38 %"
+        },
+        {
+          "id": "b",
+          "text": "+8,5 % de valeur-or du dollar"
+        },
+        {
+          "id": "c",
+          "text": "+10,7 %"
+        },
+        {
+          "id": "d",
+          "text": "+8,57 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "38 ÷ 35 − 1 = 8,57 % ; l'essai parle d'une dévaluation de l'ordre de 8,5 % du dollar par rapport à l'or.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.01-Q6",
+      "type": "mcq",
+      "prompt": "Que se passe-t-il autour du 12 février 1973 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Création du FMI"
+        },
+        {
+          "id": "b",
+          "text": "Retour à l'étalon-or"
+        },
+        {
+          "id": "c",
+          "text": "Nouvelle dévaluation à 42 dollars, puis flottaison de la plupart des grandes monnaies en un mois"
+        },
+        {
+          "id": "d",
+          "text": "Interdiction de l'or"
+        }
+      ],
+      "correct": "c",
+      "explanation": "L'essai place la fin de Bretton Woods dans les quinze mois suivant l'accord Smithsonian.",
+      "tags": [
+        "1973"
+      ]
+    },
+    {
+      "id": "L5.01-Q7",
+      "type": "mcq",
+      "prompt": "Prix de l'or de 4 060 dollars (28/10/2026) et record de 5 595 : quel écart ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ −27,4 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ −72,6 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ +27,4 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ −5,6 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "4 060 ÷ 5 595 − 1 = −27,4 % ; les sources de prix sont secondaires et les records cités diffèrent de 6 dollars.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.01-Q8",
+      "type": "mcq",
+      "prompt": "Pourquoi le rapport 4 060 ÷ 35 ≈ 116 dit-il peu de chose ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il est exact et suffit"
+        },
+        {
+          "id": "b",
+          "text": "Il est nominal : il ignore l'inflation et compare un prix légal à un prix de marché"
+        },
+        {
+          "id": "c",
+          "text": "Parce que 35 est un prix de marché"
+        },
+        {
+          "id": "d",
+          "text": "Parce que l'or n'a pas de prix"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le prix de 35 dollars était légal, et près d'un siècle d'inflation n'est pas pris en compte dans ce rapport.",
+      "tags": [
+        "limite"
+      ]
+    }
+  ],
+  "revision": 1
+}

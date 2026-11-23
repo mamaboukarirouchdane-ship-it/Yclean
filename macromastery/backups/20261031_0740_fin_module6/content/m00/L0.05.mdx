@@ -1,0 +1,314 @@
+---
+id: L0.05
+module: 0
+order: 5
+title: "Taux croisés et parité : conversions, cohérence des cotations et pouvoir d'achat"
+title_initial: "Taux croisés et parité"
+level: débutant
+duration_hours: 2.5
+prerequisites: ["L0.03", "L0.04"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L0.05.quiz.json"
+sources: ["S-ECB-03", "S-ECB-04", "S-BCEAO-01", "S-TRES-01", "S-IMF-01", "S-BIS-03", "S-BIS-04"]
+---
+
+# L0.05 — Taux croisés et parité : conversions, cohérence des cotations et pouvoir d'achat
+
+> **Convention de lecture.** **[Fait]** = vérifié dans une source citée ; **[Définition]** = convention de vocabulaire ; **[Calcul de l'auteur]** = calcul fait à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Cette leçon suppose connus : la cotation BASE/COTATION, le pip, le spread (L0.03) et l'idée que le prix dépend de la taille et du fournisseur (L0.04). **Le calcul de base d'un taux croisé a été vu dans L0.03 ; il est rappelé en quelques lignes, puis la leçon le généralise** : méthode universelle, prise en compte du bid/ask, contrôle de cohérence entre cotations, conversions de montants, et comparaison des prix entre pays (parité de pouvoir d'achat).
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. calculer un **taux croisé** quelle que soit la façon dont les deux paires sont écrites, avec la **méthode des unités** qui évite d'apprendre quatre règles par cœur ;
+2. calculer le **bid et l'ask d'un taux croisé** à partir de ceux de ses deux composantes, et expliquer pourquoi le spread d'un croisé est plus large ;
+3. **convertir un montant** dans le bon sens et au bon côté de la cotation (bid ou ask) et chiffrer le coût de la conversion ;
+4. **vérifier la cohérence** de trois cotations (croisé direct contre croisé implicite) et expliquer l'arbitrage triangulaire ;
+5. expliquer pourquoi un taux de change ne se calcule **qu'avec des cotations du même instant** ;
+6. utiliser le lien fixe **euro–franc CFA (XOF)** pour obtenir un taux XOF contre une autre devise, et dire quelles sont les limites de cette parité fixe ;
+7. définir la **parité de pouvoir d'achat** (PPP), la distinguer du taux de marché et dire ce qu'elle permet — et ne permet pas — de conclure.
+
+## 2. Prérequis
+
+L0.03 (cotation, pip, taux croisé de base) et L0.04 (bid/ask selon la taille, pip en devise de compte). Multiplication, division, inverse d'un nombre.
+
+## 3. Explication intuitive
+
+Tu veux acheter un sac de riz au Ghana avec des francs CFA. Le vendeur ne connaît pas ton billet, mais il connaît le dollar. Tu échanges donc des francs CFA contre des dollars, puis des dollars contre des cédis. Deux échanges, deux taux : le taux « francs CFA contre cédis » que tu as obtenu **est le produit des deux**. C'est un **taux croisé**.
+
+Presque toutes les paires de devises du monde fonctionnent ainsi : le marché cote surtout des paires contre le dollar (L0.03), et les autres s'en déduisent. D'où trois conséquences sur lesquelles la leçon est construite :
+
+- **Le calcul est mécanique** : il suffit de faire « se simplifier » les unités.
+- **Chaque échange coûte un spread** : un taux croisé en traverse deux, donc il coûte en général plus cher qu'une paire directe très liquide.
+- **Les trois cotations doivent rester cohérentes entre elles**, sinon il existe une « boucle » qui rapporterait de l'argent sans risque. Quand elle existe, elle disparaît très vite.
+
+Enfin, une question plus profonde se pose : le taux de change dit combien de dollars on obtient pour un euro, mais **que peut-on acheter** avec ces dollars ? La **parité de pouvoir d'achat** compare les prix, pas les devises.
+
+## 4. Développement technique
+
+### 4.1 Rappel : le taux croisé de L0.03
+
+Avec EUR/USD = 1,0800 et GBP/USD = 1,2600, on obtient EUR/GBP = 1,0800 ÷ 1,2600 ≈ 0,8571 (L0.03). Le résultat se lit : **1 euro = 0,8571 livre**. Ce qui suit généralise cette opération.
+
+### 4.2 La méthode des unités : une seule règle pour tous les cas
+
+**[Définition]** Écris chaque taux sous la forme « *nombre d'unités de la devise A pour 1 unité de la devise B* » (c'est exactement ce que dit une cotation B/A : « 1 B = x A »). Pour obtenir le taux voulu, **enchaîne les taux de façon que les unités intermédiaires se simplifient**. Si un taux est écrit à l'envers, **prends son inverse** (1 ÷ taux).
+
+**Exemple 1 — EUR/JPY à partir de EUR/USD et USD/JPY.**
+EUR/USD = 1,0800 signifie 1 EUR = 1,0800 USD. USD/JPY = 150,00 signifie 1 USD = 150,00 JPY.
+1 EUR = 1,0800 USD = 1,0800 × 150,00 JPY = **162,00 JPY**. Les USD « s'annulent » : on **multiplie** parce que les deux paires s'enchaînent (EUR → USD → JPY).
+
+**Exemple 2 — EUR/GBP à partir de EUR/USD et GBP/USD.**
+1 EUR = 1,0800 USD. Pour passer des USD aux GBP, il faut savoir combien de GBP valent 1 USD : GBP/USD = 1,2600 signifie 1 GBP = 1,2600 USD, donc 1 USD = 1 ÷ 1,2600 GBP. 1 EUR = 1,0800 × (1 ÷ 1,2600) GBP = **0,8571 GBP**. Ici on **divise**, parce que le dollar est du même côté dans les deux paires.
+
+**Tableau de contrôle** (aucune règle à apprendre : le sens vient des unités).
+
+| Écriture des deux paires | Opération | Exemple (SIMULATION) |
+| --- | --- | --- |
+| A/USD et USD/B | multiplier | EUR/USD × USD/JPY = EUR/JPY |
+| A/USD et B/USD | diviser | EUR/USD ÷ GBP/USD = EUR/GBP |
+| USD/A et USD/B | diviser | USD/JPY ÷ USD/CHF = CHF/JPY |
+
+**Contrôle de plausibilité.** Avant de valider un calcul, demande-toi : « le résultat est-il du bon ordre de grandeur ? » 1 euro valant 162 yens est plausible si 1 euro vaut un peu plus de 1 dollar et 1 dollar environ 150 yens ; un résultat de 0,0069 serait l'inverse (JPY/EUR) et signale que l'on a pris le mauvais sens.
+
+### 4.3 Le bid et l'ask d'un taux croisé
+
+Une cotation a deux côtés (L0.01, L0.04). Quand tu traverses **deux** cotations, tu paies **deux** spreads, et tu dois utiliser, à chaque étape, le côté qui correspond à **ton** sens de transaction (le fournisseur t'achète au bid et te vend à l'ask).
+
+**Démonstration pour EUR/GBP** (SIMULATION). Cotations : EUR/USD 1,0800 / 1,0802 ; GBP/USD 1,2600 / 1,2603.
+
+- **Tu vends 1 euro et tu achètes des livres** (tu obtiens le *bid* de EUR/GBP) : étape 1, tu vends l'euro contre des dollars au **bid** de EUR/USD : 1,0800 USD. Étape 2, tu achètes des livres avec ces dollars au **ask** de GBP/USD (1,2603 USD par livre) : 1,0800 ÷ 1,2603 = **0,85694 GBP**.
+- **Tu achètes 1 euro avec des livres** (tu paies l'*ask* de EUR/GBP) : étape 1, tu vends des livres pour des dollars au **bid** de GBP/USD (1,2600) ; étape 2, tu achètes l'euro au **ask** de EUR/USD (1,0802) : il faut 1,0802 ÷ 1,2600 = **0,85730 GBP**.
+
+Le croisé est donc 0,85694 / 0,85730, soit un spread de 0,00036 = **3,6 pips** (le pip de EUR/GBP vaut 0,0001), alors que les composantes ont 2 pips (EUR/USD) et 3 pips (GBP/USD). **[Règle]** *Bid croisé = bid de la première paire ÷ ask de la seconde ; ask croisé = ask de la première ÷ bid de la seconde* (pour un croisé obtenu par division). Pour un croisé obtenu par multiplication, on multiplie bid par bid et ask par ask.
+
+**[Interprétation]** Le spread d'un croisé est en général plus large que celui de chacune de ses composantes, mais pas toujours plus large que celui d'une cotation directe : certains croisés sont cotés directement par des teneurs de marché, avec leur propre profondeur (L0.04). Le calcul ci-dessus donne un **ordre de grandeur de coût** pour un croisé reconstitué, pas le spread réel d'un fournisseur.
+
+### 4.4 Convertir un montant : sens, côté, coût
+
+**Règle d'orientation.** Dans la paire BASE/COTATION :
+
+- pour passer **de la base à la cotation**, tu **multiplies** par le taux, et tu vends la base : le fournisseur t'achète la base, donc tu obtiens le **bid** ;
+- pour passer **de la cotation à la base**, tu **divises** par le taux, et tu achètes la base : tu paies le **ask**.
+
+**Exemple (SIMULATION).** EUR/USD = 1,0800 / 1,0802.
+- Vendre 10 000 EUR contre des USD : 10 000 × 1,0800 = **10 800 USD**.
+- Acheter des euros avec 10 800 USD : 10 800 ÷ 1,0802 = **9 998,15 EUR**.
+- Aller-retour immédiat : tu perds 10 000 − 9 998,15 = **1,85 EUR**, soit 0,0185 %. En pourcentage, le coût d'un aller-retour est voisin du spread divisé par le prix du milieu : 0,0002 ÷ 1,0801 ≈ 0,0185 %.
+
+**[Interprétation]** Pour de petits montants, le coût est faible en pourcentage s'il s'agit d'une paire très liquide. Sur une paire de détail, ou chez un fournisseur qui ajoute sa marge, il peut être beaucoup plus élevé : compare toujours le montant **reçu** et pas seulement le taux affiché.
+
+### 4.5 La cohérence des cotations et l'arbitrage triangulaire
+
+Trois devises (EUR, GBP, USD) donnent trois paires : EUR/USD, GBP/USD, EUR/GBP. Seules **deux** sont indépendantes : la troisième se déduit des deux autres. Si le marché cote **directement** EUR/GBP à un niveau différent du croisé implicite, on peut en théorie faire une **boucle** d'échanges qui ramène plus d'argent qu'au départ : c'est l'**arbitrage triangulaire**.
+
+**Exemple (SIMULATION, sans spread pour isoler le mécanisme).** EUR/USD = 1,0800 ; GBP/USD = 1,2600 ; croisé implicite EUR/GBP = 0,857143. Imaginons que EUR/GBP soit coté **directement** à 0,8550 (1 euro vaut 0,8550 livre, moins que le croisé).
+
+1. Départ : 1 000 000 GBP.
+2. Acheter des euros au prix direct de 0,8550 GBP l'euro : 1 000 000 ÷ 0,8550 = **1 169 590,64 EUR**.
+3. Vendre ces euros contre des dollars à 1,0800 : 1 169 590,64 × 1,0800 = **1 263 157,89 USD**.
+4. Revendre les dollars contre des livres à 1,2600 : 1 263 157,89 ÷ 1,2600 = **1 002 506,26 GBP**.
+
+Gain théorique : **2 506,26 GBP**, soit environ 0,25 %, sans risque de marché apparent.
+
+**Pourquoi cela ne dure pas, et pourquoi on ne peut pas s'enrichir ainsi.** **[Interprétation, non sourcée dans ce cours]** Les teneurs de marché surveillent ces écarts et corrigent leurs cotations en quelques fractions de seconde ; les spreads de chaque étape (§4.3) et les délais d'exécution (L0.04) absorbent de petits écarts. L'exemple sert à comprendre **pourquoi les taux croisés doivent rester cohérents**, pas à proposer une stratégie. Si tu constates qu'un écart persiste, la bonne question est d'abord : « mes données sont-elles prises au même instant et au bon côté (bid/ask) ? »
+
+### 4.6 Même instant, même source : un piège de données
+
+Un taux croisé n'a de sens que si les deux cotations sont prises **au même instant**. Exemple réel, consulté le 30 octobre 2026 : sur les pages de la BCE (S-ECB-04), le tableau d'octobre 2026 donne
+
+- pour le dollar : 1,1133 le 28 octobre ;
+- pour la livre : 0,83785 le 28 octobre ;
+- pour le yen : **176,15 le 26 octobre**, dernière valeur affichée sur la page consultée.
+
+**[Calcul de l'auteur sur des faits observés]** Le même jour, 28 octobre 2026, ces taux de référence de la BCE (euros → autres devises) permettent de calculer un **GBP/USD implicite** : 1,1133 ÷ 0,83785 ≈ **1,3288**. En revanche, on **ne doit pas** calculer un USD/JPY en divisant le yen du 26 octobre par le dollar du 28 : les dates diffèrent, le résultat mélangerait deux instants. Cette contrainte de date vaut pour tout taux croisé et tout indicateur composé.
+
+**[Fait]** Les taux de référence de la BCE sont fondés sur une procédure de concertation quotidienne entre banques centrales, qui a lieu vers 14 h 10 (heure d'Europe centrale), et sont mis à jour vers 16 h 00 ; la BCE précise qu'ils sont **donnés à titre d'information** et que leur utilisation pour des transactions est fortement déconseillée (S-ECB-03). Ils ne sont pas cotés contre le dollar : la BCE cote toutes les devises contre l'euro. *Limite : les valeurs ont été lues sur des tableaux affichés par un résumé automatique de la page ; les graphiques n'ont pas chargé.*
+
+### 4.7 Le franc CFA, un taux croisé permanent
+
+Le franc CFA de l'Union économique et monétaire ouest-africaine (UEMOA), dont fait partie le Bénin, a une **parité fixe avec l'euro**.
+
+- **[Fait]** Le tableau historique de la BCEAO donne **655,957 FCFA pour 1 euro, depuis le 1er janvier 1999** ; la même source mentionne une dévaluation du 12 janvier 1994 (S-BCEAO-01). La page du Trésor français (publiée le 25 mai 2021) décrit la parité comme fixe, modifiable seulement par décision des chefs d'État africains, avec une convertibilité illimitée garantie par la France ; elle indique qu'une nouvelle convention a été signée le 21 décembre 2019 et que, pour l'UEMOA, la BCEAO n'a plus de compte d'opérations au Trésor depuis janvier 2020 (S-TRES-01).
+- **[Calcul de l'auteur]** Conséquence : **tout taux XOF contre une autre devise est un taux croisé** passant par l'euro. Pour obtenir le nombre de francs CFA pour 1 dollar :
+ XOF/USD = 655,957 ÷ (EUR/USD).
+ Avec EUR/USD = 1,0800 (SIMULATION) : 655,957 ÷ 1,0800 = **607,37 XOF pour 1 USD**. Avec le taux de référence de la BCE du 28 octobre 2026, 1,1133 (donnée réelle de §4.6) : 655,957 ÷ 1,1133 ≈ **589,20 XOF pour 1 USD** — c'est un **taux implicite**, pas un taux de transaction : une banque ou un bureau de change appliquera ses propres marges.
+- **Lecture** : si le dollar se renforce face à l'euro, le nombre de francs CFA nécessaires pour 1 dollar **augmente**, sans que la parité euro–franc CFA ait changé. Le franc CFA n'est pas « stable » face au dollar : il l'est face à l'euro.
+
+*Limites :* la parité est un arrangement institutionnel qui a changé dans le passé (1994) ; la page du Trésor date de 2021 et peut avoir été mise à jour depuis ; le détail des conditions de la garantie n'a pas été lu dans les textes juridiques.
+
+### 4.8 Parité de pouvoir d'achat : comparer les prix, pas les devises
+
+**[Définition, IMF]** Selon l'article du Fonds monétaire international de Tim Callen (juin 2018, S-IMF-01), la **parité de pouvoir d'achat (PPP)** est « le taux auquel la monnaie d'un pays devrait être convertie dans celle d'un autre pays pour acheter la même quantité de biens et de services dans chacun » (traduction de l'auteur de ce cours, à partir d'un résumé automatique). L'exemple de l'article : un hamburger coûte 2 livres à Londres et 4 dollars à New York ; la PPP implicite est donc 1 livre = 2 dollars.
+
+**Ce que dit l'article sur la différence avec le taux de marché** (résumé automatique) : les taux de marché sont utilisés pour les flux financiers ; les taux de PPP, fondés sur les prix d'un large éventail de biens et de services, servent à agréger le PIB réel et le bien-être ; la PPP est relativement stable, le taux de marché volatil ; pour de nombreuses économies émergentes et en développement, le rapport entre le taux de marché et la PPP du dollar se situe **entre 2 et 4**, alors que les deux sont beaucoup plus proches dans les économies avancées. Les limites mentionnées : les biens non échangeables sont moins chers dans les pays à bas revenu ; la PPP est difficile à mesurer (enquêtes peu fréquentes, estimations entre deux enquêtes).
+
+**Exemple chiffré (SIMULATION).**
+- Un panier identique coûte 1 000 EUR en zone euro et 1 200 USD aux États-Unis. La PPP implicite est 1 200 ÷ 1 000 = **1,20 USD par EUR**.
+- Si le taux de marché est 1,08, alors 1,08 ÷ 1,20 = 0,90 : l'euro vaut **10 % de moins** que ce que la PPP suggère, ou, autrement dit, un euro converti au marché achète **moins** de panier américain que de panier européen.
+- Autre exemple : un repas coûte 3 000 XOF à Cotonou et 12 USD à New York. La PPP implicite est 3 000 ÷ 12 = **250 XOF par USD**, alors que le taux de marché implicite est 607,37 (§4.7). Le rapport est 607,37 ÷ 250 ≈ **2,43** : cohérent avec l'ordre de grandeur décrit par le FMI pour de nombreuses économies, mais **les prix de l'exemple sont fictifs**.
+
+**Interprétation correcte.** **[Interprétation]** La PPP **n'est pas un prix cible** que le taux de change atteindrait bientôt : le même article la présente comme plus stable que le marché, mais ne décrit pas de mécanisme de retour (non traité par la source consultée). Elle est utile pour **comparer des niveaux de vie ou des PIB** entre pays ; elle est beaucoup moins utile pour décider d'une transaction de change de court terme. Les modules 1 et 4 y reviendront (flux, taux réels, termes de l'échange).
+
+## 5. Définitions essentielles
+
+- **Taux croisé** : taux entre deux devises obtenu à partir de deux taux faisant intervenir une troisième devise (souvent le dollar).
+- **Méthode des unités** : enchaînement de taux dont les unités intermédiaires se simplifient ; on inverse un taux écrit à l'envers.
+- **Croisé implicite / croisé direct** : calculé à partir de deux autres cotations / coté directement par un fournisseur.
+- **Arbitrage triangulaire** : boucle de trois échanges exploitant un écart entre croisé direct et croisé implicite.
+- **Taux de référence (BCE)** : taux fixé une fois par jour à titre d'information, cotes contre l'euro.
+- **Parité fixe** : taux de change fixé par un arrangement institutionnel (ex. 655,957 XOF pour 1 EUR).
+- **Taux implicite** : taux déduit par le calcul, non coté par un fournisseur.
+- **Parité de pouvoir d'achat (PPP)** : taux qui égaliserait le coût d'un même panier dans deux pays.
+- **Taux de marché** : taux coté sur le marché des changes à un instant donné.
+
+## 6. Exemples chiffrés
+
+*Prix fictifs : **[SIMULATION]**, sauf mention « réel ».*
+
+**Exemple A — Méthode des unités.** EUR/USD 1,0800 et USD/JPY 150,00 → EUR/JPY = 162,00. AUD/USD 0,6500 et USD/CAD 1,3500 → AUD/CAD = 0,6500 × 1,3500 = **0,8775**. NZD/USD 0,6000 et AUD/USD 0,6500 → NZD/AUD = 0,6000 ÷ 0,6500 = **0,9231**.
+
+**Exemple B — Bid/ask du croisé EUR/GBP.** 0,85694 / 0,85730, spread 3,6 pips (§4.3).
+
+**Exemple C — Arbitrage triangulaire.** Gain théorique de 2 506,26 GBP sur 1 000 000 GBP (§4.5).
+
+**Exemple D — Cas réel : GBP/USD implicite du 28 octobre 2026.** 1,1133 ÷ 0,83785 ≈ 1,3288 (taux de référence de la BCE, §4.6).
+
+**Exemple E — Franc CFA.** 655,957 ÷ 1,0800 = 607,37 XOF par USD (SIMULATION) ; 655,957 ÷ 1,1133 ≈ 589,20 (taux de référence du 28 octobre 2026, implicite).
+
+### 6.5 Cas historique documenté — l'arrimage du franc CFA à l'euro (1er janvier 1999)
+
+**[Fait, S-BCEAO-01 et S-TRES-01, via des résumés automatiques]** Le tableau historique de la BCEAO indique le passage à une parité de **655,957 FCFA pour 1 euro à compter du 1er janvier 1999**, et une dévaluation du franc CFA le **12 janvier 1994**. Le Trésor français décrit les principes de la coopération monétaire : parité fixe, convertibilité garantie par la France, libre transfert, mise en commun des réserves (cette dernière obligation ne s'appliquant plus à l'UEMOA depuis la nouvelle convention de décembre 2019, d'après la page publiée en 2021).
+
+*Ce que je ne peux pas confirmer :* l'ampleur de la dévaluation de 1994 en pourcentage, ses causes, les effets sur les prix ou la croissance, et l'état actuel des textes. **[Interprétation]** Un lien fixe à une grande monnaie simplifie les calculs de taux croisés (une seule parité à retenir) et réduit le risque de change avec la zone euro, mais il transmet aussi à l'UEMOA les mouvements de l'euro face aux autres devises ; il ne protège ni contre l'inflation importée ni contre les variations du dollar.
+
+## 7. Application au Forex et à l'or
+
+- **Forex** : vérifie toujours (a) le sens de la paire, (b) le côté bid/ask de ton opération, (c) l'heure des cotations. Un croisé bien calculé mais construit avec des données de dates différentes est faux.
+- **Croisés et risque** : une position EUR/GBP équivaut économiquement à une position longue EUR/USD et courte GBP/USD. Un mouvement du dollar peut donc **se neutraliser** dans le croisé ; c'est utile pour isoler un différentiel entre deux économies (module 4).
+- **Pour l'or** : XAU/USD est une paire contre le dollar (L0.03) ; on peut calculer **XAU/EUR** ou **XAU/XOF** en suivant la même méthode (L0.06 le développe avec les unités de l'or).
+- **Analyse fondamentale** : la PPP situe un niveau de prix ; elle ne donne pas de date de retour. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 8. Erreurs courantes
+
+- **Multiplier au lieu de diviser** (ou l'inverse) : le contrôle de plausibilité (§4.2) détecte l'erreur.
+- **Inverser le bid et l'ask** sur un croisé.
+- **Mélanger des dates** ou des sources différentes dans un même calcul.
+- **Utiliser un taux de référence pour une transaction** : la BCE le déconseille.
+- **Croire que le franc CFA est « stable » face à toutes les devises** : il est fixe face à l'euro.
+- **Croire qu'un taux de change doit converger vers la PPP à court terme.**
+- **Comparer des prix sans comparer des paniers identiques.**
+- **Penser qu'un arbitrage triangulaire est une stratégie accessible à un particulier** : les écarts disparaissent vite et les coûts les absorbent.
+
+## 9. Limites de l'interprétation
+
+- Les **taux de référence de la BCE** sont informatifs, fixés une fois par jour ; ils ne sont pas des prix de transaction.
+- Les valeurs réelles de la leçon sont des **lectures de tableaux par résumé automatique** de pages web, non vérifiées sur les graphiques officiels.
+- Les **bid/ask** utilisés sont fictifs.
+- La **PPP** dépend de paniers et d'enquêtes dont la couverture est inégale (FMI, 2018) ; la page de l'OCDE sur les PPP n'a pas pu être lue.
+- La **parité fixe du franc CFA** repose sur des accords susceptibles de changer ; la source du Trésor date de 2021.
+- Le calcul d'arbitrage ignore les coûts, les délais et la taille (L0.04).
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Méthode des unités.** (a) EUR/USD = 1,0800 et USD/CHF = 0,9000 : calcule EUR/CHF. (b) GBP/USD = 1,2600 et USD/JPY = 150,00 : calcule GBP/JPY. (c) AUD/USD = 0,6500 et NZD/USD = 0,6000 : calcule AUD/NZD. (d) USD/CAD = 1,3500 et USD/CHF = 0,9000 : calcule CAD/CHF.
+
+<details>
+<summary>Correction 1</summary>
+
+(a) 1 EUR = 1,0800 USD ; 1 USD = 0,9000 CHF ; EUR/CHF = 1,0800 × 0,9000 = **0,9720**.
+(b) 1,2600 × 150,00 = **189,00**.
+(c) 1 AUD = 0,6500 USD ; 1 NZD = 0,6000 USD ; AUD/NZD = 0,6500 ÷ 0,6000 = **1,0833**.
+(d) 1 USD = 1,3500 CAD ; 1 USD = 0,9000 CHF ; 1 CAD = 0,9000 ÷ 1,3500 CHF = **0,6667**. Plausibilité : le CAD vaut moins qu'un franc suisse, cohérent avec 1,35 CAD pour 0,90 CHF.
+</details>
+
+**Exercice 2 — Bid/ask d'un croisé.** EUR/USD 1,0800 / 1,0802 ; USD/JPY 150,00 / 150,02. (a) Bid et ask de EUR/JPY (obtenu par multiplication). (b) Spread en pips (1 pip = 0,01). (c) Compare aux spreads des composantes.
+
+<details>
+<summary>Correction 2</summary>
+
+(a) Bid : 1,0800 × 150,00 = **162,0000**. Ask : 1,0802 × 150,02 = 162,0516, soit **162,0516** (arrondi à 4 décimales).
+(b) 162,0516 − 162,0000 = 0,0516 = **5,16 pips**.
+(c) Composantes : EUR/USD 2 pips (en 0,0001) et USD/JPY 2 pips (en 0,01) ; le croisé a un spread supérieur à chacune, puisque les deux coûts s'additionnent à peu près (en valeur relative : 0,0002/1,0801 ≈ 0,0185 % et 0,02/150,01 ≈ 0,0133 % ; croisé : 0,0516/162,03 ≈ 0,0318 %, soit presque leur somme).
+</details>
+
+**Exercice 3 — Convertir un montant, avec le franc CFA.** Un importateur doit payer 20 000 USD. On suppose EUR/USD = 1,0800 / 1,0802 (SIMULATION) et 1 EUR = 655,957 XOF. Pour simplifier, la banque transmet les taux de marché sans marge. (a) Combien d'euros faut-il vendre pour obtenir 20 000 USD (vente de la base EUR : bid) ? (b) Combien de XOF ? (c) Combien aurait-il fallu avec le taux milieu 1,0801 ? (d) Quel surcoût en XOF et en % ?
+
+<details>
+<summary>Correction 3</summary>
+
+(a) Pour obtenir des USD en vendant des EUR, on utilise le **bid** : 20 000 ÷ 1,0800 = **18 518,52 EUR**.
+(b) 18 518,5185 × 655,957 = **12 147 352 XOF** (arrondi à l'unité).
+(c) 20 000 ÷ 1,0801 = 18 516,80 EUR ; × 655,957 = **12 146 227 XOF**.
+(d) Écart : environ **1 125 XOF** (12 147 352 − 12 146 227), soit **0,0093 %** (la moitié du spread de 0,0185 %, puisque la comparaison se fait avec le taux milieu). *SIMULATION : les marges réelles des banques sont différentes.*
+</details>
+
+**Exercice 4 — Cohérence des cotations.** EUR/USD = 1,0800 ; GBP/USD = 1,2600 ; EUR/GBP coté directement à 0,8590. (a) Calcule le croisé implicite. (b) Le croisé direct est-il plus haut ou plus bas ? (c) Décris une boucle de départ 1 000 000 GBP qui exploiterait l'écart et calcule le gain théorique. (d) Pourquoi ne doit-on pas conclure à une stratégie réaliste ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) 1,0800 ÷ 1,2600 = **0,857143**.
+(b) 0,8590 > 0,857143 : l'euro est **plus cher** en livres en direct qu'en passant par le dollar. Il est donc avantageux d'**acheter l'euro via le dollar** et de le **vendre en direct** : on part des livres, on les change en dollars (1 GBP = 1,2600 USD), on achète des euros avec ces dollars (1 EUR = 1,0800 USD), puis on vend les euros contre des livres au prix direct de 0,8590.
+(c) 1 000 000 GBP → 1 260 000 USD → 1 260 000 ÷ 1,0800 = 1 166 666,67 EUR → × 0,8590 = **1 002 166,67 GBP**. Gain théorique : **2 166,67 GBP**, soit environ 0,22 %.
+(d) Les spreads de chaque étape, les délais et la taille (L0.04) rongent ce type de gain ; et des teneurs de marché corrigent ces écarts très vite. Les chiffres sont fictifs.
+</details>
+
+**Exercice 5 — Cas réel : dates et sources.** Taux de référence de la BCE (S-ECB-04) : USD 1,1133 le 28/10/2026 ; GBP 0,83785 le 28/10/2026 ; JPY 176,15 le 26/10/2026. (a) Calcule le GBP/USD implicite du 28/10/2026. (b) Peux-tu calculer un USD/JPY du 28/10/2026 avec ces trois nombres ? Pourquoi ? (c) Peut-on utiliser le résultat de (a) pour acheter des livres ? (d) Que ferais-tu pour obtenir un USD/JPY correct ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) 1,1133 ÷ 0,83785 = **1,3288** (1,32876…).
+(b) **Non** : le yen date du 26 octobre, le dollar du 28 ; mélanger les dates donnerait un nombre sans signification (176,15 ÷ 1,1133 ≈ 158,2 serait un résultat mélangeant deux jours : à ne pas utiliser).
+(c) **Non** : c'est un taux de référence informatif et un croisé implicite ; la BCE déconseille l'usage de ses taux pour des transactions, et un fournisseur appliquerait ses propres bid/ask.
+(d) Récupérer le taux du yen du 28/10/2026 (ou prendre le dollar du 26/10/2026) auprès de la même source, vérifier la date, puis diviser les deux taux euros contre devise.
+</details>
+
+**Exercice 6 — Parité de pouvoir d'achat.** (a) Un panier coûte 1 000 EUR en zone euro et 1 200 USD aux États-Unis. Calcule la PPP implicite et compare-la à un taux de marché de 1,08. (b) Un repas coûte 3 000 XOF à Cotonou et 12 USD à New York : calcule la PPP implicite en XOF par USD et le rapport au taux de marché implicite de 607,37. (c) Que peut-on en conclure sur la direction du taux de marché le mois prochain ?
+
+<details>
+<summary>Correction 6</summary>
+
+(a) PPP = 1 200 ÷ 1 000 = **1,20 USD par EUR**. Taux de marché 1,08 : 1,08 ÷ 1,20 = **0,90**, soit 10 % sous la PPP.
+(b) PPP = 3 000 ÷ 12 = **250 XOF par USD**. Rapport = 607,37 ÷ 250 = **2,43**. Les prix sont fictifs ; l'ordre de grandeur est compatible avec le « 2 à 4 » mentionné par le FMI (2018) pour de nombreuses économies émergentes et en développement.
+(c) **Rien.** L'article du FMI présente la PPP comme relativement stable et le taux de marché comme volatil, mais ne décrit pas de retour à la PPP à court terme. La PPP sert à comparer des niveaux de prix et de revenus.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L0.05.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Un taux croisé s'obtient en **faisant se simplifier les unités** ; on inverse un taux écrit à l'envers.
+- Le **croisé bid/ask** combine bid et ask des deux composantes ; son spread est en général plus large que chacun.
+- On convertit en **multipliant** de la base vers la cotation (bid) et en **divisant** de la cotation vers la base (ask).
+- Trois cotations doivent être **cohérentes** ; un écart théorique est un arbitrage triangulaire, rapidement corrigé en pratique.
+- Les deux taux d'un croisé doivent être pris **au même instant et à la même source**.
+- **XOF** = 655,957 par euro depuis 1999 (BCEAO) : tout taux XOF contre une autre devise est un **croisé via l'euro**.
+- La **PPP** compare des paniers de prix (FMI 2018) ; elle est plus stable que le taux de marché et ne prédit pas son évolution à court terme.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer un croisé avec la méthode des unités dans les quatre configurations (Exercice 1).
+- [ ] Calculer le bid et l'ask d'un croisé et son spread (Exercice 2).
+- [ ] Convertir un montant dans le bon sens et au bon côté, en chiffrant le coût (Exercice 3).
+- [ ] Détecter une incohérence entre croisé direct et croisé implicite et décrire la boucle (Exercice 4).
+- [ ] Expliquer pourquoi on ne mélange pas les dates (Exercice 5).
+- [ ] Calculer un taux XOF contre le dollar à partir de EUR/USD (Exercice 3, §4.7).
+- [ ] Calculer une PPP implicite et expliquer ce qu'elle ne permet pas de conclure (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-ECB-03** — BCE, taux de change de référence de l'euro (page de présentation) : https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html
+- **S-ECB-04** — BCE, taux de référence euro/dollar, euro/livre, euro/yen (tableaux d'octobre 2026) : https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html (idem `-gbp` et `-jpy`)
+- **S-BCEAO-01** — BCEAO, « Histoire du franc CFA » : https://www.bceao.int/fr/content/histoire-du-franc-cfa
+- **S-TRES-01** — Direction générale du Trésor (France), « Les principes et modalités de fonctionnement de la coopération monétaire » (publié le 25 mai 2021) : https://www.tresor.economie.gouv.fr/tresor-international/la-zone-franc/les-principes-et-modalites-de-fonctionnement-de-la-cooperation-monetaire
+- **S-IMF-01** — FMI, *Finance & Development*, série « Back to Basics », Tim Callen, « Purchasing Power Parity: Weights Matter » (15 juin 2018) : https://www.imf.org/en/Publications/fandd/issues/Series/Back-to-Basics/Purchasing-Power-Parity-PPP.
+- **S-BIS-03** et **S-BIS-04** : voir L0.03 (rappel de la place du dollar dans les paires).
+
+**Définitions et conventions de cours non rattachées à une source :** méthode des unités, règle du bid/ask croisé, arbitrage triangulaire et sa disparition rapide, interprétation de la PPP. **Source non lue :** page de FAQ de l'OCDE sur les PPP (corps de page non accessible). **Points non vérifiés :** ampleur de la dévaluation de 1994, état actuel des textes sur la coopération monétaire, valeurs des taux de référence sur les graphiques officiels.

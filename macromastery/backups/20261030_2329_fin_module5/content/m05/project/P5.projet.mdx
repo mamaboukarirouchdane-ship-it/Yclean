@@ -1,0 +1,66 @@
+---
+id: P5
+module: 5
+title: "Projet du module 5 — Tableau de bord et thèse datée sur l'or (XAU/USD), comparés au résultat réel"
+duration_hours: 8
+prerequisites: ["L5.01", "L5.02", "L5.03", "L5.04", "L5.05", "L5.06", "L5.07", "L5.08", "L5.09", "L5.10", "L5.11", "L5.12"]
+status: "Rédigé"   # statut officiel dans registry/lessons.json
+---
+
+# P5 — Tableau de bord et thèse datée sur l'or, comparés au résultat réel
+
+> **Convention.** [Fait] = vérifié dans une source citée ; [Calcul de l'auteur] ; [Interprétation] ; [SIMULATION]. Ce projet ne demande **aucune prévision du futur** : tu travailles sur une **période passée**, en te plaçant à sa date de départ. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante** ; ce projet note la **méthode**, pas le résultat.
+
+## 1. Consigne
+
+**Partie A — Choix de la période et gel de l'information.** Choisis une période passée de **60 à 120 jours** sur XAU/USD, **antérieure à 2026**, de sorte que des sources primaires datées soient accessibles (Federal Reserve, FRED, Trésor américain, World Gold Council, CFTC, LBMA). Écris la **date de la thèse** et **gèle** l'information : seules les données publiées **avant** cette date sont autorisées.
+
+**Partie B — Tableau de bord daté (L5.11).** Au moins **six** indicateurs parmi taux réel, point mort, dollar, politique de la Fed, achats officiels, flux d'ETF, positionnement, courbe à terme, géopolitique. Pour chacun : valeur, période, date de publication, **âge** à la date de la thèse, source, statut (primaire lu, secondaire, non lu). Les cases **non lues** figurent explicitement.
+
+**Partie C — Thèse (L5.12).** Question et horizon ; faits ; hypothèses ; **trois scénarios** exclusifs avec probabilités sommant à 1 et prix représentatifs ; valeur attendue ; conditions d'invalidation observables ; limites.
+
+**Partie D — Comparaison avec le résultat.** **Après** avoir figé la thèse, relève le prix réel à la date d'évaluation (source et heure), calcule la variation, l'écart à la valeur attendue, le **score de Brier** et la **référence uniforme**. Liste les informations postérieures **sans** leur attribuer de causalité non démontrée.
+
+**Partie E — Retour critique.** Identifie un biais (rétrospection, confirmation, causalité hâtive, pondérations arbitraires), une donnée à améliorer et une limite de la méthode.
+
+## 2. Contenu obligatoire
+
+1. **Dates** de thèse et d'évaluation explicites ; durée calculée.
+2. **Tableau de bord** avec âges calculés et cases « non lu ».
+3. **Une note globale** présentée avec **deux jeux de pondérations** et la conclusion sur sa sensibilité.
+4. **Trois scénarios**, valeur attendue, score de Brier, référence uniforme.
+5. **Calculs** : un nominal = réel + point mort, une conversion en euros (XAU/EUR), un coût d'opportunité indicatif, un prix implicite d'ETF ou une base à terme.
+6. **Information postérieure** et rubrique **« inconnues »** non vide ; **limites** explicites.
+
+## 3. Règles de rigueur
+
+- Chaque donnée porte **sa source, sa date de publication, sa période et son unité**.
+- Aucune donnée **postérieure** à la date de la thèse dans les Parties A à C.
+- Les valeurs fictives sont marquées **SIMULATION** ; ne pas inventer de consensus : écrire **« à définir »** si non accessible.
+- Les probabilités et seuils sont **enregistrés avant** la Partie D et **non modifiés** après.
+- Distinguer **fait**, **calcul**, **interprétation**, **hypothèse** ; signaler toute source lue par résumé.
+- Aucune phrase du type « l'or va monter » ; une thèse est une probabilité.
+- Ne pas présenter une corrélation comme une causalité ; signaler les contradictions entre sources sans les trancher arbitrairement.
+
+## 4. Grille de notation (40 points ; réussite : 28)
+
+| Critère | Points | Niveau attendu |
+|---|---|---|
+| Gel de l'information et datation (Partie A) | 5 | Dates claires ; aucune donnée postérieure ; durée correcte. |
+| Tableau de bord et sources (Partie B) | 9 | Six indicateurs ou plus ; âges exacts ; cases « non lu » explicites ; primaire et secondaire distingués. |
+| Thèse, scénarios et calculs (Partie C) | 10 | Scénarios exclusifs, probabilités = 1 ; valeur attendue exacte ; invalidations observables ; calculs imposés exacts. |
+| Comparaison et score (Partie D) | 7 | Variation, Brier et référence corrects ; information postérieure listée sans causalité non démontrée. |
+| Rigueur, limites et retour critique (Partie E) | 5 | Inconnues non vides ; biais identifié ; sensibilité de la note ; aucune invention. |
+| Clarté de la présentation | 4 | Structure lisible, unités et dates systématiques. |
+
+**Pénalités :** donnée sans source (−2 chacune, maximum −8) ; donnée postérieure à la thèse utilisée (−4) ; probabilités qui ne somment pas à 1 (−2) ; seuils ou probabilités modifiés après le résultat (−6) ; causalité affirmée sans démonstration (−3) ; case non lue remplie par une valeur supposée (−3).
+
+## 5. Critères de maîtrise du module 5
+
+- [ ] Prix de l'or, mesures (séance, fin de mois) et contradictions entre sources distingués.
+- [ ] Taux réels, point mort et coût d'opportunité calculés correctement.
+- [ ] Dollar large, euro, or en devises locales traités sans confusion.
+- [ ] Banques centrales et ETF lus avec leurs limites de mesure.
+- [ ] Contrats à terme, base et coût de portage compris.
+- [ ] Crises et cycles lus comme des canaux multiples, sans cause unique.
+- [ ] Tableau de bord daté et thèse chiffrée, évalués sans biais rétrospectif.

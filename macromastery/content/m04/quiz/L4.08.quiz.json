@@ -1,0 +1,235 @@
+{
+  "lessonId": "L4.08",
+  "title": "Quiz — Yen, livre, franc suisse",
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
+  "note": "Seuil : 7 bonnes réponses sur 8.",
+  "questions": [
+    {
+      "id": "L4.08-Q1",
+      "type": "mcq",
+      "prompt": "Quel est le nouveau taux de la Banque du Japon après le vote du 18 septembre 2026 (source secondaire) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,75 %"
+        },
+        {
+          "id": "b",
+          "text": "1,00 %"
+        },
+        {
+          "id": "c",
+          "text": "1,25 %"
+        },
+        {
+          "id": "d",
+          "text": "1,50 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La Banque du Japon a relevé son taux de 0,25 point, de 1,00 % à 1,25 %, le plus haut niveau depuis 1995, par 7 voix contre 2.",
+      "tags": [
+        "boj"
+      ]
+    },
+    {
+      "id": "L4.08-Q2",
+      "type": "mcq",
+      "prompt": "USD/JPY de 153,41 à 157,50 : quelle variation de la valeur du yen en dollars ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−2,60 %"
+        },
+        {
+          "id": "b",
+          "text": "+2,67 %"
+        },
+        {
+          "id": "c",
+          "text": "+2,60 %"
+        },
+        {
+          "id": "d",
+          "text": "−2,67 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La valeur du yen est l'inverse du cours : 153,41 ÷ 157,50 − 1 = −2,60 % ; l'USD/JPY, lui, monte de 2,67 %.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.08-Q3",
+      "type": "mcq",
+      "prompt": "Différentiel de milieu de fourchette entre la Fed (3,75–4,00 %) et la Banque du Japon (1,25 %) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "3,875 points"
+        },
+        {
+          "id": "b",
+          "text": "2,50 points"
+        },
+        {
+          "id": "c",
+          "text": "2,75 points"
+        },
+        {
+          "id": "d",
+          "text": "2,625 points"
+        }
+      ],
+      "correct": "d",
+      "explanation": "3,875 − 1,25 = 2,625 points ; 3,875 points est le différentiel avec la BNS dont le taux est de 0 %.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.08-Q4",
+      "type": "mcq",
+      "prompt": "Cours à terme implicite à un an de l'USD/JPY (157,50 ; yen 1,25 % ; dollar 3,875 %, taux directeurs comme substituts) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 161,56"
+        },
+        {
+          "id": "b",
+          "text": "≈ 153,52"
+        },
+        {
+          "id": "c",
+          "text": "157,50"
+        },
+        {
+          "id": "d",
+          "text": "≈ 150,00"
+        }
+      ],
+      "correct": "b",
+      "explanation": "157,50 × 1,0125 ÷ 1,03875 ≈ 153,52 : le dollar est à terme en dessous du comptant ; ce n'est pas une prévision.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.08-Q5",
+      "type": "mcq",
+      "prompt": "BoE : 3,75 %, 6 voix contre 3 pour 4,00 %. Quelle part du comité voulait resserrer ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "50 %"
+        },
+        {
+          "id": "b",
+          "text": "66,7 %"
+        },
+        {
+          "id": "c",
+          "text": "25 %"
+        },
+        {
+          "id": "d",
+          "text": "33,3 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "3 ÷ 9 = 33,3 % : la répartition des votes informe sur la trajectoire plus que le niveau du taux.",
+      "tags": [
+        "boe"
+      ]
+    },
+    {
+      "id": "L4.08-Q6",
+      "type": "mcq",
+      "prompt": "IPC britannique 3,1 % dont 0,7 point attribué à l'énergie ; cible 2 %. Part de l'énergie dans l'écart à la cible ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "35 %"
+        },
+        {
+          "id": "b",
+          "text": "22,6 %"
+        },
+        {
+          "id": "c",
+          "text": "63,6 %"
+        },
+        {
+          "id": "d",
+          "text": "100 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Écart de 1,1 point ; 0,7 ÷ 1,1 = 63,6 % ; ce chiffre vient d'une source secondaire à confirmer.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.08-Q7",
+      "type": "mcq",
+      "prompt": "BNS : taux 0 %, inflation 0,8 %. Quel taux réel ex post ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−0,80 point"
+        },
+        {
+          "id": "b",
+          "text": "+0,80 point"
+        },
+        {
+          "id": "c",
+          "text": "0,00 point"
+        },
+        {
+          "id": "d",
+          "text": "−0,08 point"
+        }
+      ],
+      "correct": "a",
+      "explanation": "0 − 0,8 = −0,80 point ; avec un différentiel de 3,875 points face à la Fed, le franc peut servir de financement.",
+      "tags": [
+        "snb"
+      ]
+    },
+    {
+      "id": "L4.08-Q8",
+      "type": "mcq",
+      "prompt": "Pourquoi ne peut-on pas dire que la hausse de la Banque du Japon aurait dû renforcer le yen ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que le yen est fixe"
+        },
+        {
+          "id": "b",
+          "text": "Le yen a baissé après la décision : hausse attendue, vote partagé, Fed et différentiel large"
+        },
+        {
+          "id": "c",
+          "text": "Parce que la Banque du Japon ne compte pas"
+        },
+        {
+          "id": "d",
+          "text": "Parce que le taux est nul"
+        }
+      ],
+      "correct": "b",
+      "explanation": "L'USD/JPY est passé de 153,41 à plus de 157,50 ; la hausse attendue, le vote 7–2 et la Fed expliquent peut-être le mouvement sans preuve.",
+      "tags": [
+        "limite"
+      ]
+    }
+  ],
+  "revision": 1
+}

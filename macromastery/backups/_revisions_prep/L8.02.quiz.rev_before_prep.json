@@ -1,0 +1,233 @@
+{
+  "lessonId": "L8.02",
+  "title": "Quiz — Guerres, sanctions et énergie",
+  "passThreshold": 0.8,
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L8.02-Q1",
+      "type": "mcq",
+      "prompt": "La directive 3 de l'OFAC est signée le 24 février 2022 et vise la nouvelle dette de plus de 14 jours et le nouveau capital émis à partir du 26 mars 2022. Quelle lecture est correcte ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La dette de moins de 14 jours est aussi interdite"
+        },
+        {
+          "id": "b",
+          "text": "L'effet est immédiat le 24 février sur toute la dette"
+        },
+        {
+          "id": "c",
+          "text": "Signature et effet juridique sur les nouvelles émissions sont séparés de 30 jours : il faut dater l'application et non seulement l'annonce"
+        },
+        {
+          "id": "d",
+          "text": "La date n'a pas d'importance"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le texte fixe une date d'effet (26/03/2022, 00 h 01 heure de l'Est) postérieure de 30 jours à la signature ; la dette de 14 jours ou moins n'est pas visée.",
+      "tags": [
+        "sanctions"
+      ]
+    },
+    {
+      "id": "L8.02-Q2",
+      "type": "mcq",
+      "prompt": "Le communiqué du Trésor du 28/02/2022 dit que la directive 4 « immobilise » les avoirs de la banque centrale de Russie. Quel montant d'avoirs immobilisés peut-on citer à partir de ce communiqué ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aucun : le communiqué ne donne pas de montant, et le texte de la directive n'a pas été lu"
+        },
+        {
+          "id": "b",
+          "text": "Plusieurs centaines de milliards, selon le communiqué"
+        },
+        {
+          "id": "c",
+          "text": "Exactement la moitié des réserves"
+        },
+        {
+          "id": "d",
+          "text": "Le montant des exportations russes"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le communiqué ne contient aucun chiffre d'avoirs ; citer un montant serait inventer une donnée.",
+      "tags": [
+        "sanctions"
+      ]
+    },
+    {
+      "id": "L8.02-Q3",
+      "type": "mcq",
+      "prompt": "Le 8 mars 2022, l'or atteint 2 069 $, le pétrole est à son plus haut en termes réels depuis 2014 et les États-Unis annoncent l'interdiction d'importer des hydrocarbures russes. Que peut-on en conclure sur la cause de la hausse de l'or ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que la guerre est toujours haussière"
+        },
+        {
+          "id": "b",
+          "text": "Que l'interdiction a causé la hausse"
+        },
+        {
+          "id": "c",
+          "text": "Que le pétrole a causé la hausse"
+        },
+        {
+          "id": "d",
+          "text": "Rien de causal : la coïncidence ne suffit pas, il faut des canaux vérifiés et l'examen des facteurs simultanés"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La règle d'attribution interdit de déduire une cause de la simultanéité ; trois événements coïncident ce jour-là.",
+      "tags": [
+        "attribution"
+      ]
+    },
+    {
+      "id": "L8.02-Q4",
+      "type": "mcq",
+      "prompt": "Entre le 31 mars (1 942 $) et le 30 septembre 2022 (1 672 $), l'or rapporté par le WGC baisse de combien, et que dit-on de la cause ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ −7,4 % ; la guerre n'a eu aucun effet"
+        },
+        {
+          "id": "b",
+          "text": "Environ −13,9 % ; le WGC avance dollar fort, hausses de taux et sorties d'ETF, interprétation non démontrée comme cause unique"
+        },
+        {
+          "id": "c",
+          "text": "Environ −19,2 % ; due au seul dollar"
+        },
+        {
+          "id": "d",
+          "text": "Environ +8 % ; due au refuge"
+        }
+      ],
+      "correct": "b",
+      "explanation": "1 672 ÷ 1 942 − 1 ≈ −13,9 % ; −19,2 % correspond au repli depuis le plus haut du 8 mars ; −7,4 % est la variation depuis le début de l'année.",
+      "tags": [
+        "contre-exemple"
+      ]
+    },
+    {
+      "id": "L8.02-Q5",
+      "type": "mcq",
+      "prompt": "La part du dollar dans les réserves allouées (COFER) passe de 56,42 % (T4 2025) à 57,13 % (T1 2026). Que montre cette variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que les banques centrales ont vendu de l'or"
+        },
+        {
+          "id": "b",
+          "text": "Que la dédollarisation est terminée"
+        },
+        {
+          "id": "c",
+          "text": "Que la dédollarisation est démontrée"
+        },
+        {
+          "id": "d",
+          "text": "Un trimestre, dont environ la moitié due aux changes : elle ne prouve ni la poursuite ni l'arrêt d'une dédollarisation"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Un trimestre ne fait pas une tendance ; le FMI parle d'un mouvement très graduel, et la hausse est en partie liée aux taux de change.",
+      "tags": [
+        "reserves"
+      ]
+    },
+    {
+      "id": "L8.02-Q6",
+      "type": "mcq",
+      "prompt": "Le FMI indique que l'or a dépassé les bons du Trésor américain dans la part des réserves officielles en 2025, « presque entièrement » par la valorisation. Qu'en déduire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que les ETF ont reçu des flux"
+        },
+        {
+          "id": "b",
+          "text": "Que les banques centrales ont acheté massivement"
+        },
+        {
+          "id": "c",
+          "text": "Que la part a monté surtout parce que le prix a monté, ce qui n'établit pas des achats"
+        },
+        {
+          "id": "d",
+          "text": "Que la dédollarisation est démontrée"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Réserves (valorisation), achats d'or et flux d'ETF sont trois objets distincts ; une hausse de part liée au prix n'indique pas d'achats.",
+      "tags": [
+        "reserves"
+      ]
+    },
+    {
+      "id": "L8.02-Q7",
+      "type": "mcq",
+      "prompt": "Les achats nets du secteur officiel atteignent 1 135,7 t en 2022 (450,1 t en 2021). Quelle conclusion est justifiée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le niveau est un record rapporté avec une part estimée de demande non déclarée ; le motif (sanctions ou autre) n'est pas établi"
+        },
+        {
+          "id": "b",
+          "text": "Les sanctions en sont la cause démontrée"
+        },
+        {
+          "id": "c",
+          "text": "C'est un flux d'ETF"
+        },
+        {
+          "id": "d",
+          "text": "Tous les achats sont déclarés"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le WGC cite l'incertitude géopolitique et l'inflation comme raisons de détenir de l'or, mais le rapport inclut une estimation non quantifiée et ne classe pas les sanctions ; la cause reste une hypothèse.",
+      "tags": [
+        "achats"
+      ]
+    },
+    {
+      "id": "L8.02-Q8",
+      "type": "mcq",
+      "prompt": "Quelle formulation est acceptable après la lecture de la leçon ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les sanctions ont prouvé la dédollarisation"
+        },
+        {
+          "id": "b",
+          "text": "Les données lues ne permettent pas d'isoler l'effet des sanctions sur l'or ; elles montrent un plus haut le 8 mars puis un repli en dollars"
+        },
+        {
+          "id": "c",
+          "text": "L'or monte toujours en cas de guerre"
+        },
+        {
+          "id": "d",
+          "text": "La guerre n'a eu aucun effet sur l'or"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Une conclusion prudente énonce ce qui est observé et ce qui manque ; les trois autres formulations sont trop catégoriques et sans preuve.",
+      "tags": [
+        "refus"
+      ]
+    }
+  ],
+  "revision": 1
+}

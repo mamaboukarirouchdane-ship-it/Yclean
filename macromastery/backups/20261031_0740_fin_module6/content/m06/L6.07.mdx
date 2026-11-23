@@ -1,0 +1,207 @@
+---
+id: L6.07
+module: 6
+order: 7
+title: "Études de cas : réunions de banque centrale — décision attendue, surprise monétaire et réaction de l'or"
+title_initial: "Études de cas : réunions de banque centrale"
+level: "avancé"
+duration_hours: 3.5
+prerequisites: ["L6.01", "L6.02", "L6.03", "L6.05", "L6.06"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L6.07.quiz.json"
+sources: ["S-FED-26", "S-FED-27", "S-FED-28", "S-KIT-09", "S-CRX-02", "S-ATF-01", "S-CME-07", "S-MIN-02", "S-KIT-08", "S-KIT-05", "S-KIT-06", "S-KIT-07", "S-ADM-04", "S-ADM-02", "S-UCA-01", "S-CBK-01", "S-FIN-01", "S-ECB-06", "S-CME-05", "S-KIT-04", "S-BNC-01"]
+---
+
+# L6.07 — Études de cas : réunions de banque centrale
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée, avec sa date ; **[Calcul de l'auteur]** ; **[Interprétation]** ; **[Hypothèse]** ; **[SIMULATION]** = données fictives. Les communiqués de la Fed (29/07, 16/09, 28/10/2026) sont des **sources primaires** ; tout le reste (probabilités de marché, prix de l'or, avis) vient de **sources secondaires** lues par résumé automatique. **Aucune donnée intrajournalière de l'or n'a pu être obtenue** : les réactions sont des **variations de séance** ; une seule réaction des jours suivants est disponible (28 → 29/10). **Le cours ne présente aucune règle de trading : une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. reconstituer, **dans l'ordre chronologique**, ce que le marché savait *avant* une décision de banque centrale ;
+2. distinguer **décision**, communiqué, projections, dissidences et conférence de presse ;
+3. calculer une **surprise monétaire** (décision − Σ probabilité × variation) et la comparer à la réaction de l'or ;
+4. séparer réaction **immédiate**, **de séance** et **des jours suivants** ;
+5. comparer plusieurs cas, dont **un qui contredit** l'hypothèse naïve « une hausse des taux fait baisser l'or » ;
+6. dire ce qu'on ne peut pas conclure avec trois ou quatre cas.
+
+## 2. Prérequis
+
+- Probabilités implicites (L6.02), asymétries (L6.03), volatilité autour d'événements (L6.06), fiches de prévision (L6.05).
+
+## 3. Explication intuitive
+
+Une banque centrale annonce chaque réunion une décision. Mais le marché a déjà parié dessus : une hausse « attendue à 92 % » n'apprend presque rien le jour même, alors qu'un maintien jugé probable à 62 % apprend un peu. Ce qui bouge les prix, c'est ce qui était **imprévu** : la décision moins ce que les prix de marché laissaient prévoir, plus le ton, les projections et la conférence de presse. C'est pourquoi demander « la Fed monte, l'or baisse-t-il ? » est mal posé. La bonne question est : « qu'est-ce que le marché ne savait pas encore, et quelle est la taille de ce choc comparé au bruit habituel de l'or ? ».
+
+## 4. Développement technique
+
+### 4.1 Méthode des cas : règles fixées d'avance
+**[Définition de cours]** Pour chaque réunion : (1) **fiche préévénement** avec uniquement des informations *antérieures* à la décision, chacune datée ; (2) décision, vote et dissidences d'après le **communiqué officiel** ; (3) **surprise monétaire** s = décision (pb) − Σ pᵢ × Δᵢ (L6.02) ; (4) réaction : séance, puis jours suivants si disponible ; (5) limites.
+**Hypothèses énoncées avant lecture des réactions.** H1 (naïve) : « une décision de hausse fait baisser l'or ». H2 : « le **signe de la surprise** monétaire (hausse inattendue = surprise positive) est de signe opposé à la réaction de l'or, lorsque |s| ≥ 5 pb (seuil de cours) ». **[Aveu de contamination]** Les réactions de séance de cinq décisions de 2026 avaient déjà été lues en L6.03 ; ces hypothèses ne sont donc **pas** des tests indépendants, mais des exercices de lecture.
+**Règle de chronologie.** Une probabilité publiée *après* la décision, ou sans date, ne sert pas à décrire ce que le marché savait avant. Une probabilité *ancienne* peut servir, étiquetée comme ancienne.
+
+### 4.2 Cas A — 29 juillet 2026 : maintien avec trois dissidents
+**Avant [Fait].** 24/07/2026 (20 h 18 ET), Kitco, d'après CME FedWatch : probabilité de hausse en juillet **37,9 %**, contre environ 12,8 % une semaine plus tôt ; maintien « scénario de base » ; or à 4 052 $ à la clôture du 24/07 (S-KIT-09). **Réserve** : cette lecture date de cinq jours avant la décision ; celle du 28/07 n'est pas disponible. Le 29/07, S-MIN-02 évoque des swaps à environ **38 %** de hausse et presque tous les économistes sondés par Bloomberg attendant un maintien.
+**Décision [Fait].** (S-FED-27, communiqué officiel du 29/07, 14 h 00 EDT) : fourchette **3½–3¾ %** maintenue ; vote **9–3** (Hammack, Kashkari, Logan préféraient +¼ point) ; inflation « toujours élevée », activité « solide », aucun guidage explicite.
+**Surprise [Calcul de l'auteur].** Variation attendue = 0,379 × 25 = 9,475 pb ; décision 0 pb ; s = **−9,5 pb** (surprise baissière en termes de taux : moins de hausse que prévu).
+**Réaction [Fait].** (S-MIN-02) : plus bas du matin à 3 993,80 (Comex août, premier prix sous 4 000 depuis la mi-juillet), 4 080,80 à 14 h 15 (≈ +1 % sur le règlement de la veille) ; spot 4 081,10 (**+1,3 %**) ; rendement à 10 ans 4,65 %. **Incohérence interne** : « près de 90 $ » (texte) contre « 70 $ » (description).
+**[Interprétation]** Maintien + dissidents + surprise de −9,5 pb : signe compatible avec H2. Mais il s'agit d'un seul cas, la probabilité de départ est ancienne, et la séance contient d'autres informations.
+
+### 4.3 Cas B — 16 septembre 2026 : hausse largement anticipée (le cas qui contredit H1)
+**Avant [Fait], dans l'ordre.** 31/08 : FedWatch au-dessus de 50 %, contre environ 36 % avant le discours de Jackson Hole de Warsh (S-ATF-01, article du 03/09). 28/08 (publié le 02/09) : « environ un tiers » à **66,4 %** en une semaine (probabilité « implicite de marché », outil non nommé, S-CRX-02). **15/09** : **92 %** (CME FedWatch, d'après la description d'une page vidéo CME, heure non donnée, S-CME-07), avec dollar plus ferme et rendement à 10 ans ayant brièvement dépassé 5 %.
+**Décision [Fait].** (S-FED-28, 16/09, 14 h 00 EDT) : **hausse de ¼ point à 3¾–4 %** ; vote **12–0** ; inflation « toujours élevée » ; aucun guidage explicite. (S-KIT-08) : 16 des 18 participants prévoient une autre hausse en 2026, contre six en juin.
+**Surprise [Calcul de l'auteur].** Avec 92 % : 0,92 × 25 = 23,0 pb attendus ; s = 25 − 23,0 = **+2,0 pb** (sous le seuil de 5 pb). Avec la valeur ancienne de 66,4 % : 16,6 pb attendus ; s = +8,4 pb : **le choix de la probabilité change la conclusion** ; on retient la plus récente (15/09), la plus proche de la décision.
+**Réaction [Fait].** (S-KIT-08) : spot **4 310,10 $, +0,38 %** sur la séance. **Incohérence interne** : le titre dit « drops » et le corps « baisse marquée » alors que la variation est positive ; un autre titre de presse évoquant −1,2 % le 16/09 n'a pas été retenu (L6.03). Dollar « légèrement plus ferme » (opinion).
+**[Interprétation]** Une hausse de taux, et l'or a fini en légère hausse : **H1 est contredite dans ce cas**, sans que cela prouve l'inverse. La surprise est faible (+2,0 pb) ; les projections (16 sur 18) ont pu apporter une information, mais leur effet n'est pas isolé.
+
+### 4.4 Cas C — 28 octobre 2026 : maintien attendu, deux dissidents, décembre en ligne de mire
+**Avant [Fait].** 28/10, 9 h 27 ET (CME FedWatch via Yahoo Finance) : maintien en octobre **90,6 %** ; hausse en décembre **84 %** (S-ADM-04). 21/10 : 88 % de hausse en décembre (S-KIT-04).
+**Décision [Fait].** (S-FED-26) : fourchette 3¾–4 % maintenue ; vote **10–2** (Cook et Hammack pour +¼) ; activité « forte », emploi stable, inflation « toujours élevée ».
+**Surprise [Calcul de l'auteur].** (1 − 0,906) × 25 = 2,35 pb attendus ; s = **−2,35 pb** (quasi nulle).
+**Réaction [Fait].** (S-KIT-05) : spot 4 035,48 $, **−0,60 %** sur la séance (prix avant le communiqué non donné) ; (S-ADM-04) : or à terme 4 058,10 $ (−0,40 %, 15 h 29 ET) ; (S-BNC-01, opinion) ≈ 4 019,8 le 29/10. **Jours suivants [Calcul de l'auteur]** : 4 019,8 ÷ 4 035,48 − 1 = **−0,39 %**.
+**[Interprétation]** Surprise de taux quasi nulle, pourtant −0,6 % : la surprise de taux n'explique pas tout. Les dissidences, le ton, la conférence de presse ou d'autres informations du jour peuvent jouer, **sans que ces données permettent de les isoler**.
+
+### 4.5 Cas D — 29 octobre 2026 : BCE, un contexte différent mais peu de données de réaction
+**Avant [Fait].** 29/10 (08 h 43 UTC) : tous les économistes d'une enquête Bloomberg, sauf un, attendaient un maintien à 2,50 % (enquête non datée, lien du 04/09) (S-UCA-01) ; taux de dépôt 2,50 % depuis le 16/09 (S-ECB-06). **Ancienne lecture** : ECB Watch ≈ 60 % de hausse à cette réunion, mais au 24/09 (S-ADM-02) : elle ne dit rien de la veille.
+**Décision [Fait].** (S-CBK-01, article partiel) : politique inchangée, décision « unanime », Lagarde parle d'une décision de « non-hausse » ; (S-FIN-01) : le maintien était le scénario de base du marché.
+**Réaction.** **Non obtenue** : pas de niveau d'EUR/USD, pas de probabilité de décembre chiffrée, or non mentionné. **[Interprétation]** Cas utile pour la méthode (une probabilité de septembre ne vaut pas celle d'octobre), pas pour la réaction de l'or. **Contradiction mineure** : S-UCA-01 parle d'une « deuxième hausse depuis le 11 juin » alors que S-ECB-06 montre une hausse de 2,25 % à 2,50 %.
+
+### 4.6 Comparaison
+| Cas | Décision | Vote | Probabilité de hausse avant | Surprise s | Or (séance) |
+|---|---|---|---|---|---|
+| A — 29/07 | maintien 3½–3¾ % | 9–3 | 37,9 % (24/07, ancienne) | −9,5 pb | **+1,3 %** |
+| B — 16/09 | hausse 3¾–4 % | 12–0 | 92 % (15/09) | +2,0 pb | **+0,38 %** |
+| C — 28/10 | maintien 3¾–4 % | 10–2 | 9,4 % (28/10) | −2,35 pb | **−0,60 %** |
+| D — BCE 29/10 | maintien 2,50 % | unanime | non chiffrée | non calculable | non obtenue |
+
+**Cas sans reconstitution des attentes** (L6.03, S-KIT-06, S-KIT-07) : 29/04, maintien « conforme au consensus », or −1,40 % ; 17/06, maintien, vote 12–0, or −0,94 %. **[Calcul de l'auteur]** Sur les cinq variations de séance (−1,40 ; −0,94 ; +1,30 ; +0,38 ; −0,60) la moyenne est −0,25 % et la moyenne des valeurs absolues 0,92 %.
+**Similitudes.** Chaque cas : communiqué sans guidage explicite sur la suite ; inflation « toujours élevée » ; dissidences hawkish en juillet et octobre. **Différences.** Taux de départ, probabilité de départ, vote, présence de projections (septembre). **Lecture avec les hypothèses.** H1 : contredite par le cas B (n = 1). H2 avec le seuil de 5 pb : un seul cas qualifié (A), compatible ; B et C sont sous le seuil, avec des mouvements de +0,38 % et −0,60 % non expliqués par la surprise de taux.
+**Ce qu'on ne peut pas conclure.** Qu'une hausse fasse monter l'or ; qu'un maintien le fasse baisser ; que H2 soit confirmée ; que les projections, les dissidences ou le ton aient causé quoi que ce soit. Trois cas, séance seulement, probabilités de qualité inégale.
+
+### 4.7 Trois niveaux de réaction
+**[Définition]** Immédiate (premières minutes, fenêtre de 5 minutes de L6.01) : **non disponible**. De séance : disponible pour A, B, C. Jours suivants : disponible seulement pour C (−0,39 % du 28 au 29/10, source d'opinion). Une réaction immédiate peut être corrigée dans la séance (le plus bas du 29/07 puis +1 %), et celle de la séance peut s'inverser le lendemain.
+
+## 5. Définitions essentielles
+
+- **Surprise monétaire** : décision − Σ probabilité × variation (en pb).
+- **Décision / communiqué / projections / conférence de presse** : quatre informations distinctes, publiées à des heures différentes.
+- **Dissidence** : vote contre la majorité, signal sur l'orientation du comité.
+- **Chronologie stricte** : n'utiliser que des informations datées d'avant la décision.
+- **Réaction immédiate / de séance / différée** : voir § 4.7.
+
+## 6. Exemples chiffrés
+
+**6.1** A : 0,379 × 25 = 9,475 ; s = −9,5 pb. **6.2** B : 0,92 × 25 = 23,0 ; s = +2,0 pb (ou +8,4 pb avec 66,4 %). **6.3** C : 0,094 × 25 = 2,35 ; s = −2,35 pb. **6.4** Jours suivants : 4 019,8 ÷ 4 035,48 − 1 = −0,39 %.
+**6.6 (SIMULATION)** Maintien annoncé quand le marché prévoyait une hausse à 70 % : s = 0 − 0,70 × 25 = **−17,5 pb**.
+
+### 6.5 Cas historique documenté — la hausse « attendue » du 16 septembre 2026
+**[Fait]** La séquence 31/08 (> 50 %), 02/09 (66,4 %), 15/09 (92 %) puis décision de +25 pb le 16/09 (12–0) avec or +0,38 % (S-ATF-01, S-CRX-02, S-CME-07, S-FED-28, S-KIT-08). **[Interprétation]** La probabilité passe de 36 % à 92 % en trois semaines : à la décision, l'essentiel avait déjà été intégré dans les prix des contrats. **Ce qu'on ne peut pas conclure** : que l'or ait déjà « tout intégré » (aucune série) ; que la hausse n'ait eu aucun effet. **Limites** : sources secondaires, heure de la lecture à 92 % non donnée, aucune donnée intrajournalière, incohérences de titres de presse.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Avant** : fiche datée, probabilité la plus récente, surprise calculée *avant* la décision pour chaque issue possible.
+- **Pendant** : séparer décision, communiqué, projections, conférence de presse.
+- **Après** : réaction de séance puis jours suivants, comparée à la surprise ; archiver.
+- **EUR/USD et XAU/USD** : mêmes étapes ; le dollar et les taux réels sont examinés à part (L6.04), sans présumer de causalité.
+
+## 8. Erreurs courantes
+
+1. Raisonner sur la direction de la décision plutôt que sur la surprise.
+2. Utiliser une probabilité postérieure ou non datée pour décrire l'avant.
+3. Choisir les cas qui confirment l'hypothèse.
+4. Conclure d'un seul mouvement de séance à une causalité.
+5. Oublier que le choix de la probabilité (66,4 % ou 92 %) change la surprise.
+6. Prendre un titre de presse pour une mesure.
+7. Négliger les incohérences entre sources.
+
+## 9. Limites de l'interprétation
+
+- Trois cas Fed, un cas BCE sans réaction : aucune généralisation.
+- Variations de séance, références et heures hétérogènes ; aucune donnée intrajournalière.
+- Probabilités de marché issues de sources secondaires, parfois anciennes ; outil non consulté directement.
+- Dissidences, projections et conférence de presse non isolées.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Surprise.** Le marché prévoit une hausse à 37,9 % ; la banque maintient. Calcule la surprise (pas de 25 pb). Quel signe pour une hausse inattendue ?
+
+<details>
+<summary>Correction 1</summary>
+
+Attendu = 0,379 × 25 = 9,475 pb ; s = 0 − 9,475 = **−9,5 pb**. Une hausse inattendue donne une surprise **positive** (décision supérieure à l'attendu).
+</details>
+
+**Exercice 2 — Sensibilité au choix de la probabilité.** Hausse de 25 pb. Calcule s avec 92 % puis avec 66,4 %. Laquelle retiens-tu pour décrire la veille, et pourquoi ?
+
+<details>
+<summary>Correction 2</summary>
+
+92 % : s = 25 − 23,0 = **+2,0 pb** ; 66,4 % : 25 − 16,6 = **+8,4 pb**. On retient 92 % (15/09), plus proche de la décision ; 66,4 % date du 28/08–02/09. Le choix modifie la conclusion (sous ou au-dessus d'un seuil de 5 pb).
+</details>
+
+**Exercice 3 — Chronologie.** Pour la réunion du 16/09, classe : (a) 66,4 % publié le 02/09 ; (b) 92 % du 15/09 ; (c) article du 22/09 sur « une Fed qui signale d'autres hausses ». Lesquels décrivent l'avant ?
+
+<details>
+<summary>Correction 3</summary>
+
+(a) oui, comme information **ancienne** ; (b) oui, la plus récente ; (c) **non** : postérieur à la décision, il ne dit rien de ce que le marché savait le 15/09.
+</details>
+
+**Exercice 4 — Test de H1.** Parmi les cas A, B, C, un seul est une hausse. Quelle est la réaction de l'or ? Que peut-on dire de « hausse de taux ⇒ or en baisse » ?
+
+<details>
+<summary>Correction 4</summary>
+
+Cas B : hausse, or **+0,38 %**. H1 est **contredite** dans ce cas, mais un cas ne prouve pas l'inverse ; l'effet d'une surprise de +2,0 pb et des projections n'est pas isolé.
+</details>
+
+**Exercice 5 — Jours suivants.** Spot 4 035,48 le 28/10 ; ≈ 4 019,8 le 29/10 (opinion). Calcule la variation et dis pourquoi elle ne suffit pas pour conclure.
+
+<details>
+<summary>Correction 5</summary>
+
+4 019,8 ÷ 4 035,48 − 1 = **−0,39 %**. Source d'opinion, heure du prix non précisée, un seul jour, aucun lien causal démontrable avec la réunion.
+</details>
+
+**Exercice 6 — Cas qui contredit.** Résume en quelques lignes, avec les chiffres, ce que montrent A, B et C ensemble sur H2 (seuil 5 pb) et ce qu'on ne peut pas conclure.
+
+<details>
+<summary>Correction 6</summary>
+
+Un seul cas dépasse le seuil (A : s = −9,5 pb, or +1,3 %), compatible avec H2. B (+2,0 pb, +0,38 %) et C (−2,35 pb, −0,60 %) sont sous le seuil, avec des mouvements non expliqués par la surprise de taux. On ne peut ni confirmer H2, ni la rejeter : trois cas, séances seulement, probabilités de qualité inégale, et d'autres informations (vote, projections, ton) non isolées.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L6.07.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Une décision se juge par rapport à ce que les prix laissaient prévoir : la surprise = décision − Σ p × Δ.
+- Chronologie stricte : n'utiliser que des informations datées d'avant la décision.
+- Cas A : s = −9,5 pb, or +1,3 % ; cas B : hausse attendue (92 %), s = +2,0 pb, or +0,38 % ; cas C : maintien attendu, s = −2,35 pb, or −0,60 %.
+- Une hausse de taux n'a pas fait baisser l'or le 16/09 ; cela ne prouve rien de général.
+- Aucune donnée intrajournalière ; le cas BCE n'a pas de réaction de marché lue.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer une surprise monétaire (Exercices 1 et 2).
+- [ ] Respecter la chronologie des informations (Exercice 3).
+- [ ] Discuter une hypothèse contredite (Exercice 4).
+- [ ] Distinguer les niveaux de réaction (Exercice 5).
+- [ ] Rédiger une conclusion prudente sur plusieurs cas (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **31 octobre 2026** :
+
+- **S-FED-27** — Federal Reserve, communiqué du FOMC du 29/07/2026 (primaire, résumé automatique) : https://federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm
+- **S-FED-28** — Federal Reserve, communiqué du FOMC du 16/09/2026 (primaire, résumé automatique) : https://federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm
+- **S-KIT-09**, **S-ATF-01**, **S-CRX-02**, **S-CME-07**, **S-UCA-01**, **S-CBK-01**, **S-FIN-01** — sources secondaires, voir `content/sources.md`.
+- **S-FED-26**, **S-MIN-02**, **S-KIT-04** à **S-KIT-08**, **S-ADM-02**, **S-ADM-04**, **S-ECB-06**, **S-CME-05**, **S-BNC-01** — déjà lues.
+
+**Définitions de cours non rattachées à une source lue :** hypothèses H1 et H2, seuil de 5 pb, trois niveaux de réaction, règle de chronologie. **Points non vérifiés :** notes de mise en œuvre de la Fed, probabilités FedWatch directes, heures des lectures, réaction de l'EUR/USD et de l'or à la BCE.

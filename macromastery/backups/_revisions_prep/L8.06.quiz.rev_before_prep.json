@@ -1,0 +1,236 @@
+{
+  "lessonId": "L8.06",
+  "title": "Quiz — Durée des effets d'un choc",
+  "passThreshold": 0.8,
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L8.06-Q1",
+      "type": "mcq",
+      "prompt": "T0 = 24/02/2022. Quelles sont les dates T0 + 7, + 30 et + 90 jours ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "03/03, 24/03 et 25/05"
+        },
+        {
+          "id": "b",
+          "text": "02/03, 24/03 et 24/05"
+        },
+        {
+          "id": "c",
+          "text": "03/03, 26/03 et 25/05"
+        },
+        {
+          "id": "d",
+          "text": "31/02, 26/03 et 25/05"
+        }
+      ],
+      "correct": "c",
+      "explanation": "24/02 + 7 = 03/03 ; + 30 = 26/03 ; + 90 = 25/05 (2022 n'est pas bissextile). Les horizons sont des jours calendaires à partir d'une date d'origine documentée.",
+      "tags": [
+        "horizons"
+      ]
+    },
+    {
+      "id": "L8.06-Q2",
+      "type": "mcq",
+      "prompt": "L'or est lu à 2 069 $ le 08/03/2022 (jour 12 après T0). Que dit la grille pour l'horizon de 7 jours ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Non couvert : la valeur n'est pas lue à une date proche de l'horizon"
+        },
+        {
+          "id": "b",
+          "text": "Couvert"
+        },
+        {
+          "id": "c",
+          "text": "On interpole entre le 28/02 et le 08/03"
+        },
+        {
+          "id": "d",
+          "text": "On utilise la moyenne annuelle"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Une case ne se remplit que par une valeur lue près de l'horizon, même instrument ; l'interpolation est interdite.",
+      "tags": [
+        "couverture"
+      ]
+    },
+    {
+      "id": "L8.06-Q3",
+      "type": "mcq",
+      "prompt": "Quelle variation est permise : le contrat de décembre COMEX de 278,60 $ (13/11/2001) à 275,30 $ (16/11/2001) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aucune"
+        },
+        {
+          "id": "b",
+          "text": "≈ −8,2 % depuis le 300 $ du 14/09"
+        },
+        {
+          "id": "c",
+          "text": "≈ +1,2 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ −1,18 % : même contrat, deux clôtures"
+        }
+      ],
+      "correct": "d",
+      "explanation": "275,30 / 278,60 − 1 = −0,0118. Le 300 $ du 14/09 est un plus haut, non une clôture : on ne le mélange pas.",
+      "tags": [
+        "calcul",
+        "2001"
+      ]
+    },
+    {
+      "id": "L8.06-Q4",
+      "type": "mcq",
+      "prompt": "Deux sources donnent un pic du pétrole en octobre 1990 : ≈ 40 $ et 46 $. Que fait-on ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Retenir 46 $"
+        },
+        {
+          "id": "b",
+          "text": "Conserver les deux, signaler l'anomalie, calculer séparément par source"
+        },
+        {
+          "id": "c",
+          "text": "Faire la moyenne"
+        },
+        {
+          "id": "d",
+          "text": "Retenir 40 $ car plus prudent"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Les références de prix ne sont pas toutes précisées ; choisir ou moyenner masquerait la contradiction. Les hausses sont +81,8 % (40/22) et +119,0 % (46/21), par source.",
+      "tags": [
+        "anomalie",
+        "1990"
+      ]
+    },
+    {
+      "id": "L8.06-Q5",
+      "type": "mcq",
+      "prompt": "L'EIA prévoyait 116 $ pour le T2 2022 (prévision du 03/03) et le Brent valait 85 $ le 30/12/2022. Que conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le Brent a baissé de 116 à 85 $"
+        },
+        {
+          "id": "b",
+          "text": "La prévision était fausse"
+        },
+        {
+          "id": "c",
+          "text": "La prévision était juste"
+        },
+        {
+          "id": "d",
+          "text": "Rien sur la justesse de la prévision : horizons différents, résultat du T2 non lu"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Un T2 et une date de fin d'année ne se comparent pas ; seule la comparaison du T2 prévu au T2 observé serait pertinente, et elle n'est pas faite.",
+      "tags": [
+        "prevision"
+      ]
+    },
+    {
+      "id": "L8.06-Q6",
+      "type": "mcq",
+      "prompt": "De 2 069 $ (08/03/2022) à 1 672 $ (30/09/2022), fixings de l'après-midi : quelle lecture respecte la règle centrale ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+19,2 %"
+        },
+        {
+          "id": "b",
+          "text": "−19,2 % ; l'effet de la guerre s'est dissipé en sept mois"
+        },
+        {
+          "id": "c",
+          "text": "−19,2 % ; les horizons de 7 et 90 jours sont non couverts et la part de chaque facteur n'est pas mesurée"
+        },
+        {
+          "id": "d",
+          "text": "La variation ne peut pas être calculée"
+        }
+      ],
+      "correct": "c",
+      "explanation": "1 672/2 069 − 1 = −0,1919. Le calcul décrit une variation de prix entre deux fixings comparables ; il n'établit ni durée de l'effet ni cause.",
+      "tags": [
+        "2022"
+      ]
+    },
+    {
+      "id": "L8.06-Q7",
+      "type": "mcq",
+      "prompt": "Quelle preuve faut-il pour classer un effet comme structurel ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un changement mesuré qui subsiste après la disparition du choc initial, pas seulement un niveau de prix durable"
+        },
+        {
+          "id": "b",
+          "text": "Un prix plus haut pendant trois mois"
+        },
+        {
+          "id": "c",
+          "text": "Un article de presse"
+        },
+        {
+          "id": "d",
+          "text": "Une prévision de l'EIA"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Un niveau durable peut venir d'autres facteurs ; un effet structurel demande un changement mesuré des flux ou des institutions, qui subsiste.",
+      "tags": [
+        "structurel"
+      ]
+    },
+    {
+      "id": "L8.06-Q8",
+      "type": "mcq",
+      "prompt": "Pourquoi un article de 2003 sur l'or en 1991 (LBMA Alchemist) ne suffit-il pas à documenter 1990-1991 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que l'or n'existait pas en 1991"
+        },
+        {
+          "id": "b",
+          "text": "Ce n'est pas une source primaire de l'époque et il ne donne ni prix d'août 1990 ni prix du 17/01/1991"
+        },
+        {
+          "id": "c",
+          "text": "Parce qu'il est trop long"
+        },
+        {
+          "id": "d",
+          "text": "Il suffit"
+        }
+      ],
+      "correct": "b",
+      "explanation": "L'article donne un ordre de grandeur de fin 1991 (≈ 350 $) et une interprétation, sans série pour les horizons ; les horizons restent non couverts.",
+      "tags": [
+        "sources",
+        "1991"
+      ]
+    }
+  ],
+  "revision": 1
+}

@@ -1,0 +1,236 @@
+---
+id: L3.07
+module: 3
+order: 7
+title: "L'indice des prix PCE, les prix à la production (PPI) et le déflateur : mesurer l'inflation autrement"
+title_initial: "PCE, PPI et déflateur"
+level: "intermédiaire"
+duration_hours: 3
+prerequisites: ["L3.06"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L3.07.quiz.json"
+sources: ["S-BEA-02", "S-BEA-07", "S-BEA-08", "S-CLE-01", "S-FED-01", "S-BLS-02", "S-SIO-01", "S-TGT-01"]
+---
+
+# L3.07 — L'indice des prix PCE, les prix à la production (PPI) et le déflateur : mesurer l'inflation autrement
+
+> **Convention de lecture.** **[Fait]** = énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. expliquer **pourquoi la Fed vise le PCE** et non le CPI, et en quoi les deux indices diffèrent ;
+2. lire le **PCE d'ensemble** et le **PCE hors alimentation et énergie** ;
+3. mesurer l'**écart CPI − PCE** et en discuter les causes ;
+4. expliquer ce que mesure le **PPI** et pourquoi il n'est pas un « CPI de demain » ;
+5. définir un **déflateur** et le distinguer d'un indice de prix de consommation ;
+6. reconstituer une **séquence de publications** CPI → PPI → PCE et ses limites.
+
+## 2. Prérequis
+
+- CPI (L3.06) ; objectif d'inflation de la Fed (L2.05).
+
+## 3. Explication intuitive
+
+L'inflation n'a pas un seul thermomètre. Le CPI interroge ce que **les ménages achètent**. Le PCE, indice préféré de la Fed, est calculé par le BEA et part, pour une grande part, de ce que **les entreprises vendent** ; il couvre aussi des dépenses payées en leur nom (par exemple une partie des soins de santé). Le PPI regarde l'autre côté : les prix que **les producteurs** reçoivent. Le déflateur sert à passer d'une valeur courante à une valeur en volume. Un analyste utilise les quatre : le CPI arrive d'abord, il permet d'anticiper le PCE ; le PPI donne des indices de pression en amont ; le déflateur transforme des dollars en volumes. Aucun ne se substitue aux autres.
+
+## 4. Développement technique
+
+### 4.1 Pourquoi la Fed vise le PCE
+
+**[Fait]** (S-FED-01, déclaration sur les objectifs de long terme, résumé automatique) : la Fed vise « inflation at the rate of 2 percent », mesurée par la variation annuelle de l'**indice des prix PCE** ; déclaration effective depuis le 24/01/2012, modifiée en dernier le 22/08/2025.
+
+**[Fait]** (S-CLE-01, article de la Fed de Cleveland de 2014, résumé automatique) : le CPI repose sur ce que les ménages achètent (enquêtes du BLS), le PCE sur ce que les entreprises vendent (BEA) ; le CPI est limité aux dépenses à la charge du consommateur ; l'effet de pondération est en général le plus grand et tend à pousser le CPI au-dessus du PCE ; effet de formule (substitution) ; depuis 2000, prix +39 % (CPI) contre +31 % (PCE), soit 2,4 % contre 1,9 % par an.
+
+**[Interprétation]** Ces écarts passés sont **historiques** ; ils ne disent pas que le CPI dépasse toujours le PCE, comme le montre l'actualité de septembre 2026 (4.3).
+
+### 4.2 Le PCE de septembre 2026
+
+**[Fait]** (S-BEA-08, communiqué du BEA du 29/10/2026 à 8 h 30, heure de l'Est, résumé automatique) : indice des prix PCE : **+0,5 %** sur le mois, **+3,6 %** sur 12 mois ; hors alimentation et énergie : **+0,3 %** et **+3,1 %**. Le détail biens et services (tableau 2.8.7) n'a pas été lu.
+
+**[Fait]** (S-BEA-02, août 2026) : PCE **+0,3 %** / **+3,4 %** ; hors alimentation et énergie **+0,2 %** / **+3,0 %**.
+
+**[Calcul de l'auteur]**
+- évolution août → septembre : sur le mois, +0,3 → +0,5 (**+0,2 point**) ; sur 12 mois, 3,4 → 3,6 (**+0,2 point**) ; cœur : 3,0 → 3,1 (**+0,1 point**) ;
+- annualisation (L3.06) : 1,005¹² − 1 = **6,17 %** (ensemble) ; 1,003¹² − 1 = **3,66 %** (cœur).
+
+**[Interprétation]** Hausse de l'ensemble plus forte que celle du cœur : la différence suggère que l'alimentation et l'énergie ont contribué (cohérent avec l'énergie du CPI) ; à confirmer avec le tableau détaillé non lu. Les révisions du BEA sont fréquentes (le communiqué d'août indiquait une mise à jour annuelle des comptes) : les valeurs sont **provisoires**.
+
+### 4.3 L'écart entre CPI et PCE en septembre 2026
+
+**[Fait]** (S-BLS-02, S-BEA-08) : CPI **+0,6 % / +3,7 %**, cœur **+0,3 % / +2,6 %** ; PCE **+0,5 % / +3,6 %**, cœur **+0,3 % / +3,1 %**.
+
+**[Calcul de l'auteur]** (12 mois) : ensemble 3,7 − 3,6 = **+0,1 point** ; cœur 2,6 − 3,1 = **−0,5 point**.
+
+**[Interprétation]** Le CPI dépasse le PCE pour l'ensemble de très peu, mais le cœur PCE (3,1 %) est **au-dessus** du cœur CPI (2,6 %) : inverse de la situation décrite en 2014. Causes **possibles**, à tester et non établies par les sources lues : pondérations différentes (le logement pèse beaucoup moins dans le PCE), postes présents dans le PCE seulement (une partie des services médicaux, services financiers), source des données, effets de collecte propres au CPI après l'interruption de 2025 (S-BLS-10, L3.01 : aucune valeur chiffrée lue). **Aucune de ces causes n'a été vérifiée ici.**
+
+**[SIMULATION]** Économie à deux postes. Logement +0,4 %, autres +0,2 %. Poids CPI : 35/65 ; poids PCE : 15/85. CPI : 0,35 × 0,4 + 0,65 × 0,2 = **0,27** ; PCE : 0,15 × 0,4 + 0,85 × 0,2 = **0,23** ; écart **+0,04 point** dû aux seules pondérations.
+
+### 4.4 Le PPI : les prix à la production
+
+**[Définition]** (convention de cours) : le **PPI** mesure l'évolution des prix de vente reçus par les producteurs nationaux. L'indice de **demande finale** regroupe biens, services (dont des **services de commerce**, c'est-à-dire des marges) et construction. La mesure « hors alimentation, énergie et services de commerce » écarte les composantes les plus volatiles.
+
+**[Fait]** (S-SIO-01, article de presse financière, secondaire, résumé automatique ; BLS du 15/10/2026 à 8 h 30, page officielle non accessible) : septembre 2026, demande finale **+1,3 %** sur le mois, **+6,3 %** sur 12 mois ; biens **+2,6 %**, services **+0,8 %**, énergie **+10,8 %**, alimentation **+1,2 %** ; hors alimentation, énergie et services de commerce **+0,5 %** (mois), **+5,0 %** (12 mois) ; biens hors alimentation et énergie **+0,3 %**.
+
+**[Fait]** (S-TGT-01, reprise d'un communiqué du BLS par un ministère turc, secondaire) : août 2026, demande finale **+0,4 %** (mois) et **+5,4 %** (12 mois) ; juillet +0,1 % ; juin −0,1 %.
+
+**[Calcul de l'auteur]**
+- 12 mois : 5,4 → 6,3 (**+0,9 point**) ; mensuel : 0,4 → 1,3 ;
+- écart PPI demande finale − CPI d'ensemble, 12 mois : 6,3 − 3,7 = **2,6 points** ; cœur PPI 5,0 − cœur CPI 2,6 = **2,4 points** ;
+- énergie : PPI +10,8 % contre CPI +5,2 % : rapport **2,08**.
+
+**[Interprétation]** Le PPI est bien au-dessus du CPI, ce qui est compatible avec une **pression sur les marges** ou un **transfert partiel et décalé** aux consommateurs, mais n'en est pas la preuve : le PPI inclut des marges de commerce, la composition diffère et les ponts statistiques entre PPI et CPI ne sont pas mécaniques. Un PPI élevé **n'annonce pas** un CPI équivalent. Sur la crédibilité des sources : le secondaire est ici tout ce qui est lu ; un point à vérifier sur les tableaux officiels.
+
+**[SIMULATION]** Producteurs : +3,0 % sur 12 mois sur un bien ; transfert de 40 % aux prix de détail : +1,2 % sur ce bien ; le reste = marge réduite ou autre.
+
+### 4.5 Le déflateur
+
+**[Définition]** (convention de cours) :
+- **Déflateur du PIB** = PIB nominal ÷ PIB réel × 100 ; il mesure le prix de **tout ce qui est produit** dans le pays (pas ce que les ménages achètent).
+- **Déflateur de la consommation (PCE)** : prix de ce qui est consommé ; c'est l'indice qui sert de référence à la Fed.
+- Différences de couverture : le déflateur du PIB inclut investissement, dépenses publiques et exportations, exclut les importations.
+
+**[Calcul de l'auteur]** (**SIMULATION**) : PIB nominal +5,0 %, PIB réel +1,8 % : déflateur implicite = 1,050 ÷ 1,018 − 1 = **3,14 %**.
+
+**[Interprétation]** Ne jamais confondre : un choc de prix de l'énergie importée augmente le CPI et le PCE mais **pas** directement le déflateur du PIB (produit national seulement).
+
+## 5. Définitions essentielles
+
+- **PCE** : dépenses de consommation des personnes ; indice de prix du BEA.
+- **Écart CPI − PCE** : différence entre les deux mesures sur la même période.
+- **PPI** : prix reçus par les producteurs nationaux.
+- **Demande finale** : biens, services et construction destinés à la demande finale.
+- **Services de commerce** : marges de commerce de gros et de détail.
+- **Déflateur** : rapport valeur courante ÷ valeur en volume.
+- **Transfert (pass-through)** : part d'une hausse de prix de production répercutée au consommateur.
+
+## 6. Exemples chiffrés
+
+**6.1 Annualisation du PCE.** 1,005¹² − 1 = 6,17 %.
+**6.2 Écarts.** 3,7 − 3,6 = +0,1 ; 2,6 − 3,1 = −0,5.
+**6.3 Pondérations (SIMULATION).** 0,27 contre 0,23.
+**6.4 Déflateur (SIMULATION).** 1,050 ÷ 1,018 − 1 = 3,14 %.
+
+### 6.5 Cas historique documenté — la séquence du 14 au 29 octobre 2026
+
+**[Fait]** : CPI du 14/10 (S-BLS-02) ; PPI du 15/10 (S-SIO-01, secondaire) ; PCE du 29/10 (S-BEA-08). Chiffres : voir 4.2 à 4.4.
+
+**[Calcul de l'auteur]** CPI +0,6 % mensuel, PCE +0,5 % : écart de 0,1 point ; cœur CPI 12 mois 2,6 % contre cœur PCE 3,1 %.
+
+**[Interprétation]** Le CPI donnait une indication de l'ensemble du PCE, mais pas du cœur 12 mois. **Limites** : résumés automatiques ; tableaux détaillés non lus ; PPI en source secondaire ; aucune réaction de marché n'est étudiée ici ; les causes de l'écart sur le cœur ne sont pas établies.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Repère de la Fed** : le PCE d'ensemble et son cœur sont les chiffres qui comptent pour l'objectif de 2 % ; le CPI les anticipe.
+- **Dollar** : un cœur PCE élevé et persistant renforce le scénario d'une politique restrictive plus longue ; l'effet dépend des attentes déjà intégrées.
+- **Or** : taux réels (module 5) ; un PCE plus fort que prévu peut faire monter les taux, ce qui pèse sur l'or, mais l'inflation elle-même peut le soutenir : **hypothèse à tester**.
+- **Autres devises** : comparer le PCE américain aux indices de prix harmonisés (IPCH) de la zone euro (L3.10) ; ne pas comparer un PCE à un CPI d'un autre pays sans préciser la définition.
+- **PPI** : signal de pression sur les marges et sur les prix futurs, mais faible prédicteur du CPI mois par mois.
+- **Prudence** : aucune lecture de ces indices ne garantit la direction d'une paire.
+
+## 8. Erreurs courantes
+
+1. Utiliser le CPI à la place du PCE pour juger l'atteinte de l'objectif de la Fed.
+2. Déduire du PPI le CPI du mois suivant.
+3. Ignorer la composition (alimentation, énergie, services de commerce).
+4. Croire que le CPI dépasse toujours le PCE.
+5. Confondre déflateur du PIB et indice de prix de consommation.
+6. Comparer un indice annualisé à un indice sur 12 mois.
+7. Traiter une valeur du BEA comme définitive.
+
+## 9. Limites de l'interprétation
+
+- Le PCE de septembre 2026 est lu par résumé du communiqué ; les composantes (tableau 2.8.7) ne sont pas lues.
+- Les chiffres du PPI de septembre sont de source secondaire ; la page officielle n'est pas accessible.
+- Les causes de l'écart de 0,5 point sur le cœur ne sont pas vérifiées.
+- L'article de 2014 décrit des moyennes historiques ; il ne vaut pas pour 2026.
+- Le BEA révise ses chiffres ; la valeur de septembre n'est pas définitive.
+- Les définitions du PPI et du déflateur sont des définitions de cours non relues dans une source officielle.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Annualisation.** Le PCE d'ensemble est à +0,5 % sur le mois, le cœur à +0,3 %. Annualise-les.
+
+<details>
+<summary>Correction 1</summary>
+
+1,005¹² − 1 = **6,17 %** ; 1,003¹² − 1 = **3,66 %**.
+</details>
+
+**Exercice 2 — Écarts.** CPI 3,7 % ; PCE 3,6 % ; cœur CPI 2,6 % ; cœur PCE 3,1 %. Calcule les écarts CPI − PCE.
+
+<details>
+<summary>Correction 2</summary>
+
+Ensemble : **+0,1 point** ; cœur : **−0,5 point**.
+</details>
+
+**Exercice 3 — Pondérations (SIMULATION).** Logement +0,4 %, autres +0,2 % ; poids CPI 35/65, poids PCE 15/85. Calcule les deux indices et leur écart.
+
+<details>
+<summary>Correction 3</summary>
+
+CPI : 0,35 × 0,4 + 0,65 × 0,2 = **0,27** ; PCE : 0,15 × 0,4 + 0,85 × 0,2 = **0,23** ; écart **0,04 point**.
+</details>
+
+**Exercice 4 — PPI.** PPI de demande finale : 5,4 % (août) puis 6,3 % (septembre) sur 12 mois ; CPI 3,7 %. Calcule la variation et l'écart avec le CPI.
+
+<details>
+<summary>Correction 4</summary>
+
+6,3 − 5,4 = **+0,9 point** ; 6,3 − 3,7 = **2,6 points**.
+</details>
+
+**Exercice 5 — Déflateur (SIMULATION).** Nominal +5,0 %, réel +1,8 %. Déflateur implicite ?
+
+<details>
+<summary>Correction 5</summary>
+
+1,050 ÷ 1,018 − 1 = **3,14 %**.
+</details>
+
+**Exercice 6 — Critique.** « Le PPI à 6,3 % annonce un CPI à 6 % dans trois mois. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) Le PPI contient des services de commerce (marges) très volatils. (2) Le transfert aux consommateurs est partiel et décalé ; le CPI de septembre n'est qu'à 3,7 %. (3) Les paniers diffèrent (biens, services, construction contre consommation). (4) Les chiffres lus sont de source secondaire. (5) La relation PPI → CPI n'est pas mécanique.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L3.07.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- La Fed mesure son objectif de 2 % avec l'indice des prix PCE, pas avec le CPI.
+- Septembre 2026 : PCE +0,5 % / +3,6 % ; cœur +0,3 % / +3,1 % (BEA du 29/10/2026).
+- Écart CPI − PCE sur 12 mois : +0,1 point (ensemble) et −0,5 point (cœur) ; causes non vérifiées.
+- PPI de demande finale : +1,3 % / +6,3 % (secondaire) ; ne prédit pas mécaniquement le CPI.
+- Le déflateur du PIB mesure les prix de la production nationale.
+
+## 13. Critères de maîtrise
+
+- [ ] Expliquer pourquoi la Fed vise le PCE.
+- [ ] Calculer annualisations et écarts (Exercices 1 et 2).
+- [ ] Illustrer l'effet de pondération (Exercice 3).
+- [ ] Lire un PPI avec prudence (Exercice 4 et 6).
+- [ ] Calculer un déflateur implicite (Exercice 5).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-BEA-02** — BEA, Personal Income and Outlays, août 2026 : https://www.bea.gov/sites/default/files/2026-09/pi0826.pdf
+- **S-BEA-07** — BEA, page de présentation d'août 2026 : https://bea.gov/news/2026/personal-income-and-outlays-august-2026
+- **S-BEA-08** — BEA, Personal Income and Outlays, septembre 2026 (29/10/2026) : https://www.bea.gov/news/2026/personal-income-and-outlays-september-2026
+- **S-CLE-01** — Fed de Cleveland, PCE and CPI Inflation (2014) : https://www.clevelandfed.org/publications/economic-trends/2014/et-20140417-pce-and-cpi-inflation-difference
+- **S-FED-01** — Réserve fédérale, Statement on Longer-Run Goals (2025).
+- **S-BLS-02** — BLS, CPI, septembre 2026.
+- **S-SIO-01** — securities.io, PPI de septembre 2026 (secondaire) : https://www.securities.io/u-s-producer-prices-rise-1-3-in-september-with-goods-up-2-6/
+- **S-TGT-01** — ministère du Commerce de Türkiye, reprise du communiqué BLS d'août 2026 (secondaire) : https://trade.gov.tr/news/us-producer-price-index-increased-by-5-4-yoy-in-august-2026
+
+**Définitions de cours non rattachées à une source officielle lue :** PPI, demande finale, déflateur, transfert. **Points non vérifiés :** composantes du PCE, tableaux officiels du PPI, causes de l'écart sur le cœur.

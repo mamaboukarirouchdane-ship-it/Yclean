@@ -1,0 +1,388 @@
+{
+  "lessonId": "L0.02",
+  "title": "Quiz — Les acteurs des marchés et leurs motivations",
+  "passThreshold": 0.8,
+  "note": "Chiffres des questions de calcul : SIMULATION. Révision 2 du quiz (10 questions, seuil 8/10) ; révision 3 : Q4 actualisée avec les chiffres définitifs de la BRI (décembre 2025). Q6 est volatile : voir review_when.",
+  "questions": [
+    {
+      "id": "L0.02-Q1",
+      "type": "mcq",
+      "prompt": "Une entreprise qui doit payer un fournisseur en dollars dans trois mois fixe dès aujourd'hui le taux de change. Quelle est sa motivation principale ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Spéculation"
+        },
+        {
+          "id": "b",
+          "text": "Tenue de marché"
+        },
+        {
+          "id": "c",
+          "text": "Couverture"
+        },
+        {
+          "id": "d",
+          "text": "Objectif de politique publique"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Elle veut supprimer l'incertitude sur un coût futur : c'est une couverture. En échange, elle renonce à un éventuel gain de change. La spéculation, elle, consiste à prendre un risque pour un gain espéré. Une couverture réelle peut aussi laisser subsister des risques si le flux effectif diffère du flux prévu (voir Q9).",
+      "tags": [
+        "motivations"
+      ],
+      "skill": "reconnaître une motivation à partir d'une situation",
+      "difficulty": "facile",
+      "sources": [],
+      "lessonRefs": [
+        "§4.1",
+        "Exemple A"
+      ]
+    },
+    {
+      "id": "L0.02-Q2",
+      "type": "mcq",
+      "prompt": "Quel acteur gagne en premier lieu grâce au spread entre son prix d'achat et son prix de vente ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un teneur de marché"
+        },
+        {
+          "id": "b",
+          "text": "Un touriste qui change de l'argent"
+        },
+        {
+          "id": "c",
+          "text": "Un exportateur qui se couvre"
+        },
+        {
+          "id": "d",
+          "text": "Un fonds de pension qui rééquilibre"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le teneur de marché cote un bid et un ask et perçoit le spread sur les volumes traités. Ce revenu est un revenu brut : il ne tient compte ni des coûts de l'activité ni du risque que le prix bouge entre l'achat et la revente (voir Q9). Les trois autres acteurs utilisent le marché pour un besoin : voyager, se couvrir ou rééquilibrer un portefeuille.",
+      "tags": [
+        "tenue-de-marché"
+      ],
+      "skill": "associer un acteur à sa source de revenu",
+      "difficulty": "facile",
+      "sources": [],
+      "lessonRefs": [
+        "§4.4",
+        "Exemple C"
+      ]
+    },
+    {
+      "id": "L0.02-Q3",
+      "type": "mcq",
+      "prompt": "Une entreprise européenne (simulation) doit payer 300 000 dollars. Aujourd'hui, 1 euro = 1,2000 dollar. Combien cela représente-t-il en euros ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "360 000 €"
+        },
+        {
+          "id": "b",
+          "text": "250 000 €"
+        },
+        {
+          "id": "c",
+          "text": "300 000 €"
+        },
+        {
+          "id": "d",
+          "text": "277 777,78 €"
+        }
+      ],
+      "correct": "b",
+      "explanation": "300 000 dollars / 1,2000 dollar par euro = 250 000 euros. On divise le montant en dollars par le nombre de dollars contenus dans un euro. Les autres résultats sont des erreurs typiques : 360 000 vient d'une multiplication (300 000 × 1,2) ; 300 000 ignore le taux ; 277 777,78 vient du taux de la leçon (300 000 / 1,08) et non de celui de la question.",
+      "tags": [
+        "calcul",
+        "taux"
+      ],
+      "skill": "convertir un montant en dollars en euros",
+      "difficulty": "moyenne",
+      "sources": [],
+      "lessonRefs": [
+        "Exemple A",
+        "Exercice 2"
+      ]
+    },
+    {
+      "id": "L0.02-Q4",
+      "type": "mcq",
+      "prompt": "Selon l'enquête triennale de la BRI sur avril 2025 (publication de décembre 2025, marché des changes de gré à gré), les parts publiées par contrepartie sont : teneurs de marché déclarants 47 %, autres institutions financières 49 %, clients non financiers 5 % (total : 101 %). Quelle conclusion est la mieux justifiée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les clients non financiers, dont la part est la plus faible, sont rarement exposés au risque de change."
+        },
+        {
+          "id": "b",
+          "text": "Une part majeure du volume est spéculative, puisque les autres institutions financières comprennent des fonds spéculatifs."
+        },
+        {
+          "id": "c",
+          "text": "Le total des parts dépasse légèrement le tout, ce qui prouve une erreur de calcul de la BRI : ces parts sont inutilisables."
+        },
+        {
+          "id": "d",
+          "text": "La plupart des échanges se font entre institutions financières ; les parts ne disent pas pourquoi elles traitent."
+        }
+      ],
+      "correct": "d",
+      "explanation": "La bonne réponse est d. Les teneurs de marché et les autres institutions financières représentent ensemble la grande majorité du volume, mais ces parts décrivent des catégories d'acteurs, pas des motivations. L'option a est fausse : une part faible du volume ne dit rien sur l'exposition au risque de change de ces entreprises, et la page préliminaire de la BRI (septembre 2025) note que des entreprises non financières peuvent passer par des filiales de financement, comptées avec les autres institutions financières. L'option b est fausse : « autres institutions financières » regroupe des gestionnaires d'actifs, des fonds de pension, des assureurs et des fonds spéculatifs, qui peuvent se couvrir, rééquilibrer un portefeuille ou spéculer ; la catégorie ne dit pas pourquoi chacun traite. L'option c est fausse : le total de 101 % s'explique par l'arrondi. Sur les montants publiés (4 443, 4 627 et 441 milliards de dollars pour un total de 9 510), les parts exactes sont d'environ 46,7 %, 48,7 % et 4,6 % (calcul de l'auteur, total 100,0 %) ; arrondies à l'unité, elles donnent 47, 49 et 5. La BRI ne commente pas ce 101 % dans les documents lus : le mécanisme est une déduction de l'auteur.",
+      "tags": [
+        "BRI",
+        "catégorie-vs-motivation",
+        "arrondis"
+      ],
+      "skill": "lire une statistique officielle sans en tirer de conclusion abusive (catégorie ≠ motivation)",
+      "difficulty": "moyenne",
+      "sources": [
+        "S-BIS-03",
+        "S-BIS-02"
+      ],
+      "lessonRefs": [
+        "§4.3",
+        "Exercice 3"
+      ]
+    },
+    {
+      "id": "L0.02-Q5",
+      "type": "mcq",
+      "prompt": "Un rapport COT sur les contrats à terme standardisés (*futures*) sur l'euro classe un acteur dans la catégorie « Leveraged Funds » et indique une forte position acheteuse. Que peut-on en conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sa catégorie reflète son activité principale ; elle ne dit pas si cette position couvre un risque ou spécule."
+        },
+        {
+          "id": "b",
+          "text": "Cette position est spéculative, car un fonds de cette catégorie n'a pas d'autre activité que de parier sur les prix."
+        },
+        {
+          "id": "c",
+          "text": "Cette position est une couverture, car un fonds de cette catégorie a pour métier de gérer le risque de ses clients."
+        },
+        {
+          "id": "d",
+          "text": "Ce fonds figurera dans la même catégorie pour tous les contrats, la classification étant fixée une fois pour toutes."
+        }
+      ],
+      "correct": "a",
+      "explanation": "La bonne réponse est a. La CFTC classe les acteurs d'après leur activité principale déclarée et écrit que son personnel ne connaît pas les raisons précises des positions : le rapport ne dit pas si la position relève de la couverture ou de la spéculation. Les options b et c prêtent la même motivation à tous les acteurs d'une catégorie ; l'une est trop sévère, l'autre trop indulgente. L'option d est fausse : la CFTC précise qu'un acteur peut avoir des classifications différentes selon les contrats. La catégorie dit qui est l'acteur, pas pourquoi il agit.",
+      "tags": [
+        "CFTC",
+        "catégorie-vs-motivation"
+      ],
+      "skill": "distinguer catégorie et motivation dans un rapport officiel",
+      "difficulty": "moyenne",
+      "sources": [
+        "S-CFTC-01",
+        "S-CFTC-03"
+      ],
+      "lessonRefs": [
+        "§4.6",
+        "Exercice 4"
+      ]
+    },
+    {
+      "id": "L0.02-Q6",
+      "type": "mcq",
+      "prompt": "Selon le calendrier traditionnel de publication du rapport COT de la CFTC, un rapport publié un vendredi à 15 h 30 (heure de l'Est) décrit quelle situation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les positions arrêtées au lundi précédent, publiées le mercredi : une nouvelle parue le mardi y figure déjà."
+        },
+        {
+          "id": "b",
+          "text": "Les positions arrêtées au vendredi, quelques heures avant la publication : le rapport reflète la situation du moment."
+        },
+        {
+          "id": "c",
+          "text": "Les positions arrêtées au mardi précédent : une nouvelle parue le mercredi n'y figure pas encore."
+        },
+        {
+          "id": "d",
+          "text": "Les positions moyennes de la semaine, du lundi au vendredi : une nouvelle parue le mercredi y figure en partie."
+        }
+      ],
+      "correct": "c",
+      "explanation": "La bonne réponse est c. Dans le calendrier traditionnel, les positions sont arrêtées au mardi et généralement publiées le vendredi, soit trois jours après : une nouvelle parue le mercredi n'y est pas reflétée. Le calendrier de l'option a ressemble à celui annoncé par la CFTC le 27 octobre 2026 (données du lundi publiées le mercredi) ; ce plan est annoncé « d'ici la fin de 2026 » sans date de début, et il n'est pas confirmé comme appliqué. Les options b et d sont des erreurs courantes : croire que le rapport est quasi instantané ou qu'il agrège la semaine.",
+      "tags": [
+        "CFTC",
+        "délai",
+        "calendrier"
+      ],
+      "skill": "tenir compte du décalage entre la date des données et la date de publication",
+      "difficulty": "moyenne",
+      "sources": [
+        "S-CFTC-01",
+        "S-CFTC-03",
+        "S-CFTC-02"
+      ],
+      "lessonRefs": [
+        "§4.6",
+        "Exercice 4"
+      ],
+      "volatile": true,
+      "review_when": "À actualiser lorsque la CFTC confirmera officiellement l'application du calendrier à deux publications hebdomadaires annoncé le 27 octobre 2026 (communiqué n° 9316-26). Au 30 octobre 2026, aucune date d'application n'est confirmée."
+    },
+    {
+      "id": "L0.02-Q7",
+      "type": "mcq",
+      "prompt": "Une banque indique qu'elle « adhère au FX Global Code ». Quelle lecture est la plus rigoureuse ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle applique des règles qui remplacent la réglementation de son pays pour les opérations de change."
+        },
+        {
+          "id": "b",
+          "text": "Elle suit des bonnes pratiques non contraignantes, qui complètent les règles locales sans les remplacer."
+        },
+        {
+          "id": "c",
+          "text": "Elle se conforme à une obligation légale qui s'impose à toutes les banques actives sur le marché des changes."
+        },
+        {
+          "id": "d",
+          "text": "Elle suit des règles réservées aux grandes banques, les petits participants du marché étant exclus du Code."
+        }
+      ],
+      "correct": "b",
+      "explanation": "La bonne réponse est b. D'après la page de présentation du Comité du change de la Fed de New York, le Code compte 55 principes, s'applique aux participants quelle que soit leur taille, ne crée aucune obligation légale ou réglementaire et complète les règles locales (version de décembre 2024). L'option a est fausse : il complète, il ne remplace pas. L'option c est fausse : il ne crée aucune obligation légale. L'option d est fausse : il s'applique quelle que soit la taille. Adhérer au Code est un engagement de bonne pratique, pas une obligation légale.",
+      "tags": [
+        "FX-Global-Code"
+      ],
+      "skill": "situer la portée juridique d'un code de conduite",
+      "difficulty": "moyenne",
+      "sources": [
+        "S-FXC-01"
+      ],
+      "lessonRefs": [
+        "§4.5"
+      ]
+    },
+    {
+      "id": "L0.02-Q8",
+      "type": "mcq",
+      "prompt": "Laquelle de ces affirmations sur l'Exchange Stabilization Fund (ESF) américain est appuyée par les sources de la leçon ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les interventions de l'ESF ont atteint leur objectif de stabilisation du dollar, comme le montrent les sources."
+        },
+        {
+          "id": "b",
+          "text": "La Fed a participé aux interventions dès 1934, en finançant l'ESF avec le Trésor dès la création du fonds."
+        },
+        {
+          "id": "c",
+          "text": "À l'origine, l'ESF a été financé par des emprunts auprès de banques privées, le Trésor n'apportant aucun capital."
+        },
+        {
+          "id": "d",
+          "text": "L'ESF a été créé en 1934, doté de 2 milliards de dollars issus d'une hausse du prix de l'or."
+        }
+      ],
+      "correct": "d",
+      "explanation": "La bonne réponse est d : c'est le fait établi par la Fed de Cleveland. L'option a est fausse : les sources décrivent l'existence, l'origine et le financement de l'outil, pas son efficacité ; conclure à un succès serait une extrapolation. L'option b est fausse : la page du Trésor indique que la Fed a rejoint les interventions en 1962, les ressources de l'ESF seules étant jugées trop faibles pour des opérations de grande ampleur. L'option c est fausse : la dotation initiale vient d'une hausse du prix de l'or, pas d'emprunts auprès de banques privées. Un acteur officiel poursuit un objectif public, mais le cas ne prouve pas l'efficacité des interventions.",
+      "tags": [
+        "ESF",
+        "secteur-officiel"
+      ],
+      "skill": "séparer ce qu'une source établit de ce qu'elle ne mesure pas",
+      "difficulty": "moyenne à difficile",
+      "sources": [
+        "S-CLE-01",
+        "S-UST-01"
+      ],
+      "lessonRefs": [
+        "§4.7",
+        "Exercice 5"
+      ]
+    },
+    {
+      "id": "L0.02-Q9",
+      "type": "mcq",
+      "prompt": "Dans les simulations de la leçon, l'Exemple A est une couverture portant exactement sur 2 000 000 de dollars à une échéance donnée, et l'Exemple C un revenu de 400 dollars pour une banque qui cote un bid et un ask. Quelle affirmation est exacte ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les 400 dollars de l'Exemple C sont un résultat brut : ils supposent un prix stable et ignorent les coûts éventuels."
+        },
+        {
+          "id": "b",
+          "text": "La couverture de l'Exemple A reste efficace même si l'entreprise reçoit finalement un montant très différent de celui prévu."
+        },
+        {
+          "id": "c",
+          "text": "Les 400 dollars de l'Exemple C sont garantis pour la banque, car le spread ne dépend pas de l'évolution du prix."
+        },
+        {
+          "id": "d",
+          "text": "La couverture de l'Exemple A garantit à l'entreprise un résultat meilleur que le taux observé dans trois mois."
+        }
+      ],
+      "correct": "a",
+      "explanation": "La bonne réponse est a. Les 400 dollars (1 000 000 × 0,0004) sont un résultat brut sous les hypothèses de la simulation : avant les coûts éventuels de l'activité, et en supposant que le prix ne bouge pas entre les deux opérations. L'option b est fausse : la couverture est supposée correspondre exactement au montant et à la date de réception ; si le flux effectif diffère du flux prévu, des risques subsistent. L'option c est fausse : si le prix bouge entre les deux opérations, le revenu peut être effacé, c'est le risque de la tenue de marché. L'option d est fausse : une couverture supprime la perte possible mais aussi le gain possible, elle renonce à un résultat meilleur pour obtenir une certitude.",
+      "tags": [
+        "simulation",
+        "couverture",
+        "tenue-de-marché"
+      ],
+      "skill": "lire un résultat de simulation avec ses hypothèses",
+      "difficulty": "difficile",
+      "sources": [],
+      "lessonRefs": [
+        "Exemple A",
+        "Exemple C",
+        "§4.4"
+      ]
+    },
+    {
+      "id": "L0.02-Q10",
+      "type": "mcq",
+      "prompt": "Un analyste étudie le marché de l'or et sait que des acteurs officiels l'ont acheté et vendu pour des raisons de politique publique (cas de l'ESF en 1934). Quelle démarche est la plus prudente pour construire son analyse ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Conclure que le prix de l'or monte dès qu'une catégorie d'acteurs, officielle ou privée, achète davantage."
+        },
+        {
+          "id": "b",
+          "text": "Recenser les catégories d'acheteurs et de vendeurs pour formuler des hypothèses, sans en déduire seul le prix."
+        },
+        {
+          "id": "c",
+          "text": "Écarter l'identité des acteurs, qui n'a aucun intérêt pour l'analyse du prix de l'or, fixé par d'autres facteurs."
+        },
+        {
+          "id": "d",
+          "text": "Supposer que les acteurs officiels agissent comme des fonds privés, avec le même objectif de profit que ceux-ci."
+        }
+      ],
+      "correct": "b",
+      "explanation": "La bonne réponse est b. Identifier les catégories d'acheteurs et de vendeurs aide à construire des hypothèses de marché (qui pourrait avoir besoin d'acheter ou de vendre, et pourquoi), mais ne suffit pas à prévoir le prix : une catégorie n'indique ni la motivation ni la taille des flux à venir. Ces hypothèses seront testées aux modules 5 et 7. L'option a est fausse : elle transforme une identité d'acheteur en prévision de prix. L'option c est fausse : l'identité des acteurs aide à formuler des hypothèses, même si elle ne prédit pas le prix. L'option d est fausse : un acteur officiel poursuit un objectif de politique publique et non un profit.",
+      "tags": [
+        "or",
+        "hypothèses",
+        "secteur-officiel"
+      ],
+      "skill": "construire une hypothèse de marché sans la confondre avec une prévision",
+      "difficulty": "moyenne à difficile",
+      "sources": [
+        "S-CLE-01"
+      ],
+      "lessonRefs": [
+        "§7"
+      ]
+    }
+  ],
+  "revision": 4
+}

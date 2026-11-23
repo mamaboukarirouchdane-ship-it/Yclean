@@ -1,0 +1,236 @@
+{
+  "lessonId": "L2.02",
+  "title": "Quiz — Banques, monnaie et réserves",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : Banque d'Angleterre (2014), Fed (H.6 juin 2026, réserves obligatoires), résumés automatiques.",
+  "questions": [
+    {
+      "id": "L2.02-Q1",
+      "type": "mcq",
+      "prompt": "Selon la Banque d'Angleterre (2014), que se passe-t-il quand une banque accorde un prêt ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle prête l'argent d'un autre déposant"
+        },
+        {
+          "id": "b",
+          "text": "Elle imprime des billets"
+        },
+        {
+          "id": "c",
+          "text": "Elle crédite le compte de l'emprunteur d'un dépôt nouveau égal au prêt : les deux côtés de son bilan augmentent"
+        },
+        {
+          "id": "d",
+          "text": "Elle emprunte d'abord à la banque centrale"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le prêt crée un dépôt : la monnaie existe au moment où le prêt est accordé, sans mouvement de billets.",
+      "tags": [
+        "creation-monetaire"
+      ]
+    },
+    {
+      "id": "L2.02-Q2",
+      "type": "mcq",
+      "prompt": "Que sont les réserves ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "De la monnaie de banque centrale détenue par les banques, utilisée pour régler les paiements entre elles"
+        },
+        {
+          "id": "b",
+          "text": "Des billets détenus par les ménages"
+        },
+        {
+          "id": "c",
+          "text": "Des dépôts à vue des entreprises"
+        },
+        {
+          "id": "d",
+          "text": "Des actions de la banque"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Les réserves ne peuvent pas être détenues par les ménages ou les entreprises ; elles servent au règlement interbancaire.",
+      "tags": [
+        "reserves"
+      ]
+    },
+    {
+      "id": "L2.02-Q3",
+      "type": "mcq",
+      "prompt": "Quel est le multiplicateur maximal de manuel avec un ratio de réserves obligatoires de 10 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1"
+        },
+        {
+          "id": "b",
+          "text": "0,1"
+        },
+        {
+          "id": "c",
+          "text": "100"
+        },
+        {
+          "id": "d",
+          "text": "10"
+        }
+      ],
+      "correct": "d",
+      "explanation": "1 ÷ 0,10 = 10 ; avec r = 8 %, 12,5. Le modèle est pédagogique, jugé inexact comme description par la Banque d'Angleterre.",
+      "tags": [
+        "multiplicateur"
+      ]
+    },
+    {
+      "id": "L2.02-Q4",
+      "type": "mcq",
+      "prompt": "Quelle critique de la Banque d'Angleterre vise le multiplicateur de manuel ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les banques centrales fixent la quantité de réserves"
+        },
+        {
+          "id": "b",
+          "text": "Les banques centrales fixent le prix des réserves ; les réserves ne limitent pas le crédit et la causalité va du crédit vers les réserves"
+        },
+        {
+          "id": "c",
+          "text": "Les réserves sont illimitées sans conditions"
+        },
+        {
+          "id": "d",
+          "text": "Les dépôts n'existent pas"
+        }
+      ],
+      "correct": "b",
+      "explanation": "L'article écrit que le crédit génère la demande de réserves, non l'inverse.",
+      "tags": [
+        "critique"
+      ]
+    },
+    {
+      "id": "L2.02-Q5",
+      "type": "mcq",
+      "prompt": "Bilan fictif : prêts 700, titres 200, réserves 100 ; dépôts 900. Après un prêt de 50, quel est le ratio fonds propres / actif ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "10,00 %"
+        },
+        {
+          "id": "b",
+          "text": "50 %"
+        },
+        {
+          "id": "c",
+          "text": "5,0 %"
+        },
+        {
+          "id": "d",
+          "text": "9,52 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Actif = 1 050, fonds propres 100 : 100 ÷ 1 050 = 9,52 % ; le crédit consomme du capital.",
+      "tags": [
+        "bilan",
+        "calcul"
+      ]
+    },
+    {
+      "id": "L2.02-Q6",
+      "type": "mcq",
+      "prompt": "Que devient le dépôt quand un emprunteur rembourse son prêt avec un dépôt de la même banque ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il passe en réserves"
+        },
+        {
+          "id": "b",
+          "text": "Il est créé deux fois"
+        },
+        {
+          "id": "c",
+          "text": "Il est détruit avec le prêt"
+        },
+        {
+          "id": "d",
+          "text": "Il devient un billet"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le remboursement éteint prêt et dépôt : la monnaie est détruite.",
+      "tags": [
+        "destruction"
+      ]
+    },
+    {
+      "id": "L2.02-Q7",
+      "type": "mcq",
+      "prompt": "Quel est le niveau des ratios de réserves obligatoires de la Fed depuis le 26 mars 2020 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0 %"
+        },
+        {
+          "id": "b",
+          "text": "3 %"
+        },
+        {
+          "id": "c",
+          "text": "10 %"
+        },
+        {
+          "id": "d",
+          "text": "20 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Tous les ratios sont à 0 % ; la page estime la baisse des réserves obligatoires à environ 200 Md$.",
+      "tags": [
+        "fed",
+        "reserves-obligatoires"
+      ]
+    },
+    {
+      "id": "L2.02-Q8",
+      "type": "mcq",
+      "prompt": "Juin 2026 (H.6, Fed) : M1 = 19 831,5 Md$ ; M2 = 23 155,2 Md$. Que vaut M2 − M1 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "42 986,7 Md$"
+        },
+        {
+          "id": "b",
+          "text": "3 323,7 Md$"
+        },
+        {
+          "id": "c",
+          "text": "23 155,2 Md$"
+        },
+        {
+          "id": "d",
+          "text": "331,5 Md$"
+        }
+      ],
+      "correct": "b",
+      "explanation": "23 155,2 − 19 831,5 = 3 323,7 Md$ (14,4 % de M2).",
+      "tags": [
+        "agregats",
+        "calcul"
+      ]
+    }
+  ],
+  "revision": 1
+}

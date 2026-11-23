@@ -1,0 +1,233 @@
+{
+  "lessonId": "L7.01",
+  "title": "Quiz — Comprendre le positionnement et les flux",
+  "passThreshold": 0.8,
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L7.01-Q1",
+      "type": "mcq",
+      "prompt": "Quelle est la différence entre une position et un flux ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un flux est un stock"
+        },
+        {
+          "id": "b",
+          "text": "Aucune"
+        },
+        {
+          "id": "c",
+          "text": "Une position est un stock à une date ; un flux est une variation sur une période"
+        },
+        {
+          "id": "d",
+          "text": "Une position est une variation"
+        }
+      ],
+      "correct": "c",
+      "explanation": "128 542 contrats acheteurs au 13/10 est une position ; −1 705 contrats en une semaine est un flux.",
+      "tags": [
+        "stock"
+      ]
+    },
+    {
+      "id": "L7.01-Q2",
+      "type": "mcq",
+      "prompt": "Managed Money au 13/10/2026 : longs 128 542, courts 17 463. Position nette ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+111 079 contrats"
+        },
+        {
+          "id": "b",
+          "text": "+146 005 contrats"
+        },
+        {
+          "id": "c",
+          "text": "−111 079 contrats"
+        },
+        {
+          "id": "d",
+          "text": "+17 463 contrats"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Net = longs − courts = 128 542 − 17 463 = 111 079 ; le spreading est exclu.",
+      "tags": [
+        "net"
+      ]
+    },
+    {
+      "id": "L7.01-Q3",
+      "type": "mcq",
+      "prompt": "Que signifie le spreading dans le COT ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un taux d'intérêt"
+        },
+        {
+          "id": "b",
+          "text": "Une position directionnelle"
+        },
+        {
+          "id": "c",
+          "text": "Un type d'ETF"
+        },
+        {
+          "id": "d",
+          "text": "Des positions longues et courtes qui se compensent chez un même opérateur"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Il est reporté séparément et ne donne pas de direction.",
+      "tags": [
+        "spreading"
+      ]
+    },
+    {
+      "id": "L7.01-Q4",
+      "type": "mcq",
+      "prompt": "Le COT mesure-t-il les avoirs des ETF d'or et les réserves des banques centrales ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui, tout le marché"
+        },
+        {
+          "id": "b",
+          "text": "Non : il décrit des contrats à terme COMEX ; ETF et banques centrales se lisent ailleurs"
+        },
+        {
+          "id": "c",
+          "text": "Oui, les ETF seulement"
+        },
+        {
+          "id": "d",
+          "text": "Oui, les banques centrales seulement"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le COT ne voit qu'une partie du marché financier de l'or ; l'or physique, les ETF et les réserves officielles sont mesurés par d'autres sources.",
+      "tags": [
+        "perimetre"
+      ]
+    },
+    {
+      "id": "L7.01-Q5",
+      "type": "mcq",
+      "prompt": "Les positions du 13/10 sont publiées le 16/10 à 15 h 30 (ET). Une note rédigée le 16/10 à 10 h 00 peut-elle les utiliser ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui, si elle est datée du 13/10"
+        },
+        {
+          "id": "b",
+          "text": "Oui"
+        },
+        {
+          "id": "c",
+          "text": "Oui, mais sans les dater"
+        },
+        {
+          "id": "d",
+          "text": "Non : elles ne sont pas encore publiées"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Observation le mardi 13/10, publication le vendredi 16/10 : décalage de 3 jours ; seule la publication de la semaine précédente est disponible à 10 h.",
+      "tags": [
+        "chronologie"
+      ]
+    },
+    {
+      "id": "L7.01-Q6",
+      "type": "mcq",
+      "prompt": "Un intérêt ouvert qui monte signifie-t-il davantage de positions acheteuses ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui, mais seulement la nuit"
+        },
+        {
+          "id": "b",
+          "text": "Oui, toujours"
+        },
+        {
+          "id": "c",
+          "text": "Non : il compte de nouveaux acheteurs et de nouveaux vendeurs à la fois"
+        },
+        {
+          "id": "d",
+          "text": "Non, il baisse toujours"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Chaque contrat a deux côtés ; la hausse ne dit rien sur la direction.",
+      "tags": [
+        "io"
+      ]
+    },
+    {
+      "id": "L7.01-Q7",
+      "type": "mcq",
+      "prompt": "« Non commercial » signifie-t-il « spéculateur » d'après la CFTC ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Non : la source définit seulement un non-commercial comme un opérateur qui n'est pas commercial"
+        },
+        {
+          "id": "b",
+          "text": "Oui, par définition"
+        },
+        {
+          "id": "c",
+          "text": "Oui, toujours acheteur"
+        },
+        {
+          "id": "d",
+          "text": "Non, c'est un producteur"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le rapport legacy relie le statut commercial à l'usage en couverture (Form 40) ; « spéculateur » est une simplification.",
+      "tags": [
+        "categories"
+      ]
+    },
+    {
+      "id": "L7.01-Q8",
+      "type": "mcq",
+      "prompt": "Un net long élevé de Managed Money prouve-t-il que l'or va baisser ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui"
+        },
+        {
+          "id": "b",
+          "text": "Non : un extrême peut persister et l'inversion demande un déclencheur"
+        },
+        {
+          "id": "c",
+          "text": "Oui si > 100 000 contrats"
+        },
+        {
+          "id": "d",
+          "text": "Oui toujours"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Aucun lien mécanique n'est démontré ; la source secondaire lue précise que les extrêmes inversent rarement seuls.",
+      "tags": [
+        "piege"
+      ]
+    }
+  ],
+  "revision": 1
+}

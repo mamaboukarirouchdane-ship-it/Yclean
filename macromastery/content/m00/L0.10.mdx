@@ -1,0 +1,270 @@
+---
+id: L0.10
+module: 0
+order: 10
+title: "Risque, rendement et probabilité : espérance, écart-type, baisse maximale"
+title_initial: "Risque, rendement et probabilité"
+level: débutant
+duration_hours: 3.0
+prerequisites: ["L0.07", "L0.09"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L0.10.quiz.json"
+sources: ["S-SNB-01"]
+---
+
+# L0.10 — Risque, rendement et probabilité : espérance, écart-type, baisse maximale
+
+> **Convention de lecture.** **[Fait]** = vérifié dans une source citée ; **[Définition]** = convention ou formule de cours ; **[Calcul de l'auteur]** = calcul fait à partir de chiffres fictifs ou publiés ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les formules statistiques de cette leçon sont des **définitions de cours** : la définition de l'écart-type du glossaire d'Investor.gov n'a pas pu être lue (page sans contenu), elle n'est donc pas citée. Le seul document sourcé est un discours de la Banque nationale suisse (cas historique). **Rien ici ne garantit un gain : une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. calculer une **espérance** (valeur moyenne pondérée par les probabilités) ;
+2. calculer une **variance** et un **écart-type**, et expliquer ce qu'ils mesurent ;
+3. **annualiser** une volatilité (règle en racine du temps) en connaissant ses hypothèses ;
+4. calculer une **baisse maximale** (*maximum drawdown*) et le **gain nécessaire** pour la récupérer ;
+5. calculer l'**espérance d'une série de transactions** et le **taux de réussite d'équilibre** ;
+6. lire une **distribution** : moyenne, dispersion, asymétrie, queues épaisses ;
+7. dire pourquoi un écart-type ne décrit **pas** le pire cas.
+
+## 2. Prérequis
+
+L0.07 (pourcentages, composition) et L0.09 (rendements). Aucun logiciel : tout se calcule à la main ou avec une calculatrice.
+
+## 3. Explication intuitive
+
+« Risque » a trois sens en finance, qu'il ne faut pas mélanger :
+
+- **l'incertitude** : on ne sait pas ce qui va arriver ;
+- **la dispersion** : les résultats possibles sont plus ou moins éloignés de la moyenne (écart-type) ;
+- **la perte** : certains scénarios font mal (baisse maximale, ruine).
+
+Deux placements peuvent avoir **le même gain moyen** et des risques très différents. Et le **gain moyen** d'une stratégie ne dit rien sur le **chemin** qu'il faut supporter pour y arriver.
+
+## 4. Développement technique
+
+### 4.1 Espérance
+
+**[Définition]** Si un résultat X prend les valeurs xᵢ avec les probabilités pᵢ (somme des pᵢ = 1), l'**espérance** est E(X) = Σ pᵢ·xᵢ.
+
+**Exemple (SIMULATION).** Une transaction rapporte +300 avec une probabilité de 40 % et fait perdre 100 avec une probabilité de 60 % :
+E = 0,40 × 300 − 0,60 × 100 = 120 − 60 = **+60** par transaction, en moyenne, **sur un grand nombre de répétitions**.
+
+L'espérance est une **moyenne théorique** : elle n'annonce ni le résultat de la prochaine transaction ni celui d'une série courte.
+
+**Taux de réussite d'équilibre.** Avec un gain G et une perte L, l'espérance est nulle quand p·G = (1 − p)·L, soit p = L ÷ (G + L). Pour G = 300 et L = 100 : p = 100 ÷ 400 = **25 %**. (Hors coûts de transaction.)
+
+### 4.2 Variance et écart-type
+
+**[Définition]** Pour une distribution de probabilités : Var(X) = Σ pᵢ·(xᵢ − E)² et écart-type σ = √Var. Pour un échantillon de n observations, la variance d'échantillon est la somme des carrés des écarts à la moyenne divisée par **n − 1** (correction usuelle).
+
+**Exemple (SIMULATION) — même moyenne, risques différents.**
+
+| Placement | Résultats (probabilité 50 % chacun) | Espérance | Écart-type |
+| --- | --- | --- | --- |
+| A | −10 % ou +14 % | +2 % | 12 % |
+| B | −1 % ou +5 % | +2 % | 3 % |
+
+Pour A : Var = 0,5 × (−12)² + 0,5 × (12)² = 144, σ = 12. Pour B : Var = 0,5 × 9 + 0,5 × 9 = 9, σ = 3. Même espérance, dispersion **quatre fois** plus grande pour A.
+
+**Exemple sur une série (SIMULATION).** Dix rendements journaliers (en %) : +0,4 ; −0,6 ; +0,2 ; −0,2 ; +0,5 ; −0,3 ; 0 ; +0,3 ; −0,5 ; +0,2.
+Moyenne = 0 ; somme des carrés = 1,32 ; variance d'échantillon = 1,32 ÷ 9 = 0,14667 ; **écart-type = 0,383 %** par jour.
+
+### 4.3 Annualiser une volatilité
+
+**[Définition]** La **volatilité** est l'écart-type des rendements d'une période, exprimé en pourcentage et rapporté à une durée (souvent une année). **Règle usuelle :** σ_année = σ_jour × √T, où T est le nombre de périodes par an (environ 252 jours de bourse dans une convention courante ; le change cote en continu en semaine, cette convention varie selon les usages).
+
+**[Calcul de l'auteur]** 0,383 % × √252 = **6,08 %** par an ; 0,383 % × √21 = **1,75 %** par mois (21 jours).
+
+**Hypothèses cachées :** rendements indépendants d'un jour à l'autre, volatilité constante, même loi dans le temps. Elles sont **souvent violées** (la volatilité se regroupe en périodes agitées : module 14). L'annualisation est donc un **ordre de grandeur**.
+
+### 4.4 Baisse maximale (*maximum drawdown*)
+
+**[Définition]** La **baisse maximale** est la plus grande chute, en pourcentage, entre un sommet de la valeur d'un portefeuille (ou d'un compte) et le creux qui le suit.
+
+**Exemple (SIMULATION).** Valeurs successives du compte : 100, 104, 101, 107, 103, 99, 105, 110.
+- Sommet 104 → creux 101 : −2,88 %.
+- Sommet 107 → creux 99 : 99 ÷ 107 − 1 = **−7,48 %** (la plus grande).
+Baisse maximale = **−7,48 %**.
+
+**Gain nécessaire pour récupérer** une perte de d : 1 ÷ (1 − d) − 1. Pour d = 7,48 % : 1 ÷ 0,9252 − 1 = **+8,08 %**. Pour d = 50 % : +100 %. L'asymétrie (L0.07, L0.09) rend les pertes profondes **disproportionnellement** difficiles à effacer.
+
+**Série de pertes.** Dix pertes consécutives de 1 % du capital ramènent le compte à 0,99¹⁰ = 0,9044, soit **−9,56 %** ; cinq pertes consécutives de 10 % : 0,9⁵ = 0,5905, soit **−40,95 %**. Le pourcentage de risque par transaction, et non le seul taux de réussite, détermine ce que l'on peut supporter (module 11).
+
+### 4.5 Lire une distribution
+
+On résume une distribution de résultats par :
+
+- sa **moyenne** (centre) ; sa **dispersion** (écart-type) ;
+- son **asymétrie** : les gros gains et les grosses pertes sont-ils également probables ?
+- ses **queues** : la probabilité de valeurs extrêmes.
+
+**Exemple (SIMULATION) — distribution à trois issues.** Résultat −100 avec probabilité 0,5 ; 0 avec 0,3 ; +200 avec 0,2. Espérance = −50 + 0 + 40 = **−10**. Variance = 0,5 × 90² + 0,3 × 10² + 0,2 × 210² = 4 050 + 30 + 8 820 = 12 900 ; écart-type = **113,6**. Un gain possible important (+200) ne rend pas l'espérance positive.
+
+**La loi normale (rappel de cours).** Pour une loi normale : environ **68,27 %** des résultats sont à moins de 1 σ de la moyenne, **95,45 %** à moins de 2 σ, **99,73 %** à moins de 3 σ **[Calcul de l'auteur, fonction d'erreur]**. Une variation de 5 σ aurait une probabilité bilatérale de 5,7 × 10⁻⁷ par observation : avec des observations quotidiennes, cela correspond à environ **une fois tous les 6 900 ans** (÷ 252 jours par an) **si la loi était normale**.
+
+**[Interprétation]** Les rendements financiers présentent souvent des mouvements extrêmes **bien plus fréquents** que ne le prévoit la loi normale (« queues épaisses »). Cette affirmation générale est un constat courant que cette leçon **ne démontre pas** et ne source pas : sa vérification statistique relève du module 14. Un écart-type calculé sur une période calme **sous-estime** le risque des périodes de crise.
+
+### 4.6 Ce que l'écart-type ne dit pas
+
+- Il ne dit pas **combien** on peut perdre au pire.
+- Il traite hausses et baisses **symétriquement** ; la plupart des gens ne craignent que les baisses.
+- Il dépend de la **période** et de la **fréquence** choisies.
+- Il suppose que le passé est une bonne indication du futur.
+
+C'est pourquoi on le complète par la baisse maximale, par des **scénarios** (« que se passe-t-il si… ? ») et par une discipline de risque (module 11).
+
+### 4.7 Probabilités subjectives et analyse fondamentale
+
+En analyse fondamentale, les probabilités ne viennent presque jamais d'une fréquence observée mais d'un **jugement** : « je juge à 60 % la probabilité d'une baisse de taux ». C'est une **probabilité subjective**, qui doit être : écrite, datée, révisable, et confrontée plus tard aux résultats. Le module 6 (anticipations) et le module 10 (analyse appliquée) reprennent cette démarche ; ici, retiens qu'un pourcentage sans méthode n'est pas une preuve.
+
+## 5. Définitions essentielles
+
+- **Espérance** : moyenne pondérée par les probabilités.
+- **Variance / écart-type** : dispersion autour de la moyenne ; l'écart-type est dans l'unité du résultat.
+- **Volatilité** : écart-type des rendements, annualisé le plus souvent.
+- **Baisse maximale** : plus grande chute sommet→creux.
+- **Taux de réussite d'équilibre** : p = L ÷ (G + L).
+- **Queues épaisses** : extrêmes plus fréquents que sous la loi normale.
+- **Probabilité subjective** : degré de confiance d'un analyste, non une fréquence.
+
+## 6. Exemples chiffrés
+
+**A.** Transaction +300 / −100 avec p = 40 % : espérance +60 ; équilibre à 25 % (§4.1).
+**B.** Placements A et B : mêmes +2 %, écarts-types 12 % et 3 % (§4.2).
+**C.** Série journalière : σ = 0,383 %, soit 6,08 % par an (§4.2–4.3).
+**D.** Compte 100→110 : baisse maximale −7,48 %, récupération +8,08 % (§4.4).
+**E.** Cinq pertes de 10 % : −40,95 % (§4.4).
+
+### 6.5 Cas historique documenté — l'abandon du cours plancher du franc suisse (15 janvier 2015)
+
+**[Fait, S-SNB-01 via BRI]** Lors d'une conférence de presse à Zurich le **15 janvier 2015**, le président de la Banque nationale suisse (BNS), Thomas Jordan, a annoncé l'abandon du **cours plancher de 1,20 franc par euro**, avec effet immédiat, et l'arrêt des achats de devises qui le faisaient respecter. La BNS a aussi abaissé le taux sur les avoirs à vue à **−0,75 %** à partir du 22 janvier. Raisons avancées : surévaluation exceptionnelle du franc **atténuée** mais encore présente, divergence croissante des politiques monétaires entre grandes zones, conclusion qu'imposer le plancher n'était plus justifié, et inflation attendue négative (−0,1 % pour 2015 selon la prévision conditionnelle de décembre).
+
+**Ce que le texte lu ne contient pas :** aucun chiffre sur l'ampleur du mouvement du franc ni sur les montants d'intervention de la BNS. **Je n'en cite donc aucun**, et la leçon ne reconstruit aucun prix de cet épisode.
+
+**[Interprétation]** Cet épisode illustre le point de la section 4.6 : un régime de change qui limite la volatilité pendant des années peut produire une **volatilité historique faible** juste avant une rupture (le cours plancher était une politique, et non une loi de la nature). Un écart-type calculé pendant la période du plancher aurait donc mal décrit le risque d'une sortie du plancher. Cette lecture est celle de l'auteur du cours ; elle repose sur la nature du régime décrit par la source, non sur une mesure de volatilité réelle, que la leçon ne contient pas.
+
+## 7. Application au Forex et à l'or
+
+- **Forex** : l'écart-type des rendements journaliers permet de comparer le « bruit » de deux paires ; il ne remplace pas la lecture des régimes de politique (plancher, rattachement) qui peuvent se rompre.
+- **Or** : même démarche ; les périodes calmes précèdent parfois des mouvements brusques ; une volatilité passée ne borne pas la volatilité future.
+- **Positions** : le lien entre risque par transaction, taille de position (L0.04) et baisse maximale est développé au module 11.
+- **Probabilités** : un scénario macroéconomique reçoit une probabilité subjective, notée et révisée (modules 6 et 10).
+- **Rappel** : une espérance positive ne garantit aucun gain sur une série courte ; elle ne garantit pas non plus que l'espérance soit réellement positive hors simulation.
+
+## 8. Erreurs courantes
+
+- **Confondre espérance et résultat probable.**
+- **Ignorer la taille des pertes** en regardant seulement le taux de réussite.
+- **Prendre l'écart-type pour la perte maximale.**
+- **Annualiser sans hypothèse** et comme s'il s'agissait d'une certitude.
+- **Calculer la volatilité sur une période trop calme ou trop courte.**
+- **Croire que 5 σ est quasi impossible** parce que la loi normale le dit.
+- **Additionner des pourcentages de pertes** au lieu de les composer.
+- **Présenter une probabilité subjective comme une fréquence observée.**
+
+## 9. Limites de l'interprétation
+
+- Les chiffres des exemples sont **fictifs** (SIMULATION), à l'exception du cas BNS, qui ne contient aucune donnée de prix.
+- Les formules (espérance, variance, annualisation, baisse maximale) sont des **définitions de cours** non rattachées à une source officielle lue.
+- Le discours de la BNS a été lu **par résumé automatique** via la page de la BRI ; l'heure de l'annonce n'y figure pas.
+- La question des queues épaisses n'est pas démontrée ici ; elle est renvoyée au module 14.
+- Les coûts de transaction (écart acheteur/vendeur, financement) ne sont pas inclus dans les espérances.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Espérance et équilibre.** Une stratégie gagne 150 avec une probabilité de 45 % et perd 100 avec une probabilité de 55 %. (a) Espérance ? (b) Taux de réussite d'équilibre pour G = 150 et L = 100 ? (c) Même question si G = 100 et L = 100. (d) La stratégie du (a) garantit-elle un gain sur 10 transactions ?
+
+<details>
+<summary>Correction 1</summary>
+
+(a) 0,45 × 150 − 0,55 × 100 = 67,5 − 55 = **+12,5** par transaction en moyenne.
+(b) 100 ÷ (150 + 100) = **40 %**.
+(c) 100 ÷ 200 = **50 %**.
+(d) Non. L'espérance est une moyenne sur un grand nombre de répétitions ; sur 10 transactions, une série défavorable est possible, et les coûts ne sont pas inclus.
+</details>
+
+**Exercice 2 — Même moyenne, risque différent.** Placement C : −6 % ou +10 % (50 % chacun). Placement D : 0 % ou +4 % (50 % chacun). Calcule l'espérance et l'écart-type de chacun, puis compare.
+
+<details>
+<summary>Correction 2</summary>
+
+C : espérance = (−6 + 10) ÷ 2 = **+2 %** ; écarts à la moyenne : ±8 ; variance = 64 ; σ = **8 %**.
+D : espérance = **+2 %** ; écarts : ±2 ; variance = 4 ; σ = **2 %**.
+Même espérance, mais C est quatre fois plus dispersé que D.
+</details>
+
+**Exercice 3 — Écart-type d'une série.** Rendements journaliers (SIMULATION, en %) : +0,4 ; −0,6 ; +0,2 ; −0,2 ; +0,5 ; −0,3 ; 0 ; +0,3 ; −0,5 ; +0,2. (a) Moyenne ? (b) Somme des carrés des écarts ? (c) Écart-type d'échantillon ? (d) Volatilité annualisée avec 252 jours ? (e) Quelles hypothèses cache (d) ?
+
+<details>
+<summary>Correction 3</summary>
+
+(a) Somme = 0 → moyenne **0**.
+(b) 0,16 + 0,36 + 0,04 + 0,04 + 0,25 + 0,09 + 0 + 0,09 + 0,25 + 0,04 = **1,32**.
+(c) 1,32 ÷ 9 = 0,14667 ; √ = **0,383 %**.
+(d) 0,383 × √252 = 0,383 × 15,875 = **6,08 %** par an.
+(e) Rendements indépendants, volatilité constante, même loi dans le temps ; ces hypothèses sont souvent fausses (la volatilité se regroupe) : le résultat est un ordre de grandeur.
+</details>
+
+**Exercice 4 — Baisse maximale.** Valeurs d'un compte (SIMULATION) : 200, 210, 195, 205, 220, 198, 215, 230. (a) Baisse maximale ? (b) Gain nécessaire pour récupérer cette baisse depuis le creux ? (c) Quel gain faut-il après une perte de 50 % ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) Sommet 210 → creux 195 : 195 ÷ 210 − 1 = −7,14 %. Sommet 220 → creux 198 : 198 ÷ 220 − 1 = **−10,00 %** (la plus grande). Baisse maximale = **−10 %**.
+(b) 1 ÷ 0,90 − 1 = **+11,11 %** (de 198 à 220).
+(c) 1 ÷ 0,50 − 1 = **+100 %**.
+</details>
+
+**Exercice 5 — Distribution.** Un scénario donne −50 avec une probabilité de 0,6 ; +20 avec 0,3 ; +150 avec 0,1. (a) Espérance ? (b) Variance et écart-type ? (c) Un analyste doit-il se réjouir du gain possible de +150 ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) −30 + 6 + 15 = **−9**.
+(b) Écarts à −9 : −41, +29, +159. Variance = 0,6 × 1 681 + 0,3 × 841 + 0,1 × 25 281 = 1 008,6 + 252,3 + 2 528,1 = **3 789,0** ; σ = √3 789 ≈ **61,6**.
+(c) L'espérance est négative (−9) malgré le gain possible : la queue de gains ne compense pas la probabilité élevée de la perte.
+</details>
+
+**Exercice 6 — Cas BNS et limites.** À partir du §6.5 : (a) Quels faits sont sourcés ? (b) Quelle donnée manque pour calculer le risque réel de l'épisode ? (c) Pourquoi un écart-type calculé sous le régime du plancher aurait-il mal décrit le risque d'une sortie du plancher (en citant le statut de cette affirmation) ?
+
+<details>
+<summary>Correction 6</summary>
+
+(a) Date (15 janvier 2015), abandon du plancher de 1,20 franc par euro avec effet immédiat, arrêt des achats de devises, taux sur les avoirs à vue de −0,75 % à partir du 22 janvier, et les raisons avancées par le président de la BNS.
+(b) Les prix du taux de change avant et après l'annonce (non fournis par la source lue) et les montants d'intervention.
+(c) Le plancher était une politique ; tant qu'elle était défendue, la volatilité observée était réduite, ce qui ne mesure pas le risque d'un changement de politique. C'est une **interprétation de l'auteur du cours**, non une mesure.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L0.10.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- **Espérance** = moyenne pondérée ; moyenne théorique, pas un résultat promis.
+- **Écart-type** = dispersion ; **volatilité** = écart-type des rendements (annualisation en racine du temps, hypothèses fortes).
+- **Baisse maximale** = pire chute sommet→creux ; récupérer une perte d exige 1/(1 − d) − 1.
+- Même espérance ≠ même risque ; taux de réussite seul ≠ rentabilité (équilibre p = L/(G + L)).
+- Loi normale : 68 % / 95 % / 99,7 % à 1, 2, 3 σ ; les extrêmes réels peuvent être plus fréquents (constat non démontré ici).
+- Un écart-type ne dit pas le pire cas ; un régime de change administré peut se rompre (cas BNS 2015).
+- Les probabilités d'analyse sont subjectives : à écrire, dater, réviser.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer espérance et taux d'équilibre (Exercice 1).
+- [ ] Comparer deux placements à même moyenne (Exercice 2).
+- [ ] Calculer un écart-type et l'annualiser en nommant les hypothèses (Exercice 3).
+- [ ] Calculer une baisse maximale et le gain de récupération (Exercice 4).
+- [ ] Analyser une distribution à plusieurs issues (Exercice 5).
+- [ ] Distinguer fait sourcé et interprétation dans un cas historique (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Source consultée le **30 octobre 2026** :
+
+- **S-SNB-01** — Thomas Jordan (BNS), *The rationale for discontinuing the minimum exchange rate and lowering interest rates*, conférence de presse du 15 janvier 2015, texte publié par la BRI : https://www.bis.org/review/r150116a.htm
+
+**Définitions de cours non rattachées à une source officielle lue :** espérance, variance, écart-type, annualisation, baisse maximale, loi normale (68-95-99,7). **Source tentée et non lue :** glossaire Investor.gov « standard deviation » (page sans contenu). **Points non vérifiés :** prix de l'EUR/CHF autour du 15 janvier 2015, montants d'intervention de la BNS, fréquence réelle des mouvements extrêmes (module 14).

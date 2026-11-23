@@ -1,0 +1,439 @@
+---
+id: L0.01
+module: 0
+order: 1
+title: "Les marchés financiers et leur rôle"
+level: débutant
+duration_hours: 3
+prerequisites: []
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+revision: 4
+quiz: "quiz/L0.01.quiz.json"
+sources: ["S-ECB-01", "S-SEC-01", "S-BIS-01", "S-ECB-02", "S-INV-01", "S-CFTC-04", "S-SEC-02", "S-BIS-05"]
+---
+
+# L0.01 — Les marchés financiers et leur rôle
+
+> **Convention de lecture.** Dans toute la formation : **[Fait]** = donnée ou énoncé vérifié dans une source citée ; **[Définition]** = convention de vocabulaire ; **[Interprétation]** = lecture de l'auteur, discutable ; **[SIMULATION]** = scénario fictif, chiffres inventés pour apprendre à calculer, sans lien avec une situation réelle.
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. expliquer en quelques phrases comment un marché financier relie ceux qui ont de l'argent disponible à ceux qui en ont besoin ;
+2. distinguer finance **directe** (par les marchés) et finance **indirecte** (par les intermédiaires) ;
+3. distinguer un **marché primaire** d'un **marché secondaire**, et dire qui reçoit l'argent dans chaque cas ;
+4. distinguer les grandes familles de marchés (capitaux, monétaire, changes, matières premières, dérivés) et savoir que le mode de négociation (organisé ou de gré à gré) dépend de l'instrument, pas seulement de la famille ;
+5. décrire cinq dimensions de la liquidité et la différence entre liquidité affichée et liquidité réellement disponible ;
+6. calculer un **spread** (écart acheteur-vendeur) et le coût d'un aller-retour, en sachant que d'autres coûts peuvent s'y ajouter ;
+7. citer quatre fonctions d'un marché financier (financement, découverte du prix, liquidité, transfert du risque) ;
+8. situer le marché des changes (Forex) et l'or dans cette architecture.
+
+## 2. Prérequis
+
+Aucun prérequis financier. Il faut savoir calculer un pourcentage et multiplier un prix par une quantité.
+
+## 3. Explication intuitive
+
+Imagine trois personnes. **Awa** a économisé 1 000 unités et n'en a pas besoin avant plusieurs années. **Koffi** veut ouvrir un atelier et lui manquent 1 000 unités. **Une banque** connaît les deux.
+
+- Awa pourrait prêter directement à Koffi. Mais elle ne sait pas s'il remboursera, et elle voudrait pouvoir récupérer son argent si elle a un imprévu.
+- Koffi pourrait chercher beaucoup de prêteurs, mais cela prend du temps.
+
+Un **système financier** existe pour résoudre ce double problème : mettre en relation ceux qui ont un excédent et ceux qui ont un besoin, à un coût raisonnable, en gérant la confiance et le risque.
+
+Il y a deux grandes routes :
+
+- **La route indirecte** : Awa dépose son argent à la banque, la banque prête à Koffi. Awa a une créance sur la banque, la banque a une créance sur Koffi.
+- **La route directe** : Koffi (ou plutôt une entreprise ou un État) émet un titre — une action ou une obligation — que des investisseurs achètent sur un **marché**.
+
+Un **marché financier** est donc un ensemble de règles et de lieux (physiques ou électroniques) où des acheteurs et des vendeurs se rencontrent pour échanger des actifs financiers, des devises ou des matières premières, à un prix qui résulte de leur rencontre.
+
+## 4. Développement technique
+
+### 4.1 Finance directe et finance indirecte
+
+**[Fait]** La Banque centrale européenne décrit le système financier comme le canal qui fait passer l'argent des agents qui sont des « net savers » vers ceux qui dépensent plus qu'ils ne gagnent. Elle distingue « direct or market-based finance via financial markets » et « indirect or bank-based finance via financial intermediaries » (S-ECB-01, texte de la page).
+
+**[Fait]** La même page contient des tableaux pour la **zone euro à fin 2012** (sources indiquées sur la page : BCE et Eurostat). Le **périmètre** est celui des « secteurs non financiers » : administrations publiques, sociétés non financières et ménages (y compris les institutions sans but lucratif au service des ménages). Le tableau des engagements porte sur des **engagements financiers sélectionnés** (« selected financial liabilities »), dont le total est de **34 395 milliards d'euros**. Dans ce total :
+
+| Poste (engagements des secteurs non financiers) | Md€ | Part du total |
+|---|---|---|
+| Prêts | 16 813 | 48,9 % (« 49 % » dans le texte de la page) |
+| Titres hors actions | 8 430 | 24,5 % |
+| Actions cotées émises par des sociétés non financières | 3 747 | 10,9 % |
+| Dépôts (engagements de l'administration centrale) | 256 | 0,7 % |
+| Réserves de fonds de pension (sociétés non financières) | 349 | 1,0 % |
+| Autres (autres comptes à payer et dérivés financiers, d'après la note de bas de tableau) | 4 801 | 14,0 % |
+
+Le texte de la page dit que les titres, actions cotées comprises, représentent « environ 35 % » des sources de financement. **[Calcul de l'auteur]** 8 430 + 3 747 = 12 177 Md€, soit 35,4 % du total : c'est cohérent avec « environ 35 % », mais la page n'explicite pas ce rapprochement.
+
+Ce sont des chiffres **anciens et propres à une zone** ; ils servent ici d'illustration d'un ordre de grandeur, pas de photographie actuelle.
+
+### 4.2 Marché primaire et marché secondaire
+
+- **Marché primaire** : marché sur lequel un **émetteur (entreprise ou État) propose de nouveaux titres aux investisseurs**, que ce soit lors de sa **première émission** (par exemple une introduction en bourse) ou lors d'une **émission supplémentaire** (par exemple une augmentation de capital par émission d'actions nouvelles par une entreprise déjà cotée, ou une nouvelle émission d'obligations). Les fonds levés **reviennent à l'émetteur**, sous réserve des modalités de l'opération et des frais éventuels (par exemple la rémunération des intermédiaires qui placent les titres).
+- **Marché secondaire** : des titres **déjà existants** changent de propriétaire. L'argent va au vendeur précédent, pas à l'émetteur.
+
+Le critère n'est donc pas « la société est-elle déjà cotée ? » mais « le titre est-il créé à l'occasion de cette transaction ? ».
+
+**[Fait]** Un rapport de la SEC sur l'accès au capital annonce étudier « capital raising in the primary markets » et « secondary market liquidity » (S-SEC-01, introduction). Dans sa discussion des enjeux économiques, il mentionne des « liquid secondary markets that enable investors to exit large positions quickly and at low cost » (S-SEC-01, section « Broad Economic Considerations »). Le rapport ne donne pas de définition formelle des deux termes ; les définitions ci-dessus sont des **définitions** usuelles du cours.
+
+**[Fait]** Le glossaire d'Investor.gov (SEC) décrit le marché primaire comme celui où de nouveaux instruments financiers sont vendus pour la première fois à des acheteurs, l'entité qui les a créés conservant le produit de la vente (S-INV-01). Cela soutient la définition du marché primaire. L'extension du cours aux **émissions supplémentaires** d'une entreprise déjà cotée est une application de cette définition, non une citation. Je n'ai pas trouvé de définition officielle du **marché secondaire** : la définition ci-dessus reste une définition du cours (l'entrée « liquidité » d'Investor.gov le mentionne sans le définir).
+
+**[Interprétation]** L'intuition à retenir : on accepte d'acheter un titre neuf plus volontiers si on sait qu'on pourra le revendre. C'est pourquoi un marché secondaire efficace « soutient » le marché primaire.
+
+### 4.3 Les grandes familles de marchés
+
+**[Définition]** Le découpage ci-dessous est pédagogique. Il mélange volontairement deux critères (ce qu'on échange, et l'horizon) et les familles peuvent se recouper : un contrat à terme standardisé (*future*) sur l'or est à la fois un produit dérivé et une opération sur une matière première.
+
+| Famille | On y échange | Horizon / fonction | Exemple |
+|---|---|---|---|
+| **Marchés de capitaux** | actions et obligations (financement de long terme) | lever des fonds durables, puis les échanger | actions cotées, obligations d'État |
+| **Marchés monétaires** | prêts et titres de très courte durée (en général jusqu'à un an, par convention ; la BCE parle d'instruments d'échéance initiale « généralement » d'un an au plus, S-ECB-02) | gérer la trésorerie | prêts entre banques |
+| **Marché des changes (Forex)** | monnaies les unes contre les autres | convertir, se couvrir, investir | EUR/USD |
+| **Marchés de matières premières** | pétrole, métaux, produits agricoles | acheter ou vendre le bien physique ou son prix | or |
+| **Marchés de produits dérivés** | contrats dont la valeur dépend d'un autre actif (action, taux, devise, matière première) | se couvrir, prendre un risque | contrats à terme standardisés (*futures*), contrats de change à terme (*forwards*) |
+
+Ne retiens pas encore le détail de chaque famille : elles sont reprises dans les leçons suivantes et dans les modules 1 à 5.
+
+### 4.4 Marché organisé ou gré à gré : cela dépend de l'instrument
+
+- **Marché organisé (bourse)** : un lieu central avec des règles communes ; les ordres sont regroupés et les prix sont visibles.
+- **Gré à gré (OTC, *over the counter*)** : deux parties négocient directement, souvent par l'intermédiaire de banques, sans lieu central unique.
+
+**Attention :** appartenir à une famille ne dit pas comment un instrument se négocie. Dans une même famille, on trouve les deux modes.
+
+| Instrument | Mode de négociation courant | Nuance |
+|---|---|---|
+| Actions cotées | surtout sur des marchés organisés | une partie des échanges peut se faire hors bourse |
+| Obligations | les deux, selon le titre et le pays | une grande part peut se négocier de gré à gré avec des teneurs de marché |
+| Monnaie (court terme) | souvent de gré à gré entre institutions | des segments organisés existent |
+| Changes (comptant, termes, swaps) | surtout de gré à gré (voir L0.03) | des contrats à terme standardisés sur devises existent sur des marchés organisés |
+| Or | comptant plutôt de gré à gré | des contrats à terme standardisés existent sur des marchés organisés |
+| Produits dérivés | standardisés sur marché organisé, ou sur mesure de gré à gré | les deux coexistent |
+
+**[Interprétation]** Ces indications sont générales et **non sourcées dans cette leçon** ; les proportions varient selon les pays et les époques. Le seul chiffre sourcé du tableau est traité en L0.03 (enquête de la BRI sur le change de gré à gré).
+
+### 4.5 Le prix : ce que « marché » veut dire
+
+À chaque instant, un acheteur potentiel annonce le prix maximum qu'il accepte de payer (**bid**, prix acheteur) et un vendeur potentiel le prix minimum qu'il accepte (**ask**, prix vendeur). L'écart est le **spread**. Une transaction a lieu quand un acheteur et un vendeur se mettent d'accord.
+
+- Si tu **achètes immédiatement**, tu paies le **ask**.
+- Si tu **vends immédiatement**, tu reçois le **bid**.
+- Le **mid** (prix médian) est la moyenne du bid et du ask. C'est une référence pratique, pas un prix auquel tu peux toujours transiger.
+
+**[Fait]** Investor.gov définit le *bid* comme le prix le plus élevé qu'un acheteur est actuellement prêt à payer et l'*ask* comme le prix le plus bas qu'un vendeur accepte (S-INV-01, définitions données pour des actions ; la page lue est tronquée pour l'entrée *ask*). Le **spread** (ask moins bid) et le **mid** sont des définitions du cours, calculées à partir de ces deux prix.
+
+### 4.6 Liquidité : cinq dimensions
+
+**[Fait]** La SEC (rapport DERA) écrit que la liquidité est une caractéristique importante d'un marché de capitaux et qu'elle affecte la capacité des investisseurs à exécuter des transactions de différentes tailles, rapidement et à faible coût (S-SEC-01, section « Broad Economic Considerations »).
+
+**[Définition]** La liquidité n'est pas un nombre unique. On la décrit par plusieurs dimensions, qu'il faut distinguer :
+
+| Dimension | Question posée |
+|---|---|
+| **Spread** | Combien coûte un aller-retour immédiat sur une petite quantité ? |
+| **Profondeur** | Quelles quantités sont proposées au bid et au ask, et à des prix proches ? |
+| **Volume absorbable** | Quelle taille puis-je échanger sans déplacer sensiblement le prix ? |
+| **Rapidité d'exécution** | En combien de temps mon ordre est-il exécuté ? |
+| **Impact sur le prix** | De combien mon propre ordre fait-il bouger le prix moyen que j'obtiens ? |
+
+Un marché peut avoir un spread très faible mais peu de profondeur : il est alors liquide pour de petits ordres seulement.
+
+**Liquidité affichée et liquidité réellement disponible.** **[Définition]** La liquidité *affichée* est ce que les cotations montrent à un instant donné. La liquidité *réellement disponible* est ce que tu obtiens en exécutant ton ordre. **[Interprétation]** Les deux peuvent différer : les quantités affichées sont limitées, peuvent être retirées ou consommées avant ton exécution, ou ne valoir que pour de petites tailles ; en période de tension, la liquidité affichée peut diminuer rapidement. Voir l'Exemple D.
+
+### 4.7 Les coûts de transaction
+
+Le spread n'est que l'un des coûts possibles d'une opération :
+
+- le **spread** (voir 4.5) ;
+- les **commissions** : frais facturés par l'intermédiaire, fixes ou proportionnels au montant (Investor.gov définit la commission comme des frais versés à un professionnel pour une opération sur actions ou fonds, S-INV-01 ; l'application aux changes et à l'or est une extension du cours) ;
+- le **slippage** (glissement) : écart entre le prix attendu et le prix réellement obtenu, dû à un mouvement de prix pendant l'exécution ou à un manque de profondeur ;
+- d'autres coûts éventuels selon l'instrument, le pays et l'intermédiaire (frais de marché, taxes, coûts de détention ou de financement d'une position), que cette leçon ne détaille pas.
+
+**Lien avec le Forex et l'or.** **[Interprétation]** Sur les changes et l'or, négociés en grande partie de gré à gré, le coût total dépend de l'intermédiaire et du moment : le spread, une éventuelle commission et le glissement s'additionnent. Compare toujours le **coût total** d'une opération, pas seulement le spread affiché.
+
+### 4.8 Les quatre fonctions à retenir
+
+1. **Financement** : orienter l'épargne vers des projets.
+2. **Découverte du prix** : l'accord entre acheteurs et vendeurs révèle un prix qui résume ce que les participants savent et attendent. **[Interprétation]** Ce prix n'est ni « juste » ni « vrai » par nature : il est le résultat d'un rapport de forces et d'informations incomplètes.
+3. **Liquidité** : permettre de sortir d'une position.
+4. **Transfert du risque** : le risque passe de ceux qui ne veulent pas le porter à ceux qui acceptent de le porter contre une rémunération attendue.
+
+## 5. Définitions essentielles
+
+| Terme | Définition |
+|---|---|
+| Actif financier | Titre ou contrat qui donne droit à des flux futurs (intérêts, dividendes, remboursement) ou à un échange. |
+| Action | Part de propriété d'une entreprise. |
+| Obligation (*bond*) | Titre de dette : l'émetteur promet des intérêts et le remboursement. |
+| Émetteur | Entreprise ou État qui crée le titre. |
+| Marché primaire | Marché sur lequel un émetteur propose de nouveaux titres aux investisseurs, lors d'une première émission ou d'une émission supplémentaire ; les fonds levés reviennent à l'émetteur, sous réserve des modalités de l'opération et des frais éventuels. |
+| Marché secondaire | Marché où des titres déjà émis changent de main ; l'argent va au vendeur. |
+| Marché de capitaux | Marchés d'actions et d'obligations (financement de long terme). |
+| Marché monétaire | Marché des prêts et titres de très courte durée. |
+| Produit dérivé | Contrat dont la valeur dépend d'un autre actif. |
+| Bid / Ask | Prix auquel on peut vendre / acheter immédiatement. |
+| Spread | Ask moins bid. |
+| Mid | (Bid + Ask) / 2. |
+| Liquidité | Facilité à échanger vite, en taille, à faible coût ; se décrit par plusieurs dimensions. |
+| Profondeur | Quantités proposées au bid et au ask, et à des prix proches. |
+| Liquidité affichée / disponible | Ce que montrent les cotations / ce que l'on obtient en exécutant son ordre. |
+| Slippage | Écart entre le prix attendu et le prix obtenu. |
+| Commission | Frais facturés par l'intermédiaire. |
+| Gré à gré (OTC) | Échange négocié directement entre parties, sans lieu central. |
+| Contrat de change à terme (*forward*) | Contrat de gré à gré qui fixe aujourd'hui le taux d'un échange de devises à une date future (plus de deux jours ouvrés après le contrat, selon la définition de la BCE). |
+| Contrat à terme standardisé (*future*) | Contrat standardisé négocié sur un marché organisé, compensé de façon centralisée. |
+| Swap de change (*FX swap*) | Opérations simultanées au comptant et à terme échangeant une devise contre une autre. |
+| Risque de contrepartie | Risque que l'autre partie à un contrat ne tienne pas ses engagements. |
+| Compensation centralisée | Mécanisme où une chambre de compensation devient la contrepartie de chaque transaction et garantit son exécution. |
+| Finance directe / indirecte | Financement par les marchés / par les intermédiaires financiers. |
+
+## 6. Exemples chiffrés
+
+> Tous les chiffres de cette section sont des **[SIMULATION]**, sauf mention contraire.
+
+**Exemple A — Marché primaire puis secondaire.** Une entreprise fictive émet 100 000 actions à 20 par action.
+
+- Argent levé : 100 000 × 20 = **2 000 000**, reçu par l'entreprise (primaire).
+- Le lendemain, un investisseur revend 1 000 actions à 22 à un autre investisseur : 1 000 × 22 = **22 000**, reçus par le vendeur. L'entreprise reçoit **0** (secondaire).
+- Plus tard, la même entreprise, déjà cotée, émet 20 000 actions nouvelles à 50 : elle reçoit 20 000 × 50 = **1 000 000** (primaire à nouveau).
+
+**Exemple B — Spread et aller-retour.** Une action fictive cote bid 99,90 / ask 100,10.
+
+*Hypothèses de l'exemple :* l'aller-retour est immédiat ; le prix ne bouge pas entre l'achat et la revente ; la quantité de 500 actions est entièrement exécutée aux prix affichés ; il n'y a ni commission, ni taxe, ni autre frais.
+
+- Spread = 100,10 − 99,90 = **0,20**.
+- Mid = (99,90 + 100,10) / 2 = **100,00**.
+- Spread en pourcentage du mid = 0,20 / 100,00 = **0,20 %**.
+- Si tu achètes 500 actions puis les revends aussitôt, dans ces hypothèses : tu paies 500 × 100,10 = **50 050**, tu reçois 500 × 99,90 = **49 950**. Perte = **100**, soit environ 0,20 % de 50 050.
+- **Coût sous les hypothèses de la simulation : 100.** Ce chiffre ne vaut que dans ces hypothèses.
+- **Coûts réels : ils peuvent varier.** Les cotations bougent, l'exécution peut se faire à un prix différent de celui affiché, et une commission, du slippage ou d'autres frais peuvent s'ajouter. Le coût réel est donc souvent plus élevé, mais il peut aussi différer dans l'autre sens (par exemple si le prix évolue en ta faveur entre les deux opérations). Dans tous les cas, le spread est un coût réel, même si aucune « commission » n'apparaît.
+
+**Exemple C — La marge de la banque.** Une banque fictive collecte 1 000 de dépôts rémunérés 2 % et prête 1 000 à 6 %.
+
+- Intérêts reçus : 1 000 × 6 % = **60**. Intérêts versés : 1 000 × 2 % = **20**. Marge brute : **40**.
+- Si 5 % du capital prêté n'est jamais remboursé : perte = 1 000 × 5 % = **50**. Résultat avant frais = 40 − 50 = **−10**.
+- Leçon : l'intermédiaire est payé pour **porter un risque** ; la marge n'est pas un gain garanti.
+
+*Limites de cette simulation (volontairement simplifiée) :* une vraie banque ne prête pas la totalité des dépôts (elle garde des liquidités) ; elle dispose aussi de fonds propres qui absorbent d'abord les pertes ; les durées et les taux des dépôts et des prêts diffèrent ; elle supporte des frais et des impôts ; elle est soumise à une réglementation. Ces points seront traités dans les modules concernés.
+
+**Exemple D — Liquidité affichée et liquidité disponible.** Le carnet d'une action fictive affiche, côté vente : 1 000 actions à 100,10 ; 2 000 actions à 100,20 ; 2 000 actions à 100,35. Tu veux acheter 5 000 actions d'un coup.
+
+*Hypothèses de l'exemple :* le carnet affiché ne change pas pendant l'exécution (aucun ordre ne s'ajoute ni ne se retire) ; ton ordre est exécuté en une seule fois contre ces quantités, dans cet ordre de prix ; il n'y a ni commission ni autre frais.
+
+- 1 000 × 100,10 = 100 100 ; 2 000 × 100,20 = 200 400 ; 2 000 × 100,35 = 200 700. Total = **501 200**.
+- Prix moyen = 501 200 / 5 000 = **100,24**, alors que le prix affiché « au meilleur ask » était 100,10.
+- Surcoût dû à l'impact sur le prix, **sous ces hypothèses** = 501 200 − 5 000 × 100,10 = **700**.
+- **Coût réel :** il peut être différent. Si des ordres sont retirés avant ton exécution, le surcoût peut être plus élevé ; si de nouvelles quantités apparaissent à de meilleurs prix, il peut être plus faible. Des frais éventuels s'ajoutent.
+- Leçon : le prix affiché ne vaut que pour la quantité affichée à ce prix.
+
+## 7. Application au Forex et à l'or
+
+**Forex.** Le marché des changes est le marché où une monnaie s'échange contre une autre. Une entreprise qui doit payer un fournisseur en dollars alors que ses recettes sont en euros est exposée au prix EUR/USD ; elle peut échanger des euros contre des dollars sur ce marché. Les mêmes mécanismes — bid, ask, spread, liquidité, coûts — s'y appliquent. L'anatomie détaillée est l'objet de L0.03.
+
+**Conséquences pratiques du gré à gré.** **[Interprétation]** Comme il n'y a pas de lieu central unique, il n'existe pas une cotation unique du EUR/USD : le bid, le ask et les conditions d'exécution (taille acceptée, rapidité, coût total) peuvent différer d'un intermédiaire à l'autre et d'un instant à l'autre. Comparer deux prix suppose donc de comparer aussi l'heure, la quantité et les frais.
+
+**Quatre notions à distinguer dès maintenant** (détaillées en L0.03, ne pas les approfondir ici) :
+
+- **Comptant (*spot*)** : échange de deux devises à un taux convenu aujourd'hui, avec livraison dans un délai de deux jours ouvrés (**[Fait]**, définition de la BRI, S-BIS-01).
+- **Contrat de change à terme (*forward*)** : contrat de gré à gré qui fixe aujourd'hui le taux d'un échange de devises à une date future convenue entre les parties (**[Définition]**). La BCE le définit comme un échange de montants à un prix fixé à la date du contrat, avec livraison à une date future précisée, **plus de deux jours ouvrés après la date du contrat** (S-ECB-02). **[Interprétation]** Ce seuil est une **convention de définition** qui sépare le forward du comptant (livraison sous deux jours ouvrés, S-BIS-01) ; ce n'est pas une règle universelle des marchés, et je n'ai pas vérifié si d'autres sources emploient un seuil différent.
+- **Contrat à terme standardisé (*future*)** : contrat aux caractéristiques standardisées, négocié sur un marché organisé (**[Définition]**). La CFTC décrit les *futures* comme standardisés (qualité, quantité, échéance, lieu de livraison uniformes pour un même contrat sur une même bourse) et pouvant être dénoués par livraison ou par opération inverse (S-CFTC-04). Le bulletin de la SEC sur le forex mentionne pour les contrats de bourse une taille unitaire et une échéance fixes, et une compensation centralisée (S-SEC-02).
+- **Swap de change (*FX swap*)** : achat et revente de la même devise à deux dates (**[Définition]** du cours). La BCE le définit comme des opérations simultanées au comptant et à terme échangeant une devise contre une autre (S-ECB-02) ; la BRI décrit un prêt et un emprunt simultanés de deux devises, avec un remboursement fixé au taux à terme dès le départ (S-BIS-05).
+
+**Règle de vocabulaire de ce cours.** En français, « contrat à terme » employé seul est ambigu : il peut désigner un forward ou un future. Dans les trois leçons du module 0, on écrit donc **toujours** « contrat de change à terme (*forward*) » ou « contrat à terme standardisé (*future*) ». Dans les statistiques de la BRI (L0.03), le forward négocié seul, hors swap, s'appelle « contrat à terme sec » (*outright forward*) : c'est un forward.
+
+### Forward et future : tableau comparatif
+
+| Critère | *Forward* (contrat de change à terme) | *Future* (contrat à terme standardisé) | Portée de la source |
+|---|---|---|---|
+| Lieu de négociation | de gré à gré, avec une banque ou un courtier | marché organisé (bourse) | S-SEC-02 : contraste hors-bourse / bourse pour le forex de détail |
+| Caractéristiques | sur mesure : montant et date convenus entre les parties | standardisées : taille unitaire et échéance fixées par le marché | S-CFTC-04 et S-SEC-02 ; la définition CFTC du forward vise les marchandises, son application aux devises est une extension du cours |
+| Contrepartie | l'autre partie au contrat (relation bilatérale) | la chambre de compensation | S-SEC-02 |
+| Risque de contrepartie | porté directement par chaque partie | limité entre participants par la compensation centralisée, mais non supprimé | S-SEC-02 pour le mécanisme ; la nuance « non supprimé » est une interprétation |
+| Dénouement | livraison des devises à la date convenue | livraison ou opération inverse avant l'échéance | S-ECB-02 (forward) ; S-CFTC-04 (future) |
+| Prix | pas de cotation unique (voir 4.5) | prix visibles sur le marché concerné | Interprétation du cours |
+
+**Le risque de contrepartie.** **[Définition]** C'est le risque que l'autre partie à un contrat ne tienne pas ses engagements. Dans un forward de gré à gré, chaque partie dépend de l'autre : le bulletin de la SEC, écrit pour le forex de détail, indique que l'investisseur sur le marché hors bourse dépend entièrement de sa contrepartie et ne bénéficie pas d'une compensation centralisée (S-SEC-02). Son application à un forward entre une entreprise et une banque est une extension du cours.
+
+**La compensation centralisée.** **[Définition]** Sur un marché organisé, une chambre de compensation devient la contrepartie unique de chaque transaction et garantit son exécution (S-SEC-02). Chaque participant dépend alors de la chambre plutôt que de l'autre participant. **[Interprétation]** Cela réduit le risque de contrepartie entre participants, mais ne le fait pas disparaître : il est concentré sur la chambre et sur ses règles, que cette leçon ne détaille pas.
+
+**[SIMULATION]** Une entreprise européenne doit recevoir 2 000 000 $ dans trois mois et a fixé, avec une banque, un forward au taux **fictif** de 1,0820 (même taux fictif que L0.02, Exemple A). Elle attend 2 000 000 / 1,0820 = **1 848 428,84 €**. Imaginons que la banque ne puisse pas honorer le contrat et que le taux soit alors de 1,1200 (valeur **fictive**) : l'entreprise change ses dollars au marché et reçoit 2 000 000 / 1,1200 = 1 785 714,29 €. Le manque à gagner est d'environ **62 714,55 €** (**[Calcul de l'auteur]** sur valeurs non arrondies, hors frais). Si le taux avait évolué dans l'autre sens (par exemple 1,0400), le marché aurait offert davantage que le forward, mais l'entreprise aurait de toute façon perdu la protection qu'elle avait achetée. Cet exemple illustre le principe, pas la probabilité d'un tel événement.
+
+**Or.** **[Définition]** L'or est une matière première qui ne verse ni intérêt ni dividende. Son prix résulte de la rencontre des acheteurs et des vendeurs, comme pour tout autre actif. Cette absence de revenu direct sera au cœur du module 5 (taux réels et or) ; elle n'est pas démontrée ici et aucune source n'est citée à ce stade pour cette remarque, qui sera sourcée au module 5. Comme pour le Forex, le coût total d'une opération sur l'or (spread, commission éventuelle, glissement) dépend de l'intermédiaire et du moment.
+
+**Pourquoi cela compte pour l'analyse fondamentale.** **[Interprétation]** Analyser les fondamentaux, c'est comprendre ce qui fait varier l'offre et la demande d'une monnaie ou de l'or. Cela suppose d'abord de comprendre *qui* échange, *où*, et *à quel coût*.
+
+## 8. Erreurs courantes
+
+1. **Croire qu'un titre acheté en bourse finance l'entreprise.** Seul l'achat au marché primaire lui apporte de l'argent (Exemple A) — y compris lors d'une émission supplémentaire d'une entreprise déjà cotée.
+2. **Ignorer le spread.** Un aller-retour immédiat a un coût (Exemple B).
+3. **Croire que le spread est le seul coût.** Commissions, slippage et autres frais peuvent s'y ajouter.
+4. **Confondre mid et prix d'exécution.** On achète au ask, on vend au bid.
+5. **Confondre liquidité affichée et liquidité disponible.** Le prix affiché ne vaut que pour la quantité affichée (Exemple D).
+6. **Penser que le prix d'un marché est « la vraie valeur ».** C'est un prix d'échange, pas un verdict.
+7. **Croire qu'un intermédiaire gagne forcément sa marge.** Voir Exemple C.
+8. **Déduire le mode de négociation de la famille.** Une même famille contient des instruments organisés et de gré à gré.
+
+## 9. Limites de l'interprétation
+
+- Les chiffres de la BCE concernent la zone euro à fin 2012, pour les secteurs non financiers (administrations publiques, sociétés non financières, ménages), sur des engagements « sélectionnés ». Ils ne disent rien sur les États-Unis ni sur la situation actuelle.
+- Les prêts de ce tableau proviennent d'institutions financières monétaires (11 006 Md€) et d'« autres intermédiaires financiers » (5 807 Md€) : « finance indirecte » ne veut donc pas dire « uniquement les banques ». Les titres hors actions sont, dans ce tableau, en grande partie émis par les administrations publiques (7 391 sur 8 430 Md€).
+- La séparation « direct / indirect » est un schéma pédagogique : en pratique, les intermédiaires achètent aussi des titres et les marchés dépendent des intermédiaires.
+- Le découpage en familles de marchés est pédagogique ; les familles se recoupent.
+- Le spread n'est qu'un indicateur de liquidité parmi d'autres ; en période de stress, un spread faible peut disparaître rapidement.
+- L'Exemple C est une simplification et ne décrit pas le fonctionnement complet d'une banque.
+- Le tableau forward / future est un schéma général : les contrats réels, les règles des bourses et les pratiques des banques varient, et la compensation centralisée réduit le risque de contrepartie sans le supprimer.
+- Le seuil de « plus de deux jours ouvrés » est la convention de définition de la BCE, non une règle valable partout.
+
+## 10. Exercices pratiques
+
+> Essaie d'abord sans regarder la correction. Chiffres : **[SIMULATION]**, sauf l'Exercice 3 qui utilise des données publiées.
+
+**Exercice 1 — Primaire ou secondaire ?** Pour chaque situation, indique le marché et qui reçoit l'argent.
+(a) Une entreprise émet 50 000 actions nouvelles à 40.
+(b) Un investisseur vend 1 000 actions déjà cotées à un autre investisseur à 45.
+(c) Un État émet de nouvelles obligations lors d'une adjudication.
+(d) Un investisseur achète à un autre une obligation émise il y a trois ans.
+(e) Une entreprise déjà cotée émet 20 000 actions nouvelles à 50 pour financer une usine.
+
+<details>
+<summary>Correction 1</summary>
+
+(a) **Primaire.** L'entreprise reçoit 50 000 × 40 = **2 000 000**.
+(b) **Secondaire.** Le vendeur reçoit 1 000 × 45 = **45 000** ; l'entreprise reçoit 0.
+(c) **Primaire.** L'argent va à l'État émetteur.
+(d) **Secondaire.** L'argent va à l'investisseur qui vend, pas à l'État.
+(e) **Primaire**, bien que l'entreprise soit déjà cotée : les actions sont créées à cette occasion. L'entreprise reçoit 20 000 × 50 = **1 000 000**.
+
+Raisonnement : la seule question à poser est « le titre est-il créé à l'occasion de cette transaction ? ». Si oui, primaire.
+</details>
+
+**Exercice 2 — Le coût d'un aller-retour.** Une action fictive cote bid 24,95 / ask 25,05. Tu achètes 400 actions et tu les revends immédiatement (prix inchangés, quantité entièrement exécutée aux prix affichés, aucune commission). Calcule le spread, le mid, la perte en valeur et en pourcentage.
+
+<details>
+<summary>Correction 2</summary>
+
+- Spread = 25,05 − 24,95 = **0,10**.
+- Mid = (24,95 + 25,05) / 2 = **25,00**.
+- Achat : 400 × 25,05 = **10 020**. Revente : 400 × 24,95 = **9 980**.
+- Perte = 10 020 − 9 980 = **40**.
+- En pourcentage du montant payé : 40 / 10 020 ≈ **0,40 %**. (Le spread vaut aussi 0,10 / 25,00 = 0,40 % du mid : c'est cohérent, car un aller-retour coûte un spread complet.)
+- Rappel : 40 est le coût sous les hypothèses de l'exercice. Le coût réel peut différer (cotations, exécution, commission, slippage).
+</details>
+
+**Exercice 3 — Lire un tableau avec son périmètre et ses dénominateurs.** Tableau de la BCE (S-ECB-01), zone euro, fin 2012, engagements financiers sélectionnés des secteurs non financiers, total **34 395 Md€** : prêts 16 813 ; titres hors actions 8 430 ; actions cotées émises par des sociétés non financières 3 747 ; dépôts (engagements de l'administration centrale) 256 ; réserves de fonds de pension 349 ; autres 4 801.
+(a) Quelle est la part des prêts dans le total ?
+(b) Quelle est la part cumulée des titres hors actions et des actions cotées ? Est-ce cohérent avec « environ 35 % » ?
+(c) Quelle est la part des trois derniers postes (dépôts, fonds de pension, autres) ? Compare avec 100 − 49 − 35.
+(d) Cite deux raisons de ne pas conclure que « l'Europe est bancaire et les États-Unis sont de marché ».
+
+<details>
+<summary>Correction 3</summary>
+
+(a) 16 813 / 34 395 = **48,9 %**, soit « 49 % » arrondi comme dans le texte de la page.
+(b) 8 430 + 3 747 = 12 177 ; 12 177 / 34 395 = **35,4 %**. C'est cohérent avec « environ 35 % ». C'est un rapprochement fait par nous : la page ne publie pas ce total.
+(c) 256 + 349 + 4 801 = 5 406 ; 5 406 / 34 395 = **15,7 %**. La soustraction 100 − 49 − 35 = 16 donne un résultat voisin mais pas identique, car elle utilise des pourcentages déjà arrondis. On utilise donc les montants du tableau et non la soustraction. À noter : la somme des six lignes donne 34 396, soit 1 Md€ de plus que le total publié (écart probablement dû aux arrondis ; cette cause n'a pas pu être vérifiée sur le tableau original). Le poste « autres » regroupe, selon la note du tableau, des comptes à payer et des dérivés financiers.
+(d) 1. Les données concernent une seule zone et une seule date : elles ne permettent aucune comparaison avec un autre pays. 2. Le périmètre inclut les administrations publiques et les ménages, et les prêts viennent aussi d'« autres intermédiaires financiers » (5 807 Md€), pas seulement d'institutions monétaires : « prêts » n'est pas synonyme de « banques ». (On peut aussi citer qu'une photographie à une date ne décrit pas une tendance.)
+</details>
+
+**Exercice 4 — Comparer deux marchés.** Un marché A a un spread de 0,05 % du mid et un marché B un spread de 2 % du mid. Tu investis environ 10 000 dans chacun et tu fais un aller-retour immédiat (mêmes hypothèses simplificatrices que l'Exemple B). (a) Quel est le coût approximatif dans chaque marché ? (b) Lequel semble le plus liquide ? (c) Pourquoi « semble » ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) Un aller-retour coûte environ un spread complet : A : 10 000 × 0,05 % = **5**. B : 10 000 × 2 % = **200**.
+(b) Le marché **A** semble plus liquide : coût d'entrée-sortie 40 fois plus faible (200 / 5 = 40).
+(c) Parce que la liquidité a plusieurs dimensions (spread, profondeur, volume absorbable, rapidité, impact sur le prix) ; le spread n'en mesure qu'une. Un marché peut avoir un spread faible pour de petits ordres et se dégrader pour de gros ordres.
+</details>
+
+**Exercice 5 — Risque et marge.** Reprends l'Exemple C avec une banque qui collecte 2 000 de dépôts à 2 % et prête 2 000 à 7 %. (a) Calcule la marge brute. (b) À partir de quel pourcentage de capital non remboursé le résultat avant frais devient-il négatif ? (c) Quel lien avec la fonction « transfert du risque » ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) Intérêts reçus : 2 000 × 7 % = **140**. Intérêts versés : 2 000 × 2 % = **40**. Marge brute = **100**.
+(b) Le résultat devient négatif quand la perte dépasse 100, soit 100 / 2 000 = **5 %** du capital prêté. À exactement 5 %, le résultat est nul.
+(c) Dans ce modèle simplifié, le déposant (Awa) transfère le risque de défaut à la banque, qui est rémunérée par la marge pour le porter. Si les pertes dépassent la marge, c'est la banque qui subit d'abord la perte — c'est la raison d'être de sa marge, de ses fonds propres et de la réglementation qui l'encadre (non traités ici).
+</details>
+
+**Exercice 6 — Liquidité affichée et disponible.** Le carnet d'une action fictive affiche, côté vente : 500 actions à 50,00 ; 1 000 actions à 50,10 ; 2 000 actions à 50,30. Tu veux acheter 2 000 actions d'un coup (le carnet ne change pas pendant l'exécution, aucun frais). (a) Quelle quantité est disponible au meilleur prix affiché ? (b) Quel est le coût total et le prix moyen ? (c) Quel est le surcoût par rapport à un achat de 2 000 actions à 50,00, en valeur et en pourcentage ? (d) Quelle dimension de la liquidité cet exercice illustre-t-il ?
+
+<details>
+<summary>Correction 6</summary>
+
+(a) Seulement **500 actions** à 50,00.
+(b) 500 × 50,00 = 25 000 ; 1 000 × 50,10 = 50 100 ; il reste 500 actions à 50,30 : 500 × 50,30 = 25 150. Total = **100 250**. Prix moyen = 100 250 / 2 000 = **50,125**.
+(c) À 50,00 pour 2 000 actions : 100 000. Surcoût = 100 250 − 100 000 = **250**, soit 250 / 100 000 = **0,25 %**.
+(d) La **profondeur** et l'**impact sur le prix** : le prix affiché n'est valable que pour 500 actions ; la liquidité réellement disponible pour 2 000 actions est moins bonne que la liquidité affichée.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions, avec réponses expliquées) est dans `quiz/L0.01.quiz.json`. Seuil de réussite : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Un système financier relie ceux qui ont un excédent d'argent à ceux qui en ont besoin, directement (marchés) ou indirectement (intermédiaires).
+- Marché primaire : des titres nouveaux sont émis (y compris par une entreprise déjà cotée), l'émetteur reçoit l'argent. Marché secondaire : le titre change de main, le vendeur reçoit l'argent.
+- Les familles de marchés (capitaux, monétaire, changes, matières premières, dérivés) se recoupent ; organisé ou gré à gré dépend de l'instrument.
+- Le prix résulte de la rencontre d'un bid et d'un ask ; le spread est un coût réel, mais pas le seul : commissions et slippage peuvent s'y ajouter.
+- La liquidité a cinq dimensions : spread, profondeur, volume absorbable, rapidité, impact sur le prix. La liquidité affichée n'est pas toujours la liquidité disponible.
+- Quatre fonctions : financement, découverte du prix, liquidité, transfert du risque.
+- Un forward (contrat de change à terme) est de gré à gré et sur mesure ; un future (contrat à terme standardisé) est standardisé et compensé de façon centralisée, ce qui réduit le risque de contrepartie sans le supprimer.
+- Le Forex est un marché surtout de gré à gré : pas de cotation unique, conditions variables selon l'intermédiaire ; l'or est une matière première qui ne verse pas de revenu direct.
+- Un prix de marché est un résultat d'échange, pas une vérité.
+
+**Lien avec la suite.** Un prix de change ou d'or n'est pas un chiffre abstrait : il se forme là où des participants aux motivations différentes (L0.02) passent des ordres d'achat et de vente — les **flux** — dans un marché dont la liquidité et les coûts varient (L0.03). L'analyse fondamentale du Forex et de l'or cherchera à comprendre pourquoi ces flux apparaissent, c'est-à-dire ce qui fait varier l'offre et la demande d'une monnaie ou de l'or. Ce lien reste une démarche d'analyse, pas une garantie : une bonne analyse ne garantit pas une transaction gagnante, et les marchés restent incertains.
+
+## 13. Critères de maîtrise
+
+Tu maîtrises la leçon si tu peux, sans notes :
+
+- [ ] expliquer à une personne débutante la différence entre finance directe et indirecte avec un exemple ;
+- [ ] classer correctement 5 situations en primaire/secondaire, y compris une émission supplémentaire d'une entreprise cotée (Exercice 1) ;
+- [ ] expliquer pourquoi la famille d'un instrument ne dit pas s'il est négocié en bourse ou de gré à gré ;
+- [ ] calculer un spread et le coût d'un aller-retour, et citer deux coûts qui peuvent s'y ajouter (Exercices 2 et 4) ;
+- [ ] citer les cinq dimensions de la liquidité et calculer l'effet d'une liquidité affichée insuffisante (Exercice 6) ;
+- [ ] lire un tableau en vérifiant son périmètre et son dénominateur avant de calculer une part (Exercice 3) ;
+- [ ] obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources utilisées dans cette leçon, toutes consultées le **29 octobre 2026** :
+
+- **S-ECB-01** — Banque centrale européenne, « Financial structure » : https://www.ecb.europa.eu/mopo/eaec/structure/html/index.en.html
+- **S-SEC-01** — SEC (DERA), *Report to Congress: Access to Capital and Market Liquidity* (2017) : https://www.sec.gov/files/access-to-capital-and-market-liquidity-study-dera-2017.pdf
+- **S-BIS-01** — BRI, glossaire des données, entrée « Spot » : https://data.bis.org/help/glossary?item=Spot
+
+Sources ajoutées à la révision 4, consultées le **30 octobre 2026** (lues par résumé automatique des pages, non en texte intégral) :
+
+- **S-ECB-02** — BCE, glossaire (entrées « foreign exchange forward », « foreign exchange swap », « money market », « option ») : https://www.ecb.europa.eu/services/glossary/html/glossf.en.html ; https://www.ecb.europa.eu/services/glossary/html/glossm.en.html ; https://www.ecb.europa.eu/services/glossary/html/glosso.en.html
+- **S-INV-01** — Investor.gov (SEC), glossaire (bid, ask, market maker, commission, liquidity) et entrée « Primary Market » : https://www.investor.gov/introduction-investing/investing-basics/glossary ; https://www.investor.gov/introduction-investing/investing-basics/glossary/primary-market
+- **S-CFTC-04** — CFTC, glossaire, lettre F (« Futures Contract », « Forward Contract ») : https://www.cftc.gov/LearnAndProtect/EducationCenter/CFTCGlossary/glossary_f.html
+- **S-SEC-02** — SEC, Office of Investor Education and Advocacy, bulletin *Foreign Currency Exchange (Forex) Trading For Individual Investors* : https://www.sec.gov/investor/alerts/forextrading.pdf
+- **S-BIS-05** — BRI, *Quarterly Review*, mars 2008, « The basic mechanics of FX swaps and cross-currency basis swaps » : https://www.bis.org/publ/qtrpdf/r_qt0803z.htm
+
+**Ce que chaque source soutient, et ce qui n'est pas sourcé :**
+
+| Affirmation de la leçon | Statut | Source |
+|---|---|---|
+| Distinction finance « market-based » / « bank-based », passage des fonds des épargnants nets vers les autres agents | Fait | S-ECB-01 (texte de la page) |
+| Tableau fin 2012 : total 34 395 Md€, prêts 16 813 (48,9 %), titres hors actions 8 430, actions cotées 3 747, dépôts 256, fonds de pension 349, autres 4 801 ; périmètre et notes | Fait selon deux lectures automatisées concordantes de la page ; **vérification visuelle du tableau original en attente** (total, six montants, périmètre, notes, écart d'un milliard) | S-ECB-01 |
+| « Environ 35 % » = titres hors actions + actions cotées = 35,4 % | Calcul de l'auteur ; la page ne publie pas ce total | S-ECB-01 |
+| Les prêts viennent d'institutions financières monétaires (11 006) et d'autres intermédiaires financiers (5 807) | Fait (tableau) | S-ECB-01 |
+| La SEC étudie « capital raising in the primary markets » ; mention de « liquid secondary markets that enable investors to exit large positions quickly and at low cost » ; liquidité et capacité d'exécuter des transactions « of different sizes, quickly, and at low cost » | Faits (citations) ; numéros de page non confirmés, donc non cités | S-SEC-01 |
+| Comptant : échange à un taux convenu à la date du contrat, livraison sous deux jours ouvrés | Fait | S-BIS-01 |
+| Marché primaire : nouveaux instruments vendus pour la première fois, produit conservé par l'émetteur | Fait (définition officielle) ; l'extension aux émissions supplémentaires est une application du cours | S-INV-01 |
+| Bid et ask ; commission (actions et fonds) ; teneur de marché | Faits (définitions officielles, pages parfois tronquées) ; l'application aux changes et à l'or est une extension du cours | S-INV-01 |
+| Marché monétaire : instruments d'échéance initiale généralement d'un an au plus | Fait (définition officielle) | S-ECB-02 |
+| Forward de change : livraison plus de deux jours ouvrés après le contrat ; swap de change ; option | Faits (définitions de la BCE) ; le seuil de deux jours est une convention de définition | S-ECB-02 |
+| Swap de change : prêt et emprunt simultanés, remboursement au taux à terme fixé au départ | Fait | S-BIS-05 |
+| Future : standardisation, dénouement par livraison ou opération inverse | Fait (définition CFTC, vocabulaire des marchandises) | S-CFTC-04 |
+| Bourse : taille unitaire et échéance fixes, compensation centralisée ; hors bourse : dépendance à la contrepartie | Faits (bulletin sur le forex de détail) | S-SEC-02 |
+| Marché secondaire, marché de capitaux, spread, mid, profondeur, liquidité affichée / disponible, slippage, cinq dimensions de la liquidité | Définitions du cours, **sans source officielle trouvée** | — |
+| Tableau forward / future (colonne « Portée de la source » pour le détail) ; risque de contrepartie et compensation centralisée comme réduction non suppression | Synthèse pédagogique ; mécanismes soutenus par S-SEC-02, nuances = interprétation | S-SEC-02, S-CFTC-04 |
+| Simulation de défaillance d'une contrepartie (62 714,55 €) | Simulation (taux fictifs), calcul de l'auteur | — |
+| Mode de négociation par instrument (tableau 4.4), absence de cotation unique en gré à gré, effets sur les coûts | Interprétation / connaissance générale, non sourcée dans cette leçon | — |
+| L'or ne verse ni intérêt ni dividende | Définition, sera sourcée au module 5 | — |

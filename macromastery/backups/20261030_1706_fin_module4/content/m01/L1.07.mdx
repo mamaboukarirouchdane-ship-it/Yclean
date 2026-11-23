@@ -1,0 +1,266 @@
+---
+id: L1.07
+module: 1
+order: 7
+title: "Le marché du travail : chômage, participation, emploi, salaires"
+title_initial: "Le marché du travail"
+level: "débutant à intermédiaire"
+duration_hours: 3.0
+prerequisites: ["L1.03", "L1.04"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L1.07.quiz.json"
+sources: ["S-BLS-03", "S-BLS-04", "S-CBO-02", "S-FED-02", "S-BLS-02"]
+---
+
+# L1.07 — Le marché du travail : chômage, participation, emploi, salaires
+
+> **Convention de lecture.** **[Fait]** = chiffre ou énoncé lu dans une source citée ; **[Définition]** = définition (officielle quand elle est citée, sinon convention de cours) ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. définir **emploi**, **chômage**, **population active**, **taux de chômage**, **taux d'activité** et **rapport emploi/population** selon le BLS ;
+2. distinguer l'**enquête auprès des ménages** et l'**enquête auprès des établissements** ;
+3. lire un rapport mensuel sur l'emploi : variation des emplois, **révisions**, chômage, salaires ;
+4. expliquer pourquoi le taux de chômage peut **baisser sans créations d'emploi** ;
+5. calculer l'**emploi d'équilibre** (*breakeven*) et le comparer aux créations d'emploi ;
+6. distinguer chômage **frictionnel, structurel et cyclique**, et lire la notion de taux **non cyclique** ;
+7. calculer un **salaire réel** et un coût salarial.
+
+## 2. Prérequis
+
+L1.03 (productivité, coût unitaire du travail) et L1.04 (inflation, indices).
+
+## 3. Explication intuitive
+
+Le marché du travail est le lieu où se rencontrent ceux qui offrent du travail et ceux qui en cherchent. On le lit avec trois questions :
+
+1. **Combien de personnes ont un emploi ?** (quantité)
+2. **Combien en cherchent un sans le trouver ?** (chômage)
+3. **À quel prix le travail est-il payé ?** (salaires)
+
+Trois pièges guettent le débutant. D'abord, il existe **deux enquêtes différentes** (ménages et établissements) qui ne mesurent pas la même chose. Ensuite, le taux de chômage dépend du **dénominateur** (la population active), qui bouge quand des gens arrêtent de chercher. Enfin, les chiffres mensuels sont **bruités et révisés** : on lit des tendances, pas un chiffre isolé.
+
+## 4. Développement technique
+
+### 4.1 Les définitions du BLS
+
+**[Fait, S-BLS-03, résumé automatique de la page du BLS sur les concepts de l'enquête auprès des ménages]**
+
+- **Emploi** : toute personne qui, pendant la semaine de référence (généralement celle qui contient le 12 du mois), a travaillé au moins **1 heure** rémunérée, a travaillé dans sa propre entreprise ou exploitation, a travaillé au moins 15 heures non rémunérées dans l'entreprise d'un membre de la famille, ou était temporairement absente d'un emploi. Chaque personne est comptée **une fois**, même avec plusieurs emplois.
+- **Chômeur** : personne qui remplit les **trois** conditions : ne pas avoir d'emploi pendant la semaine de référence ; être **disponible** pour travailler ; avoir fait une **démarche active et précise** pour trouver un emploi pendant les **quatre semaines** précédentes (avec des exceptions pour les personnes en licenciement temporaire attendant un rappel).
+- **Population active** (*labor force*) : emploi + chômage, personnes de **16 ans et plus**.
+- **Hors population active** : ni employé ni chômeur.
+- **Taux de chômage** = chômeurs ÷ population active × 100.
+- **Taux d'activité** (*participation*) = population active ÷ population civile non institutionnelle × 100.
+- **Rapport emploi/population** = employés ÷ population civile non institutionnelle × 100.
+- **Travailleurs découragés** : sous-groupe des personnes « marginalement rattachées » : elles veulent un emploi, sont disponibles, ont cherché dans les 12 derniers mois, mais ne cherchent pas actuellement, par découragement.
+
+**Identité utile.** Employés = population active × (1 − taux de chômage). Donc **rapport emploi/population = taux d'activité × (1 − taux de chômage)**.
+
+### 4.2 Deux enquêtes différentes
+
+**[Fait, S-BLS-04, résumé automatique du communiqué du 2 octobre 2026]** Le rapport mensuel s'appuie sur deux enquêtes : l'enquête auprès des **ménages** (CPS), qui donne la population active, l'emploi et le chômage (des **personnes**) ; l'enquête auprès des **établissements** (CES), qui donne l'emploi salarié non agricole, les heures et les rémunérations par secteur (des **emplois** salariés).
+
+**[Interprétation]** Une personne cumulant deux emplois compte une fois dans l'enquête ménages et deux fois dans l'enquête établissements (le BLS l'écrit pour l'enquête ménages ; pour l'enquête établissements, c'est la logique des postes de paie). Les deux séries peuvent s'écarter un mois donné sans que l'une ait « tort ».
+
+### 4.3 Un cas chiffré : l'emploi de septembre 2026
+
+**[Fait, S-BLS-04, résumé automatique du communiqué du 2 octobre 2026]**
+
+| Indicateur | Septembre 2026 |
+| --- | --- |
+| Emploi salarié non agricole | **+29 000** (« changed little ») ; moyenne mensuelle des 12 derniers mois : +45 000 |
+| Révisions | Juillet : de +21 000 à **−10 000** ; août : de +162 000 à **+133 000** ; total **−60 000** |
+| Taux de chômage | **4,2 %** ; **7,109 millions** de chômeurs |
+| Taux d'activité | **61,8 %** |
+| Rapport emploi/population | **59,2 %** |
+| Salaire horaire moyen (secteur privé) | **+5 cents (+0,1 %)** à **37,81 $** ; **+3,0 %** sur 12 mois |
+| Chômeurs de longue durée (27 semaines et plus) | **1,9 million**, soit **27,1 %** des chômeurs |
+| Secteurs en hausse | Santé +17 000 ; construction +11 000 ; industrie manufacturière +9 000 |
+| Secteurs en baisse | Établissements de soins infirmiers −9 000 ; activités financières −7 000 (−129 000 depuis le pic de mai 2025, surtout les assureurs) |
+
+**Contrôles de l'auteur.**
+
+- Rapport emploi/population : 61,8 % × (1 − 0,042) = **59,20 %** ✓ (59,2 % publié).
+- Salaire horaire : 37,81 ÷ 37,76 − 1 = **+0,13 %** ✓ (0,1 % publié).
+- Chômeurs de longue durée : 1,9 ÷ 7,109 = 26,7 % ; le chiffre publié (27,1 %) correspond à 1,927 million : le « 1,9 » est arrondi.
+- Moyenne trois mois de variation des emplois : (−10 + 133 + 29) ÷ 3 ≈ **+51 000** par mois, contre +45 000 pour douze mois.
+- **Taille de la population active (déduite)** : 7,109 ÷ 0,042 ≈ **169,3 millions** ; la précision du taux (4,15 à 4,25 %) donne une fourchette de 167,3 à 171,3 millions. La population civile non institutionnelle serait d'environ 169,3 ÷ 0,618 ≈ **274 millions** et l'emploi d'environ **162 millions**. Ces valeurs sont des **calculs de l'auteur** sur des chiffres arrondis, non des chiffres publiés.
+
+**Révisions.** Les mois précédents ont été **révisés à la baisse de 60 000** : le chiffre initial est une estimation (comme pour le PIB, L1.01).
+
+### 4.4 Salaires : nominaux, réels, coût du travail
+
+Le salaire horaire moyen progresse de **3,0 %** sur douze mois **[Fait, S-BLS-04]**, alors que l'inflation CPI de septembre est de **3,7 %** **[Fait, S-BLS-02, L1.04]**. **[Calcul de l'auteur]** Salaire réel : 1,030 ÷ 1,037 − 1 = **−0,68 %** : le pouvoir d'achat de ce salaire moyen **diminue** sur un an en termes réels.
+
+**Limites :** le salaire horaire moyen varie avec la **composition** de l'emploi (si les emplois peu payés disparaissent, la moyenne monte mécaniquement) ; il ne couvre pas tous les avantages ; l'indice des prix utilisé est celui de la population entière, pas celui de chaque salarié. Le lien avec la productivité et le coût unitaire du travail est dans L1.03.
+
+### 4.5 Le taux de chômage peut baisser sans créations d'emploi
+
+**Exemple (SIMULATION).** Population de 1 000 personnes : 600 employés, 40 chômeurs, 360 hors population active.
+
+- Population active = 640 ; taux de chômage = 40 ÷ 640 = **6,25 %** ; taux d'activité = **64,0 %** ; rapport emploi/population = **60,0 %**.
+- Si 20 chômeurs deviennent découragés et sortent de la population active : chômeurs = 20, population active = 620 ; taux de chômage = 20 ÷ 620 = **3,23 %** ; taux d'activité = **62,0 %** ; emploi inchangé à 600, rapport emploi/population toujours **60,0 %**.
+
+Le taux de chômage a presque **divisé par deux** sans qu'un seul emploi ne soit créé. D'où l'importance de regarder **ensemble** le taux de chômage, le taux d'activité et le rapport emploi/population.
+
+### 4.6 L'emploi d'équilibre (*breakeven*)
+
+**[Définition]** L'emploi d'équilibre est le nombre de créations d'emplois par mois nécessaire pour maintenir le **taux de chômage** stable, compte tenu de la croissance de la **population active potentielle**.
+
+**[Fait, S-FED-02, résumé automatique d'une page de données d'une note FEDS d'avril 2026]** La page définit l'emploi d'équilibre comme la variation de la population active potentielle multipliée par un moins le **taux de chômage non cyclique de la CBO** (2026). Les valeurs trimestrielles (en milliers par mois) citées pour 2026 sont : **T1 35,8**, **T2 20,3**, **T3 10,1**, **T4 5,2**. L'intervalle de confiance à 90 % pour le T4 2026 va de **−117** à **+127** (milliers), reflétant l'incertitude d'échantillonnage du BLS. La croissance de la population active potentielle de 2026 est estimée à **0,04 %** (contre 0,75 % en 2025). La page lue est le **complément de données** de la note : le texte principal, les auteurs et les hypothèses (immigration, participation) **n'ont pas été lus**.
+
+**[Calcul de l'auteur, comparaison]** Avec la moyenne trois mois de **+51 000** (§4.3) et un emploi d'équilibre d'environ **10 000** par mois au T3 2026 (selon cette source), la création d'emplois dépasse l'équilibre de l'ordre de 40 000 par mois. Mais l'écart est **inférieur à l'incertitude** de l'intervalle à 90 % (± 120 000 environ) : on ne peut pas dire que le marché du travail « se resserre » ou « se détend » sur ce seul chiffre.
+
+**Pour comparaison (SIMULATION de calcul).** Si la population active est de 169,3 millions et croît de 0,4 % par an (moyenne 2026–2036 de la CBO, L1.03), l'emploi d'équilibre est de 169,3 × 0,004 × (1 − 0,042) ÷ 12 ≈ **54 000** par mois. Le chiffre de 2026 de la note (5 à 36 milliers) est bien inférieur : l'équilibre **dépend fortement** des hypothèses démographiques et migratoires, qui n'ont pas été lues.
+
+### 4.7 Frictionnel, structurel, cyclique
+
+**[Définition]**
+
+- **Chômage frictionnel** : temps normal de recherche et de rotation.
+- **Chômage structurel** : inadéquation durable entre compétences, localisation et emplois disponibles.
+- **Chômage cyclique** : écart par rapport au niveau de long terme dû au cycle (L1.02).
+- **Taux non cyclique** (ou taux naturel, NAIRU selon les usages) : niveau vers lequel le chômage tend sans pression durable sur l'inflation. Il est **estimé**, non observé.
+
+**[Fait, S-CBO-02, résumé automatique des diapositives de la CBO de février 2026]** La CBO projette un taux de chômage de **4,6 %** en 2026, **4,5 %** en 2027, **4,4 %** en 2028, puis un retour à son **« noncyclical rate » de 4,2 %** en 2032. Les diapositives lues ne définissent ni le taux naturel ni le NAIRU, et ne donnent pas les projections de toutes les années. **[Calcul de l'auteur]** Le taux observé en septembre 2026 (4,2 %) est inférieur de **0,4 point** à la projection de février pour 2026 (4,6 %). Une projection est une prévision, non une observation.
+
+### 4.8 Chômage de longue durée et qualité du chômage
+
+Le chômage de longue durée (27 semaines et plus) représentait **27,1 %** des chômeurs en septembre 2026 **[Fait, S-BLS-04]**. **[Interprétation]** Un chômage durable peut éroder les compétences et réduire l'effet du chômage sur les salaires. Comparer avec des moyennes historiques exigerait des séries que la leçon n'a pas lues.
+
+## 5. Définitions essentielles
+
+- **Population active** : employés + chômeurs (16 ans et plus).
+- **Chômeur** : sans emploi, disponible, ayant cherché activement au cours des 4 dernières semaines.
+- **Taux de chômage / d'activité / emploi-population** : formules du §4.1.
+- **CPS / CES** : enquête ménages / enquête établissements.
+- **Emploi d'équilibre** : créations d'emplois nécessaires pour maintenir le taux de chômage.
+- **Taux non cyclique** : niveau de long terme estimé du chômage.
+- **Travailleur découragé** : veut un emploi mais ne cherche plus par découragement.
+
+## 6. Exemples chiffrés
+
+**A.** Sept. 2026 : emploi/population = 61,8 × 0,958 = 59,2 % (§4.3).
+**B.** Révisions : −10 000 / +133 000 / +29 000 ; moyenne 3 mois ≈ +51 000 (§4.3).
+**C.** Salaire réel : 1,030 ÷ 1,037 − 1 = −0,68 % (§4.4).
+**D.** Chômage 6,25 % → 3,23 % sans création d'emploi (§4.5).
+**E.** Emploi d'équilibre T3 2026 ≈ 10 000 par mois (§4.6).
+
+### 6.5 Cas historique documenté — le rapport sur l'emploi de septembre 2026
+
+**[Fait, S-BLS-04]** Le rapport du **2 octobre 2026** montre un emploi quasi stable (+29 000), des révisions de −60 000 sur juillet et août, un taux de chômage de 4,2 %, un taux d'activité de 61,8 %, un salaire horaire de +3,0 % sur un an. **[Interprétation]** La lecture d'ensemble est : créations d'emplois faibles mais chômage stable à un niveau égal au taux non cyclique de 4,2 % projeté par la CBO. Ce diagnostic dépend de la faible croissance de la population active potentielle (note FEDS, 0,04 % en 2026), de l'incertitude des enquêtes et des révisions. **Ce que la leçon n'a pas pu confirmer :** les chiffres de la semaine d'indemnisation du chômage, les offres d'emploi (JOLTS), l'évolution du chômage depuis août, les hypothèses de l'emploi d'équilibre. La leçon ne tire **aucune conclusion de trading**.
+
+## 7. Application au Forex et à l'or
+
+- **Forex** : le rapport sur l'emploi américain est l'un des chiffres les plus suivis ; la réaction du dollar dépend de l'**écart avec les prévisions**, des **révisions** et de ce que le chiffre change aux **anticipations de taux** de la Fed (modules 2, 3, 4). Un chiffre d'emploi faible avec un chômage stable n'a pas la même portée qu'un chiffre faible avec un chômage qui monte.
+- **Or** : un marché du travail qui se dégrade peut faire baisser les taux anticipés (taux réels en baisse, favorable à l'or) mais aussi peser sur le dollar ou, à l'inverse, soutenir la demande de valeur refuge ; effets **non automatiques** (module 5).
+- **Méthode** : lire ensemble variation des emplois, révisions, chômage, participation, salaires ; comparer avec l'emploi d'équilibre ; retenir l'incertitude statistique.
+- **Rappel** : **une bonne analyse ne garantit pas une transaction gagnante.**
+
+## 8. Erreurs courantes
+
+- **Lire le taux de chômage sans le taux d'activité.**
+- **Réagir à un seul chiffre mensuel** sans les révisions.
+- **Confondre enquête ménages et enquête établissements.**
+- **Comparer des créations d'emploi à zéro** au lieu de l'emploi d'équilibre.
+- **Négliger l'incertitude d'échantillonnage** (intervalles à 90 %).
+- **Oublier l'inflation en lisant les salaires.**
+- **Traiter le taux non cyclique comme un chiffre observé.**
+- **Comparer des chiffres de pays qui définissent le chômage différemment** (module 12).
+
+## 9. Limites de l'interprétation
+
+- Le communiqué du BLS, la page de concepts, les diapositives de la CBO et la page de données de la Fed sont lus par **résumé automatique**.
+- La page de la Fed est un **complément de données** : le texte, les auteurs et les hypothèses de l'emploi d'équilibre ne sont pas lus.
+- La population active déduite (169,3 millions) vient d'un taux arrondi : fourchette de ± 2 millions.
+- Le taux non cyclique de la CBO est une **estimation** ; la CBO ne définit pas le terme dans les diapositives lues.
+- Aucune donnée JOLTS, de demandes d'allocations ou d'autres pays n'a été lue.
+- Les effets sur devises et or sont des **hypothèses d'analyse**.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Définitions.** Population civile non institutionnelle : 2 000 ; employés : 1 200 ; chômeurs : 100. (a) Population active ? (b) Taux de chômage ? (c) Taux d'activité ? (d) Rapport emploi/population ? (e) Vérifie l'identité du §4.1.
+
+<details>
+<summary>Correction 1</summary>
+
+(a) 1 200 + 100 = **1 300**. (b) 100 ÷ 1 300 = **7,69 %**. (c) 1 300 ÷ 2 000 = **65,0 %**. (d) 1 200 ÷ 2 000 = **60,0 %**. (e) 65,0 % × (1 − 0,0769) = 60,0 % ✓.
+</details>
+
+**Exercice 2 — Chômage et découragement.** Reprends l'exercice 1 : 50 chômeurs cessent de chercher et sortent de la population active. Recalcule (a) le taux de chômage, (b) le taux d'activité, (c) le rapport emploi/population. Qu'en conclure ?
+
+<details>
+<summary>Correction 2</summary>
+
+Chômeurs = 50 ; population active = 1 250. (a) 50 ÷ 1 250 = **4,0 %**. (b) 1 250 ÷ 2 000 = **62,5 %**. (c) 1 200 ÷ 2 000 = **60,0 %** (inchangé). Le taux de chômage baisse de 3,7 points sans aucun emploi créé : il faut lire chômage, participation et emploi/population ensemble.
+</details>
+
+**Exercice 3 — Lire le rapport de septembre 2026.** À partir du §4.3 : (a) Variation totale des révisions ? (b) Moyenne trois mois des créations d'emploi ? (c) Part du chômage de longue durée recalculée avec 1,9 million, et pourquoi diffère-t-elle de 27,1 % ? (d) Chômeurs de longue durée en millions si 27,1 % de 7,109 ?
+
+<details>
+<summary>Correction 3</summary>
+
+(a) (−31 000) + (−29 000) = **−60 000**. (b) (−10 000 + 133 000 + 29 000) ÷ 3 = **+50 667**, soit environ 51 000. (c) 1,9 ÷ 7,109 = **26,7 %** ; le « 1,9 » est arrondi à la première décimale. (d) 0,271 × 7,109 = **1,927 million**.
+</details>
+
+**Exercice 4 — Salaire réel.** Salaire horaire moyen +3,0 % sur 12 mois ; inflation CPI +3,7 %. (a) Salaire réel exact ? (b) Si l'inflation était de 2,6 % (sous-jacente) ? (c) Pourquoi le choix de l'indice change-t-il la conclusion ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) 1,030 ÷ 1,037 − 1 = **−0,68 %**. (b) 1,030 ÷ 1,026 − 1 = **+0,39 %**. (c) Le CPI global inclut l'énergie (+20,4 % sur 12 mois), qui tire l'inflation ; avec l'indice sous-jacent, le pouvoir d'achat apparaît en hausse. Aucun indice n'est « le bon » : l'énergie compte dans le budget des ménages.
+</details>
+
+**Exercice 5 — Emploi d'équilibre.** Population active : 170 millions ; croissance potentielle de la population active : 0,3 % par an ; taux de chômage non cyclique : 4,2 %. (a) Emploi d'équilibre par mois ? (b) Si les créations d'emploi sont de 30 000 par mois, le chômage tend-il à monter ou à baisser (toutes choses égales) ? (c) Pourquoi la conclusion est-elle fragile ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) 170 000 000 × 0,003 × (1 − 0,042) ÷ 12 = 170 000 000 × 0,003 = 510 000 ; × 0,958 = 488 580 ; ÷ 12 = **40 715** par mois. (b) 30 000 < 40 715 : le chômage tend à **monter légèrement**. (c) L'écart (≈ 10 700) est très inférieur à l'incertitude statistique des créations d'emploi (intervalle à 90 % de plusieurs dizaines de milliers) ; la croissance de la population active est elle-même incertaine.
+</details>
+
+**Exercice 6 — Deux enquêtes.** (a) Une personne cumule deux emplois : combien de fois est-elle comptée dans l'enquête ménages et, en logique de postes de paie, dans l'enquête établissements ? (b) Un indépendant sans salariés est-il compté dans l'emploi salarié non agricole ? (c) Pourquoi les deux enquêtes peuvent-elles diverger un mois ?
+
+<details>
+<summary>Correction 6</summary>
+
+(a) **Une fois** dans l'enquête ménages (le BLS écrit qu'une personne est comptée une fois même avec plusieurs emplois) ; **deux fois** en logique de postes de paie. (b) Non, a priori : l'enquête établissements porte sur l'emploi salarié ; l'indépendant relève de l'enquête ménages (emploi dans sa propre entreprise). (c) Les champs, les méthodes et les échantillons diffèrent ; chaque enquête a son erreur d'échantillonnage.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L1.07.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- **Chômeur** = sans emploi + disponible + recherche active sur 4 semaines ; **population active** = emplois + chômeurs.
+- **Emploi/population = taux d'activité × (1 − chômage)** ; le chômage peut baisser quand des gens quittent la population active.
+- Deux enquêtes : **ménages** (personnes) et **établissements** (emplois salariés) ; les mois précédents sont **révisés**.
+- Septembre 2026 : +29 000 emplois, révisions −60 000, chômage 4,2 %, activité 61,8 %, salaires +3,0 %.
+- Salaire réel : −0,68 % avec le CPI global ; +0,39 % avec le sous-jacent.
+- L'**emploi d'équilibre** dépend de la population active potentielle (T3 2026 ≈ 10 000 par mois selon la source lue).
+- Le **taux non cyclique** (CBO : 4,2 % à terme) est estimé, non observé.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer chômage, activité, emploi/population (Exercices 1–2).
+- [ ] Lire un rapport sur l'emploi avec révisions (Exercice 3).
+- [ ] Calculer un salaire réel et nuancer le choix de l'indice (Exercice 4).
+- [ ] Calculer et interpréter un emploi d'équilibre (Exercice 5).
+- [ ] Distinguer les deux enquêtes (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-BLS-03** — BLS, *Handbook of Methods, Current Population Survey, Concepts* : https://www.bls.gov/opub/hom/cps/concepts.htm
+- **S-BLS-04** — BLS, *The Employment Situation — September 2026* (2 octobre 2026) : https://www.bls.gov/news.release/archives/empsit_10022026.htm
+- **S-CBO-02** — CBO, *The Budget and Economic Outlook: 2026 to 2036*, diapositives (février 2026) : https://www.cbo.gov/system/files/2026-02/62052-Economic-Outlook-Slides.pdf
+- **S-FED-02** — Réserve fédérale, note FEDS sur la croissance de la population active, l'emploi d'équilibre et la croissance potentielle (complément de données, avril 2026) : https://www.federalreserve.gov/econres/notes/feds-notes/labor-force-growth-breakeven-employment-and-potential-gdp-growth-accessible-20260402.htm
+- **S-BLS-02** — BLS, CPI de septembre 2026 (voir L1.04) : https://www.bls.gov/news.release/archives/cpi_10142026.htm
+
+**Définitions de cours non rattachées à une source officielle lue :** chômage frictionnel / structurel / cyclique, emploi d'équilibre au-delà de la définition de la page de données, taux non cyclique comme synonyme de taux naturel. **Points non vérifiés :** hypothèses de la note FEDS, JOLTS, demandes d'allocations, auteurs de la note.

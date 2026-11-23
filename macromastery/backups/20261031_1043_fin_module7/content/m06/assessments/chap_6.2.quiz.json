@@ -1,0 +1,178 @@
+{
+  "chapterId": "6.2",
+  "module": 6,
+  "title": "Quiz de chapitre 6.2 — Asymétries, positionnement et régimes (L6.03–L6.04)",
+  "passThreshold": 0.8,
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C6.2-Q1",
+      "type": "mcq",
+      "prompt": "Cinq variations de séance : −1,40 ; −0,94 ; +1,30 ; +0,38 ; −0,60 (%). Moyenne ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ −1,26 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ −0,60 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ +0,25 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ −0,25 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Somme = −1,26 ; −1,26 ÷ 5 = −0,252 % ; la médiane (−0,60) est différente.",
+      "tags": [
+        "moyenne"
+      ]
+    },
+    {
+      "id": "C6.2-Q2",
+      "type": "mcq",
+      "prompt": "Avec cinq observations, quelle est la plus petite valeur-p d'un test de permutation exact (une seule observation la plus extrême) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,05"
+        },
+        {
+          "id": "b",
+          "text": "0,20"
+        },
+        {
+          "id": "c",
+          "text": "0,01"
+        },
+        {
+          "id": "d",
+          "text": "0,50"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Il n'y a que cinq permutations possibles pour désigner l'observation extrême : p minimal = 1/5 = 0,20.",
+      "tags": [
+        "permutation"
+      ]
+    },
+    {
+      "id": "C6.2-Q3",
+      "type": "mcq",
+      "prompt": "Un maintien fait −0,6 % pour 5 unités de surprise ; une autre mesure donne +0,2 % pour −2 unités. Sensibilité de la première ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−0,6 point par unité"
+        },
+        {
+          "id": "b",
+          "text": "+0,12 point par unité"
+        },
+        {
+          "id": "c",
+          "text": "−3,0 points par unité"
+        },
+        {
+          "id": "d",
+          "text": "−0,12 point par unité"
+        }
+      ],
+      "correct": "d",
+      "explanation": "−0,6 ÷ 5 = −0,12 ; l'autre vaut 0,2 ÷ (−2) = −0,10. Les signes concordent, l'échantillon est trop petit.",
+      "tags": [
+        "sensibilite"
+      ]
+    },
+    {
+      "id": "C6.2-Q4",
+      "type": "mcq",
+      "prompt": "Pourquoi définir un régime à partir du rendement ultérieur de l'or serait-il circulaire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que le régime est constant"
+        },
+        {
+          "id": "b",
+          "text": "Parce que l'or n'a pas de régime"
+        },
+        {
+          "id": "c",
+          "text": "Le régime est ensuite utilisé pour expliquer ce même rendement"
+        },
+        {
+          "id": "d",
+          "text": "Parce que les rendements sont toujours positifs"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Un régime doit être défini avec des variables antérieures ou indépendantes de la variable expliquée.",
+      "tags": [
+        "circularite"
+      ]
+    },
+    {
+      "id": "C6.2-Q5",
+      "type": "mcq",
+      "prompt": "Vingt valeurs de référence : quel est le troisième quartile avec interpolation linéaire à la position 0,75 × (n − 1) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "7,25"
+        },
+        {
+          "id": "b",
+          "text": "12"
+        },
+        {
+          "id": "c",
+          "text": "5"
+        },
+        {
+          "id": "d",
+          "text": "0"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Position 14,25 : valeur 7 (rang 14) puis interpolation vers 8 (+0,25) = 7,25, pour la série de L6.04.",
+      "tags": [
+        "quartile"
+      ]
+    },
+    {
+      "id": "C6.2-Q6",
+      "type": "mcq",
+      "prompt": "Pourquoi conserver un état « indéterminé / mixte » dans la classification des régimes ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pour allonger le tableau"
+        },
+        {
+          "id": "b",
+          "text": "Parce que des cas ne satisfont aucune règle nette ; les forcer fausserait les statistiques"
+        },
+        {
+          "id": "c",
+          "text": "Parce que l'or l'exige"
+        },
+        {
+          "id": "d",
+          "text": "Parce qu'il est toujours vide"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Dans l'exemple fictif, 3 observations sur 12 tombent dans l'état mixte ; les classer de force fausserait les moyennes.",
+      "tags": [
+        "indetermine"
+      ]
+    }
+  ],
+  "revision": 1
+}

@@ -1,0 +1,222 @@
+---
+id: L4.02
+module: 4
+order: 2
+title: "Différentiels de taux et attentes : niveaux, trajectoires et ce que le change reflète"
+title_initial: "Différentiels de taux et attentes"
+level: "intermédiaire à avancé"
+duration_hours: 3
+prerequisites: ["L2.07", "L3.02", "L4.01"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L4.02.quiz.json"
+sources: ["S-TRN-01", "S-FED-09", "S-FED-11", "S-ECB-06", "S-ECB-04", "S-TST-01", "S-VBZ-01"]
+---
+
+# L4.02 — Différentiels de taux et attentes : niveaux, trajectoires et ce que le change reflète
+
+> **Convention de lecture.** **[Fait]** = énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. calculer un **différentiel de taux directeurs** (borne haute ou milieu de fourchette) et un **différentiel de rendements** ;
+2. distinguer **niveau** du différentiel et **trajectoire anticipée** ;
+3. convertir une **probabilité de hausse** en **espérance de variation** et en **surprise** ;
+4. construire un **différentiel anticipé** à un horizon donné ;
+5. rapprocher l'évolution du différentiel de celle du **change**, sans conclure à une causalité ;
+6. identifier les **limites** : instruments différents, sources de marché secondaires, autres moteurs.
+
+## 2. Prérequis
+
+- Fonction de réaction (L2.07) ; surprise (L3.02) ; parités (L4.01).
+
+## 3. Explication intuitive
+
+Un différentiel de taux, c'est la différence entre ce que rapporte un placement dans une devise et dans l'autre. Mais le marché ne regarde pas seulement le niveau d'aujourd'hui : il regarde **où l'on va**. Un différentiel de 1,5 point qui se **réduit** vite peut peser sur une devise, alors qu'un différentiel de 1 point qui **s'élargit** peut la soutenir. Ce qui compte pour les prix, c'est l'écart avec ce qui était attendu : une hausse de taux déjà pleinement intégrée ne fait presque pas bouger le change. Le différentiel est donc un outil de **lecture**, pas une machine à prévoir : d'autres forces (aversion au risque, énergie, flux, politique budgétaire) agissent en même temps.
+
+## 4. Développement technique
+
+### 4.1 Le niveau : taux directeurs et rendements
+
+**[Fait]** (S-FED-09, communiqué du FOMC du 16/09/2026 ; S-ECB-06, taux de la BCE) : fourchette de la Fed **3,75–4,00 %** depuis le 16/09/2026 ; facilité de dépôt de la BCE **2,50 %** depuis le 16/09/2026.
+
+**[Fait]** (S-TRN-01, article d'un site d'information financière du 25/09/2026, source secondaire, résumé automatique) : rendement du Trésor à 10 ans **5,169 % – 5,209 %** ce jour-là ; Bund à 10 ans **3,57 %** (23/09) ; écart annoncé : **161 points de base** ; Fed et BCE : écart de politique de **150 points de base** (borne haute de la Fed contre facilité de dépôt) ou **137,5** en milieu de fourchette.
+
+**[Calcul de l'auteur]**
+- borne haute : 4,00 − 2,50 = **1,50 point** ; milieu : 3,875 − 2,50 = **1,375 point** ;
+- écart à 10 ans : avec les bornes de l'article, 5,169 − 3,57 = **1,599** et 5,209 − 3,57 = **1,639** : l'écart annoncé de 1,61 s'y inscrit (dates légèrement différentes pour le Bund).
+
+**[Interprétation]** Les deux niveaux sont des **instruments différents** : un taux directeur est un taux au jour le jour administré ; un rendement à 10 ans reflète les anticipations de taux, la prime de terme et l'offre de titres. Les deux écarts ne se comparent qu'avec prudence.
+
+### 4.2 La trajectoire anticipée
+
+**[Fait]** (S-TRN-01, même source secondaire, au 25/09/2026) :
+- **Fed** : probabilité de **66 à 71 %** d'une hausse de 25 points de base à la réunion d'octobre ; environ **quatre hausses** intégrées d'ici juin 2027 ; projection médiane de fin d'année **4,1 %** ; 16 des 19 participants voient au moins une hausse de plus en 2026.
+- **BCE** : au moins une hausse de 25 points de base d'ici fin d'année ; **40 %** de probabilité d'une seconde ; certaines mesures donnent **trois hausses** d'ici fin juin 2027.
+
+**[Fait]** (S-TST-01, CME FedWatch, 2/10/2026 à 14 h 51) : probabilité d'une hausse à la réunion des 27–28 octobre tombée à environ **18 %** ; maintien de la fourchette à environ **81 %**. **[Fait]** (S-FED-11, communiqué du 28/10/2026) : fourchette **maintenue** à 3,75–4,00 % ; vote **10 à 2**, les deux dissidents souhaitant une hausse de ¼ point (L2.03). **[Fait]** (S-ECB-06) : une décision de maintien de la BCE du 29/10/2026 n'est relevée que dans la presse et **n'est pas vérifiée**.
+
+**[Calcul de l'auteur]**
+- espérance de hausse pour octobre (en prenant 68,5 %, milieu de 66–71 %) : 0,685 × 25 = **17,1 points de base** ; à 18 % : 0,18 × 25 = **4,5** ; variation : **−12,6 points de base** ;
+- surprise du maintien si l'attente était de 68,5 % : 0 − 17,1 = **−17,1 point de base** (par rapport au prix du 25/09) ;
+- **différentiel anticipé à fin juin 2027** (en prenant les chiffres de l'article tels quels et le milieu de fourchette) : Fed 3,875 + 4 × 0,25 = **4,875 %** ; BCE 2,50 + 3 × 0,25 = **3,25 %** ; écart **1,625 point**, soit **+0,25 point** par rapport au différentiel actuel de 1,375.
+
+**[Interprétation]** Le calcul suppose que les probabilités et nombres de hausses cités sont **cohérents** entre eux ; ils proviennent d'une source secondaire et de dates différentes (25/09 et 02/10) ; ils sont des **ordres de grandeur**. Le différentiel anticipé **s'élargit** légèrement dans ce scénario de marché, mais la période comprise entre le 25/09 et le 28/10 a vu la probabilité d'une hausse de la Fed se **réduire**.
+
+### 4.3 Le change sur la même période
+
+**[Fait]** (S-TRN-01) : EUR/USD **1,1400** le 25/09/2026 (creux de 1,1367, plus bas de deux mois) ; indice dollar d'environ **100,70–100,85**. (S-ECB-04, lecture de tableau par résumé, non confirmée sur le jeu de données) : EUR/USD de référence **1,1130** le 29/10/2026. (S-VBZ-01, secondaire, autour du CPI du 14/10/2026) : indice dollar **102,75**.
+
+**[Calcul de l'auteur]**
+- EUR/USD : 1,1130 ÷ 1,1400 − 1 = **−2,37 %** ;
+- indice dollar : 102,75 ÷ 100,775 − 1 = **+1,96 %** (milieu de 100,70–100,85 ; **sources, dates et instruments différents**).
+
+**[Interprétation]** Le dollar s'est **renforcé** de près de 2 % contre l'euro (et contre un panier) alors que la probabilité d'une hausse prochaine de la Fed diminuait et que le différentiel anticipé à fin juin 2027 ne se resserrait pas. **Ce rapprochement ne démontre pas** que le différentiel « explique » la variation : le rendement à 10 ans américain montait aussi (5,28 % le 2 octobre, 5,304 % mi-octobre), l'énergie était en tension, et d'autres facteurs ont pu jouer. L'exercice montre surtout qu'**on ne peut pas inférer le sens du change du seul sens du différentiel de court terme**.
+
+### 4.4 Niveau, trajectoire, surprise : un cadre de lecture
+
+**[Définition]** (convention de cours) :
+1. **Niveau** : différentiel de taux directeurs (ou de rendements) aujourd'hui.
+2. **Trajectoire** : différentiel anticipé à six, douze, dix-huit mois (contrats à terme, probabilités).
+3. **Surprise** : écart entre l'annonce et le prix du marché (L2.09, L3.02).
+4. **Contexte** : énergie, risque, politique budgétaire, flux.
+Un mouvement de change est lu comme la réponse à une **variation de la trajectoire** (3) et du **contexte** (4) plus qu'au niveau (1).
+
+**[SIMULATION]** Le marché valorise 70 % d'une hausse de 25 pb ; la banque maintient : surprise = 0 − 17,5 = **−17,5 pb**. Si elle avait relevé : 25 − 17,5 = **+7,5 pb**. Une hausse prévue à 100 % donne une surprise nulle : un événement **sans** effet attendu.
+
+## 5. Définitions essentielles
+
+- **Différentiel de taux directeurs** : écart entre taux administrés de deux banques centrales.
+- **Différentiel de rendements** : écart entre rendements de même échéance (par exemple 2 ou 10 ans).
+- **Différentiel anticipé** : écart entre trajectoires de taux attendues à un horizon.
+- **Probabilité implicite** : probabilité d'un événement déduite de prix de marché (contrats à terme).
+- **Espérance de variation** : probabilité × amplitude.
+- **Surprise de politique** : décision − espérance.
+
+## 6. Exemples chiffrés
+
+**6.1 Niveau.** 4,00 − 2,50 = 1,50 ; 3,875 − 2,50 = 1,375.
+**6.2 Espérance.** 0,685 × 25 = 17,1 pb ; 0,18 × 25 = 4,5 pb.
+**6.3 Différentiel anticipé.** 4,875 − 3,25 = 1,625.
+**6.4 Surprise (SIMULATION).** 0 − 17,5 = −17,5 pb.
+
+### 6.5 Cas historique documenté — du 25 septembre au 29 octobre 2026
+
+**[Fait]** : S-TRN-01 (25/09), S-TST-01 (02/10), S-FED-11 (28/10), S-ECB-04 (29/10), S-VBZ-01 (14/10).
+
+**[Calcul de l'auteur]** Probabilité de hausse de la Fed : 66–71 % puis 18 % puis maintien ; EUR/USD −2,37 % ; indice dollar ≈ +1,96 % ; différentiel anticipé à mi-2027 : 1,625 point (+0,25).
+
+**[Interprétation]** Le dollar s'est renforcé alors que l'anticipation d'une hausse proche de la Fed baissait : le **sens** du différentiel de court terme n'a pas dicté celui du change. **Limites** : sources secondaires pour les anticipations et les niveaux de marché ; probabilités et dates différentes ; chiffres de change de sources et d'instruments différents ; aucune analyse des facteurs concurrents (rendement long américain, énergie, risque) ; décision de la BCE du 29/10 non vérifiée.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **EUR/USD** : surveiller la **trajectoire** anticipée plus que le niveau ; une surprise de politique est plus informative qu'un écart de taux connu.
+- **Fiche de différentiels** : niveau, trajectoire, surprise, contexte, sources et dates, à renouveler à chaque réunion.
+- **Or** : un dollar plus fort et des rendements plus élevés pèsent en général sur l'or via le coût d'opportunité (module 5) ; **hypothèse à tester**.
+- **Autres paires** : comparer des instruments identiques (taux directeur contre taux directeur ; 2 ans contre 2 ans).
+- **Prudence** : aucun différentiel ne garantit la direction d'une paire.
+
+## 8. Erreurs courantes
+
+1. Comparer un taux directeur à un rendement à 10 ans.
+2. Prendre le niveau du différentiel pour un signal.
+3. Ignorer l'attente déjà intégrée.
+4. Mélanger des dates et des sources dans un même calcul.
+5. Conclure qu'une variation de change a été « causée » par le différentiel.
+6. Oublier les facteurs concurrents (énergie, risque, politique budgétaire).
+7. Présenter une probabilité de marché comme une prévision de la banque centrale.
+
+## 9. Limites de l'interprétation
+
+- Les anticipations et les rendements de septembre viennent d'une **source secondaire** unique ; les probabilités de la Fed viennent d'une autre source secondaire, à une autre date.
+- Aucun rendement à deux ans n'a été lu pour les deux zones.
+- Les taux de change viennent de sources et d'instruments différents.
+- La décision de la BCE du 29/10/2026 n'est pas vérifiée.
+- Le calcul du différentiel anticipé mélange des hypothèses de marché non harmonisées.
+- Aucune analyse statistique n'est faite sur la relation entre différentiel et change.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Niveau.** Fed : 3,75–4,00 % ; BCE : dépôt 2,50 %. Calcule l'écart avec la borne haute et le milieu.
+
+<details>
+<summary>Correction 1</summary>
+
+4,00 − 2,50 = **1,50 point** ; 3,875 − 2,50 = **1,375 point**.
+</details>
+
+**Exercice 2 — Espérance.** Probabilité de hausse de 25 pb : 66 %, puis 71 %, puis 18 %. Espérances ?
+
+<details>
+<summary>Correction 2</summary>
+
+0,66 × 25 = **16,5** ; 0,71 × 25 = **17,75** ; 0,18 × 25 = **4,5 points de base**.
+</details>
+
+**Exercice 3 — Trajectoire.** Fed : milieu 3,875 % + 4 hausses de 0,25 ; BCE : dépôt 2,50 % + 3 hausses de 0,25. Différentiel anticipé et variation par rapport au niveau actuel ?
+
+<details>
+<summary>Correction 3</summary>
+
+Fed 4,875 % ; BCE 3,25 % ; écart **1,625** ; variation **+0,25 point** par rapport à 1,375.
+</details>
+
+**Exercice 4 — Surprise (SIMULATION).** Le marché valorise 85 % d'une hausse de 25 pb ; la banque maintient. Surprise ? Et si elle relève ?
+
+<details>
+<summary>Correction 4</summary>
+
+Attendu : 0,85 × 25 = 21,25 ; maintien : **−21,25 pb** ; hausse : 25 − 21,25 = **+3,75 pb**.
+</details>
+
+**Exercice 5 — Change.** EUR/USD de 1,1400 à 1,1130. Variation ? Indice dollar de 100,775 à 102,75 ?
+
+<details>
+<summary>Correction 5</summary>
+
+1,1130 ÷ 1,1400 − 1 = **−2,37 %** ; 102,75 ÷ 100,775 − 1 = **+1,96 %** (sources et instruments différents).
+</details>
+
+**Exercice 6 — Critique.** « Le différentiel s'élargit, donc le dollar va monter. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) Le niveau ne dit rien de la trajectoire anticipée ni de la surprise. (2) Les prix intègrent déjà le différentiel connu. (3) Entre fin septembre et fin octobre 2026, le dollar s'est renforcé alors que la probabilité d'une hausse proche de la Fed baissait. (4) D'autres facteurs (énergie, rendement long, risque) interviennent. (5) Les sources de marché lues sont secondaires.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L4.02.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Le différentiel de taux directeurs (Fed−BCE) est de 1,50 point (borne haute) ou 1,375 (milieu) fin octobre 2026.
+- Le change réagit à la **trajectoire anticipée**, aux **surprises** et au **contexte** plus qu'au niveau.
+- Une probabilité de hausse se convertit en espérance : 0,68 × 25 ≈ 17 pb.
+- Du 25/09 au 29/10/2026, le dollar s'est renforcé alors que la probabilité d'une hausse proche de la Fed baissait : le sens du différentiel de court terme ne dicte pas celui du change.
+- Les sources de marché sont secondaires : ordres de grandeur.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer un différentiel de niveau (Exercice 1).
+- [ ] Convertir une probabilité en espérance (Exercice 2).
+- [ ] Construire un différentiel anticipé (Exercice 3).
+- [ ] Calculer une surprise (Exercice 4).
+- [ ] Critiquer une conclusion causale (Exercices 5 et 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-TRN-01** — TradingNews, « Euro Stuck at 1.1400… » (25/09/2026, secondaire) : https://www.tradingnews.com/news/euro-stuck-at-11400-as-the-fed-outspace-the-ecb-and-us-yield-hit-2007-highs
+- **S-FED-09 / S-FED-11** — Réserve fédérale, communiqués du FOMC (16/09 et 28/10/2026) : voir L2.03.
+- **S-ECB-06** — BCE, taux directeurs.
+- **S-ECB-04** — BCE, taux de référence euro/dollar.
+- **S-TST-01** — TheStreet (secondaire, voir L3.11).
+- **S-VBZ-01** — Reuters via Virginia Business (secondaire, voir L3.06).
+
+**Définitions de cours non rattachées à une source officielle lue :** niveau, trajectoire, surprise, contexte. **Points non vérifiés :** rendements à deux ans, probabilités de marché de source primaire, décision de la BCE du 29/10/2026.

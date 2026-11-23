@@ -1,0 +1,108 @@
+{
+  "m00": {
+    "chapter_quizzes": {
+      "0.1": "content/m00/assessments/chap_0.1.quiz.json",
+      "0.2": "content/m00/assessments/chap_0.2.quiz.json",
+      "0.3": "content/m00/assessments/chap_0.3.quiz.json",
+      "0.4": "content/m00/assessments/chap_0.4.quiz.json",
+      "0.5": "content/m00/assessments/chap_0.5.quiz.json"
+    },
+    "exam": "content/m00/assessments/EX0.exam.json",
+    "project": "content/m00/project/P0.projet.mdx",
+    "diagnostic_initial": "à rédiger (progressif)",
+    "diagnostic_final_alternatif": "à rédiger (progressif)",
+    "states": {
+      "written": true,
+      "verified_by_script": true,
+      "integrated": false,
+      "tested": false,
+      "validated": false
+    },
+    "notes": "Examen : 25 QCM + 5 calculs, 40 points, seuil 28/40. Les 5 calculs sont recalculés par tools/verify_assessments_m00.py. La grille du projet est incluse dans le fichier du projet."
+  },
+  "m01": {
+    "chapter_quizzes": {
+      "1.1": "content/m01/assessments/chap_1.1.quiz.json",
+      "1.2": "content/m01/assessments/chap_1.2.quiz.json",
+      "1.3": "content/m01/assessments/chap_1.3.quiz.json",
+      "1.4": "content/m01/assessments/chap_1.4.quiz.json",
+      "1.5": "content/m01/assessments/chap_1.5.quiz.json"
+    },
+    "exam": "content/m01/assessments/EX1.exam.json",
+    "project": "content/m01/project/P1.projet.mdx",
+    "diagnostic_initial": "à rédiger (progressif)",
+    "diagnostic_final_alternatif": "à rédiger (progressif)",
+    "states": {
+      "written": true,
+      "verified_by_script": true,
+      "integrated": false,
+      "tested": false,
+      "validated": false
+    },
+    "notes": "Examen : 25 QCM + 5 calculs, 40 points, seuil 28/40. Les 5 calculs sont recalculés par tools/verify_assessments_m01.py. La grille du projet est incluse dans le fichier du projet."
+  },
+  "m02": {
+    "chapter_quizzes": {
+      "2.1": "content/m02/assessments/chap_2.1.quiz.json",
+      "2.2": "content/m02/assessments/chap_2.2.quiz.json",
+      "2.3": "content/m02/assessments/chap_2.3.quiz.json",
+      "2.4": "content/m02/assessments/chap_2.4.quiz.json",
+      "2.5": "content/m02/assessments/chap_2.5.quiz.json"
+    },
+    "exam": "content/m02/assessments/EX2.exam.json",
+    "project": "content/m02/project/P2.projet.mdx",
+    "diagnostic_initial": "à rédiger (progressif)",
+    "diagnostic_final_alternatif": "à rédiger (progressif)",
+    "states": {
+      "written": true,
+      "verified_by_script": true,
+      "integrated": false,
+      "tested": false,
+      "validated": false
+    },
+    "notes": "Examen : 25 QCM + 5 calculs, 40 points, seuil 28/40. Les 5 calculs sont recalculés par tools/verify_assessments_m02.py. La grille du projet est incluse dans le fichier du projet. Plusieurs faits de L2.10–L2.12 reposent sur des sources secondaires signalées dans les leçons."
+  },
+  "m03": {
+    "chapter_quizzes": {
+      "3.1": "content/m03/assessments/chap_3.1.quiz.json",
+      "3.2": "content/m03/assessments/chap_3.2.quiz.json",
+      "3.3": "content/m03/assessments/chap_3.3.quiz.json",
+      "3.4": "content/m03/assessments/chap_3.4.quiz.json",
+      "3.5": "content/m03/assessments/chap_3.5.quiz.json",
+      "3.6": "content/m03/assessments/chap_3.6.quiz.json"
+    },
+    "exam": "content/m03/assessments/EX3.exam.json",
+    "project": "content/m03/project/P3.projet.mdx",
+    "diagnostic_initial": "à rédiger (progressif)",
+    "diagnostic_final_alternatif": "à rédiger (progressif)",
+    "states": {
+      "written": true,
+      "verified_by_script": true,
+      "integrated": false,
+      "tested": false,
+      "validated": false
+    },
+    "notes": "Examen : 25 QCM + 5 calculs + 2 publications fictives à analyser (SIMULATION), 60 points, seuil 42/60. Les 5 calculs et les attentes des deux analyses sont recalculés par tools/verify_assessments_m03.py. Grille du projet incluse dans le fichier du projet. Plusieurs faits de L3.06–L3.11 reposent sur des sources secondaires ou tertiaires signalées dans les leçons."
+  },
+  "m04": {
+    "chapter_quizzes": {
+      "4.1": "content/m04/assessments/chap_4.1.quiz.json",
+      "4.2": "content/m04/assessments/chap_4.2.quiz.json",
+      "4.3": "content/m04/assessments/chap_4.3.quiz.json",
+      "4.4": "content/m04/assessments/chap_4.4.quiz.json",
+      "4.5": "content/m04/assessments/chap_4.5.quiz.json"
+    },
+    "exam": "content/m04/assessments/EX4.exam.json",
+    "project": "content/m04/project/P4.projet.mdx",
+    "diagnostic_initial": "banque progressive amorcée : content/diagnostic/banque_m04.json (4 paires A/B ; modules 0–3 à alimenter)",
+    "diagnostic_final_alternatif": "forme B amorcée dans content/diagnostic/banque_m04.json",
+    "states": {
+      "written": true,
+      "verified_by_script": true,
+      "integrated": false,
+      "tested": false,
+      "validated": false
+    },
+    "notes": "Examen : 25 QCM + 5 calculs + 2 cas fictifs à analyser (SIMULATION), 60 points, seuil 42/60. Calculs, attentes des deux cas et QCM numériques recalculés par tools/verify_assessments_m04.py (contrôle technique, non validation scientifique). Grille du projet P4 (40 points) incluse dans le fichier du projet. Plusieurs faits des leçons L4.07 à L4.12 reposent sur des sources secondaires ou tertiaires, dont un point critique (L4.11)."
+  }
+}

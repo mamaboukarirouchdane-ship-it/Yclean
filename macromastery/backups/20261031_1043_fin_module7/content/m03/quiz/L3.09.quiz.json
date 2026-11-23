@@ -1,0 +1,233 @@
+{
+  "lessonId": "L3.09",
+  "title": "Quiz — PIB, ventes au détail, production industrielle",
+  "passThreshold": 0.8,
+  "note": "Quiz de la leçon L3.09",
+  "questions": [
+    {
+      "id": "L3.09-Q1",
+      "type": "mcq",
+      "prompt": "Le PIB réel progresse de 3,4 % en rythme annualisé. Quel est environ le taux trimestriel ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "13,6 %"
+        },
+        {
+          "id": "b",
+          "text": "3,4 %"
+        },
+        {
+          "id": "c",
+          "text": "0,84 %"
+        },
+        {
+          "id": "d",
+          "text": "1,7 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "1,034^(1/4) − 1 = 0,84 % ; multiplier par quatre donnerait 3,36 %, qui n'est qu'une approximation de la composition.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.09-Q2",
+      "type": "mcq",
+      "prompt": "Le PIB du T2 2026 a été publié à 1,5 % puis à 2,2 % en troisième estimation. Quelle leçon ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La première estimation peut être sensiblement révisée ; il ne faut pas s'y fier à la décimale"
+        },
+        {
+          "id": "b",
+          "text": "Les révisions sont toujours négatives"
+        },
+        {
+          "id": "c",
+          "text": "Les révisions n'existent pas"
+        },
+        {
+          "id": "d",
+          "text": "Seul le PCE est révisé"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La révision de +0,7 point, due aux stocks, à l'investissement, à la consommation et aux dépenses publiques, illustre le risque de la première estimation.",
+      "tags": [
+        "revision"
+      ]
+    },
+    {
+      "id": "L3.09-Q3",
+      "type": "mcq",
+      "prompt": "Ventes au détail : +0,8 % nominal ; CPI : +0,6 %. Quelle approximation des ventes réelles ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ +1,4 %"
+        },
+        {
+          "id": "b",
+          "text": "Environ +0,8 %"
+        },
+        {
+          "id": "c",
+          "text": "Environ −0,2 %"
+        },
+        {
+          "id": "d",
+          "text": "Environ +0,20 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "1,008 ÷ 1,006 − 1 = 0,20 % ; l'approximation par le CPI est imparfaite car les champs diffèrent.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.09-Q4",
+      "type": "mcq",
+      "prompt": "Ventes au détail : +0,8 % ± 0,4 %. Quel est l'intervalle ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "De 0,8 % à 1,2 %"
+        },
+        {
+          "id": "b",
+          "text": "De 0,4 % à 1,2 %"
+        },
+        {
+          "id": "c",
+          "text": "De 0 % à 0,8 %"
+        },
+        {
+          "id": "d",
+          "text": "De −0,4 % à +0,4 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "0,8 − 0,4 = 0,4 et 0,8 + 0,4 = 1,2 ; une variation mensuelle ne doit pas être lue à la décimale.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.09-Q5",
+      "type": "mcq",
+      "prompt": "Production industrielle +0,7 %, manufacturier +0,3 %, services publics +3,5 % : que retenir ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Rien, c'est une erreur"
+        },
+        {
+          "id": "b",
+          "text": "L'industrie manufacturière est en forte reprise"
+        },
+        {
+          "id": "c",
+          "text": "Les mines tirent la hausse"
+        },
+        {
+          "id": "d",
+          "text": "L'essentiel de la hausse vient des services publics, sensibles à la météo"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le manufacturier ne progresse que de 0,3 % ; la hausse totale est surtout portée par les services publics.",
+      "tags": [
+        "lecture"
+      ]
+    },
+    {
+      "id": "L3.09-Q6",
+      "type": "mcq",
+      "prompt": "Capacités : 76,9 % pour une moyenne de long terme de 79,4 %. Quel écart ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,9 point sous"
+        },
+        {
+          "id": "b",
+          "text": "2,5 points au-dessus"
+        },
+        {
+          "id": "c",
+          "text": "2,5 points sous la moyenne"
+        },
+        {
+          "id": "d",
+          "text": "Aucun"
+        }
+      ],
+      "correct": "c",
+      "explanation": "79,4 − 76,9 = 2,5 points ; le taux d'utilisation est sous sa moyenne 1972–2025.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.09-Q7",
+      "type": "mcq",
+      "prompt": "Que représentent les ventes finales réelles aux acheteurs privés nationaux ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La demande intérieure privée, hors stocks, échanges extérieurs et dépenses publiques"
+        },
+        {
+          "id": "b",
+          "text": "Le PIB total"
+        },
+        {
+          "id": "c",
+          "text": "Les exportations nettes"
+        },
+        {
+          "id": "d",
+          "text": "Les ventes de détail seules"
+        }
+      ],
+      "correct": "a",
+      "explanation": "C'est une mesure plus stable de la demande privée : +4,9 % au T3 2026 contre 3,4 % pour le PIB.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L3.09-Q8",
+      "type": "mcq",
+      "prompt": "Pourquoi ne pas comparer directement un taux annualisé et un taux mensuel ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ils sont identiques"
+        },
+        {
+          "id": "b",
+          "text": "Les périodes et les bases sont différentes ; il faut convertir"
+        },
+        {
+          "id": "c",
+          "text": "Le mensuel est toujours plus grand"
+        },
+        {
+          "id": "d",
+          "text": "L'annualisé est toujours faux"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Conversions : (1 + t)ⁿ − 1 ; sans cela on compare des grandeurs de nature différente.",
+      "tags": [
+        "methode"
+      ]
+    }
+  ],
+  "revision": 1
+}

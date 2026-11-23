@@ -1,0 +1,256 @@
+---
+id: L5.05
+module: 5
+order: 5
+title: "Or, inflation et anticipations : couverture de long terme, point mort et chocs d'inflation"
+title_initial: "Or, inflation et anticipations"
+level: "intermédiaire"
+duration_hours: 3.0
+prerequisites: ["L3.01", "L4.03", "L5.03"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L5.05.quiz.json"
+sources: ["S-BLS-02", "S-FRD-03", "S-FRD-01", "S-LEV-01", "S-IDX-01", "S-FRH-01", "S-TWT-01", "S-MTL-01", "S-ISA-01"]
+---
+
+# L5.05 — Or, inflation et anticipations
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Statut des sources : le CPI du BLS et les séries FRED (Réserve fédérale) sont **primaires**, lus par **résumé automatique** ; l'étude de 2006 est un **rapport du World Gold Council (WGC)**, non évalué par des pairs, lu par sa notice et par un article de presse spécialisée ; les prix de l'or sont **secondaires**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. distinguer **inflation observée**, **inflation attendue** et **point mort** de marché ;
+2. définir une **couverture** et distinguer couverture de **long terme** et de **court terme** ;
+3. décomposer une variation du rendement nominal en **point mort** et **rendement réel** ;
+4. expliquer pourquoi une **hausse de l'inflation** peut faire monter ou baisser l'or selon la réaction des taux réels ;
+5. lire une étude ancienne du WGC avec ses limites (période, nature, absence d'évaluation par des pairs) ;
+6. construire un scénario d'inflation conditionnel sans en faire un signal.
+
+## 2. Prérequis
+
+- Inflation et indicateurs (L3) ; taux réels, TIPS et point mort (L4.03) ; or et taux réels (L5.03).
+
+## 3. Explication intuitive
+
+On dit souvent que l'or « protège contre l'inflation ». Cette phrase mélange plusieurs idées : (1) **sur des décennies**, le prix de l'or en termes réels est-il à peu près stable ? (2) **d'une année sur l'autre**, l'or monte-t-il quand l'inflation monte ? (3) **à l'annonce d'un chiffre d'inflation**, que fait le prix ? Les réponses peuvent différer, et la dernière dépend surtout de ce que le marché pense que **la banque centrale va faire**. Une inflation plus forte qui fait monter les taux réels pénalise l'or (L5.03) ; une inflation plus forte qui ne fait pas monter les taux peut le soutenir. Cette leçon apprend à séparer ces canaux.
+
+## 4. Développement technique
+
+### 4.1 Inflation observée et inflation attendue
+
+**[Fait]** (S-BLS-02, BLS, *Consumer Price Index* de septembre 2026, communiqué du 14 octobre 2026, résumé automatique) : CPI-U : **+0,6 %** sur le mois (corrigé des variations saisonnières), **+3,7 %** sur 12 mois (non corrigé) ; hors alimentation et énergie : **+0,3 %** / **+2,6 %** ; énergie : **+5,2 %** / **+20,4 %** ; alimentation : 0,0 % / +2,5 % ; logement : +0,4 % / +3,2 %.
+
+**[Fait]** (S-FRD-03, FRED, série T10YIEM « 10-Year Breakeven Inflation Rate », mensuelle, dérivée des rendements constants à 10 ans nominal (DGS10) et indexé (DFII10), données du Trésor, mise à jour du 1er octobre 2026, résumé automatique) : point mort moyen mensuel : mai 2026 **2,44** ; juin **2,29** ; juillet **2,25** ; août **2,29** ; septembre **2,35** (%). La page la décrit comme ce que les participants s'attendent à voir comme inflation moyenne sur 10 ans.
+
+**[Calcul de l'auteur]** Écart entre l'inflation observée sur 12 mois et le point mort à 10 ans en septembre : 3,7 − 2,35 = **1,35 point**.
+
+**[Interprétation]** Les deux nombres **ne mesurent pas la même chose** : l'un est une variation passée sur un an, tirée par l'énergie (+20,4 %), l'autre est un prix de marché pour une moyenne future sur dix ans, qui contient aussi des primes de liquidité et de risque (L4.03). Un écart de 1,35 point signifie que le marché **n'extrapolait pas** la poussée énergétique à 10 ans, ou que les primes faussent la lecture ; la donnée ne permet pas de trancher. **Ce qu'on ne peut pas conclure** : une « anticipation d'inflation » des ménages ou de la Fed (non lue).
+
+### 4.2 Que veut dire « couverture » ?
+
+**[Définition]** Un actif est une **couverture** contre l'inflation s'il **préserve le pouvoir d'achat** : (1) **long terme** : son prix en termes réels est à peu près stable sur des décennies ; (2) **court terme** : son rendement est positivement corrélé à l'inflation d'une année sur l'autre ; (3) **conditionnel** : il monte lors des chocs d'inflation inattendus. Ce sont trois propriétés distinctes. Un actif peut avoir la première sans les deux autres.
+
+**[Interprétation]** Les titres indexés (TIPS) sont conçus pour la couverture, avec une garantie explicite sur le capital (L5.03). L'or n'a pas de garantie contractuelle : tout est empirique.
+
+### 4.3 Ce que dit une étude de long terme (WGC, 2006)
+
+**[Fait]** (S-LEV-01, notice de la bibliothèque de l'université de Strathclyde : E. J. Levin, A. Montagnoli et R. E. Wright, « Short-run and long-run determinants of the price of gold », rapport du World Gold Council, Londres, 2 juin 2006, non évalué par des pairs, résumé automatique) : données du prix de l'or **depuis 1833** en termes réels (dollars de 2005) ; pour l'Inde, la Chine, la Turquie, l'Arabie saoudite et l'Indonésie, données de 1976 à 2005 avec taux de change et indices de prix locaux ; les auteurs identifient une relation de **long terme positive** entre l'or et l'inflation ; en monnaie locale, les écarts à un « prix de couverture » de long terme se corrigent à long terme ; le prix en dollars de 1976 à 2005 aurait dépassé de loin le prix nécessaire pour se couvrir de l'inflation dans ces cinq pays.
+
+**[Fait]** (S-IDX-01, IDEX Online, article de Jake Weiss du 14 août 2006, secondaire, qui rend compte de la même étude, « Research Study No. 32 ») : relation de long terme statistiquement significative entre l'or et l'inflation **américaine** : **+1 % d'inflation américaine ↔ environ +1 % du prix de l'or** ; retour lent vers la relation après un choc ; relation **négative** avec l'indice du dollar pondéré par les échanges et avec le taux de location de l'or ; **aucune relation** avec l'inflation mondiale, la volatilité de l'inflation, le revenu mondial ou le bêta de l'or ; en 1833, l'or valait **20,65 $** l'once, soit environ **415 $ de 2005** ; en 2005, **445 $** ; le texte admet que la question reste ouverte pour les pays autres que les États-Unis.
+
+**[Calcul de l'auteur]** 445 ÷ 415 − 1 = **+7,2 %** de variation réelle sur **172 ans** (2005 − 1833) ; le niveau des prix implicite entre 1833 et 2005 : 415 ÷ 20,65 ≈ **20,1** fois ; le rapport 2026/1833 en termes réels **ne peut pas être calculé** ici, faute d'indice des prix de 2005 à 2026 lu.
+
+**[Interprétation]** Ces résultats vont dans le sens d'une couverture de **long terme en dollars**. Mais (1) l'étude date de **2006** et ne couvre ni 2008, ni 2011, ni 2020-2026 ; (2) elle émane d'un organisme représentant l'industrie de l'or, non évaluée par des pairs ; (3) la méthode économétrique n'est pas décrite dans la notice lue ; (4) un prix réel proche en 1833 et en 2005 est compatible avec de longues périodes très éloignées de ce niveau, dont l'étude reconnaît que « les écarts peuvent durer des années ». **Ce qu'on ne peut pas conclure** : que l'or protège sur n'importe quel horizon ; que la relation tienne après 2006 ; que l'estimation ≈ 1 soit stable.
+
+### 4.4 Court terme : l'exemple fictif d'une année sans lien apparent
+
+**[SIMULATION]** (chiffres fictifs) : 10 années d'inflation (%) : 2,0 ; 2,5 ; 3,0 ; 8,0 ; 4,0 ; 3,0 ; 2,0 ; 2,0 ; 2,5 ; 3,0. Rendement annuel de l'or (%) : +10 ; −8 ; +5 ; −3 ; +18 ; −12 ; +4 ; +22 ; −6 ; +6.
+
+**[Calcul de l'auteur]** Corrélation annuelle de Pearson : **−0,185** (faible, négative). Cumul sur 10 ans : prix +**36,8 %** ; or +**35,3 %** ; rapport or/prix = 1,3531 ÷ 1,3684 = **0,989**, soit une variation réelle de **−1,1 %**.
+
+**[Interprétation]** Une couverture de long terme (or ≈ inflation cumulée) peut coexister avec **l'absence de lien année par année** (corrélation proche de zéro, voire négative). Le choc de 8 % d'inflation de la quatrième année n'est pas associé à une hausse de l'or (−3 %). Ceci est une **construction pédagogique** et ne dit rien de l'or réel.
+
+### 4.5 Décomposition du rendement nominal : point mort et rendement réel
+
+**[Définition]** Rendement nominal à 10 ans = rendement réel (indexé) + point mort (approximation exacte pour les séries FRED, qui définissent le point mort comme leur différence).
+
+**[Fait]** Rendements réels moyens mensuels (S-FRD-01, L5.03) : mai 2,04 ; juin 2,18 ; juillet 2,35 ; août 2,40 ; septembre 2,64. Points morts moyens (S-FRD-03) : 2,44 ; 2,29 ; 2,25 ; 2,29 ; 2,35.
+
+**[Calcul de l'auteur]** Rendement nominal dérivé (réel + point mort) : mai **4,48** ; juin **4,47** ; juillet **4,60** ; août **4,69** ; septembre **4,99** (%). Variation mai→septembre : nominal **+0,51** point ; réel **+0,60** ; point mort **−0,09** (0,60 − 0,09 = 0,51). La hausse du rendement nominal vient donc **plus qu'entièrement** du rendement réel, tandis que le point mort a reculé de 9 points de base. (Le nominal dérivé de septembre, 4,99, est cohérent avec 4,95 lu à l'adjudication du 17/09, S-TWT-01, moyenne mensuelle contre un point.)
+
+**[Interprétation]** Sur cette fenêtre, un CPI à +3,7 % n'a **pas** fait monter le point mort à 10 ans (2,44 → 2,35) alors que le rendement réel a nettement monté (+60 pb), configuration qui, selon L5.03, tend à peser sur l'or. **Ce qu'on ne peut pas conclure** : que le CPI ait été la cause de la hausse du rendement réel ; la part de la Fed (hausse du 16 septembre : S-TWT-01), ni le comportement de l'or autour des publications de CPI (non lu).
+
+### 4.6 L'or après un chiffre d'inflation : deux canaux opposés
+
+**[Définition]** **Canal inflation** : une inflation attendue plus élevée réduit la valeur réelle des liquidités et augmente la demande de protection (soutien à l'or). **Canal taux** : une inflation plus élevée peut faire monter les taux nominaux plus que le point mort, donc le taux réel, et renchérir le coût d'opportunité (pression sur l'or). Le résultat net dépend de la **réaction anticipée de la banque centrale**.
+
+**[SIMULATION]** (chiffres fictifs) : à la suite d'un CPI supérieur au consensus de 0,2 point : 
+
+| Scénario | Nominal 10 ans | Point mort | Réel (déduit) | Effet attendu sur l'or |
+|---|---|---|---|---|
+| A : le marché croit la Fed « derrière la courbe » | +10 pb | +10 pb | 0 | Neutre à haussier |
+| B : le marché anticipe une Fed plus ferme | +25 pb | +5 pb | +20 pb | Baissier |
+| C : le marché craint un ralentissement | −5 pb | +5 pb | −10 pb | Haussier |
+
+**[Calcul de l'auteur]** Réel = nominal − point mort : A : 0 ; B : +20 ; C : −10 pb. Avec le coût d'opportunité de L5.03 (4 060 $ × variation du réel) : +20 pb ≈ +8,1 $ par once et par an ; −10 pb ≈ −4,1 $.
+
+**[Interprétation]** Un même chiffre peut produire des effets opposés sur l'or selon le **scénario de réaction** : on analyse donc la **réaction du taux réel** et du point mort, pas le chiffre d'inflation isolé. Les amplitudes et les probabilités sont fictives.
+
+### 4.7 L'histoire des années 1970 : ce qu'on peut et ne peut pas dire
+
+**[Fait]** (S-FRH-01, essai de la Réserve fédérale sur la Grande Inflation, résumé automatique, déjà lu en L4.05) : l'inflation CPI sur un an est passée d'un peu plus de 1 % en 1964 à plus de 12 % dix ans plus tard, avec un pic proche de 15 % en mars 1980 ; Volcker en août 1979 ; inflation sous 5 % en novembre 1982.
+
+**[Interprétation]** Cet essai décrit la **période** où l'inflation est forte. **Aucun prix de l'or** de ces années n'a été lu dans ce cours (L5.01 ne donne que les prix légaux jusqu'en 1973 et les prix de 2024-2026) ; la leçon **ne démontre donc pas** que l'or ait protégé de l'inflation des années 1970, ni qu'il ait subi la désinflation de 1980-1982. C'est un **point à vérifier** : prix de l'or, taux réels américains, CPI et dates de 1970 à 1985.
+
+### 4.8 Application : un scénario d'inflation pour XAU/USD
+
+**[SIMULATION]** (chiffres fictifs, rédigés après coup) : avant une publication de CPI, XAU/USD = 4 060 ; point mort 2,35 % ; réel 2,64 %. Trois branches : 
+
+| Branche | Condition | Or (%) | Probabilité (fictive) | Invalidation |
+|---|---|---|---|---|
+| 1 | CPI proche du consensus, taux réels stables | 0,0 | 50 % | Écart de ±1 % |
+| 2 | CPI supérieur, réel +15 pb | −1,2 | 30 % | Or monte malgré le réel |
+| 3 | CPI supérieur, point mort +10 pb, réel inchangé | +1,0 | 20 % | Réel monte avant la séance |
+
+**[Calcul de l'auteur]** Somme des probabilités : 100 % ; espérance : 0,50 × 0 + 0,30 × (−1,2) + 0,20 × 1,0 = −0,36 + 0,20 = **−0,16 %** (≈ −6,5 $). Écart inférieur au bruit quotidien : le cadre sert à **nommer les conditions et l'invalidation**.
+
+**[Interprétation]** Règles de méthode : (1) comparer le chiffre au **consensus**, pas à la valeur précédente (L3) ; (2) lire les **rendements réels et le point mort** après la publication ; (3) ne pas conclure d'une séance sur la couverture de long terme.
+
+## 5. Définitions essentielles
+
+- **Inflation observée** : variation passée de l'indice des prix.
+- **Point mort (*breakeven*)** : rendement nominal − rendement réel d'une même échéance ; inflation moyenne implicite, avec primes.
+- **Couverture de long terme** : prix réel à peu près stable sur de longues périodes.
+- **Couverture de court terme** : rendement corrélé à l'inflation annuelle.
+- **Choc d'inflation** : écart de l'inflation au consensus.
+- **Canal inflation / canal taux** : voir 4.6.
+- **Prix réel de l'or** : prix nominal corrigé d'un indice des prix.
+
+## 6. Exemples chiffrés
+
+**6.1 Écart.** 3,7 − 2,35 = 1,35 point (observé 12 mois contre point mort 10 ans).
+**6.2 Décomposition.** Nominal +0,51 = réel +0,60 + point mort −0,09 (mai→septembre).
+**6.3 Variation réelle.** 445 ÷ 415 − 1 = +7,2 % sur 172 ans (étude WGC 2006).
+**6.4 Simulation.** Corrélation annuelle −0,185 ; or/prix cumulés 0,989.
+
+### 6.5 Cas historique documenté — mai à septembre 2026 : CPI à +3,7 %, point mort en baisse, réel en hausse
+
+**[Fait]** (S-BLS-02, S-FRD-01, S-FRD-03, S-TWT-01) : voir 4.1 et 4.5.
+
+**[Calcul de l'auteur]** CPI +3,7 % (12 mois, septembre) ; énergie +20,4 % ; point mort moyen 2,44 → 2,35 ; réel 2,04 → 2,64 ; nominal dérivé 4,48 → 4,99 ; prix de l'or : 4 540,53 $ (29/05) → 4 060 $ (28/10) : −10,6 % (S-MTL-01, S-ISA-01, secondaires).
+
+**[Interprétation]** Ce cas illustre le **canal taux** plutôt que le canal inflation : l'inflation observée est élevée et poussée par l'énergie, le point mort à 10 ans ne monte pas, le rendement réel monte, et l'or recule. C'est **cohérent** avec L5.03 mais n'établit pas de causalité (dollar, positions, Fed, achats officiels agissent aussi). **Ce qu'on ne peut pas conclure** : que l'or ne protège pas de l'inflation (horizon d'un an, pas de comparaison de long terme) ; la réaction de l'or aux publications de CPI (non lue). **Limites** : moyennes mensuelles contre points ; résumés automatiques ; prix de l'or secondaires.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **XAU/USD** : lire le point mort et le rendement réel avant de conclure qu'un chiffre d'inflation est « haussier » pour l'or.
+- **Dollar** : un CPI plus fort qui relève les taux réels américains soutient aussi le dollar (L4.03, L5.04) ; l'or et le dollar peuvent alors évoluer en sens opposé pour une même raison.
+- **Banques centrales** : la crédibilité anti-inflation de la Fed influence le point mort et la demande de protection (L2).
+- **Horizon** : séparer une idée de **long terme** (protection du pouvoir d'achat) d'une idée de **trading** (réaction à un chiffre).
+- **Prudence** : l'étude de 2006 n'est pas un test de 2026.
+
+## 8. Erreurs courantes
+
+1. Appeler « couverture » une corrélation annuelle sans distinguer les horizons.
+2. Comparer inflation observée sur un an et point mort sur dix ans comme s'ils mesuraient la même chose.
+3. Oublier que l'inflation haussière peut faire monter les taux réels.
+4. Négliger le consensus et lire un chiffre isolément.
+5. Citer l'étude de 2006 comme preuve actuelle.
+6. Confondre prix nominal et prix réel de l'or.
+7. Déduire des années 1970 une règle sans avoir lu les données.
+
+## 9. Limites de l'interprétation
+
+- Étude de 2006 : rapport du WGC (industrie), non évalué par des pairs, lu par notice et article secondaire, méthode non décrite, période 1833-2005 ; rien après 2006.
+- Prix de l'or des années 1970 non lus ; aucun indice des prix de 2005 à 2026 : le prix réel actuel n'est pas calculé.
+- Séries FRED lues en moyennes mensuelles par résumé ; point mort affecté de primes.
+- Réaction de l'or aux dates de CPI de 2026 non lue.
+- Scénarios fictifs.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Écart.** CPI sur 12 mois : 3,7 % ; point mort moyen de septembre : 2,35 %. Écart ? Pourquoi ne pas conclure à une « erreur du marché » ?
+
+<details>
+<summary>Correction 1</summary>
+
+3,7 − 2,35 = **1,35 point**. Les deux nombres diffèrent par l'horizon (un an passé contre dix ans futurs), par la composante énergie (+20,4 %) et par les primes du point mort ; ce n'est pas une erreur démontrée.
+</details>
+
+**Exercice 2 — Décomposition.** Réel : 2,04 → 2,64 ; point mort : 2,44 → 2,35. Variations du nominal dérivé, du réel et du point mort ?
+
+<details>
+<summary>Correction 2</summary>
+
+Nominal : 4,48 → 4,99, soit **+0,51** ; réel **+0,60** ; point mort **−0,09** (0,60 − 0,09 = 0,51).
+</details>
+
+**Exercice 3 — Long terme.** L'or valait 20,65 $ en 1833 (≈ 415 $ de 2005) et 445 $ en 2005. Variation réelle ? Durée ?
+
+<details>
+<summary>Correction 3</summary>
+
+445 ÷ 415 − 1 = **+7,2 %** sur **172** ans (2005 − 1833). Étude du WGC (2006), non évaluée par des pairs, secondaire pour ce cours.
+</details>
+
+**Exercice 4 — Simulation 4.4.** Corrélation annuelle −0,185 ; cumul de l'or +35,3 % et des prix +36,8 %. Que conclure sur la couverture ?
+
+<details>
+<summary>Correction 4</summary>
+
+Rapport or/prix = 1,3531 ÷ 1,3684 = **0,989**, soit −1,1 % réel : couverture de long terme apparente, sans lien année par année. Construction pédagogique, aucune conclusion sur l'or réel.
+</details>
+
+**Exercice 5 — Réaction.** Scénario B (nominal +25 pb, point mort +5 pb). Variation du réel et conséquence selon L5.03 ? Coût d'opportunité à 4 060 $ ?
+
+<details>
+<summary>Correction 5</summary>
+
+Réel = 25 − 5 = **+20 pb** ; selon L5.03, pression baissière toutes choses égales par ailleurs ; coût d'opportunité : 4 060 × 0,0020 = **8,1 $** par once et par an.
+</details>
+
+**Exercice 6 — Critique.** « L'inflation est à 3,7 %, donc l'or va monter. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) Observé et anticipé diffèrent (point mort 2,35 %). (2) Le canal taux peut dominer : réel +60 pb mai→septembre. (3) La couverture de long terme n'implique pas un lien de court terme. (4) Le consensus et la réaction de la Fed comptent plus que le niveau. (5) L'étude de 2006 est ancienne et non évaluée.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L5.05.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Inflation observée (3,7 % sur 12 mois en septembre 2026) ≠ point mort à 10 ans (2,35 %).
+- Trois sens de « couverture » : long terme, court terme, conditionnel.
+- Étude WGC 2006 (non évaluée) : lien de long terme or–inflation américaine d'environ 1 pour 1, retour lent ; rien après 2006.
+- Mai→septembre 2026 : nominal dérivé +0,51 = réel +0,60 + point mort −0,09 ; canal taux dominant ; or sous son record.
+- Un chiffre d'inflation se lit à travers la réaction du taux réel et du point mort, comparé au consensus.
+
+## 13. Critères de maîtrise
+
+- [ ] Distinguer observé, attendu et point mort (Exercice 1).
+- [ ] Décomposer une variation de rendement nominal (Exercice 2).
+- [ ] Lire une étude ancienne avec ses limites (Exercice 3).
+- [ ] Séparer couverture de long terme et de court terme (Exercice 4).
+- [ ] Analyser un scénario de réaction (Exercice 5).
+- [ ] Critiquer un raisonnement « inflation → or » (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-BLS-02** — BLS, *Consumer Price Index* de septembre 2026 : https://www.bls.gov/news.release/archives/cpi_10142026.htm (déjà lu).
+- **S-FRD-03** — FRED, T10YIEM, point mort à 10 ans, mensuel : https://fred.stlouisfed.org/series/T10YIEM/
+- **S-FRD-01** — FRED, FII10 (déjà lu en L5.03).
+- **S-LEV-01** — Levin, Montagnoli, Wright, rapport du WGC (2006), notice : https://strathprints.strath.ac.uk/7215/
+- **S-IDX-01** — IDEX Online, 14/08/2006 (secondaire) : https://idexonline.com/FullArticle?Id=26054
+- **S-FRH-01** — Federal Reserve History, « The Great Inflation » (déjà lu).
+- **S-TWT-01**, **S-MTL-01**, **S-ISA-01** — déjà lus (L4.03, L5.01).
+
+**Définitions de cours non rattachées à une source lue :** trois sens de couverture, canal inflation / canal taux. **Points non vérifiés :** texte intégral et méthode de l'étude de 2006, résultats après 2006, prix de l'or et CPI des années 1970, indice des prix 2005-2026, réaction de l'or aux CPI de 2026, anticipations d'inflation des ménages.

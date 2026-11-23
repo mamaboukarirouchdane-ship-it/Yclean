@@ -1,0 +1,228 @@
+---
+id: L6.04
+module: 6
+order: 4
+title: "Régimes de marché : définir, classer sans biais rétrospectif, décrire et diagnostiquer l'environnement de l'or"
+title_initial: "Régimes de marché"
+level: "avancé"
+duration_hours: 3.0
+prerequisites: ["L6.01", "L6.02", "L6.03", "L5.03", "L5.04", "L5.11"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L6.04.quiz.json"
+sources: ["S-FRD-04", "S-FRD-05", "S-FRD-01", "S-FRD-02", "S-FRD-03", "S-KIT-06", "S-KIT-07", "S-KIT-08", "S-KIT-05", "S-ADM-04", "S-KIT-04"]
+---
+
+# L6.04 — Régimes de marché
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée, avec sa date ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** ; **[Interprétation]** ; **[Hypothèse]** ; **[SIMULATION]** = chiffres fictifs. Statut des sources : les pages FRED (série quotidienne des rendements réels et indice de volatilité) ont été lues par **résumé automatique** et ne montraient que **cinq observations récentes** ; les autres sont des articles de presse. **Aucune série quotidienne de XAU/USD n'a pu être obtenue** : l'étude historique de cette leçon est donc une **démonstration de méthode sur données fictives**, et le diagnostic réel ne repose que sur des données partielles. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. définir un **régime de marché** et le distinguer d'une tendance ponctuelle ;
+2. décrire quatre dimensions de diagnostic (politique monétaire, taux réels, dollar, risque et liquidité) ;
+3. écrire une **classification reproductible** : séries, fenêtres, seuils (percentiles d'une période de référence) fixés d'avance, état « indéterminé ou mixte » autorisé ;
+4. calculer, par régime, effectif, moyenne, médiane, dispersion, fréquence des hausses ;
+5. repérer la **circularité** d'une classification construite avec les variables censées expliquer l'or ;
+6. répondre à la question : dans quel environnement évolue l'or, quelles observations le soutiennent, quelles incertitudes interdisent d'en faire une prévision.
+
+## 2. Prérequis
+
+- Attendu, surprise, probabilités (L6.01 à L6.03), taux réels et dollar (L5.03, L5.04), tableau de bord (L5.11).
+
+## 3. Explication intuitive
+
+Un météorologue ne dit pas « il pleut » à chaque goutte : il parle de **saison**. En marché, un régime est un environnement qui dure, où les mêmes nouvelles n'ont pas toujours le même effet : une inflation forte peut soutenir l'or quand les taux réels baissent, et le pénaliser quand elle déclenche un resserrement. Le danger est double : voir un régime partout (après coup) ou croire qu'un régime ordonne d'acheter ou de vendre. On apprend donc à **nommer** l'environnement avec des règles écrites à l'avance, à admettre « mixte » quand les signaux se contredisent, et à rester descriptif.
+
+## 4. Développement technique
+
+### 4.1 Définir un régime
+**[Définition de cours]** Un **régime** est un état de l'environnement défini par des règles mesurables, observé sur une période suffisamment longue (plusieurs semaines) pour se distinguer d'un mouvement de quelques séances. Un régime décrit des **conditions**, jamais une obligation de transaction. Une période peut relever d'un **régime mixte ou indéterminé**.
+
+### 4.2 Les quatre dimensions
+1. **Politique monétaire** : orientation attendue de la Fed, évolution des anticipations de taux, écart entre décisions et attentes (L6.01, L6.02).
+2. **Taux réels** : niveau, variation sur une fenêtre, écart entre nominal et point mort (L5.03).
+3. **Dollar** : niveau et variation d'un indice **identifié** (indice large ou DXY, L5.04), sur un horizon fixé.
+4. **Risque et liquidité** : volatilité, stress financier, événements géopolitiques documentés, tensions de financement.
+**[Interprétation]** Les dimensions s'analysent ensemble : une hausse des taux réels n'entraîne pas à elle seule un régime défavorable à l'or.
+
+### 4.3 Régimes de taux réels et de dollar
+**[Définition de cours]** Combinaisons de signes sur une fenêtre : **A** (taux réels ↑, dollar ↑), **B** (↓, ↓), **C** (↑, ↓), **D** (↓, ↑), **M** (au moins une variable « indéterminée »). **[Interprétation]** A et B sont des configurations où les deux canaux jouent dans le même sens (L5.04 : le dollar et les taux réels bougent souvent ensemble) ; C et D sont des divergences, à lire avec prudence.
+
+### 4.4 Régimes de risque, de liquidité et d'inflation
+**[Définition de cours]** *Risque* : niveau de volatilité par rapport à sa distribution sur une période de référence ; *liquidité* : indicateurs de stress de financement ; *inflation* : inflation observée et anticipée (point mort, L5.05) et leur effet sur les anticipations de taux. **[Interprétation]** L'effet de l'inflation sur l'or dépend du canal dominant (L6.01 § 4.4) : en régime de resserrement, une inflation forte peut passer par des taux plus hauts ; en régime d'assouplissement, par des taux réels plus bas.
+
+### 4.5 Une classification reproductible sans information future
+**[Définition de cours]** Règle en cinq temps, **écrite avant de regarder l'or** :
+1. **Séries et unités** : par exemple rendement réel à 10 ans en points de pourcentage, indice du dollar identifié.
+2. **Fenêtre** : variation sur *n* séances, *n* fixé (la leçon utilise 20 séances).
+3. **Seuils** : percentiles d'une **période de référence antérieure** à la période étudiée ; un seuil est une convention, non une loi.
+4. **Classes** : hausse (au-delà du seuil haut), baisse (au-delà du seuil bas), **indéterminé** (entre les deux).
+5. **Information disponible à la date** : jamais de décision ou de donnée postérieure.
+**[SIMULATION]** Distribution de référence fictive de 20 variations mensuelles de rendement réel (pb) : −18, −15, −12, −10, −8, −6, −5, −3, −2, 0, 1, 2, 4, 5, 7, 8, 10, 12, 15, 20. Par interpolation linéaire : quartile inférieur **−6,5 pb**, quartile supérieur **+7,25 pb**. Une variation de +24 pb serait une « forte hausse » (supérieure à 7,25) *par rapport à cette référence fictive*.
+**Application réelle impossible ici.** Aucune distribution historique réelle n'a été lue : tout classement réel « fort » ou « faible » est donc **indéterminé** dans cette leçon.
+
+### 4.6 Démonstration sur données fictives
+**[SIMULATION]** Douze mois fictifs. Seuils fixés avant l'examen des rendements : taux réel ±5 pb, dollar ±0,5 % (conventions, non calibrées). Classement :
+
+| Régime | Mois | Rendements de l'or (%) | Effectif | Moyenne | Médiane | Écart-type | Hausses |
+|---|---|---|---|---|---|---|---|
+| A (réel ↑, dollar ↑) | 1, 5, 11 | −2,1 ; −3,2 ; −1,4 | 3 | −2,233 | −2,1 | 0,907 | 0/3 |
+| B (réel ↓, dollar ↓) | 3, 6, 8, 12 | +3,0 ; +2,2 ; +1,1 ; +2,6 | 4 | +2,225 | +2,4 | 0,818 | 4/4 |
+| C (↑, ↓) | 9 | −0,3 | 1 | −0,3 | — | — | 0/1 |
+| D (↓, ↑) | 4 | +0,4 | 1 | +0,4 | — | — | 1/1 |
+| M (mixte) | 2, 7, 10 | −0,8 ; +0,5 ; −0,2 | 3 | −0,167 | −0,2 | 0,651 | 1/3 |
+
+**[Calcul de l'auteur]** Pente descriptive de R sur Δ taux réel : **−0,164 %/pb**, R² = **0,815** (douze points). Le signe du rendement est opposé à celui du taux réel dans **10 mois sur 12**.
+**Piège.** **[Interprétation]** Ces données ont été construites avec une relation inverse : les régimes A et B « confirment » donc ce qu'on y a mis ; si des régimes réels étaient définis avec les taux réels et le dollar, leur lien avec l'or ne serait **pas une preuve indépendante** de la pertinence de la règle. Les régimes C et D (n = 1) sont descriptifs et n'ont aucun pouvoir prédictif démontré.
+
+### 4.7 Diagnostic réel au 31 octobre 2026 (données partielles)
+| Dimension | Observation | Date / âge | Règle appliquée | Classe | Source |
+|---|---|---|---|---|---|
+| Politique monétaire | hausse de 25 pb le 16/09 ; maintien le 28/10 (10–2, deux voix pour une hausse) ; hausse de décembre à 84 % (28/10, 9 h 27 ET) | 28/10 (3 j) | orientation déduite d'événements passés et de probabilités de marché | **resserrement, biais restrictif** | S-KIT-08, S-ADM-04, S-KIT-05 |
+| Taux réels | moyennes mensuelles : août 2,40 % → septembre 2,64 % (+24 pb) ; quotidien : 2,64 (22/10), 2,66 (23/10), 2,66 (26/10), 2,64 (27/10), 2,67 (28/10) | 28/10 (3 j) | fenêtre de 20 séances **non disponible** ; variation mensuelle comme substitut, variation de 4 séances +3 pb | **indéterminé** (substitut : hausse mensuelle) | S-FRD-01, S-FRD-04 |
+| Dollar | indice large : 121,3248 (19/10) → 121,3202 (23/10) | 23/10 (8 j) | fenêtre de 20 séances non disponible | **indéterminé** | S-FRD-02 |
+| Risque | VIX : 19,45 (23/10), 18,39 (26/10), 17,52 (27/10), 16,91 (28/10), 17,20 (29/10) | 29/10 (2 j) | niveau relatif à une distribution de référence **non lue** | **indéterminé** | S-FRD-05 |
+| Géopolitique | conflit au Moyen-Orient cité (dépêche du 21/10) ; or en baisse de 4 137,94 (21/10) à 4 035,48 (28/10) | 21–28/10 | événement documenté, sans indicateur de stress financier lu | non classable | S-KIT-04, S-KIT-05 |
+
+**[Calcul de l'auteur]** Taux réel de 4 séances : 2,67 − 2,64 = **+0,03 point** ; VIX : 17,20 − 19,45 = **−2,25 points** en 4 séances ; or : 4 035,48 ÷ 4 137,94 − 1 = **−2,48 %** (deux sources, deux heures).
+**Réponse prudente à la question de la leçon.** **[Interprétation]** L'or évolue dans un environnement de **resserrement monétaire en cours** avec des taux réels élevés (2,64–2,67 %) et en hausse sur le mois de septembre ; les régimes du dollar et du risque sont **indéterminés** faute de séries et de distributions de référence. **Incertitudes** : fenêtres de 20 séances, prix quotidiens de l'or, stress financier, positionnement, courbe à terme. **Aucune prévision, aucun signal.**
+
+### 4.8 Sept vérifications de rigueur
+1. Régimes et seuils définis **avant** l'examen des résultats.
+2. Aucune donnée future dans la classification.
+3. Séries et unités documentées.
+4. Observations manquantes et périodes exclues signalées.
+5. Régimes mixtes et indéterminés autorisés.
+6. Résultats descriptifs non présentés comme causalité.
+7. Aucun régime ne déclenche un achat ou une vente.
+
+## 5. Définitions essentielles
+
+- **Régime de marché** : état de l'environnement défini par des règles mesurables, durable.
+- **Régime mixte ou indéterminé** : signaux contradictoires ou sous les seuils.
+- **Seuil par percentile** : valeur d'un quantile d'une période de référence antérieure.
+- **Circularité** : classer avec les variables qu'on cherche à relier au résultat.
+- **Résultat descriptif** : statistique sans pouvoir prédictif démontré.
+
+## 6. Exemples chiffrés
+
+**6.1 Quartiles (SIMULATION).** Q1 = −6,5 ; Q3 = +7,25 pb.
+**6.2 Régime B (SIMULATION).** (3,0 + 2,2 + 1,1 + 2,6) ÷ 4 = +2,225 %.
+**6.3 Régime A (SIMULATION).** (−2,1 − 3,2 − 1,4) ÷ 3 = −2,233 %.
+**6.4 Taux réel réel.** 2,67 − 2,64 = +0,03 point (4 séances) ; 2,64 − 2,40 = +0,24 point (mois).
+
+### 6.5 Cas historique documenté — 2026 : l'orientation de la Fed lue dans ses projections
+**[Fait]** (S-KIT-07, S-KIT-08, résumés) : en mars 2026, aucun participant ne prévoyait de hausse en 2026 ; le 17/06, **9 sur 19** en prévoient une (spot 4 290,52 $ en séance) ; le 16/09, la Fed relève de 25 pb et **16 sur 18** prévoient une autre hausse en 2026 (« six en juin », selon S-KIT-08) ; le 28/10, maintien avec deux voix pour une hausse. **Contradiction :** 9 sur 19 (juin, S-KIT-07) contre « six en juin » (S-KIT-08) : définitions différentes possibles, non résolues.
+**[Calcul de l'auteur]** Prix de séance aux réunions : 4 290,52 (17/06) → 4 310,10 (16/09) : **+0,46 %** ; 4 310,10 → 4 035,48 (28/10) : **−6,37 %** ; 4 290,52 → 4 035,48 : **−5,94 %**.
+**[Interprétation]** L'orientation de politique monétaire s'est déplacée vers le resserrement entre mars et septembre ; l'or est plus bas fin octobre qu'en juin. **Ce qu'on ne peut pas conclure** : que ce déplacement ait causé la baisse (aucune série quotidienne, dollar et taux réels non alignés, conflit au Moyen-Orient en parallèle). **Limites** : prix de séance d'articles, horaires inconnus, projections rapportées par résumé.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **XAU/USD** : nommer l'environnement, puis écrire des scénarios conditionnels (L6.05) plutôt que des règles.
+- **Forex** : la même démarche vaut pour EUR/USD (régimes de différentiel de taux).
+- **Prudence** : un régime « défavorable » n'est pas un signal de vente ; un régime « favorable » n'est pas un signal d'achat.
+- **Routine** : écrire les règles, classer à la date d'étude, noter les indéterminés.
+
+## 8. Erreurs courantes
+
+1. Fixer les seuils après avoir vu les résultats.
+2. Forcer chaque période dans un régime unique.
+3. Utiliser une décision ou une donnée postérieure à la date étudiée.
+4. Confondre règle de classification et preuve de pertinence.
+5. Interpréter un régime à effectif très faible comme prédictif.
+6. Changer d'indice du dollar selon le résultat.
+7. Déduire d'un régime un achat ou une vente automatique.
+
+## 9. Limites de l'interprétation
+
+- Aucune série quotidienne de l'or lue ; étude historique **fictive**.
+- Distribution de référence réelle non lue : seuils réels non calculables.
+- Fenêtres de 20 séances non disponibles : substituts mensuels ou de 4 séances.
+- Indicateur de stress financier (STLFSI) non lu (page non accessible).
+- Projections de la Fed rapportées par des articles, avec contradiction non résolue.
+- Dollar et risque du jour du diagnostic : séries partielles.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Quartiles.** Référence fictive : −18, −15, −12, −10, −8, −6, −5, −3, −2, 0, 1, 2, 4, 5, 7, 8, 10, 12, 15, 20. Calcule les quartiles par interpolation linéaire (position = p × (n − 1)).
+
+<details>
+<summary>Correction 1</summary>
+
+n = 20. Q1 : position 0,25 × 19 = 4,75 → entre −8 et −6 : −8 + 0,75 × 2 = **−6,5**. Q3 : position 14,25 → entre 7 et 8 : 7 + 0,25 × 1 = **7,25**.
+</details>
+
+**Exercice 2 — Classer.** Avec ces quartiles, classe une variation mensuelle de +24 pb et de +3 pb. Pourquoi la classe de +24 pb reste-t-elle fictive ?
+
+<details>
+<summary>Correction 2</summary>
+
++24 > 7,25 : « forte hausse » ; +3 est entre −6,5 et 7,25 : **indéterminé**. La référence est fictive : sans distribution réelle lue, aucun classement réel n'est établi.
+</details>
+
+**Exercice 3 — Statistiques par régime.** Régime B fictif : +3,0 ; +2,2 ; +1,1 ; +2,6 %. Régime A : −2,1 ; −3,2 ; −1,4 %. Calcule les moyennes et le nombre de hausses.
+
+<details>
+<summary>Correction 3</summary>
+
+B : (3,0 + 2,2 + 1,1 + 2,6) ÷ 4 = **+2,225 %**, 4 hausses sur 4 ; A : −6,7 ÷ 3 = **−2,233 %**, 0 hausse sur 3. Résultats descriptifs sur données fictives.
+</details>
+
+**Exercice 4 — Circularité.** Les régimes A et B fictifs sont définis par les taux réels et le dollar. Pourquoi leurs rendements « confirmant » l'hypothèse ne prouvent-ils rien ?
+
+<details>
+<summary>Correction 4</summary>
+
+Parce que les données fictives contiennent une relation inverse (signe opposé dans 10 mois sur 12) et que la classification utilise les mêmes variables que l'hypothèse : la concordance est attendue par construction. Une preuve indépendante exigerait une règle fixée avant sur des données réelles et un test hors échantillon.
+</details>
+
+**Exercice 5 — Sensibilité abusive.** Taux réel : 2,64 (22/10) puis 2,67 (28/10) ; or : 4 137,94 (21/10) puis 4 035,48 (28/10). Calcule la « sensibilité » en %/pb et dis pourquoi elle n'a pas de sens.
+
+<details>
+<summary>Correction 5</summary>
+
+Taux réel +3 pb ; or −2,48 % ; −2,48 ÷ 3 = **−0,83 %/pb**. Sans sens : dates décalées (21/10 contre 22/10), deux points, deux sources et deux horaires, dollar et autres facteurs non contrôlés.
+</details>
+
+**Exercice 6 — Critique.** « Régime de resserrement et taux réels élevés : vendons l'or. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) Un régime décrit des conditions, il ne déclenche pas de transaction. (2) Dollar et risque sont indéterminés dans le diagnostic. (3) Aucune validation sur des séries réelles n'a été faite. (4) Une baisse déjà intégrée aux prix ou un autre facteur (géopolitique) peut dominer. (5) L'analyse ne garantit aucun gain.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L6.04.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Un régime est un environnement durable défini par des règles mesurables écrites avant l'analyse ; « mixte ou indéterminé » est un état légitime.
+- Quatre dimensions : politique monétaire, taux réels, dollar, risque et liquidité, lues ensemble.
+- Seuils par percentiles d'une période de référence antérieure ; aucune donnée future.
+- La démonstration fictive montre statistiques par régime et circularité (10 mois sur 12 de signe opposé).
+- Diagnostic réel du 31/10/2026 : resserrement en cours, taux réels élevés (2,64–2,67 %), dollar et risque indéterminés ; ni prévision ni signal.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer des quartiles de référence (Exercice 1).
+- [ ] Classer en incluant l'état indéterminé (Exercice 2).
+- [ ] Produire les statistiques par régime (Exercice 3).
+- [ ] Expliquer la circularité (Exercice 4).
+- [ ] Refuser une sensibilité non fondée (Exercice 5).
+- [ ] Critiquer un signal tiré d'un régime (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **31 octobre 2026** :
+
+- **S-FRD-04** — Réserve fédérale via FRED, DFII10 (rendement réel à 10 ans, quotidien, mis à jour le 29/10/2026) : https://fred.stlouisfed.org/series/DFII10
+- **S-FRD-05** — CBOE via FRED, VIXCLS (VIX, clôture quotidienne, mis à jour le 30/10/2026) : https://fred.stlouisfed.org/series/VIXCLS
+- **S-FRD-01**, **S-FRD-02**, **S-FRD-03**, **S-KIT-04**, **S-KIT-05**, **S-KIT-06**, **S-KIT-07**, **S-KIT-08**, **S-ADM-04** — déjà lues (L5.03, L5.04, L5.05, L5.11, L6.01 à L6.03).
+
+**Définitions de cours non rattachées à une source lue :** régime, classification par percentiles, circularité, régime mixte. **Points non vérifiés :** série quotidienne de l'or, distribution historique des variations de taux réels et du VIX, indicateur de stress financier, projections détaillées de la Fed, dollar sur 20 séances, positionnement.

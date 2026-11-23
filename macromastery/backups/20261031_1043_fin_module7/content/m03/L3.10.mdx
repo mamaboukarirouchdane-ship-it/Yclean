@@ -1,0 +1,246 @@
+---
+id: L3.10
+module: 3
+order: 10
+title: "Les publications de la zone euro : IPCH, PIB, chômage et leurs particularités"
+title_initial: "Publications de la zone euro"
+level: "intermédiaire"
+duration_hours: 3
+prerequisites: ["L3.01", "L3.06", "L3.08", "L3.09"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L3.10.quiz.json"
+sources: ["S-EUS-01", "S-EUS-02", "S-EUS-03", "S-TGT-02", "S-ECB-12", "S-MTR-01"]
+---
+
+# L3.10 — Les publications de la zone euro : IPCH, PIB, chômage et leurs particularités
+
+> **Convention de lecture.** **[Fait]** = énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. distinguer l'**estimation rapide (flash)** de l'IPCH et la publication **finale**, et lire ses composantes ;
+2. expliquer l'**IPCH** et la différence de définition avec le CPI américain ;
+3. lire le **PIB de la zone euro** (estimation préliminaire, flash, estimations régulières) et ses révisions ;
+4. lire le **taux de chômage** de la zone euro avec ses révisions ;
+5. comparer zone euro et États-Unis **sans confondre les définitions** ;
+6. identifier ce qui est propre à une **union de dix-neuf pays** : dispersion, effet de l'Irlande, calendriers.
+
+## 2. Prérequis
+
+- Calendriers des agences (L3.01), CPI (L3.06), enquêtes (L3.08), PIB (L3.09).
+
+## 3. Explication intuitive
+
+Les États-Unis publient une série pour un pays ; la zone euro publie une série pour un **ensemble** de pays que l'on agrège. Cela change la lecture : la moyenne cache la dispersion (un pays à 6 % et un autre à 1 % donnent une moyenne qui ne décrit personne), un petit pays très volatil peut déplacer le PIB (l'Irlande), et la publication se fait **en plusieurs temps** : une estimation rapide, vite remplacée par une estimation plus complète. L'euro est aussi une devise qui réagit à deux séries à la fois : les chiffres de la zone et ceux des États-Unis ; la lecture de l'euro-dollar est donc toujours **relative**.
+
+## 4. Développement technique
+
+### 4.1 L'IPCH de septembre 2026
+
+**[Fait]** (S-EUS-01, communiqué d'Eurostat du 16/10/2026, texte reproduit par un tiers, résumé automatique ; l'estimation rapide a été publiée le 02/10/2026) :
+
+| Composante | Variation 12 mois (sept.) | Août | Variation mensuelle (sept.) |
+|---|---|---|---|
+| **Ensemble** | **3,8 %** | 3,2 % | 0,6 % |
+| Hors énergie, alimentation, alcool, tabac (cœur) | **2,5 %** | 2,4 % | 0,2 % |
+| Services | 3,2 % | 3,0 % | −0,7 % |
+| Énergie | **18,9 %** | 14,3 % | 4,0 % |
+| Alimentation, alcool, tabac | 1,3 % | 1,1 % | 0,1 % |
+| dont non transformée | 4,0 % | 2,7 % | |
+| dont transformée, alcool, tabac | 0,4 % | 0,5 % | |
+| Biens industriels non énergétiques | 1,1 % | 1,2 % | 2,1 % |
+
+Ensemble un an plus tôt : 2,2 %. Taux nationaux les plus élevés : Roumanie 6,5 %, Lituanie 6,1 %, Bulgarie 5,6 % ; les plus bas : Suède 1,0 %, Hongrie et Danemark 2,1 %.
+
+**[Calcul de l'auteur]**
+- ensemble : 3,8 − 3,2 = **+0,6 point** ; cœur : **+0,1** ; services : **+0,2** ; énergie : **+4,6** ;
+- ensemble moins cœur : 3,8 − 2,5 = **1,3 point** (poids de l'énergie et de l'alimentation) ;
+- par rapport à un an plus tôt : 3,8 − 2,2 = **+1,6 point**.
+
+**[SIMULATION]** (pondérations fictives, non lues : énergie 9 %, alimentation 19 %, biens industriels non énergétiques 25 %, services 47 %) : contributions = 0,09 × 18,9 + 0,19 × 1,3 + 0,25 × 1,1 + 0,47 × 3,2 = 1,701 + 0,247 + 0,275 + 1,504 = **3,727 ≈ 3,7** (publié 3,8) ; l'énergie en explique **45,6 %**. Cœur simulé : (0,47 × 3,2 + 0,25 × 1,1) ÷ 0,72 = **2,47 ≈ 2,5** ✓. L'approximation reste proche, mais **les pondérations réelles n'ont pas été lues**.
+
+**[Interprétation]**
+- La hausse de l'inflation d'ensemble en septembre (3,2 → 3,8) est largement portée par l'énergie (14,3 → 18,9) ; le cœur monte peu (2,4 → 2,5).
+- Les variations mensuelles des composantes (services −0,7 %, biens industriels +2,1 %) sont **très marquées** ; elles sont probablement liées à la saisonnalité (les indices composants ne sont en général pas corrigés des variations saisonnières), mais **cette explication n'a pas été vérifiée dans le texte lu**.
+- Le tableau des États membres est celui de l'**Union européenne** : à ma connaissance, la Roumanie, la Suède, la Hongrie et le Danemark ne font pas partie de la zone euro ; le tableau doit être lu **pays par pays** avec son périmètre.
+
+### 4.2 Le calendrier IPCH et le rôle de l'estimation rapide
+
+**[Fait]** (S-ECB-12, calendrier IPCH de la BCE, voir L3.01, résumé) : calendrier des publications de l'IPCH sur le site de la BCE.
+
+**[Définition]** (convention de cours) : l'**estimation rapide** (*flash*) paraît à la fin du mois ou au début du suivant, avant le détail définitif ; elle porte sur l'ensemble et les grandes composantes ; la publication complète apporte les détails par pays et par poste.
+
+**[Fait]** : le chiffre de 3,8 % de septembre est celui de l'estimation rapide du 02/10/2026 (S-EUS-01) et il est resté 3,8 % dans la publication du 16/10 ; **aucune révision de l'ensemble** n'est visible dans le texte lu.
+
+### 4.3 Le PIB de la zone euro
+
+**[Fait]** (S-EUS-03, communiqué d'Eurostat du 30/07/2026, résumé automatique) : estimation préliminaire du T2 2026 : zone euro **+0,4 %** sur le trimestre (T1 : stable), **+1,0 %** sur un an (0,5 % au T1) ; UE +0,5 % / +1,2 % ; Irlande **+3,9 %** sur le trimestre mais **−5,6 %** sur un an ; Belgique et Autriche 0,0 % ; 19 États membres couvrant **96 %** du PIB de la zone ; estimation « préliminaire et basée sur des données incomplètes » ; prochaines estimations : 14/08, 07/09 et 20/10/2026.
+
+**[Fait]** (S-TGT-02, reprise d'un chiffre d'Eurostat par un ministère turc, secondaire, article du 07/09/2026) : PIB de la zone euro du T2 2026 : **+0,6 %** sur le trimestre ; UE +0,7 % ; type d'estimation non précisé.
+
+**[Calcul de l'auteur]**
+- révision apparente : 0,6 − 0,4 = **+0,2 point** (par trimestre) ;
+- en rythme annualisé (L3.09) : 1,004⁴ − 1 = **1,61 %** ; 1,006⁴ − 1 = **2,42 %** ;
+- la couverture (96 %) implique que 4 % du PIB sont estimés autrement.
+
+**[Interprétation]** Même mécanisme qu'aux États-Unis (L3.09) : une estimation rapide est révisée, ici de **0,2 point trimestriel**, soit plus de 0,8 point annualisé. Les chiffres irlandais (+3,9 % sur le trimestre, −5,6 % sur un an) montrent qu'un petit pays très volatil peut déplacer l'agrégat ; **la contribution exacte de l'Irlande n'a pas été lue**. L'estimation du 20/10/2026 n'a pas été lue ; le PIB du T3 2026 n'a pas pu être consulté.
+
+### 4.4 Le taux de chômage de la zone euro
+
+**[Fait]** (S-EUS-02, communiqué d'Eurostat du 01/09/2026, résumé automatique) : juillet 2026, zone euro **6,4 %** (corrigé des variations saisonnières) ; juin **6,4 %**, **révisé de 6,3 %** à 6,4 % ; juillet 2025 : 6,3 % ; UE 6,1 % (juillet 2025 : 6,0 %).
+
+**[Calcul de l'auteur]** variation sur un an : 6,4 − 6,3 = **+0,1 point** ; révision de juin : **+0,1 point**.
+
+**[Interprétation]** Des variations de 0,1 point sont de l'ordre des révisions : **ne pas interpréter** un mouvement de 0,1 point. Le communiqué plus récent (août, publié le 01/10/2026) n'a été vu que par son titre (« 6,4 % ») et n'est pas relu.
+
+### 4.5 Comparaison avec les États-Unis
+
+**[Calcul de l'auteur]** (septembre 2026, 12 mois ; États-Unis : S-BLS-02, L3.06) :
+
+| | Zone euro (IPCH) | États-Unis (CPI) | Écart |
+|---|---|---|---|
+| Ensemble | 3,8 % | 3,7 % | +0,1 |
+| Cœur | 2,5 % | 2,6 % | −0,1 |
+| Énergie | 18,9 % | 20,4 % | −1,5 |
+
+**[Interprétation]** Ces deux séries ne sont **pas strictement comparables** : paniers et pondérations différents, traitement du logement différent (le CPI américain compte un loyer équivalent estimé, L3.06 ; l'IPCH n'en compte pas, **à vérifier**), cœur défini différemment (l'IPCH écarte aussi alcool et tabac). **Le rapprochement est qualitatif.**
+
+**[Fait]** (S-MTR-01, L3.08) : le PMI composite flash d'octobre est à 51,9 et l'économiste de S&P Global l'associe à une croissance trimestrielle d'environ 0,3 %. **[Interprétation]** Cette estimation est une opinion d'un fournisseur d'enquête, non une prévision officielle.
+
+## 5. Définitions essentielles
+
+- **IPCH** : indice des prix à la consommation harmonisé, utilisé pour comparer les pays de l'Union.
+- **Estimation rapide (flash)** : première estimation, avant le détail complet.
+- **Cœur (IPCH)** : hors énergie, alimentation, alcool et tabac.
+- **Biens industriels non énergétiques** : biens hors énergie et alimentation.
+- **Estimation préliminaire du PIB** : première estimation à environ 30 jours après le trimestre.
+- **Dispersion** : écart entre pays au sein d'un agrégat.
+
+## 6. Exemples chiffrés
+
+**6.1 Inflation.** 3,8 − 3,2 = +0,6 point ; énergie : 18,9 − 14,3 = +4,6.
+**6.2 Écart ensemble/cœur.** 3,8 − 2,5 = 1,3.
+**6.3 Contributions (SIMULATION).** 1,701 + 0,247 + 0,275 + 1,504 = 3,727.
+**6.4 PIB.** 0,6 − 0,4 = +0,2 point ; 1,004⁴ − 1 = 1,61 %.
+
+### 6.5 Cas historique documenté — l'IPCH de septembre 2026 et le PIB du T2 2026
+
+**[Fait]** (S-EUS-01, S-EUS-03, S-TGT-02) : IPCH 3,8 % ; cœur 2,5 % ; énergie 18,9 % ; PIB du T2 : 0,4 % (30/07) puis 0,6 % (07/09).
+
+**[Calcul de l'auteur]** Inflation d'ensemble +0,6 point en un mois, dont +4,6 pour l'énergie ; PIB révisé de +0,2 point.
+
+**[Interprétation]** L'inflation d'ensemble est tirée par l'énergie, le cœur reste proche de 2,5 % ; les révisions du PIB rappellent la prudence sur les premières estimations. **Limites** : sources par résumés ; communiqué de l'IPCH reproduit par un tiers ; PIB révisé en source secondaire ; chômage de juillet (non d'août ni de septembre) ; PIB du T3 et estimation du 20/10 non lus ; aucune réaction de marché étudiée ; décisions de la BCE non traitées ici.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Euro-dollar** : la lecture est relative : inflation d'ensemble 3,8 % contre 3,7 % ; cœur 2,5 % contre 2,6 % : écart faible, qui ne dit rien de la direction ; ce qui compte est l'écart par rapport aux attentes de chaque banque centrale (L2.07).
+- **BCE** : l'inflation d'ensemble est portée par l'énergie ; la BCE regarde le cœur et les anticipations (module 2) ; **l'effet sur ses décisions n'est pas déduit ici**.
+- **Or** : dollar et taux réels ; l'euro-dollar est un canal ; effet à tester (module 5).
+- **Dispersion** : un indice moyen peut cacher des tensions locales qui comptent pour l'analyse des spreads souverains (module 8).
+- **Prudence** : la lecture des séries de la zone euro ne garantit pas la direction de la paire.
+
+## 8. Erreurs courantes
+
+1. Confondre IPCH et CPI américain.
+2. Comparer le cœur IPCH au cœur américain sans noter les définitions.
+3. Lire la liste des États membres comme celle de la zone euro.
+4. Oublier que le PIB de la zone est révisé et influencé par l'Irlande.
+5. Interpréter une variation de 0,1 point du chômage.
+6. Prendre les variations mensuelles non corrigées des composantes pour une tendance.
+7. Prendre une dépêche secondaire pour le communiqué.
+
+## 9. Limites de l'interprétation
+
+- Le communiqué de l'IPCH est lu sur la reproduction d'un tiers ; le texte original d'Eurostat n'a pas été relu.
+- Les pondérations de l'IPCH ne sont pas lues ; la décomposition est une **SIMULATION**.
+- Les variations mensuelles des composantes ne sont pas expliquées dans le texte lu.
+- Le PIB du T2 révisé (0,6 %) est de source secondaire ; le T3 n'est pas disponible dans les sources lues.
+- Le chômage de septembre n'a pas été lu.
+- La comparaison avec les États-Unis est qualitative.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Évolution.** IPCH d'ensemble : 3,2 % (août) et 3,8 % (septembre) ; énergie : 14,3 % et 18,9 %. Calcule les variations.
+
+<details>
+<summary>Correction 1</summary>
+
+Ensemble : **+0,6 point** ; énergie : **+4,6 points**.
+</details>
+
+**Exercice 2 — Cœur.** Ensemble 3,8 % ; cœur 2,5 %. Écart ? Que signifie-t-il ?
+
+<details>
+<summary>Correction 2</summary>
+
+3,8 − 2,5 = **1,3 point** : l'énergie et l'alimentation contribuent fortement à l'inflation d'ensemble.
+</details>
+
+**Exercice 3 — Contributions (SIMULATION).** Poids fictifs : énergie 9 %, alimentation 19 %, biens industriels 25 %, services 47 % ; variations : 18,9 ; 1,3 ; 1,1 ; 3,2. Calcule les contributions et l'inflation d'ensemble simulée.
+
+<details>
+<summary>Correction 3</summary>
+
+1,701 + 0,247 + 0,275 + 1,504 = **3,727**. L'énergie : 1,701 ÷ 3,727 = **45,6 %**.
+</details>
+
+**Exercice 4 — PIB.** Estimation préliminaire 0,4 % ; estimation suivante 0,6 %. Révision ? Annualise les deux.
+
+<details>
+<summary>Correction 4</summary>
+
+**+0,2 point** ; 1,004⁴ − 1 = **1,61 %** ; 1,006⁴ − 1 = **2,42 %**.
+</details>
+
+**Exercice 5 — Comparaison.** Zone euro : ensemble 3,8 %, cœur 2,5 %, énergie 18,9 % ; États-Unis : 3,7 %, 2,6 %, 20,4 %. Calcule les écarts et donne deux raisons de prudence.
+
+<details>
+<summary>Correction 5</summary>
+
++0,1 ; −0,1 ; −1,5. Prudence : définitions différentes du cœur (l'IPCH écarte aussi alcool et tabac) ; paniers et pondérations différents (logement) ; périmètres de pays.
+</details>
+
+**Exercice 6 — Critique.** « Le taux de chômage de la zone euro est passé de 6,3 % à 6,4 % : le marché du travail se dégrade. » Donne trois objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) 0,1 point est de l'ordre des révisions (juin a été révisé de 6,3 % à 6,4 %). (2) Un mois ou un an ne font pas une tendance. (3) La zone euro agrège des pays aux situations différentes. (4) Le chiffre le plus récent n'a pas été lu.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L3.10.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- L'IPCH de septembre 2026 est à 3,8 % (cœur 2,5 % ; énergie 18,9 %).
+- La hausse de l'ensemble est surtout portée par l'énergie.
+- Le PIB du T2 a été publié à 0,4 % puis à 0,6 % : estimation à réviser.
+- Le chômage est à 6,4 % (juillet) ; 0,1 point est de l'ordre des révisions.
+- La comparaison avec les États-Unis est qualitative : définitions et périmètres diffèrent.
+
+## 13. Critères de maîtrise
+
+- [ ] Lire un communiqué d'IPCH (Exercices 1 et 2).
+- [ ] Faire une décomposition simple (Exercice 3).
+- [ ] Mesurer une révision de PIB (Exercice 4).
+- [ ] Comparer zone euro et États-Unis avec précautions (Exercice 5).
+- [ ] Critiquer une lecture hâtive du chômage (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-EUS-01** — Eurostat, IPCH de septembre 2026 (16/10/2026, copie par un tiers) : https://static.poder360.com.br/uploads/2026/10/integra-eurostat-inflacao-16out2026.pdf
+- **S-EUS-02** — Eurostat, Euro area unemployment (01/09/2026) : https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/3-01092026-bp
+- **S-EUS-03** — Eurostat, flash estimate du PIB du T2 2026 (30/07/2026) : https://ec.europa.eu/eurostat/product?code=2-30072026-ap
+- **S-TGT-02** — ministère du Commerce de Türkiye (secondaire) : https://trade.gov.tr/news/economic-growth-in-the-euro-area-increased-by-0-6-in-the-second-quarter-of-2026-compared-to-the-previous-quarter
+- **S-ECB-12** — BCE, calendrier IPCH (voir L3.01).
+- **S-MTR-01** — Mitrade (secondaire, voir L3.08).
+
+**Définitions de cours non rattachées à une source officielle lue :** estimation rapide, dispersion, traitement du logement dans l'IPCH (à vérifier). **Points non vérifiés :** pondérations, explication des variations mensuelles, PIB du T3, chômage d'août et de septembre.

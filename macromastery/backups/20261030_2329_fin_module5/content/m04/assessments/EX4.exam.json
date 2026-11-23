@@ -1,0 +1,821 @@
+{
+  "examId": "EX4",
+  "module": 4,
+  "title": "Examen du module 4 — Taux de change : fondamentaux des grandes devises",
+  "durationMinutes": 120,
+  "passThreshold": 0.7,
+  "note": "25 QCM (1 point) + 5 calculs (3 points) + 2 cas fictifs à analyser (10 points chacun) = 60 points ; seuil de réussite 42/60. Les données sont fictives (SIMULATION) sauf mention contraire.",
+  "questions": [
+    {
+      "id": "EX4-Q1",
+      "type": "mcq",
+      "prompt": "La parité couverte relie :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Taux et or"
+        },
+        {
+          "id": "b",
+          "text": "Comptant et PIB"
+        },
+        {
+          "id": "c",
+          "text": "Comptant, cours à terme et différentiel de taux"
+        },
+        {
+          "id": "d",
+          "text": "Prix et salaires"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le cours à terme est le comptant ajusté du différentiel de taux d'intérêt.",
+      "tags": [
+        "parite"
+      ]
+    },
+    {
+      "id": "EX4-Q2",
+      "type": "mcq",
+      "prompt": "Sous la parité non couverte avec anticipations rationnelles, le coefficient de Fama vaut :",
+      "options": [
+        {
+          "id": "a",
+          "text": "1"
+        },
+        {
+          "id": "b",
+          "text": "0"
+        },
+        {
+          "id": "c",
+          "text": "−1"
+        },
+        {
+          "id": "d",
+          "text": "2"
+        }
+      ],
+      "correct": "a",
+      "explanation": "β = 1 sous parité non couverte ; Fama trouve des coefficients négatifs, interprétés avec une prime de risque variable.",
+      "tags": [
+        "fama"
+      ]
+    },
+    {
+      "id": "EX4-Q3",
+      "type": "mcq",
+      "prompt": "Un cours à terme au-dessus du comptant signifie que :",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'inflation est nulle"
+        },
+        {
+          "id": "b",
+          "text": "La devise va monter"
+        },
+        {
+          "id": "c",
+          "text": "La banque centrale intervient"
+        },
+        {
+          "id": "d",
+          "text": "La devise cotée a un taux d'intérêt plus bas que la devise de base"
+        }
+      ],
+      "correct": "d",
+      "explanation": "À terme, la devise à taux plus bas est à prime ; ce n'est pas une prévision de change.",
+      "tags": [
+        "forward"
+      ]
+    },
+    {
+      "id": "EX4-Q4",
+      "type": "mcq",
+      "prompt": "Une surprise de taux se mesure par rapport à :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une anticipation vieille d'un mois"
+        },
+        {
+          "id": "b",
+          "text": "L'anticipation de la veille de la décision"
+        },
+        {
+          "id": "c",
+          "text": "Le taux de l'an dernier"
+        },
+        {
+          "id": "d",
+          "text": "Le PIB"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Une anticipation ancienne ne mesure pas la surprise : le consensus juste avant l'annonce est la référence.",
+      "tags": [
+        "surprise"
+      ]
+    },
+    {
+      "id": "EX4-Q5",
+      "type": "mcq",
+      "prompt": "Le taux réel ex post se calcule :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Taux ÷ inflation"
+        },
+        {
+          "id": "b",
+          "text": "Taux nominal plus inflation"
+        },
+        {
+          "id": "c",
+          "text": "Inflation moins taux"
+        },
+        {
+          "id": "d",
+          "text": "Taux nominal moins inflation observée"
+        }
+      ],
+      "correct": "d",
+      "explanation": "C'est l'approximation de Fisher ; elle ne dit rien des anticipations d'inflation.",
+      "tags": [
+        "reel"
+      ]
+    },
+    {
+      "id": "EX4-Q6",
+      "type": "mcq",
+      "prompt": "Le point mort d'inflation d'un TIPS est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le taux directeur"
+        },
+        {
+          "id": "b",
+          "text": "Le rendement réel seul"
+        },
+        {
+          "id": "c",
+          "text": "L'écart entre rendement nominal et rendement réel"
+        },
+        {
+          "id": "d",
+          "text": "Le CPI publié"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Il mélange anticipations d'inflation et primes de risque et de liquidité.",
+      "tags": [
+        "pointmort"
+      ]
+    },
+    {
+      "id": "EX4-Q7",
+      "type": "mcq",
+      "prompt": "Le compte courant comprend :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Biens, services, revenus primaires et secondaires"
+        },
+        {
+          "id": "b",
+          "text": "Actions, obligations, dérivés"
+        },
+        {
+          "id": "c",
+          "text": "Réserves de change seulement"
+        },
+        {
+          "id": "d",
+          "text": "Dette publique"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Actions et obligations relèvent du compte financier.",
+      "tags": [
+        "bop"
+      ]
+    },
+    {
+      "id": "EX4-Q8",
+      "type": "mcq",
+      "prompt": "Les flux de portefeuille bruts de la zone euro valent environ ___ fois son solde courant :",
+      "options": [
+        {
+          "id": "a",
+          "text": "1,0"
+        },
+        {
+          "id": "b",
+          "text": "7,6"
+        },
+        {
+          "id": "c",
+          "text": "0,5"
+        },
+        {
+          "id": "d",
+          "text": "20"
+        }
+      ],
+      "correct": "b",
+      "explanation": "1 903 ÷ 250 ≈ 7,6 : les flux financiers dominent.",
+      "tags": [
+        "flux"
+      ]
+    },
+    {
+      "id": "EX4-Q9",
+      "type": "mcq",
+      "prompt": "L'écart entre compte courant et compte financier américains (123,7 Md$ au T2) correspond à :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un excédent"
+        },
+        {
+          "id": "b",
+          "text": "Une erreur du lecteur"
+        },
+        {
+          "id": "c",
+          "text": "Compte de capital et erreurs et omissions, à signaler"
+        },
+        {
+          "id": "d",
+          "text": "Une dette"
+        }
+      ],
+      "correct": "c",
+      "explanation": "L'identité n'est vérifiée qu'avec ces postes ; l'écart est élevé et signalé.",
+      "tags": [
+        "identite"
+      ]
+    },
+    {
+      "id": "EX4-Q10",
+      "type": "mcq",
+      "prompt": "Les termes de l'échange s'améliorent quand :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les prix d'exportation montent plus vite que les prix d'importation"
+        },
+        {
+          "id": "b",
+          "text": "Les volumes baissent"
+        },
+        {
+          "id": "c",
+          "text": "Le taux directeur baisse"
+        },
+        {
+          "id": "d",
+          "text": "Le PIB baisse"
+        }
+      ],
+      "correct": "a",
+      "explanation": "C'est un rapport de prix ; la variation est un rapport, non une différence.",
+      "tags": [
+        "tot"
+      ]
+    },
+    {
+      "id": "EX4-Q11",
+      "type": "mcq",
+      "prompt": "Un choc de +30 % sur un produit pesant 20 % des importations élève les prix d'importation de :",
+      "options": [
+        {
+          "id": "a",
+          "text": "50 %"
+        },
+        {
+          "id": "b",
+          "text": "30 %"
+        },
+        {
+          "id": "c",
+          "text": "20 %"
+        },
+        {
+          "id": "d",
+          "text": "6 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "0,20 × 30 % = 6 % ; les termes de l'échange baissent de 5,66 % si les exportations sont inchangées.",
+      "tags": [
+        "choc"
+      ]
+    },
+    {
+      "id": "EX4-Q12",
+      "type": "mcq",
+      "prompt": "« Devise de matières premières » désigne :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une devise liée par la loi au prix d'un produit"
+        },
+        {
+          "id": "b",
+          "text": "Une convention d'usage, non une loi"
+        },
+        {
+          "id": "c",
+          "text": "Une devise fixe"
+        },
+        {
+          "id": "d",
+          "text": "L'or"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La catégorie ne dit rien du différentiel de taux ni de l'inflation du pays.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "EX4-Q13",
+      "type": "mcq",
+      "prompt": "Un indice large du dollar pondéré par les échanges accorde :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le poids de l'or"
+        },
+        {
+          "id": "b",
+          "text": "100 % à l'euro"
+        },
+        {
+          "id": "c",
+          "text": "Aucun poids aux émergents"
+        },
+        {
+          "id": "d",
+          "text": "Un poids important au Mexique, au Canada et à la Chine"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Euro 21,0 %, Mexique 14,8 %, Canada 12,8 %, Chine 10,9 % (février 2026).",
+      "tags": [
+        "indice"
+      ]
+    },
+    {
+      "id": "EX4-Q14",
+      "type": "mcq",
+      "prompt": "Le total des parts de devises dans l'enquête de la BRI est de :",
+      "options": [
+        {
+          "id": "a",
+          "text": "89 %"
+        },
+        {
+          "id": "b",
+          "text": "100 %"
+        },
+        {
+          "id": "c",
+          "text": "200 %"
+        },
+        {
+          "id": "d",
+          "text": "50 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Une opération implique deux devises (convention de présentation).",
+      "tags": [
+        "bri"
+      ]
+    },
+    {
+      "id": "EX4-Q15",
+      "type": "mcq",
+      "prompt": "La BCE a laissé son taux de dépôt à 2,50 % le 29 octobre 2026 selon :",
+      "options": [
+        {
+          "id": "a",
+          "text": "La presse, le communiqué primaire n'ayant pas été lu"
+        },
+        {
+          "id": "b",
+          "text": "Le communiqué primaire lu"
+        },
+        {
+          "id": "c",
+          "text": "Une annonce de la Fed"
+        },
+        {
+          "id": "d",
+          "text": "Une enquête"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La décision est signalée comme non vérifiée à la source.",
+      "tags": [
+        "bce"
+      ]
+    },
+    {
+      "id": "EX4-Q16",
+      "type": "mcq",
+      "prompt": "La hausse de l'inflation de la zone euro de 3,2 % à 3,8 % vient surtout :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Des services seuls"
+        },
+        {
+          "id": "b",
+          "text": "De l'énergie (+4,6 points)"
+        },
+        {
+          "id": "c",
+          "text": "Des salaires"
+        },
+        {
+          "id": "d",
+          "text": "De l'alimentation"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le sous-jacent ne gagne que 0,1 point ; la somme des composantes n'est pas vérifiée.",
+      "tags": [
+        "inflation"
+      ]
+    },
+    {
+      "id": "EX4-Q17",
+      "type": "mcq",
+      "prompt": "Le rendement français à 10 ans a dépassé 5 % pour la première fois depuis :",
+      "options": [
+        {
+          "id": "a",
+          "text": "1990"
+        },
+        {
+          "id": "b",
+          "text": "2022"
+        },
+        {
+          "id": "c",
+          "text": "2002"
+        },
+        {
+          "id": "d",
+          "text": "2015"
+        }
+      ],
+      "correct": "c",
+      "explanation": "L'information vient de la presse (secondaire).",
+      "tags": [
+        "france"
+      ]
+    },
+    {
+      "id": "EX4-Q18",
+      "type": "mcq",
+      "prompt": "Après la hausse du 18 septembre 2026, la Banque du Japon a un taux de :",
+      "options": [
+        {
+          "id": "a",
+          "text": "1,25 %"
+        },
+        {
+          "id": "b",
+          "text": "0,25 %"
+        },
+        {
+          "id": "c",
+          "text": "2,50 %"
+        },
+        {
+          "id": "d",
+          "text": "0 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "1,00 % + 0,25 point = 1,25 % (source secondaire).",
+      "tags": [
+        "boj"
+      ]
+    },
+    {
+      "id": "EX4-Q19",
+      "type": "mcq",
+      "prompt": "Dans l'analyse du yen, une hausse de taux peut accompagner un yen plus faible parce que :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les hausses sont illégales"
+        },
+        {
+          "id": "b",
+          "text": "Les taux n'agissent jamais"
+        },
+        {
+          "id": "c",
+          "text": "Le yen est fixe"
+        },
+        {
+          "id": "d",
+          "text": "Elle était attendue, le vote était partagé et le différentiel restait large"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le mouvement est cohérent avec plusieurs explications sans preuve unique.",
+      "tags": [
+        "yen"
+      ]
+    },
+    {
+      "id": "EX4-Q20",
+      "type": "mcq",
+      "prompt": "Dans la BoE, la répartition 6–3 informe sur :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le niveau de l'inflation"
+        },
+        {
+          "id": "b",
+          "text": "La trajectoire plus que le niveau du taux"
+        },
+        {
+          "id": "c",
+          "text": "Le PIB"
+        },
+        {
+          "id": "d",
+          "text": "Le change fixe"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Un tiers du comité voulait resserrer.",
+      "tags": [
+        "boe"
+      ]
+    },
+    {
+      "id": "EX4-Q21",
+      "type": "mcq",
+      "prompt": "La BNS affiche un taux de :",
+      "options": [
+        {
+          "id": "a",
+          "text": "3 %"
+        },
+        {
+          "id": "b",
+          "text": "1,25 %"
+        },
+        {
+          "id": "c",
+          "text": "−2 %"
+        },
+        {
+          "id": "d",
+          "text": "0 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Taux à 0 % ; la banque se dit prête à intervenir sur le marché des changes.",
+      "tags": [
+        "bns"
+      ]
+    },
+    {
+      "id": "EX4-Q22",
+      "type": "mcq",
+      "prompt": "Le portage (carry) est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une règle de Taylor"
+        },
+        {
+          "id": "b",
+          "text": "Un impôt"
+        },
+        {
+          "id": "c",
+          "text": "Le rendement d'une devise à taux élevé financée dans une devise à taux bas"
+        },
+        {
+          "id": "d",
+          "text": "Un taux fixe"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Rendement = différentiel de taux + variation de change.",
+      "tags": [
+        "carry"
+      ]
+    },
+    {
+      "id": "EX4-Q23",
+      "type": "mcq",
+      "prompt": "Un ratio portage/risque se calcule :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Différentiel de taux ÷ volatilité implicite"
+        },
+        {
+          "id": "b",
+          "text": "Taux × volatilité"
+        },
+        {
+          "id": "c",
+          "text": "Volatilité − taux"
+        },
+        {
+          "id": "d",
+          "text": "Taux ÷ PIB"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Une hausse de volatilité baisse le ratio sans changer le différentiel.",
+      "tags": [
+        "ratio"
+      ]
+    },
+    {
+      "id": "EX4-Q24",
+      "type": "mcq",
+      "prompt": "Une intervention de change coordonnée est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un changement de régime"
+        },
+        {
+          "id": "b",
+          "text": "Une action menée par plusieurs autorités"
+        },
+        {
+          "id": "c",
+          "text": "Une règle fiscale"
+        },
+        {
+          "id": "d",
+          "text": "Un impôt"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Elle ne remplace pas la politique monétaire ni budgétaire.",
+      "tags": [
+        "intervention"
+      ]
+    },
+    {
+      "id": "EX4-Q25",
+      "type": "mcq",
+      "prompt": "Le score de Brier d'une thèse est meilleur quand il est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Égal à 2"
+        },
+        {
+          "id": "b",
+          "text": "Plus haut"
+        },
+        {
+          "id": "c",
+          "text": "Plus bas"
+        },
+        {
+          "id": "d",
+          "text": "Négatif"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Il mesure la somme des carrés des écarts probabilité-résultat.",
+      "tags": [
+        "brier"
+      ]
+    }
+  ],
+  "calculations": [
+    {
+      "id": "EX4-K1",
+      "type": "calc",
+      "prompt": "Cours à terme (SIMULATION). Comptant EUR/USD 1,0850 ; taux du dollar 4,00 % ; taux de l'euro 2,00 % ; un an. Quel cours à terme (4 décimales) ?",
+      "answer": 1.1063,
+      "tolerance": 0.0002,
+      "unit": "USD par EUR",
+      "solution": "F = 1,0850 × 1,04 ÷ 1,02 = 1,1284 ÷ 1,02 = 1,10627 ≈ 1,1063.",
+      "tags": [
+        "parite"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX4-K2",
+      "type": "calc",
+      "prompt": "Point mort d'inflation exact (SIMULATION). Rendement nominal 4,50 % ; rendement réel 2,20 %. Point mort exact (1,045 ÷ 1,022 − 1) en % (2 décimales) ?",
+      "answer": 2.25,
+      "tolerance": 0.01,
+      "unit": "%",
+      "solution": "1,045 ÷ 1,022 − 1 = 0,022505 ≈ 2,25 % ; l'approximation 4,50 − 2,20 = 2,30 % est légèrement différente.",
+      "tags": [
+        "pointmort"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX4-K3",
+      "type": "calc",
+      "prompt": "Termes de l'échange (SIMULATION). Prix d'exportation +8 % ; prix d'importation +5 %. Variation en % (2 décimales) ?",
+      "answer": 2.86,
+      "tolerance": 0.01,
+      "unit": "%",
+      "solution": "1,08 ÷ 1,05 − 1 = 0,02857 ≈ 2,86 % ; on ne soustrait pas les variations.",
+      "tags": [
+        "tot"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX4-K4",
+      "type": "calc",
+      "prompt": "Contribution à l'indice large (SIMULATION). Poids : zone euro 21,007 %, Mexique 14,801 %, Canada 12,769 %. Le dollar monte de 1,5 % contre l'euro, 2,0 % contre le peso et 0,5 % contre le dollar canadien, autres devises stables. Contribution à l'indice en % (2 décimales) ?",
+      "answer": 0.67,
+      "tolerance": 0.01,
+      "unit": "%",
+      "solution": "0,21007 × 1,5 + 0,14801 × 2,0 + 0,12769 × 0,5 = 0,31511 + 0,29602 + 0,06385 = 0,67498 ≈ 0,67 %.",
+      "tags": [
+        "contribution"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX4-K5",
+      "type": "calc",
+      "prompt": "Score de Brier (SIMULATION). Probabilités (0,20 ; 0,50 ; 0,30) ; le troisième scénario se réalise. Score (2 décimales) ?",
+      "answer": 0.78,
+      "tolerance": 0.01,
+      "unit": "points",
+      "solution": "0,20² + 0,50² + (0,30 − 1)² = 0,04 + 0,25 + 0,49 = 0,78 ; à comparer à la référence uniforme de 0,667.",
+      "tags": [
+        "brier"
+      ],
+      "points": 3
+    }
+  ],
+  "analyses": [
+    {
+      "id": "EX4-A1",
+      "type": "analysis",
+      "title": "Décision fictive d'une banque centrale et réaction de change (SIMULATION)",
+      "material": "Banque centrale de la zone Alpha (fictive). Taux de dépôt maintenu à 2,50 %. La veille, le marché attribuait 40 % de chances à une hausse de 25 pb. Inflation d'ensemble 3,6 % ; inflation sous-jacente 2,4 % ; énergie en hausse de 15 % sur 12 mois. Taux de la banque centrale de la zone Beta (fictive) : 3,75 % (milieu de fourchette). Cours ALP/BET avant la décision : 1,1000 ; après : 1,0934. Une autre publication du même jour : chômage 6,5 % contre 6,4 % attendu.",
+      "tasks": [
+        "Calcule la surprise de taux par rapport à l'anticipation de la veille, en points de base.",
+        "Calcule le taux réel de politique monétaire (ensemble et sous-jacent) et le différentiel avec la zone Beta.",
+        "Calcule la variation du change et signale les autres facteurs concurrents.",
+        "Rédige la synthèse en trois phrases (faits, calculs, hypothèse) sans prévision et liste trois inconnues."
+      ],
+      "expectedElements": [
+        "Espérance 0,40 × 25 = 10 pb ; résultat 0 ; surprise −10 pb",
+        "Taux réel : 2,50 − 3,6 = −1,10 point ; sous-jacent : 2,50 − 2,4 = +0,10 point ; différentiel : 3,75 − 2,50 = 1,25 point",
+        "Variation : 1,0934 ÷ 1,1000 − 1 = −0,60 % ; facteurs concurrents : chômage, énergie, zone Beta",
+        "Synthèse sans prévision ; corrélation non causalité",
+        "Inconnues : consensus exact de la veille, heure des publications, positions de marché"
+      ],
+      "points": 10
+    },
+    {
+      "id": "EX4-A2",
+      "type": "analysis",
+      "title": "Choc de matières premières et intervention fictive (SIMULATION)",
+      "material": "Pays Gamma (fictif), exportateur de minerai. Un produit représentant 40 % de ses exportations monte de 20 % ; les autres prix d'exportation sont stables ; les prix d'importation montent de 2 %. Taux directeur de Gamma : 4,50 % ; Fed fictive (milieu) : 3,875 %. Le cours USD/GAM est de 160 avant une intervention, 152 juste après, puis 156 dix jours plus tard. Les autorités ont vendu 5 milliards de dollars pour acheter la monnaie locale.",
+      "tasks": [
+        "Calcule la variation des prix d'exportation et des termes de l'échange.",
+        "Calcule le différentiel de taux avec la Fed et le point mort de change d'un portage sur Gamma financé en dollars (un an).",
+        "Calcule la part du mouvement de l'intervention effacée après dix jours.",
+        "Rédige la synthèse en trois phrases et liste trois inconnues."
+      ],
+      "expectedElements": [
+        "Prix d'exportation : 0,40 × 20 = +8 % ; termes : 1,08 ÷ 1,02 − 1 = +5,88 %",
+        "Différentiel : 4,50 − 3,875 = +0,625 point ; point mort : 1,03875 ÷ 1,045 − 1 = −0,60 %",
+        "Part effacée : (156 − 152) ÷ (160 − 152) = 50 %",
+        "Synthèse : l'intervention n'a pas modifié durablement le cours ; aucune prévision",
+        "Inconnues : financement de l'intervention, niveaux d'exécution, anticipations du marché"
+      ],
+      "points": 10
+    }
+  ],
+  "totalPoints": 60,
+  "revision": 1
+}

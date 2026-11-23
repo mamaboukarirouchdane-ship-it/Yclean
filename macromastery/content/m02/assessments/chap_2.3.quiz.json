@@ -1,0 +1,180 @@
+{
+  "chapterId": "2.3",
+  "module": 2,
+  "title": "Quiz de chapitre 2.3 — Taux neutre, règle de Taylor, fonction de réaction (L2.06–L2.07)",
+  "passThreshold": 0.8333333333333334,
+  "requiredCorrect": 5,
+  "passRule": "5 bonnes réponses sur 6 (règle R1 : ⌈0,8 × 6⌉ = 5 ; seuil pédagogique provisoire)",
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C2.3-Q1",
+      "type": "mcq",
+      "prompt": "Règle de Taylor d'origine : r* = 2 ; inflation 3,0 % ; écart de production −1. Quelle prescription ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2,0 %"
+        },
+        {
+          "id": "b",
+          "text": "5,0 %"
+        },
+        {
+          "id": "c",
+          "text": "4,0 %"
+        },
+        {
+          "id": "d",
+          "text": "6,5 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "R = 2 + 3,0 + 0,5 × (3,0 − 2) + 0,5 × (−1) = 5,0 %.",
+      "tags": [
+        "taylor"
+      ]
+    },
+    {
+      "id": "C2.3-Q2",
+      "type": "mcq",
+      "prompt": "Approche équilibrée : r* = 1 ; inflation 2,5 ; u* = 4,5 ; u = 5,0. Quelle prescription ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1,0 %"
+        },
+        {
+          "id": "b",
+          "text": "3,5 %"
+        },
+        {
+          "id": "c",
+          "text": "4,75 %"
+        },
+        {
+          "id": "d",
+          "text": "2,75 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "R = 1 + 2,5 + 0,25 + 2 × (−0,5) = 2,75 % ; ces valeurs sont fictives (SIMULATION).",
+      "tags": [
+        "taylor"
+      ]
+    },
+    {
+      "id": "C2.3-Q3",
+      "type": "mcq",
+      "prompt": "Avec π = 3,0 % et un écart de chômage nul, que devient la prescription si r* passe de 0,5 à 1,2 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle ne change pas"
+        },
+        {
+          "id": "b",
+          "text": "Elle baisse de 0,7 point"
+        },
+        {
+          "id": "c",
+          "text": "Elle augmente de 0,7 point"
+        },
+        {
+          "id": "d",
+          "text": "Elle double"
+        }
+      ],
+      "correct": "c",
+      "explanation": "r* entre additivement dans la règle : 1,2 − 0,5 = 0,7 point d'écart, d'où l'incertitude sur r* qui limite l'usage mécanique de la règle.",
+      "tags": [
+        "sensibilite"
+      ]
+    },
+    {
+      "id": "C2.3-Q4",
+      "type": "mcq",
+      "prompt": "Selon Bernanke (2010), que donne la règle standard sur 2001-2006 par rapport au taux réel observé ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un taux réel observé environ 200 pb en dessous de la prescription ; avec l'inflation prévue, la trajectoire prescrite est proche"
+        },
+        {
+          "id": "b",
+          "text": "Un taux observé exactement égal à la prescription"
+        },
+        {
+          "id": "c",
+          "text": "Un taux observé 200 pb au-dessus"
+        },
+        {
+          "id": "d",
+          "text": "Aucune comparaison n'est possible"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le choix de l'inflation (courante ou prévue) change le verdict ; c'est le point de vue de l'auteur du discours, non un résultat neutre.",
+      "tags": [
+        "bernanke"
+      ]
+    },
+    {
+      "id": "C2.3-Q5",
+      "type": "mcq",
+      "prompt": "R_(t−1) = 3,625 ; R* = 4,5 ; ρ = 0,4. Quel est R_t avec ajustement partiel ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "4,5"
+        },
+        {
+          "id": "b",
+          "text": "3,975"
+        },
+        {
+          "id": "c",
+          "text": "4,125"
+        },
+        {
+          "id": "d",
+          "text": "3,625"
+        }
+      ],
+      "correct": "b",
+      "explanation": "R_t = 3,625 + 0,4 × (4,5 − 3,625) = 3,625 + 0,35 = 3,975.",
+      "tags": [
+        "lissage"
+      ]
+    },
+    {
+      "id": "C2.3-Q6",
+      "type": "mcq",
+      "prompt": "Avec ρ = 0,4 et une cible inchangée, quelle part de l'écart initial subsiste après trois pas ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "60 %"
+        },
+        {
+          "id": "b",
+          "text": "40 %"
+        },
+        {
+          "id": "c",
+          "text": "21,6 %"
+        },
+        {
+          "id": "d",
+          "text": "6,4 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "À chaque pas, l'écart est multiplié par 1 − ρ = 0,6 ; 0,6³ = 0,216.",
+      "tags": [
+        "lissage"
+      ]
+    }
+  ],
+  "revision": 1
+}

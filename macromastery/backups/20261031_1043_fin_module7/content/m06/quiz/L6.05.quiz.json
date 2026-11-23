@@ -1,0 +1,233 @@
+{
+  "lessonId": "L6.05",
+  "title": "Quiz — Scénarios et probabilités",
+  "passThreshold": 0.8,
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L6.05-Q1",
+      "type": "mcq",
+      "prompt": "Quels sont les quatre sens de « probabilité » distingués dans la leçon ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Nominale, réelle, relative, absolue"
+        },
+        {
+          "id": "b",
+          "text": "Faible, moyenne, forte, certaine"
+        },
+        {
+          "id": "c",
+          "text": "Subjective, historique, de modèle, implicite de marché"
+        },
+        {
+          "id": "d",
+          "text": "Passée, présente, future, nulle"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Chaque sens a sa méthode et son risque propre ; ils ne sont pas interchangeables.",
+      "tags": [
+        "sens"
+      ]
+    },
+    {
+      "id": "L6.05-Q2",
+      "type": "mcq",
+      "prompt": "3 baisses observées sur 4 cas : estimation lissée de Laplace ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "66,7 %"
+        },
+        {
+          "id": "b",
+          "text": "75 %"
+        },
+        {
+          "id": "c",
+          "text": "60 %"
+        },
+        {
+          "id": "d",
+          "text": "80 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "(3 + 1) ÷ (4 + 2) = 66,7 % ; la correction est forte quand l'échantillon est petit.",
+      "tags": [
+        "laplace"
+      ]
+    },
+    {
+      "id": "L6.05-Q3",
+      "type": "mcq",
+      "prompt": "Que fait-on d'une donnée manquante (par exemple l'état du dollar) quand on construit des scénarios ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "On suppose qu'elle est favorable"
+        },
+        {
+          "id": "b",
+          "text": "On lui attribue la valeur du jour précédent"
+        },
+        {
+          "id": "c",
+          "text": "On l'ignore"
+        },
+        {
+          "id": "d",
+          "text": "On la traite comme un état possible ou une borne, sans inventer de valeur"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La loi des probabilités totales permet de mesurer combien la conclusion dépend de l'inconnue.",
+      "tags": [
+        "manquant"
+      ]
+    },
+    {
+      "id": "L6.05-Q4",
+      "type": "mcq",
+      "prompt": "P(hausse) = 0,56 − 0,2 × a. Pour a = 0,50, quelle valeur ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,56"
+        },
+        {
+          "id": "b",
+          "text": "0,46"
+        },
+        {
+          "id": "c",
+          "text": "0,66"
+        },
+        {
+          "id": "d",
+          "text": "0,36"
+        }
+      ],
+      "correct": "b",
+      "explanation": "0,56 − 0,2 × 0,50 = 0,46 ; pour a = 0,20 on obtient 0,52.",
+      "tags": [
+        "totales"
+      ]
+    },
+    {
+      "id": "L6.05-Q5",
+      "type": "mcq",
+      "prompt": "Rendements +8 % (35 %), 0 % (40 %), −5 % (25 %). Valeur attendue ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+0,35 %"
+        },
+        {
+          "id": "b",
+          "text": "+1,00 %"
+        },
+        {
+          "id": "c",
+          "text": "+4,00 %"
+        },
+        {
+          "id": "d",
+          "text": "+1,55 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "0,35 × 8 + 0,40 × 0 + 0,25 × (−5) = 2,80 − 1,25 = 1,55 %.",
+      "tags": [
+        "ev"
+      ]
+    },
+    {
+      "id": "L6.05-Q6",
+      "type": "mcq",
+      "prompt": "Gain 8, perte 5, coût 0,2 : probabilité d'équilibre ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "50 %"
+        },
+        {
+          "id": "b",
+          "text": "62 %"
+        },
+        {
+          "id": "c",
+          "text": "40 %"
+        },
+        {
+          "id": "d",
+          "text": "20 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "p* = (L + c) ÷ (G + L) = 5,2 ÷ 13 = 0,40.",
+      "tags": [
+        "equilibre"
+      ]
+    },
+    {
+      "id": "L6.05-Q7",
+      "type": "mcq",
+      "prompt": "Pourquoi une valeur attendue positive ne prouve-t-elle pas la rentabilité ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Coûts, dispersion, risque et qualité des probabilités doivent aussi être examinés"
+        },
+        {
+          "id": "b",
+          "text": "Parce que les valeurs positives sont toujours fausses"
+        },
+        {
+          "id": "c",
+          "text": "Parce que le score de Brier l'interdit"
+        },
+        {
+          "id": "d",
+          "text": "Parce que la Fed l'interdit"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Avec un écart-type d'environ 5,12 points pour une espérance nette de 1,35 %, le résultat réel est très dispersé.",
+      "tags": [
+        "limites"
+      ]
+    },
+    {
+      "id": "L6.05-Q8",
+      "type": "mcq",
+      "prompt": "Quand une prévision doit-elle être enregistrée, et que faire si elle est corrigée ensuite ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Après le résultat, pour mieux l'expliquer"
+        },
+        {
+          "id": "b",
+          "text": "Avant la réalisation ; une correction est une nouvelle fiche, la première n'est pas modifiée"
+        },
+        {
+          "id": "c",
+          "text": "Peu importe"
+        },
+        {
+          "id": "d",
+          "text": "Seulement si elle est juste"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Un enregistrement daté et immuable (avec empreinte) empêche de réécrire l'histoire après coup.",
+      "tags": [
+        "registre"
+      ]
+    }
+  ],
+  "revision": 1
+}

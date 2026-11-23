@@ -1,0 +1,288 @@
+---
+id: L0.07
+module: 0
+order: 7
+title: "Intérêt et valeur temps de l'argent : intérêts, actualisation et rendement"
+title_initial: "Intérêt et valeur temps de l'argent"
+level: débutant
+duration_hours: 2.5
+prerequisites: ["L0.01", "L0.05"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L0.07.quiz.json"
+sources: ["S-CFPB-01", "S-UST-02"]
+---
+
+# L0.07 — Intérêt et valeur temps de l'argent : intérêts, actualisation et rendement
+
+> **Convention de lecture.** **[Fait]** = vérifié dans une source citée ; **[Définition]** = convention de vocabulaire ; **[Calcul de l'auteur]** = calcul fait à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Cette leçon est surtout **calculatoire** : presque tout y est démontré par des formules que tu peux refaire. Elle prépare les leçons suivantes (obligations en L0.08, risque et rendement en L0.10) et plusieurs modules (taux directeurs, taux réels, portage, coût d'opportunité de l'or).
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. expliquer pourquoi **1 000 francs aujourd'hui valent plus que 1 000 francs dans un an** ;
+2. calculer des **intérêts simples** et des **intérêts composés**, et dire quand ils divergent ;
+3. calculer un **taux effectif annuel** à partir d'un taux nominal et d'une fréquence de capitalisation ;
+4. calculer une **valeur future** et une **valeur actuelle** (actualisation) et comparer deux sommes à des dates différentes ;
+5. calculer un **rendement total** et un **rendement annualisé** (taux de croissance annuel moyen) ;
+6. distinguer **point de pourcentage, pour cent et point de base** ;
+7. distinguer un rendement **nominal** d'un rendement **réel** (approximatif) et situer ces notions dans l'analyse du Forex et de l'or.
+
+## 2. Prérequis
+
+L0.01 (rôle des marchés), L0.05 (calcul d'un rapport de taux). Puissances et pourcentages. Une calculatrice avec la touche « puissance » (ou un tableur) suffit.
+
+## 3. Explication intuitive
+
+Si on te propose 1 000 francs aujourd'hui ou 1 000 francs dans un an, tu prends la somme d'aujourd'hui : tu peux la placer, la dépenser ou t'en servir pour un projet. Pour te décider à attendre, on devra te **payer** pour l'attente : c'est l'**intérêt**. Le taux d'intérêt est donc le **prix du temps**.
+
+Deux idées en découlent :
+
+- **Les intérêts s'ajoutent au capital** : si tu laisses les intérêts d'une année dans le placement, l'année suivante ils rapportent eux-mêmes des intérêts. C'est la **capitalisation** (intérêts composés).
+- **On peut remonter le temps** : une somme promise dans trois ans vaut aujourd'hui **moins** que son montant. Le calcul qui donne cette valeur s'appelle l'**actualisation**.
+
+Tout le raisonnement sur les taux en finance — obligations, taux directeurs, différentiels entre devises, coût de détenir de l'or qui ne verse pas d'intérêt — repose sur ces deux idées.
+
+## 4. Développement technique
+
+### 4.1 Intérêts simples et intérêts composés
+
+**[Définition]** Soit un capital *P*, un taux annuel *r* (écrit en décimal : 5 % = 0,05) et *n* années.
+
+- **Intérêts simples** : les intérêts sont calculés chaque année sur le capital initial seulement. Valeur après *n* années : **P × (1 + r × n)**.
+- **Intérêts composés** (capitalisation annuelle) : les intérêts de chaque année s'ajoutent au capital. Valeur après *n* années : **P × (1 + r)ⁿ**.
+
+**[Fait, S-CFPB-01, lu par résumé automatique]** Le Bureau fédéral américain de protection financière des consommateurs (CFPB) décrit l'intérêt composé comme le fait de gagner des intérêts sur l'argent épargné **et** sur les intérêts déjà accumulés ; son exemple : 1 000 $ à 5 % composé annuellement valent 1 050 $ après un an (5 % de 1 000 = 50), puis 1 102,50 $ après deux ans (5 % de 1 050 = 52,50). La page ne définit pas l'intérêt simple.
+
+**Exemple (SIMULATION).** P = 1 000, r = 5 %.
+
+| Années | Intérêts simples | Intérêts composés | Écart |
+| --- | --- | --- | --- |
+| 1 | 1 050,00 | 1 050,00 | 0,00 |
+| 2 | 1 100,00 | 1 102,50 | 2,50 |
+| 10 | 1 500,00 | 1 628,89 | 128,89 |
+| 30 | 2 500,00 | 4 321,94 | 1 821,94 |
+
+L'écart est nul la première année et **s'accélère** ensuite : les intérêts composés croissent de façon exponentielle, les intérêts simples de façon linéaire.
+
+### 4.2 La fréquence de capitalisation et le taux effectif
+
+Un taux **nominal** annuel *r* capitalisé *m* fois par an donne un taux **effectif annuel** :
+
+**TEA = (1 + r/m)ᵐ − 1.**
+
+**Exemple (SIMULATION).** Nominal 5 % :
+
+| Capitalisation | *m* | Taux effectif annuel |
+| --- | --- | --- |
+| Annuelle | 1 | 5,0000 % |
+| Semestrielle | 2 | 5,0625 % |
+| Trimestrielle | 4 | 5,0945 % |
+| Mensuelle | 12 | 5,1162 % |
+| Quotidienne | 365 | 5,1267 % |
+
+Plus on capitalise souvent, plus le taux effectif augmente, mais **de moins en moins** : passer de la capitalisation annuelle à la mensuelle ajoute 0,12 point ; de la mensuelle à la quotidienne, 0,01 point.
+
+**[Interprétation]** Pour comparer deux placements ou deux crédits, compare toujours leurs taux **effectifs** sur une même période, jamais un taux nominal contre un taux effectif.
+
+### 4.3 Valeur future et valeur actuelle
+
+**Valeur future** (ce que vaut aujourd'hui une somme *P* dans *n* années) : **VF = P × (1 + r)ⁿ**.
+
+**Valeur actuelle** (ce que vaut aujourd'hui une somme *VF* promise dans *n* années) : **VA = VF ÷ (1 + r)ⁿ**. Le taux *r* qui sert à actualiser est le **taux d'actualisation** : le rendement que tu pourrais obtenir ailleurs.
+
+**Exemple (SIMULATION).** 1 000 promis dans 3 ans, taux d'actualisation 4 % : VA = 1 000 ÷ 1,04³ = 1 000 ÷ 1,124864 = **889,00**. Si le taux monte à 8 %, VA = 1 000 ÷ 1,08³ = **793,83** : **quand le taux monte, la valeur actuelle baisse**. C'est la relation qui sera au cœur des obligations (L0.08).
+
+**Comparer deux sommes à des dates différentes.** On ne compare jamais des sommes à des dates différentes sans les ramener à la même date. Exemple (SIMULATION) : 1 000 aujourd'hui ou 1 100 dans 2 ans ?
+
+- à 4 % : VA(1 100) = 1 100 ÷ 1,0816 = **1 017,01** > 1 000 → attendre est préférable ;
+- à 6 % : VA(1 100) = 1 100 ÷ 1,1236 = **979,00** < 1 000 → prendre 1 000 maintenant est préférable.
+
+La décision dépend du taux d'actualisation, donc de ce que tu pourrais gagner ailleurs.
+
+### 4.4 Rendement total, rendement annualisé et variation
+
+**[Définition]**
+
+- **Rendement total** = (valeur finale − valeur initiale) ÷ valeur initiale.
+- **Rendement annualisé** (taux de croissance annuel moyen) = (valeur finale ÷ valeur initiale)^(1/*n*) − 1.
+
+**Exemple (SIMULATION).** Un placement passe de 2 000 à 3 000 en 5 ans. Rendement total : 1 000 ÷ 2 000 = **50 %**. Annualisé : 1,5^(1/5) − 1 = **8,45 %** par an. On ne divise pas 50 % par 5 (10 %), car cela ignorerait la capitalisation : 2 000 × 1,10⁵ = 3 221,02 ≠ 3 000.
+
+**Piège de l'asymétrie des variations.** Une baisse de 40 % suivie d'une hausse de 40 % ne ramène pas au point de départ : 1 × 0,60 × 1,40 = **0,84**, soit −16 %. Pour revenir à zéro après une baisse de 40 %, il faut une hausse de 1 ÷ 0,60 − 1 = **66,7 %**. Cette asymétrie ressortira en L0.09 (lire un graphique) et en L0.10 (baisse maximale).
+
+### 4.5 Point de pourcentage, pour cent, point de base
+
+**[Définition]**
+
+- Un **point de pourcentage** est l'écart entre deux pourcentages : un taux qui passe de 2,00 % à 2,25 % augmente de **0,25 point de pourcentage**.
+- Un **point de base** (*basis point*, pb) vaut **0,01 point de pourcentage** : cette hausse vaut **25 pb**.
+- Une variation **en pour cent** compare deux niveaux : de 2,00 % à 2,25 %, le taux a augmenté de 0,25 ÷ 2,00 = **12,5 %** en valeur relative. Confondre 25 pb et 12,5 % ou 25 % est une source d'erreurs fréquente dans les articles de presse.
+
+### 4.6 Rendement nominal et rendement réel (aperçu)
+
+**[Définition]** Le **taux nominal** ne tient pas compte de la hausse des prix ; le **taux réel** mesure le gain de **pouvoir d'achat**. L'approximation usuelle est **r réel ≈ r nominal − inflation**. La formule exacte est **(1 + r nominal) ÷ (1 + inflation) − 1**. L'approximation est bonne pour des taux faibles, moins pour des taux élevés. Le taux réel est un pilier de l'analyse de l'or et du dollar (**L4.03, L5.03**) ; l'inflation est étudiée en **L1.04**. Ici, il suffit de savoir faire le calcul.
+
+### 4.7 La règle des 72 : un ordre de grandeur
+
+**[Définition]** Le **temps de doublement** d'un capital au taux annuel *r* (en %) est approximativement **72 ÷ r** années. **[Calcul de l'auteur]** La valeur exacte est ln 2 ÷ ln(1 + r). À 8 % : 72 ÷ 8 = 9 ans ; exact : 0,6931 ÷ 0,07696 = **9,01 ans**. À 3,5 % : 72 ÷ 3,5 = 20,6 ans ; exact : 0,6931 ÷ 0,03440 = **20,15 ans**. C'est une **approximation**, pas une loi.
+
+### 4.8 Pourquoi cela compte pour le Forex et l'or (aperçu)
+
+- **Forex** : détenir une devise permet en général de la placer au taux de son pays. Deux placements à 4 % (dollar) et 2 % (euro) diffèrent de 2 points par an ; mais la devise peut aussi bouger. **Exemple (SIMULATION)** : 1 000 USD placés un an à 4 % → **1 040 USD**. Convertis en EUR à 1,0800 (925,93 EUR), placés à 2 % → 944,44 EUR ; reconvertis un an plus tard : à 1,0800 → **1 020 USD** ; à 1,1124 (+3 %) → **1 050,6 USD**. Selon ce que fait le taux de change, le placement en euro est moins ou plus intéressant. L4.01 formalise ce lien.
+- **Or** : l'or physique ne verse pas d'intérêt (**[Définition]**, développée en L5.03). Détenir 1 once à 5 000 USD (SIMULATION) alors qu'un dépôt rapporterait 4 % revient à renoncer à 200 USD par an : c'est un **coût d'opportunité**.
+
+## 5. Définitions essentielles
+
+- **Intérêt** : prix de l'usage d'un capital pendant une durée.
+- **Intérêts simples** : calculés sur le capital initial seulement.
+- **Intérêts composés (capitalisation)** : les intérêts s'ajoutent au capital et portent à leur tour intérêt.
+- **Taux nominal / taux effectif annuel (TEA)** : taux annoncé / taux réellement obtenu sur un an après capitalisation.
+- **Valeur future / valeur actuelle** : valeur d'une somme à une date ultérieure / ramenée à aujourd'hui.
+- **Taux d'actualisation** : taux utilisé pour ramener une somme future à aujourd'hui.
+- **Rendement total / annualisé** : variation relative sur la période / taux de croissance annuel moyen.
+- **Point de base (pb)** : 0,01 point de pourcentage.
+- **Taux réel** : taux nominal corrigé de l'inflation.
+- **Coût d'opportunité** : gain auquel on renonce en choisissant une option plutôt qu'une autre.
+
+## 6. Exemples chiffrés
+
+**Exemple A — Simple contre composé.** 1 000 à 5 % sur 10 ans : 1 500 contre 1 628,89 (§4.1).
+
+**Exemple B — Taux effectif.** 5 % nominal capitalisé mensuellement → 5,1162 % (§4.2).
+
+**Exemple C — Actualisation.** 1 000 dans 3 ans à 4 % → 889,00 (§4.3).
+
+**Exemple D — Annualiser.** 2 000 → 3 000 en 5 ans → 8,45 %/an (§4.4).
+
+**Exemple E — Asymétrie.** −40 % puis +40 % → −16 % (§4.4).
+
+### 6.5 Cas historique documenté — l'obligation d'épargne américaine « Series EE » (2005)
+
+**[Fait, S-UST-02, communiqué du Trésor américain du 4 avril 2005, lu par résumé automatique]** Les obligations d'épargne « Series EE » émises à partir du 1er mai 2005 portent un **taux fixe** pour leur durée de 30 ans. Le Trésor **garantit un doublement minimal de la valeur après 20 ans** (si la valeur est inférieure, il fait un ajustement unique à l'échéance initiale). Le communiqué précise : « Interest accrues monthly and is compounded semiannually » (les intérêts s'accumulent chaque mois et sont capitalisés semestriellement).
+
+*Ce que le communiqué ne dit pas dans le résumé lu :* le niveau du taux fixe et les règles de la période de prolongation.
+
+**[Calcul de l'auteur]** Un doublement en 20 ans correspond à un taux effectif annuel minimal de 2^(1/20) − 1 = **3,53 %**. Avec une capitalisation semestrielle, le taux nominal annuel équivalent est 2 × (2^(1/40) − 1) = **3,50 %** (contrôle : (1 + 0,034959/2)⁴⁰ = 2). La règle des 72 donne 72 ÷ 20 = 3,6 % (approximation un peu élevée). **[Interprétation]** Cet exemple montre qu'une promesse de doublement est une promesse de **rendement annualisé minimal**, et qu'elle se calcule avec les formules de cette leçon. Une page du Trésor consultée sur le même produit (affichant « 0,30 % jusqu'au 31 octobre 2015 ») est obsolète : elle n'est pas utilisée pour un taux actuel.
+
+## 7. Application au Forex et à l'or
+
+- **Taux directeurs** : une hausse de 25 pb d'un taux directeur modifie l'ensemble des taux de marché ; elle se lit toujours en points de base et en niveaux, jamais en pourcentage relatif du taux (module 2).
+- **Différentiel de taux** : l'écart entre deux taux d'intérêt est un déterminant de la demande pour une devise ; il doit être comparé à l'évolution probable du taux de change (module 4).
+- **Or** : détenir de l'or a un coût d'opportunité d'autant plus élevé que les taux réels sont élevés (L5.03).
+- **Valorisation** : actualiser un flux revient à comparer le présent au futur ; plus les taux montent, plus les flux lointains perdent de valeur (L0.08).
+- **Une bonne analyse fondamentale ne garantit pas une transaction gagnante** ; les calculs de cette leçon sont des identités mathématiques, pas des prévisions.
+
+## 8. Erreurs courantes
+
+- **Diviser un rendement total par le nombre d'années** au lieu de l'annualiser.
+- **Comparer un taux nominal et un taux effectif.**
+- **Additionner des sommes à des dates différentes** sans les actualiser.
+- **Confondre point de pourcentage, point de base et variation en pour cent.**
+- **Croire que −40 % puis +40 % ramène à zéro.**
+- **Utiliser la règle des 72 comme une loi exacte.**
+- **Oublier l'inflation** en comparant des taux sur de longues périodes.
+- **Penser que des intérêts composés « garantissent » un gain** : le taux lui-même peut changer ou le débiteur peut manquer à ses engagements.
+
+## 9. Limites de l'interprétation
+
+- Les formules supposent un **taux constant** et sans défaut de paiement ; la réalité est plus incertaine.
+- Le **taux d'actualisation** n'a pas de valeur unique : le choisir est une décision d'analyse.
+- La page de la **CFPB** a été lue par résumé automatique ; elle ne définit pas l'intérêt simple, ni APR/APY. Les glossaires d'Investor.gov (valeur temps de l'argent, intérêt composé) n'ont pas pu être lus : seuls les titres de la page étaient restitués.
+- Le **communiqué du Trésor de 2005** décrit un produit américain ; il n'est pas un modèle pour d'autres juridictions, et le taux fixe n'y est pas donné dans le résumé lu.
+- L'aperçu sur le **Forex** (§4.8) est simplifié : il ignore les coûts, les taxes et les produits de couverture.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Simple contre composé.** Un capital de 1 000 est placé 8 ans à 6 %. (a) Valeur à intérêts simples ? (b) Valeur à intérêts composés annuels ? (c) Écart et part due à la capitalisation ?
+
+<details>
+<summary>Correction 1</summary>
+
+(a) 1 000 × (1 + 0,06 × 8) = 1 000 × 1,48 = **1 480,00**.
+(b) 1 000 × 1,06⁸ = 1 000 × 1,593848 = **1 593,85**.
+(c) Écart = 1 593,85 − 1 480,00 = **113,85**, soit 113,85 ÷ 593,85 ≈ 19,2 % des intérêts composés totaux (593,85).
+</details>
+
+**Exercice 2 — Taux effectif.** Taux nominal de 6 %. Calcule le TEA pour une capitalisation semestrielle, trimestrielle, mensuelle et quotidienne (365).
+
+<details>
+<summary>Correction 2</summary>
+
+Semestrielle : 1,03² − 1 = **6,0900 %**. Trimestrielle : 1,015⁴ − 1 = **6,1364 %**. Mensuelle : 1,005¹² − 1 = **6,1678 %**. Quotidienne : (1 + 0,06/365)³⁶⁵ − 1 = **6,1831 %**. Le gain marginal diminue quand la fréquence augmente.
+</details>
+
+**Exercice 3 — Actualiser pour décider.** On te propose 1 000 aujourd'hui ou 1 100 dans 2 ans. Que choisis-tu si ton taux d'actualisation est (a) 4 % ? (b) 6 % ? (c) Pour quel taux es-tu indifférent (valeur approchée) ?
+
+<details>
+<summary>Correction 3</summary>
+
+(a) VA = 1 100 ÷ 1,04² = 1 100 ÷ 1,0816 = **1 017,01** > 1 000 → attendre.
+(b) VA = 1 100 ÷ 1,06² = 1 100 ÷ 1,1236 = **979,00** < 1 000 → prendre 1 000 maintenant.
+(c) Indifférence : 1,1 = (1 + r)² → r = √1,1 − 1 = **4,88 %**.
+</details>
+
+**Exercice 4 — Annualiser et doubler.** Un placement passe de 2 000 à 3 000 en 5 ans. (a) Rendement total ? (b) Rendement annualisé ? (c) Temps de doublement estimé par la règle des 72, puis exact. (d) Pourquoi 50 % ÷ 5 = 10 % est-il faux ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) 1 000 ÷ 2 000 = **50 %**.
+(b) 1,5^(1/5) − 1 = **8,45 %** par an (1,0845⁵ = 1,5).
+(c) Règle des 72 : 72 ÷ 8,45 ≈ **8,5 ans** ; exact : ln 2 ÷ ln 1,0845 = 0,6931 ÷ 0,0811 ≈ **8,54 ans**.
+(d) Parce que 10 % par an composés donnent 2 000 × 1,1⁵ = 3 221,02, pas 3 000.
+</details>
+
+**Exercice 5 — Points, pb et pour cent ; nominal et réel.** (a) Un taux passe de 3,50 % à 3,75 % : variation en points de pourcentage, en pb et en pour cent relatif ? (b) Rendement nominal 8 % et inflation 5 % : taux réel approché et exact ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) +0,25 point de pourcentage = **25 pb** ; relatif : 0,25 ÷ 3,50 = **7,14 %**.
+(b) Approché : 8 % − 5 % = **3,00 %**. Exact : 1,08 ÷ 1,05 − 1 = **2,857 %**. L'écart (0,14 point) augmente avec les taux.
+</details>
+
+**Exercice 6 — Un doublement garanti.** Le Trésor américain garantit, pour les obligations d'épargne « Series EE » émises à partir de mai 2005, un doublement minimal après 20 ans. (a) Quel taux effectif annuel minimal cela représente-t-il ? (b) Quel taux nominal annuel avec une capitalisation semestrielle ? (c) Compare à la règle des 72. (d) Que ne sait-on pas, d'après la source lue ?
+
+<details>
+<summary>Correction 6</summary>
+
+(a) 2^(1/20) − 1 = **3,526 %**.
+(b) 2 × (2^(1/40) − 1) = **3,496 %** ; contrôle (1 + 0,03496/2)⁴⁰ ≈ 2,00.
+(c) 72 ÷ 20 = **3,6 %**, un peu supérieur au taux exact (3,527 %) : approximation.
+(d) Le niveau du taux fixe réellement servi ; le communiqué lu ne le donne pas. La garantie est un **minimum**.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L0.07.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Le taux d'intérêt est le **prix du temps** : une somme aujourd'hui vaut plus qu'une même somme plus tard.
+- **Simple** : P(1 + r·n). **Composé** : P(1 + r)ⁿ. L'écart croît avec le temps.
+- **Taux effectif** = (1 + r/m)ᵐ − 1 ; il augmente avec la fréquence, de moins en moins.
+- **Valeur actuelle** = VF ÷ (1 + r)ⁿ ; quand le taux monte, la valeur actuelle baisse.
+- **Rendement annualisé** = (VF/VI)^(1/n) − 1 ; −40 % puis +40 % donne −16 %.
+- **25 pb = 0,25 point de pourcentage.**
+- **Réel ≈ nominal − inflation** (exact : (1+r)/(1+π) − 1).
+- Ces outils servent aux obligations (L0.08), au risque (L0.10), au carry en Forex (module 4) et au coût d'opportunité de l'or (L5.03).
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer intérêts simples et composés et expliquer l'écart (Exercice 1).
+- [ ] Calculer un taux effectif annuel (Exercice 2).
+- [ ] Actualiser pour comparer deux sommes à des dates différentes (Exercice 3).
+- [ ] Annualiser un rendement et estimer un temps de doublement (Exercice 4).
+- [ ] Distinguer points, pb, pour cent, nominal et réel (Exercice 5).
+- [ ] Traduire une promesse de doublement en taux annuel (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-CFPB-01** — Consumer Financial Protection Bureau, « What is compound interest? » : https://www.consumerfinance.gov/ask-cfpb/what-is-compound-interest-en-1683/
+- **S-UST-02** — U.S. Treasury (Bureau of the Public Debt), communiqué du 4 avril 2005 sur les Series EE : https://savingsbond.gov/news/2005/release-04-04
+
+**Définitions et formules de cours non rattachées à une source :** intérêts simples, taux effectif annuel, valeur actuelle, rendement annualisé, point de base, taux réel, règle des 72, coût d'opportunité (identités mathématiques standard). **Sources tentées et non lues :** Investor.gov (« time value of money », « compound interest and time » : corps de page vide), TreasuryDirect (page « EE bonds » : obsolète, sans la garantie de doublement). **Données observées :** aucun taux de marché actuel n'est utilisé dans cette leçon.

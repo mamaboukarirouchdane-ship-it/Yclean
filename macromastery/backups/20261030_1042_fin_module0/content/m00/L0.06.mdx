@@ -1,0 +1,306 @@
+---
+id: L0.06
+module: 0
+order: 6
+title: "L'or sur les marchés : once troy, spot, contrats à terme, ETF et or physique"
+title_initial: "L'or sur les marchés"
+level: débutant
+duration_hours: 2.5
+prerequisites: ["L0.03", "L0.05"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L0.06.quiz.json"
+sources: ["S-LBMA-01", "S-LBMA-02", "S-LBMA-03", "S-CME-02", "S-CME-03", "S-WGC-01", "S-WGC-02", "S-BIS-03"]
+---
+
+# L0.06 — L'or sur les marchés : once troy, spot, contrats à terme, ETF et or physique
+
+> **Convention de lecture.** **[Fait]** = vérifié dans une source citée ; **[Définition]** = convention de vocabulaire ; **[Calcul de l'auteur]** = calcul fait à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Cette leçon suppose connus : la cotation BASE/COTATION et le fait que XAU/USD suit la même logique qu'une paire de devises (L0.03), les taux croisés et la méthode des unités (L0.05), le gré à gré et les contrats à terme standardisés (L0.01). **Les notions déjà vues sont rappelées en une ligne, puis la leçon change d'angle** : elle décrit **ce que l'on achète vraiment** quand on « achète de l'or » selon l'instrument choisi, avec quelles unités, quels coûts et quels risques.
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. convertir un prix de l'or entre **once troy, gramme et kilogramme**, et calculer la valeur d'une barre ;
+2. calculer le prix de l'or dans **une autre devise** (euro, franc CFA) avec la méthode des unités ;
+3. décrire les **quatre façons d'avoir une exposition à l'or** (marché au comptant, contrats à terme standardisés, fonds cotés ou ETF, or physique) et dire **ce que l'on possède** et **sur qui l'on compte** dans chacun ;
+4. expliquer la différence entre **compte alloué** et **compte non alloué** sur le marché de gré à gré de Londres ;
+5. calculer le gain ou la perte d'un contrat à terme sur l'or pour une variation de prix, selon la taille du contrat ;
+6. chiffrer le **coût d'achat et de revente d'or physique** (prime et décote) et l'effet des frais d'un ETF ;
+7. lire un chiffre de **demande d'or** (World Gold Council, 2025) sans commettre l'erreur de le comparer à une seule composante de l'offre.
+
+## 2. Prérequis
+
+L0.03 (cotation), L0.05 (taux croisés), L0.01 (contrat à terme standardisé). Multiplication, division, pourcentages.
+
+## 3. Explication intuitive
+
+« Acheter de l'or » peut vouloir dire quatre choses très différentes :
+
+- **acheter un prix au comptant** : tu paries sur la hausse ou la baisse du cours de l'once, auprès d'un teneur de marché, sans jamais voir une barre ;
+- **acheter un contrat à terme standardisé** : tu prends une exposition à l'or à travers un contrat de bourse ;
+- **acheter une part d'un fonds** qui détient de l'or (ETF) ;
+- **acheter une pièce ou une barre** que tu peux tenir dans la main (or physique).
+
+Imagine quatre moyens d'avoir du riz : un contrat chez le grossiste pour un prix et une livraison futurs, un bon d'achat émis par un entrepôt, une part d'un entrepôt collectif, ou un sac dans ta cuisine. Le riz est le même ; **les droits, les coûts et les risques ne sont pas les mêmes**. Pour l'or, c'est pareil. Dans cette leçon, on apprend à les distinguer, en commençant par l'unité de mesure, qui n'est pas celle du kilo ordinaire.
+
+## 4. Développement technique
+
+### 4.1 L'once troy : une unité à ne pas confondre avec l'once ordinaire
+
+**[Fait, S-LBMA-01]** Le marché de gros des métaux précieux de Londres traite en **onces troy**. Le texte de la LBMA (annexe 3 du Code mondial des métaux précieux) donne les équivalences :
+
+- 1 once troy = **31,1034768 grammes** ;
+- 1 kilogramme = **32,1507465 onces troy** ;
+- 1 once troy = 1,0971428 once avoirdupois (l'once « ordinaire »).
+
+L'once troy pèse donc **plus** que l'once ordinaire. Confondre les deux fausse un calcul d'environ 10 %.
+
+**Conversions utiles** [Calcul de l'auteur] :
+
+- prix par gramme = prix par once troy ÷ 31,1034768 ;
+- prix par kilogramme = prix par once troy × 32,1507465.
+
+**Exemple (SIMULATION, valeur ronde).** À 5 000 USD l'once : 5 000 ÷ 31,1034768 = **160,75 USD le gramme** ; 5 000 × 32,1507465 = **160 753,73 USD le kilogramme**. *(Le prix de 5 000 est une valeur ronde fictive ; le World Gold Council écrit que l'or a dépassé pour la première fois 5 000 USD l'once en janvier 2026 (S-WGC-02, résumé automatique), mais cette leçon ne donne aucun cours observé.)*
+
+### 4.2 Le marché de gros de Londres : spot, comptes et barres
+
+**[Fait, S-LBMA-02]** Le guide de la LBMA sur le marché de gré à gré de Londres indique que les métaux précieux sont **cotés par défaut en dollars américains par once troy** ; que le lieu de livraison par défaut de l'or et de l'argent est **Londres** (*loco London*), c'est-à-dire un compte tenu chez une banque de compensation, adossé à du métal conservé dans une chambre forte londonienne ; qu'une transaction **au comptant (spot)** se règle **deux jours ouvrés londoniens après la date de transaction** (un lundi → mercredi) ; et que des variations de pureté, de format ou de forme peuvent être cotées avec une **prime ou une décote** par rapport au prix loco Londres.
+
+**Barres de référence.** **[Fait, S-LBMA-01, S-LBMA-03]** La barre d'or « de bonne livraison » de Londres (*Good Delivery*) a un titre minimal de **995 millièmes** et une teneur en or fin de **350 à 430 onces troy** ; la LBMA précise que les barres sont « généralement proches de 400 onces ou 12,5 kg ». Une autre page de la LBMA mentionne « environ 400 onces troy fines » pour l'or.
+
+**Compte alloué et compte non alloué.** **[Fait, S-LBMA-01]**
+
+| | Non alloué | Alloué |
+| --- | --- | --- |
+| Ce que tu possèdes | Une **créance** sur le stock général du teneur de compte | **Des barres identifiées** (liste barre par barre), dont tu as la pleine propriété |
+| Risque spécifique | **Risque de crédit** sur l'établissement qui tient le compte | Frais de garde ; le teneur agit comme dépositaire |
+| Fréquence | « La méthode la plus courante » selon le texte | Moins courant |
+
+*Ce que la source ne dit pas : la LBMA ne définit pas « spot » dans l'extrait lu (c'est le guide de marché qui donne le règlement à deux jours), ni les commissions ni les spreads.*
+
+### 4.3 Les contrats à terme standardisés sur l'or
+
+Rappel de L0.01 : un contrat à terme standardisé (*future*) est négocié sur une bourse, avec des caractéristiques fixes. Pour l'or américain, les contrats de CME Group (COMEX) sont :
+
+| Contrat | Taille | Variation minimale | Valeur de la variation minimale | Règlement |
+| --- | --- | --- | --- | --- |
+| Gold (GC) | 100 onces troy | 0,10 USD par once | 10,00 USD par contrat | Livraison physique |
+| Micro Gold (MGC) | 10 onces troy | 0,10 USD par once | 1,00 USD par contrat | Livraison physique (via des « ACE ») |
+| 1-Ounce Gold (1OZ) | 1 once troy | 0,25 USD par once | 0,25 USD | **En espèces**, sur le prix de règlement du GC |
+
+**[Fait, S-CME-02, S-CME-03, lus par résumé automatique]** La fiche de CME indique aussi que l'or livré dans le contrat GC ou MGC doit avoir un titre minimal de **995**, et qu'un « ACE » représente 10 % de la propriété d'une barre de 100 onces. *Les valeurs par contrat sont des calculs de l'auteur (100 × 0,10 = 10 ; 10 × 0,10 = 1) ; la taille de l'E-mini à 50 onces figure dans la fiche mais n'est pas utilisée ici.*
+
+**Sens économique.** **[Calcul de l'auteur]** La **taille du contrat** fixe la sensibilité : pour une hausse de 1 USD l'once, un contrat GC gagne 100 USD, un MGC 10 USD, un 1OZ 1 USD. Le **pourcentage** de variation est le même (voir exercice 3) ; seule la taille de l'enjeu change.
+
+**[Interprétation]** Un contrat à terme n'a pas le même prix que le prix au comptant : l'écart (base) dépend du temps restant et du coût de portage. Ce mécanisme est traité en **L5.09**. *Les horaires de négociation du GC n'ont pas pu être confirmés dans les documents lus ; ils ne sont pas donnés ici.*
+
+### 4.4 Les fonds cotés (ETF) adossés à de l'or
+
+**[Définition]** Un ETF d'or « physique » est un fonds coté en bourse dont les parts sont adossées à de l'or détenu par un dépositaire. Tu achètes des **parts du fonds**, pas des barres à ton nom.
+
+**[Fait, S-WGC-01, page de présentation d'un podcast du World Gold Council, organisme représentant l'industrie de l'or]** La page décrit les ETF d'or à travers la **création et le rachat de parts**, le rôle des **participants autorisés** pour la stabilité du prix et de la liquidité, la distinction entre **administrateur et dépositaire**, et rappelle que le premier ETF d'or coté aux États-Unis (GLD) a 20 ans à la date de l'épisode (11 juillet 2025). *Elle ne donne ni frais, ni encours, ni détail du suivi de la valeur liquidative ; le détail doit être cherché dans le prospectus de chaque fonds.*
+
+**Ce que cela implique** [Interprétation, à vérifier dans le prospectus de chaque fonds] :
+
+- le fonds prélève des **frais annuels**, qui diminuent la quantité d'or représentée par chaque part au fil du temps ;
+- tu dépends de la **structure du fonds** (dépositaire, administrateur, participants autorisés) ;
+- tu peux acheter et vendre pendant les heures de la bourse, avec un spread de marché (L0.04).
+
+### 4.5 L'or physique : pièces et barres
+
+Acheter une pièce ou une petite barre signifie accepter :
+
+- une **prime** à l'achat par rapport au cours au comptant (frais de fabrication, de distribution, marge du revendeur) ;
+- une **décote** à la revente ;
+- des coûts de **stockage et d'assurance** ;
+- des questions d'authenticité et de pureté (vérifier le titre).
+
+**[Fait, S-LBMA-02]** Le guide de la LBMA confirme que des variations de format ou de pureté sont cotées en prime ou décote par rapport au prix loco Londres. **[Calcul de l'auteur, SIMULATION]** L'exercice 4 chiffre un aller-retour sur une pièce.
+
+### 4.6 Qui achète de l'or ? Le cas des chiffres de 2025
+
+**[Fait, S-WGC-02, communiqué du World Gold Council sur la demande d'or 2025, lu par résumé automatique]** :
+
+- demande totale 2025 : **5 002 tonnes**, un record ;
+- demande d'investissement : **2 175 tonnes**, un record, dont **801 tonnes** de fonds cotés (ETF) et **1 374 tonnes** de barres et pièces (valeur : 154 milliards de dollars) ;
+- achats nets des banques centrales : **863 tonnes** ;
+- production minière : **3 672 tonnes**, un record ; le recyclage a augmenté de 3 % ;
+- demande de bijouterie : en baisse de 18 % sur un an, mais valeur en hausse de 18 % à 172 milliards de dollars.
+
+*Ce que le communiqué ne donne pas dans le résumé lu : la date de publication, le tonnage de la bijouterie et de la technologie, l'offre totale et le prix annuel moyen.*
+
+**[Calcul de l'auteur]** 801 + 1 374 = 2 175, ce qui est cohérent avec la demande d'investissement. Les ETF représentent donc 801 ÷ 2 175 ≈ **36,8 %** de la demande d'investissement, et 801 ÷ 5 002 ≈ 16,0 % de la demande totale.
+
+**Erreur à éviter.** Il serait tentant de calculer 5 002 − 3 672 = 1 330 tonnes de « déficit ». **Ce serait faux** : la production minière n'est qu'une **composante** de l'offre (le recyclage en est une autre, et la source parle d'une offre totale record). Comparer une demande totale à une seule composante de l'offre n'a pas de sens. Le module 5 revient en détail sur l'offre et la demande.
+
+### 4.7 Le franc CFA et l'or
+
+La méthode des unités (L0.05) permet de coter l'or dans n'importe quelle devise : XAU/EUR = XAU/USD ÷ EUR/USD ; XAU/XOF = XAU/EUR × 655,957 (parité fixe, S-BCEAO-01 vu en L0.05). **[Calcul de l'auteur]** Un détenteur d'or au Bénin voit donc la valeur en francs CFA varier avec **deux** facteurs : le prix de l'once en dollars et le taux EUR/USD (exercice 2).
+
+## 5. Définitions essentielles
+
+- **Once troy** : unité de masse des métaux précieux ; 31,1034768 g.
+- **Once avoirdupois** : once « ordinaire » ; plus légère que l'once troy.
+- **XAU/USD** : prix d'une once troy d'or en dollars.
+- **Loco London** : lieu de livraison par défaut ; compte tenu à Londres.
+- **Barre Good Delivery** : barre d'or de bonne livraison (≈ 400 onces, 995 minimum, 350 à 430 onces d'or fin).
+- **Compte non alloué / alloué** : créance sur un stock commun / barres identifiées en pleine propriété.
+- **Prime / décote** : écart de prix par rapport au prix au comptant selon le format et la forme.
+- **GC, MGC, 1OZ** : contrats à terme sur l'or de 100 / 10 / 1 once.
+- **ETF d'or physique** : fonds coté adossé à de l'or ; on détient des parts.
+- **Participant autorisé** : intermédiaire qui crée ou rachète des parts d'un ETF.
+- **Demande d'investissement** : somme des achats d'ETF et de barres et pièces (définition du communiqué du WGC dans l'extrait lu).
+
+## 6. Exemples chiffrés
+
+*Prix fictifs : **[SIMULATION]** (valeur ronde de 5 000 USD l'once), sauf mention « réel ».*
+
+**Exemple A — La barre.** Une barre de 400 onces pèse 400 × 31,1034768 = **12 441,39 g**, soit 12,44 kg (LBMA : « environ 12,5 kg »). À 5 000 USD l'once : 400 × 5 000 = **2 000 000 USD**.
+
+**Exemple B — L'or en euros et en francs CFA.** EUR/USD = 1,0800. XAU/EUR = 5 000 ÷ 1,0800 = **4 629,63 EUR l'once**. XAU/XOF = 4 629,63 × 655,957 = **3 036 838 XOF l'once** (3 036 837,96) et 3 036 838 ÷ 31,1034768 = **97 637 XOF le gramme** environ.
+
+**Exemple C — Le contrat.** Un contrat GC représente 100 × 5 000 = **500 000 USD** de valeur notionnelle. Si le prix passe à 5 050 (+1 %), le gain est 50 × 100 = **5 000 USD**.
+
+**Exemple D — Les frais d'un ETF.** Une part représente 0,1 once ; frais de 0,40 % par an, prélevés en or. Après un an : 0,1 × (1 − 0,004) = **0,0996 once** ; après trois ans : 0,1 × 0,996³ = **0,09880 once**.
+
+### 6.5 Cas historique documenté (récent) — la structure de la demande d'or en 2025
+
+Voir §4.6 : demande totale 5 002 t, investissement 2 175 t (ETF 801 t, barres et pièces 1 374 t), banques centrales 863 t, production minière 3 672 t (World Gold Council, résumé automatique, S-WGC-02). **[Interprétation]** La leçon à retenir pour un apprenant est la **diversité des acheteurs** : bijouterie, investisseurs en fonds, investisseurs en barres et pièces, banques centrales. Chaque catégorie a des motivations et un horizon différents (L0.02, module 5). Ces chiffres sont **observés** par un organisme de l'industrie de l'or ; ils ne disent pas si le prix va monter.
+
+## 7. Application au Forex et à l'or
+
+- **Choisir l'instrument avant le raisonnement** : une analyse macroéconomique peut conduire à vouloir de l'exposition à l'or ; encore faut-il choisir un instrument dont les coûts, la taille et les risques correspondent au plan (module 11).
+- **Compter les unités** : toujours vérifier once troy / gramme / kilogramme et la devise de cotation avant de comparer deux prix.
+- **Taux de change implicite** : le prix de l'or en euros ou en francs CFA dépend aussi de EUR/USD, ce qui lie l'or au marché des changes (module 5).
+- **Coûts réels** : spread, prime, frais annuels, coûts de stockage — pas seulement le cours.
+- **Une bonne analyse fondamentale ne garantit pas une transaction gagnante** ; le choix de l'instrument ne la garantit pas non plus.
+
+## 8. Erreurs courantes
+
+- **Confondre once troy et once ordinaire** (écart d'environ 10 %).
+- **Oublier la devise de cotation** : XAU/USD est en dollars ; le prix en euros ou en francs CFA se calcule.
+- **Penser qu'un ETF « est » de l'or physique à ton nom** : tu détiens des parts d'un fonds.
+- **Confondre compte alloué et non alloué** : le second est une créance sur l'établissement.
+- **Ignorer la taille du contrat à terme** : 1 USD de variation ne vaut pas la même chose sur GC, MGC et 1OZ.
+- **Oublier la prime et la décote** de l'or physique.
+- **Comparer une demande totale à la production minière seule.**
+- **Confondre pourcentage et montant** : +1 % sur 500 000 USD, ce n'est pas +1 % sur 5 000.
+
+## 9. Limites de l'interprétation
+
+- Les **contrats CME** sont décrits d'après une fiche et un comparatif lus par résumé automatique ; les horaires et les marges ne sont pas confirmés.
+- La page du **World Gold Council** sur les ETF est une présentation de podcast d'un organisme de l'industrie ; elle ne remplace ni un prospectus ni une source indépendante.
+- Les **chiffres de demande 2025** viennent d'un résumé automatique d'un communiqué dont la date n'a pas été lue.
+- Les **primes, décotes et frais d'ETF** de la leçon sont fictifs.
+- L'extrait de la LBMA sur le « spot » ne donne pas de définition ; le règlement à deux jours vient du guide de marché.
+- Aucun prix actuel de l'or n'est donné : aucune source de prix n'a été consultée.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Unités.** Prix : 5 000 USD l'once troy (SIMULATION). (a) Prix par gramme ? (b) Prix par kilogramme ? (c) Masse d'une barre de 400 onces troy en grammes et en kilogrammes ? (d) Valeur de cette barre ? (e) Quelle erreur de pourcentage ferait-on en utilisant 28,35 g au lieu de 31,1034768 g pour l'once ?
+
+<details>
+<summary>Correction 1</summary>
+
+(a) 5 000 ÷ 31,1034768 = **160,75 USD/g**.
+(b) 5 000 × 32,1507465 = **160 753,73 USD/kg** (contrôle : 160,75 × 1 000 ≈ 160 753).
+(c) 400 × 31,1034768 = **12 441,39 g** = **12,44 kg**.
+(d) 400 × 5 000 = **2 000 000 USD**.
+(e) 28,35 ÷ 31,1034768 = 0,9115, soit une masse sous-estimée d'environ **8,9 %** (donc un prix par gramme surestimé d'environ 9,7 % si on divisait par 28,35). *(28,35 g est la valeur approchée de l'once ordinaire, donnée ici comme exemple d'erreur ; elle n'est pas sourcée dans la leçon.)*
+</details>
+
+**Exercice 2 — L'or dans d'autres devises.** XAU/USD = 5 000 ; EUR/USD = 1,0800 ; 1 EUR = 655,957 XOF (SIMULATION). (a) XAU/EUR ? (b) XAU/XOF par once ? (c) par gramme ? (d) Si l'or reste à 5 000 USD mais que EUR/USD passe à 1,1000, que devient XAU/EUR (variation en %) ?
+
+<details>
+<summary>Correction 2</summary>
+
+(a) 5 000 ÷ 1,0800 = **4 629,63 EUR**.
+(b) 4 629,63 × 655,957 = **3 036 838 XOF** (3 036 837,96).
+(c) 3 036 838 ÷ 31,1034768 = **97 637 XOF/g** (97 636,6).
+(d) 5 000 ÷ 1,1000 = **4 545,45 EUR**, soit 4 545,45 ÷ 4 629,63 − 1 = **−1,82 %** : l'or baisse en euros alors que son prix en dollars n'a pas changé, parce que l'euro s'est apprécié.
+</details>
+
+**Exercice 3 — Quel instrument, quelle sensibilité ?** Le prix passe de 5 000 à 5 050 USD l'once. Calcule le gain d'une position longue de : (a) 1 contrat GC ; (b) 1 contrat MGC ; (c) 1 contrat 1OZ ; (d) 100 onces d'or physique détenues (hors prime et décote). (e) Compare les pourcentages.
+
+<details>
+<summary>Correction 3</summary>
+
+(a) 50 × 100 = **5 000 USD**.
+(b) 50 × 10 = **500 USD**.
+(c) 50 × 1 = **50 USD**.
+(d) 50 × 100 = **5 000 USD**.
+(e) Variation du prix : 50 ÷ 5 000 = **+1 %** dans tous les cas. La valeur notionnelle diffère (500 000 / 50 000 / 5 000 / 500 000 USD) mais le pourcentage reste identique ; c'est la **taille** qui fait la différence de gain absolu.
+</details>
+
+**Exercice 4 — Or physique : la prime.** Spot = 5 000 USD. Tu achètes une pièce d'une once à 5 150 USD (prime) et tu la revends 4 950 USD (décote) le lendemain. (a) Prime à l'achat en % du spot ? (b) Décote à la revente en % ? (c) Coût de l'aller-retour en USD et en % du prix payé ? (d) De combien le spot doit-il monter pour que tu sois à l'équilibre, en supposant les mêmes prime et décote ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) 150 ÷ 5 000 = **3,0 %**.
+(b) 50 ÷ 5 000 = **1,0 %**.
+(c) 5 150 − 4 950 = **200 USD** ; 200 ÷ 5 150 = **3,88 %**.
+(d) Il faut que le prix de revente (spot × 0,99) atteigne 5 150 : spot = 5 150 ÷ 0,99 = 5 202,02, soit **+4,04 %** par rapport à 5 000 (SIMULATION).
+</details>
+
+**Exercice 5 — ETF : l'effet des frais.** Une part représente 0,1 once troy ; frais de 0,40 % par an, prélevés chaque année sur la quantité d'or. L'or reste à 5 000 USD. (a) Quantité d'or par part après 1, 3 puis 10 ans ? (b) Valeur de la part après 3 ans ? (c) Manque à gagner après 3 ans par rapport à 500 USD ? (d) Cite deux risques ou dépendances spécifiques à un ETF, et une que l'on n'a pas avec une barre à son nom (à vérifier dans le prospectus).
+
+<details>
+<summary>Correction 5</summary>
+
+(a) 1 an : 0,1 × 0,996 = **0,0996** once ; 3 ans : 0,1 × 0,996³ = **0,09880** once ; 10 ans : 0,1 × 0,996¹⁰ = **0,09607** once.
+(b) 0,0988048 × 5 000 = **494,02 USD**.
+(c) 500 − 494,02 = **5,98 USD**, soit 1,20 %.
+(d) À vérifier dans chaque prospectus : dépendance au dépositaire, à l'administrateur et à la structure du fonds ; frais annuels ; achat au prix de bourse. Avec une barre à son nom, on évite ces dépendances mais on supporte stockage, assurance et prime à l'achat. *Chiffres fictifs ; aucun fonds réel n'est décrit.*
+</details>
+
+**Exercice 6 — Lire un chiffre de demande.** À partir du communiqué du World Gold Council sur 2025 (S-WGC-02) : demande totale 5 002 t ; investissement 2 175 t dont ETF 801 t ; banques centrales 863 t ; production minière 3 672 t. (a) Vérifie que 801 + barres et pièces (1 374) = 2 175. (b) Part des ETF dans la demande d'investissement ? (c) Part des banques centrales dans la demande totale ? (d) Un lecteur écrit : « 5 002 − 3 672 = 1 330 t de déficit ». Pourquoi est-ce une erreur ?
+
+<details>
+<summary>Correction 6</summary>
+
+(a) 801 + 1 374 = **2 175** ✔.
+(b) 801 ÷ 2 175 = **36,8 %**.
+(c) 863 ÷ 5 002 = **17,3 %** (17,25 %).
+(d) La production minière n'est qu'une composante de l'offre. Le communiqué mentionne aussi le recyclage (+3 %) et une offre totale record sans donner de total dans le résumé lu. Soustraire une seule composante d'une demande totale ne donne pas un déficit. *Pour calculer un équilibre, il faudrait l'offre totale et la définition de la demande utilisée par la source.*
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L0.06.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- L'or se mesure en **onces troy** : 1 once troy = 31,1034768 g ; 1 kg = 32,1507465 onces troy.
+- XAU/USD se transforme en prix en euros ou en francs CFA par la **méthode des unités** (L0.05).
+- Le marché de gros de Londres cote en dollars par once, règle le comptant à **deux jours ouvrés**, et distingue comptes **alloués** (barres identifiées) et **non alloués** (créance sur l'établissement).
+- Une barre de bonne livraison pèse environ 400 onces troy (995 minimum, 350 à 430 onces d'or fin).
+- Les contrats COMEX GC / MGC / 1OZ valent 100 / 10 / 1 once : même pourcentage de variation, gains absolus différents.
+- Un **ETF** donne des parts d'un fonds, avec des frais ; l'**or physique** a prime, décote et coûts de garde.
+- En 2025, selon le WGC, la demande d'or a atteint 5 002 t ; on ne la compare pas à la seule production minière.
+
+## 13. Critères de maîtrise
+
+- [ ] Convertir once troy / gramme / kilogramme (Exercice 1).
+- [ ] Calculer l'or en euros et en francs CFA (Exercice 2).
+- [ ] Calculer un gain selon la taille du contrat (Exercice 3).
+- [ ] Chiffrer prime, décote et coût d'aller-retour (Exercice 4).
+- [ ] Chiffrer l'effet de frais d'ETF et nommer ses dépendances (Exercice 5).
+- [ ] Lire des statistiques de demande sans erreur de comparaison (Exercice 6).
+- [ ] Distinguer compte alloué et non alloué (quiz).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-LBMA-01** — LBMA, *Global Precious Metals Code*, annexe 3 : https://www.lbma.org.uk/publications/the-code/annex-3-wholesale-precious-metals-spot-forward-and-deposits-in-precious-metals-basic-market-definitions
+- **S-LBMA-02** — LBMA, *A Guide to the Loco London Precious Metals Market*, section 4 « The Price » : https://www.lbma.org.uk/publications/the-otc-guide/the-price
+- **S-LBMA-03** — LBMA, *Good Delivery Rules*, définitions : https://www.lbma.org.uk/publications/good-delivery-rules/definitions
+- **S-CME-02** — CME Group, fiche « Gold futures and options » : https://www.cmegroup.com/trading/metals/files/fact-card-gold-futures-options.pdf
+- **S-CME-03** — CME Group, « 1 oz futures comparison » : https://cmegroup.com/markets/metals/files/1-oz-futures-comparison.pdf
+- **S-WGC-01** — World Gold Council, « Unearthed: Gold ETFs 101 » (11 juillet 2025) : https://www.gold.org/goldhub/gold-focus/2025/07/unearthed-gold-etfs-101-myths-mechanics-and-market-access
+- **S-WGC-02** — World Gold Council, communiqué *Gold Demand Trends Q4 et année 2025* : https://www.gold.org/download/file/20498/FY_2025_GDT_Press_Release.pdf
+- **S-BIS-03** : voir L0.02 et L0.03 (XAU/USD absent de l'enquête sur les devises).
+
+**Conventions de cours non rattachées à une source officielle :** la formule de prime/décote de l'exercice 4, le calcul de frais d'ETF de l'exercice 5, la valeur de 28,35 g pour l'once ordinaire, la définition d'un ETF d'or physique, la définition de « demande d'investissement » (reprise du communiqué). **Points non vérifiés :** horaires et marges du contrat GC ; définition de « spot » par la LBMA ; frais et encours des ETF réels ; date et texte intégral du communiqué du WGC ; exactitude des chiffres du WGC (lus par résumé automatique).

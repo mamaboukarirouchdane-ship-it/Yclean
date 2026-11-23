@@ -1,0 +1,340 @@
+---
+id: L0.04
+module: 0
+order: 4
+title: "Qui fait le prix : liquidité, sessions et taille des positions"
+title_initial: "Qui fait le prix : liquidité et sessions"
+level: débutant
+duration_hours: 2.5
+prerequisites: ["L0.01", "L0.02", "L0.03"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L0.04.quiz.json"
+sources: ["S-GFXC-01", "S-GFXC-02", "S-SEC-02", "S-CME-01", "S-CFTC-05", "S-RBA-01", "S-BIS-06", "S-BIS-04", "S-BIS-03"]
+---
+
+# L0.04 — Qui fait le prix : liquidité, sessions et taille des positions
+
+> **Convention de lecture.** **[Fait]** = vérifié dans une source citée ; **[Définition]** = convention de vocabulaire ; **[Calcul de l'auteur]** = calcul fait à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Cette leçon suppose connus : bid, ask, spread, liquidité, gré à gré (L0.01), les familles d'acteurs (L0.02), la cotation, le pip, le lot et le calcul d'un spread en pips (L0.03). Ces notions sont rappelées en une ligne quand c'est utile, puis **approfondies sous un autre angle** : qui fabrique le prix, à quelles conditions on peut l'obtenir, à quelle heure, et quelle quantité on peut raisonnablement négocier.
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. expliquer **qui produit un prix** sur le marché des changes de gré à gré et pourquoi il n'existe pas un prix unique ;
+2. distinguer un intermédiaire qui agit **en son nom propre** (*principal*) d'un intermédiaire qui exécute **pour le compte** d'un client (*agent*), et dire ce que cela change pour toi ;
+3. décrire le **dernier regard** (*last look*) et pourquoi sa transparence compte ;
+4. expliquer pourquoi le coût d'une transaction dépend de la **taille**, de l'**heure** et des **conditions de marché** ;
+5. décrire les **sessions** (Asie, Europe, Amérique), calculer leur chevauchement en heure du Bénin et dire ce que les sources permettent d'affirmer sur l'activité selon l'heure ;
+6. calculer la **valeur d'un pip** pour une taille de position, y compris quand la devise de cotation n'est pas ta devise de compte ;
+7. calculer la **taille d'une position** à partir d'un risque accepté et d'un stop, puis la marge et le levier correspondants, et expliquer pourquoi **marge et risque ne sont pas la même chose**.
+
+## 2. Prérequis
+
+L0.01 à L0.03. Multiplication, division, pourcentages, lecture d'un fuseau horaire (UTC+1, etc.).
+
+## 3. Explication intuitive
+
+Imagine un cambiste sur un marché de ville. Il affiche deux taux : un taux auquel il **achète** tes euros et un taux, plus élevé, auquel il te les **vend**. L'écart est sa rémunération et son assurance : il garde des devises en stock et prend le risque que le cours bouge avant qu'il les ait revendues. Si tu arrives avec un très gros montant, il te donnera probablement un taux moins avantageux, parce qu'il lui sera plus difficile de s'en défaire. S'il y a peu de monde ce jour-là, ou si les nouvelles sont incertaines, il élargira son écart pour se protéger.
+
+Le marché mondial des changes fonctionne de la même façon, avec trois différences : les « cambistes » sont des banques et des sociétés de négoce qui se cotent des prix **en continu et par voie électronique** ; ils sont répartis sur plusieurs fuseaux horaires ; et les montants se comptent en millions. **Le prix que tu vois est toujours la cotation de quelqu'un, pour une taille donnée, à un instant donné.** Ce n'est pas un prix « officiel » unique.
+
+Deux conséquences découlent de cette image, et elles organisent la leçon :
+
+- **Le coût de la transaction n'est pas fixe** : il dépend de ta taille, de l'heure et de l'incertitude du moment.
+- **La taille de ta position est ta décision**, et c'est la seule variable de risque que tu contrôles entièrement. On y revient en détail à la fin.
+
+## 4. Développement technique
+
+### 4.1 Qui fait le prix ?
+
+Sur le marché des changes de gré à gré (L0.01), il n'y a pas de bourse centrale qui affiche un prix. Le prix naît de **cotations** : un participant qui accepte de trader annonce un prix auquel il achète (*bid*) et un prix auquel il vend (*ask*), pour une taille donnée. Un échange a lieu quand quelqu'un « touche » ce prix.
+
+- **[Fait]** L'enquête triennale de la BRI classe les contreparties en trois groupes : les teneurs de marché déclarants (*reporting dealers*), les autres institutions financières et les clients non financiers. En avril 2025, les teneurs de marché déclarants représentaient 4 443 milliards de dollars sur 9 510 par jour, soit environ 47 % (S-BIS-03, tableau A.2, chiffres rappelés de L0.02). Ce sont ces teneurs de marché qui cotent la plupart des prix auxquels les autres se confrontent.
+- **[Définition]** Un **teneur de marché** (*market maker*) est un intermédiaire qui affiche en permanence un prix d'achat et un prix de vente, et prend ainsi le risque de garder des devises en portefeuille. Le glossaire de la SEC (S-INV-01, consulté pour L0.01) donne une définition voisine. Son revenu vient surtout du spread et de la compensation de ses positions.
+- **[Interprétation]** Parler de « prix du marché » est donc un raccourci. Ce que ton écran affiche est le prix que **ton fournisseur** t'offre, éventuellement agrégé à partir de plusieurs sources, avec sa propre marge.
+
+**Pourquoi les prix de deux fournisseurs ne sont-ils pas identiques ?** Parce qu'ils n'ont ni les mêmes stocks de devises, ni les mêmes clients, ni les mêmes marges, ni la même vitesse de mise à jour. Les écarts sont en général petits et se réduisent par **arbitrage** (on achète là où c'est moins cher, on revend là où c'est plus cher), mais ils ne disparaissent jamais complètement.
+
+### 4.2 Principal ou agent : qui est de l'autre côté de ta transaction ?
+
+Le Code mondial du change (*FX Global Code*, version de décembre 2024, 55 principes, S-GFXC-01) distingue deux rôles. **[Fait, lu dans la section du Principe 8 via un résumé automatique du PDF]** :
+
+- un intermédiaire peut agir comme **agent** : il exécute des ordres **pour le compte du client** ;
+- il peut agir comme **principal** : il traite **pour son propre compte** et **prend un risque de marché**.
+
+Le Code ne définit pas formellement ces deux mots dans le passage consulté ; ils sont décrits dans le Principe 8. Ce qui compte pour toi :
+
+| Question | Agent | Principal |
+| --- | --- | --- |
+| Contre qui trades-tu ? | Un tiers (une banque, un autre participant) trouvé par l'intermédiaire | L'intermédiaire lui-même |
+| Qui gagne si tu perds ? | Personne en particulier (l'agent est payé par une commission) | L'intermédiaire peut gagner si tu perds, car il est ta contrepartie |
+| Comment est-il payé ? | Commission, éventuellement | Spread et marge sur le prix |
+| Quel est le point de vigilance ? | Qualité d'exécution | **Conflit d'intérêts** et transparence sur le prix |
+
+**[Fait]** Le bulletin d'information de la SEC pour les investisseurs individuels (juillet 2011, S-SEC-02) indique que, hors bourse, l'investisseur traite directement avec un courtier ou un teneur de marché, sans chambre de compensation, qu'il « dépend entièrement de la contrepartie » pour recevoir ses fonds ou sortir d'une position, que les courtiers sont souvent **teneurs de marché et prennent le côté opposé** des transactions (donc ne donnent pas toujours le meilleur prix), et que les coûts peuvent passer par un spread élargi, une commission, ou les deux. Le même document précise que des transactions « sans commission » peuvent donc avoir un coût dans le spread. *Limite : ce bulletin date de 2011 et la SEC y indiquait étudier d'autres règles ; il ne décrit pas les règles actuelles.*
+
+**[Interprétation]** Un courtier qui est ta contrepartie n'est pas « malhonnête » par nature : c'est un modèle économique légitime. Mais ses intérêts ne coïncident pas toujours avec les tiens, d'où l'importance de lire ses conditions d'exécution et de comparer les coûts réels.
+
+### 4.3 La chaîne de prix et le dernier regard (*last look*)
+
+Une transaction de détail suit en général une chaîne : **client → courtier → fournisseurs de liquidité (banques et sociétés non bancaires) → autres participants**. Les prix sont transmis par voie électronique en quelques millisecondes ; ils peuvent donc changer entre le moment où tu cliques et celui où le fournisseur reçoit ta demande.
+
+Le **dernier regard** (*last look*) est la pratique par laquelle le destinataire d'une demande de transaction a **une dernière occasion de l'accepter ou de la refuser**.
+
+- **[Fait, via des résumés automatiques]** Le Comité mondial du change (GFXC) définit le dernier regard comme une pratique du trading électronique où un participant a « une dernière occasion d'accepter ou de rejeter une demande de transaction à son prix coté » (communiqué du 18 août 2021, S-GFXC-02). Le Principe 17 du Code (S-GFXC-01) demande aux participants qui l'utilisent d'être **transparents** : expliquer comment les variations de prix affectent l'acceptation, la durée typique de la décision et la finalité du dispositif. Il présente le dernier regard comme un **contrôle de risque** pour vérifier la **validité** et le **prix**, et non comme un moyen de collecter de l'information « sans intention d'accepter » ; il demande aussi de **ne pas trader** sur l'information contenue dans ta demande pendant la fenêtre de dernier regard, sauf arrangement documenté et divulgué.
+- **[SIMULATION — pourquoi la transparence compte]** Tu demandes à acheter 1 lot de EUR/USD à 1,0802. Pendant la fenêtre de décision, le marché monte à 1,0803 : le fournisseur peut refuser, car 1,0802 est devenu trop bas pour lui. Si le marché baisse à 1,0801, il peut accepter : 1,0802 est favorable pour lui. Si cette logique ne s'applique que dans un sens, tu n'es exécuté que quand le prix t'est défavorable. Le Code ne demande pas d'interdire le dispositif, mais de **le dire clairement** pour que tu puisses juger. *Le traitement exact de la symétrie par le Principe 17 n'a pas été lu en détail (voir §14).*
+
+### 4.4 La liquidité, ou pourquoi le coût change
+
+Rappel de L0.01 : la **liquidité** désigne la capacité de transférer un actif rapidement, en grande quantité et à faible coût. Sous l'angle de cette leçon, trois dimensions se voient directement dans un prix coté :
+
+1. **Le spread** : l'écart entre bid et ask (L0.03).
+2. **La profondeur** : la quantité qu'on peut échanger au prix coté sans le déplacer. Au-delà, le prix s'écarte.
+3. **Le temps** : l'heure, ou le moment par rapport à une annonce, change les deux premières dimensions.
+
+**[SIMULATION]** Voici des cotations fictives pour EUR/USD, chacune pour une taille donnée :
+
+| Taille de la demande | Bid | Ask | Spread (pips) | Coût d'un aller-retour immédiat | Coût par million d'euros |
+| --- | --- | --- | --- | --- | --- |
+| 100 000 EUR (1 lot) | 1,0800 | 1,0802 | 2 | 20 USD | 200 USD |
+| 50 000 000 EUR | 1,0799 | 1,0803 | 4 | 20 000 USD | 400 USD |
+
+Le coût par unité échangée est ici **deux fois plus élevé** pour la grande taille, parce qu'il faut « payer » la profondeur supplémentaire. Ce n'est pas une règle universelle : sur certains marchés, les gros clients obtiennent des conditions négociées. Mais cette illustration montre le principe : **ce que tu paies dépend de ce que tu demandes**.
+
+**[Fait]** La SEC rappelle que le coût de transaction (spread, commission, marge) peut transformer des transactions rentables en pertes quand elles sont fréquentes (S-SEC-02). C'est le point de départ de la gestion du risque (module 11).
+
+### 4.5 Les sessions de marché : l'idée, ce que disent les sources, et ce qu'elles ne disent pas
+
+**[Définition]** Le marché des changes de gré à gré est ouvert en continu, du lundi au vendredi : quand un centre ferme, un autre ouvre. Par convention, on découpe la journée en trois **sessions**, nommées d'après les centres les plus actifs : **Asie-Pacifique** (Sydney, Tokyo, Singapour, Hong Kong), **Europe** (Londres surtout) et **Amérique** (New York surtout). Ces sessions ne sont pas des horaires officiels : ce sont des repères pratiques.
+
+**[Calcul de l'auteur sur chiffres de la BRI]** Les centres déclarés dans l'enquête de la BRI d'avril 2025 (rappel de L0.03, S-BIS-04) : Royaume-Uni ≈ 37,8 %, États-Unis ≈ 18,6 %, Singapour ≈ 11,8 %, Hong Kong ≈ 7,0 % des montants (base net-gross, somme des lignes publiées), soit environ 75 % pour ces quatre places. Londres domine donc nettement.
+
+**Que montre la recherche officielle sur l'activité selon l'heure ?** Un bulletin de la Banque de réserve d'Australie (*Intraday Currency Market Volatility and Turnover*, Clifton et Plumb, décembre 2007, S-RBA-01) étudie les paires liées au dollar australien. **[Fait, via un résumé automatique]** :
+
+- la volatilité est en moyenne **la plus élevée hors des heures de Sydney**, surtout quand **Londres et New York sont ouverts en même temps** ;
+- le volume suit un profil quotidien similaire, avec des pics à l'ouverture des marchés asiatiques, de Londres et de l'Europe, et autour des publications de données australiennes et américaines ;
+- la volatilité est **la plus basse à l'heure du déjeuner à Sydney et en Asie** ;
+- des pics apparaissent aux heures des **fixings** (taux de référence quotidiens) de Londres, de Tokyo et de Sydney.
+
+**Limites à bien lire.** Cette étude porte sur des paires incluant le dollar australien, sur des données de **2007**, à une époque où le volume mondial se comptait en « bien plus de 3 000 milliards de dollars » par jour. Elle ne fournit pas de part de volume par centre. **[Interprétation]** Elle soutient l'idée que l'activité n'est pas uniforme dans la journée et que le chevauchement Londres–New York est un moment actif, mais **elle ne prouve pas** que cette structure soit identique aujourd'hui pour toutes les paires. Si tu veux en faire un outil de décision, mesure-la toi-même sur des données récentes.
+
+**Convertir les sessions en heure du Bénin.** Pour t'aider à t'organiser, voici un calcul avec une hypothèse simplificatrice **[Calcul de l'auteur, convention]** : chaque centre est actif de 08 h 00 à 17 h 00 **heure locale**. On suppose que le Bénin est à UTC+1 toute l'année (sans changement d'heure) ; Londres est à UTC+0 en hiver et UTC+1 en été ; New York à UTC−5 en hiver et UTC−4 en été.
+
+| Saison | Londres (08–17 h locale) en UTC | New York (08–17 h locale) en UTC | Chevauchement en UTC | Chevauchement en heure du Bénin |
+| --- | --- | --- | --- | --- |
+| Hiver (UTC+0 / UTC−5) | 08:00–17:00 | 13:00–22:00 | 13:00–17:00 | **14 h 00–18 h 00** |
+| Été (UTC+1 / UTC−4) | 07:00–16:00 | 12:00–21:00 | 12:00–16:00 | **13 h 00–17 h 00** |
+
+Les pays ne changent pas d'heure aux mêmes dates : pendant quelques semaines par an, l'écart entre Londres et New York diffère de celui du tableau, et le chevauchement avec lui. Les horaires de 08 h à 17 h sont un **repère** et non un fait de marché.
+
+**Et le week-end ?** Pour les contrats à terme standardisés sur l'euro de CME Group, **[Fait, S-CME-01 via un résumé automatique]** la négociation électronique se déroule de dimanche à vendredi, de 17 h 00 à 16 h 00 (heure centrale), avec une interruption de 60 minutes chaque jour à partir de 16 h 00 et **sans session à 17 h 00 le vendredi**. Cet horaire concerne ce contrat. **Le marché au comptant de gré à gré n'a pas d'horaire officiel unique** : l'ouverture et la fermeture dépendent des fournisseurs.
+
+### 4.6 La taille de position : lots, valeur du pip, risque, marge et levier
+
+Les paragraphes qui suivent prolongent L0.03 (pip, lot, spread) vers la **décision** de combien négocier.
+
+**Le lot.** **[Définition]** Un **lot** est une unité de taille de transaction. **Sa définition dépend du produit et du fournisseur** :
+
+- Pour un contrat à terme standardisé, la taille est fixée par la Bourse : **[Fait, S-CME-01]** le contrat Euro FX de CME Group porte sur **125 000 euros** ; la variation minimale de prix est de **0,00005 dollar par euro, soit 6,25 dollars** (125 000 × 0,00005 = 6,25 : calcul de contrôle de l'auteur, cohérent) ; le règlement final se fait par livraison physique.
+- Chez beaucoup de courtiers de détail, on parle de **lot standard** (souvent 100 000 unités de la devise de base), de **mini-lot** (10 000) et de **micro-lot** (1 000). **[Définition]** C'est une **convention courante**, **variable d'un fournisseur à l'autre ; je ne l'ai pas rattachée à une source officielle** (voir §14). Vérifie toujours la fiche du contrat chez ton courtier. Dans la suite, on prend « 1 lot = 100 000 unités de la devise de base », à titre de **SIMULATION**.
+
+**La valeur d'un pip dépend de la taille et de la devise de cotation.** Formule : *valeur du pip (dans la devise de cotation) = taille du pip × taille de la position en devise de base.* Si la devise de cotation n'est pas ta devise de compte, il faut convertir.
+
+| Paire (SIMULATION) | Taille du pip | Valeur du pip pour 1 lot de 100 000 | Conversion en USD |
+| --- | --- | --- | --- |
+| EUR/USD | 0,0001 | 10 USD | 10 USD |
+| USD/CHF à 0,9000 | 0,0001 | 10 CHF | 10 / 0,9000 ≈ 11,11 USD |
+| USD/JPY à 150,00 | 0,01 | 1 000 JPY | 1 000 / 150 ≈ 6,67 USD |
+
+**Dimensionner une position à partir du risque.** Plutôt que de choisir une taille « au feeling », on part du risque que l'on accepte de perdre, puis on en déduit la taille :
+
+*taille en lots = risque accepté (en monnaie de compte) ÷ (distance du stop en pips × valeur du pip par lot).*
+
+Le **stop** est le niveau où tu décides de sortir pour limiter la perte (module 11 : on y reviendra). Cette formule fait de la taille une **conséquence** de ton plan et non un choix indépendant.
+
+**La marge et le levier.** **[Définition]** La **marge** (ou dépôt de garantie) est la somme que le fournisseur exige pour ouvrir une position. Le **levier** de la position est le rapport entre la valeur de la position (le *notionnel*) et la marge : levier = notionnel ÷ marge. **[Fait, S-CFTC-05]** Pour le change de détail aux États-Unis, la règle finale de la CFTC fixe un dépôt de garantie minimal de **2 % pour les devises « majeures »** et **5 % pour les autres**, mesuré sur la valeur notionnelle de la transaction (la liste des devises majeures est désignée par la NFA, non reprise ici). **[Calcul de l'auteur]** Un dépôt de 2 % correspond à un levier maximal théorique de 1 ÷ 0,02 = **50 pour 1** ; 5 % à **20 pour 1**. *Cette règle concerne les États-Unis ; les limites dans d'autres pays (dont le Bénin) n'ont pas été vérifiées.*
+
+**Trois notions à ne pas confondre :**
+
+| Notion | Définition | Ce qu'elle mesure |
+| --- | --- | --- |
+| **Marge** | Dépôt exigé pour ouvrir | La somme immobilisée |
+| **Levier** | Notionnel ÷ marge | La capacité d'ouvrir une position grande par rapport au dépôt |
+| **Risque** | Perte si le stop est touché = pips du stop × valeur du pip × lots | Ce que tu peux perdre sur cette transaction |
+
+**[Interprétation]** Un levier disponible élevé **ne force pas** à prendre une grosse position. Le vrai danger du levier est de permettre une taille bien supérieure à ce que le capital peut supporter.
+
+### 4.7 L'or dans cette leçon
+
+L'or au comptant (XAU/USD) est négocié par les mêmes types de teneurs de marché et selon des conventions de cotation analogues (L0.03). Les caractéristiques propres au marché de l'or — once troy, contrats, ETF et marché physique — sont le sujet de **L0.06**. Pour l'instant, retiens que **la taille d'un lot sur l'or n'est pas la même que sur une paire de devises** : elle dépend du contrat et du fournisseur ; la méthode de dimensionnement par le risque (§4.6) reste identique.
+
+## 5. Définitions essentielles
+
+- **Teneur de marché (*market maker*)** : intermédiaire qui affiche en continu un prix d'achat et un prix de vente.
+- **Principal / agent** : le principal traite pour son compte et porte le risque de marché ; l'agent exécute pour le compte d'un client (Code mondial du change, Principe 8).
+- **Dernier regard (*last look*)** : dernière occasion, pour le destinataire d'une demande, de l'accepter ou de la rejeter à son prix coté (GFXC, 2021).
+- **Fournisseur de liquidité** : participant qui cote des prix que d'autres peuvent toucher. *[Définition de cours ; le Code mondial du change ne définit pas ce terme dans le passage consulté.]*
+- **Profondeur** : quantité qu'on peut échanger au prix coté sans le déplacer.
+- **Session** : repère conventionnel (Asie, Europe, Amérique) lié aux heures d'activité des grands centres.
+- **Lot** : unité de taille, **définie par le produit et le fournisseur**.
+- **Valeur du pip** : taille du pip × taille de la position en devise de base, exprimée dans la devise de cotation puis convertie.
+- **Notionnel** : valeur totale de la position (quantité × prix).
+- **Marge** : dépôt exigé pour ouvrir la position.
+- **Levier** : notionnel ÷ marge.
+- **Stop** : niveau de sortie choisi pour limiter la perte.
+
+## 6. Exemples chiffrés
+
+*Tous les prix de cette section sont fictifs : **[SIMULATION]**.*
+
+**Exemple A — Le coût dépend de la taille.** Voir le tableau du §4.4 : 2 pips × 10 USD × 1 lot = 20 USD ; 4 pips × 10 USD × 500 lots (50 000 000 ÷ 100 000) = 20 000 USD.
+
+**Exemple B — Dimensionner une position.** Compte de 10 000 USD, risque accepté 1 % = 100 USD, EUR/USD, stop à 25 pips.
+Lots = 100 ÷ (25 × 10) = **0,4 lot**, soit 40 000 EUR. Contrôle : 25 pips × 0,4 × 10 USD = **100 USD** perdus si le stop est touché (hors spread et glissement).
+
+**Exemple C — Marge et levier.** Même position (40 000 EUR) à 1,0802 : notionnel = 40 000 × 1,0802 = **43 208 USD**. Avec un dépôt de 2 % : marge = 43 208 × 0,02 = **864,16 USD**, levier de la position = 43 208 ÷ 864,16 = **50**. Mais le **levier effectif sur le compte** = 43 208 ÷ 10 000 = **4,32**. Le risque reste de 100 USD, soit 1 % : la marge (864,16) n'est pas le risque.
+
+**Exemple D — Quand la devise de cotation n'est pas la tienne.** USD/JPY à 150,00, 1 lot : pip = 1 000 JPY = 1 000 ÷ 150 ≈ 6,67 USD. Avec le même risque de 100 USD et un stop de 60 pips : lots = 100 ÷ (60 × 6,6667) = **0,25 lot**.
+
+### 6.5 Cas historique documenté — le « flash event » de la livre sterling (7 octobre 2016)
+
+**[Fait, via le communiqué et la page de la BRI, résumés automatiques ; le rapport de 29 pages n'a pas pu être lu intégralement]** Le 13 janvier 2017, le Comité des marchés de la BRI a publié un rapport sur un épisode survenu le **7 octobre 2016** pendant les **premières heures de la session asiatique** : la livre sterling a chuté d'environ **9 %** face au dollar (chiffre du communiqué) puis a rapidement regagné une grande partie de la baisse. Le rapport conclut à **une combinaison de facteurs plutôt qu'à une cause unique**, en donnant un poids important à l'**heure de la journée** (la liquidité y était réduite, selon le propos cité du gouverneur de la Banque d'Angleterre) et à des **amplificateurs mécaniques**, dont des couvertures liées à des options et des ordres stop. Il note aussi que ces épisodes ont jusqu'ici été brefs et sans conséquence immédiate sur la stabilité financière, mais qu'ils peuvent miner la confiance. Le travail sur le Code mondial du change s'en inspire.
+
+*Ce que je ne peux pas confirmer :* l'heure exacte, les niveaux de prix atteints, la durée, la part de chaque facteur et le rôle précis des algorithmes ou des fournisseurs de liquidité. **[Interprétation]** Pour un apprenant, la leçon est qualitative : **un prix peut devenir très instable quand la liquidité est faible, et des ordres automatiques peuvent amplifier le mouvement.** Cela ne permet pas de prévoir quand cela se reproduira.
+
+## 7. Application au Forex et à l'or
+
+- **Choisir son moment** : avant de trader une paire, regarde à quelle heure son spread est le plus faible chez ton fournisseur et évite les moments où le marché est mince, notamment autour des ouvertures et fermetures de centres et des publications économiques (module 3).
+- **Évaluer le coût complet** : spread + commission + éventuelle marge du fournisseur, en pips **et** en monnaie de compte.
+- **Dimensionner par le risque** : fixe d'abord ce que tu acceptes de perdre, puis calcule la taille.
+- **Pour l'or** : même méthode, avec un contrat et une valeur de point différents (L0.06).
+- **Analyse fondamentale** : un thème macroéconomique peut être juste et la transaction perdante si la taille est excessive ou si l'exécution se fait à une heure défavorable. **Une bonne analyse ne garantit pas une transaction gagnante.**
+
+## 8. Erreurs courantes
+
+- **Croire qu'il existe un prix unique du marché** : chaque fournisseur cote le sien.
+- **Ignorer qui est ta contrepartie** : ne pas savoir si le courtier est principal ou agent.
+- **Comparer des spreads à des heures différentes** : un spread « fixe » affiché peut cacher des conditions d'exécution très variables.
+- **Confondre marge et risque** : la marge est un dépôt, le risque est la perte au stop.
+- **Confondre levier maximal et levier utilisé** : c'est le levier effectif du compte qui compte.
+- **Oublier la conversion de la valeur du pip** : sur USD/JPY ou USD/CHF, la valeur du pip en dollars change avec le taux.
+- **Utiliser « 100 000 » comme une règle universelle** : la taille d'un lot dépend du contrat.
+- **Faire des sessions une loi** : ce sont des repères conventionnels, appuyés par des études précises mais datées.
+
+## 9. Limites de l'interprétation
+
+- Les **sessions** décrivent des habitudes d'activité, pas des règles. L'étude de la Banque de réserve d'Australie porte sur 2007 et sur des paires du dollar australien.
+- Le **cas du 7 octobre 2016** est un événement unique, que les sources décrivent comme dû à plusieurs facteurs ; on ne peut pas en tirer une règle de prévision.
+- Les **règles de marge** citées sont américaines ; elles ne s'appliquent pas à toutes les juridictions.
+- Un bulletin de la SEC de **2011** décrit des pratiques de courtiers de détail qui ont pu évoluer.
+- Le **dernier regard** est encadré par des principes de bonne conduite sans force juridique : le Code est volontaire.
+- Aucun calcul de cette leçon n'inclut le glissement (écart entre le prix demandé et le prix obtenu), les commissions ni les frais de financement.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Le coût selon la taille.** EUR/USD, 1 lot = 100 000 EUR. Cotation pour 100 000 EUR : 1,0800 / 1,0802. Cotation pour 20 000 000 EUR : 1,0799 / 1,0803. (a) Spread de chaque cotation en pips. (b) Coût d'un aller-retour immédiat pour chaque taille. (c) Coût par million d'euros. (d) Que peut-on en conclure, et quelle limite faut-il garder ?
+
+<details>
+<summary>Correction 1</summary>
+
+(a) Petite taille : 1,0802 − 1,0800 = 0,0002 = **2 pips**. Grande taille : 1,0803 − 1,0799 = 0,0004 = **4 pips**.
+(b) Pip = 10 USD par lot. Petite taille : 2 × 10 × 1 = **20 USD**. Grande taille : 20 000 000 ÷ 100 000 = 200 lots ; 4 × 10 × 200 = **8 000 USD**.
+(c) Petite taille : 20 USD pour 0,1 million → 200 USD par million. Grande taille : 8 000 USD pour 20 millions → **400 USD par million**.
+(d) Dans cette simulation, le coût unitaire double avec la taille. Limite : ce sont des chiffres fictifs ; la réalité dépend de la contrepartie, de l'heure et de la négociation.
+</details>
+
+**Exercice 2 — La valeur du pip.** Compte en USD, 1 lot = 100 000 unités de devise de base. Calcule la valeur d'un pip en USD pour : (a) EUR/USD ; (b) USD/CHF à 0,9000 ; (c) USD/JPY à 150,00 ; (d) USD/JPY à 160,00. (e) Que remarques-tu entre (c) et (d) ?
+
+<details>
+<summary>Correction 2</summary>
+
+(a) 0,0001 × 100 000 = **10 USD**.
+(b) 0,0001 × 100 000 = 10 CHF ; 10 ÷ 0,9000 = **11,11 USD**.
+(c) 0,01 × 100 000 = 1 000 JPY ; 1 000 ÷ 150 = **6,67 USD**.
+(d) 1 000 ÷ 160 = **6,25 USD**.
+(e) Plus le yen est faible (taux plus élevé), moins un pip vaut de dollars : la valeur du pip dépend du taux.
+</details>
+
+**Exercice 3 — Dimensionner par le risque.** Compte de 5 000 USD, risque 2 % par transaction. (a) Quel risque en USD ? (b) EUR/USD, stop 40 pips : combien de lots et d'euros ? (c) USD/JPY à 150,00, stop 60 pips : combien de lots ? (d) Vérifie la perte au stop dans les deux cas.
+
+<details>
+<summary>Correction 3</summary>
+
+(a) 5 000 × 0,02 = **100 USD**.
+(b) Lots = 100 ÷ (40 × 10) = **0,25 lot** = **25 000 EUR**.
+(c) Pip = 6,6667 USD par lot ; lots = 100 ÷ (60 × 6,6667) = 100 ÷ 400 = **0,25 lot** (25 000 USD).
+(d) EUR/USD : 40 × 0,25 × 10 = **100 USD**. USD/JPY : 60 × 0,25 × 6,6667 = **100 USD**. La taille en lots est la même mais le stop et la valeur du pip diffèrent.
+</details>
+
+**Exercice 4 — Marge, levier, risque.** Tu ouvres 25 000 EUR de EUR/USD à 1,0802 avec un compte de 5 000 USD. (a) Notionnel en USD ? (b) Marge à 2 % et à 5 % ? (c) Levier maximal théorique dans chaque cas ? (d) Levier effectif sur le compte ? (e) Le risque est-il égal à la marge ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) 25 000 × 1,0802 = **27 005 USD**.
+(b) 2 % : 27 005 × 0,02 = **540,10 USD**. 5 % : 27 005 × 0,05 = **1 350,25 USD**.
+(c) 1 ÷ 0,02 = **50:1** ; 1 ÷ 0,05 = **20:1**.
+(d) 27 005 ÷ 5 000 = **5,40:1**.
+(e) **Non.** Avec un stop à 40 pips, le risque est de 25 000 × 0,0040 = 100 USD, quelle que soit la marge de 540,10 ou 1 350,25 USD.
+</details>
+
+**Exercice 5 — Sessions et fuseaux horaires.** On suppose chaque centre actif de 08 h à 17 h locale, Londres à UTC+0 (hiver) / UTC+1 (été), New York à UTC−5 (hiver) / UTC−4 (été), Bénin à UTC+1 toute l'année. (a) Calcule le chevauchement Londres–New York en heure du Bénin, en hiver et en été. (b) Pourquoi ce calcul ne prouve-t-il pas que ce soit le meilleur moment pour trader ? (c) Quelles sources de ce cours soutiennent l'idée d'une activité plus forte à ce moment, et avec quelles limites ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) Hiver : Londres 08–17 h UTC ; New York 13–22 h UTC ; chevauchement 13–17 h UTC = **14 h–18 h** au Bénin. Été : Londres 07–16 h UTC ; New York 12–21 h UTC ; chevauchement 12–16 h UTC = **13 h–17 h** au Bénin.
+(b) Les horaires de 08 h–17 h sont des repères conventionnels, les changements d'heure ne sont pas synchronisés, et un spread plus faible ou une volatilité plus forte ne rendent pas une transaction gagnante.
+(c) L'étude de la Banque de réserve d'Australie (2007) observe une volatilité et un volume maximaux hors de Sydney, notamment quand Londres et New York sont ouverts. Limites : paires du dollar australien, données de 2007, pas de parts chiffrées par centre.
+</details>
+
+**Exercice 6 — Dernier regard : lire l'avertissement.** Dans une simulation, 100 clients demandent d'acheter 1 lot à 1,0802. Pour 50 d'entre eux, le marché passe à 1,0803 pendant la fenêtre (défavorable au fournisseur) ; pour les 50 autres, il passe à 1,0801 (favorable). Cas 1 : le fournisseur refuse seulement quand le marché monte. Cas 2 : il accepte tout. (a) Combien de demandes sont exécutées dans le cas 1 ? (b) Dans le cas 1, que valent les 50 exécutions du point de vue du client, comparées au prix du marché à cet instant (1,0801) ? Donne le coût en USD par lot. (c) Quel est le coût moyen par demande envoyée ? (d) Pourquoi le Code demande-t-il de la transparence ?
+
+<details>
+<summary>Correction 6</summary>
+
+(a) **50 exécutions** (celles où le marché baisse) ; 50 refus.
+(b) Le client paie 1,0802 alors que le marché est à 1,0801 : écart de 1 pip = **10 USD par lot**.
+(c) Sur 100 demandes : 50 × 10 = 500 USD ; 500 ÷ 100 = **5 USD par demande envoyée** (et 10 USD par exécution).
+(d) Parce que la façon dont les demandes sont acceptées ou refusées modifie le coût réel que tu supportes ; sans information, tu ne peux ni l'évaluer ni comparer les fournisseurs. *Chiffres fictifs ; le cas 1 est un scénario d'école, pas une description d'un fournisseur réel.*
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L0.04.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Le prix de change est une **cotation** d'un participant, pour une taille et un instant donnés ; il n'y a pas de prix unique.
+- Un intermédiaire peut être **agent** (il exécute pour toi) ou **principal** (il est ta contrepartie et porte le risque) : cela change les intérêts en jeu.
+- Le **dernier regard** est une dernière occasion d'accepter ou de refuser ; le Code mondial du change demande qu'il soit transparent.
+- Le coût dépend de la **taille**, de l'**heure** et des **conditions** ; le 7 octobre 2016 illustre le risque de liquidité réduite.
+- Les **sessions** sont des repères ; l'étude de la RBA (2007) soutient une activité plus forte quand Londres et New York sont ouverts, avec des limites.
+- Taille de position = **risque accepté ÷ (stop en pips × valeur du pip par lot)**.
+- **Marge ≠ risque ≠ levier.**
+
+## 13. Critères de maîtrise
+
+- [ ] Expliquer pourquoi il n'y a pas de prix unique (Exercice 1, quiz).
+- [ ] Distinguer principal et agent et citer un point de vigilance (quiz).
+- [ ] Définir le dernier regard (Exercice 6).
+- [ ] Calculer la valeur d'un pip dans une devise de compte différente de la devise de cotation (Exercice 2).
+- [ ] Dimensionner une position à partir d'un risque (Exercice 3).
+- [ ] Distinguer marge, levier et risque avec un calcul (Exercice 4).
+- [ ] Convertir un chevauchement de sessions en heure locale et en discuter les limites (Exercice 5).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-GFXC-01** — Global Foreign Exchange Committee, *FX Global Code* (décembre 2024), Principes 8 et 17 : https://www.globalfxc.org/docs/fx_global.pdf (texte lu via un résumé automatique des 100 000 premiers caractères sur 128 741 ; le Principe 17 n'a pas été cité en entier).
+- **S-GFXC-02** — GFXC, communiqué du 18 août 2021 sur le dernier regard : https://globalfxc.org/press/p210818.htm
+- **S-SEC-02** — SEC (OIEA), *Investor Bulletin: Foreign Currency Exchange (Forex) Trading For Individual Investors* (juillet 2011) : https://www.sec.gov/investor/alerts/forextrading.pdf
+- **S-CME-01** — CME Group, *FX monthly futures contract specifications* (Euro FX) : https://cmegroup.com/education/fx-monthly-futures-contract-specifications.html
+- **S-CFTC-05** — CFTC, fiche sur les règles finales du change de détail : https://cftc.gov/CFTC/PressRoom/PressReleases/forexfinalrulefactsheet
+- **S-RBA-01** — Reserve Bank of Australia, *Bulletin*, décembre 2007, K. Clifton et M. Plumb, « Intraday Currency Market Volatility and Turnover » : https://rba.gov.au/publications/bulletin/2007/dec/pdf/bu-1207-1.pdf
+- **S-BIS-06** — BRI, Comité des marchés, *The sterling « flash event » of 7 October 2016* (13 janvier 2017) : https://www.bis.org/publ/mktc09.htm ; communiqué : https://bis.org/press/p170113.htm
+- **S-BIS-04**, **S-BIS-03**, **S-INV-01** : voir L0.02, L0.03 et `content/sources.md`.
+
+**Définitions et conventions de cours non rattachées à une source officielle :** lot standard / mini-lot / micro-lot (100 000 / 10 000 / 1 000 unités), découpage des sessions en Asie / Europe / Amérique, horaires de 08 h à 17 h, définition de « fournisseur de liquidité » et de « profondeur », formule de dimensionnement par le risque. **Points non vérifiés :** l'heure d'été (dates de changement), le fuseau du Bénin (UTC+1 supposé), les règles de marge hors États-Unis, le contenu intégral des Principes 8 et 17, le rapport complet de la BRI sur le 7 octobre 2016.

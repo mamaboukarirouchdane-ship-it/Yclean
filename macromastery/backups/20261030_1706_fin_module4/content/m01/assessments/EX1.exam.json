@@ -1,0 +1,779 @@
+{
+  "examId": "EX1",
+  "module": 1,
+  "title": "Examen du module 1 — Macroéconomie appliquée aux marchés",
+  "durationMinutes": 120,
+  "passThreshold": 0.7,
+  "note": "25 QCM (1 point) + 5 calculs (3 points) = 40 points ; seuil de réussite 28/40. Les données sont fictives (SIMULATION) sauf mention contraire.",
+  "questions": [
+    {
+      "id": "EX1-Q1",
+      "type": "mcq",
+      "prompt": "Le PIB mesure :",
+      "options": [
+        {
+          "id": "a",
+          "text": "La richesse totale accumulée"
+        },
+        {
+          "id": "b",
+          "text": "Le seul revenu de l'État"
+        },
+        {
+          "id": "c",
+          "text": "La valeur de la production de biens et services finaux sur une période"
+        },
+        {
+          "id": "d",
+          "text": "Le patrimoine des ménages"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le PIB est un flux de production courante, non un stock de richesse.",
+      "tags": [
+        "pib"
+      ]
+    },
+    {
+      "id": "EX1-Q2",
+      "type": "mcq",
+      "prompt": "Le PIB réel est le PIB :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Corrigé de l'évolution des prix"
+        },
+        {
+          "id": "b",
+          "text": "Sans services"
+        },
+        {
+          "id": "c",
+          "text": "Mesuré en monnaie étrangère"
+        },
+        {
+          "id": "d",
+          "text": "Toujours égal au nominal"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le PIB réel retire l'effet des variations de prix pour comparer des volumes.",
+      "tags": [
+        "reel"
+      ]
+    },
+    {
+      "id": "EX1-Q3",
+      "type": "mcq",
+      "prompt": "Les taux de variation trimestriels du PIB publiés aux États-Unis sont en général :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Des taux sur 12 mois"
+        },
+        {
+          "id": "b",
+          "text": "Des moyennes de dix ans"
+        },
+        {
+          "id": "c",
+          "text": "Des niveaux absolus"
+        },
+        {
+          "id": "d",
+          "text": "Des taux annualisés"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Les variations trimestrielles corrigées des variations saisonnières sont exprimées en taux annualisés.",
+      "tags": [
+        "annualise"
+      ]
+    },
+    {
+      "id": "EX1-Q4",
+      "type": "mcq",
+      "prompt": "Un taux de chômage de 4,2 % signifie :",
+      "options": [
+        {
+          "id": "a",
+          "text": "4,2 % de la population totale sans emploi"
+        },
+        {
+          "id": "b",
+          "text": "4,2 % de la population active est au chômage"
+        },
+        {
+          "id": "c",
+          "text": "4,2 % des emplois détruits"
+        },
+        {
+          "id": "d",
+          "text": "4,2 % de salaires en moins"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le taux de chômage rapporte les chômeurs à la population active.",
+      "tags": [
+        "chomage"
+      ]
+    },
+    {
+      "id": "EX1-Q5",
+      "type": "mcq",
+      "prompt": "Un écart de production négatif signifie en général :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que la dette baisse"
+        },
+        {
+          "id": "b",
+          "text": "Que l'inflation est négative"
+        },
+        {
+          "id": "c",
+          "text": "Que le chômage est nul"
+        },
+        {
+          "id": "d",
+          "text": "Que l'économie produit moins que son potentiel estimé"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Écart négatif = sous-utilisation des capacités estimée.",
+      "tags": [
+        "ecart"
+      ]
+    },
+    {
+      "id": "EX1-Q6",
+      "type": "mcq",
+      "prompt": "La productivité du travail est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le salaire minimal"
+        },
+        {
+          "id": "b",
+          "text": "Le nombre d'emplois"
+        },
+        {
+          "id": "c",
+          "text": "La production par heure travaillée"
+        },
+        {
+          "id": "d",
+          "text": "Le taux d'intérêt"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Production divisée par les heures travaillées (BLS).",
+      "tags": [
+        "productivite"
+      ]
+    },
+    {
+      "id": "EX1-Q7",
+      "type": "mcq",
+      "prompt": "Un choc d'offre négatif (par exemple énergie) tend à :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Augmenter les prix et ralentir l'activité"
+        },
+        {
+          "id": "b",
+          "text": "Faire baisser prix et chômage"
+        },
+        {
+          "id": "c",
+          "text": "Ne rien changer"
+        },
+        {
+          "id": "d",
+          "text": "Augmenter la productivité"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Il déplace l'offre : prix plus élevés, production plus faible ; c'est un cas de pression stagflationniste.",
+      "tags": [
+        "offre"
+      ]
+    },
+    {
+      "id": "EX1-Q8",
+      "type": "mcq",
+      "prompt": "Quelle mesure est l'objectif d'inflation de la Fed ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "CPI total"
+        },
+        {
+          "id": "b",
+          "text": "PCE (variation annuelle)"
+        },
+        {
+          "id": "c",
+          "text": "Prix de l'énergie"
+        },
+        {
+          "id": "d",
+          "text": "Salaire horaire"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La Fed cible 2 % en variation annuelle du PCE.",
+      "tags": [
+        "objectif"
+      ]
+    },
+    {
+      "id": "EX1-Q9",
+      "type": "mcq",
+      "prompt": "Un CPI hors alimentation et énergie sert à :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Cacher l'inflation"
+        },
+        {
+          "id": "b",
+          "text": "Remplacer le PIB"
+        },
+        {
+          "id": "c",
+          "text": "Isoler une tendance moins volatile"
+        },
+        {
+          "id": "d",
+          "text": "Mesurer le chômage"
+        }
+      ],
+      "correct": "c",
+      "explanation": "L'indice de base écarte des composantes volatiles, avec la limite qu'alimentation et énergie comptent pour les ménages.",
+      "tags": [
+        "inflation-base"
+      ]
+    },
+    {
+      "id": "EX1-Q10",
+      "type": "mcq",
+      "prompt": "La stagflation associe :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Inflation élevée et faible croissance ou chômage élevé"
+        },
+        {
+          "id": "b",
+          "text": "Déflation et boom"
+        },
+        {
+          "id": "c",
+          "text": "Inflation nulle et plein emploi"
+        },
+        {
+          "id": "d",
+          "text": "Croissance forte et prix en baisse"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Définition de cours : inflation élevée avec activité faible.",
+      "tags": [
+        "stagflation"
+      ]
+    },
+    {
+      "id": "EX1-Q11",
+      "type": "mcq",
+      "prompt": "La déflation est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un ralentissement de l'inflation"
+        },
+        {
+          "id": "b",
+          "text": "Une baisse du chômage"
+        },
+        {
+          "id": "c",
+          "text": "Une hausse des prix de 2 %"
+        },
+        {
+          "id": "d",
+          "text": "Une baisse générale et durable du niveau des prix"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La désinflation est un ralentissement ; la déflation est une baisse du niveau des prix.",
+      "tags": [
+        "deflation"
+      ]
+    },
+    {
+      "id": "EX1-Q12",
+      "type": "mcq",
+      "prompt": "La population active comprend :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les seuls salariés"
+        },
+        {
+          "id": "b",
+          "text": "Les personnes en emploi et les chômeurs"
+        },
+        {
+          "id": "c",
+          "text": "Toute la population"
+        },
+        {
+          "id": "d",
+          "text": "Les retraités"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La population active regroupe les personnes en emploi et les chômeurs qui cherchent activement.",
+      "tags": [
+        "population-active"
+      ]
+    },
+    {
+      "id": "EX1-Q13",
+      "type": "mcq",
+      "prompt": "La courbe de Phillips décrit à l'origine :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une courbe de rendement"
+        },
+        {
+          "id": "b",
+          "text": "Un lien entre taux et change"
+        },
+        {
+          "id": "c",
+          "text": "Un lien entre déficit et dette"
+        },
+        {
+          "id": "d",
+          "text": "Un lien entre inflation (ou salaires) et chômage"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Relation empirique entre chômage et inflation, instable dans le temps.",
+      "tags": [
+        "phillips"
+      ]
+    },
+    {
+      "id": "EX1-Q14",
+      "type": "mcq",
+      "prompt": "Le taux d'épargne d'août 2026 (BEA) est de :",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,4 %"
+        },
+        {
+          "id": "b",
+          "text": "14,1 %"
+        },
+        {
+          "id": "c",
+          "text": "4,1 %"
+        },
+        {
+          "id": "d",
+          "text": "41 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Épargne 990,2 Md$, taux 4,1 % du revenu disponible.",
+      "tags": [
+        "epargne"
+      ]
+    },
+    {
+      "id": "EX1-Q15",
+      "type": "mcq",
+      "prompt": "Les permis de construire précèdent en général :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les mises en chantier puis les achèvements"
+        },
+        {
+          "id": "b",
+          "text": "Les achèvements puis les mises en chantier"
+        },
+        {
+          "id": "c",
+          "text": "Rien"
+        },
+        {
+          "id": "d",
+          "text": "Les ventes de voitures"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Ordre habituel : permis, mises en chantier, achèvements.",
+      "tags": [
+        "logement"
+      ]
+    },
+    {
+      "id": "EX1-Q16",
+      "type": "mcq",
+      "prompt": "La marge d'erreur d'une variation mensuelle sert à :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Calculer le PIB"
+        },
+        {
+          "id": "b",
+          "text": "Décider si la variation est distinguable du bruit"
+        },
+        {
+          "id": "c",
+          "text": "Fixer le taux directeur"
+        },
+        {
+          "id": "d",
+          "text": "Mesurer l'or"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Si l'intervalle contient zéro, la variation n'est pas distinguable de zéro.",
+      "tags": [
+        "marge"
+      ]
+    },
+    {
+      "id": "EX1-Q17",
+      "type": "mcq",
+      "prompt": "Un accélérateur simplifié relie l'investissement :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Au prix de l'or"
+        },
+        {
+          "id": "b",
+          "text": "Au niveau du taux de change"
+        },
+        {
+          "id": "c",
+          "text": "À la variation de la production"
+        },
+        {
+          "id": "d",
+          "text": "Au chômage uniquement"
+        }
+      ],
+      "correct": "c",
+      "explanation": "I = v × ΔY dans le modèle simplifié.",
+      "tags": [
+        "accelerateur"
+      ]
+    },
+    {
+      "id": "EX1-Q18",
+      "type": "mcq",
+      "prompt": "La balance courante inclut :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Biens, services, revenus primaires et secondaires"
+        },
+        {
+          "id": "b",
+          "text": "Seulement les biens"
+        },
+        {
+          "id": "c",
+          "text": "Seulement les actions"
+        },
+        {
+          "id": "d",
+          "text": "Seulement la dette"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Biens + services + revenus primaires + revenus secondaires.",
+      "tags": [
+        "balance-courante"
+      ]
+    },
+    {
+      "id": "EX1-Q19",
+      "type": "mcq",
+      "prompt": "La position extérieure nette est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un flux annuel"
+        },
+        {
+          "id": "b",
+          "text": "Un indice de prix"
+        },
+        {
+          "id": "c",
+          "text": "Un taux d'intérêt"
+        },
+        {
+          "id": "d",
+          "text": "Un stock d'actifs moins passifs envers l'étranger"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Stock ; fin T2 2026 : −22,42 billions de $ (BEA).",
+      "tags": [
+        "pen"
+      ]
+    },
+    {
+      "id": "EX1-Q20",
+      "type": "mcq",
+      "prompt": "Un déficit courant est financé par :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Rien"
+        },
+        {
+          "id": "b",
+          "text": "Des entrées de capitaux ou des cessions d'actifs"
+        },
+        {
+          "id": "c",
+          "text": "Uniquement l'or"
+        },
+        {
+          "id": "d",
+          "text": "Uniquement la Fed"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Emprunt net au reste du monde, à un écart statistique près.",
+      "tags": [
+        "financement"
+      ]
+    },
+    {
+      "id": "EX1-Q21",
+      "type": "mcq",
+      "prompt": "Le déficit primaire est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le solde commercial"
+        },
+        {
+          "id": "b",
+          "text": "Déficit plus intérêts"
+        },
+        {
+          "id": "c",
+          "text": "La dette totale"
+        },
+        {
+          "id": "d",
+          "text": "Déficit moins charge d'intérêts"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Il mesure l'écart avant intérêts sur la dette passée.",
+      "tags": [
+        "primaire"
+      ]
+    },
+    {
+      "id": "EX1-Q22",
+      "type": "mcq",
+      "prompt": "La dette en part du PIB augmente d'elle-même quand :",
+      "options": [
+        {
+          "id": "a",
+          "text": "r < g"
+        },
+        {
+          "id": "b",
+          "text": "r = 0"
+        },
+        {
+          "id": "c",
+          "text": "r > g, à solde primaire nul"
+        },
+        {
+          "id": "d",
+          "text": "g est infini"
+        }
+      ],
+      "correct": "c",
+      "explanation": "d(t+1) = d × (1 + r) ÷ (1 + g) − p.",
+      "tags": [
+        "dynamique"
+      ]
+    },
+    {
+      "id": "EX1-Q23",
+      "type": "mcq",
+      "prompt": "Une politique budgétaire contracyclique :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Amortit le cycle"
+        },
+        {
+          "id": "b",
+          "text": "Amplifie le cycle"
+        },
+        {
+          "id": "c",
+          "text": "Supprime l'inflation"
+        },
+        {
+          "id": "d",
+          "text": "N'existe pas"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Elle soutient la demande en ralentissement et la freine en expansion.",
+      "tags": [
+        "contracyclique"
+      ]
+    },
+    {
+      "id": "EX1-Q24",
+      "type": "mcq",
+      "prompt": "Quel est le meilleur usage d'un tableau de bord macro ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Prévoir un prix avec certitude"
+        },
+        {
+          "id": "b",
+          "text": "Poser des questions et tester des hypothèses avec des données datées"
+        },
+        {
+          "id": "c",
+          "text": "Remplacer les sources"
+        },
+        {
+          "id": "d",
+          "text": "Éviter les calculs"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Un tableau de bord organise l'information ; il ne garantit rien et ne remplace pas la vérification.",
+      "tags": [
+        "tableau-de-bord"
+      ]
+    },
+    {
+      "id": "EX1-Q25",
+      "type": "mcq",
+      "prompt": "Un diagnostic macro prudent distingue :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Seulement les prévisions"
+        },
+        {
+          "id": "b",
+          "text": "Seulement le résultat"
+        },
+        {
+          "id": "c",
+          "text": "Constat, cohérence, hypothèses et tests"
+        },
+        {
+          "id": "d",
+          "text": "Seulement les graphiques"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Quatre étapes : constat, cohérence, hypothèses, tests.",
+      "tags": [
+        "diagnostic"
+      ]
+    }
+  ],
+  "calculations": [
+    {
+      "id": "EX1-K1",
+      "type": "calc",
+      "prompt": "Écart de production. PIB potentiel = 19 154 Md$ ; PIB effectif = 19 011 Md$. Écart en % (2 décimales, signe inclus) ?",
+      "answer": -0.75,
+      "tolerance": 0.01,
+      "unit": "%",
+      "solution": "(19 011 − 19 154) ÷ 19 154 = −0,7466 % ≈ −0,75 %.",
+      "tags": [
+        "ecart"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX1-K2",
+      "type": "calc",
+      "prompt": "PIB réel (SIMULATION). PIB nominal +5,0 % ; prix implicites +2,0 %. Croissance réelle approximative en % ?",
+      "answer": 2.94,
+      "tolerance": 0.01,
+      "unit": "%",
+      "solution": "1,050 ÷ 1,020 − 1 = 2,94 %.",
+      "tags": [
+        "reel"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX1-K3",
+      "type": "calc",
+      "prompt": "Mensualité. Prêt de 200 000 $ sur 30 ans (360 mensualités) à 6,17 % annuel. Mensualité en $ ?",
+      "answer": 1221.05,
+      "tolerance": 0.02,
+      "unit": "$",
+      "solution": "i = 0,0617 ÷ 12 ; mensualité = 200 000 × i ÷ (1 − (1 + i)⁻³⁶⁰) ≈ 1 221,05 $ (= 2/3 de 1 831,57 $).",
+      "tags": [
+        "hypotheque"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX1-K4",
+      "type": "calc",
+      "prompt": "Dette (SIMULATION). d = 80 % du PIB ; r = 3,5 % ; g = 2,5 % ; déficit primaire de 2 % du PIB. d(t+1) en % ?",
+      "answer": 82.78,
+      "tolerance": 0.01,
+      "unit": "% du PIB",
+      "solution": "80 × 1,035 ÷ 1,025 = 80,78 ; + 2 = 82,78 %.",
+      "tags": [
+        "dette"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX1-K5",
+      "type": "calc",
+      "prompt": "Salaire réel. Salaire horaire +3,0 % ; CPI +3,7 % (12 mois). Salaire réel en % (2 décimales) ?",
+      "answer": -0.68,
+      "tolerance": 0.01,
+      "unit": "%",
+      "solution": "1,030 ÷ 1,037 − 1 = −0,675 % ≈ −0,68 %.",
+      "tags": [
+        "salaire-reel"
+      ],
+      "points": 3
+    }
+  ],
+  "totalPoints": 40,
+  "revision": 1
+}

@@ -1,0 +1,234 @@
+---
+id: L5.07
+module: 5
+order: 7
+title: "Les ETF d'or et les flux : mécanique, mesure et lecture des flux d'investissement"
+title_initial: "ETF d'or et flux"
+level: "intermédiaire"
+duration_hours: 3.0
+prerequisites: ["L5.02", "L5.03", "L5.06"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L5.07.quiz.json"
+sources: ["S-WGC-10", "S-WGC-11", "S-MNW-01", "S-WGC-01", "S-WGC-05", "S-WGC-07", "S-TST-01"]
+---
+
+# L5.07 — Les ETF d'or et les flux
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Statut des sources : les pages mensuelles du World Gold Council (WGC) sont celles d'un organisme représentant l'industrie ; elles sont lues par **résumé automatique** ; l'article de Mining Weekly est **secondaire**. Les flux sont estimés à partir de Bloomberg, de documents de sociétés et du WGC et sont révisables. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. expliquer ce qu'est un **ETF d'or adossé à de l'or physique** et comment ses parts sont créées et rachetées ;
+2. distinguer **flux** (en tonnes ou en dollars), **encours** (AUM) et **avoirs** (tonnes détenues) ;
+3. relier ces trois grandeurs par l'identité **AUM = tonnes × prix** et en déduire un **prix implicite** ;
+4. lire un découpage **régional** des flux et vérifier qu'il se somme ;
+5. discuter si les flux **suivent** le prix ou le **précèdent** sans surinterpréter ;
+6. construire un scénario conditionnel qui tient compte du délai de publication des flux.
+
+## 2. Prérequis
+
+- Offre et demande physiques (L5.02) ; or et taux réels (L5.03) ; banques centrales acheteuses (L5.06).
+
+## 3. Explication intuitive
+
+Un ETF d'or permet d'acheter de l'or **sans le stocker**. Quand les investisseurs achètent des parts, le fonds achète de l'or physique et le met en coffre ; quand ils vendent, le fonds revend de l'or. Les **avoirs en tonnes** d'un ETF montent donc quand des investisseurs achètent et baissent quand ils vendent : ce sont des **flux d'investissement observables**. Contrairement aux barres et pièces, ces flux sont publiés rapidement, et ils réagissent fortement aux anticipations de taux, au dollar et au sentiment. Mais ils **suivent souvent le prix** autant qu'ils le précèdent : il faut donc lire les flux comme un symptôme et un facteur à la fois.
+
+## 4. Développement technique
+
+### 4.1 Mécanique d'un ETF d'or physique
+
+**[Fait]** (S-WGC-01, page de présentation d'un podcast du WGC, 11 juillet 2025, déjà lue dans le cours, secondaire, résumé automatique) : création et rachat de parts par des participants autorisés, qui assurent la stabilité du prix et la liquidité ; l'administrateur libère les parts ; GLD, premier ETF d'or coté aux États-Unis, a vingt ans. *Non lu :* frais, encours détaillés, valeur liquidative.
+
+**[Définition]** (cours) : lorsque la demande de parts dépasse l'offre sur le marché secondaire, un participant autorisé livre de l'or physique (ou des liquidités) au fonds contre de nouvelles parts : les **avoirs en tonnes augmentent**. À l'inverse, les rachats font sortir de l'or. Le prix de la part reste proche de la valeur de l'or détenu par l'arbitrage des participants autorisés. Un **produit couvert contre le change** (par exemple coté en Suisse) a une mécanique de couverture qui peut faire diverger ses avoirs des autres fonds.
+
+**[Fait]** (S-WGC-10, page du WGC du 7 octobre 2026, 4.3) : les avoirs des fonds cotés en Suisse ont baissé de 1 t en septembre 2026, « une divergence liée à la mécanique des produits couverts en change ».
+
+### 4.2 Flux, encours, avoirs : trois grandeurs
+
+**[Définition]** **Flux** : variation nette de l'investissement sur une période, en dollars (valeur) ou en tonnes ; **avoirs** : tonnes détenues à une date ; **AUM** (assets under management) : valeur des avoirs, soit tonnes × prix de l'or. Une baisse de l'AUM peut venir d'un prix plus bas **sans aucune sortie**.
+
+**[Calcul de l'auteur]** Identité : AUM = avoirs (t) × 32 150,7 oz/t × prix ($/oz). Variation approximative : Δ%AUM ≈ Δ%avoirs + Δ%prix (exacte : (1 + Δ%AUM) = (1 + Δ%avoirs) × (1 + Δ%prix)).
+
+### 4.3 Les données lues : 2025 et 2026
+
+**[Fait]** (S-MNW-01, Mining Weekly, 8 janvier 2026, secondaire) : **2025** : entrées nettes **89 milliards de dollars** dans les ETF d'or physique (record) ; encours fin d'année **559 Md$** ; avoirs fin d'année **4 025 t** contre **3 224 t** en 2024 ; Amérique du Nord **51 Md$**, Asie **25 Md$**, Europe **12 Md$**, autres **902 M$** ; l'or a établi 53 records en 2025 ; motifs cités : demande de refuge, achats de momentum, coût d'opportunité plus faible avec des rendements du Trésor en baisse et un dollar plus faible, anticipation d'un assouplissement monétaire américain, inquiétudes liées à une envolée des actions, réforme de la TVA en Chine qui oriente les investisseurs des bijoux vers les ETF d'or, couverture de change.
+
+**[Fait]** (S-WGC-11, WGC, publiée le 8 juillet 2026, résumé automatique) : **juin 2026** : sorties nettes de **8,9 Md$** ; avoirs **−74 t à 4 047 t** ; AUM **−13 % à 526 Md$** ; Amérique du Nord −5,5 Md$ (plus forte sortie), Europe −818 M$, Asie −2,3 Md$ (pire mois de la région), autres −262 M$ ; **premier semestre 2026** : flux **positifs de 8 Md$**, avoirs **+18 t à 4 047 t**, AUM −6 % (prix plus bas) ; Amérique du Nord **−7,7 Md$** (plus faible premier semestre depuis 2013, seule région en baisse), Europe **+3,2 Md$**, Asie **+12 Md$** (record), autres +106 M$ ; volume moyen de négociation d'ETF 12 Md$ par jour (+73 % sur 2025). *Anomalie de la page :* la section des flux porte la mention « données au 23 octobre 2026 », contradictoire avec une publication du 8 juillet et des avoirs au 30 juin : **non résolue**.
+
+**[Fait]** (S-WGC-10, WGC, publiée le 7 octobre 2026, résumé automatique) : **septembre 2026** : flux **+10 Md$** ; avoirs **+67 t à un record de 4 256 t** ; AUM **−7 % sur le mois à 574 Md$** ; **troisième trimestre 2026** : flux **+31 Md$** (record), avoirs **+211 t**, AUM **+9 %** ; par région en septembre : Amérique du Nord +4 Md$ (États-Unis 3,8), Europe +3,6 Md$ (Royaume-Uni 2,2), Asie +2,3 Md$ (troisième entrée mensuelle consécutive, Chine en tête), autres +104 M$ ; au troisième trimestre : Amérique du Nord +12 Md$, Europe +14 Md$ (record), Asie +4,9 Md$, autres +476 M$ (record) ; le prix est dit « plus bas » en septembre, pesé par la hausse de 25 pb de la Fed ; négociation d'ETF 7 Md$ par jour (−19 % sur le mois) contre 423 Md$ par jour pour l'ensemble du marché de l'or.
+
+**[Fait]** (S-WGC-05 et S-WGC-07, L5.02) : demande 2025 d'ETF **801,2 t** ; T2 2026 : **−44,8 t** ; T1 2026 : **+62,4 t**.
+
+### 4.4 Contrôles de cohérence
+
+**[Calcul de l'auteur]**
+- **Régions 2025** : 51 + 25 + 12 + 0,902 = **88,9 Md$** (pour 89) ; part de l'Amérique du Nord 51 ÷ 89 = **57,3 %**.
+- **Régions H1 2026** : −7,7 + 3,2 + 12 + 0,106 = **+7,6 Md$** (pour +8, arrondis).
+- **Régions T3 2026** : 12 + 14 + 4,9 + 0,476 = **31,4 Md$** (pour 31).
+- **Régions septembre 2026** : 4 + 3,6 + 2,3 + 0,104 = **10,0 Md$** (pour 10).
+- **Avoirs 2025** : 4 025 − 3 224 = **801 t** (contre 801,2 t de demande WGC en L5.02 : cohérent).
+- **Avoirs 2026** : 4 025 + 18 = 4 043 (pour 4 047 en juin : écart de **4 t**) ; 4 047 + 211 = **4 258** (pour 4 256 en septembre : écart de **2 t**) ; T1 + T2 : 62,4 − 44,8 = **17,6 t** (pour +18).
+- **Prix implicites** (AUM ÷ avoirs ÷ 32 150,7) : fin 2025 **≈ 4 320 $/oz** ; fin juin 2026 **≈ 4 043 $/oz** ; fin septembre 2026 **≈ 4 195 $/oz**. (Ces prix ne sont pas publiés ; ils sont cohérents avec 4 050 $ environ fin juin, L5.01, et 4 214,30 $ pour les contrats à terme le 2 octobre, S-TST-01.)
+- **Septembre** : l'AUM de fin août se déduit de −7 % : 574 ÷ 0,93 ≈ **617 Md$** ; avoirs fin août 4 256 − 67 = **4 189 t** ; prix implicite fin août ≈ **4 583 $/oz** ; variation du prix implicite sur le mois : (0,93 ÷ 1,0160) − 1 = **−8,5 %** (avoirs +1,6 % : 67 ÷ 4 189).
+- **T3** : (1,09 ÷ 1,0521) − 1 = **+3,6 %** pour le prix implicite de fin juin à fin septembre (avoirs +5,2 %).
+- **Valeur par tonne des flux** : 10 Md$ ÷ (67 t × 32 150,7) ≈ **4 642 $/oz** pour septembre ; 31 Md$ ÷ (211 t × 32 150,7) ≈ **4 570 $/oz** pour le T3 : plus élevés que les prix implicites de fin de période (4 195), ce qui peut refléter des prix moyens plus hauts en juillet-août, des arrondis (« 10 Md$ ») ou une définition des flux en valeur : **non résolu**.
+- **Part des ETF dans la négociation** : 7 ÷ 423 = **1,7 %** du volume quotidien de l'ensemble du marché de l'or (volumes de définitions différentes).
+
+**[Interprétation]** Les données sont **globalement cohérentes** (régions, avoirs, demande 2025) à des écarts d'arrondi près ; les points ouverts concernent la date de la section des flux de juin et la comparaison valeur/tonnes. **Ce qu'on ne peut pas conclure** : le prix moyen d'achat des flux ; l'existence de prix implicites exacts (AUM peut inclure d'autres fonds ou dates de valorisation).
+
+### 4.5 Les flux suivent-ils le prix ou le précèdent-ils ?
+
+**[Calcul de l'auteur]** Prix implicite : fin 2025 ≈ 4 320 → fin juin 2026 ≈ 4 043 (**−6,4 %**) ; flux H1 2026 **+8 Md$** (+18 t), mais Amérique du Nord **−7,7 Md$** et Asie **+12 Md$** ; juin seul : prix en forte baisse (AUM −13 % avec des avoirs −1,8 %, soit environ **−11,4 %** pour le prix implicite) et sorties de **8,9 Md$** (−74 t) ; T3 : prix implicite **+3,6 %** et flux **+31 Md$** (+211 t).
+
+**[Interprétation]** Dans ces trois épisodes, les flux semblent **suivre le sens du prix** (sorties quand le prix chute en juin, entrées quand il se stabilise au T3), ce qui est la lecture **momentum** : les investisseurs achètent après la hausse et vendent après la baisse. Mais (1) l'Asie a acheté pendant la baisse de H1 (**+12 Md$**), tandis que l'Amérique du Nord a vendu : les régions ne réagissent pas de la même façon ; (2) en septembre, les entrées (+10 Md$) coïncident avec un prix implicite en recul de 8,5 % et une hausse de taux de la Fed, ce qui est contraire à une lecture mécanique par les taux réels (L5.03) ; (3) la page du WGC elle-même formule ses explications avec des réserves (« may have », « potentially »). **Ce qu'on ne peut pas conclure** : que les flux causent les mouvements de prix, ni l'inverse ; l'ordre temporel exact à l'échelle de la semaine.
+
+### 4.6 Application : un scénario conditionnel avec flux
+
+**[SIMULATION]** (chiffres fictifs) : XAU/USD = 4 060 $ ; avoirs d'ETF 4 256 t ; flux du mois précédent +67 t.
+
+| Scénario | Condition | Flux attendu du mois (t) | Probabilité (fictive) | Lecture |
+|---|---|---|---|---|
+| A | Prix stable, taux réels stables | +20 | 40 % | Entrées lentes ; neutre |
+| B | Taux réels en hausse de 20 pb, dollar plus fort | −30 | 30 % | Sorties ; pression sur l'or |
+| C | Choc de refuge, dollar plus faible | +60 | 30 % | Entrées ; soutien |
+
+**[Calcul de l'auteur]** Espérance des flux : 0,40 × 20 + 0,30 × (−30) + 0,30 × 60 = 8 − 9 + 18 = **+17 t** (+0,4 % des avoirs de 4 256 t) ; valeur : 17 × 32 150,7 × 4 060 ≈ **2,2 Md$**. L'effet sur le prix ne se déduit pas de ce tonnage.
+
+**[Interprétation]** Règles de méthode : (1) les flux sont connus avec un **délai de quelques jours** (publication du 7 octobre pour septembre) : ils confirment une tendance déjà visible dans le prix ; (2) comparer **région par région** ; (3) toujours lire **AUM** et **prix** ensemble ; (4) ne pas utiliser une entrée de flux comme signal d'achat isolé.
+
+## 5. Définitions essentielles
+
+- **ETF d'or physique** : fonds coté dont l'actif est de l'or conservé en coffre.
+- **Participant autorisé** : intermédiaire qui crée et rachète des parts.
+- **Flux** : variation nette de l'investissement (tonnes ou dollars).
+- **Avoirs** : tonnes détenues.
+- **AUM (encours)** : valeur des avoirs.
+- **Produit couvert en change** : ETF dont la monnaie est couverte contre le dollar.
+- **Momentum** : tendance des flux à suivre la direction récente du prix.
+
+## 6. Exemples chiffrés
+
+**6.1 Régions 2025.** 51 + 25 + 12 + 0,902 = 88,9 Md$ ; 51 ÷ 89 = 57,3 %.
+**6.2 Avoirs.** 4 025 − 3 224 = 801 t (demande WGC : 801,2 t).
+**6.3 Prix implicite.** 574 Md$ ÷ (4 256 t × 32 150,7) ≈ 4 195 $/oz.
+**6.4 Septembre.** AUM −7 %, avoirs +1,6 % → prix implicite −8,5 %.
+
+### 6.5 Cas historique documenté — du premier semestre au troisième trimestre 2026
+
+**[Fait]** (S-WGC-11, S-WGC-10) : voir 4.3.
+
+**[Calcul de l'auteur]** Juin : −8,9 Md$, −74 t, AUM −13 % ; H1 : +8 Md$ (+18 t), Amérique du Nord −7,7, Asie +12 ; T3 : +31 Md$ (+211 t), Europe +14 (record), AUM +9 % ; septembre : +10 Md$, +67 t, AUM −7 %.
+
+**[Interprétation]** Les flux d'ETF ont **changé de signe** entre le deuxième et le troisième trimestre (−44,8 t puis +211 t) alors que le prix implicite a rebondi de 3,6 % de fin juin à fin septembre ; les régions ont eu des comportements opposés (Asie contre Amérique du Nord au premier semestre). **Ce qu'on ne peut pas conclure** : que les flux aient provoqué le rebond ou la baisse de septembre ; la durée du renversement. **Limites** : pages d'industrie lues par résumé ; section des flux de juin avec une date incohérente ; prix de l'or non lus pour juillet-août ; AUM et avoirs sont des chiffres de fin de période.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **XAU/USD** : lire les flux d'ETF avec les taux réels (L5.03), le dollar (L5.04) et les achats officiels (L5.06) ; ils forment la composante la plus **mobile** de la demande.
+- **Forex** : des entrées asiatiques ou européennes peuvent refléter le change ; un dollar fort pèse sur les achats en monnaie locale.
+- **Calendrier** : publication mensuelle du WGC dans les premiers jours du mois suivant ; flux quotidiens de GLD publiés par les fonds (non lus).
+- **Positionnement** : les flux d'ETF ne remplacent pas les positions à terme (module 7).
+- **Prudence** : une série d'entrées records n'annonce pas la suite.
+
+## 8. Erreurs courantes
+
+1. Confondre flux, avoirs et AUM.
+2. Lire une baisse d'AUM comme une sortie de flux.
+3. Ajouter des flux en dollars et en tonnes sans conversion.
+4. Prendre un flux de refuge pour un signal de hausse.
+5. Ignorer les différences régionales.
+6. Oublier le délai de publication.
+7. Conclure que les flux déterminent le prix.
+
+## 9. Limites de l'interprétation
+
+- Pages du WGC lues par résumé ; mention de date incohérente sur la page de juin.
+- Prix implicites calculés, non publiés ; flux en valeur et en tonnes non réconciliés avec exactitude.
+- Article de 2025 secondaire ; motifs cités sans test.
+- Aucune donnée de frais, de valeur liquidative, de flux quotidiens ou de positions à terme.
+- Scénarios fictifs.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Régions.** Flux 2025 : Amérique du Nord 51, Asie 25, Europe 12, autres 0,902 (Md$). Total ? Part de l'Amérique du Nord ?
+
+<details>
+<summary>Correction 1</summary>
+
+51 + 25 + 12 + 0,902 = **88,9 Md$** ; 51 ÷ 89 = **57,3 %**.
+</details>
+
+**Exercice 2 — Prix implicite.** AUM 574 Md$, avoirs 4 256 t. Prix implicite par once ? (1 t = 32 150,7 oz)
+
+<details>
+<summary>Correction 2</summary>
+
+574 × 10⁹ ÷ (4 256 × 32 150,7) ≈ **4 195 $/oz**.
+</details>
+
+**Exercice 3 — Septembre.** AUM −7 %, avoirs 4 256 t après +67 t. Variation du prix implicite ?
+
+<details>
+<summary>Correction 3</summary>
+
+Avoirs fin août : 4 189 t ; +67 ÷ 4 189 = **+1,6 %** ; (0,93 ÷ 1,016) − 1 = **−8,5 %**.
+</details>
+
+**Exercice 4 — Cohérence.** Avoirs fin juin 4 047 t, T3 +211 t, fin septembre 4 256 t. Écart ?
+
+<details>
+<summary>Correction 4</summary>
+
+4 047 + 211 = 4 258 ; 4 258 − 4 256 = **2 t** (arrondis ou révisions) ; la cohérence est bonne.
+</details>
+
+**Exercice 5 — Interprétation.** Septembre : entrées de 10 Md$ avec un prix implicite en recul de 8,5 % et une hausse de taux de la Fed. Que peut-on dire ?
+
+<details>
+<summary>Correction 5</summary>
+
+On peut dire que les entrées n'ont pas suivi mécaniquement la direction des taux. On ne peut pas dire pourquoi : le WGC avance des motifs hypothétiques (« may have »), et la hausse du prix peut jouer sur des achats « à la baisse ». Aucune causalité.
+</details>
+
+**Exercice 6 — Critique.** « Les ETF achètent un record, donc l'or va monter. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) Septembre : entrées et prix en recul de 8,5 %. (2) Les flux suivent souvent le prix. (3) Publication retardée. (4) Les régions divergent. (5) L'AUM baisse sans sortie quand le prix recule.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L5.07.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- ETF d'or physique : création/rachat de parts par des participants autorisés ; avoirs en tonnes = flux observables.
+- AUM = avoirs × prix : une baisse d'AUM peut venir du seul prix.
+- 2025 : +89 Md$ (record), 801 t, Amérique du Nord 57 % ; juin 2026 : −8,9 Md$ (−74 t) ; T3 2026 : +31 Md$ (+211 t), avoirs record de 4 256 t.
+- Les flux semblent suivre le prix mais les régions divergent ; aucune causalité établie.
+- Cohérence interne bonne (écarts de 2 à 4 t) ; points ouverts : date de la page de juin, flux en valeur.
+
+## 13. Critères de maîtrise
+
+- [ ] Distinguer flux, avoirs et AUM (Exercice 1).
+- [ ] Calculer un prix implicite (Exercice 2).
+- [ ] Décomposer une variation d'AUM (Exercice 3).
+- [ ] Contrôler la cohérence de séries (Exercice 4).
+- [ ] Interpréter sans causalité (Exercice 5).
+- [ ] Critiquer un raisonnement « entrées → hausse » (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-WGC-10** — World Gold Council, *Gold ETF Flows: September 2026* (07/10/2026) : https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/10
+- **S-WGC-11** — World Gold Council, *Gold ETF Flows: June 2026* (08/07/2026) : https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/07
+- **S-MNW-01** — Mining Weekly (secondaire), flux d'ETF 2025 (08/01/2026) : https://www.miningweekly.com/article/gold-etf-inflows-hit-record-as-investors-poured-89bn-into-the-market-in-2025-2026-01-08
+- **S-WGC-01**, **S-WGC-05**, **S-WGC-07**, **S-TST-01** — déjà lus (L5.02, L4.12).
+
+**Définitions de cours non rattachées à une source lue :** mécanique de création/rachat détaillée, momentum. **Points non vérifiés :** pages de juillet et août 2026, valeur liquidative, frais, flux quotidiens, prix de l'or de juillet-août, positions à terme.

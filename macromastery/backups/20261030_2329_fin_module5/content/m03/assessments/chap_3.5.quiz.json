@@ -1,0 +1,178 @@
+{
+  "chapterId": "3.5",
+  "module": 3,
+  "title": "Quiz de chapitre 3.5 — Zone euro : IPCH, PIB, chômage (L3.10)",
+  "passThreshold": 0.8,
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C3.5-Q1",
+      "type": "mcq",
+      "prompt": "Quel est le périmètre du cœur de l'IPCH dans le communiqué d'Eurostat lu ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hors services"
+        },
+        {
+          "id": "b",
+          "text": "Hors loyers"
+        },
+        {
+          "id": "c",
+          "text": "Hors énergie, alimentation, alcool et tabac"
+        },
+        {
+          "id": "d",
+          "text": "Hors biens industriels"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le cœur de l'IPCH exclut aussi l'alcool et le tabac, contrairement au cœur américain (hors alimentation et énergie).",
+      "tags": [
+        "ipch"
+      ]
+    },
+    {
+      "id": "C3.5-Q2",
+      "type": "mcq",
+      "prompt": "IPCH d'ensemble 3,2 % en août et 3,8 % en septembre : quelle variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+0,6 point"
+        },
+        {
+          "id": "b",
+          "text": "+0,6 %"
+        },
+        {
+          "id": "c",
+          "text": "−0,6 point"
+        },
+        {
+          "id": "d",
+          "text": "+3,8 points"
+        }
+      ],
+      "correct": "a",
+      "explanation": "3,8 − 3,2 = 0,6 point de pourcentage.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "C3.5-Q3",
+      "type": "mcq",
+      "prompt": "Ensemble 3,8 % et cœur 2,5 % : quel écart ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,3 point"
+        },
+        {
+          "id": "b",
+          "text": "1,3 point"
+        },
+        {
+          "id": "c",
+          "text": "2,5 points"
+        },
+        {
+          "id": "d",
+          "text": "6,3 points"
+        }
+      ],
+      "correct": "b",
+      "explanation": "3,8 − 2,5 = 1,3 point, imputable surtout à l'énergie et à l'alimentation.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "C3.5-Q4",
+      "type": "mcq",
+      "prompt": "PIB du T2 : 0,4 % puis 0,6 %. Quelle révision et quelle annualisation du 0,6 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−0,2 point ; environ 1,6 %"
+        },
+        {
+          "id": "b",
+          "text": "+0,2 point ; environ 0,6 %"
+        },
+        {
+          "id": "c",
+          "text": "+0,2 point ; environ 2,42 %"
+        },
+        {
+          "id": "d",
+          "text": "+0,4 point ; environ 2,4 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "0,6 − 0,4 = 0,2 ; (1,006)⁴ − 1 = 2,42 % ; la première estimation couvrait 96 % du PIB.",
+      "tags": [
+        "revision"
+      ]
+    },
+    {
+      "id": "C3.5-Q5",
+      "type": "mcq",
+      "prompt": "Pourquoi la liste des États membres aux taux les plus élevés ne décrit-elle pas la zone euro ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "C'est un tableau de l'Union européenne, qui inclut des pays hors zone euro"
+        },
+        {
+          "id": "b",
+          "text": "Elle est fausse"
+        },
+        {
+          "id": "c",
+          "text": "Elle ne contient que des pays de la zone"
+        },
+        {
+          "id": "d",
+          "text": "Elle est calculée par la BCE"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le tableau d'Eurostat porte sur l'UE ; à ma connaissance plusieurs pays cités sont hors zone euro : lire pays par pays.",
+      "tags": [
+        "perimetre"
+      ]
+    },
+    {
+      "id": "C3.5-Q6",
+      "type": "mcq",
+      "prompt": "Taux de chômage : juin 6,3 % révisé à 6,4 %, juillet 6,4 %. Que dit la révision ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que les données sont fausses"
+        },
+        {
+          "id": "b",
+          "text": "Que le chômage chute"
+        },
+        {
+          "id": "c",
+          "text": "Que le chômage est fixe"
+        },
+        {
+          "id": "d",
+          "text": "Des variations de 0,1 point sont de l'ordre des révisions et ne s'interprètent pas"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La révision de juin de 0,1 point montre l'incertitude d'une première lecture.",
+      "tags": [
+        "chomage"
+      ]
+    }
+  ],
+  "revision": 1
+}

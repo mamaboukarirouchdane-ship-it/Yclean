@@ -1,0 +1,233 @@
+{
+  "lessonId": "L6.07",
+  "title": "Quiz — Études de cas : réunions de banque centrale",
+  "passThreshold": 0.8,
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L6.07-Q1",
+      "type": "mcq",
+      "prompt": "Comment calcule-t-on la surprise monétaire d'une décision ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Probabilité × 100"
+        },
+        {
+          "id": "b",
+          "text": "Décision seule"
+        },
+        {
+          "id": "c",
+          "text": "Décision − Σ (probabilité × variation) de chaque issue"
+        },
+        {
+          "id": "d",
+          "text": "Variation de l'or ÷ variation du taux"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La surprise compare la décision à ce que les prix laissaient prévoir ; pour un maintien avec 37,9 % de hausse, elle vaut −9,5 pb.",
+      "tags": [
+        "surprise"
+      ]
+    },
+    {
+      "id": "L6.07-Q2",
+      "type": "mcq",
+      "prompt": "Hausse de 25 pb quand le marché la prévoyait à 92 % : surprise ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+2,0 pb"
+        },
+        {
+          "id": "b",
+          "text": "+25 pb"
+        },
+        {
+          "id": "c",
+          "text": "+23 pb"
+        },
+        {
+          "id": "d",
+          "text": "−2,0 pb"
+        }
+      ],
+      "correct": "a",
+      "explanation": "25 − 0,92 × 25 = 25 − 23,0 = +2,0 pb : la hausse était presque entièrement anticipée.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L6.07-Q3",
+      "type": "mcq",
+      "prompt": "Pourquoi une probabilité publiée le 22/09 ne décrit-elle pas ce que le marché savait le 15/09 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que seules les banques la voient"
+        },
+        {
+          "id": "b",
+          "text": "Parce qu'elle est toujours fausse"
+        },
+        {
+          "id": "c",
+          "text": "Parce que le 22/09 est un week-end"
+        },
+        {
+          "id": "d",
+          "text": "Elle est postérieure ; la chronologie stricte l'interdit"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Utiliser une information postérieure pour décrire l'avant est un biais rétrospectif ; seules des données datées d'avant servent à reconstituer les attentes.",
+      "tags": [
+        "chronologie"
+      ]
+    },
+    {
+      "id": "L6.07-Q4",
+      "type": "mcq",
+      "prompt": "Que montre le cas du 16/09/2026 (hausse, or +0,38 %) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que l'or monte toujours après une hausse"
+        },
+        {
+          "id": "b",
+          "text": "Que l'hypothèse « hausse ⇒ or en baisse » est contredite dans ce cas, sans rien prouver de général"
+        },
+        {
+          "id": "c",
+          "text": "Que l'or baisse toujours après une hausse"
+        },
+        {
+          "id": "d",
+          "text": "Que la Fed n'influence pas l'or"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Un cas contredit une règle simple mais ne démontre pas la règle inverse ; la surprise n'était que de +2,0 pb.",
+      "tags": [
+        "h1"
+      ]
+    },
+    {
+      "id": "L6.07-Q5",
+      "type": "mcq",
+      "prompt": "Maintien, probabilité de hausse de 9,4 %, or −0,60 % : que conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'or ne réagit jamais"
+        },
+        {
+          "id": "b",
+          "text": "La Fed a fait baisser l'or"
+        },
+        {
+          "id": "c",
+          "text": "Le marché s'est trompé"
+        },
+        {
+          "id": "d",
+          "text": "La surprise de taux (−2,35 pb) n'explique pas à elle seule le mouvement ; d'autres facteurs peuvent jouer sans être isolés"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Surprise quasi nulle mais mouvement de séance non nul : dissidences, ton, conférence de presse ou autres informations restent possibles sans preuve.",
+      "tags": [
+        "c"
+      ]
+    },
+    {
+      "id": "L6.07-Q6",
+      "type": "mcq",
+      "prompt": "Quelle réaction n'est PAS disponible dans cette leçon ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La variation du 28 au 29/10"
+        },
+        {
+          "id": "b",
+          "text": "La variation de séance du 28/10"
+        },
+        {
+          "id": "c",
+          "text": "La réaction immédiate (fenêtre de 5 minutes)"
+        },
+        {
+          "id": "d",
+          "text": "La décision officielle du 16/09"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Aucune donnée intrajournalière de l'or n'a pu être obtenue ; seules des variations de séance, et une réaction du lendemain, sont disponibles.",
+      "tags": [
+        "niveaux"
+      ]
+    },
+    {
+      "id": "L6.07-Q7",
+      "type": "mcq",
+      "prompt": "Pourquoi le choix entre 66,4 % et 92 % change-t-il la conclusion pour la décision du 16/09 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La surprise passe de +8,4 pb à +2,0 pb, de part et d'autre d'un seuil de 5 pb"
+        },
+        {
+          "id": "b",
+          "text": "Les deux donnent exactement la même surprise"
+        },
+        {
+          "id": "c",
+          "text": "Parce que 92 % est une prévision de l'or"
+        },
+        {
+          "id": "d",
+          "text": "Parce que 66,4 % est plus récent"
+        }
+      ],
+      "correct": "a",
+      "explanation": "66,4 % date de fin août ; 92 % de la veille. La surprise vaut +8,4 pb contre +2,0 pb, donc la lecture dépend de la probabilité retenue.",
+      "tags": [
+        "sensibilite"
+      ]
+    },
+    {
+      "id": "L6.07-Q8",
+      "type": "mcq",
+      "prompt": "Pourquoi le cas de la BCE du 29/10 sert-il surtout à la méthode ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que la BCE n'a pas décidé"
+        },
+        {
+          "id": "b",
+          "text": "Une attente chiffrée de septembre ne vaut pas celle d'octobre, et aucune réaction de marché n'a été lue"
+        },
+        {
+          "id": "c",
+          "text": "Parce que l'euro n'a pas bougé"
+        },
+        {
+          "id": "d",
+          "text": "Parce que l'or a monté"
+        }
+      ],
+      "correct": "b",
+      "explanation": "L'ancienne probabilité de 60 % date du 24/09 ; la réaction de l'EUR/USD et de l'or n'a pas été obtenue, la décision elle-même (maintien) l'a été.",
+      "tags": [
+        "bce"
+      ]
+    }
+  ],
+  "revision": 1
+}

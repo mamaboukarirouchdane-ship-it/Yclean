@@ -1,0 +1,223 @@
+---
+id: L3.03
+module: 3
+order: 3
+title: "La surprise standardisée : rendre comparables des publications d'unités différentes"
+title_initial: "La surprise standardisée"
+level: "intermédiaire"
+duration_hours: 3.5
+prerequisites: ["L3.02"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L3.03.quiz.json"
+sources: ["S-NBER-04", "S-FDS-01", "S-BLS-04"]
+---
+
+# L3.03 — La surprise standardisée : rendre comparables des publications d'unités différentes
+
+> **Convention de lecture.** **[Fait]** = énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. définir la **surprise standardisée** et la calculer sur une série de surprises passées ;
+2. expliquer pourquoi on standardise (unités différentes, volatilités différentes) ;
+3. gérer le **signe** (le chômage qui monte est une « mauvaise » nouvelle pour l'emploi) ;
+4. distinguer écart-type **d'échantillon** et de **population**, et l'effet de la période d'estimation ;
+5. interpréter un effet « par écart-type » rapporté par la recherche, sans l'extrapoler abusivement ;
+6. énoncer les limites : séries de consensus sous licence, distribution non normale, asymétries.
+
+## 2. Prérequis
+
+- Consensus, surprise, bruit (L3.02).
+
+## 3. Explication intuitive
+
+Une surprise de −61 000 emplois et une surprise de +0,1 point de chômage ne sont pas comparables : unités et ordres de grandeur diffèrent. On ramène donc chaque surprise à une échelle commune en la **divisant par sa variabilité habituelle** : on obtient un nombre d'**écarts-types**. Une surprise de −1,7 signifie « 1,7 fois plus grande que la surprise typique de cet indicateur ».
+
+Ce changement d'échelle permet de comparer, de cumuler et de classer les surprises, et c'est ainsi que la recherche mesure l'effet des annonces sur les prix.
+
+## 4. Développement technique
+
+### 4.1 Définition
+
+**[Définition]** Pour un indicateur donné, avec la valeur publiée A, le consensus C et σ l'écart-type des surprises passées de cet indicateur :
+
+> z = (A − C) ÷ σ.
+
+Variante : soustraire d'abord la moyenne m des surprises passées (centrage) : z = (A − C − m) ÷ σ.
+
+**[Fait]** (S-NBER-04, Andersen, Bollerslev, Diebold et Vega, « Micro Effects of Macro Announcements: Real-Time Price Discovery in Foreign Exchange », NBER, résumé automatique) : les auteurs calculent la surprise comme la valeur annoncée moins la **médiane** de l'enquête de Money Market Services (environ 40 gestionnaires interrogés par téléphone chaque vendredi), puis la **divisent par son écart-type d'échantillon** « pour rendre les réponses comparables entre indicateurs » (formule affichée illisible dans le texte lu).
+
+### 4.2 Un exemple complet (SIMULATION)
+
+**[SIMULATION]** Douze surprises passées de l'emploi (en milliers) : −40, +25, +60, −10, +35, −55, +20, +5, −30, +45, −20, +15.
+
+**[Calcul de l'auteur]**
+- moyenne m = 50 ÷ 12 ≈ **+4,17** ;
+- somme des carrés = 14 150 ; écart-type d'échantillon (n − 1) σ ≈ **35,60** ; écart-type de population ≈ 34,09 ;
+- surprise de septembre 2026 : −61 (en milliers) → z = −61 ÷ 35,60 ≈ **−1,71** ; avec centrage : (−61 − 4,17) ÷ 35,60 ≈ **−1,83** ;
+- avec l'écart-type de population : −61 ÷ 34,09 ≈ **−1,79**.
+
+**[Interprétation]** Les trois variantes donnent −1,7 à −1,8 : l'ordre de grandeur est robuste, la deuxième décimale ne l'est pas. Cette série est **fictive** : la vraie série de surprises de l'emploi suppose des consensus historiques, en général sous licence payante (module 3, L3.02) ; **aucune valeur de σ réelle n'est donnée ici**.
+
+### 4.3 Le signe
+
+**[Définition]** Il faut orienter chaque surprise de sorte qu'un **z positif** signifie « plus fort que prévu pour l'activité ou plus restrictif pour la politique », ou à l'inverse selon la convention choisie, **mais toujours la même**. Le chômage est inversé : un chômage plus élevé que prévu est une surprise négative pour l'emploi.
+
+**[SIMULATION]** Douze surprises passées du chômage (points) : +0,1, −0,1, 0, +0,2, −0,1, +0,1, 0, −0,2, +0,1, 0, +0,1, −0,1 ; moyenne ≈ +0,008 ; écart-type ≈ **0,1165**. Surprise de septembre 2026 : +0,1 (valeurs arrondies, L3.02) → z brut = 0,1 ÷ 0,1165 ≈ **+0,86** ; **orienté** (chômage inversé) : **−0,86**.
+
+**[Calcul de l'auteur]** Moyenne simple des deux z orientés : (−1,71 − 0,86) ÷ 2 ≈ **−1,29**. *C'est une règle d'agrégation arbitraire, non calibrée* ; elle illustre le calcul, non une pondération démontrée.
+
+### 4.4 Ce que dit la recherche d'un effet « par écart-type »
+
+**[Fait]** (S-NBER-04, résumé automatique) :
+- 41 annonces (28 américaines, 13 allemandes), cinq paires de devises, 3 janvier 1992 au 30 décembre 1998, rendements sur 5 minutes ;
+- les surprises provoquent un **saut** rapide du taux de change, avec peu de dérive ensuite ; les annonces attendues n'ont en général **pas d'effet significatif** ;
+- une surprise d'**un écart-type** sur l'emploi salarié américain déplace le DM/$ d'environ **0,16 %** ;
+- « les mauvaises nouvelles pèsent davantage que les bonnes » : l'asymétrie est marquée pour le yen, le mark et le franc suisse face au dollar (emploi et balance commerciale), presque absente pour la livre et l'euro ;
+- l'incertitude (dispersion des prévisions) augmente après une mauvaise nouvelle (environ **30 %** de plus pour l'emploi).
+
+**[Calcul de l'auteur]** Par simple proportionnalité, une surprise de −1,71 écart-type correspondrait à environ **0,27 %** (1,71 × 0,16) : **extrapolation illustrative**, non un résultat de l'étude (période 1992-1998, DM/$, effet moyen).
+
+**[Interprétation]** Cet ordre de grandeur (une fraction de pour cent en quelques minutes) montre pourquoi la surprise standardisée est utile : elle ramène l'effet à une échelle comparable. Mais il **ne se transpose pas** à 2026 : le marché, les unités, les consensus et le régime de politique monétaire ont changé. **Limites** : résultat moyen, linéaire par hypothèse, sur une période où l'euro n'existait pas encore pour l'essentiel (seule une partie de l'échantillon est « euro/$ ») ; lecture par résumé automatique.
+
+### 4.5 Limites de la standardisation
+
+**[Interprétation]**
+1. **Distribution** : les surprises ne sont pas nécessairement normales ; des valeurs extrêmes gonflent σ.
+2. **Période d'estimation** : σ dépend de la fenêtre (volatilité de l'économie, qualité des prévisions).
+3. **Consensus** : mal défini si l'échantillon est petit ou ancien.
+4. **Asymétrie** : l'effet d'une mauvaise nouvelle n'est pas le même que celui d'une bonne (S-NBER-04).
+5. **Régime** : l'effet dépend de ce que la banque centrale surveille (L2.07) : en 2026, l'inflation domine.
+6. **Données** : les consensus historiques sont sous licence ; sans eux, standardiser est impossible.
+
+## 5. Définitions essentielles
+
+- **Surprise standardisée (z)** : surprise divisée par l'écart-type des surprises passées.
+- **Écart-type d'échantillon** : racine de la somme des carrés des écarts divisée par (n − 1).
+- **Centrage** : soustraction de la moyenne des surprises passées.
+- **Orientation (signe)** : convention rendant un z positif toujours « bonne nouvelle » (ou toujours l'inverse).
+- **Asymétrie** : effet différent d'une bonne et d'une mauvaise nouvelle de même taille.
+
+## 6. Exemples chiffrés
+
+**6.1 z de l'emploi (SIMULATION).** −61 ÷ 35,60 ≈ −1,71.
+**6.2 z du chômage orienté (SIMULATION).** +0,1 ÷ 0,1165 ≈ +0,86 ; orienté −0,86.
+**6.3 Moyenne.** (−1,71 − 0,86) ÷ 2 ≈ −1,29.
+**6.4 Échelle (SIMULATION).** Si σ = 40 (milliers), une surprise de −80 donne z = −2,0 ; de +20 donne +0,5.
+
+### 6.5 Cas historique documenté — Andersen et coauteurs (1992-1998) : l'effet d'une surprise d'un écart-type
+
+**[Fait]** (S-NBER-04) : voir 4.4. Une surprise d'un écart-type sur l'emploi salarié américain déplace le DM/$ d'environ 0,16 % ; seulement 0,7 % des rendements sur 5 minutes dépassent 0,10 % ; l'écart moyen acheteur-vendeur du DM/$ est d'environ 0,06 %.
+
+**[Calcul de l'auteur]** 0,16 ÷ 0,06 ≈ **2,7** fois l'écart moyen acheteur-vendeur ; 0,16 ÷ 0,10 = **1,6** fois le seuil de 0,10 %.
+
+**[Interprétation]** L'effet d'une surprise moyenne est visible mais modeste par rapport à la volatilité de long terme ; la plupart de l'effet survient dans les minutes qui suivent. **Limites** : DM/$ de 1992 à 1998 ; marché d'avant l'euro ; résumé automatique ; pas d'extrapolation à 2026.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Tableau de surprises** : pour chaque publication, noter consensus, valeur, surprise brute, σ (avec sa fenêtre), z orienté. Marquer « à définir » si σ n'est pas disponible.
+- **Seuils d'attention** : par exemple |z| ≥ 1 = surprise notable, |z| ≥ 2 = forte (convention de cours, non démontrée).
+- **Cumul prudent** : moyenner plusieurs z sans pondération ne prouve rien ; justifier toute règle.
+- **Or et dollar** : une série de z négatifs sur l'emploi tend à baisser les taux attendus ; effet sur l'or via les taux réels (module 5), hypothèse à tester.
+- **Prudence** : l'effet moyen de la recherche n'est pas une prévision pour une publication donnée.
+
+## 8. Erreurs courantes
+
+1. Comparer des surprises brutes d'indicateurs différents.
+2. Oublier d'orienter le signe du chômage.
+3. Calculer σ sur trop peu d'observations.
+4. Mélanger écart-type d'échantillon et de population sans le dire.
+5. Extrapoler un effet moyen ancien à une publication récente.
+6. Agréger des z sans règle écrite.
+7. Prendre une série fictive pour une donnée réelle.
+
+## 9. Limites de l'interprétation
+
+- Les séries de surprises de la leçon sont **fictives** (SIMULATION) ; aucune série réelle de consensus historique n'a été lue.
+- L'étude d'Andersen et coauteurs est lue par résumé ; sa formule n'était pas lisible.
+- L'extrapolation à −1,71 écart-type est du calcul de l'auteur.
+- L'effet décrit date de 1992-1998 et du DM/$.
+- Les seuils |z| = 1 et 2 sont des conventions de cours.
+- Les effets sur l'or ne sont pas traités par la recherche lue.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — z (SIMULATION).** σ = 40 (milliers) ; surprises : (a) −80 ; (b) +20 ; (c) −30. Calcule z.
+
+<details>
+<summary>Correction 1</summary>
+
+(a) −80 ÷ 40 = **−2,0**. (b) +20 ÷ 40 = **+0,5**. (c) −30 ÷ 40 = **−0,75**.
+</details>
+
+**Exercice 2 — σ (SIMULATION).** Surprises : +10, −10, +20, −20. (a) Moyenne ? (b) Somme des carrés ? (c) Écart-type d'échantillon ? (d) Écart-type de population ?
+
+<details>
+<summary>Correction 2</summary>
+
+(a) **0**. (b) 100 + 100 + 400 + 400 = **1 000**. (c) √(1 000 ÷ 3) ≈ **18,26**. (d) √(1 000 ÷ 4) = **15,81**.
+</details>
+
+**Exercice 3 — Signe (SIMULATION).** Chômage publié 4,0 contre 4,3 attendu ; σ = 0,15. (a) z brut ? (b) z orienté pour l'emploi ? (c) Lecture ?
+
+<details>
+<summary>Correction 3</summary>
+
+(a) (4,0 − 4,3) ÷ 0,15 = **−2,0**. (b) Orienté (chômage inversé) : **+2,0**. (c) Bonne nouvelle forte pour l'emploi (chômage nettement plus bas que prévu).
+</details>
+
+**Exercice 4 — Effet de la recherche.** Un écart-type d'emploi déplace le DM/$ de 0,16 %. (a) Effet proportionnel de z = +1,5 ? (b) De z = −0,5 ? (c) Pourquoi est-ce une extrapolation ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) 1,5 × 0,16 = **0,24 %**. (b) −0,5 × 0,16 = **−0,08 %**. (c) L'étude donne un effet moyen pour un écart-type, sur 1992-1998 ; la linéarité est une hypothèse, et les mauvaises nouvelles pèsent davantage.
+</details>
+
+**Exercice 5 — Agrégation (SIMULATION).** z emploi = −1,2 ; z chômage orienté = −0,6 ; z salaires orienté = +0,3. (a) Moyenne simple ? (b) Pourquoi cette règle est-elle fragile ?
+
+<details>
+<summary>Correction 5</summary>
+
+(a) (−1,2 − 0,6 + 0,3) ÷ 3 = **−0,5**. (b) Poids égaux arbitraires ; indicateurs corrélés ; pas de calibration sur les réactions de marché.
+</details>
+
+**Exercice 6 — Critique.** « Z = −1,7 donc le dollar va baisser de 0,27 %. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) 0,27 % est une extrapolation d'un effet moyen de 1992-1998. (2) La paire, le régime et le consensus ont changé. (3) La mauvaise nouvelle n'a pas toujours le même effet que la bonne (asymétrie). (4) σ de la leçon est fictif. (5) D'autres informations (inflation, banque centrale) peuvent dominer.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L3.03.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- z = (publié − consensus) ÷ écart-type des surprises passées.
+- On standardise pour comparer, cumuler, classer ; on oriente le signe.
+- Les variantes de calcul changent peu l'ordre de grandeur ; le σ réel exige des consensus historiques.
+- Recherche (1992-1998) : un écart-type d'emploi ≈ 0,16 % sur le DM/$ ; effet asymétrique ; non transposable tel quel.
+- Toute agrégation de z demande une règle écrite et justifiée.
+
+## 13. Critères de maîtrise
+
+- [ ] Calculer z et un écart-type d'échantillon (Exercices 1 et 2).
+- [ ] Orienter le signe d'un indicateur (Exercice 3).
+- [ ] Expliquer l'asymétrie et les limites de l'effet moyen (Exercice 4).
+- [ ] Critiquer une prévision tirée d'un z (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-NBER-04** — Andersen, Bollerslev, Diebold, Vega, « Micro Effects of Macro Announcements: Real-Time Price Discovery in Foreign Exchange », NBER WP 8959 : https://www.nber.org/system/files/working_papers/w8959/w8959.pdf
+- **S-FDS-01**, **S-BLS-04** — voir L3.02.
+
+**Définitions de cours non rattachées à une source officielle lue :** seuils |z|, orientation du signe, règle de moyenne. **Points non vérifiés :** σ réels des surprises, effets sur le change en 2026, formule exacte du papier.

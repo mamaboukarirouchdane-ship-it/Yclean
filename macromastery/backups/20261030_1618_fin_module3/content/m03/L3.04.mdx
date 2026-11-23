@@ -1,0 +1,222 @@
+---
+id: L3.04
+module: 3
+order: 4
+title: "Le rapport américain sur l'emploi : deux enquêtes, une incertitude et des révisions"
+title_initial: "Le rapport américain sur l'emploi"
+level: "intermédiaire"
+duration_hours: 3
+prerequisites: ["L1.07", "L3.01", "L3.02"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L3.04.quiz.json"
+sources: ["S-BLS-04", "S-BLS-11", "S-FTP-03", "S-BLS-03"]
+---
+
+# L3.04 — Le rapport américain sur l'emploi : deux enquêtes, une incertitude et des révisions
+
+> **Convention de lecture.** **[Fait]** = énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Les sources sont lues par **résumé automatique**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. distinguer l'enquête auprès des **établissements** (CES) de l'enquête auprès des **ménages** (CPS) et ce que chacune mesure ;
+2. lire un chiffre d'emploi **dans son intervalle de confiance** ;
+3. suivre la chaîne des **révisions** (deux révisions mensuelles, puis réajustement annuel) ;
+4. vérifier la cohérence interne du rapport (taux de chômage, activité, ratio emploi/population) ;
+5. lire salaires, durée du travail et indicateurs de sous-emploi sans surinterpréter ;
+6. interpréter la révision préliminaire de référence de mars 2026.
+
+## 2. Prérequis
+
+- Emploi, chômage, marge d'erreur (L1.07) ; calendrier (L3.01) ; surprise et bruit (L3.02).
+
+## 3. Explication intuitive
+
+Le rapport sur l'emploi est la publication la plus suivie du mois, mais il est souvent mal lu : on retient **un chiffre** (les créations d'emplois) alors que le rapport contient **deux enquêtes différentes**, des **intervalles de confiance larges**, des **révisions** des deux mois précédents et, des mois plus tard, un **réajustement annuel**. La bonne lecture consiste à demander : *ce chiffre est-il distinguable de zéro ? de quoi est-il fait ? sera-t-il révisé ?*
+
+## 4. Développement technique
+
+### 4.1 Deux enquêtes, deux questions
+
+**[Fait]** (S-BLS-04, rapport de septembre 2026, publié le 2 octobre à 8 h 30 ; résumé automatique) :
+- **enquête auprès des établissements (CES)** : emploi salarié non agricole, heures et salaires **par secteur** ;
+- **enquête auprès des ménages (CPS)** : situation sur le marché du travail par groupe démographique ; elle inclut les indépendants, les aides familiaux non rémunérés, les travailleurs agricoles et les employés de maison, que le CES exclut ;
+- définitions du chômage (S-BLS-03) : voir L1.07.
+
+**[Interprétation]** Les deux enquêtes **ne mesurent pas la même chose** : un écart entre elles n'est pas une contradiction. Le chômage (CPS) et les créations d'emplois (CES) peuvent donner des signaux différents un même mois.
+
+### 4.2 L'incertitude : un chiffre dans son intervalle
+
+**[Fait]** (S-BLS-04, note technique) : intervalle de confiance à **90 %**. Pour le CES, la variation mensuelle de l'emploi salarié est précise à environ **±122 000** (exemple du BLS : un gain de 50 000 correspond à un intervalle de −72 000 à +172 000, qui contient zéro) ; une variation d'environ **122 000** est statistiquement significative pour le CES, contre environ **650 000** pour le CPS ; pour le CPS, avec un taux de chômage voisin de 6,0 %, l'intervalle de la variation mensuelle du taux est d'environ **±0,3 point** (et ±425 000 pour la variation du nombre de chômeurs). Les estimations des deux derniers mois sont préliminaires ; elles sont finales après **deux révisions**.
+
+**[Calcul de l'auteur]**
+- septembre 2026 : +29 000 ± 122 000 → intervalle de **−93 000 à +151 000** : il contient zéro, de même que la lecture du BLS (« peu de changement ») ;
+- l'intervalle contient aussi le consensus de +90 000 (L3.02) : la surprise de −61 000 est **inférieure à la demi-largeur** de l'intervalle (122 000), donc **compatible avec du bruit d'échantillonnage** ;
+- changement de chômage non arrondi de 0,034 point (L3.02) : très inférieur aux ±0,3 point de l'exemple du BLS (note : cet intervalle est donné pour un taux voisin de 6 %, non pour 4,2 %).
+
+**[Interprétation]** Cela ne dit pas que le chiffre est faux : cela dit que **seul, il ne permet pas de conclure** ; la tendance sur plusieurs mois et les révisions éclairent davantage (moyenne sur 12 mois : +45 000).
+
+### 4.3 La chaîne des révisions
+
+**[Fait]** (S-BLS-04) : juillet révisé de +21 000 à −10 000, août de +162 000 à +133 000 : total **−60 000**.
+
+**[Fait]** (S-BLS-11, communiqué du BLS sur la révision préliminaire de référence, lu par résumé automatique) : **mars 2026**, révision préliminaire de l'emploi salarié total de **−79 000 (−0,1 %)** et de l'emploi privé de **−178 000 (−0,1 %)** ; publication le **vendredi 28 août 2026 à 10 h**.
+
+**[Fait, source secondaire]** (S-FTP-03, First Trust, 10 septembre 2026) : la révision ramènerait la croissance des douze mois à mars 2026 d'environ **273 000** à environ **194 000** (environ 23 000 puis 16 000 par mois) ; l'article l'attribue en partie à une mise à jour du modèle « naissances-décès » de janvier, à une immigration plus faible et à un recrutement plus faible ; la révision n'entrera dans la série officielle qu'avec le réajustement final de février ; elle pourrait encore changer.
+
+**[Calcul de l'auteur]**
+- 273 000 − 79 000 = **194 000** ✓ ; 273 000 ÷ 12 ≈ **22 750** ; 194 000 ÷ 12 ≈ **16 170** par mois ;
+- écart entre révision privée et révision totale : −79 000 − (−178 000) = **+99 000** (le secteur public ou une autre composante a été révisé dans l'autre sens ; **interprétation de l'auteur**, la page lue ne le détaille pas).
+
+**[Interprétation]** Le cumul de révisions mensuelles (−60 000 sur deux mois) et du réajustement annuel (−79 000 sur douze mois) signifie qu'un **premier chiffre** est une estimation provisoire. **Limite** : le réajustement préliminaire n'est pas encore intégré aux séries ; il ne dit rien du chiffre d'un mois donné.
+
+### 4.4 Cohérence interne du rapport
+
+**[Fait]** (S-BLS-04) : chômage **4,2 %** (7,109 millions) ; taux d'activité **61,8 %** ; ratio emploi/population **59,2 %**.
+
+**[Calcul de l'auteur]** Le taux de chômage vaut (activité − emploi/population) ÷ activité : (61,8 − 59,2) ÷ 61,8 = **4,21 %** : cohérent avec 4,2 %. Population active ≈ 7,109 ÷ 0,042 ≈ **169,3 millions** (sensible à l'arrondi).
+
+### 4.5 Salaires, durée et sous-emploi
+
+**[Fait]** (S-BLS-04) : salaire horaire moyen **+5 cents** à **37,81 $** (**+0,1 %** sur le mois, **+3,0 %** sur 12 mois) ; durée hebdomadaire moyenne **34,4** heures ; chômage de longue durée **1,9 million (27,1 % des chômeurs)** ; personnes « marginalement attachées » **1,5 million** (en baisse de 236 000 sur le mois) dont **414 000** découragées.
+
+**[Calcul de l'auteur]** 0,05 ÷ (37,81 − 0,05) × 100 = **0,13 %** (cohérent avec « +0,1 % » arrondi) ; salaire réel sur 12 mois, avec un CPI de septembre à +3,7 % (module 1) : 1,030 ÷ 1,037 − 1 = **−0,68 %** ; part des découragés parmi les marginalement attachés : 414 ÷ 1 500 ≈ **27,6 %** (chiffre de 1,5 million arrondi).
+
+**[Interprétation]** Un salaire nominal en hausse de 3,0 % avec une inflation de 3,7 % implique un pouvoir d'achat horaire en baisse ; l'indicateur U-6 n'a pas été lu.
+
+### 4.6 Une grille de lecture en cinq questions
+
+**[Définition]** (1) Le chiffre principal dépasse-t-il l'intervalle ? (2) Que font les **révisions** ? (3) Que dit le **chômage** (CPS) ? (4) Que dit la **composition** (secteurs) ? (5) Que disent **salaires et heures** ? Pas de conclusion sans au moins trois réponses convergentes.
+
+## 5. Définitions essentielles
+
+- **CES** : enquête auprès des établissements (emploi, heures, salaires).
+- **CPS** : enquête auprès des ménages (chômage, activité).
+- **Intervalle de confiance à 90 %** : plage où la vraie valeur se trouve avec 90 % de confiance selon le plan d'échantillonnage.
+- **Révision de référence (benchmark)** : réajustement annuel de l'emploi salarié sur des données administratives.
+- **Marginalement attaché** : souhaite travailler, a cherché récemment, mais ne cherche pas activement.
+- **Travailleur découragé** : sous-ensemble des marginalement attachés qui pense qu'aucun emploi n'est disponible.
+
+## 6. Exemples chiffrés
+
+**6.1 Intervalle.** 29 000 ± 122 000 = [−93 000 ; +151 000].
+**6.2 Cohérence.** (61,8 − 59,2) ÷ 61,8 = 4,21 %.
+**6.3 Révisions.** −31 000 et −29 000 : −60 000.
+**6.4 Salaire réel.** 1,030 ÷ 1,037 − 1 = −0,68 %.
+
+### 6.5 Cas historique documenté — la révision préliminaire de référence de mars 2026 (28 août 2026)
+
+**[Fait]** (S-BLS-11, S-FTP-03) : voir 4.3 : −79 000 sur l'emploi total (−0,1 %), −178 000 sur l'emploi privé ; croissance des douze mois ramenée d'environ 273 000 à 194 000 selon la source secondaire.
+
+**[Calcul de l'auteur]** −79 000 ÷ 273 000 = **−28,9 %** de la croissance estimée sur douze mois ; en moyenne **−6 600** emplois par mois (79 000 ÷ 12).
+
+**[Interprétation]** La révision est faible en pourcentage du niveau total (−0,1 %) mais **forte relativement à la croissance** annuelle estimée (près de 29 %) : c'est pourquoi les croissances annuelles faibles sont fragiles à la révision. **Limites** : la comparaison avec les révisions des années précédentes n'a pas été lue (un chiffre de −911 000 pour 2025 vu dans un résultat de recherche n'est pas repris faute de source primaire lue) ; la révision finale (février) peut différer ; le détail par secteur n'a pas été lu.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **Procédure** : au moment de la publication, noter (1) chiffre et consensus, (2) intervalle, (3) révisions, (4) chômage, (5) salaires ; puis la lecture de la banque centrale (module 2) : un chiffre faible mais un chômage stable et des salaires fermes envoient des messages mixtes.
+- **Réaction du marché** : la réaction immédiate suit souvent la surprise et les révisions ; le fond (tendance, benchmark) arrive plus tard.
+- **Dollar et or** : un emploi plus faible réduit les taux attendus (dollar plus faible, or soutenu via taux réels) ; relations à tester (modules 4 et 5).
+- **Prudence** : ne pas bâtir un scénario sur le seul chiffre principal.
+
+## 8. Erreurs courantes
+
+1. Traiter les +29 000 comme exacts.
+2. Confondre CES et CPS.
+3. Oublier les révisions des deux mois précédents.
+4. Lire une variation du chômage de 0,1 point comme un changement certain.
+5. Comparer salaires nominaux et inflation sans calcul.
+6. Conclure sans composition sectorielle.
+7. Confondre révision préliminaire de référence et révision finale.
+
+## 9. Limites de l'interprétation
+
+- Le rapport de septembre est lu par résumé ; l'intervalle de ±122 000 est celui de la note technique générale ; l'exemple de ±0,3 point est donné pour un taux voisin de 6 %.
+- U-6 n'a pas été lu ; la composition sectorielle complète non plus.
+- La page courante du BLS n'est pas accessible ; l'archive du rapport est utilisée.
+- Le détail de la révision de référence (secteurs, public) n'a pas été lu ; l'écart de +99 000 est une interprétation.
+- Le texte du CES (méthode, naissances-décès) n'a pas été lu faute d'accès.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Intervalle.** Création d'emplois +60 000 ; intervalle ±122 000. (a) Bornes ? (b) Contient-il zéro ? (c) Le chiffre est-il significatif ?
+
+<details>
+<summary>Correction 1</summary>
+
+(a) −62 000 et +182 000. (b) **Oui**. (c) **Non** : on ne peut pas confirmer qu'il est différent de zéro.
+</details>
+
+**Exercice 2 — Cohérence.** Activité 61,8 % ; emploi/population 59,2 %. (a) Taux de chômage ? (b) Concordance avec 4,2 % ?
+
+<details>
+<summary>Correction 2</summary>
+
+(a) (61,8 − 59,2) ÷ 61,8 = 2,6 ÷ 61,8 = **4,21 %**. (b) Oui, à l'arrondi près.
+</details>
+
+**Exercice 3 — Salaire réel.** Salaire +3,0 % ; inflation +3,7 % sur 12 mois. Salaire réel ?
+
+<details>
+<summary>Correction 3</summary>
+
+1,030 ÷ 1,037 − 1 = **−0,68 %** : le pouvoir d'achat horaire baisse sur douze mois.
+</details>
+
+**Exercice 4 — Benchmark.** Croissance estimée sur 12 mois : 273 000 ; révision −79 000. (a) Nouvelle croissance ? (b) Part de la révision ? (c) Moyenne mensuelle avant et après ?
+
+<details>
+<summary>Correction 4</summary>
+
+(a) **194 000**. (b) 79 ÷ 273 = **28,9 %**. (c) 273 000 ÷ 12 = **22 750** ; 194 000 ÷ 12 ≈ **16 170**.
+</details>
+
+**Exercice 5 — Grille.** Pour un rapport fictif : emploi +150 000 (consensus +100 000), révisions −20 000, chômage 4,0 % (attendu 4,1 %), salaire +0,4 % sur le mois. Applique la grille en cinq questions. (SIMULATION)
+
+<details>
+<summary>Correction 5</summary>
+
+(1) +150 000 est dans l'intervalle de ±122 000 autour du consensus (écart +50 000) : surprise positive modérée, pas décisive. (2) Révisions −20 000 : légèrement négatives. (3) Chômage −0,1 pt : plus bas que prévu. (4) Composition : à lire. (5) Salaire +0,4 % : ferme. Lecture : signaux **convergents vers un marché du travail ferme**, avec une réserve sur le bruit ; pas de conclusion définitive.
+</details>
+
+**Exercice 6 — Critique.** « +29 000 : le marché du travail s'effondre. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) L'intervalle à 90 % va de −93 000 à +151 000 et contient zéro. (2) La surprise de −61 000 est inférieure à la demi-largeur de l'intervalle. (3) Le chômage ne monte que de 0,034 point en valeur non arrondie. (4) La moyenne sur 12 mois et les révisions sont plus informatives. (5) Les révisions futures peuvent changer le chiffre.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L3.04.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Deux enquêtes : établissements (emploi, heures, salaires) et ménages (chômage).
+- Le chiffre mensuel du CES est précis à environ ±122 000 (90 %) : un +29 000 ne se distingue pas de zéro.
+- Révisions : deux mois, puis réajustement annuel ; mars 2026 préliminaire −79 000.
+- Vérifier la cohérence interne et lire salaires, heures, sous-emploi.
+- Pas de conclusion sans signaux convergents.
+
+## 13. Critères de maîtrise
+
+- [ ] Distinguer CES et CPS.
+- [ ] Construire un intervalle autour d'un chiffre (Exercice 1).
+- [ ] Vérifier la cohérence chômage – activité – emploi/population (Exercice 2).
+- [ ] Calculer un salaire réel (Exercice 3).
+- [ ] Appliquer la grille en cinq questions (Exercice 5).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-BLS-04** — BLS, The Employment Situation, septembre 2026 : https://www.bls.gov/news.release/archives/empsit_10022026.htm
+- **S-BLS-11** — BLS, révision préliminaire de référence : https://www.bls.gov/news.release/prebmk.nr0.htm
+- **S-FTP-03** — First Trust (secondaire), 10 septembre 2026 : https://www.ftportfolios.com/Commentary/EconomicResearch/2026/9/10/bls-payroll-revisions-fall-back-in-line-down-just-79,000
+- **S-BLS-03** — BLS, Handbook of Methods, CPS : https://www.bls.gov/opub/hom/cps/concepts.htm
+
+**Définitions de cours non rattachées à une source officielle lue :** grille en cinq questions. **Points non vérifiés :** manuel du CES, U-6, révision de référence par secteur, révisions des années précédentes.

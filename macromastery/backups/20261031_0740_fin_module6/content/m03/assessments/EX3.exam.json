@@ -1,0 +1,821 @@
+{
+  "examId": "EX3",
+  "module": 3,
+  "title": "Examen du module 3 — Publications économiques et surprises statistiques",
+  "durationMinutes": 120,
+  "passThreshold": 0.7,
+  "note": "25 QCM (1 point) + 5 calculs (3 points) + 2 publications fictives à analyser avec la grille (10 points chacune) = 60 points ; seuil de réussite 42/60. Les données sont fictives (SIMULATION) sauf mention contraire.",
+  "questions": [
+    {
+      "id": "EX3-Q1",
+      "type": "mcq",
+      "prompt": "À quelle heure (heure de l'Est) le BLS publie-t-il en général le rapport sur l'emploi ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "12 h 00"
+        },
+        {
+          "id": "b",
+          "text": "10 h 00"
+        },
+        {
+          "id": "c",
+          "text": "8 h 30"
+        },
+        {
+          "id": "d",
+          "text": "16 h 00"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le calendrier du BLS indique 8 h 30, heure de l'Est, pour les rapports principaux.",
+      "tags": [
+        "calendrier"
+      ]
+    },
+    {
+      "id": "EX3-Q2",
+      "type": "mcq",
+      "prompt": "Le consensus est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une médiane ou moyenne de prévisions dont il faut citer l'origine"
+        },
+        {
+          "id": "b",
+          "text": "Un chiffre officiel de l'organisme"
+        },
+        {
+          "id": "c",
+          "text": "Un résultat définitif"
+        },
+        {
+          "id": "d",
+          "text": "Toujours gratuit"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Les consensus de marché sont en général sous licence ; un consensus se cite avec son origine et sa date.",
+      "tags": [
+        "consensus"
+      ]
+    },
+    {
+      "id": "EX3-Q3",
+      "type": "mcq",
+      "prompt": "La surprise brute se calcule :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Publié + consensus"
+        },
+        {
+          "id": "b",
+          "text": "Consensus − publié"
+        },
+        {
+          "id": "c",
+          "text": "Publié ÷ consensus"
+        },
+        {
+          "id": "d",
+          "text": "Publié − consensus"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Surprise = valeur publiée moins attente ; le signe donne la direction.",
+      "tags": [
+        "surprise"
+      ]
+    },
+    {
+      "id": "EX3-Q4",
+      "type": "mcq",
+      "prompt": "Standardiser une surprise permet de :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Prévoir le prix"
+        },
+        {
+          "id": "b",
+          "text": "Comparer des indicateurs d'unités et de dispersions différentes"
+        },
+        {
+          "id": "c",
+          "text": "Supprimer les révisions"
+        },
+        {
+          "id": "d",
+          "text": "Remplacer le consensus"
+        }
+      ],
+      "correct": "b",
+      "explanation": "On divise par l'écart-type historique des surprises : l'écart devient comparable d'un indicateur à l'autre.",
+      "tags": [
+        "standardisation"
+      ]
+    },
+    {
+      "id": "EX3-Q5",
+      "type": "mcq",
+      "prompt": "Un écart de 61 000 emplois avec un intervalle de ±122 000 est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un résultat du CPS"
+        },
+        {
+          "id": "b",
+          "text": "Toujours significatif"
+        },
+        {
+          "id": "c",
+          "text": "Impossible"
+        },
+        {
+          "id": "d",
+          "text": "Inférieur à la marge d'échantillonnage du chiffre mensuel"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La marge de ±122 000 à 90 % est supérieure à l'écart : le chiffre mensuel est peu précis.",
+      "tags": [
+        "intervalle"
+      ]
+    },
+    {
+      "id": "EX3-Q6",
+      "type": "mcq",
+      "prompt": "L'enquête CPS fournit :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les prix"
+        },
+        {
+          "id": "b",
+          "text": "L'emploi par établissement"
+        },
+        {
+          "id": "c",
+          "text": "Le taux de chômage"
+        },
+        {
+          "id": "d",
+          "text": "Le PIB"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le taux de chômage vient de l'enquête auprès des ménages ; l'emploi salarié de l'enquête sur les établissements.",
+      "tags": [
+        "ces-cps"
+      ]
+    },
+    {
+      "id": "EX3-Q7",
+      "type": "mcq",
+      "prompt": "Emploi privé +46 000 et gouvernement −17 000 donnent un total de :",
+      "options": [
+        {
+          "id": "a",
+          "text": "29 000"
+        },
+        {
+          "id": "b",
+          "text": "63 000"
+        },
+        {
+          "id": "c",
+          "text": "−29 000"
+        },
+        {
+          "id": "d",
+          "text": "46 000"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La somme du privé et du gouvernement donne le total non agricole.",
+      "tags": [
+        "coherence"
+      ]
+    },
+    {
+      "id": "EX3-Q8",
+      "type": "mcq",
+      "prompt": "Une moyenne sur trois mois sert à :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Remplacer les révisions"
+        },
+        {
+          "id": "b",
+          "text": "Lisser le bruit d'un mois isolé"
+        },
+        {
+          "id": "c",
+          "text": "Prévoir la décision de la Fed"
+        },
+        {
+          "id": "d",
+          "text": "Calculer le PIB"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Elle réduit l'influence d'un chiffre mensuel volatil ; elle se calcule sur les variations révisées.",
+      "tags": [
+        "moyenne"
+      ]
+    },
+    {
+      "id": "EX3-Q9",
+      "type": "mcq",
+      "prompt": "Le CPI est publié en variation mensuelle :",
+      "options": [
+        {
+          "id": "a",
+          "text": "En dollars"
+        },
+        {
+          "id": "b",
+          "text": "Toujours brute"
+        },
+        {
+          "id": "c",
+          "text": "Corrigée des variations saisonnières"
+        },
+        {
+          "id": "d",
+          "text": "Sans correction"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La variation mensuelle est en général corrigée et la variation sur 12 mois publiée sur indices non corrigés.",
+      "tags": [
+        "cpi"
+      ]
+    },
+    {
+      "id": "EX3-Q10",
+      "type": "mcq",
+      "prompt": "Le cœur du CPI exclut :",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'alimentation et l'énergie"
+        },
+        {
+          "id": "b",
+          "text": "Le logement"
+        },
+        {
+          "id": "c",
+          "text": "Les loyers"
+        },
+        {
+          "id": "d",
+          "text": "Les services"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le cœur américain exclut l'alimentation et l'énergie, deux postes volatils.",
+      "tags": [
+        "cpi"
+      ]
+    },
+    {
+      "id": "EX3-Q11",
+      "type": "mcq",
+      "prompt": "Le poids du logement dans le CPI (décembre 2025) est d'environ :",
+      "options": [
+        {
+          "id": "a",
+          "text": "60 %"
+        },
+        {
+          "id": "b",
+          "text": "3,5 %"
+        },
+        {
+          "id": "c",
+          "text": "6,0 %"
+        },
+        {
+          "id": "d",
+          "text": "35,6 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "L'importance relative du logement est de 35,625 %, dont 26,204 pour le loyer équivalent.",
+      "tags": [
+        "logement"
+      ]
+    },
+    {
+      "id": "EX3-Q12",
+      "type": "mcq",
+      "prompt": "L'OER est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un loyer payé par tous"
+        },
+        {
+          "id": "b",
+          "text": "Un loyer équivalent estimé pour les propriétaires occupants"
+        },
+        {
+          "id": "c",
+          "text": "Un taux d'intérêt"
+        },
+        {
+          "id": "d",
+          "text": "Un indice de prix à la production"
+        }
+      ],
+      "correct": "b",
+      "explanation": "C'est une estimation du loyer qu'un propriétaire occupant paierait, non une dépense observée.",
+      "tags": [
+        "logement"
+      ]
+    },
+    {
+      "id": "EX3-Q13",
+      "type": "mcq",
+      "prompt": "L'objectif de 2 % de la Fed est mesuré par :",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'IPCH"
+        },
+        {
+          "id": "b",
+          "text": "Le CPI"
+        },
+        {
+          "id": "c",
+          "text": "Le PPI"
+        },
+        {
+          "id": "d",
+          "text": "Le PCE"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La déclaration sur les objectifs de long terme retient la variation annuelle de l'indice des prix PCE.",
+      "tags": [
+        "fed"
+      ]
+    },
+    {
+      "id": "EX3-Q14",
+      "type": "mcq",
+      "prompt": "Le PPI mesure :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les salaires"
+        },
+        {
+          "id": "b",
+          "text": "Les prix payés par les ménages"
+        },
+        {
+          "id": "c",
+          "text": "Les prix reçus par les producteurs"
+        },
+        {
+          "id": "d",
+          "text": "Le chômage"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Il se situe en amont du consommateur et inclut des marges de commerce ; il ne prédit pas mécaniquement le CPI.",
+      "tags": [
+        "ppi"
+      ]
+    },
+    {
+      "id": "EX3-Q15",
+      "type": "mcq",
+      "prompt": "Le déflateur du PIB mesure :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les prix de la production nationale"
+        },
+        {
+          "id": "b",
+          "text": "Les prix payés par les ménages seulement"
+        },
+        {
+          "id": "c",
+          "text": "Les prix à l'importation"
+        },
+        {
+          "id": "d",
+          "text": "Les salaires réels"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Il rapporte le PIB nominal au PIB réel ; un choc sur l'énergie importée l'affecte autrement que le CPI.",
+      "tags": [
+        "deflateur"
+      ]
+    },
+    {
+      "id": "EX3-Q16",
+      "type": "mcq",
+      "prompt": "Un PMI de 54,5 signifie :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une croissance de 54,5 %"
+        },
+        {
+          "id": "b",
+          "text": "Une expansion nette selon les répondants, non un taux de croissance"
+        },
+        {
+          "id": "c",
+          "text": "Une récession"
+        },
+        {
+          "id": "d",
+          "text": "Un PIB de 5,45 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "C'est un indice de diffusion : au-dessus de 50, les hausses l'emportent sur les baisses.",
+      "tags": [
+        "pmi"
+      ]
+    },
+    {
+      "id": "EX3-Q17",
+      "type": "mcq",
+      "prompt": "L'indice des prix payés de l'ISM :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Est le PIB"
+        },
+        {
+          "id": "b",
+          "text": "Est le tiers du PMI"
+        },
+        {
+          "id": "c",
+          "text": "N'entre pas dans le PMI"
+        },
+        {
+          "id": "d",
+          "text": "Est le CPI"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le PMI est la moyenne de cinq (manufacturier) ou quatre (services) composantes, sans les prix.",
+      "tags": [
+        "pmi"
+      ]
+    },
+    {
+      "id": "EX3-Q18",
+      "type": "mcq",
+      "prompt": "Le PIB en trois estimations signifie que :",
+      "options": [
+        {
+          "id": "a",
+          "text": "La première estimation peut être sensiblement révisée"
+        },
+        {
+          "id": "b",
+          "text": "Le PIB est publié trois fois par jour"
+        },
+        {
+          "id": "c",
+          "text": "Seule la troisième est publiée"
+        },
+        {
+          "id": "d",
+          "text": "Les révisions sont toujours négatives"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le T2 2026 est passé de 1,5 % à 2,2 % entre la deuxième et la troisième estimation.",
+      "tags": [
+        "pib"
+      ]
+    },
+    {
+      "id": "EX3-Q19",
+      "type": "mcq",
+      "prompt": "Les ventes au détail sont publiées :",
+      "options": [
+        {
+          "id": "a",
+          "text": "En indice de diffusion"
+        },
+        {
+          "id": "b",
+          "text": "En volume uniquement"
+        },
+        {
+          "id": "c",
+          "text": "Sans erreur"
+        },
+        {
+          "id": "d",
+          "text": "En valeur nominale, avec un intervalle d'erreur"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le Census indique +0,8 % ± 0,4 % sur le mois ; la comparaison réelle exige un déflateur.",
+      "tags": [
+        "ventes"
+      ]
+    },
+    {
+      "id": "EX3-Q20",
+      "type": "mcq",
+      "prompt": "Le taux d'utilisation des capacités de 76,9 % est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Supérieur à sa moyenne"
+        },
+        {
+          "id": "b",
+          "text": "Inférieur à sa moyenne de long terme de 79,4 %"
+        },
+        {
+          "id": "c",
+          "text": "Égal à 100 %"
+        },
+        {
+          "id": "d",
+          "text": "Non comparable"
+        }
+      ],
+      "correct": "b",
+      "explanation": "L'écart est de 2,5 points sous la moyenne 1972–2025.",
+      "tags": [
+        "capacites"
+      ]
+    },
+    {
+      "id": "EX3-Q21",
+      "type": "mcq",
+      "prompt": "L'IPCH est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un indice des salaires"
+        },
+        {
+          "id": "b",
+          "text": "Un indice américain"
+        },
+        {
+          "id": "c",
+          "text": "Un indice du PIB"
+        },
+        {
+          "id": "d",
+          "text": "Un indice harmonisé pour comparer les pays de l'Union européenne"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Il sert à comparer l'inflation des pays de l'Union ; ses paniers diffèrent du CPI américain.",
+      "tags": [
+        "ipch"
+      ]
+    },
+    {
+      "id": "EX3-Q22",
+      "type": "mcq",
+      "prompt": "L'estimation rapide (flash) d'un indicateur européen est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un consensus"
+        },
+        {
+          "id": "b",
+          "text": "La valeur définitive"
+        },
+        {
+          "id": "c",
+          "text": "Une première estimation, avant le détail complet"
+        },
+        {
+          "id": "d",
+          "text": "Une prévision de la BCE"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Elle est publiée avant le détail ; le PIB du T2 est passé de 0,4 % à 0,6 %.",
+      "tags": [
+        "flash"
+      ]
+    },
+    {
+      "id": "EX3-Q23",
+      "type": "mcq",
+      "prompt": "Dans une reconstitution de réaction de marché, t₀ est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'heure officielle de publication"
+        },
+        {
+          "id": "b",
+          "text": "La clôture"
+        },
+        {
+          "id": "c",
+          "text": "L'ouverture"
+        },
+        {
+          "id": "d",
+          "text": "La date de la décision de la banque centrale"
+        }
+      ],
+      "correct": "a",
+      "explanation": "t₀ ancre les fenêtres d'événement autour de la publication.",
+      "tags": [
+        "fenetre"
+      ]
+    },
+    {
+      "id": "EX3-Q24",
+      "type": "mcq",
+      "prompt": "Quelle conclusion tirer quand les données de marché gratuites sont lacunaires ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Inventer un récit causal"
+        },
+        {
+          "id": "b",
+          "text": "Dire ce qui est établi et ce qui ne l'est pas"
+        },
+        {
+          "id": "c",
+          "text": "Choisir la source la plus récente"
+        },
+        {
+          "id": "d",
+          "text": "Ne rien écrire"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La méthode accepte les cases vides et ne les comble par aucun récit.",
+      "tags": [
+        "prudence"
+      ]
+    },
+    {
+      "id": "EX3-Q25",
+      "type": "mcq",
+      "prompt": "La rubrique « inconnues » de la grille sert à :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Remplacer l'interprétation"
+        },
+        {
+          "id": "b",
+          "text": "Allonger la grille"
+        },
+        {
+          "id": "c",
+          "text": "Rendre la lecture traçable en consignant ce qui n'a pas été vérifié"
+        },
+        {
+          "id": "d",
+          "text": "Calculer le score"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Une grille sans inconnue déclarée est suspecte ; elle garantit l'honnêteté de la lecture.",
+      "tags": [
+        "grille"
+      ]
+    }
+  ],
+  "calculations": [
+    {
+      "id": "EX3-K1",
+      "type": "calc",
+      "prompt": "Surprise standardisée (SIMULATION). Publié +29 000 ; consensus +90 000 ; écart-type d'échantillon des surprises 35 600. Quelle valeur de z (2 décimales) ?",
+      "answer": -1.71,
+      "tolerance": 0.01,
+      "unit": "écarts-types",
+      "solution": "z = (29 000 − 90 000) ÷ 35 600 = −61 000 ÷ 35 600 = −1,713 ≈ −1,71.",
+      "tags": [
+        "standardisation"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX3-K2",
+      "type": "calc",
+      "prompt": "Annualisation du PCE. Variation mensuelle de +0,5 %. Quelle variation annualisée en % (2 décimales) ?",
+      "answer": 6.17,
+      "tolerance": 0.01,
+      "unit": "%",
+      "solution": "(1,005)¹² − 1 = 0,0617 = 6,17 % ; annualiser un seul mois amplifie le bruit.",
+      "tags": [
+        "annualisation"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX3-K3",
+      "type": "calc",
+      "prompt": "Ventes réelles approchées. Ventes au détail +6,3 % sur 12 mois ; CPI d'ensemble +3,7 %. Variation réelle approchée en % (2 décimales) ?",
+      "answer": 2.51,
+      "tolerance": 0.01,
+      "unit": "%",
+      "solution": "1,063 ÷ 1,037 − 1 = 0,02507 ≈ 2,51 % ; approximation, car le champ des ventes n'est pas celui du CPI.",
+      "tags": [
+        "ventes"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX3-K4",
+      "type": "calc",
+      "prompt": "Recomposition du PMI. Composantes : nouvelles commandes 55,3 ; production 56,7 ; emploi 52,7 ; livraisons 59,0 ; stocks 48,6. PMI (2 décimales) ?",
+      "answer": 54.46,
+      "tolerance": 0.01,
+      "unit": "points",
+      "solution": "(55,3 + 56,7 + 52,7 + 59,0 + 48,6) ÷ 5 = 272,3 ÷ 5 = 54,46.",
+      "tags": [
+        "pmi"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX3-K5",
+      "type": "calc",
+      "prompt": "Déflateur implicite. PIB nominal +5,6 % et PIB réel +3,4 % (annualisés). Déflateur implicite en % (2 décimales) ?",
+      "answer": 2.13,
+      "tolerance": 0.01,
+      "unit": "%",
+      "solution": "1,056 ÷ 1,034 − 1 = 0,02128 ≈ 2,13 %.",
+      "tags": [
+        "deflateur"
+      ],
+      "points": 3
+    }
+  ],
+  "analyses": [
+    {
+      "id": "EX3-A1",
+      "type": "analysis",
+      "title": "Publication fictive n° 1 — rapport sur l'emploi (SIMULATION)",
+      "material": "Emploi salarié non agricole : +70 000 (consensus : +110 000 ; écart-type historique des surprises : 40 000). Révisions des deux mois précédents : −35 000 au total. Privé : +62 000 ; gouvernement : +8 000. Taux de chômage : 4,5 % (attendu 4,4 %). Salaire horaire : +0,4 % sur le mois, +3,6 % sur 12 mois ; inflation sur 12 mois : 3,2 %. Intervalle de confiance de l'emploi : ±120 000 (90 %).",
+      "tasks": [
+        "Calcule la surprise brute et standardisée, et l'intervalle du chiffre publié.",
+        "Contrôle la cohérence privé / gouvernement / total.",
+        "Calcule le salaire réel sur 12 mois.",
+        "Rédige la synthèse en trois phrases (faits, calculs, hypothèse) et liste trois inconnues."
+      ],
+      "expectedElements": [
+        "Surprise −40 000 ; z = −1,00 ; intervalle de −50 000 à +190 000",
+        "62 000 + 8 000 = 70 000 ✓",
+        "1,036 ÷ 1,032 − 1 = +0,39 %",
+        "Synthèse sans prévision de décision ; inconnues : consensus non vérifié, composition non détaillée, effet des révisions",
+        "Rappel : le chiffre est dans son intervalle de confiance"
+      ],
+      "points": 10
+    },
+    {
+      "id": "EX3-A2",
+      "type": "analysis",
+      "title": "Publication fictive n° 2 — CPI (SIMULATION)",
+      "material": "CPI d'ensemble : +0,4 % sur le mois, +3,0 % sur 12 mois (attendu : +0,3 % et +2,9 %). Cœur : +0,2 % et +2,7 % (attendu : +0,3 % et +2,8 %). Énergie : +3,0 % sur le mois ; logement : +0,3 % sur le mois. Pondérations fictives : énergie 8 %, alimentation 13 %, cœur 79 % ; alimentation : +0,1 %. Indice fictif du même mois un an plus tôt : variation mensuelle +0,1 %.",
+      "tasks": [
+        "Calcule les surprises sur l'ensemble et le cœur, et annualise les variations mensuelles du cœur et de l'ensemble.",
+        "Calcule la contribution simulée de l'énergie, de l'alimentation et du cœur à la hausse d'ensemble, et vérifie le total.",
+        "Explique l'effet de base compte tenu du mois de l'an dernier.",
+        "Rédige la synthèse en trois phrases et liste trois inconnues."
+      ],
+      "expectedElements": [
+        "Surprises : ensemble +0,1 point (mois) et +0,1 point (12 mois) ; cœur −0,1 point (mois) et −0,1 point (12 mois) ; annualisation : cœur 1,002¹² − 1 = 2,43 % ; ensemble 1,004¹² − 1 = 4,91 %",
+        "Énergie 0,08 × 3,0 = 0,24 ; alimentation 0,13 × 0,1 = 0,013 ; cœur 0,79 × 0,2 = 0,158 ; total 0,411 ≈ 0,4 ✓",
+        "Le mois courant (0,4 %) dépasse celui de l'an dernier (0,1 %) : la variation sur 12 mois tend à monter",
+        "Synthèse : ensemble au-dessus, cœur en dessous ; énergie dominante ; pas de prévision de décision",
+        "Inconnues : pondérations réelles, consensus non vérifié, détail du cœur"
+      ],
+      "points": 10
+    }
+  ],
+  "totalPoints": 60,
+  "revision": 1
+}

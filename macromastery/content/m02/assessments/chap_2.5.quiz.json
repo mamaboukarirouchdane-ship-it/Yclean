@@ -1,0 +1,180 @@
+{
+  "chapterId": "2.5",
+  "module": 2,
+  "title": "Quiz de chapitre 2.5 — Pratique de lecture et transmission au change et à l'or (L2.11–L2.12)",
+  "passThreshold": 0.8333333333333334,
+  "requiredCorrect": 5,
+  "passRule": "5 bonnes réponses sur 6 (règle R1 : ⌈0,8 × 6⌉ = 5 ; seuil pédagogique provisoire)",
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C2.5-Q1",
+      "type": "mcq",
+      "prompt": "Probabilité de marché de 85 % pour une hausse de 25 pb. Quelle est la variation attendue ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "85 pb"
+        },
+        {
+          "id": "b",
+          "text": "25 pb"
+        },
+        {
+          "id": "c",
+          "text": "21,25 pb"
+        },
+        {
+          "id": "d",
+          "text": "3,75 pb"
+        }
+      ],
+      "correct": "c",
+      "explanation": "0,85 × 25 = 21,25 pb : espérance de la variation selon les probabilités de marché.",
+      "tags": [
+        "surprise"
+      ]
+    },
+    {
+      "id": "C2.5-Q2",
+      "type": "mcq",
+      "prompt": "Avec 85 % de hausse attendue, quelle est la surprise si la banque maintient ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−21,25 pb"
+        },
+        {
+          "id": "b",
+          "text": "+3,75 pb"
+        },
+        {
+          "id": "c",
+          "text": "0 pb"
+        },
+        {
+          "id": "d",
+          "text": "−25 pb"
+        }
+      ],
+      "correct": "a",
+      "explanation": "0 − 21,25 = −21,25 pb : le maintien est nettement moins restrictif que le prix.",
+      "tags": [
+        "surprise"
+      ]
+    },
+    {
+      "id": "C2.5-Q3",
+      "type": "mcq",
+      "prompt": "Vote 10–2 au FOMC du 28 octobre 2026. Quelle est la part de dissidents ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "20 %"
+        },
+        {
+          "id": "b",
+          "text": "16,7 %"
+        },
+        {
+          "id": "c",
+          "text": "8,3 %"
+        },
+        {
+          "id": "d",
+          "text": "83,3 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "2 ÷ 12 = 16,7 % ; les deux dissidents voulaient une hausse, donc un biais plus restrictif.",
+      "tags": [
+        "vote"
+      ]
+    },
+    {
+      "id": "C2.5-Q4",
+      "type": "mcq",
+      "prompt": "Une once à 4 000 $ ; rendement sans risque de 4,0 %. Quel est le coût d'opportunité annuel ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "400 $"
+        },
+        {
+          "id": "b",
+          "text": "40 $"
+        },
+        {
+          "id": "c",
+          "text": "160 $"
+        },
+        {
+          "id": "d",
+          "text": "1 600 $"
+        }
+      ],
+      "correct": "c",
+      "explanation": "4 000 × 0,04 = 160 $ de revenu renoncé ; ce calcul ne prédit pas le prix futur.",
+      "tags": [
+        "or"
+      ]
+    },
+    {
+      "id": "C2.5-Q5",
+      "type": "mcq",
+      "prompt": "Que montre le rapport relayé sur les perspectives du World Gold Council (S1 2026) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "3 % de la variabilité attribuée aux anticipations de taux et 15 % à la volatilité du change"
+        },
+        {
+          "id": "b",
+          "text": "Que les taux expliquent 100 % du prix"
+        },
+        {
+          "id": "c",
+          "text": "Que le change n'a aucun effet"
+        },
+        {
+          "id": "d",
+          "text": "Que l'or ne varie pas"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le lien taux réels – or reste une hypothèse ; la méthode de décomposition n'est pas décrite dans le résumé.",
+      "tags": [
+        "wgc"
+      ]
+    },
+    {
+      "id": "C2.5-Q6",
+      "type": "mcq",
+      "prompt": "Que montre le cas de l'or le 18 décembre 2013 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une démonstration causale par les taux réels"
+        },
+        {
+          "id": "b",
+          "text": "Une hausse de 10 %"
+        },
+        {
+          "id": "c",
+          "text": "Une absence totale de réaction"
+        },
+        {
+          "id": "d",
+          "text": "Une forte baisse (−1,8 % au comptant, à environ 1 196 $) le jour du premier ralentissement des achats, sans preuve de causalité"
+        }
+      ],
+      "correct": "d",
+      "explanation": "L'or perdait plus de 25 % sur l'année ; l'article ne donne pas les taux réels : c'est une corrélation, pas une démonstration.",
+      "tags": [
+        "2013"
+      ]
+    }
+  ],
+  "revision": 1
+}

@@ -1,0 +1,235 @@
+{
+  "lessonId": "L6.08",
+  "title": "Quiz — Atelier : scénario contre consensus",
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L6.08-Q1",
+      "type": "mcq",
+      "prompt": "Quelle propriété doivent avoir les scénarios d'une matrice ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Probabilités indépendantes qui peuvent dépasser 100 %"
+        },
+        {
+          "id": "b",
+          "text": "Au moins un scénario haussier et un baissier de même probabilité"
+        },
+        {
+          "id": "c",
+          "text": "Exclusifs et exhaustifs, avec des probabilités totalisant 100 %"
+        },
+        {
+          "id": "d",
+          "text": "Un seul scénario"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Sans exclusivité et exhaustivité, l'espérance n'a pas de sens ; la somme des probabilités doit être exactement 100 %.",
+      "tags": [
+        "matrice"
+      ]
+    },
+    {
+      "id": "L6.08-Q2",
+      "type": "mcq",
+      "prompt": "Rendements +0,3 ; −2,0 ; +1,8 ; −0,5 % et probabilités 55/15/22/8 % : espérance ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+0,221 %"
+        },
+        {
+          "id": "b",
+          "text": "−0,221 %"
+        },
+        {
+          "id": "c",
+          "text": "+0,55 %"
+        },
+        {
+          "id": "d",
+          "text": "+1,0 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "0,165 − 0,300 + 0,396 − 0,040 = +0,221 % ; elle devient +0,021 % après des coûts de 0,2 %.",
+      "tags": [
+        "ev"
+      ]
+    },
+    {
+      "id": "L6.08-Q3",
+      "type": "mcq",
+      "prompt": "Pourquoi la valeur nette (+0,021 %) ne justifie-t-elle aucune position ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que la Fed l'interdit"
+        },
+        {
+          "id": "b",
+          "text": "Parce qu'elle est positive"
+        },
+        {
+          "id": "c",
+          "text": "Parce que l'or ne bouge pas"
+        },
+        {
+          "id": "d",
+          "text": "Elle est minuscule face à un écart-type de 1,155 point et à l'incertitude des coûts"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Un avantage de 0,02 % pour une dispersion de 1,155 point est indiscernable de zéro une fois les coûts incertains pris en compte.",
+      "tags": [
+        "limites"
+      ]
+    },
+    {
+      "id": "L6.08-Q4",
+      "type": "mcq",
+      "prompt": "Probabilité d'équilibre de hausse quand les espérances conditionnelles sont −0,193 % et +1,187 % et les coûts 0,2 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 50 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ 71,5 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ 84 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ 20 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "p* = (1,187 − 0,2) ÷ (1,187 + 0,193) = 0,987 ÷ 1,380 ≈ 71,5 % ; à 84 % la valeur nette est négative.",
+      "tags": [
+        "equilibre"
+      ]
+    },
+    {
+      "id": "L6.08-Q5",
+      "type": "mcq",
+      "prompt": "La note du 31/10 cite un prix de l'or du 5/11. Que faire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ignorer, c'est un détail"
+        },
+        {
+          "id": "b",
+          "text": "L'ajouter sans le dire"
+        },
+        {
+          "id": "c",
+          "text": "Remplacer la date de la note"
+        },
+        {
+          "id": "d",
+          "text": "La note est invalide pour cette partie ; une nouvelle version datée peut l'intégrer, jamais l'ancienne"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La discipline chronologique interdit toute donnée postérieure à la date de la note ; une mise à jour est une nouvelle fiche, pas une retouche.",
+      "tags": [
+        "chronologie"
+      ]
+    },
+    {
+      "id": "L6.08-Q6",
+      "type": "mcq",
+      "prompt": "Que mesure le critère « direction de l'or » dans la grille de notation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "50 points"
+        },
+        {
+          "id": "b",
+          "text": "20 points"
+        },
+        {
+          "id": "c",
+          "text": "0 point en soi : la grille note le raisonnement, pas la devinette"
+        },
+        {
+          "id": "d",
+          "text": "Il remplace la cohérence économique"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Une note qui devine la direction sans méthode de probabilité ni chronologie plafonne à 50/100, sous le seuil de réussite de 70.",
+      "tags": [
+        "grille"
+      ]
+    },
+    {
+      "id": "L6.08-Q7",
+      "type": "mcq",
+      "prompt": "S3 se réalise (probabilité 22 %) : Brier multiclasse ≈ 0,94 contre 0,75 pour la référence uniforme. Que conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Rien sur la calibration : un événement à 22 % arrive environ une fois sur cinq, il faut beaucoup de notes"
+        },
+        {
+          "id": "b",
+          "text": "Que 22 % était faux"
+        },
+        {
+          "id": "c",
+          "text": "Que le marché s'est trompé"
+        },
+        {
+          "id": "d",
+          "text": "Que l'or monte toujours"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Une issue unique ne note pas une calibration ; le score est mauvais pour ce cas mais n'est pas une preuve contre la probabilité.",
+      "tags": [
+        "brier"
+      ]
+    },
+    {
+      "id": "L6.08-Q8",
+      "type": "mcq",
+      "prompt": "Un scénario alternatif est pertinent. Est-il pour autant un signal de trading ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui, toujours"
+        },
+        {
+          "id": "b",
+          "text": "Non : pertinent n'implique ni le plus probable ni une espérance positive nette de coûts"
+        },
+        {
+          "id": "c",
+          "text": "Oui si sa probabilité dépasse 5 %"
+        },
+        {
+          "id": "d",
+          "text": "Oui s'il est contrarien"
+        }
+      ],
+      "correct": "b",
+      "explanation": "L'atelier montre un scénario alternatif défendable mais dont la valeur nette reste négative à 84 % et quasi nulle à 70 %.",
+      "tags": [
+        "alternatif"
+      ]
+    }
+  ],
+  "revision": 1
+}

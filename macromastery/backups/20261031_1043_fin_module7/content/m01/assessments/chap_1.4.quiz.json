@@ -1,0 +1,178 @@
+{
+  "chapterId": "1.4",
+  "module": 1,
+  "title": "Quiz de chapitre 1.4 — Demande intérieure et secteur extérieur (L1.09–L1.10)",
+  "passThreshold": 0.8,
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C1.4-Q1",
+      "type": "mcq",
+      "prompt": "Prêt de 300 000 $ sur 30 ans : mensualité à 7,24 % contre 6,17 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "5 000 $ contre 4 000 $"
+        },
+        {
+          "id": "b",
+          "text": "1 500 $ contre 1 400 $"
+        },
+        {
+          "id": "c",
+          "text": "Identique"
+        },
+        {
+          "id": "d",
+          "text": "2 044,49 $ contre 1 831,57 $ (+11,6 %)"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La mensualité est L × i ÷ (1 − (1 + i)⁻ⁿ) ; l'écart est de 212,92 $ par mois.",
+      "tags": [
+        "hypotheque"
+      ]
+    },
+    {
+      "id": "C1.4-Q2",
+      "type": "mcq",
+      "prompt": "Mises en chantier −5,2 % (± 11,8 %). Que peut-on affirmer ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une baisse certaine"
+        },
+        {
+          "id": "b",
+          "text": "Une hausse certaine"
+        },
+        {
+          "id": "c",
+          "text": "Que la variation n'est pas distinguable de zéro au niveau de confiance de la marge"
+        },
+        {
+          "id": "d",
+          "text": "Que la source est fausse"
+        }
+      ],
+      "correct": "c",
+      "explanation": "L'intervalle va de −17,0 % à +6,6 % et contient zéro.",
+      "tags": [
+        "marge-erreur"
+      ]
+    },
+    {
+      "id": "C1.4-Q3",
+      "type": "mcq",
+      "prompt": "Avec un accélérateur v = 2, une production passant de 100 à 102 donne un investissement net de :",
+      "options": [
+        {
+          "id": "a",
+          "text": "4"
+        },
+        {
+          "id": "b",
+          "text": "2"
+        },
+        {
+          "id": "c",
+          "text": "102"
+        },
+        {
+          "id": "d",
+          "text": "200"
+        }
+      ],
+      "correct": "a",
+      "explanation": "I = v × ΔY = 2 × 2 = 4 ; le modèle est simplifié.",
+      "tags": [
+        "accelerateur"
+      ]
+    },
+    {
+      "id": "C1.4-Q4",
+      "type": "mcq",
+      "prompt": "Un déficit courant signifie que le pays :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Prête net au reste du monde"
+        },
+        {
+          "id": "b",
+          "text": "Emprunte net au reste du monde"
+        },
+        {
+          "id": "c",
+          "text": "N'a pas de commerce"
+        },
+        {
+          "id": "d",
+          "text": "A une dette nulle"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Au sens de la balance des paiements, un déficit courant correspond à un emprunt net, à un écart statistique près.",
+      "tags": [
+        "balance-courante"
+      ]
+    },
+    {
+      "id": "C1.4-Q5",
+      "type": "mcq",
+      "prompt": "Août 2026 : exportations 315,2 Md$, importations 420,8 Md$. Déficit de biens et services ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "31,0 Md$"
+        },
+        {
+          "id": "b",
+          "text": "736,0 Md$"
+        },
+        {
+          "id": "c",
+          "text": "105,6 Md$"
+        },
+        {
+          "id": "d",
+          "text": "136,6 Md$"
+        }
+      ],
+      "correct": "c",
+      "explanation": "420,8 − 315,2 = 105,6 ; décomposé en déficit des biens 136,6 moins excédent des services 31,0.",
+      "tags": [
+        "commerce"
+      ]
+    },
+    {
+      "id": "C1.4-Q6",
+      "type": "mcq",
+      "prompt": "Que montre le cas du Plaza (1985) d'après Frankel (NBER, résumé) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que le solde a mis environ deux ans à répondre à la baisse du dollar"
+        },
+        {
+          "id": "b",
+          "text": "Que le solde commercial réagit immédiatement"
+        },
+        {
+          "id": "c",
+          "text": "Que le dollar n'a pas bougé"
+        },
+        {
+          "id": "d",
+          "text": "Que le déficit a disparu en 1985"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Déficit de 122 Md$ en 1985, pic à 152 Md$ annualisé au T3 1987, 30 Md$ en 1991.",
+      "tags": [
+        "plaza"
+      ]
+    }
+  ],
+  "revision": 1
+}

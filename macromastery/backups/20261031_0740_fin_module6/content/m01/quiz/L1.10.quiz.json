@@ -1,0 +1,235 @@
+{
+  "lessonId": "L1.10",
+  "title": "Quiz — Commerce extérieur et flux de capitaux",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : BEA (6/10/2026 et 24/09/2026), NBER 21813, résumés automatiques.",
+  "questions": [
+    {
+      "id": "L1.10-Q1",
+      "type": "mcq",
+      "prompt": "Quelle est la différence entre balance commerciale et balance courante ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aucune"
+        },
+        {
+          "id": "b",
+          "text": "La balance courante ne contient que les services"
+        },
+        {
+          "id": "c",
+          "text": "La balance courante ajoute aux biens et services les revenus primaires et secondaires"
+        },
+        {
+          "id": "d",
+          "text": "La balance commerciale contient les flux financiers"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Balance courante = biens + services + revenus primaires (intérêts, dividendes, salaires) + revenus secondaires (transferts).",
+      "tags": [
+        "definitions"
+      ]
+    },
+    {
+      "id": "L1.10-Q2",
+      "type": "mcq",
+      "prompt": "Un déficit courant signifie que le pays :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Emprunte net au reste du monde (capitaux étrangers ou cession d'actifs)"
+        },
+        {
+          "id": "b",
+          "text": "Prête net au reste du monde"
+        },
+        {
+          "id": "c",
+          "text": "Ne commerce plus"
+        },
+        {
+          "id": "d",
+          "text": "Détient plus d'actifs que de passifs"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Un déficit courant se finance par un emprunt net au reste du monde, à un écart statistique près.",
+      "tags": [
+        "identite"
+      ]
+    },
+    {
+      "id": "L1.10-Q3",
+      "type": "mcq",
+      "prompt": "Août 2026 (BEA/Census, 6/10/2026, résumé) : exportations 315,2 Md$, importations 420,8 Md$. Déficit de biens et services ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "136,6 Md$"
+        },
+        {
+          "id": "b",
+          "text": "736,0 Md$"
+        },
+        {
+          "id": "c",
+          "text": "31,0 Md$"
+        },
+        {
+          "id": "d",
+          "text": "105,6 Md$"
+        }
+      ],
+      "correct": "d",
+      "explanation": "420,8 − 315,2 = 105,6 ; le déficit des biens (136,6) moins l'excédent des services (31,0) donne le même résultat.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L1.10-Q4",
+      "type": "mcq",
+      "prompt": "Le cumul annuel 2026 montre un déficit en baisse de 19,9 %. D'où vient la baisse selon les variations publiées ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "D'une baisse des importations"
+        },
+        {
+          "id": "b",
+          "text": "D'une hausse des exportations (+267,7 Md$) plus forte que celle des importations (+129,5 Md$)"
+        },
+        {
+          "id": "c",
+          "text": "D'une erreur statistique"
+        },
+        {
+          "id": "d",
+          "text": "D'un changement de définition"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Δdéficit = Δimportations − Δexportations = 129,5 − 267,7 = −138,2 ; les causes détaillées ne sont pas dans le résumé lu.",
+      "tags": [
+        "calcul",
+        "cumul"
+      ]
+    },
+    {
+      "id": "L1.10-Q5",
+      "type": "mcq",
+      "prompt": "Pourquoi 92,9 (calculé) et 92,8 (publié) pour le déficit de juillet ne sont-ils pas contradictoires ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que BEA s'est trompé"
+        },
+        {
+          "id": "b",
+          "text": "Parce que les services sont exclus"
+        },
+        {
+          "id": "c",
+          "text": "Parce que juillet n'a pas de données"
+        },
+        {
+          "id": "d",
+          "text": "À cause de l'arrondi des composantes publiées"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Les composantes sont arrondies au dixième : la différence de 0,1 est un effet d'arrondi, pas une incohérence.",
+      "tags": [
+        "arrondi"
+      ]
+    },
+    {
+      "id": "L1.10-Q6",
+      "type": "mcq",
+      "prompt": "T2 2026 (BEA, 24/09/2026, résumé) : déficit courant de 246,0 Md$ contre 212,6 au T1 révisé. Quelle est la hausse en pourcentage ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "33,4 %"
+        },
+        {
+          "id": "b",
+          "text": "3,0 %"
+        },
+        {
+          "id": "c",
+          "text": "15,7 %"
+        },
+        {
+          "id": "d",
+          "text": "2,7 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "246,0 − 212,6 = 33,4 ; 33,4 ÷ 212,6 = 15,7 %. Les 3,0 % et 2,7 % sont les ratios au PIB.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L1.10-Q7",
+      "type": "mcq",
+      "prompt": "Un déficit courant en hausse justifie-t-il à lui seul de vendre une monnaie ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Non : il est financé par des capitaux ; la monnaie dépend aussi des taux, de la croissance et de l'appétit pour les actifs"
+        },
+        {
+          "id": "b",
+          "text": "Oui, toujours"
+        },
+        {
+          "id": "c",
+          "text": "Oui, si le déficit dépasse 1 %"
+        },
+        {
+          "id": "d",
+          "text": "Non, car le déficit n'a aucun effet"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le déficit est un indicateur de dépendance au financement, pas un signal de transaction automatique ; l'effet de marché d'un communiqué n'est pas démontré par une source lue.",
+      "tags": [
+        "interpretation"
+      ]
+    },
+    {
+      "id": "L1.10-Q8",
+      "type": "mcq",
+      "prompt": "Selon l'article de Frankel (NBER, résumé), que montre le cas du Plaza (1985) sur le commerce ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le solde s'est amélioré immédiatement"
+        },
+        {
+          "id": "b",
+          "text": "Le solde a continué de se dégrader puis s'est redressé environ deux ans après la baisse du dollar"
+        },
+        {
+          "id": "c",
+          "text": "Le dollar n'a pas bougé"
+        },
+        {
+          "id": "d",
+          "text": "Le déficit a disparu en 1985"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Déficit de 122 Md$ en 1985, pic de 152 Md$ annualisé au T3 1987, 30 Md$ en 1991 : l'effet de la monnaie sur le commerce est lent.",
+      "tags": [
+        "plaza",
+        "courbe-en-J"
+      ]
+    }
+  ],
+  "revision": 1
+}

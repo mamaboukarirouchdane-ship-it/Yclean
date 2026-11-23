@@ -1,0 +1,235 @@
+---
+id: L5.09
+module: 5
+order: 9
+title: "Courbe à terme de l'or, base et coût de portage : contango, convergence et choix de l'instrument"
+title_initial: "Courbe à terme, base et coût de portage"
+level: "intermédiaire"
+duration_hours: 3.0
+prerequisites: ["L5.02", "L5.03", "L5.07"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L5.09.quiz.json"
+sources: ["S-CME-04", "S-CME-02", "S-MMT-01", "S-WGC-14", "S-UST-03", "S-TST-01", "S-WGC-10"]
+---
+
+# L5.09 — Courbe à terme de l'or, base et coût de portage
+
+> **Convention de lecture.** **[Fait]** = énoncé lu dans une source citée ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[SIMULATION]** = chiffres fictifs. Statut des sources : le **règlement de la bourse COMEX** (chapitre 113) et la **fiche contrat** sont des sources **primaires** de la bourse CME, lues par résumé automatique ; l'article sur le coût de portage est celui d'un **vendeur de métaux précieux** (secondaire) ; la page du World Gold Council sur les courbes à terme n'a fourni **aucune donnée**. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. décrire le **contrat à terme sur l'or** du COMEX (taille, cotation, variation minimale, livraison) ;
+2. définir la **base** (futures − comptant), le **contango**, la **backwardation** et la **convergence** ;
+3. calculer un **prix à terme théorique** par la formule du coût de portage et en déduire un **portage annualisé** ;
+4. expliquer pourquoi l'or est **le plus souvent en contango** et quand la courbe peut s'inverser ;
+5. distinguer **prix comptant (XAU/USD)** et **prix du contrat à terme** et en tirer les conséquences pour le **suivi**, le **roulement** et l'analyse ;
+6. relier le portage aux **taux courts** (L5.03).
+
+## 2. Prérequis
+
+- Offre et demande physiques (L5.02) ; or et taux réels (L5.03) ; ETF d'or et flux (L5.07).
+
+## 3. Explication intuitive
+
+Acheter de l'or aujourd'hui pour le recevoir plus tard coûte : il faut le **financer** (l'argent immobilisé ne rapporte plus d'intérêt), le **stocker** et l'**assurer**. Un contrat à terme qui livre de l'or dans quelques mois doit donc coûter **un peu plus cher** que l'or comptant, et la différence croît avec la durée et avec les taux. C'est le **coût de portage**. Quand la courbe à terme monte avec l'échéance, on est en **contango**. À l'approche de l'échéance, l'écart (la **base**) se réduit vers zéro : c'est la **convergence**. Comprendre cela évite de confondre la hausse d'un contrat à terme qui roule avec un mouvement du prix de l'or, et de croire qu'un écart normal entre deux échéances est un signal.
+
+## 4. Développement technique
+
+### 4.1 Le contrat à terme sur l'or du COMEX
+
+**[Fait]** (S-CME-04, CME Group, règlement du COMEX, chapitre 113 *Gold Futures*, résumé automatique) : taille du contrat **100 onces troy** (tolérance de 5 % en plus ou en moins) ; or de **pureté minimale 995**, de marque agréée par la bourse, livré en une barre de 100 onces ou trois barres d'un kilo ; cotation en **dollars et cents par once** ; variation minimale de **0,10 $ par once** ; livraison possible de tout jour ouvré du premier au dernier jour ouvré du mois de livraison ; dernier jour de négociation : **l'avant-avant-dernier jour ouvré du mois** (« troisième dernier jour ouvré ») ; le nombre de mois ouverts est fixé par la bourse.
+
+**[Fait]** (S-CME-02, CME Group, fiche contrat or, résumé automatique) : symbole **GC** ; mois cotés : le mois en cours et les deux suivants, février, avril, août et octobre sur une fenêtre de 23 mois, juin et décembre sur 72 mois ; **livraison physique** ; la fiche donne des heures de séance incohérentes entre elles (16 h ou 17 h, heure de Chicago) : **non reprises**.
+
+**[Fait]** (S-CME-02 et S-CME-04, page marketing du CME) : la page de présentation parle de « règlement physique » comme caractéristique, sans autre détail.
+
+**[Calcul de l'auteur]** Valeur d'un point de variation minimale : 100 oz × 0,10 $ = **10 $** par contrat. Valeur notionnelle à 4 060 $ l'once (S-ISA-01, L5.01) : 100 × 4 060 = **406 000 $** par contrat. Un contrat à 4 214,30 $ (cours de clôture du 2 octobre 2026, S-TST-01, L4.12) vaut **421 430 $**.
+
+**[Interprétation]** Le contrat à terme est un instrument **standardisé et à levier** (la marge n'est pas lue ici) ; il se négocie 23 heures sur 24 ; son prix suit le comptant mais n'est pas identique.
+
+### 4.2 Base, contango, backwardation, convergence
+
+**[Définition]** **Base** = prix du contrat à terme − prix comptant. **Contango** : futures > comptant, courbe croissante avec l'échéance. **Backwardation** : futures < comptant, courbe décroissante. **Convergence** : la base tend vers zéro à l'échéance, car le contrat devient livrable.
+
+**[Fait]** (S-WGC-14, WGC, page « Price and premium », données au 28 octobre 2026, page du 29 octobre, résumé automatique) : lorsque la courbe est croissante, elle est « en contango, ce qui reflète généralement le coût de portage », situation décrite comme **typique pour l'or** ; les courbes sont publiées chaque jour en fin de séance, jusqu'à 60 mois selon la bourse ; sources : Bloomberg, COMEX, WGC. **La page ne contenait pas de valeurs** (prix comptant « en attente », aucun prix par échéance, aucune prime annualisée).
+
+### 4.3 Le coût de portage : formule et exemple documenté
+
+**[Fait]** (S-MMT-01, Money Metals Exchange, article du 4 août 2026, vendeur de métaux précieux, secondaire, résumé automatique) : formule donnée **F = (S + coût de stockage) × (1 + r)ᵗ** (S : comptant ; r : taux sans risque, rendement des bons du Trésor à court terme ; t : durée en années) ; exemple du **29 juillet 2026** : comptant **4 081,65 $**, stockage et assurance **0,50 % par an** (environ 1,62 $), taux sans risque **3,86 %**, **29 jours** jusqu'à la livraison ; prix théorique **4 095,58 $** ; contrat d'août coté **4 103,80 $** ; écart de **8,22 $**, attribué à des cotations prises à des moments différents et à la demande d'exposition immédiate ; instantané du **30 juillet 2026** : courbe de **4 103,80 $ (août 2026)** à **4 265,50 $ (juin 2027)**, portage annualisé « d'environ 4,0 % à 5,1 % », jugé proche du rendement des bons à 3,86 % plus un petit coût de stockage ; la backwardation est dite **rare** pour l'or, observée en 2008 et dans de brèves périodes de stress, avec une offre de gros tendue et des primes de détaillants plus larges.
+
+**[Calcul de l'auteur]** Vérification : stockage 4 081,65 × 0,005 × 29 ÷ 365 = **1,62 $** ; (4 081,65 + 1,62) × 1,0386^(29/365) = **4 095,58 $** (retrouvé exactement avec t = 29/365). Base observée : 4 103,80 − 4 081,65 = **22,15 $** soit **0,54 %** ; base théorique : 4 095,58 − 4 081,65 = **13,93 $** (0,34 %) ; écart observé − théorique : **8,22 $**. Portage annualisé implicite de la base observée : (4 103,80 ÷ 4 081,65)^(365/29) − 1 = **7,05 %**, supérieur à 3,86 % + 0,50 %. Pente de la courbe : 4 265,50 ÷ 4 103,80 − 1 = **3,94 %** en dix mois (août → juin) soit **4,75 %** annualisés, dans l'intervalle de 4,0 à 5,1 % annoncé par l'article.
+
+**[Interprétation]** La formule est un **cadre** : elle explique l'ordre de grandeur de la pente de la courbe (autour du taux court plus le stockage) mais pas les écarts de quelques dollars. Une base plus large que la théorie peut venir de l'heure des cotations, de la demande de livraison, du coût réel de financement, ou d'une erreur de lecture : **la source ne le démontre pas**. **Ce qu'on ne peut pas conclure** : l'état de la courbe aujourd'hui (la page du WGC n'a pas fourni de valeurs) ; que le portage de 4,0 à 5,1 % soit stable.
+
+### 4.4 Exemple fictif : de la formule au prix
+
+**[SIMULATION]** (chiffres fictifs) : comptant 4 060 $, taux sans risque 4,00 %, stockage 0,50 % par an, échéance dans 3 mois (t = 0,25).
+
+**[Calcul de l'auteur]** Stockage : 4 060 × 0,005 × 0,25 = **5,08 $** ; F = (4 060 + 5,08) × 1,04^0,25 = **4 105,13 $** ; portage : 4 105,13 − 4 060 = **45,13 $** (**1,11 %** sur trois mois, **4,52 %** annualisés). Si la banque centrale relève ses taux de 25 pb, le portage annuel augmente d'environ 4 060 × 0,0025 = **10,15 $** par once et par an.
+
+**[Interprétation]** Un taux court plus élevé **élargit la courbe** (portage plus cher), sans que le prix comptant ait changé. Un analyste qui lit seulement le prix du contrat à terme peut y voir une hausse due au financement.
+
+### 4.5 Convergence et roulement
+
+**[Définition]** **Convergence** : à l'échéance, le contrat à terme coïncide avec l'or livrable ; en contango, un contrat acheté avec 22,15 $ de base perd cette prime avec le temps si le comptant est inchangé. **Roulement** : remplacer un contrat proche de l'échéance par un contrat plus lointain pour conserver une exposition.
+
+**[SIMULATION]** (chiffres fictifs) : le contrat de décembre cote 4 100 $ et celui de février 4 141 $ ; le comptant est inchangé. Passer de décembre à février fait « sauter » un graphique de contrat continu de **41 $** (+1,00 %) sans variation du prix de l'or ; annualisé sur deux mois : (4 141 ÷ 4 100)^6 − 1 = **6,15 %**.
+
+**[Interprétation]** Les séries de prix « continues » assemblent des contrats successifs : **une cassure au moment du roulement n'est pas un mouvement du marché**. Un investisseur qui roule chaque mois en contango paie ce portage (rendement de roulement négatif), indépendamment du prix de l'or.
+
+### 4.6 Quand la courbe devient plate ou inversée
+
+**[Fait]** (S-MMT-01) : la backwardation est qualifiée de **rare** pour l'or, liée à une offre physique de gros tendue ; 2008 et de brèves périodes de stress sont cités. (S-WGC-10, L5.07) : le WGC note que les positions d'écart sur le COMEX ont des implications « moins claires » pour le prix de l'or à plat.
+
+**[Interprétation]** Une courbe qui s'aplatit ou s'inverse peut signaler une tension de livraison ou une demande très forte de métal immédiat ; elle peut aussi venir d'une baisse des taux (portage plus faible). Il faut donc lire **base et taux ensemble**. **Ce qu'on ne peut pas conclure** : qu'un écart donné annonce un retournement ; les sources lues ne documentent aucun épisode de 2026.
+
+### 4.7 Application : choisir l'instrument et lire la courbe
+
+**[SIMULATION]** (chiffres fictifs, scénarios pour le lundi) :
+
+| Scénario | Condition | Lecture de la courbe | Probabilité (fictive) | Invalidation |
+|---|---|---|---|---|
+| A | Taux courts stables, offre normale | Contango autour de 4,5 % annualisé | 60 % | Écart de ±1 pt de portage |
+| B | Taux courts +25 pb | Contango plus pentu, ≈ +0,25 pt | 25 % | Pente inchangée |
+| C | Tension de livraison | Base réduite ou courbe inversée | 15 % | Contango rétabli |
+
+**[Calcul de l'auteur]** Probabilités : 60 + 25 + 15 = **100 %**. Pente attendue (fictive) : 0,60 × 4,5 + 0,25 × 4,75 + 0,15 × 0,0 = 2,70 + 1,19 + 0 = **3,89 %** annualisés.
+
+**[Interprétation]** Règles de méthode : (1) préciser **l'instrument** (comptant XAU/USD, contrat à terme GC, ETF) ; (2) ne pas comparer le comptant d'un jour au contrat d'un autre ; (3) lire la courbe avec les **taux courts** ; (4) toute analyse fondamentale du module 5 porte sur le **comptant** ; le contrat à terme sert à la mise en œuvre et au suivi du positionnement (module 7).
+
+## 5. Définitions essentielles
+
+- **Contrat à terme (GC)** : engagement standardisé de livrer ou recevoir 100 onces d'or à une échéance donnée.
+- **Base** : futures − comptant.
+- **Contango / backwardation** : courbe croissante / décroissante.
+- **Convergence** : la base tend vers zéro à l'échéance.
+- **Coût de portage** : financement + stockage + assurance.
+- **Roulement** : remplacement d'un contrat proche par un contrat plus lointain.
+- **Contrat continu** : série assemblée de contrats successifs.
+
+## 6. Exemples chiffrés
+
+**6.1 Valeur du contrat.** 100 × 4 060 = 406 000 $ ; tick 100 × 0,10 = 10 $.
+**6.2 Formule.** (4 081,65 + 1,62) × 1,0386^(29/365) = 4 095,58 $.
+**6.3 Base.** 4 103,80 − 4 081,65 = 22,15 $ (0,54 %).
+**6.4 Courbe.** 4 265,50 ÷ 4 103,80 − 1 = 3,94 % en dix mois → 4,75 % annualisés.
+
+### 6.5 Cas historique documenté — l'instantané du 29-30 juillet 2026
+
+**[Fait]** (S-MMT-01) : voir 4.3.
+
+**[Calcul de l'auteur]** Base observée 22,15 $ contre 13,93 $ théoriques (écart 8,22 $) ; portage annualisé de la base 7,05 % ; pente août 2026 → juin 2027 : +3,94 % (4,75 % annualisé) ; 3,86 % + 0,50 % = 4,36 % pour la composante « taux + stockage ».
+
+**[Interprétation]** La courbe observée est **compatible** avec le cadre du coût de portage (pente de l'ordre du taux court plus le stockage) tout en montrant une base à court terme plus large que la théorie, que la source attribue sans preuve à des cotations asynchrones. **Ce qu'on ne peut pas conclure** : l'état de la courbe en octobre 2026 ; que la prime courte traduise une tension de livraison. **Limites** : article d'un vendeur de métaux (secondaire), un seul instantané daté ; page du WGC sans données ; spécifications issues de résumés ; marge, volumes et positions non lus.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **XAU/USD** : le comptant (OTC / LBMA) et le contrat GC ne sont pas le même prix ; utiliser le bon pour chaque question.
+- **Taux** : le portage dépend du taux court ; une hausse de la Fed élargit la courbe (L5.03) sans que l'or comptant ait bougé.
+- **Forex** : la parité de taux couverte est une logique voisine (différentiel de taux et points de terme) ; ne pas confondre.
+- **Positionnement** : les positions à terme (module 7) se lisent sur le contrat, pas sur le comptant.
+- **Prudence** : une courbe en contango est normale ; elle n'annonce rien.
+
+## 8. Erreurs courantes
+
+1. Confondre comptant et contrat à terme.
+2. Lire une cassure de roulement comme un mouvement de marché.
+3. Interpréter le contango comme un signal haussier.
+4. Ignorer le taux court dans la pente de la courbe.
+5. Appliquer la formule sans préciser durée et base de calcul (365 jours).
+6. Oublier que la base converge vers zéro.
+7. Généraliser un instantané à tout le marché.
+
+## 9. Limites de l'interprétation
+
+- Spécifications du CME lues par résumé (primaire) ; heures de séance incohérentes, non reprises.
+- Exemple de portage : un seul instantané d'un vendeur de métaux (29-30 juillet 2026) ; rien pour octobre.
+- Page du WGC sur les courbes sans données ; aucune base ni prime lues pour octobre 2026.
+- Taux d'octobre non lus (la hausse du 16 septembre est connue par L5.03, pas le niveau des bons) ; marge non lue.
+- Scénarios fictifs.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Contrat.** Prix 4 060 $/oz. Valeur notionnelle d'un contrat GC et valeur d'un tick de 0,10 $ ?
+
+<details>
+<summary>Correction 1</summary>
+
+100 × 4 060 = **406 000 $** ; 100 × 0,10 = **10 $** par tick.
+</details>
+
+**Exercice 2 — Formule.** Comptant 4 081,65 $, stockage 0,50 % par an (29 jours), taux 3,86 %, t = 29/365. Prix théorique ?
+
+<details>
+<summary>Correction 2</summary>
+
+Stockage : 4 081,65 × 0,005 × 29 ÷ 365 = 1,62 $ ; F = (4 081,65 + 1,62) × 1,0386^(29/365) = **4 095,58 $**.
+</details>
+
+**Exercice 3 — Base.** Contrat d'août à 4 103,80 $ ; comptant 4 081,65 $ ; théorie 4 095,58 $. Base observée, base théorique et écart ?
+
+<details>
+<summary>Correction 3</summary>
+
+Observée : **22,15 $** (0,54 %) ; théorique : **13,93 $** ; écart : **8,22 $**. Source : cotations asynchrones et demande d'exposition immédiate, non démontré.
+</details>
+
+**Exercice 4 — Courbe.** Août 2026 à 4 103,80 $ et juin 2027 à 4 265,50 $ (dix mois). Variation et portage annualisé ?
+
+<details>
+<summary>Correction 4</summary>
+
+4 265,50 ÷ 4 103,80 − 1 = **3,94 %** ; annualisé (12/10) : **4,75 %**.
+</details>
+
+**Exercice 5 — Taux.** Les taux courts montent de 25 pb. Effet annuel sur le portage d'un or à 4 060 $ ?
+
+<details>
+<summary>Correction 5</summary>
+
+4 060 × 0,0025 = **10,15 $** par once et par an, sans variation du prix comptant.
+</details>
+
+**Exercice 6 — Roulement.** Décembre 4 100 $, février 4 141 $, comptant inchangé. Saut d'un graphique continu et lecture ?
+
+<details>
+<summary>Correction 6</summary>
+
+4 141 − 4 100 = **41 $** (+1,00 %), soit **6,15 %** annualisés sur deux mois. Ce n'est pas un mouvement de marché mais l'effet du roulement ; il faut ajuster ou utiliser le comptant.
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L5.09.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Contrat GC : 100 onces, 0,10 $ par once (10 $ par tick), pureté 995, livraison physique.
+- Base = futures − comptant ; contango normal pour l'or ; convergence vers zéro à l'échéance.
+- Coût de portage F = (S + stockage) × (1 + r)ᵗ : exemple du 29/07/2026 : 4 095,58 $ théorique contre 4 103,80 $ coté.
+- Courbe août 2026 → juin 2027 : +3,94 % (4,75 % annualisé).
+- Roulement ≠ mouvement du marché ; instrument à préciser ; portage lié aux taux courts.
+
+## 13. Critères de maîtrise
+
+- [ ] Décrire le contrat GC (Exercice 1).
+- [ ] Appliquer la formule du coût de portage (Exercice 2).
+- [ ] Calculer base et pente (Exercices 3 et 4).
+- [ ] Relier portage et taux (Exercice 5).
+- [ ] Reconnaître un effet de roulement (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **30 octobre 2026** :
+
+- **S-CME-04** — CME Group, règlement du COMEX, chapitre 113 *Gold Futures* : https://www.cmegroup.com/content/dam/cmegroup/rulebook/COMEX/1a/113.pdf
+- **S-CME-02** — CME Group, fiche *Gold Futures and Options* : https://www.cmegroup.com/trading/metals/files/fact-card-gold-futures-options.pdf
+- **S-MMT-01** — Money Metals Exchange (secondaire, vendeur), « Gold Spot Price vs Futures: The Cost of Carry Explained » (04/08/2026) : https://www.moneymetals.com/price/gold-spot-price-vs-futures
+- **S-WGC-14** — World Gold Council, *Price and premium* (courbes à terme, 29/10/2026) : https://www.gold.org/goldhub/data/gold-futures-curves
+- **S-UST-03**, **S-TST-01**, **S-WGC-10** — déjà lus (L3, L4.12, L5.07).
+
+**Définitions de cours non rattachées à une source lue :** base, convergence, roulement, contrat continu. **Points non vérifiés :** courbe d'octobre 2026, marge, volumes, taux des bons d'octobre, positions, épisodes de backwardation de 2026, heures de séance.

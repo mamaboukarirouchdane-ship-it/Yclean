@@ -1,0 +1,779 @@
+{
+  "examId": "EX2",
+  "module": 2,
+  "title": "Examen du module 2 — Banques centrales et politique monétaire",
+  "durationMinutes": 120,
+  "passThreshold": 0.7,
+  "note": "25 QCM (1 point) + 5 calculs (3 points) = 40 points ; seuil de réussite 28/40. Les données sont fictives (SIMULATION) sauf mention contraire.",
+  "questions": [
+    {
+      "id": "EX2-Q1",
+      "type": "mcq",
+      "prompt": "Le mandat de la Fed est dit « double » parce qu'il vise :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le déficit et la dette"
+        },
+        {
+          "id": "b",
+          "text": "Le taux de change et l'or"
+        },
+        {
+          "id": "c",
+          "text": "L'emploi maximal et la stabilité des prix"
+        },
+        {
+          "id": "d",
+          "text": "La croissance et la balance courante"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Emploi maximal et stabilité des prix ; la BCE a un objectif hiérarchique centré sur la stabilité des prix.",
+      "tags": [
+        "mandat"
+      ]
+    },
+    {
+      "id": "EX2-Q2",
+      "type": "mcq",
+      "prompt": "Une cible d'inflation symétrique signifie :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que les écarts à la hausse et à la baisse sont également indésirables"
+        },
+        {
+          "id": "b",
+          "text": "Que l'inflation doit rester nulle"
+        },
+        {
+          "id": "c",
+          "text": "Que seul le dépassement est un problème"
+        },
+        {
+          "id": "d",
+          "text": "Que la cible change chaque année"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La symétrie traite de la même manière les écarts au-dessus et au-dessous de 2 %.",
+      "tags": [
+        "symetrie"
+      ]
+    },
+    {
+      "id": "EX2-Q3",
+      "type": "mcq",
+      "prompt": "Pour la BCEAO, l'objectif prioritaire est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le financement du budget"
+        },
+        {
+          "id": "b",
+          "text": "Le plein emploi"
+        },
+        {
+          "id": "c",
+          "text": "Le prix de l'or"
+        },
+        {
+          "id": "d",
+          "text": "La stabilité des prix"
+        }
+      ],
+      "correct": "d",
+      "explanation": "L'objectif prioritaire est la stabilité des prix ; sans préjudice de celui-ci, elle soutient les politiques économiques de l'UEMOA.",
+      "tags": [
+        "bceao"
+      ]
+    },
+    {
+      "id": "EX2-Q4",
+      "type": "mcq",
+      "prompt": "Le plafonnement des rendements imposé à la Fed à partir de 1942 :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Renforce son indépendance"
+        },
+        {
+          "id": "b",
+          "text": "La prive du contrôle de son portefeuille et de la masse monétaire"
+        },
+        {
+          "id": "c",
+          "text": "Fait baisser l'inflation d'après-guerre"
+        },
+        {
+          "id": "d",
+          "text": "Supprime le Trésor"
+        }
+      ],
+      "correct": "b",
+      "explanation": "En plafonnant les rendements, la Fed achète de grandes quantités de titres, ce qui accroît la monnaie ; l'accord de 1951 y met fin.",
+      "tags": [
+        "1951"
+      ]
+    },
+    {
+      "id": "EX2-Q5",
+      "type": "mcq",
+      "prompt": "Qu'est-ce que le financement monétaire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une taxe bancaire"
+        },
+        {
+          "id": "b",
+          "text": "Un prêt entre banques commerciales"
+        },
+        {
+          "id": "c",
+          "text": "Un placement en or"
+        },
+        {
+          "id": "d",
+          "text": "Le financement direct de l'État par la création monétaire"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Il lie la politique monétaire aux besoins de l'État (dominance budgétaire).",
+      "tags": [
+        "dominance"
+      ]
+    },
+    {
+      "id": "EX2-Q6",
+      "type": "mcq",
+      "prompt": "Un prêt bancaire crée en général :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une baisse de la masse monétaire"
+        },
+        {
+          "id": "b",
+          "text": "Uniquement des réserves obligatoires"
+        },
+        {
+          "id": "c",
+          "text": "Un dépôt pour l'emprunteur"
+        },
+        {
+          "id": "d",
+          "text": "De l'or"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Selon la Banque d'Angleterre, un prêt crédite l'emprunteur d'un dépôt ; les réserves n'entrent pas dans la chaîne comme contrainte principale.",
+      "tags": [
+        "monnaie"
+      ]
+    },
+    {
+      "id": "EX2-Q7",
+      "type": "mcq",
+      "prompt": "Les réserves des banques sont :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Des dépôts des banques auprès de la banque centrale"
+        },
+        {
+          "id": "b",
+          "text": "Des billets détenus par les ménages"
+        },
+        {
+          "id": "c",
+          "text": "Des actions"
+        },
+        {
+          "id": "d",
+          "text": "Des obligations d'État"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Ce sont des dépôts à la banque centrale, utilisés pour le règlement entre banques.",
+      "tags": [
+        "reserves"
+      ]
+    },
+    {
+      "id": "EX2-Q8",
+      "type": "mcq",
+      "prompt": "Le multiplicateur monétaire de manuel vaut :",
+      "options": [
+        {
+          "id": "a",
+          "text": "r ÷ 1"
+        },
+        {
+          "id": "b",
+          "text": "1 ÷ r (r : ratio de réserves)"
+        },
+        {
+          "id": "c",
+          "text": "1 + r"
+        },
+        {
+          "id": "d",
+          "text": "r × 2"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Avec r = 10 %, un dépôt de 1 000 donne 10 000 au maximum ; modèle critiqué.",
+      "tags": [
+        "multiplicateur"
+      ]
+    },
+    {
+      "id": "EX2-Q9",
+      "type": "mcq",
+      "prompt": "Le taux IORB est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le taux du PIB"
+        },
+        {
+          "id": "b",
+          "text": "Le taux d'inflation"
+        },
+        {
+          "id": "c",
+          "text": "Le taux versé aux banques sur leurs réserves"
+        },
+        {
+          "id": "d",
+          "text": "Un taux de change"
+        }
+      ],
+      "correct": "c",
+      "explanation": "À partir du 17/09/2026 : IORB 3,90 %, ON RRP 3,75 %, escompte 4,0 %.",
+      "tags": [
+        "iorb"
+      ]
+    },
+    {
+      "id": "EX2-Q10",
+      "type": "mcq",
+      "prompt": "La facilité de dépôt de la BCE est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le placement au jour le jour des banques auprès de l'Eurosystème"
+        },
+        {
+          "id": "b",
+          "text": "Un prêt aux ménages"
+        },
+        {
+          "id": "c",
+          "text": "Un taux de change"
+        },
+        {
+          "id": "d",
+          "text": "Un impôt"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Elle forme le plancher du corridor, avec le prêt marginal en plafond.",
+      "tags": [
+        "bce"
+      ]
+    },
+    {
+      "id": "EX2-Q11",
+      "type": "mcq",
+      "prompt": "Le QE consiste à :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Supprimer le bilan"
+        },
+        {
+          "id": "b",
+          "text": "Vendre des actifs"
+        },
+        {
+          "id": "c",
+          "text": "Relever les réserves obligatoires"
+        },
+        {
+          "id": "d",
+          "text": "Acheter des actifs, ce qui accroît le bilan et les réserves"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le QE crée des réserves au passif et des titres à l'actif.",
+      "tags": [
+        "qe"
+      ]
+    },
+    {
+      "id": "EX2-Q12",
+      "type": "mcq",
+      "prompt": "Le QT passif est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "La vente active de titres"
+        },
+        {
+          "id": "b",
+          "text": "Le non-réinvestissement des titres arrivant à échéance"
+        },
+        {
+          "id": "c",
+          "text": "Un nouveau QE"
+        },
+        {
+          "id": "d",
+          "text": "Une hausse des réserves obligatoires"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Les titres échus non réinvestis réduisent les titres et les réserves.",
+      "tags": [
+        "qt"
+      ]
+    },
+    {
+      "id": "EX2-Q13",
+      "type": "mcq",
+      "prompt": "Les trois programmes de QE de la Fed (2008–2014) totalisent :",
+      "options": [
+        {
+          "id": "a",
+          "text": "600 Md$"
+        },
+        {
+          "id": "b",
+          "text": "393 Md$"
+        },
+        {
+          "id": "c",
+          "text": "39 380 Md$"
+        },
+        {
+          "id": "d",
+          "text": "3 938 Md$ (1 725 + 600 + 1 613)"
+        }
+      ],
+      "correct": "d",
+      "explanation": "QE1 1 725, QE2 600, QE3 1 613 Md$ ; le retrait de 2022-2025 a réduit les avoirs de 2,2 billions de dollars.",
+      "tags": [
+        "qe-total"
+      ]
+    },
+    {
+      "id": "EX2-Q14",
+      "type": "mcq",
+      "prompt": "QE2 : 600 Md$ à 75 Md$ par mois durent :",
+      "options": [
+        {
+          "id": "a",
+          "text": "12 mois"
+        },
+        {
+          "id": "b",
+          "text": "6 mois"
+        },
+        {
+          "id": "c",
+          "text": "8 mois"
+        },
+        {
+          "id": "d",
+          "text": "75 mois"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Durée = montant total ÷ rythme mensuel : 600 ÷ 75 = 8 mois (calcul de l'auteur sur les montants annoncés).",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "EX2-Q15",
+      "type": "mcq",
+      "prompt": "Les minutes du FOMC sont publiées environ :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Trois semaines après la réunion (21 jours pour septembre 2026)"
+        },
+        {
+          "id": "b",
+          "text": "Le jour même"
+        },
+        {
+          "id": "c",
+          "text": "Un an après"
+        },
+        {
+          "id": "d",
+          "text": "Jamais"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Réunion du 16/09, minutes le 07/10, soit 21 jours.",
+      "tags": [
+        "minutes"
+      ]
+    },
+    {
+      "id": "EX2-Q16",
+      "type": "mcq",
+      "prompt": "SEP de septembre 2026 : médiane du taux des fonds fédéraux fin 2026 et en juin ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "3,8 % contre 4,1 %"
+        },
+        {
+          "id": "b",
+          "text": "4,1 % contre 3,8 %"
+        },
+        {
+          "id": "c",
+          "text": "4,1 % contre 4,1 %"
+        },
+        {
+          "id": "d",
+          "text": "3,2 % contre 3,1 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La médiane 2026 est passée de 3,8 à 4,1 (+0,3 point) ; opinions individuelles de 18 participants.",
+      "tags": [
+        "sep"
+      ]
+    },
+    {
+      "id": "EX2-Q17",
+      "type": "mcq",
+      "prompt": "Le « taper tantrum » de 2013 illustre :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un krach de l'or en 2026"
+        },
+        {
+          "id": "b",
+          "text": "Une baisse de l'inflation"
+        },
+        {
+          "id": "c",
+          "text": "Une hausse des rendements longs après une communication sur le bilan"
+        },
+        {
+          "id": "d",
+          "text": "La fin de la BCE"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le rendement à 10 ans a monté de 40 pb en six jours après la conférence de juin 2013.",
+      "tags": [
+        "tantrum"
+      ]
+    },
+    {
+      "id": "EX2-Q18",
+      "type": "mcq",
+      "prompt": "Le taux neutre r* est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Non observé, estimé par des modèles"
+        },
+        {
+          "id": "b",
+          "text": "Publié chaque mois par la BLS"
+        },
+        {
+          "id": "c",
+          "text": "Égal au taux directeur"
+        },
+        {
+          "id": "d",
+          "text": "Toujours 2 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le taux neutre est estimé ; la prescription d'une règle dépend de ces estimations.",
+      "tags": [
+        "rstar"
+      ]
+    },
+    {
+      "id": "EX2-Q19",
+      "type": "mcq",
+      "prompt": "La règle de Taylor d'origine utilise :",
+      "options": [
+        {
+          "id": "a",
+          "text": "La balance courante"
+        },
+        {
+          "id": "b",
+          "text": "Le prix de l'or et le change"
+        },
+        {
+          "id": "c",
+          "text": "Le déficit budgétaire"
+        },
+        {
+          "id": "d",
+          "text": "L'écart d'inflation et l'écart de production"
+        }
+      ],
+      "correct": "d",
+      "explanation": "R = r* + π + 0,5 (π − 2) + 0,5 × écart de production.",
+      "tags": [
+        "taylor"
+      ]
+    },
+    {
+      "id": "EX2-Q20",
+      "type": "mcq",
+      "prompt": "Une règle avec lissage ρ = 1 signifie :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ne jamais bouger"
+        },
+        {
+          "id": "b",
+          "text": "Aller immédiatement à la cible"
+        },
+        {
+          "id": "c",
+          "text": "Avancer de 1 % par an"
+        },
+        {
+          "id": "d",
+          "text": "Supprimer la règle"
+        }
+      ],
+      "correct": "b",
+      "explanation": "ρ est la vitesse d'ajustement ; ρ petit implique de petits pas.",
+      "tags": [
+        "lissage"
+      ]
+    },
+    {
+      "id": "EX2-Q21",
+      "type": "mcq",
+      "prompt": "Combien de Banques de réserve fédérale existe-t-il ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "4"
+        },
+        {
+          "id": "b",
+          "text": "7"
+        },
+        {
+          "id": "c",
+          "text": "50"
+        },
+        {
+          "id": "d",
+          "text": "12"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Douze Banques de réserve, dont New York siège en permanence au FOMC.",
+      "tags": [
+        "fed"
+      ]
+    },
+    {
+      "id": "EX2-Q22",
+      "type": "mcq",
+      "prompt": "Le président du Conseil de la Fed est désigné pour :",
+      "options": [
+        {
+          "id": "a",
+          "text": "2 ans"
+        },
+        {
+          "id": "b",
+          "text": "14 ans"
+        },
+        {
+          "id": "c",
+          "text": "4 ans"
+        },
+        {
+          "id": "d",
+          "text": "À vie"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Les officiers (président, vice-présidents) sont désignés pour 4 ans, distinct du mandat de gouverneur.",
+      "tags": [
+        "fed"
+      ]
+    },
+    {
+      "id": "EX2-Q23",
+      "type": "mcq",
+      "prompt": "L'actif différé de la Fed est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une écriture comptable cumulant les insuffisances de revenus"
+        },
+        {
+          "id": "b",
+          "text": "Un prêt du Trésor"
+        },
+        {
+          "id": "c",
+          "text": "Un stock d'or"
+        },
+        {
+          "id": "d",
+          "text": "Une réserve obligatoire"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Il se résorbe avant la reprise des remises au Trésor ; il n'implique pas de faillite.",
+      "tags": [
+        "actif-differe"
+      ]
+    },
+    {
+      "id": "EX2-Q24",
+      "type": "mcq",
+      "prompt": "La BCE décide en général :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Par vote public serré"
+        },
+        {
+          "id": "b",
+          "text": "Par consensus"
+        },
+        {
+          "id": "c",
+          "text": "Par tirage au sort"
+        },
+        {
+          "id": "d",
+          "text": "Par le Trésor"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La rotation n'a pas changé cette pratique ; les désaccords se lisent plutôt dans les discours.",
+      "tags": [
+        "bce"
+      ]
+    },
+    {
+      "id": "EX2-Q25",
+      "type": "mcq",
+      "prompt": "Le taux au jour le jour de la BoJ était, le 31 juillet 2026, à environ :",
+      "options": [
+        {
+          "id": "a",
+          "text": "5 %"
+        },
+        {
+          "id": "b",
+          "text": "0 %"
+        },
+        {
+          "id": "c",
+          "text": "1,0 %"
+        },
+        {
+          "id": "d",
+          "text": "−1 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Décision de maintien par 8 voix contre 1 ; la hausse de septembre n'est rapportée que par une source secondaire.",
+      "tags": [
+        "boj"
+      ]
+    }
+  ],
+  "calculations": [
+    {
+      "id": "EX2-K1",
+      "type": "calc",
+      "prompt": "Règle de Taylor d'origine (SIMULATION). r* = 2 ; inflation = 3,5 % ; écart de production = −2 %. Prescription en % ?",
+      "answer": 5.25,
+      "tolerance": 0.01,
+      "unit": "%",
+      "solution": "R = 2 + 3,5 + 0,5 × (3,5 − 2) + 0,5 × (−2) = 2 + 3,5 + 0,75 − 1 = 5,25 %.",
+      "tags": [
+        "taylor"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX2-K2",
+      "type": "calc",
+      "prompt": "Ajustement partiel (SIMULATION). R_(t−1) = 3,875 ; R* = 4,6 ; ρ = 0,5. R_t en % (2 décimales) ?",
+      "answer": 4.24,
+      "tolerance": 0.01,
+      "unit": "%",
+      "solution": "R_t = 3,875 + 0,5 × 0,725 = 4,2375 ≈ 4,24 %.",
+      "tags": [
+        "lissage"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX2-K3",
+      "type": "calc",
+      "prompt": "Surprise de politique. Le marché pricait 70 % de chances d'une hausse de 25 pb ; la banque maintient. Surprise en pb ?",
+      "answer": -17.5,
+      "tolerance": 0.1,
+      "unit": "pb",
+      "solution": "Variation attendue = 0,70 × 25 = 17,5 pb ; surprise = 0 − 17,5 = −17,5 pb.",
+      "tags": [
+        "surprise"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX2-K4",
+      "type": "calc",
+      "prompt": "Coût d'opportunité (SIMULATION). Once d'or à 4 500 $ ; rendement sans risque de 3,8 %. Coût annuel en $ ?",
+      "answer": 171.0,
+      "tolerance": 0.1,
+      "unit": "$",
+      "solution": "4 500 × 0,038 = 171 $ de revenu renoncé par an ; ce n'est pas une prévision de prix.",
+      "tags": [
+        "or"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX2-K5",
+      "type": "calc",
+      "prompt": "Rotation BCE. Groupe 2 : 16 gouverneurs partagent 11 droits de vote. Fréquence de vote d'un gouverneur en % ?",
+      "answer": 68.75,
+      "tolerance": 0.01,
+      "unit": "%",
+      "solution": "11 ÷ 16 = 0,6875 = 68,75 %.",
+      "tags": [
+        "bce"
+      ],
+      "points": 3
+    }
+  ],
+  "totalPoints": 40,
+  "revision": 1
+}

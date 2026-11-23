@@ -1,0 +1,233 @@
+{
+  "lessonId": "L1.02",
+  "title": "Quiz — Cycle économique et récessions",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : NBER (FAQ et page de datation) et Fed de Saint-Louis, lues par résumé automatique.",
+  "questions": [
+    {
+      "id": "L1.02-Q1",
+      "type": "mcq",
+      "prompt": "Selon la page du NBER lue, une récession est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "La période entre un creux et le pic suivant"
+        },
+        {
+          "id": "b",
+          "text": "Toute période de croissance inférieure à 2 %"
+        },
+        {
+          "id": "c",
+          "text": "La période entre un pic et le creux suivant"
+        },
+        {
+          "id": "d",
+          "text": "Deux trimestres consécutifs de baisse du PIB, par définition"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Récession = période entre un pic et le creux suivant ; expansion = entre un creux et le pic suivant. Le NBER ne définit pas la récession par la règle des deux trimestres.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L1.02-Q2",
+      "type": "mcq",
+      "prompt": "Selon la FAQ du NBER lue, quels sont les trois critères de datation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Profondeur, diffusion, durée"
+        },
+        {
+          "id": "b",
+          "text": "Taux, change, inflation"
+        },
+        {
+          "id": "c",
+          "text": "PIB, emploi, bourse"
+        },
+        {
+          "id": "d",
+          "text": "Volatilité, volume, valeur"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Profondeur, diffusion (activité étendue à l'économie) et durée. Chacun doit être rempli à un certain degré, une valeur extrême pouvant compenser en partie un critère plus faible.",
+      "tags": [
+        "nber"
+      ]
+    },
+    {
+      "id": "L1.02-Q3",
+      "type": "mcq",
+      "prompt": "« Deux trimestres consécutifs de baisse du PIB réel » est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "La définition officielle du NBER"
+        },
+        {
+          "id": "b",
+          "text": "Une mesure de l'écart de production"
+        },
+        {
+          "id": "c",
+          "text": "Une loi économique"
+        },
+        {
+          "id": "d",
+          "text": "Une règle pratique appelée récession technique, que le NBER n'utilise pas comme définition"
+        }
+      ],
+      "correct": "d",
+      "explanation": "C'est une règle de commodité. La FAQ du NBER précise que ce n'est pas sa définition et cite 2001 comme exemple sans deux trimestres consécutifs de baisse.",
+      "tags": [
+        "recession-technique"
+      ]
+    },
+    {
+      "id": "L1.02-Q4",
+      "type": "mcq",
+      "prompt": "Production effective 98, potentielle 100. Quel est l'écart de production ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+2 %"
+        },
+        {
+          "id": "b",
+          "text": "−2 %"
+        },
+        {
+          "id": "c",
+          "text": "−0,98 %"
+        },
+        {
+          "id": "d",
+          "text": "−98 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "(98 − 100) ÷ 100 × 100 = −2 % : ressources sous-utilisées.",
+      "tags": [
+        "ecart"
+      ]
+    },
+    {
+      "id": "L1.02-Q5",
+      "type": "mcq",
+      "prompt": "Pourquoi l'écart de production est-il révisé ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que la production effective n'est jamais mesurée"
+        },
+        {
+          "id": "b",
+          "text": "Parce qu'il change chaque jour"
+        },
+        {
+          "id": "c",
+          "text": "Parce qu'il est calculé par des journalistes"
+        },
+        {
+          "id": "d",
+          "text": "Parce que le PIB potentiel est estimé et non observé"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le potentiel est une estimation fondée sur des données passées ; de nouvelles données ou hypothèses le modifient (« estimates can be wrong »).",
+      "tags": [
+        "potentiel"
+      ]
+    },
+    {
+      "id": "L1.02-Q6",
+      "type": "mcq",
+      "prompt": "Un article donne potentiel 19 154, effectif 19 011 et un écart de −0,07 %. Que vaut le calcul vérifié ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−0,07 %"
+        },
+        {
+          "id": "b",
+          "text": "+0,75 %"
+        },
+        {
+          "id": "c",
+          "text": "−0,75 % environ"
+        },
+        {
+          "id": "d",
+          "text": "−7,5 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "(19 011 − 19 154) ÷ 19 154 = −0,747 %. La valeur publiée ne correspond pas à ses propres données : on cite le calcul vérifié en signalant la divergence.",
+      "tags": [
+        "verification"
+      ]
+    },
+    {
+      "id": "L1.02-Q7",
+      "type": "mcq",
+      "prompt": "Dans le tableau de la FAQ du NBER lue, l'annonce d'un point de retournement est venue :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Entre 4 et 21 mois après"
+        },
+        {
+          "id": "b",
+          "text": "Toujours le mois suivant"
+        },
+        {
+          "id": "c",
+          "text": "Avant le retournement"
+        },
+        {
+          "id": "d",
+          "text": "Exactement 6 mois après"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Les annonces vont de 4 mois (pic de février 2020) à 21 mois (creux de mars 1991) : la datation n'est pas utilisable en temps réel.",
+      "tags": [
+        "retard"
+      ]
+    },
+    {
+      "id": "L1.02-Q8",
+      "type": "mcq",
+      "prompt": "La production baisse de 3 % puis de 2 %. La baisse cumulée est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "−5 %"
+        },
+        {
+          "id": "b",
+          "text": "−4,94 %"
+        },
+        {
+          "id": "c",
+          "text": "−6 %"
+        },
+        {
+          "id": "d",
+          "text": "−1 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "0,97 × 0,98 = 0,9506, soit −4,94 %. Les variations se composent ; récupérer exige +5,20 %.",
+      "tags": [
+        "composition"
+      ]
+    }
+  ],
+  "revision": 1
+}

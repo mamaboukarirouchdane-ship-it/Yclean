@@ -1,0 +1,233 @@
+{
+  "lessonId": "L7.03",
+  "title": "Quiz — COT sur l'or et le dollar",
+  "passThreshold": 0.8,
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L7.03-Q1",
+      "type": "mcq",
+      "prompt": "Pourquoi ne peut-on pas écrire « les fonds sont vendeurs du dollar » à partir du seul net Euro FX ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que la CFTC ne publie pas de données de change"
+        },
+        {
+          "id": "b",
+          "text": "Parce que le Euro FX n'existe pas"
+        },
+        {
+          "id": "c",
+          "text": "Le Euro FX est un contrat euro/dollar, pas « le dollar » ; l'indice du dollar est un autre contrat, et chaque catégorie a son propre signe"
+        },
+        {
+          "id": "d",
+          "text": "Parce que le net est toujours nul"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Un net vendeur de Euro FX décrit une exposition à un euro plus faible contre le dollar, dans une catégorie donnée ; ce n'est ni une position sur toutes les devises ni une position de toutes les catégories.",
+      "tags": [
+        "instrument"
+      ]
+    },
+    {
+      "id": "L7.03-Q2",
+      "type": "mcq",
+      "prompt": "Pourquoi compare-t-on des parts de l'intérêt ouvert plutôt que des contrats bruts entre l'or et le Euro FX ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un contrat d'or (100 onces) et un contrat de Euro FX (125 000 euros) n'ont ni la même unité ni le même ordre de grandeur"
+        },
+        {
+          "id": "b",
+          "text": "Parce que les contrats sont identiques"
+        },
+        {
+          "id": "c",
+          "text": "Parce que la CFTC l'interdit"
+        },
+        {
+          "id": "d",
+          "text": "Parce que l'intérêt ouvert est toujours égal"
+        }
+      ],
+      "correct": "a",
+      "explanation": "9 598 contrats d'or représentent 959 800 onces, 23 640 contrats de Euro FX représentent 2,955 milliards d'euros : seule une part de l'intérêt ouvert du même marché est comparable.",
+      "tags": [
+        "normalisation"
+      ]
+    },
+    {
+      "id": "L7.03-Q3",
+      "type": "mcq",
+      "prompt": "Au 13/10/2026 : Leveraged Funds net −92 833, Asset Manager net +214 007 sur le Euro FX ; Managed Money or net +111 079. Dans le tableau à quatre situations, que se passe-t-il ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aucune case ne s'applique"
+        },
+        {
+          "id": "b",
+          "text": "Toujours la situation A"
+        },
+        {
+          "id": "c",
+          "text": "Toujours la situation B"
+        },
+        {
+          "id": "d",
+          "text": "La case dépend de la catégorie : situation A avec Leveraged Funds, situation B avec Asset Manager"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le même contrat, à la même date, donne deux cases opposées selon la catégorie retenue : le tableau décrit des états et pose des questions, il ne donne aucune règle.",
+      "tags": [
+        "quatre_situations"
+      ]
+    },
+    {
+      "id": "L7.03-Q4",
+      "type": "mcq",
+      "prompt": "Le net court des Leveraged Funds sur le Euro FX double entre le 8/9 (−46 381) et le 13/10 (−92 833). Qu'est-ce qui l'explique ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une baisse des longs de 58 029"
+        },
+        {
+          "id": "b",
+          "text": "Les courts augmentent de 58 029, les longs de 11 577 : le net varie de 11 577 − 58 029 = −46 452"
+        },
+        {
+          "id": "c",
+          "text": "Une hausse des longs de 46 452"
+        },
+        {
+          "id": "d",
+          "text": "Une variation d'intérêt ouvert"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le net est longs moins courts ; ici les longs montent aussi, mais les courts montent cinq fois plus, d'où une hausse du net court.",
+      "tags": [
+        "decomposition"
+      ]
+    },
+    {
+      "id": "L7.03-Q5",
+      "type": "mcq",
+      "prompt": "Combien de paires de variations hebdomadaires lues et homogènes a-t-on, et que conclure sur la corrélation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "3 paires : corrélation positive"
+        },
+        {
+          "id": "b",
+          "text": "12 paires : corrélation forte"
+        },
+        {
+          "id": "c",
+          "text": "1 paire : corrélation nulle"
+        },
+        {
+          "id": "d",
+          "text": "3 paires (5 avec la valeur reconstituée) pour un seuil fixé à 8 : corrélation non calculable"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le critère est fixé d'avance : au moins huit paires de variations hebdomadaires lues ; avec 3 (ou 5), on écrit « non calculable », pas « faible » ni « forte ».",
+      "tags": [
+        "correlation"
+      ]
+    },
+    {
+      "id": "L7.03-Q6",
+      "type": "mcq",
+      "prompt": "Une corrélation de niveaux de 0,97 entre le net de l'or et le net court des Leveraged Funds sur cinq dates est-elle une preuve de lien ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui si le z-score est négatif"
+        },
+        {
+          "id": "b",
+          "text": "Oui, 0,97 est proche de 1"
+        },
+        {
+          "id": "c",
+          "text": "Non : deux séries qui baissent ensemble, sur cinq points et en niveaux, produisent presque automatiquement une corrélation élevée"
+        },
+        {
+          "id": "d",
+          "text": "Oui car les deux sont des positions"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La tendance commune, le petit échantillon et l'absence de variations homogènes rendent ce chiffre sans valeur informative ; on le présente comme un piège.",
+      "tags": [
+        "piege"
+      ]
+    },
+    {
+      "id": "L7.03-Q7",
+      "type": "mcq",
+      "prompt": "Que signale le 15/9 : non rapportables du Euro FX de 96 362 à 192 148 en long puis retour à 84 213 le 22/9 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un changement de composition probable (cause non vérifiée) : on suspend la conclusion sur les variations de cette période"
+        },
+        {
+          "id": "b",
+          "text": "Que les petits spéculateurs achètent massivement durablement"
+        },
+        {
+          "id": "c",
+          "text": "Une erreur d'impression de la CFTC prouvée"
+        },
+        {
+          "id": "d",
+          "text": "Un signal d'achat"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Un mouvement annulé en une semaine, accompagné de variations de spreading, évoque un changement de périmètre (échéance, reclassement : hypothèse), pas un comportement durable.",
+      "tags": [
+        "composition"
+      ]
+    },
+    {
+      "id": "L7.03-Q8",
+      "type": "mcq",
+      "prompt": "Une conclusion « indéterminée » pour la fiche comparative or / Euro FX au 13/10 est-elle acceptable ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Non, toute analyse doit conclure par une direction"
+        },
+        {
+          "id": "b",
+          "text": "Oui : les données établissent des états et des évolutions, pas un lien ni une direction"
+        },
+        {
+          "id": "c",
+          "text": "Non, car elle est pénalisante"
+        },
+        {
+          "id": "d",
+          "text": "Oui mais seulement si le prix est connu"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Aucun prix, cinq dates, deux changements de composition : conclure « indéterminée » est la conclusion honnête, et une bonne analyse fondamentale ne garantit pas une transaction gagnante.",
+      "tags": [
+        "indetermine"
+      ]
+    }
+  ],
+  "revision": 1
+}

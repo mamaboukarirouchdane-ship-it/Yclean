@@ -1,0 +1,223 @@
+---
+id: L6.02
+module: 6
+order: 2
+title: "Anticipations de taux : contrats à terme sur les fonds fédéraux, probabilités implicites, espérance et limites"
+title_initial: "Anticipations de taux"
+level: "intermédiaire à avancé"
+duration_hours: 3.5
+prerequisites: ["L2.01", "L5.03", "L5.09", "L6.01"]
+status: "Rédigée"   # le statut officiel est tenu dans registry/lessons.json
+quiz: "quiz/L6.02.quiz.json"
+sources: ["S-CME-05", "S-CME-06", "S-ADM-04", "S-FED-26", "S-KIT-04", "S-KIT-05", "S-ADM-01"]
+---
+
+# L6.02 — Anticipations de taux
+
+> **Convention de lecture.** **[Fait]** = chiffre lu dans une source citée, avec sa date ; **[Définition]** = convention de cours ; **[Calcul de l'auteur]** = calcul à partir de chiffres publiés ou fictifs ; **[Interprétation]** = lecture discutable ; **[Hypothèse]** = supposition nécessaire non vérifiée ; **[SIMULATION]** = chiffres fictifs. Sources lues par **résumé automatique** : deux pages pédagogiques du CME Group (méthodologie de l'outil FedWatch), un communiqué de la Fed, trois articles de presse ou de courtier. **L'outil FedWatch lui-même n'a pas été consulté directement** : les probabilités réelles citées viennent d'articles qui les attribuent à FedWatch. **Une bonne analyse fondamentale ne garantit pas une transaction gagnante.**
+
+## 1. Objectifs d'apprentissage
+
+À la fin de cette leçon, tu sais :
+
+1. distinguer le **taux directeur actuel**, l'**anticipation** de son évolution et la **décision** effectivement prise ;
+2. expliquer comment un **contrat à terme sur les fonds fédéraux** exprime un taux moyen attendu ;
+3. refaire à la main le calcul d'une **variation attendue** et de la **probabilité** associée (méthode du CME) ;
+4. calculer une **espérance** et une **surprise** à partir de probabilités ;
+5. lister les **limites** de ces probabilités (hypothèses, primes de risque, changement rapide, sources différentes) ;
+6. écrire un **scénario conditionnel** pour XAU/USD sans produire de signal automatique.
+
+## 2. Prérequis
+
+- Taux directeurs (module 2), taux réels (L5.03), contrats à terme (L5.09), attendu et surprise (L6.01).
+
+## 3. Explication intuitive
+
+Le taux directeur est un fait : aujourd'hui, la fourchette est de 3¾ à 4 %. Les marchés ne s'intéressent pas qu'à ce fait ; ils négocient des contrats dont le prix dépend du taux **qui sera pratiqué dans les semaines suivantes**. En lisant le prix de ces contrats, on peut déduire le taux moyen attendu, puis, avec quelques hypothèses, la probabilité d'une hausse, d'un maintien ou d'une baisse. C'est une **lecture du marché**, pas une prédiction de la Fed ni une certitude : si les nouvelles changent, les probabilités changent le jour même.
+
+## 4. Développement technique
+
+### 4.1 Trois notions à ne pas confondre
+- **Taux actuel** : la fourchette cible en vigueur (3¾–4 % depuis la décision de maintien du 28/10/2026, S-FED-26).
+- **Anticipation** : ce que les prix de marché impliquent pour les prochaines réunions.
+- **Décision** : ce que le comité décide à la date de la réunion.
+La surprise (L6.01) est l'écart entre la décision et l'anticipation **disponible juste avant**.
+
+### 4.2 Le contrat « 30-Day Fed Funds »
+**[Fait]** (S-CME-05, S-CME-06 ; pages pédagogiques du CME Group, résumé automatique) : les contrats 30-Day Federal Funds (code ZQ) ont un prix qui reflète le taux effectif moyen au jour le jour (EFFR) attendu sur le mois du contrat. **Taux moyen implicite = 100 − prix du contrat.**
+**[Calcul de l'auteur]** Un contrat coté 96,9400 implique 100 − 96,9400 = **3,0600 %** de moyenne mensuelle ; coté 97,4475, il implique **2,5525 %**. (Cotations de l'exemple pédagogique du CME de septembre 2022, reprises ici comme exercice de calcul, pas comme données actuelles.)
+
+### 4.3 De la moyenne mensuelle à la variation attendue
+**[Fait]** (S-CME-05, S-CME-06) : la méthode part d'un **mois d'ancrage** sans réunion, dont la moyenne égale le taux de fin du mois précédent. Pour un mois avec réunion, avec N jours avant et M jours après la décision :
+**Taux de début = [moyenne − (M ÷ (M + N)) × taux de fin] ÷ (N ÷ (M + N)).**
+La **variation attendue** = taux de fin − taux de début ; on la divise par 0,25 point pour obtenir un nombre de hausses de 25 pb.
+**[Calcul de l'auteur]** Exemple du CME (réunion du 21/09/2022) : moyenne de septembre 2,5525 % ; fin de septembre = moyenne d'octobre = 3,0600 % ; N = 21, M = 9. Taux de début = (2,5525 − 0,3 × 3,06) ÷ 0,7 = (2,5525 − 0,918) ÷ 0,7 = **2,3350 %**. Variation attendue = 3,0600 − 2,3350 = **0,7250 point**, soit **2,9** hausses de 25 pb.
+
+### 4.4 L'arbre de probabilités
+**[Fait]** (S-CME-05) : on suppose des variations par multiples de 25 pb. La **partie entière** du nombre de mouvements fixe l'issue inférieure ; la **partie décimale** donne la probabilité de l'issue supérieure ; 1 moins cette partie, celle de l'inférieure. Pour les réunions suivantes, les probabilités se multiplient le long des branches.
+**[Calcul de l'auteur]** 2,9 mouvements : 2 hausses (50 pb) avec 1 − 0,9 = **10 %**, 3 hausses (75 pb) avec **90 %**, ce qui reproduit les chiffres du CME. Espérance : 0,10 × 50 + 0,90 × 75 = **72,5 pb**, égale à la variation attendue de 0,725 point : la décomposition est cohérente par construction.
+
+### 4.5 Espérance et surprise à partir de probabilités
+**[Définition]** E[Δr] = Σ (probabilité × variation).
+**[SIMULATION]** Probabilités fictives : baisse de 25 pb 60 %, maintien 30 %, hausse de 25 pb 10 % (somme 100 %). E[Δr] = 0,60 × (−25) + 0,30 × 0 + 0,10 × 25 = **−12,5 pb**. Si la banque maintient, la surprise est 0 − (−12,5) = **+12,5 pb** (plus restrictive que prévu).
+**Données réelles du 28/10/2026 (veille de la lecture, avant l'annonce de 14 h).** **[Fait]** (S-ADM-04, courtier, résumé) : à 9 h 27 ET, probabilité de maintien en octobre **90,6 %** et de hausse en décembre **84 %**, attribuées à CME FedWatch via Yahoo Finance. **[Hypothèse]** Les 9,4 % restants sont une hausse de 25 pb en octobre (aucune baisse n'est mentionnée). **[Calcul de l'auteur]** E[Δr] octobre = 0,094 × 25 = **2,35 pb** ; avec un maintien, surprise = **−2,35 pb** (légèrement plus accommodante que prévu). C'est le complément de L6.01 : la surprise d'octobre est **petite**, mais calculée sous une hypothèse sur la répartition du reste.
+**[Fait]** (S-KIT-04, Reuters via Kitco, 21/10/2026) : probabilité de hausse en décembre de **88 %** selon FedWatch. De 88 % (21/10) à 84 % (28/10, 9 h 27 ET), la probabilité diminue de 4 points de pourcentage en sept jours.
+
+### 4.6 Les limites : pourquoi ce n'est pas une prévision
+1. **Hypothèses de l'outil** : pas de variation hors multiples de 25 pb, taux plancher à zéro, réaction de l'EFFR proportionnelle, calendrier régulier (S-CME-06).
+2. **Prime de risque et liquidité** : le prix d'un contrat peut inclure une compensation pour le risque et des effets propres à l'instrument ; **[Interprétation de cours, non sourcée]** les probabilités ne sont donc pas des probabilités « physiques » exactes.
+3. **Cible contre EFFR** : le contrat porte sur le taux effectif, non directement sur la fourchette.
+4. **Définition** : une probabilité de décembre peut être **cumulée** (par rapport à la fourchette actuelle) ou conditionnelle à octobre ; l'article lu ne le précise pas.
+5. **Instabilité** : 84 % à 9 h 27 ET et « environ 85 % » l'après-midi (Bloomberg, autre source) ne sont pas comparables : sources et heures différentes.
+6. **Changement d'information** : une probabilité consultée aujourd'hui n'a rien à voir avec celle d'avant une annonce passée.
+
+### 4.7 Lien avec XAU/USD : un scénario conditionnel, pas un signal
+**[Fait]** (S-ADM-04, intraday du 28/10/2026) : à 15 h 25 ET, rendement à 10 ans **5,042 %** (+5 pb, Reuters), indice du dollar DXY ≈ **102** (−0,2 %), contrat à terme sur l'or **4 058,10 $** (−0,40 %, 15 h 29 ET). Au même jour, l'or comptant lu par S-KIT-05 : **4 035,48 $** (−0,60 % sur la séance).
+**[Calcul de l'auteur]** 4 058,10 − 4 035,48 = **22,62 $**, ordre de grandeur de la base de L5.09 (22,15 $), mais deux horaires et deux instruments différents ; 4 058,10 ÷ 0,996 = 4 074,4 (point de comparaison implicite de la séance).
+**[Interprétation]** Chaîne possible : anticipations de taux → rendements et taux réels → dollar → or. Chaque maillon peut être contrarié par d'autres informations.
+**[SIMULATION] Scénarios conditionnels (probabilités inventées).** Si la probabilité de hausse en décembre passe de 84 % à 60 % :
+- *Scénario 1 (30 %)* — taux réels en baisse, dollar en baisse : or soutenu ;
+- *Scénario 2 (40 %)* — baisse déjà intégrée, autres facteurs dominants : réaction faible ;
+- *Scénario 3 (30 %)* — autre information défavorable (par exemple une inflation élevée) : or en baisse malgré la baisse des probabilités de hausse.
+Somme 100 %. Aucun signal automatique : la probabilité de taux est **un** cadran du tableau de bord (L5.11).
+
+### 4.8 Fiche de données pour L6.02
+**[Définition de cours]** Pour chaque donnée réelle : date et heure de **consultation** ; date de la réunion concernée ; source et instrument ; probabilités de chaque scénario **et leur somme** ; calcul de la variation moyenne ; hypothèses ; limites ; lien avec XAU/USD (observation séparée de l'interprétation).
+
+| Donnée | Consultée | Réunion | Instrument / source | Probabilités | Somme |
+|---|---|---|---|---|---|
+| Octobre : maintien | 31/10/2026 (article du 28/10, 9 h 27 ET) | 28/10/2026 | FedWatch via Yahoo, relayé par S-ADM-04 | maintien 90,6 % ; reste 9,4 % (hypothèse : hausse) | 100 % (par complément) |
+| Décembre : hausse | 31/10/2026 (article du 28/10, 9 h 27 ET) | décembre 2026 | idem | hausse 84 % ; reste 16 % (hypothèse : non-hausse) | 100 % (par complément) |
+| Décembre : hausse | 31/10/2026 (dépêche du 21/10) | décembre 2026 | FedWatch relayé par S-KIT-04 | hausse 88 % | non fournie |
+
+## 5. Définitions essentielles
+
+- **Taux directeur / fourchette cible** : niveau décidé par le comité.
+- **EFFR** : taux effectif des fonds fédéraux, moyenne au jour le jour.
+- **Contrat 30-Day Fed Funds (ZQ)** : prix = 100 − taux moyen attendu du mois.
+- **Variation attendue** : taux de fin − taux de début, en points ou en nombre de pas de 25 pb.
+- **Probabilité implicite** : probabilité déduite des prix, sous hypothèses.
+- **Espérance de variation** : Σ probabilité × variation.
+- **Probabilité cumulée** : probabilité d'un niveau final après plusieurs réunions.
+
+## 6. Exemples chiffrés
+
+**6.1 Moyenne implicite.** 100 − 96,9400 = 3,0600 % ; 100 − 97,4475 = 2,5525 %.
+**6.2 Taux de début.** (2,5525 − 0,3 × 3,06) ÷ 0,7 = 2,3350 % ; variation 0,7250 point = 2,9 pas.
+**6.3 Espérance (SIMULATION).** 0,60 × (−25) + 0,30 × 0 + 0,10 × 25 = −12,5 pb.
+**6.4 Octobre 2026.** 0,094 × 25 = 2,35 pb ; surprise du maintien : −2,35 pb (sous l'hypothèse que le reste est une hausse).
+
+### 6.5 Cas historique documenté — la réunion du 21 septembre 2022 vue par le CME
+**[Fait]** (S-CME-05, S-CME-06 ; exemple pédagogique du CME, présenté comme hypothétique) : contrat d'octobre à 96,9400, de septembre à 97,4475 ; N = 21, M = 9 ; variation attendue 0,7250 point, soit 2,9 hausses de 25 pb ; probabilités 10 % pour +50 pb et 90 % pour +75 pb ; probabilités de novembre 81,0 % / 19,0 %.
+**[Calcul de l'auteur]** Nous retrouvons 2,3350 %, 0,725 point, 2,9 pas et 10 % / 90 %. **Vérification d'ensemble** : 0,10 × 50 + 0,90 × 75 = 72,5 pb.
+**[Interprétation]** Le cas montre que la lecture d'une probabilité dépend de la **structure de la méthode** (ancrage, pas de 25 pb, jours avant et après). **Ce qu'on ne peut pas conclure** : que ces probabilités aient été celles du marché réel à cette date (l'exemple est hypothétique), ni la décision réellement prise par la Fed. **Limites** : page pédagogique du CME, résumé automatique ; la décision réelle du 21/09/2022 n'a pas été lue ici.
+
+## 7. Application au Forex et à l'or
+
+**[Interprétation]**
+- **XAU/USD** : une baisse des probabilités de hausse peut soutenir l'or, sans garantie.
+- **Forex** : le même raisonnement s'applique à EUR/USD avec les anticipations de la BCE (autres instruments, autres méthodes).
+- **Prudence** : une probabilité n'est pas un prix cible ; l'or réagit aussi à l'inflation, aux risques géopolitiques et au positionnement.
+- **Routine** : noter l'heure, la source, la somme des probabilités, puis seulement interpréter.
+
+## 8. Erreurs courantes
+
+1. Confondre probabilité implicite et prévision de la Fed.
+2. Oublier de vérifier que les probabilités somment à 100 %.
+3. Comparer deux sources ou deux heures comme si elles étaient identiques.
+4. Présenter une probabilité d'aujourd'hui comme connue avant une annonce passée.
+5. Prendre une probabilité cumulée pour une probabilité par réunion.
+6. Oublier que le contrat porte sur la moyenne du mois, non sur la fourchette.
+7. En déduire un signal automatique sur l'or.
+
+## 9. Limites de l'interprétation
+
+- FedWatch non consulté directement ; probabilités réelles lues dans un article de courtier qui les attribue à l'outil.
+- Répartition des probabilités restantes supposée.
+- Prime de risque non mesurée.
+- Hypothèses de l'outil (pas de 25 pb, taux plancher, calendrier) non testées ici.
+- Définition cumulée ou conditionnelle de la probabilité de décembre non précisée.
+- Positionnement des opérateurs (CFTC) non lu, et à ne pas confondre avec des probabilités de décision.
+
+## 10. Exercices pratiques
+
+**Exercice 1 — Moyennes.** Contrats cotés 96,9400 et 97,4475. Quels taux moyens implicites ?
+
+<details>
+<summary>Correction 1</summary>
+
+100 − 96,9400 = **3,0600 %** ; 100 − 97,4475 = **2,5525 %**.
+</details>
+
+**Exercice 2 — Taux de début.** Moyenne du mois 2,5525 % ; taux de fin 3,0600 % ; N = 21 jours avant, M = 9 jours après. Calcule le taux de début, la variation attendue et le nombre de pas de 25 pb.
+
+<details>
+<summary>Correction 2</summary>
+
+(2,5525 − (9/30) × 3,06) ÷ (21/30) = (2,5525 − 0,918) ÷ 0,7 = **2,3350 %** ; variation 3,0600 − 2,3350 = **0,7250 point** ; 0,725 ÷ 0,25 = **2,9** pas.
+</details>
+
+**Exercice 3 — Arbre.** Avec 2,9 pas, donne les deux issues et leurs probabilités, puis vérifie l'espérance.
+
+<details>
+<summary>Correction 3</summary>
+
+2 pas (50 pb) avec 1 − 0,9 = **10 %** ; 3 pas (75 pb) avec **90 %** ; espérance 0,10 × 50 + 0,90 × 75 = **72,5 pb** = 0,725 point.
+</details>
+
+**Exercice 4 — Espérance fictive.** Baisse de 25 pb 60 %, maintien 30 %, hausse de 25 pb 10 % (SIMULATION). Calcule E[Δr] et la surprise d'un maintien.
+
+<details>
+<summary>Correction 4</summary>
+
+E[Δr] = −15 + 0 + 2,5 = **−12,5 pb** ; surprise du maintien : 0 − (−12,5) = **+12,5 pb** (plus restrictive que prévu).
+</details>
+
+**Exercice 5 — Octobre 2026.** Maintien à 90,6 % le 28/10 à 9 h 27 ET. Sous l'hypothèse que le reste est une hausse de 25 pb, calcule E[Δr] et la surprise d'un maintien. Quelle limite ?
+
+<details>
+<summary>Correction 5</summary>
+
+Reste = 100 − 90,6 = 9,4 % ; E[Δr] = 0,094 × 25 = **2,35 pb** ; surprise = **−2,35 pb**. Limite : la répartition du reste est une hypothèse, et l'outil n'a pas été consulté directement.
+</details>
+
+**Exercice 6 — Critique.** « La probabilité de hausse est passée de 88 % à 84 % : l'or va monter. » Donne quatre objections.
+
+<details>
+<summary>Correction 6</summary>
+
+(1) Une probabilité n'est pas une prévision de l'or. (2) Les deux chiffres ne sont pas strictement comparables sans vérifier source et définition (cumulée ou non). (3) La baisse peut être déjà intégrée. (4) Inflation, dollar, rendements et géopolitique agissent en parallèle. (5) Une variation de 4 points est petite devant l'incertitude de la méthode (hypothèses, prime de risque).
+</details>
+
+## 11. Quiz
+
+Le quiz (8 questions) est dans `quiz/L6.02.quiz.json`. Seuil : **80 %**, soit au moins 7 bonnes réponses sur 8.
+
+## 12. Résumé
+
+- Taux actuel, anticipation et décision sont trois choses distinctes.
+- Contrat ZQ : taux moyen implicite = 100 − prix.
+- Méthode du CME : ancrage, taux de début par N et M, variation attendue, arbre de probabilités en pas de 25 pb.
+- Espérance de variation = Σ probabilité × variation ; surprise = décision − espérance.
+- Au 28/10/2026 : maintien à 90,6 %, hausse de décembre à 84 % (9 h 27 ET) ; espérance d'octobre 2,35 pb sous une hypothèse.
+- Ces probabilités ne sont ni des prévisions ni des signaux sur l'or.
+
+## 13. Critères de maîtrise
+
+- [ ] Déduire un taux moyen d'un prix de contrat (Exercice 1).
+- [ ] Refaire le calcul du taux de début et de la variation attendue (Exercice 2).
+- [ ] Construire l'arbre de probabilités (Exercice 3).
+- [ ] Calculer espérance et surprise (Exercices 4 et 5).
+- [ ] Critiquer une conclusion tirée d'une probabilité (Exercice 6).
+- [ ] Obtenir au moins 80 % au quiz.
+
+## 14. Sources et références
+
+Voir `content/sources.md`. Sources consultées le **31 octobre 2026** :
+
+- **S-CME-05** — CME Group, « Understanding the CME Group FedWatch Tool methodology » (métadonnée : 24/01/2025) : https://www.cmegroup.com/articles/2023/understanding-the-cme-group-fedwatch-tool-methodology.html
+- **S-CME-06** — CME Group, « Fed funds futures probability tree calculator » : https://www.cmegroup.com/education/fed-funds-futures-probability-tree-calculator.html
+- **S-ADM-04** — Admiral Markets (courtier, analyse partiellement générée automatiquement), « FOMC October 2026: Fed Holds Rates in a 10-2 Vote as Markets Price a December Hike » (28/10/2026) : https://admiralmarkets.com/analytics/traders-blog/fomc-october-2026-fed-holds-rates
+- **S-FED-26**, **S-KIT-04**, **S-KIT-05**, **S-ADM-01** — déjà lues (L5.11, L6.01 et plus haut).
+
+**Définitions de cours non rattachées à une source lue :** probabilité « physique » contre implicite, fiche de données, scénario conditionnel. **Points non vérifiés :** FedWatch direct, répartition du reste des probabilités, définition cumulée ou conditionnelle de décembre, prix des contrats ZQ d'octobre 2026, décision réelle du 21/09/2022, littérature sur les primes de risque.
