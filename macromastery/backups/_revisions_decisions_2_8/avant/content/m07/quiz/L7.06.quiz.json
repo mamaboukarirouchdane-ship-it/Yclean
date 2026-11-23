@@ -1,0 +1,235 @@
+{
+  "lessonId": "L7.06",
+  "title": "Quiz — Horizons de flux",
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L7.06-Q1",
+      "type": "mcq",
+      "prompt": "Quelle est la différence entre horizon d'analyse et fréquence de publication ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La fréquence détermine toujours l'horizon"
+        },
+        {
+          "id": "b",
+          "text": "Ce sont deux mots pour la même chose"
+        },
+        {
+          "id": "c",
+          "text": "L'horizon est la durée sur laquelle l'information compte pour la décision ; la fréquence est le rythme de production de la donnée"
+        },
+        {
+          "id": "d",
+          "text": "L'horizon est la date de publication"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Une donnée mensuelle peut servir une lecture de court terme (dernier mois) ou de moyen terme (somme sur trois mois) : l'horizon est le choix du lecteur, la fréquence une propriété de la donnée.",
+      "tags": [
+        "horloges"
+      ]
+    },
+    {
+      "id": "L7.06-Q2",
+      "type": "mcq",
+      "prompt": "Les positions COT du 13/10 sont publiées le 16/10. Les achats officiels de juillet sont publiés le 03/09. Quels délais ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "3 jours et 34 jours"
+        },
+        {
+          "id": "b",
+          "text": "34 jours et 3 jours"
+        },
+        {
+          "id": "c",
+          "text": "13 jours et 3 jours"
+        },
+        {
+          "id": "d",
+          "text": "3 jours et 3 jours"
+        }
+      ],
+      "correct": "a",
+      "explanation": "13/10 → 16/10 = 3 jours ; 31/07 → 03/09 = 34 jours : la seconde donnée ne renseigne pas sur le présent.",
+      "tags": [
+        "delais"
+      ]
+    },
+    {
+      "id": "L7.06-Q3",
+      "type": "mcq",
+      "prompt": "Un net Managed Money de 111 079 contrats (100 onces chacun) correspond à combien de tonnes ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 111 079 t"
+        },
+        {
+          "id": "b",
+          "text": "≈ 3 455 t"
+        },
+        {
+          "id": "c",
+          "text": "≈ 34,5 t"
+        },
+        {
+          "id": "d",
+          "text": "≈ 345,5 t"
+        }
+      ],
+      "correct": "d",
+      "explanation": "111 079 × 100 ÷ 32 150,7466 = 345,5 t. La conversion rend les unités comparables, pas les natures équivalentes.",
+      "tags": [
+        "conversion"
+      ]
+    },
+    {
+      "id": "L7.06-Q4",
+      "type": "mcq",
+      "prompt": "Peut-on additionner les achats de banques centrales (t), la variation des positions sur contrats (converties en t) et les flux d'ETF (t) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui, ce sont toutes des tonnes"
+        },
+        {
+          "id": "b",
+          "text": "Non : un achat, une position sur contrats et une variation d'avoirs physiques sont des natures différentes, même exprimées en tonnes"
+        },
+        {
+          "id": "c",
+          "text": "Oui si les dates coïncident"
+        },
+        {
+          "id": "d",
+          "text": "Oui si on les pondère par les prix"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La conversion en tonnes ne rend pas les mesures équivalentes : stock, flux, position et achat ne s'additionnent pas.",
+      "tags": [
+        "natures"
+      ]
+    },
+    {
+      "id": "L7.06-Q5",
+      "type": "mcq",
+      "prompt": "Flux d'ETF d'avril à septembre : +6,6 ; −2 ; −8,9 ; +3 ; +18 ; +10 Md$. Somme sur trois mois à fin septembre et à fin juin ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+31,0 et +31,0"
+        },
+        {
+          "id": "b",
+          "text": "+10 et −8,9"
+        },
+        {
+          "id": "c",
+          "text": "+26,7 et +6,6"
+        },
+        {
+          "id": "d",
+          "text": "+31,0 et −4,3"
+        }
+      ],
+      "correct": "d",
+      "explanation": "3 + 18 + 10 = 31,0 ; 6,6 − 2 − 8,9 = −4,3 : le signe du flux dépend de l'horizon.",
+      "tags": [
+        "horizon"
+      ]
+    },
+    {
+      "id": "L7.06-Q6",
+      "type": "mcq",
+      "prompt": "Q1 2026 des banques centrales a été révisé de 244 t à 57 t. Qu'enseigne cette révision ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que le chiffre de 244 t était exact"
+        },
+        {
+          "id": "b",
+          "text": "Que les banques centrales n'achètent pas"
+        },
+        {
+          "id": "c",
+          "text": "Les estimations de demande peuvent être reclassées (187 t vers l'OTC) : toute donnée a une date de référence, de publication et un risque de révision"
+        },
+        {
+          "id": "d",
+          "text": "Qu'il faut ignorer les achats officiels"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le communiqué du T2 2026 indique une reclassification de 187 t en demande OTC : garder la mention de la version consultée.",
+      "tags": [
+        "revision"
+      ]
+    },
+    {
+      "id": "L7.06-Q7",
+      "type": "mcq",
+      "prompt": "Entrées d'ETF élevées, positions spéculatives en baisse, achats officiels élevés, prix en recul : que conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que les horizons et les natures divergent ; la direction du prix est indéterminée ; il faut des données supplémentaires"
+        },
+        {
+          "id": "b",
+          "text": "Que l'or va monter"
+        },
+        {
+          "id": "c",
+          "text": "Que l'or va baisser"
+        },
+        {
+          "id": "d",
+          "text": "Que les ETF ont causé le recul"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Acteurs, instruments et horizons diffèrent ; les données ne démontrent aucune causalité ni durabilité.",
+      "tags": [
+        "synthese"
+      ]
+    },
+    {
+      "id": "L7.06-Q8",
+      "type": "mcq",
+      "prompt": "Pourquoi aucun des scénarios A, B, C n'est-il un signal automatique ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que les scénarios sont faux"
+        },
+        {
+          "id": "b",
+          "text": "Parce que chaque configuration d'horizons admet plusieurs interprétations et que les flux peuvent déjà être dans le prix"
+        },
+        {
+          "id": "c",
+          "text": "Parce que seul le scénario C est fiable"
+        },
+        {
+          "id": "d",
+          "text": "Parce que le court terme est toujours juste"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Une bonne analyse fondamentale ne garantit pas une transaction gagnante ; chaque scénario pose une question à résoudre avec des données supplémentaires.",
+      "tags": [
+        "signal"
+      ]
+    }
+  ],
+  "revision": 1
+}

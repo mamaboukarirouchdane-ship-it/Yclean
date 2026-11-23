@@ -1,0 +1,236 @@
+{
+  "lessonId": "L0.07",
+  "title": "Quiz — Intérêt et valeur temps de l'argent : intérêts, actualisation et rendement",
+  "passThreshold": 0.8,
+  "note": "Tous les chiffres des questions sont des calculs ou des exemples fictifs (SIMULATION), sauf l'exemple CFPB (1 000 à 5 %, 1 050 puis 1 102,50).",
+  "questions": [
+    {
+      "id": "L0.07-Q1",
+      "type": "mcq",
+      "prompt": "Tu places 1 000 à 5 % par an pendant 10 ans. Quelle est la valeur à intérêts composés annuels ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 500,00"
+        },
+        {
+          "id": "b",
+          "text": "1 050,00"
+        },
+        {
+          "id": "c",
+          "text": "1 628,89"
+        },
+        {
+          "id": "d",
+          "text": "1 650,00"
+        }
+      ],
+      "correct": "c",
+      "explanation": "1 000 × 1,05^10 = 1 628,89. À intérêts simples on aurait 1 000 × (1 + 0,05 × 10) = 1 500,00.",
+      "tags": [
+        "compose",
+        "simple"
+      ]
+    },
+    {
+      "id": "L0.07-Q2",
+      "type": "mcq",
+      "prompt": "Quel est le taux effectif annuel d'un taux nominal de 6 % capitalisé mensuellement ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "6,17 %"
+        },
+        {
+          "id": "b",
+          "text": "6,09 %"
+        },
+        {
+          "id": "c",
+          "text": "6,00 %"
+        },
+        {
+          "id": "d",
+          "text": "6,50 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "(1 + 0,06/12)^12 − 1 = 1,005^12 − 1 ≈ 6,1678 %. La capitalisation plus fréquente que l'annuelle donne un taux effectif supérieur au taux nominal.",
+      "tags": [
+        "tea"
+      ]
+    },
+    {
+      "id": "L0.07-Q3",
+      "type": "mcq",
+      "prompt": "Quelle est la valeur actuelle de 1 000 promis dans 3 ans, avec un taux d'actualisation de 4 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 124,86"
+        },
+        {
+          "id": "b",
+          "text": "960,00"
+        },
+        {
+          "id": "c",
+          "text": "1 000,00"
+        },
+        {
+          "id": "d",
+          "text": "889,00"
+        }
+      ],
+      "correct": "d",
+      "explanation": "VA = 1 000 ÷ 1,04³ = 1 000 ÷ 1,124864 ≈ 889,00. Le 1 124,86 est la valeur future d'un capital de 1 000 placé 3 ans à 4 %.",
+      "tags": [
+        "actualisation"
+      ]
+    },
+    {
+      "id": "L0.07-Q4",
+      "type": "mcq",
+      "prompt": "Si le taux d'actualisation monte (par exemple de 4 % à 8 %), que devient la valeur actuelle d'une somme promise dans 3 ans ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle monte"
+        },
+        {
+          "id": "b",
+          "text": "Elle baisse"
+        },
+        {
+          "id": "c",
+          "text": "Elle reste identique"
+        },
+        {
+          "id": "d",
+          "text": "Elle devient négative"
+        }
+      ],
+      "correct": "b",
+      "explanation": "VA = VF ÷ (1 + r)ⁿ : quand r monte, le dénominateur augmente et la valeur actuelle baisse (889,00 à 793,83 pour 1 000 dans 3 ans). C'est la relation qui explique le lien prix/taux des obligations (L0.08).",
+      "tags": [
+        "actualisation",
+        "taux"
+      ]
+    },
+    {
+      "id": "L0.07-Q5",
+      "type": "mcq",
+      "prompt": "Un placement passe de 2 000 à 3 000 en 5 ans. Quel est son rendement annualisé ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "10,00 %"
+        },
+        {
+          "id": "b",
+          "text": "50,00 %"
+        },
+        {
+          "id": "c",
+          "text": "7,50 %"
+        },
+        {
+          "id": "d",
+          "text": "8,45 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "(3 000/2 000)^(1/5) − 1 = 1,5^0,2 − 1 ≈ 8,45 %. Diviser 50 % par 5 (10 %) ignorerait la capitalisation : 2 000 × 1,10⁵ = 3 221,02.",
+      "tags": [
+        "annualise"
+      ]
+    },
+    {
+      "id": "L0.07-Q6",
+      "type": "mcq",
+      "prompt": "Un taux directeur passe de 3,50 % à 3,75 %. Quelle formulation est correcte ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+0,25 %"
+        },
+        {
+          "id": "b",
+          "text": "+25 %"
+        },
+        {
+          "id": "c",
+          "text": "+25 points de base, soit +0,25 point de pourcentage"
+        },
+        {
+          "id": "d",
+          "text": "+0,75 point de pourcentage"
+        }
+      ],
+      "correct": "c",
+      "explanation": "L'écart est de 0,25 point de pourcentage, soit 25 points de base. En valeur relative, la hausse est de 0,25 ÷ 3,50 ≈ 7,1 %.",
+      "tags": [
+        "pb"
+      ]
+    },
+    {
+      "id": "L0.07-Q7",
+      "type": "mcq",
+      "prompt": "Un actif perd 40 %, puis gagne 40 %. Quel est le résultat net ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−16 %"
+        },
+        {
+          "id": "b",
+          "text": "+16 %"
+        },
+        {
+          "id": "c",
+          "text": "0 % (retour au départ)"
+        },
+        {
+          "id": "d",
+          "text": "−40 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "1 × 0,60 × 1,40 = 0,84, soit −16 %. Après une baisse de 40 %, il faudrait une hausse de 1 ÷ 0,60 − 1 ≈ 66,7 % pour revenir au point de départ.",
+      "tags": [
+        "asymetrie"
+      ]
+    },
+    {
+      "id": "L0.07-Q8",
+      "type": "mcq",
+      "prompt": "Rendement nominal de 8 % et inflation de 5 %. Quel est le taux réel exact ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "3,00 %"
+        },
+        {
+          "id": "b",
+          "text": "2,86 %"
+        },
+        {
+          "id": "c",
+          "text": "13,00 %"
+        },
+        {
+          "id": "d",
+          "text": "1,60 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Taux réel exact = 1,08 ÷ 1,05 − 1 ≈ 2,857 %. L'approximation 8 % − 5 % = 3 % est un peu supérieure ; l'écart grandit quand les taux sont élevés.",
+      "tags": [
+        "reel",
+        "nominal"
+      ]
+    }
+  ],
+  "revision": 1
+}

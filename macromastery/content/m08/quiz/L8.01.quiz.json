@@ -2,6 +2,8 @@
   "lessonId": "L8.01",
   "title": "Quiz — Cadre d'analyse du risque géopolitique",
   "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
   "note": "Seuil 80 % (7 sur 8)",
   "questions": [
     {
@@ -155,7 +157,7 @@
         },
         {
           "id": "b",
-          "text": "Une mesure exacte de l'effet de l'événement géopolitique sur le prix de l'or"
+          "text": "Une mesure de l'effet de l'événement géopolitique sur le prix de l'or, isolée par le modèle du WGC après prise en compte des autres facteurs"
         },
         {
           "id": "c",
@@ -187,11 +189,11 @@
         },
         {
           "id": "c",
-          "text": "Dès qu'un journal financier de référence relie explicitement l'événement au mouvement de l'or"
+          "text": "Dès qu'un journal financier de référence relie explicitement l'événement au mouvement de l'or, avec la citation d'un analyste à l'appui"
         },
         {
           "id": "d",
-          "text": "Jamais : aucune attribution n'est permise, même avec des canaux vérifiés et des données complètes sur l'épisode"
+          "text": "Jamais : aucune attribution n'est permise, même avec des canaux vérifiés, des facteurs simultanés examinés et des données complètes sur l'épisode"
         }
       ],
       "correct": "a",
@@ -215,7 +217,7 @@
         },
         {
           "id": "c",
-          "text": "Que l'effet du choc sur l'or est devenu structurel, puisque la moyenne annuelle est restée élevée"
+          "text": "Que l'effet du choc sur l'or est devenu structurel, puisque la moyenne annuelle du Brent est restée élevée, à 100 $, sur l'ensemble de 2022"
         },
         {
           "id": "d",
@@ -229,6 +231,5 @@
       ]
     }
   ],
-  "revision": 2,
-  "passRule": "7 bonnes réponses sur 8 (seuil pédagogique provisoire)"
+  "revision": 3
 }

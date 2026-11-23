@@ -2,6 +2,8 @@
   "lessonId": "L8.04",
   "title": "Quiz — Commerce, droits de douane et fragmentation",
   "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
   "note": "Seuil 80 % (7 sur 8)",
   "questions": [
     {
@@ -11,7 +13,7 @@
       "options": [
         {
           "id": "a",
-          "text": "Adoption, annonce, invalidation, puis application effective, si elle reste nécessaire au gouvernement"
+          "text": "Adoption, annonce, invalidation, puis application effective si elle reste nécessaire, l'entrée en vigueur se confondant avec l'annonce publique"
         },
         {
           "id": "b",
@@ -23,7 +25,7 @@
         },
         {
           "id": "d",
-          "text": "Il n'y a qu'une seule étape : l'annonce vaut application immédiate pour tous les importateurs concernés"
+          "text": "Il n'y a qu'une seule étape : l'annonce vaut adoption, entrée en vigueur et application immédiate pour tous les importateurs concernés"
         }
       ],
       "correct": "c",
@@ -131,7 +133,7 @@
         },
         {
           "id": "c",
-          "text": "L'or a baissé dans les deux cas, avec un dollar orienté dans des directions opposées"
+          "text": "L'or a baissé dans les deux cas, avec un dollar orienté dans des directions opposées, en hausse en 2018 puis en baisse en 2025"
         },
         {
           "id": "d",
@@ -147,7 +149,7 @@
     {
       "id": "L8.04-Q6",
       "type": "mcq",
-      "prompt": "En 2025, l'or a été exclu de la liste des droits de douane (2-3 avril). Que faut-il en retenir ?",
+      "prompt": "Selon la LBMA, l'or a été exclu de la liste des droits de douane les 2-3 avril 2025 (exclusion non confirmée par le texte officiel consulté). Que faut-il en retenir ?",
       "options": [
         {
           "id": "a",
@@ -155,7 +157,7 @@
         },
         {
           "id": "b",
-          "text": "L'or ne peut pas être influencé par les droits de douane, quel que soit le canal de transmission considéré"
+          "text": "L'or ne peut pas être influencé par les droits de douane : un bien exclu de la liste échappe à tous les canaux de transmission (dollar, taux, refuge)"
         },
         {
           "id": "c",
@@ -163,7 +165,7 @@
         },
         {
           "id": "d",
-          "text": "L'exclusion de l'or de la liste prouve une stratégie américaine de dédollarisation volontaire"
+          "text": "L'exclusion de l'or de la liste prouve une stratégie américaine de dédollarisation volontaire, visible dans la hausse de l'or de 62,9 % sur l'année 2025"
         }
       ],
       "correct": "c",
@@ -215,7 +217,7 @@
         },
         {
           "id": "c",
-          "text": "Les droits de douane font toujours baisser le dollar, comme l'illustre l'épisode de 2025 et celui de 2018"
+          "text": "Les droits de douane font baisser le dollar dans la durée, comme l'illustre l'épisode de 2025, celui de 2018 n'étant qu'une exception passagère"
         },
         {
           "id": "d",
@@ -229,6 +231,5 @@
       ]
     }
   ],
-  "revision": 2,
-  "passRule": "7 bonnes réponses sur 8 (seuil pédagogique provisoire)"
+  "revision": 3
 }

@@ -1,7 +1,9 @@
 {
   "lessonId": "L1.10",
   "title": "Quiz — Commerce extérieur et flux de capitaux",
-  "passThreshold": 0.8,
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
   "note": "8 questions ; seuil 7/8. Sources : BEA (6/10/2026 et 24/09/2026), NBER 21813, résumés automatiques.",
   "questions": [
     {

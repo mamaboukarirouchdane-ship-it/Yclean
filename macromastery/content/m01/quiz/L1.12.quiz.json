@@ -1,7 +1,9 @@
 {
   "lessonId": "L1.12",
   "title": "Quiz — Tableau de bord macro d'un pays",
-  "passThreshold": 0.8,
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
   "note": "8 questions ; seuil 7/8. Synthèse du module 1 ; données des leçons L1.01–L1.11.",
   "questions": [
     {

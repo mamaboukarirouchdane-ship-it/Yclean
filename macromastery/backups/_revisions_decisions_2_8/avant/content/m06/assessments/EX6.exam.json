@@ -1,0 +1,823 @@
+{
+  "examId": "EX6",
+  "module": 6,
+  "title": "Examen du module 6 — Anticipations et réactions des marchés",
+  "durationMinutes": 120,
+  "passThreshold": 0.7,
+  "note": "25 QCM (1 point) + 5 calculs (3 points) + 2 cas fictifs à analyser (10 points chacun) = 60 points ; seuil de réussite 42/60. Les données sont fictives (SIMULATION) sauf mention contraire.",
+  "questions": [
+    {
+      "id": "EX6-Q1",
+      "type": "mcq",
+      "prompt": "Dans la forme semi-forte de l'efficience, les prix reflètent :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Même l'information privée"
+        },
+        {
+          "id": "b",
+          "text": "Seulement les prix passés"
+        },
+        {
+          "id": "c",
+          "text": "Toute l'information publique disponible"
+        },
+        {
+          "id": "d",
+          "text": "Aucune information"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La forme faible ne concerne que les prix passés, la forme forte inclut l'information privée.",
+      "tags": [
+        "efficience"
+      ]
+    },
+    {
+      "id": "EX6-Q2",
+      "type": "mcq",
+      "prompt": "« Acheter la rumeur, vendre l'information » est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un adage non démontré, jamais une règle"
+        },
+        {
+          "id": "b",
+          "text": "Une loi de marché"
+        },
+        {
+          "id": "c",
+          "text": "Une obligation réglementaire"
+        },
+        {
+          "id": "d",
+          "text": "Une règle de la Fed"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le cours le teste comme hypothèse avec des fenêtres fixées d'avance ; la réaction dépend de ce qui était anticipé.",
+      "tags": [
+        "adage"
+      ]
+    },
+    {
+      "id": "EX6-Q3",
+      "type": "mcq",
+      "prompt": "Quelle différence entre « publié » et « attendu » ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le publié est une prévision"
+        },
+        {
+          "id": "b",
+          "text": "Aucune"
+        },
+        {
+          "id": "c",
+          "text": "L'attendu est observé"
+        },
+        {
+          "id": "d",
+          "text": "Le publié est observé ; l'attendu est le consensus ou le prix de marché avant publication"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La surprise = publié − attendu ; sans consensus daté, aucune surprise ne se calcule.",
+      "tags": [
+        "surprise"
+      ]
+    },
+    {
+      "id": "EX6-Q4",
+      "type": "mcq",
+      "prompt": "Le prix d'un contrat à 30 jours sur les fonds fédéraux se lit :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le taux moyen attendu du mois"
+        },
+        {
+          "id": "b",
+          "text": "100 moins le taux moyen attendu du mois"
+        },
+        {
+          "id": "c",
+          "text": "La probabilité de hausse"
+        },
+        {
+          "id": "d",
+          "text": "Le taux directeur actuel"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Un prix de 96,94 signifie un taux moyen attendu de 3,06 %.",
+      "tags": [
+        "zq"
+      ]
+    },
+    {
+      "id": "EX6-Q5",
+      "type": "mcq",
+      "prompt": "La méthode d'un outil comme FedWatch suppose notamment :",
+      "options": [
+        {
+          "id": "a",
+          "text": "La connaissance de la décision"
+        },
+        {
+          "id": "b",
+          "text": "Des variations quelconques"
+        },
+        {
+          "id": "c",
+          "text": "Aucune hypothèse"
+        },
+        {
+          "id": "d",
+          "text": "Des variations par pas de 25 pb et une réaction proportionnelle du taux effectif"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Les hypothèses (pas de 25 pb, taux plancher, calendrier régulier) limitent la portée du résultat.",
+      "tags": [
+        "fedwatch"
+      ]
+    },
+    {
+      "id": "EX6-Q6",
+      "type": "mcq",
+      "prompt": "Une probabilité de marché de 84 % de hausse est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une fréquence historique"
+        },
+        {
+          "id": "b",
+          "text": "Une certitude"
+        },
+        {
+          "id": "c",
+          "text": "Une probabilité implicite, issue de prix, avec primes de risque et hypothèses"
+        },
+        {
+          "id": "d",
+          "text": "Une décision officielle"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Elle diffère d'une probabilité subjective, historique ou de modèle ; elle peut bouger (88 % → 84 % en une semaine).",
+      "tags": [
+        "implicite"
+      ]
+    },
+    {
+      "id": "EX6-Q7",
+      "type": "mcq",
+      "prompt": "Quelles sont les quatre notions de probabilité de L6.05 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Subjective, historique, de modèle, implicite de marché"
+        },
+        {
+          "id": "b",
+          "text": "Faible, moyenne, forte, certaine"
+        },
+        {
+          "id": "c",
+          "text": "Nominale, réelle, relative, absolue"
+        },
+        {
+          "id": "d",
+          "text": "Passée, présente, future, nulle"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Elles ne sont pas interchangeables et chacune a ses propres risques.",
+      "tags": [
+        "notions"
+      ]
+    },
+    {
+      "id": "EX6-Q8",
+      "type": "mcq",
+      "prompt": "Dans une exploration d'asymétries, la valeur-p exacte minimale avec cinq observations est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,05"
+        },
+        {
+          "id": "b",
+          "text": "0,20"
+        },
+        {
+          "id": "c",
+          "text": "0,01"
+        },
+        {
+          "id": "d",
+          "text": "0,001"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Avec cinq cas, au plus cinq permutations : aucune conclusion statistique forte n'est possible.",
+      "tags": [
+        "permutation"
+      ]
+    },
+    {
+      "id": "EX6-Q9",
+      "type": "mcq",
+      "prompt": "Un régime A/B/C/D/M est construit à partir de :",
+      "options": [
+        {
+          "id": "a",
+          "text": "D'un avis d'analyste"
+        },
+        {
+          "id": "b",
+          "text": "Du rendement ultérieur de l'or"
+        },
+        {
+          "id": "c",
+          "text": "Seuils de percentiles sur des variables antérieures, plus un état mixte"
+        },
+        {
+          "id": "d",
+          "text": "Du prix de l'or seul"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La construction doit être reproductible et non circulaire.",
+      "tags": [
+        "regimes"
+      ]
+    },
+    {
+      "id": "EX6-Q10",
+      "type": "mcq",
+      "prompt": "Que signifie un état « indéterminé » pour le dollar ou le risque ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les données lues ne permettent pas de trancher ; on le traite comme un état possible"
+        },
+        {
+          "id": "b",
+          "text": "Le dollar est stable"
+        },
+        {
+          "id": "c",
+          "text": "Le risque est nul"
+        },
+        {
+          "id": "d",
+          "text": "L'or monte"
+        }
+      ],
+      "correct": "a",
+      "explanation": "L'incertitude est reconnue, pas remplacée par une valeur inventée.",
+      "tags": [
+        "indetermine"
+      ]
+    },
+    {
+      "id": "EX6-Q11",
+      "type": "mcq",
+      "prompt": "La loi des probabilités totales sert à :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Calculer le score de Brier"
+        },
+        {
+          "id": "b",
+          "text": "Prédire la direction de l'or"
+        },
+        {
+          "id": "c",
+          "text": "Supprimer l'incertitude"
+        },
+        {
+          "id": "d",
+          "text": "Passer de probabilités conditionnelles à une probabilité globale sur des états non observés"
+        }
+      ],
+      "correct": "d",
+      "explanation": "P(A) = Σ P(A | Bᵢ) P(Bᵢ) ; elle borne l'effet d'une inconnue.",
+      "tags": [
+        "totales"
+      ]
+    },
+    {
+      "id": "EX6-Q12",
+      "type": "mcq",
+      "prompt": "Quelle est la plage du score de Brier multiclasse original ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "De 0 à 1 seulement"
+        },
+        {
+          "id": "b",
+          "text": "De 0 à 2"
+        },
+        {
+          "id": "c",
+          "text": "De −1 à 1"
+        },
+        {
+          "id": "d",
+          "text": "De 0 à 100"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La forme binaire courante va de 0 à 1 ; la forme originale à plusieurs classes va de 0 à 2.",
+      "tags": [
+        "brier"
+      ]
+    },
+    {
+      "id": "EX6-Q13",
+      "type": "mcq",
+      "prompt": "Pourquoi 12 prévisions ne suffisent-elles pas à juger une calibration ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que les prévisions sont fausses"
+        },
+        {
+          "id": "b",
+          "text": "Parce que 12 est impair"
+        },
+        {
+          "id": "c",
+          "text": "Parce que le Brier est interdit"
+        },
+        {
+          "id": "d",
+          "text": "Le bruit d'échantillonnage domine"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Chaque classe contient trop peu de cas pour distinguer calibration et hasard.",
+      "tags": [
+        "calibration"
+      ]
+    },
+    {
+      "id": "EX6-Q14",
+      "type": "mcq",
+      "prompt": "Que mesure l'indice GVZ de Cboe ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La volatilité passée"
+        },
+        {
+          "id": "b",
+          "text": "Le prix de l'or"
+        },
+        {
+          "id": "c",
+          "text": "La volatilité attendue de l'or sur 30 jours, déduite d'options sur GLD"
+        },
+        {
+          "id": "d",
+          "text": "Le dollar"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Il applique la méthode du VIX aux options sur le fonds GLD (source secondaire).",
+      "tags": [
+        "gvz"
+      ]
+    },
+    {
+      "id": "EX6-Q15",
+      "type": "mcq",
+      "prompt": "Une volatilité implicite est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un prix d'options mêlant anticipation et prime de risque"
+        },
+        {
+          "id": "b",
+          "text": "Une volatilité observée"
+        },
+        {
+          "id": "c",
+          "text": "Une prévision exacte"
+        },
+        {
+          "id": "d",
+          "text": "Un taux directeur"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Elle n'est pas la volatilité future.",
+      "tags": [
+        "vi"
+      ]
+    },
+    {
+      "id": "EX6-Q16",
+      "type": "mcq",
+      "prompt": "Quel est l'effet d'un jour d'événement dans la fenêtre de calcul d'une volatilité ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aucun"
+        },
+        {
+          "id": "b",
+          "text": "Il peut relever sensiblement l'écart-type ; il faut dire s'il est inclus"
+        },
+        {
+          "id": "c",
+          "text": "Il l'abaisse"
+        },
+        {
+          "id": "d",
+          "text": "Il la rend nulle"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Dans l'exemple fictif, un seul jour à −2,0 % relève l'écart-type de la fenêtre d'environ 12 %.",
+      "tags": [
+        "fenetre"
+      ]
+    },
+    {
+      "id": "EX6-Q17",
+      "type": "mcq",
+      "prompt": "Volatilité et tendance sont-elles la même chose ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La tendance est une volatilité"
+        },
+        {
+          "id": "b",
+          "text": "Oui"
+        },
+        {
+          "id": "c",
+          "text": "Non : la volatilité mesure l'amplitude, la tendance un déplacement persistant"
+        },
+        {
+          "id": "d",
+          "text": "La volatilité implique la hausse"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Une séance très volatile peut se terminer sans mouvement net.",
+      "tags": [
+        "tendance"
+      ]
+    },
+    {
+      "id": "EX6-Q18",
+      "type": "mcq",
+      "prompt": "Le slippage est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'écart entre prix visé et prix d'exécution"
+        },
+        {
+          "id": "b",
+          "text": "Le taux directeur"
+        },
+        {
+          "id": "c",
+          "text": "Une taxe"
+        },
+        {
+          "id": "d",
+          "text": "Un indicateur d'emploi"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Autour des publications, le slippage et les gaps augmentent le risque d'exécution.",
+      "tags": [
+        "slippage"
+      ]
+    },
+    {
+      "id": "EX6-Q19",
+      "type": "mcq",
+      "prompt": "Que montre le cas de la BRI d'août 2024 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que la Fed a baissé les taux"
+        },
+        {
+          "id": "b",
+          "text": "Une tendance haussière durable"
+        },
+        {
+          "id": "c",
+          "text": "Que l'or a toujours monté"
+        },
+        {
+          "id": "d",
+          "text": "Une amplitude exceptionnelle (VIX > 60 puis < 40) suivie d'un retour rapide"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La BRI ne désigne pas une cause unique et note une récupération en moins d'une semaine.",
+      "tags": [
+        "bis"
+      ]
+    },
+    {
+      "id": "EX6-Q20",
+      "type": "mcq",
+      "prompt": "Fed, 28/10/2026 : quelle décision et quel vote ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hausse de ¼, unanimité"
+        },
+        {
+          "id": "b",
+          "text": "Maintien à 3¾–4 %, 10 voix contre 2"
+        },
+        {
+          "id": "c",
+          "text": "Baisse de ¼"
+        },
+        {
+          "id": "d",
+          "text": "Maintien, unanimité"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Cook et Hammack préféraient une hausse de ¼ (communiqué officiel, résumé automatique).",
+      "tags": [
+        "fed2810"
+      ]
+    },
+    {
+      "id": "EX6-Q21",
+      "type": "mcq",
+      "prompt": "Fed, 16/09/2026 : quelle décision ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hausse de ½"
+        },
+        {
+          "id": "b",
+          "text": "Maintien, 9–3"
+        },
+        {
+          "id": "c",
+          "text": "Baisse de ¼"
+        },
+        {
+          "id": "d",
+          "text": "Hausse de ¼ à 3¾–4 %, 12 voix contre 0"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le communiqué ne donne aucun guidage explicite sur la suite.",
+      "tags": [
+        "fed1609"
+      ]
+    },
+    {
+      "id": "EX6-Q22",
+      "type": "mcq",
+      "prompt": "Dans les cas de L6.07, la hausse du 16/09 a été suivie d'une variation de séance de l'or de :",
+      "options": [
+        {
+          "id": "a",
+          "text": "+10 %"
+        },
+        {
+          "id": "b",
+          "text": "−5 %"
+        },
+        {
+          "id": "c",
+          "text": "+0,38 % (source secondaire, avec titres incohérents)"
+        },
+        {
+          "id": "d",
+          "text": "0,00 % exactement"
+        }
+      ],
+      "correct": "c",
+      "explanation": "H1 (« hausse ⇒ or en baisse ») est contredite dans ce cas, sans preuve de la règle inverse.",
+      "tags": [
+        "cas"
+      ]
+    },
+    {
+      "id": "EX6-Q23",
+      "type": "mcq",
+      "prompt": "Pourquoi le cas BCE du 29/10 sert-il surtout à la méthode ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aucune réaction de marché ni probabilité de la veille n'a été lue"
+        },
+        {
+          "id": "b",
+          "text": "La BCE n'a pas décidé"
+        },
+        {
+          "id": "c",
+          "text": "L'euro n'a pas bougé"
+        },
+        {
+          "id": "d",
+          "text": "L'or a monté"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Seule la décision (maintien à 2,50 %) et des attentes qualitatives ont été obtenues.",
+      "tags": [
+        "bce"
+      ]
+    },
+    {
+      "id": "EX6-Q24",
+      "type": "mcq",
+      "prompt": "Une note d'analyse du 31/10 cite une donnée du 5/11. Que faire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'ajouter discrètement"
+        },
+        {
+          "id": "b",
+          "text": "Considérer la note invalide pour cette partie ; créer une nouvelle version"
+        },
+        {
+          "id": "c",
+          "text": "Changer la date"
+        },
+        {
+          "id": "d",
+          "text": "Ignorer"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Une mise à jour est une nouvelle fiche, jamais une retouche de l'ancienne.",
+      "tags": [
+        "chrono"
+      ]
+    },
+    {
+      "id": "EX6-Q25",
+      "type": "mcq",
+      "prompt": "Un scénario alternatif défendable est-il un signal de trading ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui si contrarien"
+        },
+        {
+          "id": "b",
+          "text": "Oui"
+        },
+        {
+          "id": "c",
+          "text": "Non : pertinent n'implique ni le plus probable ni une espérance positive nette"
+        },
+        {
+          "id": "d",
+          "text": "Oui si inférieur à 10 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "L'atelier montre une valeur nette négative à 84 % et quasi nulle à 70 %.",
+      "tags": [
+        "alternatif"
+      ]
+    }
+  ],
+  "calculations": [
+    {
+      "id": "EX6-K1",
+      "type": "calc",
+      "prompt": "Surprise monétaire (SIMULATION). Probabilités : maintien 70 %, hausse de 25 pb 30 %. La banque relève de 25 pb. Surprise en points de base (1 décimale) ?",
+      "answer": 17.5,
+      "tolerance": 0.05,
+      "unit": "pb",
+      "solution": "Attendu = 0,30 × 25 = 7,5 pb ; surprise = 25 − 7,5 = 17,5 pb (plus restrictive que prévu).",
+      "tags": [
+        "surprise"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX6-K2",
+      "type": "calc",
+      "prompt": "Taux de début (SIMULATION). Moyenne du mois de réunion 3,70 % ; 15 jours avant et 15 jours après sur 30 ; taux du mois suivant 3,90 %. Variation attendue due à la réunion en points de base (entier) ?",
+      "answer": 40,
+      "tolerance": 0.5,
+      "unit": "pb",
+      "solution": "Début = (3,70 − 0,5 × 3,90) ÷ 0,5 = 3,50 % ; variation = 3,90 − 3,50 = 0,40 point, soit 40 pb (1,6 pas de 25 pb).",
+      "tags": [
+        "demarrage"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX6-K3",
+      "type": "calc",
+      "prompt": "Brier multiclasse (SIMULATION). Probabilités 0,4 / 0,4 / 0,2 ; le premier scénario se réalise. Score (2 décimales) ?",
+      "answer": 0.56,
+      "tolerance": 0.005,
+      "unit": "",
+      "solution": "(0,4 − 1)² + 0,4² + 0,2² = 0,36 + 0,16 + 0,04 = 0,56 ; la référence uniforme à trois classes vaut 0,667.",
+      "tags": [
+        "brier"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX6-K4",
+      "type": "calc",
+      "prompt": "Volatilité annualisée (SIMULATION). Écart-type journalier 0,90 %, convention √252. Volatilité annualisée en % (1 décimale) ?",
+      "answer": 14.3,
+      "tolerance": 0.05,
+      "unit": "%",
+      "solution": "0,90 × 15,8745 = 14,29 % ; la convention suppose l'indépendance des rendements.",
+      "tags": [
+        "annualisation"
+      ],
+      "points": 3
+    },
+    {
+      "id": "EX6-K5",
+      "type": "calc",
+      "prompt": "Probabilité d'équilibre (SIMULATION). Gain 6, perte 4, coût 0,3. Probabilité d'équilibre en % (entier) ?",
+      "answer": 43,
+      "tolerance": 0.5,
+      "unit": "%",
+      "solution": "p* = (4 + 0,3) ÷ (6 + 4) = 0,43 : valeur nette nulle à 43 %.",
+      "tags": [
+        "equilibre"
+      ],
+      "points": 3
+    }
+  ],
+  "analyses": [
+    {
+      "id": "EX6-A1",
+      "type": "analysis",
+      "title": "Publication, surprise et séance de l'or (SIMULATION)",
+      "material": "Année fictive. Inflation de base mensuelle : consensus 0,3 % ; publiée 0,5 % ; écart-type historique des surprises 0,10 point. Probabilité implicite de hausse à la prochaine réunion (hausse = 25 pb) : 60 % avant la publication, 80 % après. Or : 4 000 $ avant la publication ; variation de séance −1,2 %. Dollar et taux réels : non observés.",
+      "tasks": [
+        "Calcule la surprise de l'inflation et sa valeur standardisée.",
+        "Calcule la variation de la probabilité de hausse et de l'attente de taux (en pb).",
+        "Calcule la variation de séance de l'or en dollars.",
+        "Rédige deux phrases d'interprétation en distinguant ce qui est observé, calculé, hypothétique, et dis pourquoi la séance ne prouve pas la causalité.",
+        "Cite deux limites des données fournies."
+      ],
+      "expectedElements": [
+        "Surprise = 0,5 − 0,3 = +0,2 point ; standardisée = 0,2 ÷ 0,10 = 2,0",
+        "Probabilité : 80 − 60 = +20 points ; attente de taux : +0,20 × 25 = +5 pb",
+        "Variation de l'or : 4 000 × (−1,2 %) = −48 $, soit 3 952 $",
+        "Interprétation : l'inflation de base a dépassé le consensus de 2 écarts-types ; les attentes de hausse ont augmenté de 5 pb ; la séance de l'or a baissé de 1,2 % ; la séance n'isole pas l'annonce et d'autres informations ont pu jouer ; le dollar et les taux réels ne sont pas observés (aucune causalité démontrée)",
+        "Limites : variation de séance (non fenêtre fixe), dollar et taux réels non observés, un seul événement"
+      ],
+      "points": 10
+    },
+    {
+      "id": "EX6-A2",
+      "type": "analysis",
+      "title": "Audit d'une note de scénarios (SIMULATION)",
+      "material": "Note datée du 12 mars (année fictive). Scénarios à trois mois : hausse +2,0 % (45 %), stabilité 0,0 % (35 %), baisse −3,0 % (25 %). Coûts de transaction : 0,2 %. La note cite une donnée « publiée le 14 mars ». Le scénario de baisse se réalise.",
+      "tasks": [
+        "Vérifie la somme des probabilités et corrige-la en retirant l'excédent du premier scénario.",
+        "Calcule l'espérance après correction, puis la valeur nette de coûts.",
+        "Identifie le défaut de chronologie et dis comment le traiter.",
+        "Calcule le score de Brier multiclasse (baisse réalisée) et compare-le à la référence uniforme.",
+        "Dis si la note justifie une position."
+      ],
+      "expectedElements": [
+        "Somme = 45 + 35 + 25 = 105 % ; correction : 40 / 35 / 25 = 100 %",
+        "Espérance = 0,40 × 2,0 + 0,35 × 0 + 0,25 × (−3,0) = 0,80 − 0,75 = +0,05 % ; nette = 0,05 − 0,2 = −0,15 %",
+        "La donnée du 14 mars est postérieure de 2 jours à la note du 12 mars : elle est inutilisable pour cette version ; une nouvelle version datée peut l'intégrer",
+        "Brier = 0,40² + 0,35² + (0,25 − 1)² = 0,16 + 0,1225 + 0,5625 = 0,845, contre 0,667 pour la référence uniforme ; une issue unique ne juge pas une calibration",
+        "Non : l'espérance nette est négative (−0,15 %) et la note contient un défaut de chronologie ; aucune position n'en découle"
+      ],
+      "points": 10
+    }
+  ],
+  "totalPoints": 60,
+  "revision": 1
+}

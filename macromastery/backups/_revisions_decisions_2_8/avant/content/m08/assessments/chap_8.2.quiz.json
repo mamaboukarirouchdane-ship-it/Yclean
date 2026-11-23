@@ -1,0 +1,186 @@
+{
+  "chapterId": "8.2",
+  "module": 8,
+  "title": "Quiz de chapitre 8.2 — Chocs et canaux : sanctions, élections, commerce (L8.02–L8.04)",
+  "passThreshold": 0.8333333333333334,
+  "passRule": "5 bonnes réponses sur 6 (seuil pédagogique provisoire)",
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C8.2-Q1",
+      "type": "mcq",
+      "prompt": "L'OFAC signe la directive 3 le 24/02/2022 ; la nouvelle dette de plus de 14 jours est visée à partir du 26/03/2022 pour les 13 entités de l'annexe 1. Quel délai sépare signature et application ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "7 jours : le délai habituel d'entrée en vigueur d'une directive de l'OFAC"
+        },
+        {
+          "id": "b",
+          "text": "60 jours : le double du délai de 30 jours de l'annexe 1"
+        },
+        {
+          "id": "c",
+          "text": "14 jours : la maturité maximale de la dette visée par la directive"
+        },
+        {
+          "id": "d",
+          "text": "30 jours : 24/02 → 26/03/2022, 2022 n'étant pas bissextile"
+        }
+      ],
+      "correct": "d",
+      "explanation": "24/02 → 26/03/2022 = 30 jours (2022 n'est pas bissextile). Le seuil de 14 jours concerne la maturité de la dette visée, pas le délai d'application : signature, application et effet observé sont trois étapes distinctes.",
+      "tags": [
+        "sanctions",
+        "calendrier"
+      ]
+    },
+    {
+      "id": "C8.2-Q2",
+      "type": "mcq",
+      "prompt": "SIMULATION : avant une élection fictive, le marché donne 40 % au résultat A (or à 1 950 $) et 60 % au résultat B (or à 2 050 $). Quel prix espéré en résulte, et que se passe-t-il à la proclamation de A ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "2 000 $ ; −2,5 % : l'espérance est la moyenne simple des deux issues"
+        },
+        {
+          "id": "b",
+          "text": "2 010 $ ; −2,99 % : c'est la surprise relative à l'espérance, pas à la veille"
+        },
+        {
+          "id": "c",
+          "text": "2 010 $ ; +1,99 % : la proclamation de A fait monter l'or vers 2 050 $"
+        },
+        {
+          "id": "d",
+          "text": "1 950 $ ; aucune variation : l'issue A est déjà entièrement intégrée au prix de la veille"
+        }
+      ],
+      "correct": "b",
+      "explanation": "0,4 × 1 950 + 0,6 × 2 050 = 2 010 ; 1 950 / 2 010 − 1 = −2,99 %. Modèle jouet à deux issues : il montre que la variation vient de l'écart au prix attendu, non du résultat seul. Les chiffres sont fictifs.",
+      "tags": [
+        "election",
+        "surprise",
+        "simulation"
+      ]
+    },
+    {
+      "id": "C8.2-Q3",
+      "type": "mcq",
+      "prompt": "Un droit annoncé de 25 % ne s'applique qu'à 40 % des importations d'un pays. Quel taux moyen approximatif sur l'ensemble des importations, toutes choses égales par ailleurs ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 40 % : le taux moyen est égal à la part des importations concernées"
+        },
+        {
+          "id": "b",
+          "text": "≈ 65 % : on additionne le taux annoncé et la part des importations concernées"
+        },
+        {
+          "id": "c",
+          "text": "≈ 25 % : le taux annoncé s'applique à toutes les importations du pays"
+        },
+        {
+          "id": "d",
+          "text": "≈ 10 % : 25 % × 40 % des importations"
+        }
+      ],
+      "correct": "d",
+      "explanation": "0,25 × 0,40 = 0,10. Le taux annoncé n'est pas le taux effectif : couverture, exemptions et suspensions les séparent. Le calcul suppose une valeur d'importation inchangée.",
+      "tags": [
+        "tarifs",
+        "taux_effectif"
+      ]
+    },
+    {
+      "id": "C8.2-Q4",
+      "type": "mcq",
+      "prompt": "Fixings LBMA du matin : 3 002,70 $ (08/04/2025) et 3 454,70 $ (22/04/2025). Quelle est la variation, et pourquoi le calcul est-il admis ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ +15,1 % ; on peut mélanger les fixings du matin et de l'après-midi"
+        },
+        {
+          "id": "b",
+          "text": "≈ +13,0 % ; il faut utiliser le comptant plutôt que le fixing du matin"
+        },
+        {
+          "id": "c",
+          "text": "≈ +15,1 % ; même instrument, même horaire de fixing"
+        },
+        {
+          "id": "d",
+          "text": "Aucun calcul n'est possible entre deux dates distinctes de deux semaines"
+        }
+      ],
+      "correct": "c",
+      "explanation": "3 454,70 / 3 002,70 − 1 = 0,1505. La règle du chapitre : un rendement se calcule entre deux valeurs du même instrument et du même horaire ; ce chiffre mesure une variation, il n'établit aucune cause (mesure tarifaire, autres facteurs non isolés).",
+      "tags": [
+        "rendement",
+        "bases"
+      ]
+    },
+    {
+      "id": "C8.2-Q5",
+      "type": "mcq",
+      "prompt": "Le LBMA donne un plus haut 2025 de 4 481,85 $ (tableau) et de 4 338,25 $ (texte). Quel traitement respecte la méthode du chapitre ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Conserver les deux valeurs, signaler l'anomalie et ne calculer aucun rendement dépendant du choix sans le dire"
+        },
+        {
+          "id": "b",
+          "text": "Retenir la valeur la plus élevée, parce que la plus récente publication la corrige"
+        },
+        {
+          "id": "c",
+          "text": "Faire la moyenne des deux valeurs pour réduire l'erreur de saisie probable"
+        },
+        {
+          "id": "d",
+          "text": "Retenir la valeur la plus basse par prudence dans le calcul des rendements"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Choisir arbitrairement une valeur ou les fusionner masque une contradiction de source. L'anomalie reste au registre ; un calcul peut être présenté avec chaque valeur, étiquetée.",
+      "tags": [
+        "anomalie",
+        "sources"
+      ]
+    },
+    {
+      "id": "C8.2-Q6",
+      "type": "mcq",
+      "prompt": "L'or baisse de 2,8 % le lendemain d'une élection, ou monte après une annonce tarifaire. Que peut-on conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'événement est la cause du mouvement, puisque la séquence des dates est établie"
+        },
+        {
+          "id": "b",
+          "text": "Une corrélation temporelle seulement ; la cause exige des canaux observables et l'examen des facteurs concurrents"
+        },
+        {
+          "id": "c",
+          "text": "L'événement n'a aucun effet sur l'or, puisque le mouvement n'a pas été anticipé"
+        },
+        {
+          "id": "d",
+          "text": "Le marché de l'or est irrationnel quand il réagit le lendemain d'un événement"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Règle commune de L8.03 et L8.04 : une variation après un événement ne prouve pas que l'événement en est la cause. Il faut la chaîne événement → canal → variable observée, la mesure de la surprise et l'examen des facteurs concurrents (Fed, dollar, taux, flux).",
+      "tags": [
+        "causalite",
+        "regle"
+      ]
+    }
+  ],
+  "revision": 2
+}

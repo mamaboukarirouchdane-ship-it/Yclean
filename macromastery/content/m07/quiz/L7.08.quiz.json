@@ -2,6 +2,8 @@
   "lessonId": "L7.08",
   "title": "Quiz — Atelier : un indicateur COT",
   "passThreshold": 0.8,
+  "requiredCorrect": 8,
+  "passRule": "8 bonnes réponses sur 10 (règle R1 : ⌈0,8 × 10⌉ = 8 ; seuil pédagogique provisoire)",
   "note": "Seuil 80 % (8 sur 10)",
   "questions": [
     {

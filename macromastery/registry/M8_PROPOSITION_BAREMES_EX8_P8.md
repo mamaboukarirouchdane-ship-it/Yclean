@@ -2,6 +2,8 @@
 
 Date : 31/10/2026. **Ces propositions ne modifient ni `EX8.exam.json` ni `P8.projet.mdx`.** Elles attendent ta décision. Les durées de 120 minutes (EX8) et de 8 heures (P8) restent **provisoires** jusqu'à un essai chronométré. Calculs refaits par script dans la session ; barèmes et seuils sont des choix pédagogiques à valider, non des résultats scientifiques.
 
+> **Mise à jour du 23/11/2026 — décision 4 = B : propositions appliquées.** EX8 révision 3 (barème v2, pondération par tâche, minima A 10/20, D 8/15, F 8/15, règles de correction) et P8 (cinq catégories plafonnées, plafond global −25, note plancher 0, minima A 9, G 8, H 8 sur 15). Cohérence arithmétique contrôlée par `tools/verify_baremes_ex8_p8.py`. Les durées restent des hypothèses (décision 5 : `registry/M8_PROTOCOLE_ESSAIS_CHRONOMETRES.md`). Le texte ci-dessous est la proposition d'origine, conservée telle quelle.
+
 ## 1. EX8 — constat et objectif
 
 Barème actuel : 18 QCM × 2 = 36 ; 5 calculs × 3 = 15 ; 6 analyses = 49. Parties objectives : 51/100, analyses : 49 %. Pour atteindre 70 avec des parties objectives parfaites, il suffit de **19/49 (39 %)** aux analyses ; un candidat au hasard aux QCM obtient en moyenne 9 points. Les compétences d'analyse (qualification, canaux, régimes, horizons, crises, décision) sont le cœur du module et pèsent trop peu.

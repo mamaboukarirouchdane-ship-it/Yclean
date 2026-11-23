@@ -1,7 +1,9 @@
 {
   "lessonId": "L0.01",
   "title": "Quiz — Les marchés financiers et leur rôle",
-  "passThreshold": 0.8,
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
   "note": "Chiffres des questions de calcul : SIMULATION. Quiz inchangé (8 questions, seuil 7/8) : les révisions 4 et 5 de la leçon (sources et tableau forward/future, exercice 7) n'ont pas modifié ce quiz.",
   "questions": [
     {

@@ -1,0 +1,235 @@
+{
+  "lessonId": "L5.04",
+  "title": "Quiz — L'or et le dollar",
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
+  "note": "Seuil : 7 bonnes réponses sur 8.",
+  "questions": [
+    {
+      "id": "L5.04-Q1",
+      "type": "mcq",
+      "prompt": "Pourquoi un dollar plus fort tend-il, toutes choses égales par ailleurs, à peser sur l'or ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que l'or paie un coupon en dollars"
+        },
+        {
+          "id": "b",
+          "text": "Parce que l'or est émis par la Réserve fédérale"
+        },
+        {
+          "id": "c",
+          "text": "L'or est coté en dollars : il devient plus cher pour les acheteurs détenant une autre monnaie"
+        },
+        {
+          "id": "d",
+          "text": "Parce que l'or est indexé sur le DXY"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le mécanisme direct passe par le prix en monnaie locale ; il n'est pas absolu (« not ironclad »).",
+      "tags": [
+        "mecanisme"
+      ]
+    },
+    {
+      "id": "L5.04-Q2",
+      "type": "mcq",
+      "prompt": "XAU/USD de 4 000 à 4 100 et EUR/USD de 1,10 à 1,15 (fictif) : variation de l'or en euros ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ −1,96 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ +2,5 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ +4,55 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ +7,1 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "4 000/1,10 = 3 636,36 € ; 4 100/1,15 = 3 565,22 € ; l'euro gagne 4,55 % contre dollar.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.04-Q3",
+      "type": "mcq",
+      "prompt": "Combien de monnaies composent le DXY, et quelle est la plus lourde (source secondaire) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Six, la livre (≈ 57,6 %)"
+        },
+        {
+          "id": "b",
+          "text": "Trois, le yen"
+        },
+        {
+          "id": "c",
+          "text": "Vingt, le yuan"
+        },
+        {
+          "id": "d",
+          "text": "Six, l'euro (≈ 57,6 %)"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le DXY est une moyenne géométrique de six monnaies, dominée par l'euro selon l'article de courtier lu.",
+      "tags": [
+        "dxy"
+      ]
+    },
+    {
+      "id": "L5.04-Q4",
+      "type": "mcq",
+      "prompt": "Un indice du dollar baisse de 10,8 %. Pour une monnaie unique opposée, la hausse en dollars est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "+10,8 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ +12,1 %"
+        },
+        {
+          "id": "c",
+          "text": "+8,9 %"
+        },
+        {
+          "id": "d",
+          "text": "+1,08 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "1/(1 − 0,108) − 1 = 12,1 % : une baisse de x % n'est pas une hausse de x % de la monnaie opposée.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.04-Q5",
+      "type": "mcq",
+      "prompt": "Indice large du dollar : 121,3248 (19/10/2026) et 121,3202 (23/10/2026). Que peut-on dire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il a fait +10 %"
+        },
+        {
+          "id": "b",
+          "text": "Il a fortement chuté"
+        },
+        {
+          "id": "c",
+          "text": "Il explique la baisse de l'or"
+        },
+        {
+          "id": "d",
+          "text": "Il est quasi inchangé (−0,004 %) ; sans prix de l'or lus sur ces jours, aucun lien ne peut être affirmé"
+        }
+      ],
+      "correct": "d",
+      "explanation": "121,3202/121,3248 − 1 = −0,004 % ; les prix de l'or de la semaine n'ont pas été lus.",
+      "tags": [
+        "donnees"
+      ]
+    },
+    {
+      "id": "L5.04-Q6",
+      "type": "mcq",
+      "prompt": "Quel épisode montre que dollar et or peuvent monter ensemble ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Premier semestre 2025"
+        },
+        {
+          "id": "b",
+          "text": "2022 (hausses de taux de la Fed)"
+        },
+        {
+          "id": "c",
+          "text": "Mars 2020 (début de la pandémie, refuge)"
+        },
+        {
+          "id": "d",
+          "text": "Aucun"
+        }
+      ],
+      "correct": "c",
+      "explanation": "En mars 2020, l'or et le dollar ont brièvement monté ensemble par recherche de refuge selon l'article de courtier.",
+      "tags": [
+        "exception"
+      ]
+    },
+    {
+      "id": "L5.04-Q7",
+      "type": "mcq",
+      "prompt": "Qu'est-ce qu'un facteur commun dans la relation or-dollar ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une cause unique agissant sur les deux séries, comme des taux réels américains plus élevés"
+        },
+        {
+          "id": "b",
+          "text": "Une corrélation parfaite"
+        },
+        {
+          "id": "c",
+          "text": "Un indice du dollar"
+        },
+        {
+          "id": "d",
+          "text": "Un prix officiel de l'or"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Des taux réels en hausse peuvent faire monter le dollar et baisser l'or : la corrélation reflète en partie la même cause.",
+      "tags": [
+        "facteur"
+      ]
+    },
+    {
+      "id": "L5.04-Q8",
+      "type": "mcq",
+      "prompt": "Dans la simulation 4.6, pourquoi la relation or-dollar change-t-elle de signe selon les scénarios ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que les probabilités sont fausses"
+        },
+        {
+          "id": "b",
+          "text": "Le signe dépend du choc (taux réels en A et C, refuge en B), pas d'une règle fixe"
+        },
+        {
+          "id": "c",
+          "text": "Parce que l'or n'a pas de prix"
+        },
+        {
+          "id": "d",
+          "text": "Parce que le dollar est fixe"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Nommer le choc avant d'attribuer : un choc de refuge fait monter les deux, un choc de taux réels les oppose.",
+      "tags": [
+        "scenario"
+      ]
+    }
+  ],
+  "revision": 1
+}

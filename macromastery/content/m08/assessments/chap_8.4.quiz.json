@@ -3,7 +3,8 @@
   "module": 8,
   "title": "Quiz de chapitre 8.4 — Crises financières et décision (L8.07–L8.08)",
   "passThreshold": 0.8333333333333334,
-  "passRule": "5 bonnes réponses sur 6 (seuil pédagogique provisoire)",
+  "requiredCorrect": 5,
+  "passRule": "5 bonnes réponses sur 6 (règle R1 : ⌈0,8 × 6⌉ = 5 ; seuil pédagogique provisoire)",
   "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
   "questions": [
     {
@@ -99,7 +100,7 @@
       "options": [
         {
           "id": "a",
-          "text": "Une citation exacte du discours et un effet mesuré sur les rendements souverains"
+          "text": "Une citation exacte du discours, la date du 27/07 et un effet mesuré sur les rendements souverains italiens et espagnols les jours suivants"
         },
         {
           "id": "b",
@@ -107,7 +108,7 @@
         },
         {
           "id": "c",
-          "text": "Une date unique, le 26/07, confirmée par la page de la BRI consultée"
+          "text": "Une date unique, le 26/07, confirmée par les deux mentions de la page de la BRI et par le texte intégral du discours, lu dans la leçon"
         },
         {
           "id": "d",
@@ -160,15 +161,15 @@
         },
         {
           "id": "b",
-          "text": "+1 % ; la décision est robuste car l'espérance reste positive après un déplacement de probabilités"
+          "text": "+1 % ; la décision est robuste car l'espérance reste positive après un déplacement de 10 points de probabilité de A vers C"
         },
         {
           "id": "c",
-          "text": "−0,1 % ; la décision est robuste car le scénario central domine après un déplacement de probabilités"
+          "text": "−0,1 % ; la décision est robuste car le scénario central domine encore après un déplacement de 10 points de probabilité"
         },
         {
           "id": "d",
-          "text": "0 % ; la décision est robuste car les scénarios s'annulent"
+          "text": "0 % ; la décision est robuste car les trois scénarios s'annulent une fois pondérés par leurs probabilités respectives"
         }
       ],
       "correct": "a",
@@ -179,5 +180,5 @@
       ]
     }
   ],
-  "revision": 2
+  "revision": 3
 }

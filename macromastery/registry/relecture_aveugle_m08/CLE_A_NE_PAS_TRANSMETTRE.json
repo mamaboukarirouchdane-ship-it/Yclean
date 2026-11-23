@@ -1,0 +1,426 @@
+{
+  "L8.01-Q1": {
+    "correct": "c",
+    "explanation": "Un événement confirmé est un fait daté, établi par une source primaire ; une déclaration, un risque possible et une hypothèse ne sont pas des faits confirmés."
+  },
+  "L8.01-Q2": {
+    "correct": "a",
+    "explanation": "Le produit probabilité × ampleur est un repère de comparaison, non une prévision ; il ne dit rien des canaux ni de la durée."
+  },
+  "L8.01-Q3": {
+    "correct": "d",
+    "explanation": "1 910 ÷ 1,06 = 1 802 ; avec l'arrondi du rendement la fourchette est 1 793 à 1 810 : c'est un calcul de l'auteur, non une lecture de cotation."
+  },
+  "L8.01-Q4": {
+    "correct": "b",
+    "explanation": "L'indice compte des articles ; il ne donne ni probabilité d'événement, ni ampleur, ni effet sur l'or."
+  },
+  "L8.01-Q5": {
+    "correct": "d",
+    "explanation": "Les deux épisodes montrent des hausses comparables avec des configurations de canaux différentes (ETF entrants contre sortants, rendement à 5 % en 2023)."
+  },
+  "L8.01-Q6": {
+    "correct": "c",
+    "explanation": "Un résidu agrège tout ce que le modèle ne capte pas ; l'attribuer à la géopolitique est une hypothèse."
+  },
+  "L8.01-Q7": {
+    "correct": "a",
+    "explanation": "La règle d'attribution exige un canal vérifié, l'examen des facteurs simultanés et des explications concurrentes ; la coïncidence seule ne suffit pas."
+  },
+  "L8.01-Q8": {
+    "correct": "b",
+    "explanation": "La durée se prouve canal par canal avec des données ; les mois suivants du prix de l'or n'ont pas été lus."
+  },
+  "L8.02-Q1": {
+    "correct": "c",
+    "explanation": "Le texte fixe une date d'effet (26/03/2022, 00 h 01 heure de l'Est) postérieure de 30 jours à la signature ; la dette de 14 jours ou moins n'est pas visée."
+  },
+  "L8.02-Q2": {
+    "correct": "a",
+    "explanation": "Le communiqué ne contient aucun chiffre d'avoirs ; citer un montant serait inventer une donnée."
+  },
+  "L8.02-Q3": {
+    "correct": "d",
+    "explanation": "La règle d'attribution interdit de déduire une cause de la simultanéité ; trois événements coïncident ce jour-là."
+  },
+  "L8.02-Q4": {
+    "correct": "b",
+    "explanation": "1 672 ÷ 1 942 − 1 ≈ −13,9 % ; −19,2 % correspond au repli depuis le plus haut du 8 mars ; −7,4 % est la variation depuis le début de l'année."
+  },
+  "L8.02-Q5": {
+    "correct": "d",
+    "explanation": "Un trimestre ne fait pas une tendance ; le FMI parle d'un mouvement très graduel, et la hausse est en partie liée aux taux de change."
+  },
+  "L8.02-Q6": {
+    "correct": "c",
+    "explanation": "Réserves (valorisation), achats d'or et flux d'ETF sont trois objets distincts ; une hausse de part liée au prix n'indique pas d'achats."
+  },
+  "L8.02-Q7": {
+    "correct": "a",
+    "explanation": "Le WGC cite l'incertitude géopolitique et l'inflation comme raisons de détenir de l'or, mais le rapport inclut une estimation non quantifiée et ne classe pas les sanctions ; la cause reste une hypothèse."
+  },
+  "L8.02-Q8": {
+    "correct": "b",
+    "explanation": "Une conclusion prudente énonce ce qui est observé et ce qui manque ; les trois autres formulations sont trop catégoriques et sans preuve."
+  },
+  "L8.03-Q1": {
+    "correct": "c",
+    "explanation": "Prix avant 1 960 $, après 1 950 $ : −0,51 %. Avec 40 % de chances, la réaction serait de −2,99 % : la surprise fait la réaction, non le résultat."
+  },
+  "L8.03-Q2": {
+    "correct": "a",
+    "explanation": "Le H.R. 1 est introduit le 2/11/2017 et sa dernière action date du 22/12/2017, soit 409 jours après le scrutin de 2016 ; une signature ne dit pas la date d'effet."
+  },
+  "L8.03-Q3": {
+    "correct": "d",
+    "explanation": "La règle de contrôle interdit de déduire la cause de la seule succession temporelle ; deux cas ne font pas une loi."
+  },
+  "L8.03-Q4": {
+    "correct": "b",
+    "explanation": "Une contradiction interne se consigne au registre ; choisir une valeur sans preuve, ou la moyenner, fabrique une donnée. Depuis le plus bas du 06/01/2025 (2 631,80 $) les rendements sont +70,3 % et +64,8 %, deux résultats conservés."
+  },
+  "L8.03-Q5": {
+    "correct": "d",
+    "explanation": "LBMA précise qu'il s'agit d'un fixing du matin ; mélanger fixings, comptant et contrats à terme crée des écarts de base."
+  },
+  "L8.03-Q6": {
+    "correct": "c",
+    "explanation": "Le FMI présente un scénario de référence fondé sur l'information disponible au 4 avril 2025 ; l'écart avec janvier s'explique en partie par les droits de douane et l'incertitude, mais reste une prévision."
+  },
+  "L8.03-Q7": {
+    "correct": "a",
+    "explanation": "Les canaux du dollar et des taux réels peuvent dominer ; LBMA interprète le repli de 2024 comme une aversion des marchés à l'incertitude, ce qui reste une interprétation."
+  },
+  "L8.03-Q8": {
+    "correct": "b",
+    "explanation": "La seule formulation prudente énonce l'observation, ses limites et ce qui manque ; les autres généralisent ou attribuent sans preuve."
+  },
+  "L8.04-Q1": {
+    "correct": "c",
+    "explanation": "Chaque étape a une date et un statut distincts ; en 2025, l'adoption du 2/04 est modifiée le 9/04 puis suspendue en partie le 12/05."
+  },
+  "L8.04-Q2": {
+    "correct": "a",
+    "explanation": "0,25 × 0,40 = 0,10 ; le taux effectif dépend des produits visés, des exemptions et de la composition des importations."
+  },
+  "L8.04-Q3": {
+    "correct": "d",
+    "explanation": "Le FMI révise en juillet en citant le front-loading, un taux effectif plus bas et la trêve avec la Chine ; le résultat de 2025 n'a pas été lu."
+  },
+  "L8.04-Q4": {
+    "correct": "b",
+    "explanation": "3 454,70 ÷ 3 002,70 − 1 ≈ +15,1 % ; mélanger matin, après-midi, comptant ou contrats à terme est interdit."
+  },
+  "L8.04-Q5": {
+    "correct": "d",
+    "explanation": "Reuters rapporte un dollar soutenu en 2018 et une première perte annuelle de l'or depuis 2015 ; en 2025, le FMI note une dépréciation inhabituelle du dollar et LBMA un or à +62,9 %."
+  },
+  "L8.04-Q6": {
+    "correct": "c",
+    "explanation": "LBMA indique que l'exclusion a mis fin à une prime de New York sur Londres ; elle ne dit rien de la valeur de fond."
+  },
+  "L8.04-Q7": {
+    "correct": "a",
+    "explanation": "10 + 20 = 30 % ; avant la pause 125 + 20 = 145 % ; la source est un résumé d'un cabinet d'avocats, le texte complet n'a pas été lu."
+  },
+  "L8.04-Q8": {
+    "correct": "b",
+    "explanation": "La seule formulation prudente énonce l'observation, ses limites et ce qui manque ; les autres généralisent ou attribuent sans preuve."
+  },
+  "L8.05-Q1": {
+    "correct": "c",
+    "explanation": "Le régime décrit ce que les prix ont fait ensemble ; il dépend du choix des indicateurs et de l'horizon, et ne dit rien de la cause ni de la suite."
+  },
+  "L8.05-Q2": {
+    "correct": "a",
+    "explanation": "La méthodologie CBOE lue décrit une volatilité attendue à maturité constante déduite d'options ; elle ne mesure pas ce que les portefeuilles font."
+  },
+  "L8.05-Q3": {
+    "correct": "d",
+    "explanation": "La chronique CEPR (2000-2013) place franc et yen parmi les refuges les plus nets ; le document de la BNS trouve une appréciation contre l'euro mais une dépréciation contre le dollar, le yen et la livre."
+  },
+  "L8.05-Q4": {
+    "correct": "b",
+    "explanation": "Le commentaire ne cite pas ses sources et ne précise pas l'instrument ; la leçon le conserve comme rapporté et ne le recalcule pas."
+  },
+  "L8.05-Q5": {
+    "correct": "d",
+    "explanation": "La règle est fixée avant d'observer les prix ; la changer après coup détruit son sens. « Non tranché » est un verdict légitime."
+  },
+  "L8.05-Q6": {
+    "correct": "c",
+    "explanation": "275,30 / 278,60 − 1 = −0,0118 ; deux clôtures du même contrat. Le 300 $ est un plus haut, pas une clôture : on ne le mélange pas."
+  },
+  "L8.05-Q7": {
+    "correct": "a",
+    "explanation": "1 672 / 2 069 − 1 = −0,1919. Le WGC évoque le dollar fort et les hausses de taux ; la variation décrit un prix, non un effet isolé de la guerre."
+  },
+  "L8.05-Q8": {
+    "correct": "b",
+    "explanation": "24 × √(30/365) ≈ 6,88 % ; c'est un ordre de grandeur sous hypothèses (indépendance, volatilité constante), et la lecture annualisée est une convention non confirmée par le résumé lu."
+  },
+  "L8.06-Q1": {
+    "correct": "c",
+    "explanation": "24/02 + 7 = 03/03 ; + 30 = 26/03 ; + 90 = 25/05 (2022 n'est pas bissextile). Les horizons sont des jours calendaires à partir d'une date d'origine documentée."
+  },
+  "L8.06-Q2": {
+    "correct": "a",
+    "explanation": "Une case ne se remplit que par une valeur lue près de l'horizon, même instrument ; l'interpolation est interdite."
+  },
+  "L8.06-Q3": {
+    "correct": "d",
+    "explanation": "275,30 / 278,60 − 1 = −0,0118. Le 300 $ du 14/09 est un plus haut, non une clôture : on ne le mélange pas."
+  },
+  "L8.06-Q4": {
+    "correct": "b",
+    "explanation": "Les références de prix ne sont pas toutes précisées ; choisir ou moyenner masquerait la contradiction. Les hausses sont +81,8 % (40/22) et +119,0 % (46/21), par source."
+  },
+  "L8.06-Q5": {
+    "correct": "d",
+    "explanation": "Un T2 et une date de fin d'année ne se comparent pas ; seule la comparaison du T2 prévu au T2 observé serait pertinente, et elle n'est pas faite."
+  },
+  "L8.06-Q6": {
+    "correct": "c",
+    "explanation": "1 672/2 069 − 1 = −0,1919. Le calcul décrit une variation de prix entre deux fixings comparables ; il n'établit ni durée de l'effet ni cause."
+  },
+  "L8.06-Q7": {
+    "correct": "a",
+    "explanation": "Un niveau durable peut venir d'autres facteurs ; un effet structurel demande un changement mesuré des flux ou des institutions, qui subsiste."
+  },
+  "L8.06-Q8": {
+    "correct": "b",
+    "explanation": "L'article donne un ordre de grandeur de fin 1991 (≈ 350 $) et une interprétation, sans série pour les horizons ; les horizons restent non couverts."
+  },
+  "L8.07-Q1": {
+    "correct": "c",
+    "explanation": "Illiquidité : les fonds disponibles manquent alors que la valeur des actifs détenus dépasse les dettes ; une vente forcée à décote peut la rendre insolvable."
+  },
+  "L8.07-Q2": {
+    "correct": "a",
+    "explanation": "30 + 56 = 86 contre 92 de dettes : déficit de 6. Si les actifs sont détenus, 100 − 92 = 8. Un prêt de banque centrale évite la vente forcée."
+  },
+  "L8.07-Q3": {
+    "correct": "d",
+    "explanation": "15/09 → 03/10 = 18 jours ; 15/09 → 25/11 = 71 jours. Les outils s'enchaînent sur des semaines."
+  },
+  "L8.07-Q4": {
+    "correct": "b",
+    "explanation": "759/827 − 1 = −0,0822. Le −20 % du gestionnaire n'est pas sourcé et ses périodes ne sont pas précisées ; les deux estimations sont conservées comme non comparables."
+  },
+  "L8.07-Q5": {
+    "correct": "d",
+    "explanation": "2010-2012 : programmes conditionnels (FMI-UE) puis OMT conditionné ; une panique bancaire se joue en jours (SVB) et se traite par prêteur de dernier ressort et garantie."
+  },
+  "L8.07-Q6": {
+    "correct": "c",
+    "explanation": "La page lue ne contient que des métadonnées. L'OMT est décrit par la conférence de presse du 06/09/2012, un autre document."
+  },
+  "L8.07-Q7": {
+    "correct": "a",
+    "explanation": "Un épisode ne prouve pas une règle ; les mécanismes possibles (liquidité, dollar, rendements, réponse des autorités) restent à documenter."
+  },
+  "L8.07-Q8": {
+    "correct": "b",
+    "explanation": "Le résumé du communiqué liste des causes de gestion et de supervision ; les sujets absents restent à lire dans le rapport complet, non lu."
+  },
+  "L8.08-Q1": {
+    "correct": "c",
+    "explanation": "Le protocole va de l'identification de l'événement à la documentation, la décision venant après la vérification des informations, des canaux, de la durée, des réactions et des scénarios."
+  },
+  "L8.08-Q2": {
+    "correct": "a",
+    "explanation": "Le biais rétrospectif consiste à juger avec l'information ultérieure ; le journal sépare « connu à t » et « appris plus tard »."
+  },
+  "L8.08-Q3": {
+    "correct": "d",
+    "explanation": "L'étape 6 est impossible à D1, mais le manque est comblable par un déclencheur daté ; « ne pas intervenir » serait justifié si le déclencheur était impossible."
+  },
+  "L8.08-Q4": {
+    "correct": "b",
+    "explanation": "0,5 × 2 + 0,3 × (−1) + 0,2 × (−3) = +0,1 ; avec 0,4/0,3/0,3 : −0,4. Si le signe change avec 10 points de probabilité, la décision n'est pas robuste."
+  },
+  "L8.08-Q5": {
+    "correct": "d",
+    "explanation": "Le journal doit contenir pour chaque abstention une raison écrite et, pour l'attente, un déclencheur daté."
+  },
+  "L8.08-Q6": {
+    "correct": "c",
+    "explanation": "Une abstention n'est pas une méthode en soi : elle doit être documentée, avec un déclencheur ou un critère."
+  },
+  "L8.08-Q7": {
+    "correct": "a",
+    "explanation": "Le protocole juge la qualité du processus ; une bonne analyse fondamentale ne garantit pas une transaction gagnante."
+  },
+  "L8.08-Q8": {
+    "correct": "b",
+    "explanation": "Le résultat d'un seul épisode peut venir du hasard ; le processus se vérifie et se réexamine."
+  },
+  "C8.1-Q1": {
+    "correct": "a",
+    "explanation": "L'énoncé rapporte une affirmation d'une partie. Le fait confirmé exige un document ou une source primaire datée (exemple : publication de la directive au registre officiel)."
+  },
+  "C8.1-Q2": {
+    "correct": "d",
+    "explanation": "5 % × 40 = 2,0 et 40 % × 5 = 2,0. Le produit ne remplace jamais l'analyse : une issue rare et grave diffère d'une issue fréquente et modérée."
+  },
+  "C8.1-Q3": {
+    "correct": "b",
+    "explanation": "1 910 / 1,06 = 1 802 ; l'arrondi du rendement (5,5 % à 6,5 %) donne une fourchette de 1 793 à 1 810 $. La valeur est dérivée, non lue."
+  },
+  "C8.1-Q4": {
+    "correct": "d",
+    "explanation": "Le FMI est cité pour un effet moyen et une durée d'environ un trimestre, avec des queues de risque d'environ six mois ; c'est un ordre de grandeur sur échantillon, non une prévision."
+  },
+  "C8.1-Q5": {
+    "correct": "c",
+    "explanation": "La règle d'or exige un canal vérifié (énergie, dollar, taux réels, flux), la prise en compte des facteurs simultanés et une réaction mesurée sur une fenêtre fixée avant l'observation."
+  },
+  "C8.1-Q6": {
+    "correct": "a",
+    "explanation": "La rubrique 7 sépare les attentes préalables, si elles sont documentées, de la réaction mesurée sur une fenêtre définie d'avance ; sans attentes documentées, la surprise n'est pas mesurable."
+  },
+  "C8.2-Q1": {
+    "correct": "d",
+    "explanation": "24/02 → 26/03/2022 = 30 jours (2022 n'est pas bissextile). Le seuil de 14 jours concerne la maturité de la dette visée, pas le délai d'application : signature, application et effet observé sont trois étapes distinctes."
+  },
+  "C8.2-Q2": {
+    "correct": "b",
+    "explanation": "0,4 × 1 950 + 0,6 × 2 050 = 2 010 ; 1 950 / 2 010 − 1 = −2,99 %. Modèle jouet à deux issues : il montre que la variation vient de l'écart au prix attendu, non du résultat seul. Les chiffres sont fictifs."
+  },
+  "C8.2-Q3": {
+    "correct": "d",
+    "explanation": "0,25 × 0,40 = 0,10. Le taux annoncé n'est pas le taux effectif : couverture, exemptions et suspensions les séparent. Le calcul suppose une valeur d'importation inchangée."
+  },
+  "C8.2-Q4": {
+    "correct": "c",
+    "explanation": "3 454,70 / 3 002,70 − 1 = 0,1505. La règle du chapitre : un rendement se calcule entre deux valeurs du même instrument et du même horaire ; ce chiffre mesure une variation, il n'établit aucune cause (mesure tarifaire, autres facteurs non isolés)."
+  },
+  "C8.2-Q5": {
+    "correct": "a",
+    "explanation": "Choisir arbitrairement une valeur ou les fusionner masque une contradiction de source. L'anomalie reste au registre ; un calcul peut être présenté avec chaque valeur, étiquetée."
+  },
+  "C8.2-Q6": {
+    "correct": "b",
+    "explanation": "Règle commune de L8.03 et L8.04 : une variation après un événement ne prouve pas que l'événement en est la cause. Il faut la chaîne événement → canal → variable observée, la mesure de la surprise et l'examen des facteurs concurrents (Fed, dollar, taux, flux)."
+  },
+  "C8.3-Q1": {
+    "correct": "b",
+    "explanation": "Score = 4 − 1 = +3 < +4 : « non tranché ». Changer la règle après avoir vu les prix la viderait de son sens."
+  },
+  "C8.3-Q2": {
+    "correct": "d",
+    "explanation": "11/09 + 90 jours = 10/12/2001. Une valeur au jour 66 ne couvre pas l'horizon de 90 jours : on ne l'interpole pas."
+  },
+  "C8.3-Q3": {
+    "correct": "c",
+    "explanation": "La méthodologie CBOE décrit une volatilité attendue à 30 jours déduite d'options sur le S&P 500 ; les flux et prix réels sont d'autres mesures."
+  },
+  "C8.3-Q4": {
+    "correct": "a",
+    "explanation": "2 069/1 910 − 1 = 0,0832 ; même instrument et même horaire. Mais 03/03 (jour 7) n'est pas lu : la case reste non couverte."
+  },
+  "C8.3-Q5": {
+    "correct": "b",
+    "explanation": "Choisir ou moyenner masque une contradiction de source ; la méthode du chapitre est de conserver et d'étiqueter."
+  },
+  "C8.3-Q6": {
+    "correct": "c",
+    "explanation": "Les épisodes lus (mars 2020 selon un gestionnaire, 2022 selon le WGC) montrent des baisses de l'or, expliquées par des mécanismes possibles ; la part de chacun n'est pas mesurée."
+  },
+  "C8.4-Q1": {
+    "correct": "d",
+    "explanation": "L'illiquidité diffère de l'insolvabilité : les actifs détenus valent plus que les dettes, mais les fonds disponibles manquent ; une vente forcée à décote peut changer le diagnostic."
+  },
+  "C8.4-Q2": {
+    "correct": "c",
+    "explanation": "759/827 − 1 = −0,0822. Deux mesures différentes de la baisse de l'or en 2008 coexistent ; la méthode du module interdit de choisir."
+  },
+  "C8.4-Q3": {
+    "correct": "a",
+    "explanation": "2008 (moyennes mensuelles, commentaire) et mars 2023 (WGC) montrent des comportements différents ; les facteurs concurrents ne sont pas mesurés."
+  },
+  "C8.4-Q4": {
+    "correct": "b",
+    "explanation": "L'OMT est annoncé le 06/09/2012 avec « aucune limite ex ante » ; le discours de Londres est un autre document, dont seules des métadonnées ont été lues."
+  },
+  "C8.4-Q5": {
+    "correct": "c",
+    "explanation": "Le journal exige une raison écrite pour chaque abstention ; une abstention sans déclencheur ni critère est un signal de biais."
+  },
+  "C8.4-Q6": {
+    "correct": "a",
+    "explanation": "Le signe change avec un déplacement de 10 points de probabilité ; une espérance fragile n'est pas une base d'action."
+  },
+  "EX8-Q1": {
+    "correct": "c",
+    "explanation": "Une déclaration ou un compte rendu de presse n'établit pas le fait : la confirmation exige un texte primaire daté (décret, directive, communiqué officiel)."
+  },
+  "EX8-Q2": {
+    "correct": "a",
+    "explanation": "Une annonce n'est pas une mesure juridique. Les trois couches ne se confondent pas, et un effet observé n'est pas forcément causé par la mesure."
+  },
+  "EX8-Q3": {
+    "correct": "d",
+    "explanation": "La surprise est l'écart entre le résultat et une attente documentée avant l'événement ; sans cette attente, la conclusion permise est « surprise non mesurable »."
+  },
+  "EX8-Q4": {
+    "correct": "b",
+    "explanation": "Annonce, signature et application sont des étapes distinctes ; la fenêtre doit être fixée d'avance pour éviter le choix rétrospectif d'une période favorable."
+  },
+  "EX8-Q5": {
+    "correct": "d",
+    "explanation": "Le sens est conditionnel aux taux réels observés ; aucun canal n'a un signe unique pour l'or, d'où l'écriture des deux directions dans la grille."
+  },
+  "EX8-Q6": {
+    "correct": "c",
+    "explanation": "L'attribution exige un canal vérifié, l'examen des facteurs simultanés, une comparaison avec l'anticipé et la mention des explications concurrentes ; sinon « coïncidence non expliquée » ou « données insuffisantes »."
+  },
+  "EX8-Q7": {
+    "correct": "a",
+    "explanation": "Les valeurs montrent une résorption partielle ; demande, réserves stratégiques et autres facteurs interviennent, et le texte ne permet pas d'isoler une cause."
+  },
+  "EX8-Q8": {
+    "correct": "b",
+    "explanation": "La règle est fixée avant l'observation pour empêcher de choisir le seuil après avoir vu les prix ; en dessous du seuil, le verdict est « régime non tranché »."
+  },
+  "EX8-Q9": {
+    "correct": "b",
+    "explanation": "Un régime est une description de ce que les prix ont fait ensemble : il dépend de l'horizon et des indicateurs et ne dit rien de la cause."
+  },
+  "EX8-Q10": {
+    "correct": "d",
+    "explanation": "Un régime d'une séance n'implique ni persistance ni direction de l'or ; l'or peut baisser si le stress est de liquidité ou de taux."
+  },
+  "EX8-Q11": {
+    "correct": "a",
+    "explanation": "La règle de couverture interdit de remplir une case non couverte ; l'absence de données reste visible."
+  },
+  "EX8-Q12": {
+    "correct": "c",
+    "explanation": "Ne jamais transformer une absence de données en conclusion sur la durée ; un horizon non couvert reste non couvert."
+  },
+  "EX8-Q13": {
+    "correct": "c",
+    "explanation": "Les trois durées sont distinctes des trois statuts. Extrapoler un pic ou décréter le structurel sans données sont les pièges courants."
+  },
+  "EX8-Q14": {
+    "correct": "a",
+    "explanation": "Liquidité et solvabilité sont distinctes mais liées : des ventes forcées à décote peuvent éroder le capital."
+  },
+  "EX8-Q15": {
+    "correct": "d",
+    "explanation": "Les deux types de crise ont des mécanismes distincts (bilan des établissements, financement de l'État) et peuvent se contaminer ; leurs effets sur l'or et le dollar ne sont pas établis par un épisode isolé."
+  },
+  "EX8-Q16": {
+    "correct": "b",
+    "explanation": "Un épisode unique illustre, il ne démontre pas ; les épisodes de 2008 et de 2010-2012 ne sont pas comparables sans séries harmonisées."
+  },
+  "EX8-Q17": {
+    "correct": "a",
+    "explanation": "Attendre exige un déclencheur précis et daté ; une série d'« attendre » sans déclencheur est un signal de biais, et le journal exige une raison écrite pour chaque abstention."
+  },
+  "EX8-Q18": {
+    "correct": "c",
+    "explanation": "Agir exige les six critères (a) à (f) ; si la réaction n'est pas vérifiable, la décision est « attendre » avec déclencheur."
+  }
+}

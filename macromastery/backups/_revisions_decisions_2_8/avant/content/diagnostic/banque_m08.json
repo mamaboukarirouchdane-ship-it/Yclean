@@ -1,0 +1,262 @@
+{
+  "bank": "diagnostic",
+  "module": 8,
+  "status": "PROPOSITION — non validée, non intégrée",
+  "revision": 1,
+  "note": "Banque progressive : 4 paires de QCM parallèles (forme A = diagnostic initial, forme B = version finale alternative), même schéma que banque_m04 à banque_m07. Niveau : accessible avant le cours ; chaque item ne mobilise qu'un prérequis (pourcentage, délai en jours, écart à l'attendu, points de base), sans notion enseignée dans le module 8 (statuts, canaux, régimes, horizons, protocole). Diagnostic non noté : il sert à orienter la révision, pas à autoriser ou interdire l'accès. Les modules 0 à 3 restent à alimenter dans le diagnostic général.",
+  "items": [
+    {
+      "id": "D8-A1",
+      "module": 8,
+      "form": "A",
+      "pair": 1,
+      "tag": "variation en %",
+      "prompt": "Deux fixings du même instrument et du même horaire : 2 000 $ puis 2 100 $. Quelle est la variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+5,0 %"
+        },
+        {
+          "id": "b",
+          "text": "+4,8 %"
+        },
+        {
+          "id": "c",
+          "text": "−4,8 %"
+        },
+        {
+          "id": "d",
+          "text": "+100 %"
+        }
+      ],
+      "correct": "a",
+      "prerequisite": true
+    },
+    {
+      "id": "D8-B1",
+      "module": 8,
+      "form": "B",
+      "pair": 1,
+      "tag": "variation en %",
+      "prompt": "Deux fixings du même instrument et du même horaire : 2 500 $ puis 2 450 $. Quelle est la variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−2,04 %"
+        },
+        {
+          "id": "b",
+          "text": "+2,0 %"
+        },
+        {
+          "id": "c",
+          "text": "−2,0 %"
+        },
+        {
+          "id": "d",
+          "text": "−50 %"
+        }
+      ],
+      "correct": "c",
+      "prerequisite": true
+    },
+    {
+      "id": "D8-A2",
+      "module": 8,
+      "form": "A",
+      "pair": 2,
+      "tag": "délai en jours",
+      "prompt": "Une décision est publiée le 02/04 et une donnée de suivi le 25/05 de la même année (non bissextile). Combien de jours les séparent ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "51 jours"
+        },
+        {
+          "id": "b",
+          "text": "52 jours"
+        },
+        {
+          "id": "c",
+          "text": "54 jours"
+        },
+        {
+          "id": "d",
+          "text": "53 jours"
+        }
+      ],
+      "correct": "d",
+      "prerequisite": true
+    },
+    {
+      "id": "D8-B2",
+      "module": 8,
+      "form": "B",
+      "pair": 2,
+      "tag": "délai en jours",
+      "prompt": "Une décision est publiée le 10/09 et une donnée de suivi le 05/11 de la même année (non bissextile). Combien de jours les séparent ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "55 jours"
+        },
+        {
+          "id": "b",
+          "text": "56 jours"
+        },
+        {
+          "id": "c",
+          "text": "57 jours"
+        },
+        {
+          "id": "d",
+          "text": "54 jours"
+        }
+      ],
+      "correct": "b",
+      "prerequisite": true
+    },
+    {
+      "id": "D8-A3",
+      "module": 8,
+      "form": "A",
+      "pair": 3,
+      "tag": "écart à l'attendu",
+      "prompt": "Le consensus documenté de la veille attendait 180 000 créations d'emplois ; 215 000 sont publiées. Quel est l'écart à l'attendu ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−35 000"
+        },
+        {
+          "id": "b",
+          "text": "+35 000"
+        },
+        {
+          "id": "c",
+          "text": "+215 000"
+        },
+        {
+          "id": "d",
+          "text": "+180 000"
+        }
+      ],
+      "correct": "b",
+      "prerequisite": true
+    },
+    {
+      "id": "D8-B3",
+      "module": 8,
+      "form": "B",
+      "pair": 3,
+      "tag": "écart à l'attendu",
+      "prompt": "Le consensus documenté de la veille attendait une inflation annuelle de 3,2 % ; 3,0 % est publiée. Quel est l'écart en points ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−3,0 points"
+        },
+        {
+          "id": "b",
+          "text": "+0,2 point"
+        },
+        {
+          "id": "c",
+          "text": "−3,2 points"
+        },
+        {
+          "id": "d",
+          "text": "−0,2 point"
+        }
+      ],
+      "correct": "d",
+      "prerequisite": true
+    },
+    {
+      "id": "D8-A4",
+      "module": 8,
+      "form": "A",
+      "pair": 4,
+      "tag": "points de base",
+      "prompt": "Le rendement d'une obligation passe de 4,05 % à 3,85 %. Quelle est la variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−5 pb"
+        },
+        {
+          "id": "b",
+          "text": "−0,2 pb"
+        },
+        {
+          "id": "c",
+          "text": "−20 pb"
+        },
+        {
+          "id": "d",
+          "text": "+20 pb"
+        }
+      ],
+      "correct": "c",
+      "prerequisite": true
+    },
+    {
+      "id": "D8-B4",
+      "module": 8,
+      "form": "B",
+      "pair": 4,
+      "tag": "points de base",
+      "prompt": "Le rendement d'une obligation passe de 3,60 % à 3,95 %. Quelle est la variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+35 pb"
+        },
+        {
+          "id": "b",
+          "text": "+0,35 pb"
+        },
+        {
+          "id": "c",
+          "text": "+3,5 pb"
+        },
+        {
+          "id": "d",
+          "text": "−35 pb"
+        }
+      ],
+      "correct": "a",
+      "prerequisite": true
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "D8-O1",
+      "prompt": "En quelques lignes : quelle est la différence entre une donnée observée et une prévision ? Donne un exemple tiré d'un marché.",
+      "graded": false,
+      "prerequisite_of": "distinction observé / prévu, utilisée dans toutes les leçons du module"
+    },
+    {
+      "id": "D8-O2",
+      "prompt": "Cite deux facteurs, autres qu'un événement géopolitique, qui peuvent faire varier le prix de l'or au cours de la même journée.",
+      "graded": false,
+      "prerequisite_of": "facteurs simultanés (dollar, taux réels, publications macroéconomiques) vus aux modules 5 et 6"
+    }
+  ],
+  "prerequisites_tested": [
+    "calcul d'un pourcentage de variation entre deux cotations comparables",
+    "calcul d'un délai en jours entre deux dates",
+    "écart entre une valeur publiée et une attente documentée",
+    "variation d'un rendement en points de base"
+  ],
+  "competences_to_acquire_not_tested": [
+    "qualifier un événement (statut possible / probable / confirmé ; fait, déclaration, hypothèse)",
+    "appliquer la grille G8 et les sept canaux avec deux directions pour l'or",
+    "distinguer annoncé, appliqué et effet observé",
+    "appliquer une matrice risk-on / risk-off fixée d'avance",
+    "remplir une grille d'horizons sans reconstituer de prix",
+    "distinguer liquidité et solvabilité",
+    "appliquer le protocole de décision (agir, attendre, ne pas intervenir) avec l'information disponible à la date"
+  ]
+}

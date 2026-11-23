@@ -1,0 +1,181 @@
+{
+  "chapterId": "0.1",
+  "module": 0,
+  "title": "Quiz de chapitre 0.1 — Marchés et acteurs (L0.01–L0.02)",
+  "passThreshold": 0.8333333333333334,
+  "requiredCorrect": 5,
+  "passRule": "5 bonnes réponses sur 6 (règle R1 : ⌈0,8 × 6⌉ = 5 ; seuil pédagogique provisoire)",
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C0.1-Q1",
+      "type": "mcq",
+      "prompt": "Une entreprise déjà cotée émet de nouvelles actions et reçoit l'argent. De quel marché s'agit-il ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Primaire"
+        },
+        {
+          "id": "b",
+          "text": "Secondaire"
+        },
+        {
+          "id": "c",
+          "text": "Dérivé"
+        },
+        {
+          "id": "d",
+          "text": "Monétaire uniquement"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Quand des titres nouveaux sont émis et que l'émetteur reçoit l'argent, c'est le marché primaire, même si l'entreprise est déjà cotée.",
+      "tags": [
+        "primaire"
+      ]
+    },
+    {
+      "id": "C0.1-Q2",
+      "type": "mcq",
+      "prompt": "Quelle différence essentielle entre un forward et un future de change ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le forward est standardisé et compensé, le future est sur mesure"
+        },
+        {
+          "id": "b",
+          "text": "Le future est toujours sans risque de contrepartie"
+        },
+        {
+          "id": "c",
+          "text": "Aucune"
+        },
+        {
+          "id": "d",
+          "text": "Le forward est de gré à gré et sur mesure, le future est standardisé et compensé de façon centralisée"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le forward est négocié de gré à gré sur mesure ; le future est standardisé et compensé de façon centralisée, ce qui réduit le risque de contrepartie sans le supprimer.",
+      "tags": [
+        "derives"
+      ]
+    },
+    {
+      "id": "C0.1-Q3",
+      "type": "mcq",
+      "prompt": "Lequel n'est PAS l'une des cinq dimensions de la liquidité vues en L0.01 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Spread"
+        },
+        {
+          "id": "b",
+          "text": "Couleur de la bougie"
+        },
+        {
+          "id": "c",
+          "text": "Rapidité"
+        },
+        {
+          "id": "d",
+          "text": "Profondeur"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Les cinq dimensions : spread, profondeur, volume absorbable, rapidité, impact sur le prix.",
+      "tags": [
+        "liquidite"
+      ]
+    },
+    {
+      "id": "C0.1-Q4",
+      "type": "mcq",
+      "prompt": "Selon la BRI (avril 2025, publication de décembre 2025), quelle part des échanges de change est faite entre teneurs de marché ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "5 %"
+        },
+        {
+          "id": "b",
+          "text": "89 %"
+        },
+        {
+          "id": "c",
+          "text": "49 %"
+        },
+        {
+          "id": "d",
+          "text": "47 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Teneurs de marché 47 %, autres institutions financières 49 %, clients non financiers 5 % (total 101 % à cause des arrondis).",
+      "tags": [
+        "bri",
+        "acteurs"
+      ]
+    },
+    {
+      "id": "C0.1-Q5",
+      "type": "mcq",
+      "prompt": "La catégorie CFTC d'un acteur (par exemple « fonds à effet de levier ») révèle-t-elle sa motivation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui, toujours"
+        },
+        {
+          "id": "b",
+          "text": "Seulement pour les banques"
+        },
+        {
+          "id": "c",
+          "text": "Non : la catégorie ne révèle pas la motivation"
+        },
+        {
+          "id": "d",
+          "text": "Oui pour l'or uniquement"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La catégorie d'un acteur ne révèle pas sa motivation ; un même acteur peut en combiner plusieurs.",
+      "tags": [
+        "cftc"
+      ]
+    },
+    {
+      "id": "C0.1-Q6",
+      "type": "mcq",
+      "prompt": "Le FX Global Code est :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un code de bonne pratique non contraignant de 55 principes"
+        },
+        {
+          "id": "b",
+          "text": "Une loi contraignante"
+        },
+        {
+          "id": "c",
+          "text": "Un accord de change entre banques centrales"
+        },
+        {
+          "id": "d",
+          "text": "Un indice de volatilité"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le FX Global Code est un code de bonne pratique non contraignant (55 principes).",
+      "tags": [
+        "code"
+      ]
+    }
+  ],
+  "revision": 1
+}

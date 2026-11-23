@@ -1,8 +1,8 @@
 # Registre des points à vérifier
 
-**488 points ouverts.**
+**500 points ouverts.**
 
-**Gravité** (classement obligatoire à partir du module 4 ; les points des modules 0 à 3 sont **non classés** et à classer lors de l'audit) : critique : 2 ; importante : 151 ; mineure : 102 ; non classé : 233.
+**Gravité** (classement obligatoire à partir du module 4 ; les points des modules 0 à 3 sont **non classés** et à classer lors de l'audit) : critique : 2 ; importante : 162 ; mineure : 103 ; non classé : 233.
 
 **Points critiques (à résoudre avant la validation scientifique des leçons concernées) :**
 - L4.11 : [critique] Le cas central (intervention coordonnée du 31/07/2026, participation du Trésor américain, niveaux USD/JPY 164 / 155,20 / 156,92 / 159,09) repose sur une synthèse encyclopédique tertiaire ; communiqués primaires (ministère japonais des Finances du 03/08, Trésor américain) non lus ; à confirmer avant toute validation scientifique de la leçon.
@@ -607,6 +607,8 @@ Généré depuis `registry/lessons.json` (champ `open_points`). Les contrôles a
 - [ ] [mineure] L8.01 : page WGC des flux d'ETF d'octobre 2023 affiche « Data as of 23 October, 2026 » (incohérent avec la date de 2023) ; tonnage global des flux non fourni (−38 t dans le commentaire, −37 t d'avoirs sur la page ETF).
 - [ ] [mineure] L8.01 : indice GPR : base de normalisation et valeurs récentes non lues ; non utilisés dans les calculs.
 - [ ] [mineure] L8.01 : l'épisode de 2026 (Banque mondiale, Fed) n'est cité que comme contexte ; L5.08 reste critique ouverte et n'est pas un prérequis.
+- [ ] [importante] L8.01 : quiz révision 3 (23/11/2026, décision 2, campagne de révision 3 des QCM du module 8) : distracteurs allongés pour réduire l'indice de longueur ; bonnes réponses, lettres et explications inchangées ; relecture indépendante à l'aveugle NON réalisée (aucun relecteur indépendant disponible).
+- [ ] [importante] L8.01 révision 2 (23/11/2026, décision 6) : chiffres du FMI (GFSR avril 2025, ch. 2) réécrits avec leur nature : ≈ 1 % sur un trimestre (VAR, choc mondial), ≈ 1 point dans le mois d'un événement majeur (régressions d'entreprises), impact moyen ≈ 3 % (certains ≈ 9 %) ; « 2,5 points sur les émergents » retiré, non retrouvé. Lecture par résumé de 100 000 caractères sur 115 658 : vérification intégrale ouverte (A33, A36).
 
 ## L8.02 — Guerres, sanctions et énergie
 - [ ] [importante] L8.02 : toutes les sources (OFAC, Trésor, EIA, FMI, WGC, BRI) lues par résumé automatique ; aucune lecture intégrale ; chiffres essentiels non vérifiés dans le texte primaire complet.
@@ -620,6 +622,7 @@ Généré depuis `registry/lessons.json` (champ `open_points`). Les contrôles a
 - [ ] [mineure] L8.02 : traitement de l'or dans COFER non établi par la source lue ; COFER T1 2026 = un seul trimestre.
 - [ ] [mineure] L8.02 : identifiant de source S-UST-05 choisi pour éviter le doublon S-UST-01 (L0.07) ; la renumérotation générale des doublons reste à faire à l'audit.
 - [ ] [critique, inchangé] L4.11 et L5.08 restent ouverts ; anomalie de périmètre CFTC ouverte ; aucune des trois n'est utilisée dans L8.02.
+- [ ] [importante] L8.02 : quiz révision 3 (23/11/2026, décision 2, campagne de révision 3 des QCM du module 8) : distracteurs allongés pour réduire l'indice de longueur ; bonnes réponses, lettres et explications inchangées ; relecture indépendante à l'aveugle NON réalisée (aucun relecteur indépendant disponible).
 
 ## L8.03 — Élections et changements de politique
 - [ ] [importante] L8.03 : contradictions de données conservées sans choix : LBMA 2025 (plus haut 4 481,85 $ au tableau / 4 338,25 $ dans le texte ; rendements +70,3 % / +64,8 % depuis le plus bas du 06/01/2025) ; baisse après le scrutin de 2024 : Reuters −2,8 % (06/11) / OANDA −3,3 % (non datée). Aucun rendement calculé entre instruments ou horaires différents.
@@ -634,6 +637,7 @@ Généré depuis `registry/lessons.json` (champ `open_points`). Les contrôles a
 - [ ] [mineure] L8.03 : OANDA (−3,3 % à 2 658 $, non daté) et Reuters (−2,8 % à 2 667,19 $, 06/11) pour la même période : non réconciliés ; baseline de Reuters non précisée.
 - [ ] [mineure] L8.03 : relais WGC/Nasdaq (flux d'ETF −809 M$, positions −74 t) non daté ; Reuters du 23/11/2016 et du 29/12/2016 sans date précise.
 - [ ] [critique, inchangé] L4.11 et L5.08 restent ouverts ; anomalie de périmètre CFTC ouverte ; aucune des trois n'est utilisée dans L8.03.
+- [ ] [importante] L8.03 : quiz révision 4 (23/11/2026, décision 2, campagne de révision 3 des QCM du module 8) : distracteurs allongés pour réduire l'indice de longueur ; bonnes réponses, lettres et explications inchangées ; relecture indépendante à l'aveugle NON réalisée (aucun relecteur indépendant disponible).
 
 ## L8.04 — Commerce, droits de douane et fragmentation
 - [ ] [importante] L8.04 : chronologie juridique 2025 : ordres 14257, 14259 et 14316 consultés par résumé automatique (annexes de 14257 non vues, mention de l'or absente) ; ordre 14266 (125 %), ordre 14298, textes de l'USTR et annonces chinoises non lus ; le reste repose sur des relais (FMI, cabinets d'avocats, presse) ; base légale de l'EO 14257 et lien avec l'arrêt de la Cour suprême (20/02/2026, résumé d'un cabinet d'avocats, arrêt non lu) non établis.
@@ -646,6 +650,8 @@ Généré depuis `registry/lessons.json` (champ `open_points`). Les contrôles a
 - [ ] [mineure] L8.04 : anomalies de données conservées : LBMA 2025 (4 481,85 $ au tableau / 4 338,25 $ dans le texte) ; LBMA T2 2025 (plus haut PM 3 322,90 $ le 16/04 contre plus haut AM 3 454,70 $ le 22/04) ; OMC (−0,2 −0,6 −0,8 = −1,6 contre −1,5) ; WGC 2019 (production minière 3 436,7 t / 3 463,7 t).
 - [ ] [mineure] L8.04 : CNBC 2018 sans date précise ; cotation du 31/12/2018 intrajournalière.
 - [ ] [critique, inchangé] L4.11 et L5.08 restent ouverts ; anomalie de périmètre CFTC ouverte ; aucune des trois n'est utilisée dans L8.04.
+- [ ] [importante] L8.04 : quiz révision 3 (23/11/2026, décision 2, campagne de révision 3 des QCM du module 8) : distracteurs allongés pour réduire l'indice de longueur ; bonnes réponses, lettres et explications inchangées ; relecture indépendante à l'aveugle NON réalisée (aucun relecteur indépendant disponible).
+- [ ] [importante] L8.04 révision 3 (23/11/2026, décision 6) : l'exclusion de l'or des droits (2-3 avril 2025) est présentée comme rapportée par la LBMA (source secondaire), non confirmée par le texte de l'ordre 14257 consulté (annexe II non vue) ; cinq passages et l'énoncé de L8.04-Q6 alignés. Annexe II à lire (A38 ouverte).
 
 ## L8.05 — Risk-on et risk-off
 - [ ] [importante] L8.05 : épisode de mars 2020 et chiffres de 2008 lus uniquement dans le commentaire d'un gestionnaire d'actifs (WisdomTree) : chiffres non sourcés, instrument non précisé, corrélation or-actions −0,15 non vérifiée ; aucune série lue.
@@ -658,6 +664,7 @@ Généré depuis `registry/lessons.json` (champ `open_points`). Les contrôles a
 - [ ] [critique, inchangé] L4.11 et L5.08 restent ouverts ; anomalie de périmètre CFTC ouverte ; aucune des trois n'est utilisée dans L8.05.
 - [ ] [importante] L8.05 : la définition de « signal central » (VIX et S&P 500 ; l'or exclu) ajoutée en révision 2 est une convention pédagogique, non validée scientifiquement ; le choix des six indicateurs, des seuils et du score reste conventionnel.
 - [ ] [importante] L8.05 révision 3 (31/10/2026, décision 1 = A de l'utilisateur) : définition du signal central conservée sans changement ; sous-section « Limites de la convention du signal central » ajoutée en 4.5 (statut de convention pédagogique, non de règle scientifique universelle ; sept limites). Validation pédagogique toujours requise ; réexamen prévu après lecture des séries du VIX et du S&P 500.
+- [ ] [importante] L8.05 : quiz révision 3 (23/11/2026, décision 2, campagne de révision 3 des QCM du module 8) : distracteurs allongés pour réduire l'indice de longueur ; bonnes réponses, lettres et explications inchangées ; relecture indépendante à l'aveugle NON réalisée (aucun relecteur indépendant disponible).
 
 ## L8.06 — Durée des effets d'un choc
 - [ ] [importante] L8.06 : séries quotidiennes de l'or et du pétrole de 1990-1991 et de 2001 non lues ; horizons de 7, 30 et 90 jours majoritairement non couverts (tableau de couverture) ; prix manquants non reconstitués ; un seul horizon couvert pour l'or en 2022 (immédiat).
@@ -667,6 +674,8 @@ Généré depuis `registry/lessons.json` (champ `open_points`). Les contrôles a
 - [ ] [mineure] L8.06 : anomalies conservées : pétrole 1990 (22/21 $ avant l'invasion ; pic ≈ 40/46 $) ; or 14/09/2001 (300 $ contre 295 $) ; Brent du 24/10/1990 imprimé « 30-45 $ » ; plus haut/bas annuels de sites de données sans date.
 - [ ] [mineure] L8.06 : Northern Miner (S-NM-01) lu sur un seul paragraphe (paywall) ; texte de l'arrêt de la date du 17/01/1991 (heure) non lu.
 - [ ] [critique, inchangé] L4.11 et L5.08 restent ouverts ; anomalie de périmètre CFTC ouverte ; aucune des trois n'est utilisée dans L8.06.
+- [ ] [importante] L8.06 : quiz révision 3 (23/11/2026, décision 2, campagne de révision 3 des QCM du module 8) : distracteurs allongés pour réduire l'indice de longueur ; bonnes réponses, lettres et explications inchangées ; relecture indépendante à l'aveugle NON réalisée (aucun relecteur indépendant disponible).
+- [ ] [importante] L8.06 révision 2 (23/11/2026, décision 6) : tolérance de couverture définie (couvert = date de l'horizon ou séance suivante ≤ 3 j ; partiel = fenêtre ± 20 % de l'horizon, soit ± 1, ± 6, ± 18 jours, ou base différente, ou période déclarée) ; convention pédagogique provisoire, non validée ; reproduit les 11 classements du module (tools/checks/L8.06.py).
 
 ## L8.07 — Crises bancaires et de dette souveraine
 - [ ] [importante] L8.07 (rév. 2) : discours de Draghi à Londres (juillet 2012) : date non établie (26 ou 27/07 sur la même page de la BRI), texte non lu ; aucune citation, date précise ni effet de marché attribués (verdict du 31/10/2026).
@@ -678,6 +687,8 @@ Généré depuis `registry/lessons.json` (champ `open_points`). Les contrôles a
 - [ ] [importante] L8.07 : facteurs concurrents non mesurés en mars 2023 (repricing de la Fed, flux d'ETF, achats officiels de 228 t au T1) ; l'ordre « vente puis refuge » reste une hypothèse.
 - [ ] [mineure] L8.07 : relais (CNBC/NBC pour le WGC, sites de données) ; absence de relecture indépendante.
 - [ ] [critique, inchangé] L4.11 et L5.08 restent ouverts ; anomalie de périmètre CFTC ouverte ; aucune des trois n'est utilisée dans L8.07.
+- [ ] [importante] L8.07 : quiz révision 4 (23/11/2026, décision 2, campagne de révision 3 des QCM du module 8) : distracteurs allongés pour réduire l'indice de longueur ; bonnes réponses, lettres et explications inchangées ; relecture indépendante à l'aveugle NON réalisée (aucun relecteur indépendant disponible).
+- [ ] [mineure] L8.07 révision 3 (23/11/2026, décision 6) : OMT décrites comme portant sur des maturités résiduelles « jusqu'à trois ans » ; la borne inférieure d'un an n'apparaît pas dans le résumé consulté et n'est plus affirmée (A37 ouverte jusqu'à lecture du texte).
 
 ## L8.08 — Décider sans surréagir
 - [ ] [importante] L8.08 : protocole en dix étapes, critères d'action (six critères) et garde-fous = conventions pédagogiques, non validées scientifiquement ni testées auprès d'apprenants.
@@ -685,3 +696,4 @@ Généré depuis `registry/lessons.json` (champ `open_points`). Les contrôles a
 - [ ] [importante] L8.08 : dimensionnement des positions et limites de risque renvoyés au module 11 (non rédigé) ; la leçon ne les traite pas.
 - [ ] [mineure] L8.08 : exemples SIMULATION simplifiés (espérance conditionnelle, journal) ; pas de relecture indépendante.
 - [ ] [critique, inchangé] L4.11 et L5.08 restent ouverts ; anomalie de périmètre CFTC ouverte ; aucune des trois n'est utilisée dans L8.08.
+- [ ] [importante] L8.08 : quiz révision 3 (23/11/2026, décision 2, campagne de révision 3 des QCM du module 8) : distracteurs allongés pour réduire l'indice de longueur ; bonnes réponses, lettres et explications inchangées ; relecture indépendante à l'aveugle NON réalisée (aucun relecteur indépendant disponible).

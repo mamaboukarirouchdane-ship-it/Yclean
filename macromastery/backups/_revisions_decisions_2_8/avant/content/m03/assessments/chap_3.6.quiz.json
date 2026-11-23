@@ -1,0 +1,180 @@
+{
+  "chapterId": "3.6",
+  "module": 3,
+  "title": "Quiz de chapitre 3.6 — Pratique : reconstitution et grille de lecture (L3.11–L3.12)",
+  "passThreshold": 0.8333333333333334,
+  "requiredCorrect": 5,
+  "passRule": "5 bonnes réponses sur 6 (règle R1 : ⌈0,8 × 6⌉ = 5 ; seuil pédagogique provisoire)",
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C3.6-Q1",
+      "type": "mcq",
+      "prompt": "Pourquoi privilégier une fenêtre courte autour de la publication ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle isole mieux l'effet de la publication des autres nouvelles"
+        },
+        {
+          "id": "b",
+          "text": "Elle est plus complète"
+        },
+        {
+          "id": "c",
+          "text": "Elle remplace la source"
+        },
+        {
+          "id": "d",
+          "text": "Elle supprime le risque"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La séance entière mélange la publication et les autres événements (pétrole, banque centrale).",
+      "tags": [
+        "fenetre"
+      ]
+    },
+    {
+      "id": "C3.6-Q2",
+      "type": "mcq",
+      "prompt": "Un rendement à 5,28 % avec une hausse de 0,04 point. Quel niveau précédent ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "5,32 %"
+        },
+        {
+          "id": "b",
+          "text": "5,24 %"
+        },
+        {
+          "id": "c",
+          "text": "5,28 %"
+        },
+        {
+          "id": "d",
+          "text": "4,00 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "5,28 − 0,04 = 5,24 ; 0,04 ÷ 5,24 = 0,76 %, ce qui valide la cohérence du bandeau.",
+      "tags": [
+        "coherence"
+      ]
+    },
+    {
+      "id": "C3.6-Q3",
+      "type": "mcq",
+      "prompt": "Probabilité de hausse de 25 pb : 18 %. Espérance de hausse ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "25 pb"
+        },
+        {
+          "id": "b",
+          "text": "18 pb"
+        },
+        {
+          "id": "c",
+          "text": "4,5 pb"
+        },
+        {
+          "id": "d",
+          "text": "0,18 pb"
+        }
+      ],
+      "correct": "c",
+      "explanation": "0,18 × 25 = 4,5 pb : une espérance, non une décision.",
+      "tags": [
+        "probabilites"
+      ]
+    },
+    {
+      "id": "C3.6-Q4",
+      "type": "mcq",
+      "prompt": "Budget de la grille de lecture : 1 + 4 + 4 + 3 + 3. Total ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "15 minutes"
+        },
+        {
+          "id": "b",
+          "text": "10 minutes"
+        },
+        {
+          "id": "c",
+          "text": "20 minutes"
+        },
+        {
+          "id": "d",
+          "text": "60 minutes"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La grille se remplit en 15 minutes ; en cas de dépassement on consigne l'inconnue.",
+      "tags": [
+        "grille"
+      ]
+    },
+    {
+      "id": "C3.6-Q5",
+      "type": "mcq",
+      "prompt": "Notes de grille (0 à 2) : 2, 2, 2, 1, 2, 2, 1, 2, 1, 0, 2, 2. Score sur 24 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "17"
+        },
+        {
+          "id": "b",
+          "text": "20"
+        },
+        {
+          "id": "c",
+          "text": "24"
+        },
+        {
+          "id": "d",
+          "text": "19"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La somme est 19 ; le score mesure la complétude, pas la justesse de l'analyse.",
+      "tags": [
+        "score"
+      ]
+    },
+    {
+      "id": "C3.6-Q6",
+      "type": "mcq",
+      "prompt": "Deux cotations de l'or d'heures et d'instruments différents. Que faire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Calculer l'écart et conclure"
+        },
+        {
+          "id": "b",
+          "text": "Ne pas les comparer pour mesurer la réaction à la publication"
+        },
+        {
+          "id": "c",
+          "text": "Les moyenner"
+        },
+        {
+          "id": "d",
+          "text": "Prendre la plus haute"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Un écart calculé entre deux instruments ou deux heures différents ne mesure pas la réaction ; on le consigne comme donnée non comparable.",
+      "tags": [
+        "methode"
+      ]
+    }
+  ],
+  "revision": 1
+}

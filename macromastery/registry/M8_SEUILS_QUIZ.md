@@ -4,6 +4,8 @@ Date : 31/10/2026. Script : `tools/audit_thresholds.py` (lecture seule). **Aucun
 
 > **Mise à jour du 31/10/2026 — décision 3 = R1 appliquée.** Les 73 quiz du tableau ci-dessous portent désormais `requiredCorrect` (entier, ⌈0,8 × n⌉), `passThreshold = requiredCorrect / n` et `passRule`. Questions, bonnes réponses et explications inchangées. Les constats et le tableau ci-dessous décrivent l'état **avant** application et sont conservés tels quels. Contrôles : `tools/verify_thresholds_r1.py`, `tools/audit_thresholds.py` (0 écart), `tools/verify_lessons.py` (contrôle des modules 0 à 7 aligné). Non traités (hors du périmètre autorisé) : les 51 quiz restés à 0,8 sans écart (leçons des modules 0 à 3 et 2 quiz de 10 questions) et les 12 quiz du module 8, qui n'ont pas de champ `requiredCorrect` ; les générateurs `tools/make_quiz.py` et `tools/make_assessment_m00.py` à `m07.py` produisent toujours 0,8. Voir `registry/M8_PREPARATION_JOURNAL.md`, entrées 13 à 20.
 
+> **Mise à jour du 23/11/2026 — R1 étendue à tous les quiz.** Les 63 quiz restants (51 des modules 0 à 4 et 7 restés à 0,8, dont 2 de 10 questions → 8 exigées, et les 12 du module 8) portent aussi `requiredCorrect` ; les 136 quiz suivent R1. Les générateurs (`make_quiz.py`, `make_assessment_m00.py` à `m08.py`) tirent leurs seuils de `tools/r1.py` ; `tools/verify_thresholds_r1.py` et `tools/verify_lessons.py` échouent si un quiz ou un générateur revient à un seuil écrit en dur. Détail : `registry/M8_PREPARATION_JOURNAL.md`, entrées 21 à 23.
+
 ## 1. Constat
 
 - 136 quiz audités : 92 de 8 questions, 42 de 6 questions, 2 de 10 questions.

@@ -1,7 +1,9 @@
 {
   "lessonId": "L1.03",
   "title": "Quiz — Productivité et croissance potentielle",
-  "passThreshold": 0.8,
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
   "note": "8 questions ; seuil 7/8. Sources : BLS (3/09/2026) et CBO (28/07/2026), résumés automatiques.",
   "questions": [
     {

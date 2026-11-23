@@ -1,0 +1,233 @@
+{
+  "lessonId": "L3.05",
+  "title": "Quiz — Lire le rapport en dix minutes",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : BLS (rapport de septembre 2026), FactSet (secondaire).",
+  "questions": [
+    {
+      "id": "L3.05-Q1",
+      "type": "mcq",
+      "prompt": "Dans quel ordre le protocole recommande-t-il de lire le rapport sur l'emploi ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Composition puis chômage puis consensus"
+        },
+        {
+          "id": "b",
+          "text": "Salaires puis chiffre principal puis synthèse"
+        },
+        {
+          "id": "c",
+          "text": "Chiffre principal, révisions, chômage, composition, salaires, sous-emploi, synthèse"
+        },
+        {
+          "id": "d",
+          "text": "Synthèse puis révisions"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le protocole en dix minutes fixe un ordre pour ne rien oublier d'essentiel et rendre les lectures comparables d'un mois à l'autre.",
+      "tags": [
+        "protocole"
+      ]
+    },
+    {
+      "id": "L3.05-Q2",
+      "type": "mcq",
+      "prompt": "Privé +46 000 et gouvernement −17 000 : quel est le total non agricole ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+29 000"
+        },
+        {
+          "id": "b",
+          "text": "+63 000"
+        },
+        {
+          "id": "c",
+          "text": "−29 000"
+        },
+        {
+          "id": "d",
+          "text": "+46 000"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le total non agricole est la somme du privé et du gouvernement : 46 000 − 17 000 = 29 000.",
+      "tags": [
+        "coherence"
+      ]
+    },
+    {
+      "id": "L3.05-Q3",
+      "type": "mcq",
+      "prompt": "Variations révisées +29 000, +133 000 et −10 000 : quelle est la moyenne sur trois mois ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ +17 000"
+        },
+        {
+          "id": "b",
+          "text": "Environ +51"
+        },
+        {
+          "id": "c",
+          "text": "Environ +152 000"
+        },
+        {
+          "id": "d",
+          "text": "Environ +51 000"
+        }
+      ],
+      "correct": "d",
+      "explanation": "(29 + 133 − 10) ÷ 3 = 50,67 milliers, soit environ +51 000, valeur publiée par le BLS.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.05-Q4",
+      "type": "mcq",
+      "prompt": "Quelle part des 7,109 millions de chômeurs a perdu son emploi ou terminé un emploi temporaire (3,200 millions) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ 10 %"
+        },
+        {
+          "id": "b",
+          "text": "Environ 45 %"
+        },
+        {
+          "id": "c",
+          "text": "Environ 63 %"
+        },
+        {
+          "id": "d",
+          "text": "Environ 4,5 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "3 200 ÷ 7 109 = 45,0 % ; les départs volontaires (741 000) représentent 10,4 %.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L3.05-Q5",
+      "type": "mcq",
+      "prompt": "Que faire d'un chiffre aberrant relevé dans un résumé automatique, comme −90 000 pour les assureurs ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'ignorer sans le dire"
+        },
+        {
+          "id": "b",
+          "text": "Le retenir tel quel"
+        },
+        {
+          "id": "c",
+          "text": "L'ajouter au total"
+        },
+        {
+          "id": "d",
+          "text": "L'écarter et le signaler, car il est incompatible avec −7 000 pour les activités financières"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Un contrôle de cohérence révèle l'anomalie ; la règle est de la signaler et de vérifier sur le texte.",
+      "tags": [
+        "methode"
+      ]
+    },
+    {
+      "id": "L3.05-Q6",
+      "type": "mcq",
+      "prompt": "Salaire +3,0 % et inflation +3,7 % sur 12 mois : quel est le salaire réel ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Environ +6,7 %"
+        },
+        {
+          "id": "b",
+          "text": "Environ +0,68 %"
+        },
+        {
+          "id": "c",
+          "text": "Environ −0,68 %"
+        },
+        {
+          "id": "d",
+          "text": "0 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Salaire réel = (1 + salaire nominal) ÷ (1 + inflation) − 1 : 1,030 ÷ 1,037 − 1 = −0,68 % sur douze mois.",
+      "tags": [
+        "salaire-reel"
+      ]
+    },
+    {
+      "id": "L3.05-Q7",
+      "type": "mcq",
+      "prompt": "Que montre un résidu de −5,4 milliers entre la somme des secteurs listés et le total ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Des secteurs non listés et des arrondis, à vérifier"
+        },
+        {
+          "id": "b",
+          "text": "Une erreur certaine du BLS"
+        },
+        {
+          "id": "c",
+          "text": "Que le total est faux"
+        },
+        {
+          "id": "d",
+          "text": "Qu'il n'y a pas de gouvernement"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le total inclut des secteurs non listés ; un petit résidu ne prouve rien mais doit être expliqué ou signalé.",
+      "tags": [
+        "residu"
+      ]
+    },
+    {
+      "id": "L3.05-Q8",
+      "type": "mcq",
+      "prompt": "Que ne doit jamais contenir la synthèse en trois phrases ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les faits"
+        },
+        {
+          "id": "b",
+          "text": "Une prévision de la décision de la banque centrale présentée comme certaine"
+        },
+        {
+          "id": "c",
+          "text": "Les calculs"
+        },
+        {
+          "id": "d",
+          "text": "L'interprétation clairement étiquetée"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La synthèse sépare faits, calculs et interprétation ; elle ne prévoit pas la décision de la banque centrale.",
+      "tags": [
+        "methode"
+      ]
+    }
+  ],
+  "revision": 1
+}

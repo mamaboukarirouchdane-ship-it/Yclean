@@ -1,0 +1,235 @@
+{
+  "lessonId": "L5.08",
+  "title": "Quiz — L'or en période de crise",
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
+  "note": "Seuil : 7 bonnes réponses sur 8.",
+  "questions": [
+    {
+      "id": "L5.08-Q1",
+      "type": "mcq",
+      "prompt": "Pourquoi l'or a-t-il baissé au quatrième trimestre 2008 selon la rétrospective du WGC ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que l'inflation baissait"
+        },
+        {
+          "id": "b",
+          "text": "Parce que Lehman a acheté de l'or"
+        },
+        {
+          "id": "c",
+          "text": "Dollar plus fort et ventes d'or pour obtenir de la liquidité"
+        },
+        {
+          "id": "d",
+          "text": "Parce que le pétrole montait"
+        }
+      ],
+      "correct": "c",
+      "explanation": "En crise de liquidité, on vend ce qui se vend ; le refuge agit plus tard (au-dessus du niveau d'avant-crise en mars 2009).",
+      "tags": [
+        "2008"
+      ]
+    },
+    {
+      "id": "L5.08-Q2",
+      "type": "mcq",
+      "prompt": "Mars 2020 : sommet 1 700 $ (6 mars) et creux 1 491 $ (20 mars). Variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ −12,3 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ −14,0 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ −6,0 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ +12,3 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "1 491 ÷ 1 700 − 1 = −12,3 % en 14 jours ; panique de liquidité et débouclage de positions à marge.",
+      "tags": [
+        "2020"
+      ]
+    },
+    {
+      "id": "L5.08-Q3",
+      "type": "mcq",
+      "prompt": "Février 2022 : que dit le WGC sur le refuge face aux rendements nominaux ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le dollar a chuté"
+        },
+        {
+          "id": "b",
+          "text": "Les rendements ont fait baisser l'or"
+        },
+        {
+          "id": "c",
+          "text": "Le refuge n'a eu aucun effet"
+        },
+        {
+          "id": "d",
+          "text": "La demande de refuge a dépassé l'effet de rendements plus élevés et d'un dollar légèrement plus fort"
+        }
+      ],
+      "correct": "d",
+      "explanation": "LBMA +6 % en février, à 1 910 $ ; un résidu du modèle est attribué à la géopolitique.",
+      "tags": [
+        "2022"
+      ]
+    },
+    {
+      "id": "L5.08-Q4",
+      "type": "mcq",
+      "prompt": "2 mars 2026 : l'or approche 5 400 $ (+2 %). Quelle séquence suit selon les sources lues ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hausse continue jusqu'à 6 000 $"
+        },
+        {
+          "id": "b",
+          "text": "Recul lié à la disparition des baisses de taux attendues, à un dollar plus fort et au pétrole"
+        },
+        {
+          "id": "c",
+          "text": "Aucune variation"
+        },
+        {
+          "id": "d",
+          "text": "Chute due uniquement à la liquidation"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Contrat à terme à 5 182,40 $ le 11 mars, FedWatch à 0,6 % de baisse, dollar à 99,20 : le canal taux prend le relais.",
+      "tags": [
+        "2026"
+      ]
+    },
+    {
+      "id": "L5.08-Q5",
+      "type": "mcq",
+      "prompt": "Quelle borne du creux de mi-mars 2026 est vraisemblablement erronée (sommet 5 589) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aucune"
+        },
+        {
+          "id": "b",
+          "text": "4 557 $ (−18,5 %)"
+        },
+        {
+          "id": "c",
+          "text": "Les deux"
+        },
+        {
+          "id": "d",
+          "text": "4 079 $ (−27 %), incompatible avec « 18-19 % »"
+        }
+      ],
+      "correct": "d",
+      "explanation": "5 589 → 4 557 = −18,5 % ; 5 589 → 4 079 = −27,0 % : incohérent avec le reste de l'article d'opinion.",
+      "tags": [
+        "incoherence"
+      ]
+    },
+    {
+      "id": "L5.08-Q6",
+      "type": "mcq",
+      "prompt": "Pourquoi 5 400 $ (2 mars) → 5 182,40 $ (11 mars) = −4,0 % n'est-elle qu'indicative ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que l'or n'a pas de prix"
+        },
+        {
+          "id": "b",
+          "text": "Parce que le dollar est fixe"
+        },
+        {
+          "id": "c",
+          "text": "Comptant et contrat à terme sont des instruments différents, à des heures différentes"
+        },
+        {
+          "id": "d",
+          "text": "Parce que le calcul est faux"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Spot (Gulf News) et contrat COMEX (Nasdaq) ne sont pas interchangeables.",
+      "tags": [
+        "instruments"
+      ]
+    },
+    {
+      "id": "L5.08-Q7",
+      "type": "mcq",
+      "prompt": "Contributions fictives : +3,0 ; +1,0 ; −2,0 ; −1,5 ; −2,5. Somme ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−2,0 %"
+        },
+        {
+          "id": "b",
+          "text": "+3,0 %"
+        },
+        {
+          "id": "c",
+          "text": "+0,5 %"
+        },
+        {
+          "id": "d",
+          "text": "−4,0 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Sans le canal de liquidation (−2,5), la somme serait +0,5 % : le signe dépend de la liquidation et des taux.",
+      "tags": [
+        "simulation"
+      ]
+    },
+    {
+      "id": "L5.08-Q8",
+      "type": "mcq",
+      "prompt": "Quel est l'énoncé le plus prudent sur l'or en crise ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'or monte toujours en crise"
+        },
+        {
+          "id": "b",
+          "text": "Son sens net dépend du type de choc et de l'équilibre entre plusieurs canaux"
+        },
+        {
+          "id": "c",
+          "text": "L'or baisse toujours en crise"
+        },
+        {
+          "id": "d",
+          "text": "Seul le refuge compte"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Quatre épisodes, quatre configurations : liquidité (baisse), géopolitique + énergie (hausse puis, en 2026, recul).",
+      "tags": [
+        "synthese"
+      ]
+    }
+  ],
+  "revision": 1
+}

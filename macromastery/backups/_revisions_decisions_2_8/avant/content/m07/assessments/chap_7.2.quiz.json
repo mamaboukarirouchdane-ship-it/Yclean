@@ -1,0 +1,180 @@
+{
+  "chapterId": "7.2",
+  "module": 7,
+  "title": "Quiz de chapitre 7.2 — Flux et liquidité (L7.04–L7.06)",
+  "passThreshold": 0.8333333333333334,
+  "requiredCorrect": 5,
+  "passRule": "5 bonnes réponses sur 6 (règle R1 : ⌈0,8 × 6⌉ = 5 ; seuil pédagogique provisoire)",
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C7.2-Q1",
+      "type": "mcq",
+      "prompt": "Encours d'un ETF (SIMULATION) : 500 puis 520 Md$ ; flux net du mois +5 Md$. Quel est le résidu de valorisation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−15 Md$"
+        },
+        {
+          "id": "b",
+          "text": "+20 Md$"
+        },
+        {
+          "id": "c",
+          "text": "+5 Md$"
+        },
+        {
+          "id": "d",
+          "text": "+15 Md$"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Variation d'encours 20 ; flux 5 ; résidu = 20 − 5 = 15 Md$, effet de valorisation estimé, non mesure exacte du prix.",
+      "tags": [
+        "residu"
+      ]
+    },
+    {
+      "id": "C7.2-Q2",
+      "type": "mcq",
+      "prompt": "10 tonnes correspondent à environ combien d'onces troy ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 3 215 oz"
+        },
+        {
+          "id": "b",
+          "text": "≈ 321 507 oz"
+        },
+        {
+          "id": "c",
+          "text": "≈ 31 103 oz"
+        },
+        {
+          "id": "d",
+          "text": "≈ 10 000 oz"
+        }
+      ],
+      "correct": "b",
+      "explanation": "1 t = 1 000 000 g ÷ 31,1034768 = 32 150,7466 oz ; 10 t ≈ 321 507 oz.",
+      "tags": [
+        "unites"
+      ]
+    },
+    {
+      "id": "C7.2-Q3",
+      "type": "mcq",
+      "prompt": "Flux d'ETF mensuels juillet +3, août +18, septembre +10 Md$. Somme glissante sur trois mois à fin septembre ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+13 Md$"
+        },
+        {
+          "id": "b",
+          "text": "+10 Md$"
+        },
+        {
+          "id": "c",
+          "text": "+21 Md$"
+        },
+        {
+          "id": "d",
+          "text": "+31 Md$"
+        }
+      ],
+      "correct": "d",
+      "explanation": "3 + 18 + 10 = 31 ; on somme des flux entre eux, jamais des flux avec des variations d'encours.",
+      "tags": [
+        "glissante"
+      ]
+    },
+    {
+      "id": "C7.2-Q4",
+      "type": "mcq",
+      "prompt": "Les achats officiels de juillet (31/07) ont été publiés le 03/09. Quel délai de publication ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "7 jours"
+        },
+        {
+          "id": "b",
+          "text": "3 jours"
+        },
+        {
+          "id": "c",
+          "text": "34 jours"
+        },
+        {
+          "id": "d",
+          "text": "30 jours"
+        }
+      ],
+      "correct": "c",
+      "explanation": "31/07 → 03/09 = 34 jours : une donnée tardive ne renseigne pas sur le présent.",
+      "tags": [
+        "delai"
+      ]
+    },
+    {
+      "id": "C7.2-Q5",
+      "type": "mcq",
+      "prompt": "Que sont les 187 t du T1 2026 reclassées lors de la révision de 244 à 57 t ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une reclassification vers la demande hors bourse (OTC), ni achats ajoutés ni achats disparus"
+        },
+        {
+          "id": "b",
+          "text": "Des achats supplémentaires"
+        },
+        {
+          "id": "c",
+          "text": "Des ventes de banques centrales"
+        },
+        {
+          "id": "d",
+          "text": "Des erreurs de conversion"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le communiqué du T2 2026 décrit une reclassification : elle n'est pas à interpréter comme des achats additionnels ou disparus.",
+      "tags": [
+        "revision"
+      ]
+    },
+    {
+      "id": "C7.2-Q6",
+      "type": "mcq",
+      "prompt": "Des flux d'ETF positifs signifient-ils que les spéculateurs achètent des contrats ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui, toujours"
+        },
+        {
+          "id": "b",
+          "text": "Non : variation d'avoirs physiques de fonds et exposition sur contrats sont des natures différentes"
+        },
+        {
+          "id": "c",
+          "text": "Oui, avec un mois de retard"
+        },
+        {
+          "id": "d",
+          "text": "Seulement en Asie"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Assimiler flux d'ETF et achats spéculatifs est une erreur de nature de la donnée (L7.04, L7.06).",
+      "tags": [
+        "natures"
+      ]
+    }
+  ],
+  "revision": 1
+}

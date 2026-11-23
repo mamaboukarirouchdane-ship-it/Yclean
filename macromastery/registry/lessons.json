@@ -3657,14 +3657,16 @@
         "[mineure] L8.01 : écart consigné non résolu entre la base implicite d'octobre 2023 (≈ 1 870 $ pour +6,8 % et 1 997 $) et la mention « sous 1 850 $ » à la fin de septembre.",
         "[mineure] L8.01 : page WGC des flux d'ETF d'octobre 2023 affiche « Data as of 23 October, 2026 » (incohérent avec la date de 2023) ; tonnage global des flux non fourni (−38 t dans le commentaire, −37 t d'avoirs sur la page ETF).",
         "[mineure] L8.01 : indice GPR : base de normalisation et valeurs récentes non lues ; non utilisés dans les calculs.",
-        "[mineure] L8.01 : l'épisode de 2026 (Banque mondiale, Fed) n'est cité que comme contexte ; L5.08 reste critique ouverte et n'est pas un prérequis."
+        "[mineure] L8.01 : l'épisode de 2026 (Banque mondiale, Fed) n'est cité que comme contexte ; L5.08 reste critique ouverte et n'est pas un prérequis.",
+        "[importante] L8.01 : quiz révision 3 (23/11/2026, décision 2, campagne de révision 3 des QCM du module 8) : distracteurs allongés pour réduire l'indice de longueur ; bonnes réponses, lettres et explications inchangées ; relecture indépendante à l'aveugle NON réalisée (aucun relecteur indépendant disponible).",
+        "[importante] L8.01 révision 2 (23/11/2026, décision 6) : chiffres du FMI (GFSR avril 2025, ch. 2) réécrits avec leur nature : ≈ 1 % sur un trimestre (VAR, choc mondial), ≈ 1 point dans le mois d'un événement majeur (régressions d'entreprises), impact moyen ≈ 3 % (certains ≈ 9 %) ; « 2,5 points sur les émergents » retiré, non retrouvé. Lecture par résumé de 100 000 caractères sur 115 658 : vérification intégrale ouverte (A33, A36)."
       ],
-      "revision": 1,
-      "quiz_revision": 2,
+      "revision": 2,
+      "quiz_revision": 3,
       "quiz_questions": 8,
-      "quiz_pass_rule": "7 bonnes réponses sur 8 (seuil stocké 0,875)",
+      "quiz_pass_rule": "7 bonnes réponses sur 8 (règle R1 : requiredCorrect = 7, seuil stocké 0,875)",
       "pilot_overlaps": [],
-      "updated": "2026-10-31"
+      "updated": "2026-11-23"
     },
     {
       "id": "L8.02",
@@ -3713,14 +3715,15 @@
         "[mineure] L8.02 : écarts internes WGC non résolus : avoirs d'ETF 3 836 t / 3 835 t au 31/03/2022 et 3 838,3 t reconstitués ; T3 2022 « environ 400 t » contre 445 t calculés.",
         "[mineure] L8.02 : traitement de l'or dans COFER non établi par la source lue ; COFER T1 2026 = un seul trimestre.",
         "[mineure] L8.02 : identifiant de source S-UST-05 choisi pour éviter le doublon S-UST-01 (L0.07) ; la renumérotation générale des doublons reste à faire à l'audit.",
-        "[critique, inchangé] L4.11 et L5.08 restent ouverts ; anomalie de périmètre CFTC ouverte ; aucune des trois n'est utilisée dans L8.02."
+        "[critique, inchangé] L4.11 et L5.08 restent ouverts ; anomalie de périmètre CFTC ouverte ; aucune des trois n'est utilisée dans L8.02.",
+        "[importante] L8.02 : quiz révision 3 (23/11/2026, décision 2, campagne de révision 3 des QCM du module 8) : distracteurs allongés pour réduire l'indice de longueur ; bonnes réponses, lettres et explications inchangées ; relecture indépendante à l'aveugle NON réalisée (aucun relecteur indépendant disponible)."
       ],
       "revision": 2,
-      "quiz_revision": 2,
+      "quiz_revision": 3,
       "quiz_questions": 8,
-      "quiz_pass_rule": "7 bonnes réponses sur 8 (seuil stocké 0,875)",
+      "quiz_pass_rule": "7 bonnes réponses sur 8 (règle R1 : requiredCorrect = 7, seuil stocké 0,875)",
       "pilot_overlaps": [],
-      "updated": "2026-10-31"
+      "updated": "2026-11-23"
     },
     {
       "id": "L8.03",
@@ -3774,14 +3777,15 @@
         "[mineure] L8.03 : LBMA T4 2025 : plus haut 4 481,85 $ (tableau) contre 4 338,25 $ (texte, 17/10) : contradiction interne non résolue ; fixing de fin 2024 non précisé (AM/PM).",
         "[mineure] L8.03 : OANDA (−3,3 % à 2 658 $, non daté) et Reuters (−2,8 % à 2 667,19 $, 06/11) pour la même période : non réconciliés ; baseline de Reuters non précisée.",
         "[mineure] L8.03 : relais WGC/Nasdaq (flux d'ETF −809 M$, positions −74 t) non daté ; Reuters du 23/11/2016 et du 29/12/2016 sans date précise.",
-        "[critique, inchangé] L4.11 et L5.08 restent ouverts ; anomalie de périmètre CFTC ouverte ; aucune des trois n'est utilisée dans L8.03."
+        "[critique, inchangé] L4.11 et L5.08 restent ouverts ; anomalie de périmètre CFTC ouverte ; aucune des trois n'est utilisée dans L8.03.",
+        "[importante] L8.03 : quiz révision 4 (23/11/2026, décision 2, campagne de révision 3 des QCM du module 8) : distracteurs allongés pour réduire l'indice de longueur ; bonnes réponses, lettres et explications inchangées ; relecture indépendante à l'aveugle NON réalisée (aucun relecteur indépendant disponible)."
       ],
       "revision": 2,
-      "quiz_revision": 3,
+      "quiz_revision": 4,
       "quiz_questions": 8,
-      "quiz_pass_rule": "7 bonnes réponses sur 8 (seuil stocké 0,875)",
+      "quiz_pass_rule": "7 bonnes réponses sur 8 (règle R1 : requiredCorrect = 7, seuil stocké 0,875)",
       "pilot_overlaps": [],
-      "updated": "2026-10-31"
+      "updated": "2026-11-23"
     },
     {
       "id": "L8.04",
@@ -3837,14 +3841,16 @@
         "[importante] L8.04 : aucune causalité établie entre annonces tarifaires et prix de l'or ; contextes monétaires 2018-2019 et 2025 différents ; or exclu des droits en 2025.",
         "[mineure] L8.04 : anomalies de données conservées : LBMA 2025 (4 481,85 $ au tableau / 4 338,25 $ dans le texte) ; LBMA T2 2025 (plus haut PM 3 322,90 $ le 16/04 contre plus haut AM 3 454,70 $ le 22/04) ; OMC (−0,2 −0,6 −0,8 = −1,6 contre −1,5) ; WGC 2019 (production minière 3 436,7 t / 3 463,7 t).",
         "[mineure] L8.04 : CNBC 2018 sans date précise ; cotation du 31/12/2018 intrajournalière.",
-        "[critique, inchangé] L4.11 et L5.08 restent ouverts ; anomalie de périmètre CFTC ouverte ; aucune des trois n'est utilisée dans L8.04."
+        "[critique, inchangé] L4.11 et L5.08 restent ouverts ; anomalie de périmètre CFTC ouverte ; aucune des trois n'est utilisée dans L8.04.",
+        "[importante] L8.04 : quiz révision 3 (23/11/2026, décision 2, campagne de révision 3 des QCM du module 8) : distracteurs allongés pour réduire l'indice de longueur ; bonnes réponses, lettres et explications inchangées ; relecture indépendante à l'aveugle NON réalisée (aucun relecteur indépendant disponible).",
+        "[importante] L8.04 révision 3 (23/11/2026, décision 6) : l'exclusion de l'or des droits (2-3 avril 2025) est présentée comme rapportée par la LBMA (source secondaire), non confirmée par le texte de l'ordre 14257 consulté (annexe II non vue) ; cinq passages et l'énoncé de L8.04-Q6 alignés. Annexe II à lire (A38 ouverte)."
       ],
-      "revision": 2,
-      "quiz_revision": 2,
+      "revision": 3,
+      "quiz_revision": 3,
       "quiz_questions": 8,
-      "quiz_pass_rule": "7 bonnes réponses sur 8 (seuil stocké 0,875)",
+      "quiz_pass_rule": "7 bonnes réponses sur 8 (règle R1 : requiredCorrect = 7, seuil stocké 0,875)",
       "pilot_overlaps": [],
-      "updated": "2026-10-31"
+      "updated": "2026-11-23"
     },
     {
       "id": "L8.05",
@@ -3887,14 +3893,15 @@
         "[mineure] L8.05 : pas de relecture indépendante ni de test auprès d'un apprenant.",
         "[critique, inchangé] L4.11 et L5.08 restent ouverts ; anomalie de périmètre CFTC ouverte ; aucune des trois n'est utilisée dans L8.05.",
         "[importante] L8.05 : la définition de « signal central » (VIX et S&P 500 ; l'or exclu) ajoutée en révision 2 est une convention pédagogique, non validée scientifiquement ; le choix des six indicateurs, des seuils et du score reste conventionnel.",
-        "[importante] L8.05 révision 3 (31/10/2026, décision 1 = A de l'utilisateur) : définition du signal central conservée sans changement ; sous-section « Limites de la convention du signal central » ajoutée en 4.5 (statut de convention pédagogique, non de règle scientifique universelle ; sept limites). Validation pédagogique toujours requise ; réexamen prévu après lecture des séries du VIX et du S&P 500."
+        "[importante] L8.05 révision 3 (31/10/2026, décision 1 = A de l'utilisateur) : définition du signal central conservée sans changement ; sous-section « Limites de la convention du signal central » ajoutée en 4.5 (statut de convention pédagogique, non de règle scientifique universelle ; sept limites). Validation pédagogique toujours requise ; réexamen prévu après lecture des séries du VIX et du S&P 500.",
+        "[importante] L8.05 : quiz révision 3 (23/11/2026, décision 2, campagne de révision 3 des QCM du module 8) : distracteurs allongés pour réduire l'indice de longueur ; bonnes réponses, lettres et explications inchangées ; relecture indépendante à l'aveugle NON réalisée (aucun relecteur indépendant disponible)."
       ],
       "revision": 3,
-      "quiz_revision": 2,
+      "quiz_revision": 3,
       "quiz_questions": 8,
-      "quiz_pass_rule": "7 bonnes réponses sur 8 (seuil stocké 0,875)",
+      "quiz_pass_rule": "7 bonnes réponses sur 8 (règle R1 : requiredCorrect = 7, seuil stocké 0,875)",
       "pilot_overlaps": [],
-      "updated": "2026-10-31"
+      "updated": "2026-11-23"
     },
     {
       "id": "L8.06",
@@ -3947,14 +3954,16 @@
         "[importante] L8.06 : résultat du T2 2022 (Brent) non lu : prévision EIA de 116 $ non comparée à un observé.",
         "[mineure] L8.06 : anomalies conservées : pétrole 1990 (22/21 $ avant l'invasion ; pic ≈ 40/46 $) ; or 14/09/2001 (300 $ contre 295 $) ; Brent du 24/10/1990 imprimé « 30-45 $ » ; plus haut/bas annuels de sites de données sans date.",
         "[mineure] L8.06 : Northern Miner (S-NM-01) lu sur un seul paragraphe (paywall) ; texte de l'arrêt de la date du 17/01/1991 (heure) non lu.",
-        "[critique, inchangé] L4.11 et L5.08 restent ouverts ; anomalie de périmètre CFTC ouverte ; aucune des trois n'est utilisée dans L8.06."
+        "[critique, inchangé] L4.11 et L5.08 restent ouverts ; anomalie de périmètre CFTC ouverte ; aucune des trois n'est utilisée dans L8.06.",
+        "[importante] L8.06 : quiz révision 3 (23/11/2026, décision 2, campagne de révision 3 des QCM du module 8) : distracteurs allongés pour réduire l'indice de longueur ; bonnes réponses, lettres et explications inchangées ; relecture indépendante à l'aveugle NON réalisée (aucun relecteur indépendant disponible).",
+        "[importante] L8.06 révision 2 (23/11/2026, décision 6) : tolérance de couverture définie (couvert = date de l'horizon ou séance suivante ≤ 3 j ; partiel = fenêtre ± 20 % de l'horizon, soit ± 1, ± 6, ± 18 jours, ou base différente, ou période déclarée) ; convention pédagogique provisoire, non validée ; reproduit les 11 classements du module (tools/checks/L8.06.py)."
       ],
-      "revision": 1,
-      "quiz_revision": 2,
+      "revision": 2,
+      "quiz_revision": 3,
       "quiz_questions": 8,
-      "quiz_pass_rule": "7 bonnes réponses sur 8 (seuil stocké 0,875)",
+      "quiz_pass_rule": "7 bonnes réponses sur 8 (règle R1 : requiredCorrect = 7, seuil stocké 0,875)",
       "pilot_overlaps": [],
-      "updated": "2026-10-31"
+      "updated": "2026-11-23"
     },
     {
       "id": "L8.07",
@@ -4000,14 +4009,16 @@
         "[importante] L8.07 : date de la baisse à 0-1/4 % (2008), date de fermeture de SVB, taux du BTFP et rapport complet de la Fed sur SVB (risque de taux, dépôts non assurés) non lus ; rapport de février 2009 lu sur 100 000 caractères.",
         "[importante] L8.07 : facteurs concurrents non mesurés en mars 2023 (repricing de la Fed, flux d'ETF, achats officiels de 228 t au T1) ; l'ordre « vente puis refuge » reste une hypothèse.",
         "[mineure] L8.07 : relais (CNBC/NBC pour le WGC, sites de données) ; absence de relecture indépendante.",
-        "[critique, inchangé] L4.11 et L5.08 restent ouverts ; anomalie de périmètre CFTC ouverte ; aucune des trois n'est utilisée dans L8.07."
+        "[critique, inchangé] L4.11 et L5.08 restent ouverts ; anomalie de périmètre CFTC ouverte ; aucune des trois n'est utilisée dans L8.07.",
+        "[importante] L8.07 : quiz révision 4 (23/11/2026, décision 2, campagne de révision 3 des QCM du module 8) : distracteurs allongés pour réduire l'indice de longueur ; bonnes réponses, lettres et explications inchangées ; relecture indépendante à l'aveugle NON réalisée (aucun relecteur indépendant disponible).",
+        "[mineure] L8.07 révision 3 (23/11/2026, décision 6) : OMT décrites comme portant sur des maturités résiduelles « jusqu'à trois ans » ; la borne inférieure d'un an n'apparaît pas dans le résumé consulté et n'est plus affirmée (A37 ouverte jusqu'à lecture du texte)."
       ],
-      "revision": 2,
-      "quiz_revision": 3,
+      "revision": 3,
+      "quiz_revision": 4,
       "quiz_questions": 8,
-      "quiz_pass_rule": "7 bonnes réponses sur 8 (seuil stocké 0,875)",
+      "quiz_pass_rule": "7 bonnes réponses sur 8 (règle R1 : requiredCorrect = 7, seuil stocké 0,875)",
       "pilot_overlaps": [],
-      "updated": "2026-10-31"
+      "updated": "2026-11-23"
     },
     {
       "id": "L8.08",
@@ -4044,14 +4055,15 @@
         "[importante] L8.08 : étude de cas de mars 2023 fondée sur des résumés automatiques ; séries quotidiennes (or, dollar, rendements) non lues ; dates D1-D3 = repères d'étude ; aucune décision réelle, aucune performance.",
         "[importante] L8.08 : dimensionnement des positions et limites de risque renvoyés au module 11 (non rédigé) ; la leçon ne les traite pas.",
         "[mineure] L8.08 : exemples SIMULATION simplifiés (espérance conditionnelle, journal) ; pas de relecture indépendante.",
-        "[critique, inchangé] L4.11 et L5.08 restent ouverts ; anomalie de périmètre CFTC ouverte ; aucune des trois n'est utilisée dans L8.08."
+        "[critique, inchangé] L4.11 et L5.08 restent ouverts ; anomalie de périmètre CFTC ouverte ; aucune des trois n'est utilisée dans L8.08.",
+        "[importante] L8.08 : quiz révision 3 (23/11/2026, décision 2, campagne de révision 3 des QCM du module 8) : distracteurs allongés pour réduire l'indice de longueur ; bonnes réponses, lettres et explications inchangées ; relecture indépendante à l'aveugle NON réalisée (aucun relecteur indépendant disponible)."
       ],
       "revision": 1,
-      "quiz_revision": 2,
+      "quiz_revision": 3,
       "quiz_questions": 8,
-      "quiz_pass_rule": "7 bonnes réponses sur 8 (seuil stocké 0,875)",
+      "quiz_pass_rule": "7 bonnes réponses sur 8 (règle R1 : requiredCorrect = 7, seuil stocké 0,875)",
       "pilot_overlaps": [],
-      "updated": "2026-10-31"
+      "updated": "2026-11-23"
     }
   ]
 }

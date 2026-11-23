@@ -3,9 +3,22 @@
   "module": 8,
   "title": "Examen final du module 8 — Géopolitique et risques mondiaux",
   "durationMinutes": 120,
+  "durationStatus": "Hypothèse non validée : durée à fixer après essais chronométrés (registry/M8_PROTOCOLE_ESSAIS_CHRONOMETRES.md)",
   "passThreshold": 0.7,
   "passPoints": 70,
-  "note": "18 QCM (2 points) + 5 calculs (3 points) + 6 analyses (49 points) = 100 points ; seuil provisoire de réussite 70/100, à valider scientifiquement et pédagogiquement. Barème par section : A 20, B 20, C 15, D 15, E 15, F 15. Les données sont fictives (SIMULATION) sauf mention contraire ; aucune donnée postérieure à la date de chaque cas ne doit être utilisée. Une bonne analyse fondamentale ne garantit pas une transaction gagnante.",
+  "sectionMinimums": {
+    "A": 10,
+    "D": 8,
+    "F": 8
+  },
+  "passRule": "Réussite : total ≥ 70/100 ET minimum atteint dans chacune des sections A (10/20), D (8/15) et F (8/15) ; aucun minimum pour B, C et E.",
+  "scoringRules": [
+    "Chaque tâche d'analyse est notée 0, moitié ou plein, selon des descripteurs écrits avant la correction.",
+    "Une erreur de calcul reportée dans une étape suivante correcte n'est pas sanctionnée deux fois.",
+    "Toute réponse qui présente une prévision de prix ou une certitude de gain perd les points de la tâche de conclusion concernée.",
+    "L'usage de données postérieures à la date du cas est interdit."
+  ],
+  "note": "Barème v2 (23/11/2026) : 18 QCM (1 point) + 5 calculs (3 points) + 6 analyses (67 points) = 100 points ; réussite provisoire : 70/100 et minima A 10/20, D 8/15, F 8/15, à valider scientifiquement et pédagogiquement. Durée de 120 minutes : hypothèse non validée. Barème par section : A 20, B 20, C 15, D 15, E 15, F 15. Les données sont fictives (SIMULATION) sauf mention contraire ; aucune donnée postérieure à la date de chaque cas ne doit être utilisée. Une bonne analyse fondamentale ne garantit pas une transaction gagnante.",
   "sections": [
     {
       "id": "A",
@@ -67,7 +80,7 @@
       "tags": [
         "statuts"
       ],
-      "points": 2
+      "points": 1
     },
     {
       "id": "EX8-Q2",
@@ -89,7 +102,7 @@
         },
         {
           "id": "d",
-          "text": "Dans aucune couche, car une annonce non chiffrée n'a pas de statut"
+          "text": "Dans aucune couche, car une annonce non chiffrée n'a pas de statut tant que le montant des sanctions n'est pas connu"
         }
       ],
       "correct": "a",
@@ -97,7 +110,7 @@
       "tags": [
         "sanctions"
       ],
-      "points": 2
+      "points": 1
     },
     {
       "id": "EX8-Q3",
@@ -107,11 +120,11 @@
       "options": [
         {
           "id": "a",
-          "text": "Elle se déduit de la différence entre les deux candidats dans les sondages de la veille"
+          "text": "Elle se déduit de la différence entre les deux candidats dans les sondages de la veille, rapportée à la marge d'erreur publiée"
         },
         {
           "id": "b",
-          "text": "Elle est égale au mouvement de prix du lendemain de la proclamation"
+          "text": "Elle est égale au mouvement de prix du lendemain de la proclamation, mesuré sur le même instrument et au même horaire"
         },
         {
           "id": "c",
@@ -128,7 +141,7 @@
         "election",
         "surprise"
       ],
-      "points": 2
+      "points": 1
     },
     {
       "id": "EX8-Q4",
@@ -159,7 +172,7 @@
         "tarifs",
         "fenetre"
       ],
-      "points": 2
+      "points": 1
     },
     {
       "id": "EX8-Q5",
@@ -169,11 +182,11 @@
       "options": [
         {
           "id": "a",
-          "text": "Nul, car les taux n'affectent que les devises et jamais les métaux"
+          "text": "Nul, car les taux n'affectent que les devises et les obligations, les métaux précieux ne réagissant qu'au dollar"
         },
         {
           "id": "b",
-          "text": "Toujours haussier, car l'or est un refuge contre tout resserrement monétaire"
+          "text": "Haussier dans tous les cas, car l'or protège le portefeuille contre le resserrement monétaire et la hausse des taux nominaux"
         },
         {
           "id": "c",
@@ -190,7 +203,7 @@
         "canaux",
         "taux"
       ],
-      "points": 2
+      "points": 1
     },
     {
       "id": "EX8-Q6",
@@ -220,7 +233,7 @@
       "tags": [
         "attribution"
       ],
-      "points": 2
+      "points": 1
     },
     {
       "id": "EX8-Q7",
@@ -238,7 +251,7 @@
         },
         {
           "id": "c",
-          "text": "Le choc est devenu structurel, car le prix moyen est resté élevé toute l'année"
+          "text": "Le choc est devenu structurel, car le prix moyen est resté élevé toute l'année, à 100 $, malgré le point bas de décembre"
         },
         {
           "id": "d",
@@ -251,7 +264,7 @@
         "energie",
         "duree"
       ],
-      "points": 2
+      "points": 1
     },
     {
       "id": "EX8-Q8",
@@ -261,7 +274,7 @@
       "options": [
         {
           "id": "a",
-          "text": "Risk-off, car le score est positif et la majorité des signaux n'est pas contredite"
+          "text": "Risk-off, car le score est positif et la majorité des signaux n'est pas contredite par les deux signaux contraires"
         },
         {
           "id": "b",
@@ -273,7 +286,7 @@
         },
         {
           "id": "d",
-          "text": "Il faut abaisser le seuil à +2 pour pouvoir produire un verdict"
+          "text": "Il faut abaisser le seuil à +2 pour pouvoir produire un verdict, puisque la règle vise à trancher chaque séance"
         }
       ],
       "correct": "b",
@@ -282,7 +295,7 @@
         "matrice",
         "regle"
       ],
-      "points": 2
+      "points": 1
     },
     {
       "id": "EX8-Q9",
@@ -312,7 +325,7 @@
       "tags": [
         "regime"
       ],
-      "points": 2
+      "points": 1
     },
     {
       "id": "EX8-Q10",
@@ -326,7 +339,7 @@
         },
         {
           "id": "b",
-          "text": "Que le régime durera au moins une semaine, comme le montrent les épisodes historiques de stress géopolitique"
+          "text": "Que le régime durera au moins une semaine, comme le montrent les épisodes historiques de stress géopolitique étudiés au module"
         },
         {
           "id": "c",
@@ -343,7 +356,7 @@
         "regime",
         "persistance"
       ],
-      "points": 2
+      "points": 1
     },
     {
       "id": "EX8-Q11",
@@ -373,7 +386,7 @@
       "tags": [
         "couverture"
       ],
-      "points": 2
+      "points": 1
     },
     {
       "id": "EX8-Q12",
@@ -404,7 +417,7 @@
         "duree",
         "donnees"
       ],
-      "points": 2
+      "points": 1
     },
     {
       "id": "EX8-Q13",
@@ -434,7 +447,7 @@
       "tags": [
         "durees"
       ],
-      "points": 2
+      "points": 1
     },
     {
       "id": "EX8-Q14",
@@ -465,7 +478,7 @@
         "liquidite",
         "solvabilite"
       ],
-      "points": 2
+      "points": 1
     },
     {
       "id": "EX8-Q15",
@@ -496,7 +509,7 @@
         "bancaire",
         "souverain"
       ],
-      "points": 2
+      "points": 1
     },
     {
       "id": "EX8-Q16",
@@ -527,7 +540,7 @@
         "mars2023",
         "hypothese"
       ],
-      "points": 2
+      "points": 1
     },
     {
       "id": "EX8-Q17",
@@ -557,7 +570,7 @@
       "tags": [
         "abstention"
       ],
-      "points": 2
+      "points": 1
     },
     {
       "id": "EX8-Q18",
@@ -587,7 +600,7 @@
       "tags": [
         "decision"
       ],
-      "points": 2
+      "points": 1
     }
   ],
   "calculations": [
@@ -683,7 +696,14 @@
         "Facteurs simultanés : dollar −0,8 % et publication d'emploi sous l'attente le même jour ; surprise du décret non mesurable faute d'attentes ; coïncidence non expliquée tant que le canal n'est pas vérifié",
         "Non permis : attribution causale, surprise, prévision du gestionnaire, effet de l'application du 10 avril ; manquent les attentes préalables, les prix intrajournaliers, les parts réelles d'importations concernées"
       ],
-      "points": 12
+      "points": 16,
+      "taskPoints": [
+        4,
+        4,
+        3,
+        3,
+        2
+      ]
     },
     {
       "id": "EX8-A2",
@@ -703,7 +723,13 @@
         "Chaque canal agit dans les deux sens selon la réaction de la banque centrale, du dollar et des taux réels ; la grille oblige à écrire les deux directions",
         "Conclusion permise : aucun effet sur l'or n'est établi ; les données couvrent des canaux macroéconomiques, pas l'or ; données manquantes : prix de l'or, taux réels, dollar mondial, flux"
       ],
-      "points": 8
+      "points": 11,
+      "taskPoints": [
+        3,
+        3,
+        2,
+        3
+      ]
     },
     {
       "id": "EX8-A3",
@@ -723,7 +749,13 @@
         "Hypothèses : stress de liquidité (vente d'actifs liquides), dollar en hausse, hausse des taux réels ou positionnement ; aucune n'est démontrée par une séance",
         "Non permis : cause du stress, persistance, direction future de l'or ; les seuils sont des conventions pédagogiques, non scientifiquement validées"
       ],
-      "points": 6
+      "points": 9,
+      "taskPoints": [
+        3,
+        2,
+        2,
+        2
+      ]
     },
     {
       "id": "EX8-A4",
@@ -743,7 +775,13 @@
         "Le commentaire est une interprétation non sourcée : il ne permet pas de décréter le structurel",
         "Non permis : conclure que l'effet a disparu ou persisté à +90 jours ; seule une partie de la trajectoire est documentée, sans reconstitution de prix"
       ],
-      "points": 6
+      "points": 9,
+      "taskPoints": [
+        3,
+        3,
+        1,
+        2
+      ]
     },
     {
       "id": "EX8-A5",
@@ -765,7 +803,14 @@
         "Liquidité : accès à des fonds de court terme contre garanties ; solvabilité : recapitalisation, garantie ou reprise ; les deux ne résolvent pas le même problème",
         "Hypothèse : besoin de liquidités et dollar en hausse peuvent faire vendre l'or avant une éventuelle demande de refuge ; ordre non systématique et non démontré par un épisode seul ; variations de 2008 non comparables sans séries harmonisées"
       ],
-      "points": 6
+      "points": 9,
+      "taskPoints": [
+        1,
+        2,
+        2,
+        2,
+        2
+      ]
     },
     {
       "id": "EX8-A6",
@@ -789,10 +834,18 @@
         "Une espérance nulle et non robuste ne justifie pas d'agir ; « attendre » avec déclencheur n'est pas de l'abstention systématique, et le journal compte et justifie les décisions ; les prix après t + 2 h ne doivent pas modifier le jugement de qualité du processus (biais rétrospectif)",
         "Journal : date, événement et statut, sources, canaux, scénarios et probabilités, espérance et sensibilité, décision et déclencheur, invalidations, limites de l'information"
       ],
-      "points": 11
+      "points": 13,
+      "taskPoints": [
+        3,
+        2,
+        3,
+        2,
+        2,
+        1
+      ]
     }
   ],
   "totalPoints": 100,
-  "revision": 1,
+  "revision": 3,
   "status": "Rédigé — non validé scientifiquement"
 }

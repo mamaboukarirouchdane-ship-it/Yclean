@@ -1,0 +1,235 @@
+{
+  "lessonId": "L5.06",
+  "title": "Quiz — Banques centrales acheteuses",
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
+  "note": "Seuil : 7 bonnes réponses sur 8.",
+  "questions": [
+    {
+      "id": "L5.06-Q1",
+      "type": "mcq",
+      "prompt": "Quel est le motif le plus cité par les banques qui prévoient d'acheter de l'or (enquête WGC 2026) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La spéculation à court terme"
+        },
+        {
+          "id": "b",
+          "text": "Le rendement du coupon"
+        },
+        {
+          "id": "c",
+          "text": "La diversification des réserves (31 des 34 banques)"
+        },
+        {
+          "id": "d",
+          "text": "Les droits de douane"
+        }
+      ],
+      "correct": "c",
+      "explanation": "31 ÷ 34 = 91 % des banques prévoyant d'augmenter citent la diversification ; l'enquête mesure des intentions.",
+      "tags": [
+        "enquete"
+      ]
+    },
+    {
+      "id": "L5.06-Q2",
+      "type": "mcq",
+      "prompt": "45 % des 76 répondants prévoient d'acheter. Combien de banques environ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 34"
+        },
+        {
+          "id": "b",
+          "text": "≈ 45"
+        },
+        {
+          "id": "c",
+          "text": "≈ 76"
+        },
+        {
+          "id": "d",
+          "text": "≈ 20"
+        }
+      ],
+      "correct": "a",
+      "explanation": "0,45 × 76 = 34,2 ; échantillon auto-sélectionné de gestionnaires de réserves.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.06-Q3",
+      "type": "mcq",
+      "prompt": "Premier trimestre 2026 : 244 t puis 57 t après révision. Que conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les banques n'ont pas acheté"
+        },
+        {
+          "id": "b",
+          "text": "Le chiffre de 244 t est définitif"
+        },
+        {
+          "id": "c",
+          "text": "Les révisions sont négligeables"
+        },
+        {
+          "id": "d",
+          "text": "Les comparaisons trimestrielles dépendent de la version des données ; il faut dater les chiffres"
+        }
+      ],
+      "correct": "d",
+      "explanation": "57/244 − 1 = −76,6 % : les estimations sont instables.",
+      "tags": [
+        "revision"
+      ]
+    },
+    {
+      "id": "L5.06-Q4",
+      "type": "mcq",
+      "prompt": "T2 2026 : 288,9 t au total ; acheteurs et vendeurs itemisés : +127 t et −27 t. Que reste-t-il ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0 t"
+        },
+        {
+          "id": "b",
+          "text": "≈ 189 t non expliquées par la page lue"
+        },
+        {
+          "id": "c",
+          "text": "≈ 127 t"
+        },
+        {
+          "id": "d",
+          "text": "≈ 316 t"
+        }
+      ],
+      "correct": "b",
+      "explanation": "288,9 − 100 = 188,9 t, soit 65 % : achats non déclarés et autres éléments, non détaillés.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.06-Q5",
+      "type": "mcq",
+      "prompt": "Qu'est-ce qu'un transfert de stockage (exemple : 86 t de la banque néerlandaise vers Londres) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un swap"
+        },
+        {
+          "id": "b",
+          "text": "Un achat de 86 t"
+        },
+        {
+          "id": "c",
+          "text": "Une vente de 86 t"
+        },
+        {
+          "id": "d",
+          "text": "Un déplacement sans changement de propriété, distinct d'un achat"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Les mouvements de stockage ne sont pas des achats et ne doivent pas être ajoutés aux demandes officielles.",
+      "tags": [
+        "mesure"
+      ]
+    },
+    {
+      "id": "L5.06-Q6",
+      "type": "mcq",
+      "prompt": "Avoirs de la Chine : 2 346 t fin juin (WGC) et 2 196 t fin septembre (Kitco), avec 61 t d'achats déclarés entre-temps. Que faire ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Faire la moyenne"
+        },
+        {
+          "id": "b",
+          "text": "Retenir la valeur la plus basse"
+        },
+        {
+          "id": "c",
+          "text": "Signaler l'incohérence sans choisir une valeur"
+        },
+        {
+          "id": "d",
+          "text": "Ignorer les achats déclarés"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le niveau attendu serait 2 407 t ; l'écart (211 t) est inexpliqué : on le consigne en point à vérifier.",
+      "tags": [
+        "incoherence"
+      ]
+    },
+    {
+      "id": "L5.06-Q7",
+      "type": "mcq",
+      "prompt": "Avec 200 Md$ de réserves dont 8 % d'or à 4 060 $ l'once, quel tonnage pour atteindre 10 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 30,6 t"
+        },
+        {
+          "id": "b",
+          "text": "≈ 306 t"
+        },
+        {
+          "id": "c",
+          "text": "≈ 3,1 t"
+        },
+        {
+          "id": "d",
+          "text": "≈ 985 t"
+        }
+      ],
+      "correct": "a",
+      "explanation": "4 Md$ ÷ 4 060 = 985 222 oz ÷ 32 150,7 = 30,6 t (exemple fictif).",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.06-Q8",
+      "type": "mcq",
+      "prompt": "Des achats officiels records au T2 2026 ont coexisté avec un prix en recul depuis janvier. Quelle lecture est prudente ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les achats font toujours monter l'or"
+        },
+        {
+          "id": "b",
+          "text": "La demande officielle ne suffit pas à soutenir le prix à elle seule ; la causalité n'est pas testée"
+        },
+        {
+          "id": "c",
+          "text": "Les achats n'ont aucun effet"
+        },
+        {
+          "id": "d",
+          "text": "Les chiffres prouvent que les banques achètent sur repli"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Plusieurs lectures sont compatibles (achat sur repli, effet de frein, indépendance) ; les données lues ne tranchent pas.",
+      "tags": [
+        "interpretation"
+      ]
+    }
+  ],
+  "revision": 1
+}

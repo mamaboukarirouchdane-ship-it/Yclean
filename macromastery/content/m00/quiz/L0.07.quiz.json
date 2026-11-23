@@ -1,7 +1,9 @@
 {
   "lessonId": "L0.07",
   "title": "Quiz — Intérêt et valeur temps de l'argent : intérêts, actualisation et rendement",
-  "passThreshold": 0.8,
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
   "note": "Tous les chiffres des questions sont des calculs ou des exemples fictifs (SIMULATION), sauf l'exemple CFPB (1 000 à 5 %, 1 050 puis 1 102,50).",
   "questions": [
     {

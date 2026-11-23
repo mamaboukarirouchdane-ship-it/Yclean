@@ -1,0 +1,180 @@
+{
+  "chapterId": "2.1",
+  "module": 2,
+  "title": "Quiz de chapitre 2.1 — Fondements : mandats, indépendance, banques et monnaie (L2.01–L2.02)",
+  "passThreshold": 0.8333333333333334,
+  "requiredCorrect": 5,
+  "passRule": "5 bonnes réponses sur 6 (règle R1 : ⌈0,8 × 6⌉ = 5 ; seuil pédagogique provisoire)",
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C2.1-Q1",
+      "type": "mcq",
+      "prompt": "Combien de membres votants compte le FOMC et comment se répartissent-ils ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "12 : 7 gouverneurs, le président de New York et 4 autres présidents régionaux en rotation"
+        },
+        {
+          "id": "b",
+          "text": "7 : uniquement les gouverneurs"
+        },
+        {
+          "id": "c",
+          "text": "19 : tous les gouverneurs et tous les présidents régionaux"
+        },
+        {
+          "id": "d",
+          "text": "5 : les présidents régionaux seuls"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le FOMC compte douze votants : les sept gouverneurs, le président de la Banque de réserve de New York et quatre autres présidents qui votent en rotation annuelle.",
+      "tags": [
+        "fomc"
+      ]
+    },
+    {
+      "id": "C2.1-Q2",
+      "type": "mcq",
+      "prompt": "Cible de 2 % ; inflation de 1,0 % dans un cas et de 3,0 % dans l'autre. Que dit une cible symétrique ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aucun écart n'est un problème"
+        },
+        {
+          "id": "b",
+          "text": "Seul l'écart positif est un problème"
+        },
+        {
+          "id": "c",
+          "text": "Seul l'écart négatif est un problème"
+        },
+        {
+          "id": "d",
+          "text": "Les deux écarts, −1 et +1 point, sont également indésirables"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Une cible symétrique traite de la même manière les écarts à la hausse et à la baisse ; ici les écarts valent −1,0 et +1,0 point.",
+      "tags": [
+        "symetrie"
+      ]
+    },
+    {
+      "id": "C2.1-Q3",
+      "type": "mcq",
+      "prompt": "Que fait l'accord Trésor–Fed du 4 mars 1951 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Il instaure le plafonnement des rendements"
+        },
+        {
+          "id": "b",
+          "text": "Il met fin au plafonnement des rendements et sépare la gestion de la dette publique de la politique monétaire"
+        },
+        {
+          "id": "c",
+          "text": "Il supprime le FOMC"
+        },
+        {
+          "id": "d",
+          "text": "Il fixe le prix de l'or"
+        }
+      ],
+      "correct": "b",
+      "explanation": "L'accord de 1951 met fin au plafond de rendement imposé depuis 1942 et sépare la gestion de la dette de la politique monétaire (source : Federal Reserve History, lue par résumé).",
+      "tags": [
+        "1951"
+      ]
+    },
+    {
+      "id": "C2.1-Q4",
+      "type": "mcq",
+      "prompt": "M1 = 19 831,5 Md$ et M2 = 23 155,2 Md$ (Fed, juin 2026). Que vaut M2 − M1 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 000 Md$"
+        },
+        {
+          "id": "b",
+          "text": "43 986,7 Md$"
+        },
+        {
+          "id": "c",
+          "text": "332,4 Md$"
+        },
+        {
+          "id": "d",
+          "text": "3 323,7 Md$"
+        }
+      ],
+      "correct": "d",
+      "explanation": "23 155,2 − 19 831,5 = 3 323,7 Md$ : la partie de M2 qui n'est pas dans M1.",
+      "tags": [
+        "m1-m2"
+      ]
+    },
+    {
+      "id": "C2.1-Q5",
+      "type": "mcq",
+      "prompt": "Ratio de réserves de 10 % et dépôt initial de 1 000 : que donne le multiplicateur de manuel pour le maximum de dépôts ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "100"
+        },
+        {
+          "id": "b",
+          "text": "1 100"
+        },
+        {
+          "id": "c",
+          "text": "10 000"
+        },
+        {
+          "id": "d",
+          "text": "9 000 de dépôts totaux"
+        }
+      ],
+      "correct": "c",
+      "explanation": "1 000 ÷ 0,10 = 10 000, soit une création de 9 000 ; le modèle est critiqué car les réserves ne contraignent pas le crédit.",
+      "tags": [
+        "multiplicateur"
+      ]
+    },
+    {
+      "id": "C2.1-Q6",
+      "type": "mcq",
+      "prompt": "Depuis le 26 mars 2020, quel est le ratio de réserves obligatoires aux États-Unis ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0 %"
+        },
+        {
+          "id": "b",
+          "text": "3 %"
+        },
+        {
+          "id": "c",
+          "text": "10 %"
+        },
+        {
+          "id": "d",
+          "text": "20 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "La Fed a ramené les ratios à zéro ; le multiplicateur de manuel n'a plus de sens, ce qui illustre que le crédit n'est pas limité par un ratio de réserves.",
+      "tags": [
+        "reserves"
+      ]
+    }
+  ],
+  "revision": 1
+}

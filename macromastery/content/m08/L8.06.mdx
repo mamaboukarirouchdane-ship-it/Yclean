@@ -54,7 +54,14 @@ Les trois épisodes ne se ressemblent pas : un conflit à enjeu pétrolier direc
 | 3 mois | T0 + 90 jours | 1990 : 31/10 · 2001 : 10/12 · 2022 : 25/05 |
 | Structurel | changements durables des flux, des institutions, des prix relatifs | à documenter par des données de périodes longues |
 
-**Règle de couverture.** Pour chaque case, une seule de trois mentions : **couvert** (valeur lue à une date proche de l'horizon, même instrument), **partiel** (valeur lue mais à une date ou une base différente, signalée) ou **non couvert**. On ne remplit jamais une case non couverte.
+**Règle de couverture.** Pour chaque case, une seule de trois mentions : **couvert**, **partiel** ou **non couvert**. On ne remplit jamais une case non couverte.
+
+**[Définition de cours] Tolérance (convention pédagogique provisoire, non validée).** Les jours sont des jours calendaires comptés depuis T0 (T0 = jour 0).
+- **Couvert** : valeur du **même instrument et de la même base** (même fixing ou même horaire) lue **à la date de l'horizon** ; si ce jour est sans cotation, à la **première séance qui suit** (au plus 3 jours après). Pour la case « réaction immédiate », toute valeur lue entre le jour 0 et le jour 4 est couverte.
+- **Partiel** : valeur lue **dans une fenêtre de ± 20 % de l'horizon** autour de sa date, mais pas à la date elle-même, soit **± 1 jour** pour 7 jours, **± 6 jours** pour 30 jours et **± 18 jours** pour 90 jours (20 % de l'horizon, arrondi à l'entier inférieur) ; ou valeur à la bonne date mais d'une **base différente** (autre fixing, autre instrument) ; ou valeur **datée seulement d'une période** qui contient l'horizon (« à l'automne »). L'écart est toujours **signalé** (date, base, rang en jours).
+- **Non couvert** : aucune valeur dans la fenêtre. Une valeur hors fenêtre se cite à sa propre date et à son propre rang ; elle ne couvre aucun horizon.
+
+Pourquoi une fenêtre proportionnelle : un écart de 5 jours est faible à 90 jours mais change la lecture à 7 jours. Le choix de 20 % est **une convention**, non un résultat statistique ; il reproduit tous les classements des exemples, exercices et évaluations du module (voir `tools/checks/L8.06.py`).
 
 ### 4.2 Transitoire, persistant, structurel
 
@@ -154,7 +161,7 @@ Quatre règles : (1) ne pas interpoler entre deux dates lointaines ; (2) ne pas 
 
 **[SIMULATION]** Choc fictif à T0 = 10/03. Données fictives lues : prix du 11/03 (100), du 24/03 (112), du 10/06 (104). Horizons : 7 jours = 17/03 ; 30 jours = 09/04 ; 90 jours = 08/06.
 
-**Classement.** Immédiat : 100 (couvert). 7 jours : non couvert (24/03 est le jour 14). 30 jours : non couvert. 90 jours : partiel (10/06 = jour 92, proche de l'horizon, même instrument). **Calcul :** 104/100 − 1 = **+4 %** entre le 11/03 et le 10/06 ; 112/100 − 1 = +12 % au 24/03. **Lecture.** On peut dire « +12 % deux semaines après, +4 % trois mois après » ; on ne peut pas dire « le prix a atteint un maximum au 24/03 » : les valeurs entre dates ne sont pas lues.
+**Classement.** Immédiat : 100 (couvert). 7 jours : non couvert (24/03 est le jour 14). 30 jours : non couvert. 90 jours : partiel (10/06 = jour 92, dans la fenêtre de ± 18 jours, même instrument, mais pas à la date de l'horizon). **Calcul :** 104/100 − 1 = **+4 %** entre le 11/03 et le 10/06 ; 112/100 − 1 = +12 % au 24/03. **Lecture.** On peut dire « +12 % deux semaines après, +4 % trois mois après » ; on ne peut pas dire « le prix a atteint un maximum au 24/03 » : les valeurs entre dates ne sont pas lues.
 
 ### 6.7 SIMULATION — trois scénarios de durée pour un choc fictif
 
@@ -202,7 +209,7 @@ Quatre règles : (1) ne pas interpoler entre deux dates lointaines ; (2) ne pas 
 <details>
 <summary>Correction</summary>
 
-T0 + 7 = 03/03/2022 ; + 30 = 26/03 ; + 90 = 25/05. Le 08/03 est le jour 12 : ni l'horizon de 7 jours ni celui de 30 : **non couvert** pour ces deux horizons. Une valeur n'est « couverte » que si elle est lue à une date proche de l'horizon, même instrument.
+T0 + 7 = 03/03/2022 ; + 30 = 26/03 ; + 90 = 25/05. Le 08/03 est le jour 12 : ni l'horizon de 7 jours ni celui de 30 : **non couvert** pour ces deux horizons. Une valeur n'est « couverte » que si elle est lue à la date de l'horizon (ou à la séance suivante s'il n'y a pas de cotation), même instrument ; dans la fenêtre de ± 20 % elle est « partielle » ; le jour 12 est hors des fenêtres de 7 jours (± 1) et de 30 jours (± 6).
 </details>
 
 **Exercice 2 — Quel calcul est permis ?** Parmi : (a) 1 672/2 069 − 1 ; (b) 275,30/278,60 − 1 ; (c) 300 → 275,30 ; (d) 362/383 − 1 ; (e) 28 $ (S-WIKI-01) → 20 $ (S-ERP-91). Classe-les.

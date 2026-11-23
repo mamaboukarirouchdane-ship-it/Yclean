@@ -3,6 +3,8 @@
 Date : 31/10/2026. Toutes les sources ci-dessous ont été consultées **uniquement par résumé automatique** (certaines tronquées). Aucune n'est lue intégralement : l'anomalie **A33 reste ouverte** jusqu'à lecture complète, consignée source par source. Les URL sont celles de `content/sources.md`. Les « informations à vérifier » sont les énoncés des leçons qui reposent sur la source.
 Règle de clôture d'une ligne : source lue en entier **par une personne ou un outil capable de la lire en entier**, avec date de lecture, version/millésime, et comparaison explicite avec l'énoncé de la leçon ; une divergence rouvre l'énoncé, jamais l'inverse.
 
+> **Mise à jour du 23/11/2026 — décision 7 = A.** Dossier documentaire local : `sources_documentaires/m08/` (catalogue de 98 références avec nature, priorité, niveau de lecture et limites ; script `tools/fetch_sources_m08.py`). **Aucun fichier obtenu à ce jour** : les 49 téléchargements de priorité 1 à 3 ont été refusés par la politique réseau de la session (A43). Aucune ligne ci-dessous ne change de statut.
+
 ## Priorité 1 — Textes juridiques et décisions officielles qui fondent des faits datés (à lire d'abord)
 
 | # | ID | Document | URL | Leçons | À vérifier |

@@ -2,6 +2,8 @@
   "lessonId": "L0.02",
   "title": "Quiz — Les acteurs des marchés et leurs motivations",
   "passThreshold": 0.8,
+  "requiredCorrect": 8,
+  "passRule": "8 bonnes réponses sur 10 (règle R1 : ⌈0,8 × 10⌉ = 8 ; seuil pédagogique provisoire)",
   "note": "Chiffres des questions de calcul : SIMULATION. Révision 2 du quiz (10 questions, seuil 8/10) ; révision 3 : Q4 actualisée avec les chiffres définitifs de la BRI (décembre 2025). Révision 4 : énoncé de Q5 précisé (« contrats à terme standardisés ») sans changer la réponse. Révision 5 : Q5 en texte brut, sans Markdown, pour la compatibilité avec la future interface. Q6 est volatile : voir review_when.",
   "questions": [
     {

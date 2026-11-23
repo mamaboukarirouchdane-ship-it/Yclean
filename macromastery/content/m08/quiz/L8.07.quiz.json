@@ -2,6 +2,8 @@
   "lessonId": "L8.07",
   "title": "Quiz — Crises bancaires et de dette souveraine",
   "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
   "note": "Seuil 80 % (7 sur 8)",
   "questions": [
     {
@@ -134,7 +136,7 @@
         },
         {
           "id": "c",
-          "text": "Elle ne concerne que les banques commerciales des pays de la zone euro, et jamais les États"
+          "text": "Elle ne concerne que les banques commerciales des pays de la zone euro, les États n'y intervenant qu'en dernier ressort"
         },
         {
           "id": "d",
@@ -158,7 +160,7 @@
         },
         {
           "id": "b",
-          "text": "Une citation exacte du discours et un effet mesuré sur les rendements souverains de la zone euro"
+          "text": "Une citation exacte du discours, la date du 27/07 et un effet mesuré sur les rendements souverains de la zone euro dans les jours suivants"
         },
         {
           "id": "c",
@@ -166,7 +168,7 @@
         },
         {
           "id": "d",
-          "text": "Le contenu détaillé du dispositif OMT annoncé par la BCE en septembre 2012, avec ses conditions"
+          "text": "Le contenu détaillé du dispositif OMT annoncé par la BCE en septembre 2012, avec ses conditions, ses montants et ses échéances"
         }
       ],
       "correct": "c",
@@ -191,7 +193,7 @@
         },
         {
           "id": "c",
-          "text": "Elle est démontrée fausse pour toute crise financière, quelle que soit sa nature"
+          "text": "Elle est démontrée fausse pour toute crise financière, puisque l'or a monté de 8,5 % pendant les faillites bancaires de mars"
         },
         {
           "id": "d",
@@ -220,7 +222,7 @@
         },
         {
           "id": "c",
-          "text": "Le coût de la résolution pour le fonds de garantie des dépôts, chiffré en milliards de dollars"
+          "text": "Le coût de la résolution pour le fonds de garantie des dépôts, chiffré en milliards de dollars, et la liste des déposants indemnisés"
         },
         {
           "id": "d",
@@ -235,6 +237,5 @@
       ]
     }
   ],
-  "revision": 3,
-  "passRule": "7 bonnes réponses sur 8 (seuil pédagogique provisoire)"
+  "revision": 4
 }

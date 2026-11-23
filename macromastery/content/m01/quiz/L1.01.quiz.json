@@ -1,7 +1,9 @@
 {
   "lessonId": "L1.01",
   "title": "Quiz — Le PIB",
-  "passThreshold": 0.8,
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
   "note": "8 questions ; seuil 7/8. Données : exemples fictifs et communiqué BEA du 30/09/2026 (résumé automatique).",
   "questions": [
     {

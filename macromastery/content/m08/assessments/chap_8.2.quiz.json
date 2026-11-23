@@ -3,7 +3,8 @@
   "module": 8,
   "title": "Quiz de chapitre 8.2 — Chocs et canaux : sanctions, élections, commerce (L8.02–L8.04)",
   "passThreshold": 0.8333333333333334,
-  "passRule": "5 bonnes réponses sur 6 (seuil pédagogique provisoire)",
+  "requiredCorrect": 5,
+  "passRule": "5 bonnes réponses sur 6 (règle R1 : ⌈0,8 × 6⌉ = 5 ; seuil pédagogique provisoire)",
   "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
   "questions": [
     {
@@ -134,15 +135,15 @@
         },
         {
           "id": "b",
-          "text": "Retenir la valeur la plus élevée, parce que la plus récente publication la corrige"
+          "text": "Retenir la valeur la plus élevée, parce que la publication la plus récente corrige l'autre et que le tableau fait foi"
         },
         {
           "id": "c",
-          "text": "Faire la moyenne des deux valeurs pour réduire l'erreur de saisie probable"
+          "text": "Faire la moyenne des deux valeurs pour réduire l'erreur de saisie probable, puis calculer les rendements sur cette moyenne"
         },
         {
           "id": "d",
-          "text": "Retenir la valeur la plus basse par prudence dans le calcul des rendements"
+          "text": "Retenir la valeur la plus basse par prudence dans le calcul des rendements, en signalant l'écart dans une note de bas de page"
         }
       ],
       "correct": "a",
@@ -159,7 +160,7 @@
       "options": [
         {
           "id": "a",
-          "text": "L'événement est la cause du mouvement, puisque la séquence des dates est établie"
+          "text": "L'événement est la cause du mouvement, puisque la séquence des dates est établie et que le sens du mouvement est cohérent"
         },
         {
           "id": "b",
@@ -167,7 +168,7 @@
         },
         {
           "id": "c",
-          "text": "L'événement n'a aucun effet sur l'or, puisque le mouvement n'a pas été anticipé"
+          "text": "L'événement n'a aucun effet sur l'or, puisque le mouvement n'a été anticipé ni par les sondages ni par les marchés à terme"
         },
         {
           "id": "d",
@@ -182,5 +183,5 @@
       ]
     }
   ],
-  "revision": 2
+  "revision": 3
 }

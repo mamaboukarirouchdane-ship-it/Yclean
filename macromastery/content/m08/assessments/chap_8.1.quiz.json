@@ -3,7 +3,8 @@
   "module": 8,
   "title": "Quiz de chapitre 8.1 — Cadre d'analyse du risque géopolitique (L8.01)",
   "passThreshold": 0.8333333333333334,
-  "passRule": "5 bonnes réponses sur 6 (seuil pédagogique provisoire)",
+  "requiredCorrect": 5,
+  "passRule": "5 bonnes réponses sur 6 (règle R1 : ⌈0,8 × 6⌉ = 5 ; seuil pédagogique provisoire)",
   "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
   "questions": [
     {
@@ -41,11 +42,11 @@
       "options": [
         {
           "id": "a",
-          "text": "Le produit prédit le niveau du prix à l'échéance avec une erreur inférieure à un point"
+          "text": "Le produit prédit le niveau du prix à l'échéance avec une erreur inférieure à un point, et il peut donc servir de prévision du prix du pétrole"
         },
         {
           "id": "b",
-          "text": "Les deux événements sont équivalents pour l'investisseur, puisque l'espérance est identique dans les deux cas"
+          "text": "Les deux événements sont équivalents pour l'investisseur, puisque l'espérance de hausse est identique (2,0 points) et que le produit résume le risque"
         },
         {
           "id": "c",
@@ -99,7 +100,7 @@
       "options": [
         {
           "id": "a",
-          "text": "Un effet d'un seul jour, identique pour tous les épisodes de l'échantillon, de façon systématique"
+          "text": "Un effet d'un seul jour, identique pour tous les épisodes de l'échantillon, que le FMI observe de façon systématique sur les actions"
         },
         {
           "id": "b",
@@ -107,7 +108,7 @@
         },
         {
           "id": "c",
-          "text": "Aucun effet mesurable : le FMI conclut que les chocs sont absorbés le jour même par les prix"
+          "text": "Aucun effet mesurable : le FMI conclut que les chocs géopolitiques sont absorbés le jour même par les prix des actions et des obligations"
         },
         {
           "id": "d",
@@ -128,11 +129,11 @@
       "options": [
         {
           "id": "a",
-          "text": "Une manchette de presse qui relie explicitement l'événement au mouvement, quel que soit le canal"
+          "text": "Une manchette de presse qui relie explicitement l'événement au mouvement de l'or, à condition qu'elle cite plusieurs analystes de marché reconnus"
         },
         {
           "id": "b",
-          "text": "La coïncidence des dates entre l'événement et le mouvement de l'or, dès lors que le sens paraît cohérent"
+          "text": "La coïncidence des dates entre l'événement et le mouvement de l'or, dès lors que le sens paraît cohérent avec le récit dominant de l'événement"
         },
         {
           "id": "c",
@@ -140,7 +141,7 @@
         },
         {
           "id": "d",
-          "text": "Aucune attribution n'est jamais permise, quelle que soit la qualité des données et des canaux vérifiés"
+          "text": "Aucune attribution n'est jamais permise, quelle que soit la qualité des données et des canaux vérifiés, même après examen des autres facteurs"
         }
       ],
       "correct": "c",
@@ -169,7 +170,7 @@
         },
         {
           "id": "d",
-          "text": "La rubrique 8, « Scénarios et invalidation » : on y inscrit les attentes de la veille de l'événement"
+          "text": "La rubrique 8, « Scénarios et invalidation » : on y inscrit les attentes de la veille de l'événement et leur source"
         }
       ],
       "correct": "a",
@@ -180,5 +181,5 @@
       ]
     }
   ],
-  "revision": 1
+  "revision": 2
 }

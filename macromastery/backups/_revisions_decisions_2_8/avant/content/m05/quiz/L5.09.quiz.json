@@ -1,0 +1,235 @@
+{
+  "lessonId": "L5.09",
+  "title": "Quiz — Courbe à terme, base et coût de portage",
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
+  "note": "Seuil : 7 bonnes réponses sur 8.",
+  "questions": [
+    {
+      "id": "L5.09-Q1",
+      "type": "mcq",
+      "prompt": "Quelle est la taille d'un contrat à terme sur l'or du COMEX (GC) et la variation minimale de prix ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "1 000 onces ; 0,01 $"
+        },
+        {
+          "id": "b",
+          "text": "1 once ; 1 $"
+        },
+        {
+          "id": "c",
+          "text": "100 onces troy ; 0,10 $ par once (10 $ par contrat)"
+        },
+        {
+          "id": "d",
+          "text": "100 grammes ; 0,10 $"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Règlement du COMEX, chapitre 113 : 100 onces troy, variation minimale de 0,10 $ par once, soit 10 $ par tick.",
+      "tags": [
+        "contrat"
+      ]
+    },
+    {
+      "id": "L5.09-Q2",
+      "type": "mcq",
+      "prompt": "Valeur notionnelle d'un contrat GC avec l'or à 4 060 $ l'once ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "406 000 $"
+        },
+        {
+          "id": "b",
+          "text": "4 060 $"
+        },
+        {
+          "id": "c",
+          "text": "40 600 $"
+        },
+        {
+          "id": "d",
+          "text": "4 060 000 $"
+        }
+      ],
+      "correct": "a",
+      "explanation": "100 oz × 4 060 $ = 406 000 $ de valeur notionnelle par contrat.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.09-Q3",
+      "type": "mcq",
+      "prompt": "Que signifie le contango ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les taux sont négatifs"
+        },
+        {
+          "id": "b",
+          "text": "Les contrats lointains valent moins que le comptant"
+        },
+        {
+          "id": "c",
+          "text": "L'or est interdit à la livraison"
+        },
+        {
+          "id": "d",
+          "text": "Les prix des contrats lointains dépassent le comptant : la courbe est croissante"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Pour l'or, le contango est la situation typique, car il reflète le coût de portage.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L5.09-Q4",
+      "type": "mcq",
+      "prompt": "Comptant 4 081,65 $, stockage 0,50 %, taux 3,86 %, 29 jours : prix théorique ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 4 103,80 $"
+        },
+        {
+          "id": "b",
+          "text": "≈ 4 095,58 $"
+        },
+        {
+          "id": "c",
+          "text": "≈ 4 081,65 $"
+        },
+        {
+          "id": "d",
+          "text": "≈ 4 265,50 $"
+        }
+      ],
+      "correct": "b",
+      "explanation": "(4 081,65 + 1,62) × 1,0386^(29/365) = 4 095,58 $ ; le contrat d'août cotait 4 103,80 $ (écart de 8,22 $).",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.09-Q5",
+      "type": "mcq",
+      "prompt": "Courbe d'août 2026 (4 103,80 $) à juin 2027 (4 265,50 $), soit dix mois : pente annualisée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 0 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ 3,94 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ 7,05 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ 4,75 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "+3,94 % en dix mois, soit (1,0394)^1,2 − 1 = 4,75 % annualisés ; l'article cite 4,0 à 5,1 %.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L5.09-Q6",
+      "type": "mcq",
+      "prompt": "Que devient la base à l'approche de l'échéance, toutes choses égales ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle devient négative"
+        },
+        {
+          "id": "b",
+          "text": "Elle double"
+        },
+        {
+          "id": "c",
+          "text": "Elle tend vers zéro (convergence)"
+        },
+        {
+          "id": "d",
+          "text": "Elle ne change pas"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le contrat devient livrable : futures et comptant convergent.",
+      "tags": [
+        "convergence"
+      ]
+    },
+    {
+      "id": "L5.09-Q7",
+      "type": "mcq",
+      "prompt": "Les taux courts montent de 25 pb. Effet sur le portage annuel d'un or à 4 060 $ ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ +10,15 $ par once et par an, sans changement du comptant"
+        },
+        {
+          "id": "b",
+          "text": "Baisse du prix comptant de 10 $"
+        },
+        {
+          "id": "c",
+          "text": "Aucun effet"
+        },
+        {
+          "id": "d",
+          "text": "≈ +101 $"
+        }
+      ],
+      "correct": "a",
+      "explanation": "4 060 × 0,0025 = 10,15 $ ; le contango devient plus pentu.",
+      "tags": [
+        "taux"
+      ]
+    },
+    {
+      "id": "L5.09-Q8",
+      "type": "mcq",
+      "prompt": "Un graphique de contrat continu saute de 41 $ lors du passage de décembre à février alors que le comptant est inchangé. Pourquoi ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le prix de l'or a monté de 41 $"
+        },
+        {
+          "id": "b",
+          "text": "Effet de roulement : on passe à un contrat plus cher (portage), pas à un mouvement de marché"
+        },
+        {
+          "id": "c",
+          "text": "La Fed a agi"
+        },
+        {
+          "id": "d",
+          "text": "Erreur de la bourse"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Les séries continues assemblent des contrats successifs : la cassure de roulement reflète le portage.",
+      "tags": [
+        "roulement"
+      ]
+    }
+  ],
+  "revision": 1
+}

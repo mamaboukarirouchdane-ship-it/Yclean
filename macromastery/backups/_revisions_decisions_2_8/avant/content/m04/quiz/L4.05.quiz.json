@@ -1,0 +1,235 @@
+{
+  "lessonId": "L4.05",
+  "title": "Quiz — Termes de l'échange et matières premières",
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
+  "note": "Seuil : 7 bonnes réponses sur 8.",
+  "questions": [
+    {
+      "id": "L4.05-Q1",
+      "type": "mcq",
+      "prompt": "Comment se calculent les termes de l'échange ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Indice des prix d'importation − indice des prix d'exportation"
+        },
+        {
+          "id": "b",
+          "text": "Exportations − importations"
+        },
+        {
+          "id": "c",
+          "text": "Indice des prix d'exportation ÷ indice des prix d'importation × 100"
+        },
+        {
+          "id": "d",
+          "text": "Balance commerciale ÷ PIB"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Les termes de l'échange sont un rapport d'indices de prix ; la balance commerciale mesure des valeurs, pas des prix relatifs.",
+      "tags": [
+        "definition"
+      ]
+    },
+    {
+      "id": "L4.05-Q2",
+      "type": "mcq",
+      "prompt": "Prix d'exportation +10 % et prix d'importation +4 % : quelle variation des termes de l'échange ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+5,77 %"
+        },
+        {
+          "id": "b",
+          "text": "+6 %"
+        },
+        {
+          "id": "c",
+          "text": "+14 %"
+        },
+        {
+          "id": "d",
+          "text": "+2,5 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "On calcule 1,10 ÷ 1,04 = 1,0577, soit +5,77 % ; soustraire donnerait +6 %, ce qui est inexact.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.05-Q3",
+      "type": "mcq",
+      "prompt": "Exportations de 100 à 112 et importations de 100 à 105 : quel indice des termes de l'échange ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "93,75"
+        },
+        {
+          "id": "b",
+          "text": "107"
+        },
+        {
+          "id": "c",
+          "text": "112"
+        },
+        {
+          "id": "d",
+          "text": "106,67"
+        }
+      ],
+      "correct": "d",
+      "explanation": "112 ÷ 105 × 100 = 106,67 ; l'indice est supérieur à 100, donc les exportations ont gagné en pouvoir d'achat.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.05-Q4",
+      "type": "mcq",
+      "prompt": "Exportations à 20 % du PIB et termes de l'échange +10 % : gain approximatif de revenu réel ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "10 % du PIB"
+        },
+        {
+          "id": "b",
+          "text": "2,0 % du PIB"
+        },
+        {
+          "id": "c",
+          "text": "0,2 % du PIB"
+        },
+        {
+          "id": "d",
+          "text": "20 % du PIB"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Au premier ordre, 0,20 × 10 % = 2,0 % du PIB, à volumes constants ; c'est une approximation de cours.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L4.05-Q5",
+      "type": "mcq",
+      "prompt": "Un produit qui pèse 20 % des importations monte de 30 % (autres prix inchangés). Effet sur les termes de l'échange ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−30 %"
+        },
+        {
+          "id": "b",
+          "text": "−6 %"
+        },
+        {
+          "id": "c",
+          "text": "+6 %"
+        },
+        {
+          "id": "d",
+          "text": "−5,66 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Les prix d'importation montent de 6 % ; 1 ÷ 1,06 − 1 = −5,66 % si les prix d'exportation ne changent pas.",
+      "tags": [
+        "simulation"
+      ]
+    },
+    {
+      "id": "L4.05-Q6",
+      "type": "mcq",
+      "prompt": "BLS, septembre 2026 : exportations +11,6 % et importations +8,1 % sur 12 mois. Termes de l'échange ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+19,7 %"
+        },
+        {
+          "id": "b",
+          "text": "+3,5 %"
+        },
+        {
+          "id": "c",
+          "text": "+3,24 %"
+        },
+        {
+          "id": "d",
+          "text": "−3,24 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "1,116 ÷ 1,081 − 1 = +3,24 % ; ce chiffre est un calcul de l'auteur à partir des variations publiées.",
+      "tags": [
+        "bls"
+      ]
+    },
+    {
+      "id": "L4.05-Q7",
+      "type": "mcq",
+      "prompt": "Termes de l'échange australiens : 117,00 puis 111,90, record 144,20. Niveau par rapport au record ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "77,6 %"
+        },
+        {
+          "id": "b",
+          "text": "95,6 %"
+        },
+        {
+          "id": "c",
+          "text": "22,4 %"
+        },
+        {
+          "id": "d",
+          "text": "129 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "111,90 ÷ 144,20 = 77,6 % du record, soit 22,4 % en dessous ; la baisse trimestrielle est de 4,36 %.",
+      "tags": [
+        "australie"
+      ]
+    },
+    {
+      "id": "L4.05-Q8",
+      "type": "mcq",
+      "prompt": "Pourquoi un indice de termes de l'échange en baisse ne prouve-t-il pas que la devise va chuter ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que la devise est fixée"
+        },
+        {
+          "id": "b",
+          "text": "Le change dépend aussi des taux, des flux de capitaux et de l'appétit pour le risque, et anticipe"
+        },
+        {
+          "id": "c",
+          "text": "Parce que l'indice est toujours faux"
+        },
+        {
+          "id": "d",
+          "text": "Parce que les matières premières n'ont aucun effet"
+        }
+      ],
+      "correct": "b",
+      "explanation": "L'indice mesure le revenu extérieur ; plusieurs autres facteurs agissent sur le change et le marché anticipe.",
+      "tags": [
+        "limite"
+      ]
+    }
+  ],
+  "revision": 1
+}

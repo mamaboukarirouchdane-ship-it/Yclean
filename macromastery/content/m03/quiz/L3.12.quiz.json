@@ -1,7 +1,9 @@
 {
   "lessonId": "L3.12",
   "title": "Quiz — Ta grille de lecture d'une publication",
-  "passThreshold": 0.8,
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
   "note": "Quiz de la leçon L3.12",
   "questions": [
     {

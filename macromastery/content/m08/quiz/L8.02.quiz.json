@@ -2,6 +2,8 @@
   "lessonId": "L8.02",
   "title": "Quiz — Guerres, sanctions et énergie",
   "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
   "note": "Seuil 80 % (7 sur 8)",
   "questions": [
     {
@@ -71,7 +73,7 @@
         },
         {
           "id": "b",
-          "text": "Que l'interdiction d'importer des hydrocarbures russes a causé la hausse de l'or ce jour-là"
+          "text": "Que l'interdiction d'importer des hydrocarbures russes a causé la hausse de l'or ce jour-là, puisque l'annonce et le plus haut ont la même date"
         },
         {
           "id": "c",
@@ -103,7 +105,7 @@
         },
         {
           "id": "c",
-          "text": "Environ −19,2 % ; la baisse est due au seul renforcement du dollar sur la période"
+          "text": "Environ −19,2 % ; la baisse s'explique par le seul renforcement du dollar, que le WGC présente comme la cause unique du repli"
         },
         {
           "id": "d",
@@ -127,11 +129,11 @@
         },
         {
           "id": "b",
-          "text": "Que la dédollarisation est terminée, puisque la part du dollar remonte sur le trimestre"
+          "text": "Que la dédollarisation est terminée, puisque la part du dollar remonte de 0,71 point en un trimestre, ce qui inverse la tendance des années précédentes"
         },
         {
           "id": "c",
-          "text": "Que la dédollarisation est démontrée, puisque les réserves sont désormais diversifiées"
+          "text": "Que la dédollarisation est démontrée, puisque les réserves allouées sont désormais diversifiées entre le dollar, l'euro, le yen et d'autres devises"
         },
         {
           "id": "d",
@@ -207,7 +209,7 @@
       "options": [
         {
           "id": "a",
-          "text": "Les sanctions ont prouvé la dédollarisation, puisque l'or monte en dollars comme en euros en 2022"
+          "text": "Les sanctions ont prouvé la dédollarisation, puisque l'or monte en dollars comme en euros en 2022 et que les achats officiels battent un record"
         },
         {
           "id": "b",
@@ -215,7 +217,7 @@
         },
         {
           "id": "c",
-          "text": "L'or monte toujours en cas de guerre, comme le confirment les épisodes de la leçon"
+          "text": "L'or monte toujours en cas de guerre, comme le confirment les épisodes de la leçon, du plus haut du 8 mars aux achats officiels de 2022"
         },
         {
           "id": "d",
@@ -229,6 +231,5 @@
       ]
     }
   ],
-  "revision": 2,
-  "passRule": "7 bonnes réponses sur 8 (seuil pédagogique provisoire)"
+  "revision": 3
 }

@@ -1,7 +1,9 @@
 {
   "lessonId": "L0.05",
   "title": "Quiz — Taux croisés et parité : conversions, cohérence des cotations et pouvoir d'achat",
-  "passThreshold": 0.8,
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
   "note": "Cotations des questions de calcul : SIMULATION. Les taux de référence de la BCE du 28/10/2026 (USD 1,1133 ; GBP 0,83785) sont des lectures de tableaux par résumé automatique. La parité 655,957 XOF/EUR vient de la BCEAO et du Trésor français.",
   "questions": [
     {

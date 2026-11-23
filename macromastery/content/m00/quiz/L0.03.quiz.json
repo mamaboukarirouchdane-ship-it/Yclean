@@ -1,7 +1,9 @@
 {
   "lessonId": "L0.03",
   "title": "Quiz — L'anatomie du marché des changes (Forex)",
-  "passThreshold": 0.8,
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
   "note": "Chiffres des questions de calcul : SIMULATION. Les parts de la BRI sont des faits (avril 2025, publication de décembre 2025) ; le pourcentage du dollar est un calcul de l'auteur sur les montants publiés. Révision 3 : option c de Q5 précisée (outright forwards). Révision 4 : Q5 en texte brut, sans Markdown, la réponse correcte restant inchangée.",
   "questions": [
     {

@@ -1,0 +1,289 @@
+{
+  "lessonId": "L7.08",
+  "title": "Quiz — Atelier : un indicateur COT",
+  "passThreshold": 0.8,
+  "note": "Seuil 80 % (8 sur 10)",
+  "questions": [
+    {
+      "id": "L7.08-Q1",
+      "type": "mcq",
+      "prompt": "Quelle est la différence entre la date de référence et la date de publication d'un rapport COT ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La référence est le jour de publication"
+        },
+        {
+          "id": "b",
+          "text": "Les deux sont le vendredi"
+        },
+        {
+          "id": "c",
+          "text": "La référence est le mardi où les positions sont mesurées ; la publication a lieu généralement le vendredi"
+        },
+        {
+          "id": "d",
+          "text": "Il n'y a pas de différence"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Les positions sont arrêtées au mardi et publiées environ trois jours plus tard ; l'âge de la donnée se calcule depuis la date de référence.",
+      "tags": [
+        "dates"
+      ]
+    },
+    {
+      "id": "L7.08-Q2",
+      "type": "mcq",
+      "prompt": "Net Managed Money (rapports Combined) : 139 548 le 08/09 et 111 079 le 13/10. Quelle variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−28 469 contrats, soit −20,4 %"
+        },
+        {
+          "id": "b",
+          "text": "−2 847 contrats, soit −2,0 %"
+        },
+        {
+          "id": "c",
+          "text": "+28 469 contrats"
+        },
+        {
+          "id": "d",
+          "text": "−20,4 contrats"
+        }
+      ],
+      "correct": "a",
+      "explanation": "139 548 − 111 079 = 28 469 ; 28 469 ÷ 139 548 = 20,4 % (≈ 88,5 t).",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L7.08-Q3",
+      "type": "mcq",
+      "prompt": "Exemple fictif : le net passe de 100 000 à 95 000 contrats alors que l'OI passe de 500 000 à 375 000. Que devient la part de l'OI ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle monte parce que le net a augmenté"
+        },
+        {
+          "id": "b",
+          "text": "Elle baisse de 20,0 % à 19,0 %"
+        },
+        {
+          "id": "c",
+          "text": "Elle reste à 20,0 %"
+        },
+        {
+          "id": "d",
+          "text": "Elle monte de 20,0 % à 25,3 % : effet de dénominateur, sans achat"
+        }
+      ],
+      "correct": "d",
+      "explanation": "100 000 ÷ 500 000 = 20,0 % ; 95 000 ÷ 375 000 = 25,3 % : la hausse vient du dénominateur, pas d'achats.",
+      "tags": [
+        "denominateur"
+      ]
+    },
+    {
+      "id": "L7.08-Q4",
+      "type": "mcq",
+      "prompt": "Sur 6 semaines d'observations, peut-on parler d'un niveau extrême par percentile ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui, dès qu'on a un percentile"
+        },
+        {
+          "id": "b",
+          "text": "Non : la fenêtre est inférieure au minimum de 52 observations fixé d'avance"
+        },
+        {
+          "id": "c",
+          "text": "Oui si le z-score dépasse 1"
+        },
+        {
+          "id": "d",
+          "text": "Oui si le prix a baissé"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Le calcul reste possible mais descriptif ; une conclusion d'extrême exige une fenêtre écrite d'avance et suffisante.",
+      "tags": [
+        "fenetre"
+      ]
+    },
+    {
+      "id": "L7.08-Q5",
+      "type": "mcq",
+      "prompt": "Un percentile de 90,4 % sur 52 semaines signifie :",
+      "options": [
+        {
+          "id": "a",
+          "text": "Que la position est à son maximum"
+        },
+        {
+          "id": "b",
+          "text": "Que le prix va baisser"
+        },
+        {
+          "id": "c",
+          "text": "Que 90,4 % des fonds sont acheteurs"
+        },
+        {
+          "id": "d",
+          "text": "Que 90,4 % des observations de la fenêtre sont inférieures ou égales à la valeur courante"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le percentile est un rang dans la fenêtre ; il ne dit ni quand ni si la position se dénouera. Le maximum de la fenêtre simulée était 260 200.",
+      "tags": [
+        "percentile"
+      ]
+    },
+    {
+      "id": "L7.08-Q6",
+      "type": "mcq",
+      "prompt": "Pourquoi un net négatif des Swap Dealers n'est-il pas un pari baissier ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce qu'ils ne sont pas rapportés"
+        },
+        {
+          "id": "b",
+          "text": "Parce qu'ils sont toujours acheteurs"
+        },
+        {
+          "id": "c",
+          "text": "Ils couvrent des swaps de clients : leur position est souvent la contrepartie de la demande de leurs clients"
+        },
+        {
+          "id": "d",
+          "text": "Parce que c'est une erreur de publication"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Selon les notes explicatives de la CFTC, les Swap Dealers couvrent leurs swaps par des contrats à terme ; leur net reflète cette activité.",
+      "tags": [
+        "categories"
+      ]
+    },
+    {
+      "id": "L7.08-Q7",
+      "type": "mcq",
+      "prompt": "Le net Combined baisse du 15/09 au 13/10 et le prix du 16/09 au 21/10. Que peut-on conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une co-direction sur deux points, sans corrélation ni causalité démontrées"
+        },
+        {
+          "id": "b",
+          "text": "Que le net cause la baisse du prix"
+        },
+        {
+          "id": "c",
+          "text": "Que le prix cause la baisse du net"
+        },
+        {
+          "id": "d",
+          "text": "Que l'or va rebondir"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Deux points, dates non alignées et prix rapportés ne permettent ni de mesurer une relation ni d'en établir le sens.",
+      "tags": [
+        "prix"
+      ]
+    },
+    {
+      "id": "L7.08-Q8",
+      "type": "mcq",
+      "prompt": "Pourquoi ne faut-il pas calculer la variation d'intérêt ouvert entre un rapport Combined du 13/10 et un rapport du 27/10 probablement Futures Only ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que le 27/10 est un lundi"
+        },
+        {
+          "id": "b",
+          "text": "Parce que les périmètres (futures seuls / futures et options) peuvent différer : l'écart ne mesure alors pas une variation de marché"
+        },
+        {
+          "id": "c",
+          "text": "Parce que le COT ne contient pas d'intérêt ouvert"
+        },
+        {
+          "id": "d",
+          "text": "Parce que les unités sont des tonnes"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Les deux familles de rapports (Futures Only, Combined) ne se comparent pas directement ; avant toute comparaison on vérifie instrument, périmètre, unités et traitement du spreading. Les valeurs Nonreportable restent en outre reconstituées par différence.",
+      "tags": [
+        "perimetre"
+      ]
+    },
+    {
+      "id": "L7.08-Q9",
+      "type": "mcq",
+      "prompt": "Quelle condition d'invalidation est correctement formulée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Si mon intuition change"
+        },
+        {
+          "id": "b",
+          "text": "Si le marché me donne tort"
+        },
+        {
+          "id": "c",
+          "text": "Net MM en hausse deux rapports consécutifs, ce qui invalide la lecture d'un repli en cours"
+        },
+        {
+          "id": "d",
+          "text": "Aucune condition n'est nécessaire"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Une invalidation est mesurable, écrite avant l'observation, et rattachée à une donnée et à sa date de publication.",
+      "tags": [
+        "invalidation"
+      ]
+    },
+    {
+      "id": "L7.08-Q10",
+      "type": "mcq",
+      "prompt": "Que change l'annonce du 27/10/2026 de la CFTC sur la publication du COT ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un plan de publication deux fois par semaine : le calendrier mardi/vendredi doit être revérifié à chaque lecture"
+        },
+        {
+          "id": "b",
+          "text": "Le COT est supprimé"
+        },
+        {
+          "id": "c",
+          "text": "Le COT devient quotidien dès demain"
+        },
+        {
+          "id": "d",
+          "text": "Rien, le calendrier est garanti"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le communiqué décrit un plan d'ici la fin de 2026, avec un délai ramené de trois à deux jours ; la leçon ne présente pas ce calendrier comme acquis.",
+      "tags": [
+        "calendrier"
+      ]
+    }
+  ],
+  "revision": 2
+}

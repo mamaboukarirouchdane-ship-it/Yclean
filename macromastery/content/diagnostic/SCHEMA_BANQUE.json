@@ -1,0 +1,49 @@
+{
+  "schemaName": "MacroMastery — banque de diagnostic par module",
+  "schemaVersion": 2,
+  "date": "2026-11-23",
+  "note": "Version 2 = schéma commun des banques banque_m04 à banque_m07 (version 1, implicite) étendu par les champs utiles de banque_m08 (décision 8 du 23/11/2026). Tous les champs ajoutés sont OPTIONNELS : une banque de version 1 reste valide sans modification. Contrôle : tools/verify_diagnostic_schema.py. Ce schéma décrit une structure ; il ne valide ni le contenu ni la qualité pédagogique des items.",
+  "bank": {
+    "required": {
+      "bank": {"type": "str", "rule": "« diagnostic » : nom de la banque générale dont le fichier est la part du module (valeur constatée dans banque_m04 à banque_m08)"},
+      "module": {"type": "int", "rule": "numéro du module, 0 à 8"},
+      "note": {"type": "str", "rule": "description de la banque et de ses limites"},
+      "items": {"type": "list[item]", "rule": "au moins 2 items ; paires A/B complètes"}
+    },
+    "optional": {
+      "revision": {"type": "int", "rule": "≥ 1", "origin": "banque_m04, banque_m08"},
+      "status": {"type": "str", "rule": "statut de validation explicite (ex. « PROPOSITION — non validée, non intégrée »)", "origin": "banque_m08"},
+      "prerequisites_tested": {"type": "list[str]", "rule": "description des prérequis effectivement testés, une par paire d'items", "origin": "banque_m08"},
+      "competences_to_acquire_not_tested": {"type": "list[str]", "rule": "compétences enseignées par le module, volontairement non évaluées par le diagnostic", "origin": "banque_m08"},
+      "open_questions": {"type": "list[open_question]", "rule": "questions ouvertes non notées", "origin": "banque_m08"}
+    }
+  },
+  "item": {
+    "required": {
+      "id": {"type": "str", "rule": "D<module>-<forme><paire>, unique dans la banque"},
+      "module": {"type": "int", "rule": "égal au module de la banque"},
+      "form": {"type": "str", "rule": "A (diagnostic initial) ou B (version finale alternative)"},
+      "pair": {"type": "int", "rule": "≥ 1 ; chaque paire a exactement une forme A et une forme B"},
+      "tag": {"type": "str", "rule": "notion testée ; identique pour les deux formes d'une paire"},
+      "prompt": {"type": "str", "rule": "non vide"},
+      "options": {"type": "list[{id: str, text: str}]", "rule": "4 options a, b, c, d aux textes distincts"},
+      "correct": {"type": "str", "rule": "identifiant d'une option"}
+    },
+    "optional": {
+      "prerequisite": {"type": "bool", "rule": "true si l'item teste un prérequis du module (et non une notion enseignée par le module)", "origin": "banque_m08"}
+    }
+  },
+  "open_question": {
+    "required": {
+      "id": {"type": "str", "rule": "D<module>-O<n>, unique"},
+      "prompt": {"type": "str", "rule": "non vide"},
+      "graded": {"type": "bool", "rule": "false : les questions ouvertes du diagnostic ne sont pas notées"}
+    },
+    "optional": {
+      "prerequisite_of": {"type": "str", "rule": "notion du module que la question prépare", "origin": "banque_m08"}
+    }
+  },
+  "notAdopted": {
+    "note": "Aucun champ de banque_m08 n'a été écarté : les six champs ajoutés par M8 sont tous repris, comme optionnels. Aucun champ n'est rendu obligatoire rétroactivement pour les modules 4 à 7."
+  }
+}

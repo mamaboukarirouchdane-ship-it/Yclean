@@ -1,0 +1,235 @@
+{
+  "lessonId": "L6.01",
+  "title": "Quiz — Information et prix",
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L6.01-Q1",
+      "type": "mcq",
+      "prompt": "Selon la forme semi-forte de l'hypothèse d'efficience, les prix reflètent…",
+      "options": [
+        {
+          "id": "a",
+          "text": "Aussi l'information privée"
+        },
+        {
+          "id": "b",
+          "text": "Seulement les prix passés"
+        },
+        {
+          "id": "c",
+          "text": "Toute l'information publique disponible"
+        },
+        {
+          "id": "d",
+          "text": "Aucune information"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La forme faible concerne les rendements passés, la forme forte l'information privée ; la semi-forte, l'information publique.",
+      "tags": [
+        "efficience"
+      ]
+    },
+    {
+      "id": "L6.01-Q2",
+      "type": "mcq",
+      "prompt": "Probabilité de hausse de 25 pb de 38 % ; la banque maintient. Quelle surprise de taux ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−9,5 pb"
+        },
+        {
+          "id": "b",
+          "text": "+9,5 pb"
+        },
+        {
+          "id": "c",
+          "text": "−25 pb"
+        },
+        {
+          "id": "d",
+          "text": "0 pb"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Attendu : 0,38 × 25 = 9,5 pb ; décision 0 ; surprise = 0 − 9,5 = −9,5 pb, plus accommodante que prévu.",
+      "tags": [
+        "surprise"
+      ]
+    },
+    {
+      "id": "L6.01-Q3",
+      "type": "mcq",
+      "prompt": "Inflation attendue 3,0 %, publiée 3,3 %, écart-type 0,15 point. Surprise standardisée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+20"
+        },
+        {
+          "id": "b",
+          "text": "+0,3"
+        },
+        {
+          "id": "c",
+          "text": "+0,5"
+        },
+        {
+          "id": "d",
+          "text": "+2,0"
+        }
+      ],
+      "correct": "d",
+      "explanation": "0,3 ÷ 0,15 = 2,0 écarts-types ; le signe de l'effet sur l'or reste à déterminer.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L6.01-Q4",
+      "type": "mcq",
+      "prompt": "« Acheter la rumeur, vendre la nouvelle » est…",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une loi"
+        },
+        {
+          "id": "b",
+          "text": "Un mécanisme possible quand l'issue est déjà dans le prix, non une règle"
+        },
+        {
+          "id": "c",
+          "text": "Toujours vrai pour l'or"
+        },
+        {
+          "id": "d",
+          "text": "Toujours faux"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Si l'événement est une vraie surprise, le prix suit la surprise ; l'expression décrit un cas, pas une règle.",
+      "tags": [
+        "rumeur"
+      ]
+    },
+    {
+      "id": "L6.01-Q5",
+      "type": "mcq",
+      "prompt": "Un article donne « −0,60 % sur la séance » à 4 035,48 $. Qu'est-ce que c'est ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un consensus"
+        },
+        {
+          "id": "b",
+          "text": "La réaction à 5 minutes"
+        },
+        {
+          "id": "c",
+          "text": "La réaction à 4 heures"
+        },
+        {
+          "id": "d",
+          "text": "Une variation de séance, pas une réaction mesurée à l'annonce"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le point de comparaison est celui de la séance (≈ 4 059,8) ; la réaction exige un prix juste avant l'heure officielle.",
+      "tags": [
+        "seance"
+      ]
+    },
+    {
+      "id": "L6.01-Q6",
+      "type": "mcq",
+      "prompt": "Pourquoi fixer les fenêtres de réaction (5 min, 30 min, 4 h) avant l'analyse ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que la Fed l'exige"
+        },
+        {
+          "id": "b",
+          "text": "Pour gagner du temps"
+        },
+        {
+          "id": "c",
+          "text": "Pour ne pas retenir seulement la fenêtre qui confirme l'hypothèse"
+        },
+        {
+          "id": "d",
+          "text": "Pour augmenter la volatilité"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Dans l'exemple fictif, le signe passe de +0,30 % à −0,10 % puis +1,00 % selon la fenêtre.",
+      "tags": [
+        "fenetres"
+      ]
+    },
+    {
+      "id": "L6.01-Q7",
+      "type": "mcq",
+      "prompt": "Deux maintiens de la Fed avec votes dissidents en faveur d'une hausse (juillet et octobre 2026) sont associés, dans les articles lus, à des mouvements de signes opposés. Que conclure ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Rien de causal : attentes, contexte et autres informations diffèrent ; deux cas ne font pas une règle"
+        },
+        {
+          "id": "b",
+          "text": "Qu'un vote partagé est haussier"
+        },
+        {
+          "id": "c",
+          "text": "Qu'un vote partagé est baissier"
+        },
+        {
+          "id": "d",
+          "text": "Que la Fed ne compte pas"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Les attentes d'octobre ne sont pas chiffrées et aucune réaction aux fenêtres fixées n'a été lue.",
+      "tags": [
+        "asymetrie"
+      ]
+    },
+    {
+      "id": "L6.01-Q8",
+      "type": "mcq",
+      "prompt": "L'annonce de la Fed est à 14 h à New York en heure d'été (28/10/2026). Quelle heure à Cotonou ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "14 h"
+        },
+        {
+          "id": "b",
+          "text": "19 h"
+        },
+        {
+          "id": "c",
+          "text": "20 h"
+        },
+        {
+          "id": "d",
+          "text": "15 h"
+        }
+      ],
+      "correct": "b",
+      "explanation": "14 h EDT = 18 h UTC ; le Bénin est à UTC+1, donc 19 h.",
+      "tags": [
+        "fuseau"
+      ]
+    }
+  ],
+  "revision": 1
+}

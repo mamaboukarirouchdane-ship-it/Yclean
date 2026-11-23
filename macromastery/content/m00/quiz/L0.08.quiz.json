@@ -1,7 +1,9 @@
 {
   "lessonId": "L0.08",
   "title": "Quiz — Obligations et courbe des taux : prix, rendement et pente",
-  "passThreshold": 0.8,
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
   "note": "Prix et rendements des exemples : calculs de l'auteur ou SIMULATION. Chiffres de la SEC (1 082 / 925 $) reproduits par calcul. Courbe du 30/06/2026 : Trésor américain, lecture par résumé automatique d'une page tronquée.",
   "questions": [
     {

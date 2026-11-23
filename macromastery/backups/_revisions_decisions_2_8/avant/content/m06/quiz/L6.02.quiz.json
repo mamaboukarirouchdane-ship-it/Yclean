@@ -1,0 +1,235 @@
+{
+  "lessonId": "L6.02",
+  "title": "Quiz — Anticipations de taux",
+  "passThreshold": 0.875,
+  "requiredCorrect": 7,
+  "passRule": "7 bonnes réponses sur 8 (règle R1 : ⌈0,8 × 8⌉ = 7 ; seuil pédagogique provisoire)",
+  "note": "Seuil 80 % (7 sur 8)",
+  "questions": [
+    {
+      "id": "L6.02-Q1",
+      "type": "mcq",
+      "prompt": "Un contrat 30-Day Fed Funds est coté 96,9400. Quel taux moyen implicite ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,0600 %"
+        },
+        {
+          "id": "b",
+          "text": "96,94 %"
+        },
+        {
+          "id": "c",
+          "text": "3,0600 %"
+        },
+        {
+          "id": "d",
+          "text": "6,94 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Taux moyen implicite = 100 − prix = 3,0600 % pour le mois du contrat.",
+      "tags": [
+        "contrat"
+      ]
+    },
+    {
+      "id": "L6.02-Q2",
+      "type": "mcq",
+      "prompt": "Que mesure la partie décimale du nombre de pas de 25 pb dans l'arbre du CME ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La probabilité de l'issue supérieure"
+        },
+        {
+          "id": "b",
+          "text": "La probabilité de l'issue inférieure"
+        },
+        {
+          "id": "c",
+          "text": "Le taux de fin"
+        },
+        {
+          "id": "d",
+          "text": "La prime de risque"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Avec 2,9 pas : 90 % pour 3 pas (supérieure) et 10 % pour 2 pas (inférieure).",
+      "tags": [
+        "arbre"
+      ]
+    },
+    {
+      "id": "L6.02-Q3",
+      "type": "mcq",
+      "prompt": "Moyenne du mois 2,5525 %, fin 3,06 %, N = 21, M = 9. Taux de début ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,7250 %"
+        },
+        {
+          "id": "b",
+          "text": "2,5525 %"
+        },
+        {
+          "id": "c",
+          "text": "3,0600 %"
+        },
+        {
+          "id": "d",
+          "text": "2,3350 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "(2,5525 − 0,3 × 3,06) ÷ 0,7 = 2,3350 % ; la variation attendue est 0,725 point.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L6.02-Q4",
+      "type": "mcq",
+      "prompt": "Probabilités fictives 60 % baisse de 25 pb, 30 % maintien, 10 % hausse de 25 pb : espérance ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+12,5 pb"
+        },
+        {
+          "id": "b",
+          "text": "−12,5 pb"
+        },
+        {
+          "id": "c",
+          "text": "−25 pb"
+        },
+        {
+          "id": "d",
+          "text": "0 pb"
+        }
+      ],
+      "correct": "b",
+      "explanation": "0,60 × (−25) + 0,30 × 0 + 0,10 × 25 = −15 + 2,5 = −12,5 pb ; exemple fictif.",
+      "tags": [
+        "esperance"
+      ]
+    },
+    {
+      "id": "L6.02-Q5",
+      "type": "mcq",
+      "prompt": "Maintien à 90,6 % ; le reste est supposé être une hausse de 25 pb. Surprise d'un maintien ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0 pb"
+        },
+        {
+          "id": "b",
+          "text": "+2,35 pb"
+        },
+        {
+          "id": "c",
+          "text": "−9,4 pb"
+        },
+        {
+          "id": "d",
+          "text": "−2,35 pb"
+        }
+      ],
+      "correct": "d",
+      "explanation": "E[Δr] = 0,094 × 25 = 2,35 pb ; 0 − 2,35 = −2,35 pb, sous l'hypothèse sur la répartition du reste.",
+      "tags": [
+        "octobre"
+      ]
+    },
+    {
+      "id": "L6.02-Q6",
+      "type": "mcq",
+      "prompt": "Pourquoi les probabilités implicites ne sont-elles pas des prévisions certaines ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce qu'elles somment à 100 %"
+        },
+        {
+          "id": "b",
+          "text": "Parce que la Fed les publie"
+        },
+        {
+          "id": "c",
+          "text": "Hypothèses de l'outil, primes de risque et information changeante"
+        },
+        {
+          "id": "d",
+          "text": "Parce qu'elles sont toujours fausses"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Pas de 25 pb, taux plancher, instrument propre et nouvelles du jour limitent la lecture.",
+      "tags": [
+        "limites"
+      ]
+    },
+    {
+      "id": "L6.02-Q7",
+      "type": "mcq",
+      "prompt": "Peut-on utiliser la probabilité lue le 31/10 pour étudier la surprise d'une annonce passée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Non : il faut retrouver l'anticipation disponible avant l'annonce"
+        },
+        {
+          "id": "b",
+          "text": "Oui, c'est équivalent"
+        },
+        {
+          "id": "c",
+          "text": "Oui si elle est plus élevée"
+        },
+        {
+          "id": "d",
+          "text": "Oui si la source est la même"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Une probabilité d'aujourd'hui reflète l'information d'aujourd'hui, pas celle d'avant l'événement.",
+      "tags": [
+        "biais"
+      ]
+    },
+    {
+      "id": "L6.02-Q8",
+      "type": "mcq",
+      "prompt": "Quelle est la bonne lecture d'une probabilité de hausse qui passe de 88 % à 84 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un signal d'achat"
+        },
+        {
+          "id": "b",
+          "text": "Un cadran du tableau de bord, non un signal sur l'or"
+        },
+        {
+          "id": "c",
+          "text": "Un signal de vente"
+        },
+        {
+          "id": "d",
+          "text": "Une décision de la Fed"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La variation de 4 points est petite, sources et définitions doivent être vérifiées, et d'autres facteurs agissent.",
+      "tags": [
+        "usage"
+      ]
+    }
+  ],
+  "revision": 1
+}

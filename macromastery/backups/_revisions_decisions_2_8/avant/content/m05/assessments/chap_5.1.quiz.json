@@ -1,0 +1,180 @@
+{
+  "chapterId": "5.1",
+  "module": 5,
+  "title": "Quiz de chapitre 5.1 — Nature de l'or, histoire monétaire, offre et demande (L5.01–L5.02)",
+  "passThreshold": 0.8333333333333334,
+  "requiredCorrect": 5,
+  "passRule": "5 bonnes réponses sur 6 (règle R1 : ⌈0,8 × 6⌉ = 5 ; seuil pédagogique provisoire)",
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C5.1-Q1",
+      "type": "mcq",
+      "prompt": "Le prix officiel de l'or passe de 20,67 $ à 35 $ l'once. De combien le prix de l'or exprimé en dollars augmente-t-il ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ +69,3 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ +40,9 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ +15 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ +100 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "35 ÷ 20,67 − 1 = +69,3 % ; la teneur en or du dollar baisse de 40,9 % (20,67 ÷ 35 − 1), deux lectures du même changement.",
+      "tags": [
+        "histoire"
+      ]
+    },
+    {
+      "id": "C5.1-Q2",
+      "type": "mcq",
+      "prompt": "Demande 2025 : investissement 2 175,3 t sur un total de 5 002,3 t. Quelle part ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 6,5 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ 32,7 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ 17,3 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ 43,5 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "2 175,3 ÷ 5 002,3 = 43,5 % ; la bijouterie pèse 32,7 % et les banques centrales 17,3 % de ce même total.",
+      "tags": [
+        "demande"
+      ]
+    },
+    {
+      "id": "C5.1-Q3",
+      "type": "mcq",
+      "prompt": "Offre 2025 : mines 3 671,6 t ; recyclage 1 404,3 t ; couverture −73,6 t. Quelle offre totale ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 5 149,5 t"
+        },
+        {
+          "id": "b",
+          "text": "≈ 5 002,3 t"
+        },
+        {
+          "id": "c",
+          "text": "≈ 4 861,4 t"
+        },
+        {
+          "id": "d",
+          "text": "≈ 3 671,6 t"
+        }
+      ],
+      "correct": "b",
+      "explanation": "3 671,6 + 1 404,3 − 73,6 = 5 002,3 t : la couverture (désinscription de positions) vient en déduction.",
+      "tags": [
+        "offre"
+      ]
+    },
+    {
+      "id": "C5.1-Q4",
+      "type": "mcq",
+      "prompt": "Record de séance de 5 595 $ et prix de séance de 4 060 $ : quel écart ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ +27,4 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ −20,0 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ −37,4 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ −27,4 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "4 060 ÷ 5 595 − 1 = −27,4 % ; c'est une mesure de séance, non le critère du WGC (fin de mois).",
+      "tags": [
+        "prix"
+      ]
+    },
+    {
+      "id": "C5.1-Q5",
+      "type": "mcq",
+      "prompt": "Banques centrales : 56,5 t au T1 2026 et 288,9 t au T2. Quel rapport ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 2,5 fois"
+        },
+        {
+          "id": "b",
+          "text": "≈ 0,2 fois"
+        },
+        {
+          "id": "c",
+          "text": "≈ 5,1 fois"
+        },
+        {
+          "id": "d",
+          "text": "≈ 51 fois"
+        }
+      ],
+      "correct": "c",
+      "explanation": "288,9 ÷ 56,5 = 5,11 ; la comparaison porte sur des estimations trimestrielles révisables.",
+      "tags": [
+        "bc"
+      ]
+    },
+    {
+      "id": "C5.1-Q6",
+      "type": "mcq",
+      "prompt": "Bijouterie : 278,2 t au T2 2026 contre 335,3 t au T2 2025. Quelle variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ −17,0 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ −5,4 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ +20,5 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ −57,1 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "278,2 ÷ 335,3 − 1 = −17,0 % ; la variation par rapport au T1 (−5,4 %) est une autre comparaison.",
+      "tags": [
+        "bijoux"
+      ]
+    }
+  ],
+  "revision": 1
+}

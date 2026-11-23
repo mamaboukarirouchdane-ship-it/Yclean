@@ -191,7 +191,7 @@ need("P1 ancienne phrase supprimée","baisse de 1 point par rapport à 2022 (tab
 need("P1 reformulation sourcée S-BIS-02 + non homogène","(S-BIS-02). **[Interprétation]** La part de 5 %" in tL2 and "pas parfaitement homogène" in tL2 and "pas une évolution statistique établie" in tL2)
 need("P3 distinction définition du cours / rapprochement","rapprochées** (et non copiées)" in tL3 and "reste une définition du cours" in tL3)
 need("P4 exercice 7 + correction 7 + critère de maîtrise","**Exercice 7 — Forward ou future ?**" in tL1 and "Correction 7" in tL1 and "(Exercice 7)" in tL1)
-need("P4 seuil et nombre de questions L0.01 inchangés",len(json.load(open(base+"L0.01.quiz.json",encoding="utf-8"))["questions"])==8 and json.load(open(base+"L0.01.quiz.json",encoding="utf-8"))["passThreshold"]==0.8)
+need("P4 seuil et nombre de questions L0.01 inchangés (7 bonnes réponses sur 8 ; seuil stocké selon R1 depuis le 23/11/2026)",len(json.load(open(base+"L0.01.quiz.json",encoding="utf-8"))["questions"])==8 and json.load(open(base+"L0.01.quiz.json",encoding="utf-8")).get("requiredCorrect")==7 and abs(json.load(open(base+"L0.01.quiz.json",encoding="utf-8"))["passThreshold"]-7/8)<1e-12)
 need("P7 explication du taux forward fictif","Pourquoi 1,0820 et non 1,0800" in tL2 and "**fictives**" in tL2 and "modules 2 et 4" in tL2)
 for n in ("L0.01","L0.02","L0.03"):
     raw=rd(base+n+".quiz.json")

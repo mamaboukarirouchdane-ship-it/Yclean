@@ -49,7 +49,10 @@ chk('EX8 A4 dates', [(t0 + dt.timedelta(days=n)).strftime('%d/%m') for n in (7, 
 chk('EX8 A5 banque', abs(10 / 0.85 - 11.76) < .01 and abs(10 / 0.85 - 10 - 1.76) < .01 and abs(10 - (10 / 0.85 - 10) - 8.24) < .01 and abs(10 - (10 / 0.6 - 10) - 3.33) < .01)
 chk('EX8 A6 espérance', abs(0.4 * 3 - 0.4 * 1 - 0.2 * 4) < 1e-12 and abs(0.3 * 3 - 0.4 * 1 - 0.3 * 4 + 0.7) < 1e-12)
 chk('EX8 SIMULATION', all('SIMULATION' in a['title'] for a in X['analyses'])) and 'ne garantit pas' in X['note']
-chk('EX8 analyses points', sum(a['points'] for a in X['analyses']) == 49)
+chk('EX8 analyses points (barème v2 du 23/11/2026 : 67 ; 49 en v1)', sum(a['points'] for a in X['analyses']) == 67)
+chk('EX8 QCM à 1 point (v2)', all(q['points'] == 1 for q in X['questions']))
+chk('EX8 pondération par tâche = points de l\'analyse', all(len(a['taskPoints']) == len(a['tasks']) and sum(a['taskPoints']) == a['points'] for a in X['analyses']))
+chk('EX8 minima A 10, D 8, F 8', X.get('sectionMinimums') == dict(A=10, D=8, F=8))
 chk('EX8 réponses uniques', all(sum(1 for o in q['options'] if o['id'] == q['correct']) == 1 for q in X['questions']))
 chk('seuils de chapitre = 5/6', all(abs(json.load(open(f'{root}/content/m08/assessments/chap_{c}.quiz.json', encoding='utf-8'))['passThreshold'] - 5 / 6) < 1e-9 for c in ('8.1', '8.2', '8.3', '8.4')))
 chk('seuils de leçon = 7/8', all(abs(json.load(open(f'{root}/content/m08/quiz/L8.0{i}.quiz.json', encoding='utf-8'))['passThreshold'] - 7 / 8) < 1e-9 for i in range(1, 9)))

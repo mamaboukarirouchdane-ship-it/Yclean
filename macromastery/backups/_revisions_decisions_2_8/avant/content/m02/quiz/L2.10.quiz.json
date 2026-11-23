@@ -1,0 +1,236 @@
+{
+  "lessonId": "L2.10",
+  "title": "Quiz — BoJ, BoE et BNS",
+  "passThreshold": 0.8,
+  "note": "8 questions ; seuil 7/8. Sources : BoJ (cadre, communiqué du 31/07/2026), BNS (résumé de discussion), sources secondaires signalées pour BoE et BoJ de septembre.",
+  "questions": [
+    {
+      "id": "L2.10-Q1",
+      "type": "mcq",
+      "prompt": "Combien de membres compte le Conseil de politique monétaire de la BoJ selon la page lue ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "6"
+        },
+        {
+          "id": "b",
+          "text": "12"
+        },
+        {
+          "id": "c",
+          "text": "9"
+        },
+        {
+          "id": "d",
+          "text": "27"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le conseil comprend le gouverneur, deux gouverneurs adjoints et six autres membres, soit neuf, et décide à la majorité.",
+      "tags": [
+        "boj"
+      ]
+    },
+    {
+      "id": "L2.10-Q2",
+      "type": "mcq",
+      "prompt": "Que décide la BoJ le 31 juillet 2026 selon le communiqué lu ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Maintenir le taux au jour le jour à environ 1,0 % par 8 voix contre 1"
+        },
+        {
+          "id": "b",
+          "text": "Le relever à 1,25 % à l'unanimité"
+        },
+        {
+          "id": "c",
+          "text": "Le ramener à 0 %"
+        },
+        {
+          "id": "d",
+          "text": "Le laisser à environ 1,0 % à l'unanimité"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Le dissident, Takata, proposait environ 1,25 % ; sa proposition a été rejetée.",
+      "tags": [
+        "boj",
+        "vote"
+      ]
+    },
+    {
+      "id": "L2.10-Q3",
+      "type": "mcq",
+      "prompt": "Pourquoi la hausse de septembre 2026 de la BoJ est-elle présentée avec prudence dans la leçon ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce qu'elle est confirmée par trois sources primaires"
+        },
+        {
+          "id": "b",
+          "text": "Parce qu'elle n'a jamais eu lieu"
+        },
+        {
+          "id": "c",
+          "text": "Parce que la BoJ ne publie pas ses décisions"
+        },
+        {
+          "id": "d",
+          "text": "Elle ne figure que dans une source secondaire de fiabilité limitée non recoupée"
+        }
+      ],
+      "correct": "d",
+      "explanation": "L'information vient d'un article de Securities.io généré par un agent de recherche ; aucune source primaire lue ne la confirme.",
+      "tags": [
+        "sources"
+      ]
+    },
+    {
+      "id": "L2.10-Q4",
+      "type": "mcq",
+      "prompt": "La Banque d'Angleterre aurait maintenu son taux à 3,75 % par 6 voix contre 3. Que veulent les trois dissidents ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une baisse à 3,50 %"
+        },
+        {
+          "id": "b",
+          "text": "Une hausse à 4 %"
+        },
+        {
+          "id": "c",
+          "text": "Un maintien à 3,75 %"
+        },
+        {
+          "id": "d",
+          "text": "Une baisse à 3,25 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Trois membres (Pill, Greene, Mann selon une source secondaire) voulaient une hausse de 25 pb ; personne ne souhaitait une baisse.",
+      "tags": [
+        "boe",
+        "vote"
+      ]
+    },
+    {
+      "id": "L2.10-Q5",
+      "type": "mcq",
+      "prompt": "Quel est le taux réel ex post de la BoE avec Bank Rate 3,75 % et IPC 3,1 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0 point"
+        },
+        {
+          "id": "b",
+          "text": "−0,65 point"
+        },
+        {
+          "id": "c",
+          "text": "+6,85 points"
+        },
+        {
+          "id": "d",
+          "text": "+0,65 point"
+        }
+      ],
+      "correct": "d",
+      "explanation": "3,75 − 3,1 = 0,65 ; c'est un calcul avec l'inflation observée, non avec les anticipations.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L2.10-Q6",
+      "type": "mcq",
+      "prompt": "Selon le résumé de la BNS, pourquoi le franc s'est-il déprécié d'environ 3 % depuis juin 2026 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que la demande de valeur refuge a explosé"
+        },
+        {
+          "id": "b",
+          "text": "Parce que la BNS a vendu massivement du franc"
+        },
+        {
+          "id": "c",
+          "text": "En phase avec des écarts de taux élargis, qui l'ont rendu plus attractif comme monnaie de financement pour le portage"
+        },
+        {
+          "id": "d",
+          "text": "Parce que l'inflation suisse a dépassé 5 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "La demande de valeur refuge était limitée ; la dépréciation a desserré les conditions monétaires.",
+      "tags": [
+        "bns",
+        "portage"
+      ]
+    },
+    {
+      "id": "L2.10-Q7",
+      "type": "mcq",
+      "prompt": "Quel est le taux réel ex post de la BNS avec un taux à 0 % et une inflation de 0,8 % ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−0,8 point"
+        },
+        {
+          "id": "b",
+          "text": "+0,8 point"
+        },
+        {
+          "id": "c",
+          "text": "0 point"
+        },
+        {
+          "id": "d",
+          "text": "−0,6 point"
+        }
+      ],
+      "correct": "a",
+      "explanation": "0 − 0,8 = −0,8 ; avec l'inflation sous-jacente de 0,6 %, il serait de −0,6.",
+      "tags": [
+        "calcul"
+      ]
+    },
+    {
+      "id": "L2.10-Q8",
+      "type": "mcq",
+      "prompt": "Quelle règle de rigueur découle de la qualité inégale des sources de cette leçon ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ne jamais utiliser de source de presse"
+        },
+        {
+          "id": "b",
+          "text": "Étiqueter chaque donnée comme primaire ou secondaire et recouper avant de conclure"
+        },
+        {
+          "id": "c",
+          "text": "Traiter toutes les sources de la même manière"
+        },
+        {
+          "id": "d",
+          "text": "Supprimer les données non officielles sans le dire"
+        }
+      ],
+      "correct": "b",
+      "explanation": "La méthode du cours impose de distinguer les faits observés, leurs sources et leurs limites, plutôt que de masquer une faiblesse.",
+      "tags": [
+        "methode"
+      ]
+    }
+  ],
+  "revision": 1
+}

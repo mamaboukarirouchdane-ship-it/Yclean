@@ -36,13 +36,14 @@ for lid in ids:
     if qp:
         q = json.load(open(qp[0], encoding='utf-8'))
         chk(f'{lid} quiz lessonId', q['lessonId'] == lid)
-        if m < 8 and 'requiredCorrect' in q:  # décision 3 (31/10/2026), règle R1 : requiredCorrect = ⌈0,8 × n⌉ entier, passThreshold = requiredCorrect / n
-            nq = len(q['questions']); rc = q['requiredCorrect']; kn = re.search(r'(\d+) (?:bonnes réponses )?sur (\d+)', q['note'])
-            chk(f'{lid} quiz R1 requiredCorrect entier = ⌈0,8 × n⌉', type(rc) is int and rc == -(-4 * nq // 5))
-            chk(f'{lid} quiz R1 passThreshold = requiredCorrect / n', abs(q['passThreshold'] - rc / nq) < 1e-12)
-            chk(f'{lid} quiz R1 note k/n = requiredCorrect/n', bool(kn) and int(kn.group(1)) == rc and int(kn.group(2)) == nq)
-        else:
-            chk(f'{lid} quiz seuil 0,8' if m < 8 else f'{lid} quiz seuil = k/n affiché', q['passThreshold'] == 0.8 if m < 8 else abs(q['passThreshold'] - (lambda r: int(r.group(1)) / int(r.group(2)))(re.search(r'(\d+) sur (\d+)', q['note'])) ) < 1e-9)
+        # Règle R1 pour tous les modules (décision 3 du 31/10/2026, étendue le 23/11/2026) : requiredCorrect = ⌈0,8 × n⌉ entier,
+        # passThreshold = requiredCorrect / n ; un quiz sans requiredCorrect est un retour à l'ancien seuil et échoue.
+        nq = len(q['questions']); rc = q.get('requiredCorrect')
+        chk(f'{lid} quiz R1 requiredCorrect entier = ⌈0,8 × n⌉', type(rc) is int and rc == -(-4 * nq // 5))
+        chk(f'{lid} quiz R1 passThreshold = requiredCorrect / n', type(rc) is int and abs(q['passThreshold'] - rc / nq) < 1e-12)
+        for kn in re.finditer(r'(\d+) (?:bonnes réponses )?sur (\d+)|seuil (\d+)/(\d+)', q.get('note', '')):  # seulement si la note affiche un seuil
+            k, nn = (int(kn.group(1)), int(kn.group(2))) if kn.group(1) else (int(kn.group(3)), int(kn.group(4)))
+            chk(f'{lid} quiz R1 note {k}/{nn} = requiredCorrect/n', (k, nn) == (rc, nq))
         seen = set()
         for x in q['questions']:
             oids = [o['id'] for o in x['options']]

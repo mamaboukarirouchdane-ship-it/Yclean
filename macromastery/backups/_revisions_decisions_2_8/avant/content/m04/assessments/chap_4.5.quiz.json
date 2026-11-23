@@ -1,0 +1,180 @@
+{
+  "chapterId": "4.5",
+  "module": 4,
+  "title": "Quiz de chapitre 4.5 — Carry trade, interventions et thèse guidée (L4.10–L4.12)",
+  "passThreshold": 0.8333333333333334,
+  "requiredCorrect": 5,
+  "passRule": "5 bonnes réponses sur 6 (règle R1 : ⌈0,8 × 6⌉ = 5 ; seuil pédagogique provisoire)",
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C4.5-Q1",
+      "type": "mcq",
+      "prompt": "Placement à 4,60 % financé à 1,25 % : point mort annuel approximatif du change ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ +3,20 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ −3,35 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ −3,20 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ −4,40 %"
+        }
+      ],
+      "correct": "c",
+      "explanation": "1,0125 ÷ 1,046 − 1 = −3,20 % ; avec un financement à taux nul, ce serait −4,40 %.",
+      "tags": [
+        "carry"
+      ]
+    },
+    {
+      "id": "C4.5-Q2",
+      "type": "mcq",
+      "prompt": "Que dit la BRI de la turbulence d'août 2024 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le dénouement du carry trade est un amplificateur d'un choc, pas la cause unique"
+        },
+        {
+          "id": "b",
+          "text": "Le carry trade en est la seule cause"
+        },
+        {
+          "id": "c",
+          "text": "Aucune turbulence n'a eu lieu"
+        },
+        {
+          "id": "d",
+          "text": "L'or en est la cause"
+        }
+      ],
+      "correct": "a",
+      "explanation": "L'article décrit un choc amplifié par plusieurs mécanismes et avertit que ses données ne couvrent pas début août.",
+      "tags": [
+        "bri"
+      ]
+    },
+    {
+      "id": "C4.5-Q3",
+      "type": "mcq",
+      "prompt": "USD/JPY : ≈ 164 avant, ≈ 155,20 après, 159,09 dix jours plus tard. Part du mouvement effacée ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 5 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ 44 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ 100 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ 25 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "(159,09 − 155,20) ÷ (164 − 155,20) = 44,2 % ; les niveaux viennent d'une synthèse tertiaire.",
+      "tags": [
+        "intervention"
+      ]
+    },
+    {
+      "id": "C4.5-Q4",
+      "type": "mcq",
+      "prompt": "Scénarios 0,25 / 0,50 / 0,25 ; le premier se réalise. Score de Brier ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "0,667"
+        },
+        {
+          "id": "b",
+          "text": "0,375"
+        },
+        {
+          "id": "c",
+          "text": "0,875"
+        },
+        {
+          "id": "d",
+          "text": "0,25"
+        }
+      ],
+      "correct": "c",
+      "explanation": "(0,25 − 1)² + 0,50² + 0,25² = 0,875 ; plus bas est meilleur.",
+      "tags": [
+        "brier"
+      ]
+    },
+    {
+      "id": "C4.5-Q5",
+      "type": "mcq",
+      "prompt": "Que dit le triangle d'incompatibilité ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Change fixe, capitaux libres et politique monétaire autonome sont incompatibles ensemble"
+        },
+        {
+          "id": "b",
+          "text": "Les trois sont toujours compatibles"
+        },
+        {
+          "id": "c",
+          "text": "Seul le change fixe est possible"
+        },
+        {
+          "id": "d",
+          "text": "Il interdit les interventions"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Un pays doit renoncer à l'un des trois éléments ; c'est une définition de cours.",
+      "tags": [
+        "triangle"
+      ]
+    },
+    {
+      "id": "C4.5-Q6",
+      "type": "mcq",
+      "prompt": "Quelle protection contre le biais de rétrospection est la plus solide ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Supprimer les dates"
+        },
+        {
+          "id": "b",
+          "text": "Modifier les seuils après coup"
+        },
+        {
+          "id": "c",
+          "text": "Garder seulement les réussites"
+        },
+        {
+          "id": "d",
+          "text": "Enregistrer thèse, scénarios et seuils avant de regarder le résultat"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La discipline est procédurale : dater, probabiliser et fixer le critère avant le résultat.",
+      "tags": [
+        "biais"
+      ]
+    }
+  ],
+  "revision": 1
+}

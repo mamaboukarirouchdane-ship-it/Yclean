@@ -2,6 +2,9 @@
 
 Date : 31/10/2026. **Aucune modification supplémentaire n'a été faite** (ta consigne : rapport d'abord). Périmètre : 64 questions de quiz de leçon révisées, 24 questions de quiz de chapitre, et, à titre de contrôle, les 18 QCM d'EX8.
 
+> **Mise à jour du 23/11/2026 — décision 2 = B : révision 3 appliquée.** 66 distracteurs réécrits dans 42 questions (27 de leçon, 9 de chapitre, 6 d'EX8) (tools/quizsrc_rev3_m08.py) ; un énoncé (L8.04-Q6) aligné sur la décision 6. Heuristique « plus longue » : leçons 65,8 → 24,3 % ; chapitres 58,3 → 20,8 % ; EX8 55,6 → 22,2 % (critère ≤ 30 % atteint). Deuxième plus longue ≤ 33,2 % ; plus courte ≤ 33,3 %. Résiduel : indice de précision 46,7 à 57,6 % et mots absolus (A41). **Relecture indépendante à l'aveugle non réalisée : aucun relecteur indépendant n'est disponible** (A42) ; dossier prêt dans `registry/relecture_aveugle_m08/`. Le texte ci-dessous décrit l'état avant la révision 3.
+
+
 ## 1. Méthode et limite
 
 Une relecture réellement « à l'aveugle » exige une personne qui n'a pas écrit les questions et qui répond sans voir la clé : **je n'en suis pas une**, et je ne prétends pas l'avoir faite. J'ai donc fait deux choses : (1) un **test automatique de devinette** (`tools/blind_audit_quizzes_m08.py`) : six heuristiques qui tentent de trouver la bonne réponse sans connaître le sujet (réponse la plus longue, la plus chiffrée, la plus proche de l'énoncé, la plus « centrale » parmi les options, celle qui contient le moins de mots absolus, la plus ponctuée) ; (2) une **relecture critique** de plausibilité, d'unicité et de grammaire sur les questions signalées. Une relecture humaine à l'aveugle reste nécessaire avant toute validation.

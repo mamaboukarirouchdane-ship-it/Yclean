@@ -3,7 +3,8 @@
   "module": 8,
   "title": "Quiz de chapitre 8.3 — Régimes de risque et durée des chocs (L8.05–L8.06)",
   "passThreshold": 0.8333333333333334,
-  "passRule": "5 bonnes réponses sur 6 (seuil pédagogique provisoire)",
+  "requiredCorrect": 5,
+  "passRule": "5 bonnes réponses sur 6 (règle R1 : ⌈0,8 × 6⌉ = 5 ; seuil pédagogique provisoire)",
   "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
   "questions": [
     {
@@ -162,7 +163,7 @@
         },
         {
           "id": "b",
-          "text": "Parce que tout stress de marché est d'abord un stress de liquidité, ce qu'aucun épisode étudié ne contredit"
+          "text": "Parce que tout stress de marché est d'abord un stress de liquidité, ce que les trois épisodes étudiés au chapitre confirment l'un après l'autre"
         },
         {
           "id": "c",
@@ -170,7 +171,7 @@
         },
         {
           "id": "d",
-          "text": "Parce que les banques centrales interdisent aux investisseurs la vente d'or pendant les périodes de crise"
+          "text": "Parce que les banques centrales interdisent aux investisseurs la vente d'or pendant les périodes de crise, ce qui fait chuter les cotations"
         }
       ],
       "correct": "c",
@@ -181,5 +182,5 @@
       ]
     }
   ],
-  "revision": 2
+  "revision": 3
 }

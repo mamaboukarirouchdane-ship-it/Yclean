@@ -1,0 +1,180 @@
+{
+  "chapterId": "7.1",
+  "module": 7,
+  "title": "Quiz de chapitre 7.1 — Rapports COT (L7.01–L7.03)",
+  "passThreshold": 0.8333333333333334,
+  "requiredCorrect": 5,
+  "passRule": "5 bonnes réponses sur 6 (règle R1 : ⌈0,8 × 6⌉ = 5 ; seuil pédagogique provisoire)",
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C7.1-Q1",
+      "type": "mcq",
+      "prompt": "Les positions COT du mardi 13/10/2026 ont été publiées le vendredi 16/10. Quel est l'âge de la donnée au 31/10/2026, calculé depuis la date de référence ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "18 jours"
+        },
+        {
+          "id": "b",
+          "text": "15 jours"
+        },
+        {
+          "id": "c",
+          "text": "3 jours"
+        },
+        {
+          "id": "d",
+          "text": "21 jours"
+        }
+      ],
+      "correct": "a",
+      "explanation": "L'âge se calcule depuis la date de référence (13/10) : 18 jours au 31/10. Le délai de publication (3 jours) est une autre notion.",
+      "tags": [
+        "age"
+      ]
+    },
+    {
+      "id": "C7.1-Q2",
+      "type": "mcq",
+      "prompt": "Managed Money (SIMULATION) : longs 142 000, courts 22 000, spreading 31 000. Quel est le net ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "89 000"
+        },
+        {
+          "id": "b",
+          "text": "151 000"
+        },
+        {
+          "id": "c",
+          "text": "164 000"
+        },
+        {
+          "id": "d",
+          "text": "120 000"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Net = long − short = 142 000 − 22 000 = 120 000 ; le spreading est exclu du net.",
+      "tags": [
+        "net"
+      ]
+    },
+    {
+      "id": "C7.1-Q3",
+      "type": "mcq",
+      "prompt": "Un net de 111 079 contrats de 100 onces correspond à environ combien de tonnes ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 3 455 t"
+        },
+        {
+          "id": "b",
+          "text": "≈ 345,5 t"
+        },
+        {
+          "id": "c",
+          "text": "≈ 34,5 t"
+        },
+        {
+          "id": "d",
+          "text": "≈ 111 t"
+        }
+      ],
+      "correct": "b",
+      "explanation": "111 079 × 100 ÷ 32 150,7466 = 345,5 t ; la conversion rend les unités comparables, pas les natures équivalentes.",
+      "tags": [
+        "tonnes"
+      ]
+    },
+    {
+      "id": "C7.1-Q4",
+      "type": "mcq",
+      "prompt": "Net Managed Money 111 079 et intérêt ouvert 526 276 (rapport Combined du 13/10). Quelle part de l'intérêt ouvert ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 211 %"
+        },
+        {
+          "id": "b",
+          "text": "≈ 47,4 %"
+        },
+        {
+          "id": "c",
+          "text": "≈ 2,1 %"
+        },
+        {
+          "id": "d",
+          "text": "≈ 21,1 %"
+        }
+      ],
+      "correct": "d",
+      "explanation": "111 079 ÷ 526 276 = 0,2111 ; la part dépend aussi de l'intérêt ouvert (dénominateur).",
+      "tags": [
+        "part_oi"
+      ]
+    },
+    {
+      "id": "C7.1-Q5",
+      "type": "mcq",
+      "prompt": "Pourquoi un z-score calculé sur six semaines ne permet-il pas de conclure à un extrême ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que six est un nombre pair"
+        },
+        {
+          "id": "b",
+          "text": "Parce que le z-score est interdit"
+        },
+        {
+          "id": "c",
+          "text": "La fenêtre est inférieure au minimum fixé d'avance (52 observations) et la série dérive"
+        },
+        {
+          "id": "d",
+          "text": "Parce que le prix est inconnu"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Le calcul est possible mais descriptif : une conclusion d'extrême exige une fenêtre écrite d'avance et suffisante.",
+      "tags": [
+        "fenetre"
+      ]
+    },
+    {
+      "id": "C7.1-Q6",
+      "type": "mcq",
+      "prompt": "Le contrat Euro FX du COT donne-t-il le positionnement sur l'indice dollar ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Non : Euro FX concerne l'euro, il ne se confond ni avec l'indice dollar ni avec la paire EUR/USD"
+        },
+        {
+          "id": "b",
+          "text": "Oui, c'est la même chose"
+        },
+        {
+          "id": "c",
+          "text": "Oui, à un signe près"
+        },
+        {
+          "id": "d",
+          "text": "Seulement le vendredi"
+        }
+      ],
+      "correct": "a",
+      "explanation": "Un contrat de change mesure une exposition sur une devise précise ; l'indice dollar est un autre instrument, avec son propre bloc.",
+      "tags": [
+        "euro_fx"
+      ]
+    }
+  ],
+  "revision": 1
+}

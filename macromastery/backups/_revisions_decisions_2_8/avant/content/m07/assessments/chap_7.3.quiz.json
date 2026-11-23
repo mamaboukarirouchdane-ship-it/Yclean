@@ -1,0 +1,180 @@
+{
+  "chapterId": "7.3",
+  "module": 7,
+  "title": "Quiz de chapitre 7.3 — Pratique (L7.07–L7.08)",
+  "passThreshold": 0.8333333333333334,
+  "requiredCorrect": 5,
+  "passRule": "5 bonnes réponses sur 6 (règle R1 : ⌈0,8 × 6⌉ = 5 ; seuil pédagogique provisoire)",
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C7.3-Q1",
+      "type": "mcq",
+      "prompt": "Que sont « les spéculateurs ont pris leurs bénéfices » et « le net a baissé cinq semaines de suite » ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Deux constats"
+        },
+        {
+          "id": "b",
+          "text": "Une hypothèse (C) et un constat (A)"
+        },
+        {
+          "id": "c",
+          "text": "Deux hypothèses"
+        },
+        {
+          "id": "d",
+          "text": "Une interprétation et une prévision"
+        }
+      ],
+      "correct": "b",
+      "explanation": "Un constat est une donnée datée ; le motif (prise de bénéfices) n'est pas observé : c'est une hypothèse.",
+      "tags": [
+        "niveaux"
+      ]
+    },
+    {
+      "id": "C7.3-Q2",
+      "type": "mcq",
+      "prompt": "Positionnement haussier et fondamentaux défavorables : quelle lecture de la matrice ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Signal de vente"
+        },
+        {
+          "id": "b",
+          "text": "Convergence haussière"
+        },
+        {
+          "id": "c",
+          "text": "Convergence baissière"
+        },
+        {
+          "id": "d",
+          "text": "Divergence et risque de correction"
+        }
+      ],
+      "correct": "d",
+      "explanation": "C'est la situation 2 : divergence ; la matrice classe, elle ne prédit pas.",
+      "tags": [
+        "matrice"
+      ]
+    },
+    {
+      "id": "C7.3-Q3",
+      "type": "mcq",
+      "prompt": "Pourquoi ne pas chaîner un rapport Combined du 13/10 et un rapport probablement Futures Only du 27/10 ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parce que l'or n'a pas d'OI"
+        },
+        {
+          "id": "b",
+          "text": "Parce que le 27/10 est un mardi"
+        },
+        {
+          "id": "c",
+          "text": "Les périmètres peuvent différer : l'écart ne mesure alors pas une variation de marché"
+        },
+        {
+          "id": "d",
+          "text": "Parce que les unités sont des tonnes"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Futures Only et Combined ne se comparent pas directement ; on vérifie instrument, périmètre, unités et spreading avant toute comparaison.",
+      "tags": [
+        "perimetre"
+      ]
+    },
+    {
+      "id": "C7.3-Q4",
+      "type": "mcq",
+      "prompt": "Net 80 000, OI 400 000 (SIMULATION), puis net 76 000 et OI 304 000. Que devient la part de l'OI ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "De 20,0 % à 25,0 % : effet de dénominateur"
+        },
+        {
+          "id": "b",
+          "text": "De 20,0 % à 19,0 %"
+        },
+        {
+          "id": "c",
+          "text": "Elle reste à 20,0 %"
+        },
+        {
+          "id": "d",
+          "text": "De 20,0 % à 76 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "80 000 ÷ 400 000 = 20 % ; 76 000 ÷ 304 000 = 25 % : le net baisse mais l'OI baisse davantage.",
+      "tags": [
+        "denominateur"
+      ]
+    },
+    {
+      "id": "C7.3-Q5",
+      "type": "mcq",
+      "prompt": "Sur 52 observations, 47 sont inférieures ou égales à la valeur courante. Percentile (1 décimale) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "47 %"
+        },
+        {
+          "id": "b",
+          "text": "90,4 %"
+        },
+        {
+          "id": "c",
+          "text": "9,6 %"
+        },
+        {
+          "id": "d",
+          "text": "52 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "47 ÷ 52 = 0,9038 : niveau haut, pas nécessairement un extrême, et aucun signal en soi.",
+      "tags": [
+        "percentile"
+      ]
+    },
+    {
+      "id": "C7.3-Q6",
+      "type": "mcq",
+      "prompt": "Qu'est-ce qui rend une thèse réfutable ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un objectif de prix"
+        },
+        {
+          "id": "b",
+          "text": "Une forte conviction"
+        },
+        {
+          "id": "c",
+          "text": "Des conditions d'invalidation mesurables écrites avant d'observer la suite, sur une fiche datée et horodatée"
+        },
+        {
+          "id": "d",
+          "text": "Des indicateurs uniquement favorables"
+        }
+      ],
+      "correct": "c",
+      "explanation": "Sans invalidation écrite d'avance et horodatage, aucune observation ne peut contredire la thèse et la reconstruction a posteriori est possible.",
+      "tags": [
+        "these"
+      ]
+    }
+  ],
+  "revision": 1
+}

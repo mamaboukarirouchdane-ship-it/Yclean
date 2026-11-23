@@ -1,0 +1,180 @@
+{
+  "chapterId": "4.1",
+  "module": 4,
+  "title": "Quiz de chapitre 4.1 — Parité des taux, différentiels et anticipations (L4.01–L4.02)",
+  "passThreshold": 0.8333333333333334,
+  "requiredCorrect": 5,
+  "passRule": "5 bonnes réponses sur 6 (règle R1 : ⌈0,8 × 6⌉ = 5 ; seuil pédagogique provisoire)",
+  "note": "6 questions ; seuil 80 % (au moins 5 bonnes réponses sur 6). Chiffres fictifs ou issus des leçons.",
+  "questions": [
+    {
+      "id": "C4.1-Q1",
+      "type": "mcq",
+      "prompt": "Comptant EUR/USD 1,1130 ; taux du dollar 3,875 % ; taux de l'euro 2,50 % ; un an (substituts). Quel cours à terme (parité couverte, 4 décimales) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 1,1279"
+        },
+        {
+          "id": "b",
+          "text": "≈ 1,0983"
+        },
+        {
+          "id": "c",
+          "text": "≈ 1,1130"
+        },
+        {
+          "id": "d",
+          "text": "≈ 1,1561"
+        }
+      ],
+      "correct": "a",
+      "explanation": "F = S × (1 + taux du dollar) ÷ (1 + taux de l'euro) = 1,1130 × 1,03875 ÷ 1,025 ≈ 1,1279 : la devise à taux plus bas se traite à prime à terme.",
+      "tags": [
+        "parite"
+      ]
+    },
+    {
+      "id": "C4.1-Q2",
+      "type": "mcq",
+      "prompt": "Que signifie un « basis » négatif persistant sur les swaps de change selon la BRI ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Un taux de change fixe"
+        },
+        {
+          "id": "b",
+          "text": "Une parité parfaitement respectée"
+        },
+        {
+          "id": "c",
+          "text": "Une intervention de la banque centrale"
+        },
+        {
+          "id": "d",
+          "text": "Un écart à la parité couverte lié à la demande de couverture et aux limites de l'arbitrage"
+        }
+      ],
+      "correct": "d",
+      "explanation": "La BRI décrit un basis négatif persistant sur la plupart des devises depuis 2007, élargi depuis 2014, attribué à la demande de couverture et aux limites de l'arbitrage.",
+      "tags": [
+        "basis"
+      ]
+    },
+    {
+      "id": "C4.1-Q3",
+      "type": "mcq",
+      "prompt": "Fama : coefficient estimé de l'euro −1,019 ; différentiel de 1,40 point. Quelle variation moyenne de l'EUR/USD à un an (illustrative) ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "+1,40 %"
+        },
+        {
+          "id": "b",
+          "text": "−1,43 %"
+        },
+        {
+          "id": "c",
+          "text": "+1,43 %"
+        },
+        {
+          "id": "d",
+          "text": "−1,40 %"
+        }
+      ],
+      "correct": "b",
+      "explanation": "−1,019 × 1,40 = −1,43 % : l'euro se déprécierait en moyenne alors que la parité non couverte annonce une appréciation ; le calcul est illustratif.",
+      "tags": [
+        "fama"
+      ]
+    },
+    {
+      "id": "C4.1-Q4",
+      "type": "mcq",
+      "prompt": "Quelle différence y a-t-il entre le niveau et la trajectoire d'un différentiel de taux ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le niveau ne concerne que la Fed"
+        },
+        {
+          "id": "b",
+          "text": "Aucune"
+        },
+        {
+          "id": "c",
+          "text": "Le niveau est une prévision ; la trajectoire est un fait"
+        },
+        {
+          "id": "d",
+          "text": "Le niveau est l'écart actuel ; la trajectoire est l'écart attendu à l'avenir"
+        }
+      ],
+      "correct": "d",
+      "explanation": "Le niveau mesure l'écart de taux d'aujourd'hui ; la trajectoire est l'écart que le marché anticipe, qui compte davantage pour le change.",
+      "tags": [
+        "trajectoire"
+      ]
+    },
+    {
+      "id": "C4.1-Q5",
+      "type": "mcq",
+      "prompt": "Probabilité de hausse de 68,5 % (25 pb). Quelle espérance de hausse ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "≈ 68,5 pb"
+        },
+        {
+          "id": "b",
+          "text": "≈ 25 pb"
+        },
+        {
+          "id": "c",
+          "text": "≈ 17,1 pb"
+        },
+        {
+          "id": "d",
+          "text": "≈ 0,17 pb"
+        }
+      ],
+      "correct": "c",
+      "explanation": "0,685 × 25 = 17,1 points de base ; cette espérance dépend de la date de l'anticipation.",
+      "tags": [
+        "attentes"
+      ]
+    },
+    {
+      "id": "C4.1-Q6",
+      "type": "mcq",
+      "prompt": "EUR/USD de 1,1400 à 1,1130 : quelle variation ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "−2,37 %"
+        },
+        {
+          "id": "b",
+          "text": "−2,70 %"
+        },
+        {
+          "id": "c",
+          "text": "+2,37 %"
+        },
+        {
+          "id": "d",
+          "text": "−0,27 %"
+        }
+      ],
+      "correct": "a",
+      "explanation": "1,1130 ÷ 1,1400 − 1 = −2,37 % ; la cause n'est pas démontrée par cette seule donnée.",
+      "tags": [
+        "calcul"
+      ]
+    }
+  ],
+  "revision": 1
+}
