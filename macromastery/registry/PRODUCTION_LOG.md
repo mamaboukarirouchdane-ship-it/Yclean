@@ -417,3 +417,6 @@ Décision 1 = A : L8.05 révision 3, définition du signal central conservée, s
 
 ## Module 8 — application des décisions 2, 4, 5, 6, 7, 8, extension de R1 et alignement des générateurs (23/11/2026)
 R1 sur les 136 quiz ; générateurs alignés sur tools/r1.py et contrôles anti-retour. EX8 révision 3 (barème v2, minima A/D/F) et P8 (pénalités plafonnées à −25, minima A/G/H) ; cohérence arithmétique contrôlée. Protocole d'essais chronométrés rédigé, essais non réalisés. L8.01, L8.04, L8.06, L8.07 corrigées sans donnée nouvelle. Révision 3 des QCM : « plus longue » ≤ 24,3 % ; relecture indépendante à l'aveugle non réalisée (aucun relecteur disponible ; dossier prêt). Dossier documentaire local constitué (98 références) ; aucun fichier obtenu (réseau bloqué). Schéma commun des banques de diagnostic version 2. Aucun commit. A33, A43, L4.11, L5.08 et l'anomalie de périmètre CFTC restent ouvertes. Détail : registry/M8_PREPARATION_JOURNAL.md, entrées 21 à 35.
+
+## Module 8 — documents d'appui (24/11/2026)
+Invitation au relecteur indépendant (registry/relecture_aveugle_m08/INVITATION_RELECTEUR.md) et feuilles de relevé des essais chronométrés (registry/essais_m08/). Relecture et essais non réalisés. Aucun contenu modifié.

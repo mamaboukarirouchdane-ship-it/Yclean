@@ -70,3 +70,12 @@ Décisions : **2 = B** (révision 3 des QCM, critère ≤ 30 % pour « plus long
 **Contrôles finaux** : verify_lessons 8756/8756 ; verify_assessments m00-m07 inchangés (286, 286, 293, 334, 323, 332, 290, 262 ; 0 échec) ; verify_assessments_m08 118/118 ; verify_thresholds_r1 8433/8433 ; verify_baremes_ex8_p8 49/49 ; verify_quiz_rev3_m08 1312/1312 ; verify_diagnostic_schema 718/718 ; audit_thresholds 0 écart ; verify_m00.py : 91 échecs, tous préexistants (statuts de validation « validated=False » des leçons L0.04 et suivantes), aucun nouveau. Test de mutation (copie jetable) : six altérations injectées, toutes détectées.
 
 **Restent ouverts** : A33 (critique), A43 (critique), L4.11, L5.08, périmètre CFTC ; A36, A37, A38 (vérification intégrale) ; A41, A42 ; durées d'EX8 et de P8 ; toutes les anomalies de données A1-A26.
+
+## Documents d'appui pour la relecture et les essais (24/11/2026)
+
+| # | Objet | Fichiers (créations) | Remarque |
+|---|---|---|---|
+| 36 | Invitation au relecteur indépendant (décision 2) : message prêt à adapter et envoyer, conditions d'indépendance, deux modes (sans les leçons : devinabilité ; avec les leçons : justesse), consignes d'exploitation pour l'utilisateur | `registry/relecture_aveugle_m08/INVITATION_RELECTEUR.md` | Joindre seulement `FEUILLE_RELECTEUR.md` ; relecture toujours non réalisée (A42 ouverte) |
+| 37 | Feuilles de relevé des essais chronométrés (décision 5) : feuille EX8 par bloc (QCM, K1-K5, A1-A6) et par section avec minima ; feuille P8 par partie (recherche / rédaction) et pénalités par catégorie ; synthèse avec les seuils de décision du protocole ; versions CSV | `registry/essais_m08/FEUILLES_RELEVE.md`, `releve_ex8.csv` (12 blocs, 100 points), `releve_p8.csv` (8 parties, 100 points) | Essais toujours non réalisés ; durées non validées (A35) |
+
+Aucun contenu de cours, quiz, évaluation ou seuil modifié. Sauvegardes : `backups/_revisions_docs_relecture_essais/`.
