@@ -420,3 +420,6 @@ R1 sur les 136 quiz ; générateurs alignés sur tools/r1.py et contrôles anti-
 
 ## Module 8 — documents d'appui (24/11/2026)
 Invitation au relecteur indépendant (registry/relecture_aveugle_m08/INVITATION_RELECTEUR.md) et feuilles de relevé des essais chronométrés (registry/essais_m08/). Relecture et essais non réalisés. Aucun contenu modifié.
+
+## Module 8 — décision 7 : téléchargement des sources (24/11/2026)
+Priorités 1 à 3 : 26 fichiers obtenus sur 49 (P1 12/14, P2 13/23, P3 1/12), SHA-256 dans sources_documentaires/m08/REGISTRE_TELECHARGEMENTS.md ; 2 fichiers suspects signalés (S-BIS-12, S-LBMA-05) ; 23 échecs (hôtes non autorisés, refus du FMI, de la LBMA et de stlouisfed.org). Aucun fichier lu ; aucun contenu modifié. A33 et A43 restent ouvertes, ainsi que L4.11, L5.08 et le périmètre CFTC. Détail : registry/M8_PREPARATION_JOURNAL.md, entrées 38 à 40.

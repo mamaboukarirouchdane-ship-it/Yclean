@@ -1,0 +1,1810 @@
+{
+  "date": "2026-11-23",
+  "note": "Catalogue généré ; statut mis à jour par tools/fetch_sources_m08.py. « Téléchargé » ne veut pas dire « lu intégralement ».",
+  "entries": [
+    {
+      "id": "S-AFH-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "Air Force Historical Foundation (historique, résumé automatique)",
+      "title": "January 17, 1991",
+      "url": "https://afhistory.org/january-17-1991-2/",
+      "host": "afhistory.org",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-AJZ-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "Al Jazeera / Reuters (presse, résumé automatique)",
+      "title": "IMF nudges up 2025 growth forecast but says tariff risks still dog outlook (29/07/2025)",
+      "url": "https://www.aljazeera.com/economy/2025/7/29/imf-nudges-up-2025-growth-forecast-but-says-tariff-risks-still-dog-outlook",
+      "host": "www.aljazeera.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-BIS-11",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "BRI (primaire, résumé automatique)",
+      "title": "BIS Bulletin No 54, Commodity market disruptions, growth and inflation (18/05/2022)",
+      "url": "https://www.bis.org/publications/bulletin-54-commodity-market-disruptions-growth-and-inflation.pdf",
+      "host": "www.bis.org",
+      "consulted": "31/10/2026",
+      "to_verify": "Énoncés de contexte ; base du GPR (A25) ; épisode de 2026 cité comme contexte seulement",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-BIS-12",
+      "kind": "document",
+      "priority": 1,
+      "nature": "primaire",
+      "source_type": "BRI, Central Bankers' Speeches (primaire, **métadonnées seulement**)",
+      "title": "Draghi, Global Investment Conference, Londres (26 ou 27/07/2012)",
+      "url": "https://www.bis.org/review/r120727d.pdf",
+      "host": "www.bis.org",
+      "consulted": "31/10/2026",
+      "to_verify": "**Seulement les métadonnées lues** : date (26 ou 27/07/2012, A16), texte, citations ; aucune citation n'est attribuée tant que le texte n'est pas lu",
+      "limits": [
+        "niveau de lecture actuel : métadonnées seulement (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-BOS-01",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "Federal Reserve Bank of Boston (primaire, résumé automatique)",
+      "title": "How Firms' Perceptions of Geopolitical Risk Affect Investment (13/02/2025)",
+      "url": "https://www.bostonfed.org/publications/current-policy-perspectives/2025/how-firms-perceptions-of-geopolitical-risk-affect-investment",
+      "host": "www.bostonfed.org",
+      "consulted": "31/10/2026",
+      "to_verify": "Énoncés de contexte ; base du GPR (A25) ; épisode de 2026 cité comme contexte seulement",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-BST-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "Business Standard / Reuters (presse, résumé automatique)",
+      "title": "Gold hits 10-month low after biggest monthly drop in 3 years (01-02/12/2016)",
+      "url": "https://www.business-standard.com/amp/article/reuters/gold-hits-10-month-low-after-biggest-monthly-drop-in-3-years-116120101061_1.html",
+      "host": "www.business-standard.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-BST-02",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "Business Standard / Reuters (presse, résumé automatique)",
+      "title": "Gold slides to 10-month low on post-Fed dollar surge (15/12/2016)",
+      "url": "https://www.business-standard.com/amp/article/reuters/gold-slides-to-10-month-low-on-post-fed-dollar-surge-116121501461_1.html",
+      "host": "www.business-standard.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-BST-03",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "Business Standard / Reuters (presse, résumé automatique)",
+      "title": "Gold eases as trade tariffs, rate hike views buoy dollar (23/08/2018)",
+      "url": "https://www.business-standard.com/amp/article/reuters/gold-eases-as-trade-tariffs-rate-hike-views-buoy-dollar-118082301638_1.html",
+      "host": "www.business-standard.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-BST-04",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "Business Standard / Reuters (presse, résumé automatique)",
+      "title": "Gold ends 2018 on a strong note as growth concerns spur demand for haven (31/12/2018)",
+      "url": "https://www.business-standard.com/amp/article/international/gold-ends-2018-on-a-strong-note-as-growth-concerns-spur-demand-for-haven-118123100066_1.html",
+      "host": "www.business-standard.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-CBOE-01",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "Cboe (primaire, résumé automatique)",
+      "title": "Volatility Index methodology, VIXMO only (indice à 30 jours, options mensuelles SPX)",
+      "url": "https://cdn.cboe.com/api/global/us_indices/governance/Volatility_Index_methodology_VIXMO_only.pdf",
+      "host": "cdn.cboe.com",
+      "consulted": "31/10/2026",
+      "to_verify": "Horizon de 30 jours ; annualisation (A15)",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-CEPR-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "CEPR / VoxEU (recherche, résumé automatique)",
+      "title": "Risk, surprises and safe haven currencies",
+      "url": "https://cepr.org/voxeu/columns/risk-surprises-and-safe-haven-currencies",
+      "host": "cepr.org",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-CNBC-03",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "CNBC (presse, résumé automatique)",
+      "title": "Gold up, set to halt three-year losing streak (29/12/2016)",
+      "url": "https://www.cnbc.com/2016/12/29/gold-up-set-to-halt-three-year-losing-streak.html",
+      "host": "www.cnbc.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-CNBC-04",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "CNBC (presse, résumé automatique)",
+      "title": "Gold markets: US-China trade tensions, Fed in focus (septembre 2018, date précise absente)",
+      "url": "https://www.cnbc.com/2018/09/25/gold-markets-us-china-trade-tensions-federal-reserve-in-focus.html",
+      "host": "www.cnbc.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-CRB-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "Calculated Risk (relais du communiqué du FOMC, résumé automatique)",
+      "title": "FOMC statement, 25 bp rate cut (07/11/2024)",
+      "url": "https://www.calculatedriskblog.com/2024/11/fomc-statement-25bp-rate-cut.html",
+      "host": "www.calculatedriskblog.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-DAWN-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "Dawn / Reuters (presse, résumé automatique)",
+      "title": "Gold, 13/11/2001 (publié le 14/11/2001)",
+      "url": "https://www.dawn.com/news/6127",
+      "host": "www.dawn.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-DAWN-02",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "Dawn / Reuters (presse, résumé automatique)",
+      "title": "New York gold falls to 9-week low, 16/11/2001 (publié le 17/11/2001)",
+      "url": "https://www.dawn.com/news/6606",
+      "host": "www.dawn.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-ECB-OMT-01",
+      "kind": "document",
+      "priority": 1,
+      "nature": "primaire",
+      "source_type": "BCE (primaire, résumé automatique)",
+      "title": "Conférence de presse du 06/09/2012 (Draghi, Constâncio)",
+      "url": "https://www.ecb.europa.eu/press/pressconf/2012/html/is120906.en.html",
+      "host": "www.ecb.europa.eu",
+      "consulted": "31/10/2026",
+      "to_verify": "Annonce de l'OMT, conditionnalité, stérilisation (A20 : ambiguïté)",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-EIA-01",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "EIA (primaire, résumé automatique)",
+      "title": "Crude oil prices increased in first-half 2022 and declined in second-half 2022 (04/01/2023)",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=55079",
+      "host": "www.eia.gov",
+      "consulted": "31/10/2026",
+      "to_verify": "Brent 2022 (moyenne 100 $, point bas 75 $ le 08/12, 85 $ le 30/12) ; prévision de 116 $ (T2 2022) ; exportations russes",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-EIA-02",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "EIA (primaire, résumé automatique)",
+      "title": "EIA expects crude oil prices higher than $100 per barrel in coming months (16/03/2022)",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=51658",
+      "host": "www.eia.gov",
+      "consulted": "31/10/2026",
+      "to_verify": "Brent 2022 (moyenne 100 $, point bas 75 $ le 08/12, 85 $ le 30/12) ; prévision de 116 $ (T2 2022) ; exportations russes",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-EIA-03",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "EIA (primaire, résumé automatique)",
+      "title": "Russia's oil exports have decreased modestly since 2022, shifting toward Asia (07/08/2025)",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=65885",
+      "host": "www.eia.gov",
+      "consulted": "31/10/2026",
+      "to_verify": "Brent 2022 (moyenne 100 $, point bas 75 $ le 08/12, 85 $ le 30/12) ; prévision de 116 $ (T2 2022) ; exportations russes",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-ERP-91",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "Economic Report of the President 1991, chapitre 2 (FRASER, primaire, résumé automatique des 100 000 premiers caractères)",
+      "title": "Economic Report of the President 1991, chapitre 2",
+      "url": "https://fraser.stlouisfed.org/docs/publications/ERP/1991/ERP1991_Chapter2.pdf",
+      "host": "fraser.stlouisfed.org",
+      "consulted": "31/10/2026",
+      "to_verify": "Tronqué ; niveau du pétrole avant l'invasion (≈ 22 / 21 $), pic d'octobre 1990 (≈ 40 / 46 $, A10-A11)",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique tronqué (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-FED-29",
+      "kind": "document",
+      "priority": 1,
+      "nature": "primaire",
+      "source_type": "Réserve fédérale (primaire, résumé automatique)",
+      "title": "Note d'application du 14/12/2016 (fourchette cible 1/2 à 3/4 %)",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/20161214a1.htm",
+      "host": "www.federalreserve.gov",
+      "consulted": "31/10/2026",
+      "to_verify": "Fourchettes cibles et dates",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-FED-30",
+      "kind": "document",
+      "priority": 1,
+      "nature": "primaire",
+      "source_type": "Réserve fédérale (primaire, résumé automatique)",
+      "title": "Communiqué du FOMC, 31/07/2019",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20190731a.htm",
+      "host": "www.federalreserve.gov",
+      "consulted": "31/10/2026",
+      "to_verify": "Fourchettes cibles et dates",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-FED-31",
+      "kind": "document",
+      "priority": 1,
+      "nature": "primaire",
+      "source_type": "Réserve fédérale (primaire, résumé automatique)",
+      "title": "Communiqué du FOMC, 07/05/2025",
+      "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20250507a.htm",
+      "host": "federalreserve.gov",
+      "consulted": "31/10/2026",
+      "to_verify": "Fourchettes cibles et dates",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-FED-32",
+      "kind": "document",
+      "priority": 1,
+      "nature": "primaire",
+      "source_type": "Réserve fédérale (primaire, résumé automatique)",
+      "title": "Communiqué du 17/09/2001 (baisse de 50 pb de l'objectif des fonds fédéraux)",
+      "url": "https://www.federalreserve.gov/boarddocs/press/general/2001/20010917/",
+      "host": "www.federalreserve.gov",
+      "consulted": "31/10/2026",
+      "to_verify": "Baisse de 50 pb de l'objectif, niveau avant/après",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-FED-33",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "Réserve fédérale (primaire, résumé automatique des 100 000 premiers caractères)",
+      "title": "Monetary Policy Report, 24/02/2009, partie 2",
+      "url": "https://www.federalreserve.gov/monetarypolicy/mpr_20090224_part2.htm",
+      "host": "www.federalreserve.gov",
+      "consulted": "31/10/2026",
+      "to_verify": "Tronqué (100 000 caractères) ; rachats de MBS annoncés le 25/11/2008",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique tronqué (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-FED-34",
+      "kind": "document",
+      "priority": 1,
+      "nature": "primaire",
+      "source_type": "Réserve fédérale (primaire, résumé automatique)",
+      "title": "Communiqué du 12/03/2023 (BTFP, SVB, Signature)",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230312a.htm",
+      "host": "www.federalreserve.gov",
+      "consulted": "31/10/2026",
+      "to_verify": "Taux et conditions du BTFP, dates de fermeture de SVB et de Signature (A31)",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-FED-35",
+      "kind": "document",
+      "priority": 1,
+      "nature": "primaire",
+      "source_type": "Réserve fédérale (primaire, résumé automatique)",
+      "title": "Communiqué du 28/04/2023 : revue de la supervision de Silicon Valley Bank",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20230428a.htm",
+      "host": "www.federalreserve.gov",
+      "consulted": "31/10/2026",
+      "to_verify": "« Quatre causes » et « 31 avertissements » ; lire aussi le rapport complet (non lu) ; absence de mention du risque de taux et des dépôts non assurés",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-FEDH-01",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "Réserve fédérale, Federal Reserve History (primaire, résumé automatique)",
+      "title": "Support for Specific Institutions (Bear Stearns, AIG, Lehman)",
+      "url": "https://www.federalreservehistory.org/-/media/Project/FedHistory/FedHistory/Documents/essaysPDFs/Support-for-Specific-Institutions-_-Federal-Reserve-History.pdf",
+      "host": "www.federalreservehistory.org",
+      "consulted": "31/10/2026",
+      "to_verify": "Lehman 15/09/2008 ; TARP 03/10",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-FINMA-01",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "FINMA (primaire, résumé automatique)",
+      "title": "Communiqué du 19/03/2023 : reprise de Credit Suisse par UBS",
+      "url": "https://www.finma.ch/en/news/2023/03/20230319-mm-cs-ubs/",
+      "host": "www.finma.ch",
+      "consulted": "31/10/2026",
+      "to_verify": "Date et nature de l'opération",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-FLA-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "Fredrikson & Byron (cabinet d'avocats, résumé automatique)",
+      "title": "U.S. Tariffs Update, May 12, 2025 (relais de la déclaration conjointe de Genève)",
+      "url": "https://www.fredlaw.com/alert-u-s-tariffs-update-may-12-2025",
+      "host": "www.fredlaw.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-FR-01",
+      "kind": "document",
+      "priority": 1,
+      "nature": "primaire",
+      "source_type": "Federal Register (primaire, résumé automatique)",
+      "title": "Executive Order 14259 (90 FR 15509, 14/04/2025, FR Doc. 2025-06378)",
+      "url": "https://www.federalregister.gov/documents/full_text/text/2025/04/14/2025-06378.txt",
+      "host": "www.federalregister.gov",
+      "consulted": "31/10/2026",
+      "to_verify": "Taux initial de la Chine (34 % déduit / 84 %), annexe I jamais vue (A7), dates d'effet",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-FSR-01",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "Réserve fédérale (primaire, résumé automatique)",
+      "title": "Financial Stability Report, mai 2026, chapitre 5 : Near-Term Risks to the Financial System",
+      "url": "https://www.federalreserve.gov/publications/2026-may-financial-stability-report-near-term-risks.htm",
+      "host": "www.federalreserve.gov",
+      "consulted": "31/10/2026",
+      "to_verify": "Énoncés de contexte ; base du GPR (A25) ; épisode de 2026 cité comme contexte seulement",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-GOVINFO-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "primaire",
+      "source_type": "GovInfo (primaire, résumé automatique, fiche de métadonnées)",
+      "title": "Executive Order 14257, Regulating Imports With a Reciprocal Tariff (DCPD-202500425)",
+      "url": "https://www.govinfo.gov/app/details/DCPD-202500425/",
+      "host": "www.govinfo.gov",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "niveau de lecture actuel : métadonnées seulement (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-GOVINFO-02",
+      "kind": "document",
+      "priority": 1,
+      "nature": "primaire",
+      "source_type": "GovInfo (primaire, résumé automatique)",
+      "title": "Executive Order 14259, Amendment to Reciprocal Tariffs and Updated Duties as Applied to Low-Value Imports From the PRC (DCPD-202500444)",
+      "url": "https://www.govinfo.gov/content/pkg/DCPD-202500444/html/DCPD-202500444.htm",
+      "host": "www.govinfo.gov",
+      "consulted": "31/10/2026",
+      "to_verify": "Taux initial de la Chine (34 % déduit / 84 %), annexe I jamais vue (A7), dates d'effet",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-GOVINFO-03",
+      "kind": "document",
+      "priority": 1,
+      "nature": "primaire",
+      "source_type": "GovInfo (primaire, résumé automatique)",
+      "title": "Executive Order 14257, Regulating Imports With a Reciprocal Tariff (DCPD-202500425, PDF)",
+      "url": "https://www.govinfo.gov/content/pkg/DCPD-202500425/pdf/DCPD-202500425.pdf",
+      "host": "www.govinfo.gov",
+      "consulted": "31/10/2026",
+      "to_verify": "Date de signature (05/04/2025), taux de base de 10 %, taux par pays à compter du 09/04, annexes, exclusions (dont l'or, 2-3 avril)",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-GOVINFO-04",
+      "kind": "document",
+      "priority": 1,
+      "nature": "primaire",
+      "source_type": "GovInfo (primaire, résumé automatique)",
+      "title": "Executive Order 14316, Extending the Modification of the Reciprocal Tariff Rates (DCPD-202500752)",
+      "url": "https://www.govinfo.gov/content/pkg/DCPD-202500752/html/DCPD-202500752.htm",
+      "host": "www.govinfo.gov",
+      "consulted": "31/10/2026",
+      "to_verify": "Date de prorogation (jusqu'au 01/08/2025) et périmètre",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-GPR-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "Caldara D., Iacoviello M. (page de présentation ; licence CC BY)",
+      "title": "Geopolitical Risk (GPR) Index",
+      "url": "https://matteoiacoviello.com/gpr.htm",
+      "host": "matteoiacoviello.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : non précisé dans sources.md (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-GPR-02",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "Réserve fédérale (IFDP, primaire, résumé automatique)",
+      "title": "Measuring Geopolitical Risk (février 2018, révisé en mars 2022)",
+      "url": "https://federalreserve.gov/econres/ifdp/measuring-geopolitical-risk.htm",
+      "host": "federalreserve.gov",
+      "consulted": "31/10/2026",
+      "to_verify": "Énoncés de contexte ; base du GPR (A25) ; épisode de 2026 cité comme contexte seulement",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-IMF-03",
+      "kind": "document",
+      "priority": 2,
+      "nature": "secondaire",
+      "source_type": "FMI (blog, résumé automatique)",
+      "title": "How Rising Geopolitical Risks Weigh on Asset Prices (14/04/2025)",
+      "url": "https://www.imf.org/en/blogs/articles/2025/04/14/how-rising-geopolitical-risks-weigh-on-asset-prices",
+      "host": "www.imf.org",
+      "consulted": "31/10/2026",
+      "to_verify": "Lu sur 100 000 caractères de 115 658 ; « environ 1 % » et « environ un trimestre » ; « 1 point par mois » (deux formulations coexistent dans L8.01) ; définition d'un événement majeur (deux écarts-types ; environ 450 événements 1985-2024) ; absence de magnitude pour l'or",
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-IMF-04",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "FMI (primaire, résumé automatique, 100 000 premiers caractères sur 115 658)",
+      "title": "Global Financial Stability Report, avril 2025, chapitre 2",
+      "url": "https://www.imf.org/-/media/files/publications/gfsr/2025/april/english/ch2.pdf",
+      "host": "www.imf.org",
+      "consulted": "31/10/2026",
+      "to_verify": "Lu sur 100 000 caractères de 115 658 ; « environ 1 % » et « environ un trimestre » ; « 1 point par mois » (deux formulations coexistent dans L8.01) ; définition d'un événement majeur (deux écarts-types ; environ 450 événements 1985-2024) ; absence de magnitude pour l'or",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique tronqué (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-IMF-05",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "FMI (primaire, résumé automatique)",
+      "title": "Dollar Dominance in the International Reserve System: An Update (blog, 11/06/2024)",
+      "url": "https://www.imf.org/en/blogs/articles/2024/06/11/dollar-dominance-in-the-international-reserve-system-an-update",
+      "host": "www.imf.org",
+      "consulted": "31/10/2026",
+      "to_verify": "Prévisions (2,8 %, 3,0 %, 3,3 %) ; parts du dollar 56,42 % puis 57,13 % ; « presque entièrement » par la valorisation",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-IMF-06",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "FMI (primaire, résumé automatique)",
+      "title": "IMF Data Brief, données COFER du T1 2026 (01/07/2026)",
+      "url": "https://data.imf.org/en/news/imf data brief july 1",
+      "host": "data.imf.org",
+      "consulted": "31/10/2026",
+      "to_verify": "Prévisions (2,8 %, 3,0 %, 3,3 %) ; parts du dollar 56,42 % puis 57,13 % ; « presque entièrement » par la valorisation",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : URL can't contain control characters. '/en/news/imf data brief july 1' (found at least ' ')"
+    },
+    {
+      "id": "S-IMF-07",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "FMI (primaire, résumé automatique)",
+      "title": "World Economic Outlook, avril 2025, résumé exécutif",
+      "url": "https://www.imf.org/-/media/files/publications/weo/2025/april/english/execsum.pdf.md",
+      "host": "www.imf.org",
+      "consulted": "31/10/2026",
+      "to_verify": "Prévisions (2,8 %, 3,0 %, 3,3 %) ; parts du dollar 56,42 % puis 57,13 % ; « presque entièrement » par la valorisation",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-IMF-08",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "FMI (primaire, résumé automatique)",
+      "title": "World Economic Outlook, octobre 2019, résumé exécutif",
+      "url": "https://imf.org/-/media/Files/Publications/WEO/2019/October/English/execsum.ashx",
+      "host": "imf.org",
+      "consulted": "31/10/2026",
+      "to_verify": "Prévisions (2,8 %, 3,0 %, 3,3 %) ; parts du dollar 56,42 % puis 57,13 % ; « presque entièrement » par la valorisation",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-IMF-09",
+      "kind": "document",
+      "priority": 4,
+      "nature": "primaire",
+      "source_type": "FMI (primaire, résumé automatique)",
+      "title": "Communiqué 10/187 : accord de confirmation en faveur de la Grèce (09/05/2010)",
+      "url": "https://www.imf.org/external/np/sec/pr/2010/pr10187.htm",
+      "host": "www.imf.org",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-KIT-10",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "Kitco / Reuters (presse, résumé automatique)",
+      "title": "Gold rises as markets gird for US election outcome (05/11/2024)",
+      "url": "https://kitco.com/news/off-the-wire/2024-11-05/gold-rises-markets-gird-us-election-outcome",
+      "host": "kitco.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-KLG-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "K&L Gates (cabinet d'avocats, résumé automatique)",
+      "title": "Summary: Supreme Court Decision on IEEPA Tariffs (20/02/2026)",
+      "url": "https://www.klgates.com/thought-leadership/Summary-Supreme-Court-Decision-on-IEEPA-Tariffs-2-20-2026",
+      "host": "www.klgates.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-LBMA-05",
+      "kind": "document",
+      "priority": 3,
+      "nature": "secondaire",
+      "source_type": "LBMA (association de marché, résumé automatique)",
+      "title": "Precious Metals Market Report Q4 2024 (15/01/2025)",
+      "url": "https://www.lbma.org.uk/articles/lbma-precious-metals-market-report-q4-2024",
+      "host": "www.lbma.org.uk",
+      "consulted": "31/10/2026",
+      "to_verify": "Série officielle datée, horaire et unité de chaque cotation",
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-LBMA-06",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "LBMA (association de marché, résumé automatique)",
+      "title": "Precious Metals Market Report Q4 and Full Year 2025 (07/01/2026)",
+      "url": "https://www.lbma.org.uk/articles/lbma-precious-metals-market-report-q4-and-full-year-2025",
+      "host": "www.lbma.org.uk",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-LBMA-07",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "LBMA (association de marché, résumé automatique)",
+      "title": "Precious Metals Market Report Q2 2025 (09/07/2025)",
+      "url": "https://www.lbma.org.uk/articles/lbma-precious-metals-market-report-q2-2025",
+      "host": "www.lbma.org.uk",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-LBMA-08",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "LBMA, The Alchemist n° 30 (marché, article de 2003, résumé automatique)",
+      "title": "Not just another war story",
+      "url": "https://www.lbma.org.uk/alchemist/issue-30/not-just-another-war-story",
+      "host": "www.lbma.org.uk",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-LBMA-09",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "LBMA, The Alchemist n° 25 (marché, article de 2001, résumé automatique)",
+      "title": "It was the most beautiful day of the year",
+      "url": "https://www.lbma.org.uk/alchemist/issue-25/it-was-the-most-beautiful-day-of-the-year",
+      "host": "www.lbma.org.uk",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-MBN-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "Mexico Business News / Reuters (presse, résumé automatique)",
+      "title": "Gold Prices Fall to Three-Week Low After Trump's Victory (06/11/2024)",
+      "url": "https://mexicobusiness.news/mining/news/gold-prices-fall-three-week-low-after-trumps-victory",
+      "host": "mexicobusiness.news",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-MC-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "MetalCharts (site de données, base non précisée, résumé automatique)",
+      "title": "Gold price history 2001",
+      "url": "https://metalcharts.org/gold-price-history/2001",
+      "host": "metalcharts.org",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-MC-02",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "MetalCharts (site de données, base non précisée, résumé automatique)",
+      "title": "Gold price history 1991",
+      "url": "https://metalcharts.org/gold-price-history/1991",
+      "host": "metalcharts.org",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-MC-03",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "MetalCharts (site de données, base non précisée, résumé automatique)",
+      "title": "Gold price history 2008",
+      "url": "https://metalcharts.org/gold-price-history/2008",
+      "host": "metalcharts.org",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-MEMA-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "MEMA (association professionnelle, résumé automatique)",
+      "title": "China Section 301 Investigation and Actions to Address Intellectual Property Violations (10/03/2020)",
+      "url": "https://mema.org/news/china-section-301-investigation-and-actions-address-intellectual-property-violations",
+      "host": "mema.org",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-MIN-03",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "Mining Weekly / Reuters (presse, résumé automatique)",
+      "title": "Gold falls below $1 200 as stock markets boom, Fed set to raise rates (novembre 2016)",
+      "url": "https://www.miningweekly.com/article/gold-falls-below-1-200-as-stock-markets-boom-fed-set-to-raise-rates-2016-11-23",
+      "host": "www.miningweekly.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-NARA-01",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "National Archives (primaire, résumé automatique)",
+      "title": "Electoral College, résultats 2016",
+      "url": "https://www.archives.gov/electoral-college/2016",
+      "host": "www.archives.gov",
+      "consulted": "31/10/2026",
+      "to_verify": "Dates et résultats",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-NARA-02",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "National Archives (primaire, résumé automatique)",
+      "title": "Electoral College, 2024",
+      "url": "https://www.archives.gov/electoral-college/2024",
+      "host": "www.archives.gov",
+      "consulted": "31/10/2026",
+      "to_verify": "Dates et résultats",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-NBC-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "NBC 5 / CNBC (presse, relais du WGC, résumé automatique)",
+      "title": "Central bank gold demand hits first-quarter record (05/05/2023)",
+      "url": "https://www.nbcdfw.com/news/business/money-report/central-bank-gold-demand-hits-first-quarter-record-investments-surge-on-u-s-banking-turmoil/3251365",
+      "host": "www.nbcdfw.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-NM-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "Northern Miner (presse, premier paragraphe seulement, paywall)",
+      "title": "Gold and terrorism",
+      "url": "https://www.northernminer.com/news/gold-and-terrorism/1000166063/",
+      "host": "www.northernminer.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique tronqué (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-OAN-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "OANDA (courtier, résumé automatique)",
+      "title": "November 2024 Gold Market Review (13/11/2024)",
+      "url": "https://www.oanda.com/eu-en/blog/november-2024-gold-market-review-election-impact-central-bank-demand-and-future-outlook",
+      "host": "www.oanda.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-OFAC-01",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "OFAC, Trésor américain (primaire, résumé automatique)",
+      "title": "Russian Harmful Foreign Activities Sanctions (page non datée)",
+      "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/russian-harmful-foreign-activities-sanctions",
+      "host": "ofac.treasury.gov",
+      "consulted": "31/10/2026",
+      "to_verify": "Énoncés de contexte ; base du GPR (A25) ; épisode de 2026 cité comme contexte seulement",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-OFAC-02",
+      "kind": "document",
+      "priority": 1,
+      "nature": "primaire",
+      "source_type": "OFAC, Trésor américain (primaire, résumé automatique)",
+      "title": "Directive 3 under Executive Order 14024, Prohibitions Related to New Debt and Equity of Certain Russia-related Entities (24/02/2022)",
+      "url": "https://ofac.treasury.gov/media/918476/download",
+      "host": "ofac.treasury.gov",
+      "consulted": "31/10/2026",
+      "to_verify": "Date de signature (24/02/2022), date d'application aux nouvelles émissions (26/03/2022), seuil de 14 jours de maturité, 13 entités de l'annexe 1 ; liste exacte des entités",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-OGJ-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "Oil & Gas Journal (presse spécialisée, résumé automatique)",
+      "title": "Oil prices plunge as Persian Gulf crisis eases (octobre 1990)",
+      "url": "https://www.ogj.com/refining-processing/article/17214087/oil-prices-plunge-as-persian-gulf-crisis-eases",
+      "host": "www.ogj.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-PS-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "PlanSponsor (presse, résumé automatique)",
+      "title": "US equity markets reopen, Dow falls sharply (17/09/2001)",
+      "url": "https://www.plansponsor.com/us-equity-markets-reopen-dow-falls-sharply/",
+      "host": "www.plansponsor.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-SEN-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "primaire",
+      "source_type": "Senate Finance Committee (primaire, résumé automatique)",
+      "title": "H.R. 1, Tax Cuts and Jobs Act",
+      "url": "https://www.finance.senate.gov/legislation/details/tax-cuts-and-jobs-act",
+      "host": "www.finance.senate.gov",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-SNB-02",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "Banque nationale suisse (recherche, résumé du résumé)",
+      "title": "On financial risk and the safe haven characteristics of Swiss franc exchange rates (document de travail 2013-04)",
+      "url": "https://snb.ch/de/mmr/papers/id/working_paper_2013_04",
+      "host": "snb.ch",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-UST-05",
+      "kind": "document",
+      "priority": 1,
+      "nature": "primaire",
+      "source_type": "Trésor américain (primaire, résumé automatique)",
+      "title": "Treasury Prohibits Transactions with Central Bank of Russia and Imposes Sanctions on Key Sources of Russia's Wealth (communiqué, 28/02/2022)",
+      "url": "https://content.govdelivery.com/accounts/USTREAS/bulletins/30c9660",
+      "host": "content.govdelivery.com",
+      "consulted": "31/10/2026",
+      "to_verify": "Date (28/02/2022), absence de montant d'avoirs, texte de la directive 4 (non lu)",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-WB-01",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "Banque mondiale (primaire, résumé automatique)",
+      "title": "Commodity Prices Set to Increase by 23% in 2026 as Global Shocks Mount (communiqué, 28/10/2026)",
+      "url": "https://www.worldbank.org/en/news/press-release/2026/10/28/commodity-markets-outlook-october-2026",
+      "host": "www.worldbank.org",
+      "consulted": "31/10/2026",
+      "to_verify": "Énoncés de contexte ; base du GPR (A25) ; épisode de 2026 cité comme contexte seulement",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-WB-02",
+      "kind": "document",
+      "priority": 4,
+      "nature": "primaire",
+      "source_type": "Banque mondiale (primaire, blog, résumé automatique)",
+      "title": "Gold prices shine in 2019 on persistent headwinds to global growth (18/06/2019)",
+      "url": "https://blogs.worldbank.org/en/developmenttalk/gold-prices-shine-2019-persistent-headwinds-global-growth",
+      "host": "blogs.worldbank.org",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-WGC-22",
+      "kind": "document",
+      "priority": 3,
+      "nature": "secondaire",
+      "source_type": "World Gold Council (industrie, résumé automatique)",
+      "title": "Gold Market Commentary : Geopolitical crisis takes centre stage in February (07/03/2022)",
+      "url": "https://www.gold.org/goldhub/research/gold-market-commentary-february-2022",
+      "host": "www.gold.org",
+      "consulted": "31/10/2026",
+      "to_verify": "Rapprocher chaque chiffre de la base de données WGC/LBMA ; sources industrielles, non primaires",
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-WGC-23",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "World Gold Council (industrie, résumé automatique)",
+      "title": "Gold Market Commentary : Gold finishes October on a high (07/11/2023)",
+      "url": "https://www.gold.org/goldhub/research/gold-market-commentary-october-2023",
+      "host": "www.gold.org",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-WGC-24",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "World Gold Council (industrie, résumé automatique)",
+      "title": "Gold ETF commentary : Net outflows narrowed in October (07/11/2023)",
+      "url": "https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2023/11",
+      "host": "www.gold.org",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-WGC-25",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "World Gold Council (industrie, résumé automatique)",
+      "title": "Gold ETF Flows : March 2022 (06/04/2022)",
+      "url": "https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2022/04",
+      "host": "www.gold.org",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-WGC-26",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "World Gold Council (industrie, résumé automatique)",
+      "title": "You asked, we answered: why has gold not performed better in 2022 despite high inflation? (22/09/2022)",
+      "url": "https://www.gold.org/goldhub/gold-focus/2022/09/you-asked-we-answered-why-has-gold-not-performed-better-2022-despite",
+      "host": "www.gold.org",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-WGC-27",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "World Gold Council (industrie, résumé automatique)",
+      "title": "Gold Market Commentary : September 2022 (06/10/2022)",
+      "url": "https://www.gold.org/goldhub/research/gold-market-commentary-september-2022",
+      "host": "www.gold.org",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-WGC-28",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "World Gold Council (industrie, résumé automatique)",
+      "title": "Gold Demand Trends Full Year 2022, Central banks (31/01/2023, révisé le 07/02/2023)",
+      "url": "https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-full-year-2022/central-banks",
+      "host": "www.gold.org",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-WGC-29",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "World Gold Council (industrie, résumé automatique)",
+      "title": "Central Bank Gold Reserves Survey 2025 (17/06/2025)",
+      "url": "https://www.gold.org/goldhub/research/central-bank-gold-reserves-survey-2025",
+      "host": "www.gold.org",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-WGC-30",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "World Gold Council (relais Nasdaq, article non daté, résumé automatique)",
+      "title": "WGC: gold price under pressure, US election sparks sentiment shift",
+      "url": "https://www.nasdaq.com/articles/wgc-gold-price-under-pressure-us-election-sparks-sentiment-shift",
+      "host": "www.nasdaq.com",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-WGC-31",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "World Gold Council (relais GJEPC, 25/07/2024, résumé tronqué)",
+      "title": "Ballots to Bullion: Examining the US Election's Effect on Gold",
+      "url": "https://gjepc.org/solitaire/world-gold-council-study-us-elections-drive-gold-demand-and-price-fluctuations/",
+      "host": "gjepc.org",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique tronqué (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-WGC-32",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "World Gold Council (industrie, résumé automatique)",
+      "title": "Gold Demand Trends Full Year and Q4 2019 (30/01/2020)",
+      "url": "https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-full-year-2019",
+      "host": "www.gold.org",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-WGC-33",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "World Gold Council (industrie, résumé automatique)",
+      "title": "Gold Demand Trends Q4 et année 2011",
+      "url": "https://www.gold.org/sites/default/files/GDT_Q4_2011.pdf",
+      "host": "www.gold.org",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-WGC-34",
+      "kind": "document",
+      "priority": 3,
+      "nature": "secondaire",
+      "source_type": "World Gold Council (industrie, résumé automatique)",
+      "title": "Quarter in review: gold's all-time-high in sight (T1 2023)",
+      "url": "https://www.gold.org/goldhub/research/gold-market-commentary-march-2023",
+      "host": "www.gold.org",
+      "consulted": "31/10/2026",
+      "to_verify": "Rapprocher chaque chiffre de la base de données WGC/LBMA ; sources industrielles, non primaires",
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "S-WIKI-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "Wikipédia (relais, résumé automatique)",
+      "title": "1990 oil price shock",
+      "url": "https://en.wikipedia.org/wiki/1990_oil_price_shock",
+      "host": "en.wikipedia.org",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-WT-01",
+      "kind": "document",
+      "priority": 4,
+      "nature": "secondaire",
+      "source_type": "WisdomTree via Financial Investigator (gestionnaire d'actifs, commentaire, résumé automatique)",
+      "title": "What does the recent sell-off tell us about gold as a safe haven? (26/03/2020)",
+      "url": "https://www.financialinvestigator.nl/en/nieuws-detailpagina/2020/03/26/WisdomTree-What-does-the-recent-sell-off-tell-us-about-gold-as-a-safe-haven",
+      "host": "www.financialinvestigator.nl",
+      "consulted": "31/10/2026",
+      "to_verify": null,
+      "limits": [
+        "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "non téléchargé"
+    },
+    {
+      "id": "S-WTO-01",
+      "kind": "document",
+      "priority": 2,
+      "nature": "primaire",
+      "source_type": "OMC (primaire, résumé automatique)",
+      "title": "Global Trade Outlook, prévisions du 16/04/2025",
+      "url": "https://www.wto.org/english/news_e/news25_e/tfore_16apr25_e.htm",
+      "host": "www.wto.org",
+      "consulted": "31/10/2026",
+      "to_verify": "Décomposition −0,2 − 0,6 − 0,8 contre −1,5 / −1,6 affiché (A6)",
+      "limits": [
+        "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "SER-FRED-DCOILBRENTEU",
+      "kind": "série",
+      "priority": 3,
+      "nature": "primaire ou diffuseur officiel (à confirmer)",
+      "title": "Brent, prix au comptant quotidien (EIA via FRED)",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU",
+      "host": "fred.stlouisfed.org",
+      "to_verify": "L8.01, L8.02, L8.06 (1990-91 non couvert : série Brent FRED débutant en 1987, à vérifier)",
+      "limits": [
+        "série non téléchargée à ce jour ; couverture, unité, horaire et révisions à consigner au téléchargement",
+        "aucune valeur de cette série n'est utilisée dans les leçons tant qu'elle n'a pas été lue et consignée"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "SER-FRED-DCOILWTICO",
+      "kind": "série",
+      "priority": 3,
+      "nature": "primaire ou diffuseur officiel (à confirmer)",
+      "title": "WTI, prix au comptant quotidien (EIA via FRED)",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO",
+      "host": "fred.stlouisfed.org",
+      "to_verify": "L8.06 (1990-91, A10-A11)",
+      "limits": [
+        "série non téléchargée à ce jour ; couverture, unité, horaire et révisions à consigner au téléchargement",
+        "aucune valeur de cette série n'est utilisée dans les leçons tant qu'elle n'a pas été lue et consignée"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "SER-FRED-DGS10",
+      "kind": "série",
+      "priority": 3,
+      "nature": "primaire ou diffuseur officiel (à confirmer)",
+      "title": "Rendement du Trésor américain à 10 ans, quotidien (Fed H.15 via FRED)",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10",
+      "host": "fred.stlouisfed.org",
+      "to_verify": "L8.05, L8.07 (mars 2023), L8.03",
+      "limits": [
+        "série non téléchargée à ce jour ; couverture, unité, horaire et révisions à consigner au téléchargement",
+        "aucune valeur de cette série n'est utilisée dans les leçons tant qu'elle n'a pas été lue et consignée"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "SER-FRED-DFII10",
+      "kind": "série",
+      "priority": 3,
+      "nature": "primaire ou diffuseur officiel (à confirmer)",
+      "title": "Rendement réel du TIPS à 10 ans, quotidien (via FRED)",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10",
+      "host": "fred.stlouisfed.org",
+      "to_verify": "canal des taux réels (depuis 2003 : 1990, 2001 non couverts)",
+      "limits": [
+        "série non téléchargée à ce jour ; couverture, unité, horaire et révisions à consigner au téléchargement",
+        "aucune valeur de cette série n'est utilisée dans les leçons tant qu'elle n'a pas été lue et consignée"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "SER-FRED-DTWEXBGS",
+      "kind": "série",
+      "priority": 3,
+      "nature": "primaire ou diffuseur officiel (à confirmer)",
+      "title": "Indice large du dollar, quotidien (Fed H.10 via FRED)",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS",
+      "host": "fred.stlouisfed.org",
+      "to_verify": "canal du dollar (depuis 2006 ; épisodes antérieurs non couverts)",
+      "limits": [
+        "série non téléchargée à ce jour ; couverture, unité, horaire et révisions à consigner au téléchargement",
+        "aucune valeur de cette série n'est utilisée dans les leçons tant qu'elle n'a pas été lue et consignée"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "SER-FRED-VIXCLS",
+      "kind": "série",
+      "priority": 3,
+      "nature": "primaire ou diffuseur officiel (à confirmer)",
+      "title": "VIX, clôture quotidienne (Cboe via FRED)",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS",
+      "host": "fred.stlouisfed.org",
+      "to_verify": "L8.05, signal central (depuis 1990)",
+      "limits": [
+        "série non téléchargée à ce jour ; couverture, unité, horaire et révisions à consigner au téléchargement",
+        "aucune valeur de cette série n'est utilisée dans les leçons tant qu'elle n'a pas été lue et consignée"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "SER-FRED-SP500",
+      "kind": "série",
+      "priority": 3,
+      "nature": "primaire ou diffuseur officiel (à confirmer)",
+      "title": "S&P 500, clôture quotidienne (via FRED ; historique limité par licence)",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SP500",
+      "host": "fred.stlouisfed.org",
+      "to_verify": "L8.05, signal central (FRED ne diffuse qu'environ dix ans : épisodes anciens non couverts)",
+      "limits": [
+        "série non téléchargée à ce jour ; couverture, unité, horaire et révisions à consigner au téléchargement",
+        "aucune valeur de cette série n'est utilisée dans les leçons tant qu'elle n'a pas été lue et consignée"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "SER-LBMA-GOLD-PM",
+      "kind": "série",
+      "priority": 3,
+      "nature": "primaire ou diffuseur officiel (à confirmer)",
+      "title": "LBMA Gold Price PM, quotidien",
+      "url": "https://prices.lbma.org.uk/json/gold_pm.json",
+      "host": "prices.lbma.org.uk",
+      "to_verify": "A3, A4, A5, A9, A21 (fixings de l'après-midi ; conditions d'utilisation LBMA à vérifier)",
+      "limits": [
+        "série non téléchargée à ce jour ; couverture, unité, horaire et révisions à consigner au téléchargement",
+        "aucune valeur de cette série n'est utilisée dans les leçons tant qu'elle n'a pas été lue et consignée"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    },
+    {
+      "id": "SER-LBMA-GOLD-AM",
+      "kind": "série",
+      "priority": 3,
+      "nature": "primaire ou diffuseur officiel (à confirmer)",
+      "title": "LBMA Gold Price AM, quotidien",
+      "url": "https://prices.lbma.org.uk/json/gold_am.json",
+      "host": "prices.lbma.org.uk",
+      "to_verify": "A5 (fixings du matin ; ne pas mélanger avec le PM)",
+      "limits": [
+        "série non téléchargée à ce jour ; couverture, unité, horaire et révisions à consigner au téléchargement",
+        "aucune valeur de cette série n'est utilisée dans les leçons tant qu'elle n'a pas été lue et consignée"
+      ],
+      "local_file": null,
+      "sha256": null,
+      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+    }
+  ]
+}

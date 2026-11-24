@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-23",
-  "note": "Catalogue généré ; statut mis à jour par tools/fetch_sources_m08.py. « Téléchargé » ne veut pas dire « lu intégralement ».",
+  "date": "2026-11-24",
+  "note": "Catalogue généré le 23/11/2026 ; statuts mis à jour par tools/fetch_sources_m08.py et tools/annotate_sources_m08.py (24/11/2026). « Téléchargé » ne veut pas dire « lu intégralement ».",
   "entries": [
     {
       "id": "S-AFH-01",
@@ -54,9 +54,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-BIS-11.pdf",
+      "sha256": "51755c3d0dd46781a59c6cb8e134b3b8e63b89e1e71db69c1fbcd69cb38ad6f8",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 700130,
+      "content_type": "application/pdf",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "PDF lisible (672 mots sur les 3 premières pages extraits par pdftotext)"
     },
     {
       "id": "S-BIS-12",
@@ -72,9 +76,13 @@
       "limits": [
         "niveau de lecture actuel : métadonnées seulement (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-BIS-12.html",
+      "sha256": "f4a604279a4ee50ba81371cfe16a6c3c4cc1a22f345e6e6f789e0831a2a81dc0",
+      "status": "téléchargé le 2026-11-24, non lu — SUSPECT",
+      "bytes": 121572,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "suspect : l'URL annonce un PDF, le serveur a renvoyé une page HTML (titre « Verbatim of the remarks at the Global Investment Conference », 26 July 2012) ; la page peut ne contenir qu'un résumé et un lien : texte intégral non vérifié (HTML, titre « Verbatim of the remarks at the Global Investment Conference | Bank for International Settlements », 1118 mots hors balises ; pas une page d'erreur ni de consentement)"
     },
     {
       "id": "S-BOS-01",
@@ -92,7 +100,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte non autorisé dans l'environnement (403 du proxy)",
+      "failure_cause": "hôte non autorisé dans l'environnement (403 du proxy)"
     },
     {
       "id": "S-BST-01",
@@ -184,9 +193,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-CBOE-01.pdf",
+      "sha256": "1bb7ba28593adeaa8f2c315dbc0f28ae1a11448c8cc7b4cb05c1c6ae11339b34",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 1140835,
+      "content_type": "application/pdf",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "PDF lisible (721 mots sur les 3 premières pages extraits par pdftotext)"
     },
     {
       "id": "S-CEPR-01",
@@ -316,9 +329,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-ECB-OMT-01.html",
+      "sha256": "ec76f7235fb0e83a8dc7ca7eaeb031eef2a346b3e60b443e4bd6301910a36c22",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 136221,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "HTML, titre « Introductory statement to the press conference (with Q&A) », 7660 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-EIA-01",
@@ -334,9 +351,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-EIA-01.html",
+      "sha256": "1af60f09ee6393f221965d01496d9dc7b0754844f69cc94b042ac0daf127017a",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 52592,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "HTML, titre « Crude oil prices increased in first-half 2022 and declined in second-half 2022 - U.S. Energy Informa », 1185 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-EIA-02",
@@ -352,9 +373,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-EIA-02.html",
+      "sha256": "ed8eef7752b1921f997bf1394b7cefdfc27a7374597146cfc69d17a6085258d3",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 52740,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "HTML, titre « EIA expects crude oil prices higher than $100 per barrel in coming months - U.S. Energy Information  », 1171 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-EIA-03",
@@ -370,9 +395,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-EIA-03.html",
+      "sha256": "384ec7fdd4cdeb4cc656e0bd1a089db6548fc38c5dd8e2f3dc47209f70cf8dac",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 52634,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "HTML, titre « Russia's oil exports have decreased modestly since 2022, shifting toward Asia - U.S. Energy Informat », 1106 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-ERP-91",
@@ -390,7 +419,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable",
+      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable"
     },
     {
       "id": "S-FED-29",
@@ -406,9 +436,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-FED-29.html",
+      "sha256": "9b0435df5239298a51b6cb565e87af40f1fb39bdfe22b515ccbcede07cd67b0d",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 80059,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "HTML, titre « Federal Reserve Board - Implementation Note issued December 14, 2016 », 1584 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-FED-30",
@@ -424,9 +458,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-FED-30.html",
+      "sha256": "3415b9df9bbc2005179d58ea78ddeccb4512ebf0ec92838cdda247d4bebe68cd",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 82784,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "HTML, titre « Federal Reserve Board - Federal Reserve issues FOMC statement », 1588 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-FED-31",
@@ -444,7 +482,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte non autorisé dans l'environnement (403 du proxy)",
+      "failure_cause": "hôte non autorisé dans l'environnement (403 du proxy)"
     },
     {
       "id": "S-FED-32",
@@ -460,9 +499,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-FED-32.html",
+      "sha256": "dbfcf97b989dd1f73267c203d4209bd879970ef2a8fd3340cb37b06f04042276",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 4098,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "HTML, titre « FRB: Press Release -- FOMC statement and Board discount rate action -- September 17, 2001 », 251 mots hors balises ; pas une page d'erreur ni de consentement ; page courte (4 098 octets, 251 mots) mais titre conforme (communiqué du 17/09/2001)"
     },
     {
       "id": "S-FED-33",
@@ -478,9 +521,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique tronqué (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-FED-33.html",
+      "sha256": "804705e2741a7ed8650dbe4c731a95d114513a354b3a69baead28a32012616ad",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 120003,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "HTML, titre « FRB: Monetary Policy Report, February 24, 2009 - Part 2: Recent Financial and Economic Developments », 13914 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-FED-34",
@@ -496,9 +543,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-FED-34.html",
+      "sha256": "06a1d4cfd7a99186ba471936a93f3ae9ae37ffc34359f654f1db133a89a369c9",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 85082,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "HTML, titre « Federal Reserve Board - Federal Reserve Board announces it will make available additional funding to », 1648 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-FED-35",
@@ -514,9 +565,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-FED-35.html",
+      "sha256": "8cb35ce0d61e1a5a25b0e871aabfa8d8c620e496eab5c63cb3e7939bb471046b",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 84608,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "HTML, titre « Federal Reserve Board - Federal Reserve Board announces the results from the review of the supervisi », 1611 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-FEDH-01",
@@ -532,9 +587,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-FEDH-01.pdf",
+      "sha256": "30bf46f58b3a46d81e789f2a01769115e734d30ada7ee25bd4d3ef4de248c533",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 770157,
+      "content_type": "application/pdf",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "PDF lisible (1322 mots sur les 3 premières pages extraits par pdftotext) ; PDF d'une page web (impression de la page Federal Reserve History) ; texte extractible"
     },
     {
       "id": "S-FINMA-01",
@@ -550,9 +609,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-FINMA-01.html",
+      "sha256": "cb804b7141c1eed0ea4524f920a4124baf773d934f3aa32782ef8b3a249c16e1",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 67162,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "HTML, titre « FINMA approves merger of UBS and Credit Suisse | FINMA », 1414 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-FLA-01",
@@ -589,7 +652,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte autorisé, mais le serveur redirige (HTTP 302) vers unblock.federalregister.gov (page anti-robot), hôte non autorisé dans l'environnement",
+      "failure_cause": "hôte autorisé, mais le serveur redirige (HTTP 302) vers unblock.federalregister.gov (page anti-robot), hôte non autorisé dans l'environnement"
     },
     {
       "id": "S-FSR-01",
@@ -605,9 +669,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-FSR-01.html",
+      "sha256": "709dc89b2ec320ed08037bd655a45a7727e936b69a12bb1505c426b00b22f596",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 91662,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "HTML, titre « The Fed - 5. Near-Term Risks to the Financial System », 2596 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-GOVINFO-01",
@@ -641,9 +709,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-GOVINFO-02.html",
+      "sha256": "37ad6bc562a5b9fc9f35e82827297bc307b37a73ad7554a519a0d7540838b1ca",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 12195,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "HTML, titre « DCPD202500444 », 1036 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-GOVINFO-03",
@@ -659,9 +731,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-GOVINFO-03.pdf",
+      "sha256": "5ab67cb42b596d1c31dba93c51b9ebde7a1bfb73fed8e024a0481cdcc0436774",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 291145,
+      "content_type": "application/pdf",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "PDF lisible (1770 mots sur les 3 premières pages extraits par pdftotext)"
     },
     {
       "id": "S-GOVINFO-04",
@@ -677,9 +753,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-GOVINFO-04.html",
+      "sha256": "efaf41bbcebbbf7ef7dd0e374716ba67b816fcc801d4a47d1a6291952f071545",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 10358,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "HTML, titre « DCPD202500752 », 910 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-GPR-01",
@@ -716,7 +796,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte non autorisé dans l'environnement (403 du proxy)",
+      "failure_cause": "hôte non autorisé dans l'environnement (403 du proxy)"
     },
     {
       "id": "S-IMF-03",
@@ -735,7 +816,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
+      "failure_cause": "hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)"
     },
     {
       "id": "S-IMF-04",
@@ -753,7 +835,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
+      "failure_cause": "hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)"
     },
     {
       "id": "S-IMF-05",
@@ -771,7 +854,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
+      "failure_cause": "hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)"
     },
     {
       "id": "S-IMF-06",
@@ -789,7 +873,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : URL can't contain control characters. '/en/news/imf data brief july 1' (found at least ' ')"
+      "status": "échec le 2026-11-24 : hôte non autorisé dans l'environnement (403 du proxy)",
+      "failure_cause": "hôte non autorisé dans l'environnement (403 du proxy)"
     },
     {
       "id": "S-IMF-07",
@@ -807,7 +892,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
+      "failure_cause": "hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)"
     },
     {
       "id": "S-IMF-08",
@@ -825,7 +911,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
+      "failure_cause": "hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)"
     },
     {
       "id": "S-IMF-09",
@@ -898,9 +985,13 @@
         "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-LBMA-05.html",
+      "sha256": "c89c14c3c54ceb34b0f372e7d64ac18b049528d847f73bab6e72d4d5a07a542d",
+      "status": "téléchargé le 2026-11-24, non lu — SUSPECT",
+      "bytes": 290096,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "suspect : page d'article du site LBMA (titre conforme) ; on ne sait pas si elle contient le rapport complet ou seulement sa présentation (HTML, titre « LBMA Precious Metals Market Report: Q4 2024 | LBMA », 3041 mots hors balises ; pas une page d'erreur ni de consentement)"
     },
     {
       "id": "S-LBMA-06",
@@ -1106,9 +1197,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-NARA-01.html",
+      "sha256": "ac483392904d90fe7edc453f70a7a9fb5100b0ef07adf718c2d06319cc932a89",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 64016,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "HTML, titre « 2016 Electoral College Results | National Archives », 1355 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-NARA-02",
@@ -1124,9 +1219,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-NARA-02.html",
+      "sha256": "04d46ac20540784cda8e671976b96d3c1e408a43fd456988a99ca7b4c4b11ddf",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 57762,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "HTML, titre « 2024 Electoral College Results | National Archives », 1154 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-NBC-01",
@@ -1199,9 +1298,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-OFAC-01.html",
+      "sha256": "c04bd2cb0d3fd443e8c3a9ea88d6afeff2667c6d6ff4785d4ed5a62cc7653f00",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 137408,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "HTML, titre « Russian Harmful Foreign Activities Sanctions | Office of Foreign Assets Control », 4391 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-OFAC-02",
@@ -1217,9 +1320,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-OFAC-02.pdf",
+      "sha256": "1fdf8d3ff02737b7f806e5b27ca9ba816361fe62d826b569015071897e35cbf0",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 202300,
+      "content_type": "application/pdf",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "PDF lisible (608 mots sur les 3 premières pages extraits par pdftotext)"
     },
     {
       "id": "S-OGJ-01",
@@ -1310,9 +1417,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-UST-05.html",
+      "sha256": "50073d5947c4d6219579c7b9bafb2bb33eaab2ae6bce8eeaeca599aef6181aee",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 20901,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "HTML, titre « Treasury Prohibits Transactions with Central Bank of Russia and Imposes Sanctions on Key Sources of  », 1321 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-WB-01",
@@ -1330,7 +1441,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte non autorisé dans l'environnement (403 du proxy)",
+      "failure_cause": "hôte non autorisé dans l'environnement (403 du proxy)"
     },
     {
       "id": "S-WB-02",
@@ -1367,7 +1479,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte non autorisé dans l'environnement (403 du proxy)",
+      "failure_cause": "hôte non autorisé dans l'environnement (403 du proxy)"
     },
     {
       "id": "S-WGC-23",
@@ -1595,7 +1708,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte non autorisé dans l'environnement (403 du proxy)",
+      "failure_cause": "hôte non autorisé dans l'environnement (403 du proxy)"
     },
     {
       "id": "S-WIKI-01",
@@ -1649,9 +1763,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "local_file": "fichiers/S-WTO-01.html",
+      "sha256": "51a44773b91abf10c9d5e4b9a72dbf4d0baee0418ed36fe9837decd5e472c991",
+      "status": "téléchargé le 2026-11-24, non lu",
+      "bytes": 28144,
+      "content_type": "text/html",
+      "downloaded": "2026-11-24T13:10:36Z",
+      "controle": "HTML, titre « WTO | 2025 News items - Temporary tariff pause mitigates trade contraction, but strong downside risk », 1420 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "SER-FRED-DCOILBRENTEU",
@@ -1668,7 +1786,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable",
+      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable"
     },
     {
       "id": "SER-FRED-DCOILWTICO",
@@ -1685,7 +1804,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable",
+      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable"
     },
     {
       "id": "SER-FRED-DGS10",
@@ -1702,7 +1822,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable",
+      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable"
     },
     {
       "id": "SER-FRED-DFII10",
@@ -1719,7 +1840,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable",
+      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable"
     },
     {
       "id": "SER-FRED-DTWEXBGS",
@@ -1736,7 +1858,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable",
+      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable"
     },
     {
       "id": "SER-FRED-VIXCLS",
@@ -1753,7 +1876,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable",
+      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable"
     },
     {
       "id": "SER-FRED-SP500",
@@ -1770,7 +1894,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable",
+      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable"
     },
     {
       "id": "SER-LBMA-GOLD-PM",
@@ -1787,7 +1912,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
+      "failure_cause": "hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)"
     },
     {
       "id": "SER-LBMA-GOLD-AM",
@@ -1804,7 +1930,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-23 : <urlopen error Tunnel connection failed: 403 Forbidden (agent proxy: no rule or network setting allows this host)>"
+      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
+      "failure_cause": "hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)"
     }
   ]
 }

@@ -79,3 +79,18 @@ Décisions : **2 = B** (révision 3 des QCM, critère ≤ 30 % pour « plus long
 | 37 | Feuilles de relevé des essais chronométrés (décision 5) : feuille EX8 par bloc (QCM, K1-K5, A1-A6) et par section avec minima ; feuille P8 par partie (recherche / rédaction) et pénalités par catégorie ; synthèse avec les seuils de décision du protocole ; versions CSV | `registry/essais_m08/FEUILLES_RELEVE.md`, `releve_ex8.csv` (12 blocs, 100 points), `releve_p8.csv` (8 parties, 100 points) | Essais toujours non réalisés ; durées non validées (A35) |
 
 Aucun contenu de cours, quiz, évaluation ou seuil modifié. Sauvegardes : `backups/_revisions_docs_relecture_essais/`.
+
+## Exécution de la décision 7 : téléchargement des sources (24/11/2026)
+
+Décision de l'utilisateur relayée le 24/11/2026 : « continue avec les 19 sites » (aucun hôte ajouté à l'environnement « Yclean (sources officielles M8) »). Sauvegarde préalable : `backups/_revisions_sources_m08/avant/` et `MANIFEST_AVANT.sha256` (9 fichiers). **Télécharger n'est pas lire** : aucune source n'est marquée lue, aucune leçon, aucun quiz, aucune évaluation ni aucune donnée n'a été modifié d'après ces fichiers.
+
+| # | Objet | Fichiers | Contrôle / preuve | Reste ouvert |
+|---|---|---|---|---|
+| 38 | `python3 -I tools/fetch_sources_m08.py --timeout 60` (priorités 1 à 3, 49 entrées), puis une seconde tentative pour les 8 entrées de stlouisfed.org | `sources_documentaires/m08/fichiers/` (26 fichiers : 6 PDF, 20 HTML) ; `REGISTRE_TELECHARGEMENTS.md` (une ligne par tentative, SHA-256 de chaque fichier) ; `CATALOGUE.json` | **26 obtenus sur 49** : priorité 1 : 12/14 ; priorité 2 : 13/23 ; priorité 3 : 1/12. **23 échecs** : 7 hôtes non autorisés dans l'environnement (www.bostonfed.org, federalreserve.gov sans www ×2, data.imf.org, www.worldbank.org, www.gold.org ×2) ; 1 redirection vers unblock.federalregister.gov (page anti-robot, hôte non autorisé : S-FR-01) ; 6 refus HTTP 403 du FMI (www.imf.org, imf.org) ; 2 refus HTTP 403 de prices.lbma.org.uk (séries de l'or) ; 8 connexions fermées sans réponse par fraser.stlouisfed.org et fred.stlouisfed.org (2 tentatives) | A33, A43 |
+| 39 | Contrôle technique des 26 fichiers : taille non nulle, en-tête et texte extractible des PDF (pdftotext), titre et volume des pages HTML, recherche de page d'erreur ou de consentement | `tools/annotate_sources_m08.py` (création) ; `CATALOGUE.json` (champs `controle`, `failure_cause`, statuts) ; `CATALOGUE.md` régénéré depuis le JSON (statuts conservés) ; section « Contrôle des fichiers » du registre | SHA-256 recalculés et égaux au registre ; aucun fichier vide ; aucune page d'erreur ; bandeaux de cookies présents (S-ECB-OMT-01, S-UST-05, S-NARA-01/02, S-BIS-12) mais contenu présent. **2 suspects, non supprimés** : S-BIS-12 (PDF annoncé, page HTML reçue ; texte intégral non vérifié) ; S-LBMA-05 (page d'article ; rapport complet non vérifié) | lecture intégrale (A33) |
+| 40 | Registres | `registry/ANOMALIES_M8.md` (A43 mise à jour, reste ouverte) ; `registry/PRODUCTION_LOG.md` ; `backups/INDEX.md` ; consolidate.py | contrôles relancés (voir ci-dessous) | — |
+
+**Hôtes encore manquants ou refusants** : non autorisés dans l'environnement : www.gold.org, federalreserve.gov, data.imf.org, www.bostonfed.org, www.worldbank.org, unblock.federalregister.gov ; refus côté serveur : www.imf.org et imf.org (HTTP 403), prices.lbma.org.uk (HTTP 403), fred.stlouisfed.org et fraser.stlouisfed.org (connexion fermée). Priorité 4 non téléchargée (consigne).
+
+**Restent ouverts** : A33 (critique : aucun fichier n'est lu), A43 (critique), L4.11, L5.08, périmètre CFTC.
+
