@@ -94,3 +94,14 @@ Décision de l'utilisateur relayée le 24/11/2026 : « continue avec les 19 site
 
 **Restent ouverts** : A33 (critique : aucun fichier n'est lu), A43 (critique), L4.11, L5.08, périmètre CFTC.
 
+## Relance des échecs après ajout de 5 hôtes (27/11/2026)
+
+Demande de l'utilisateur (27/11/2026) : « Ajoute les 5 hôtes manquants et relance les échecs. » Hôtes ajoutés à l'environnement « Yclean (sources officielles M8) » (approuvé par l'utilisateur) : www.gold.org, federalreserve.gov, data.imf.org, www.bostonfed.org, www.worldbank.org. Sauvegarde préalable : `backups/_revisions_sources_m08_relance/avant/` et `MANIFEST_AVANT.sha256` (10 fichiers). **Télécharger n'est pas lire** : aucune source marquée lue, aucun contenu de cours, quiz, évaluation ni donnée modifié.
+
+| # | Objet | Fichiers | Contrôle / preuve | Reste ouvert |
+|---|---|---|---|---|
+| 41 | `python3 -I tools/fetch_sources_m08.py --timeout 60 --ids …` sur les 23 échecs du 24/11/2026 ; `python3 -I tools/annotate_sources_m08.py 2026-11-27` (script adapté : date de passe, 5 hôtes autorisés, causes mises à jour) | 6 fichiers HTML ajoutés dans `fichiers/` (S-BOS-01, S-FED-31, S-GPR-02, S-WB-01, S-WGC-22, S-WGC-34) ; registre (lignes de tentative avec SHA-256, section « Contrôle des fichiers (2026-11-27) ») ; `CATALOGUE.json` et `CATALOGUE.md` | **Total : 32 fichiers sur 49** (priorité 1 : 13/14 ; priorité 2 : 16/23 ; priorité 3 : 3/12). **17 échecs restants**, tous sur des hôtes autorisés : S-FR-01 (redirection vers unblock.federalregister.gov, page anti-robot, non autorisée) ; FMI HTTP 403 (S-IMF-03 à 08, dont data.imf.org) ; LBMA HTTP 403 (2 séries de l'or) ; stlouisfed.org connexion fermée (7 séries FRED et S-ERP-91, 3 tentatives). Nouveau suspect, non supprimé : S-GPR-02 (page de présentation ; l'article intégral est un PDF lié, absent du catalogue, non téléchargé). Suspects au total : S-BIS-12, S-LBMA-05, S-GPR-02 | A33, A43 |
+| 42 | Registres | `registry/ANOMALIES_M8.md` (A43 mise à jour, reste ouverte) ; `registry/PRODUCTION_LOG.md` ; `backups/INDEX.md` ; consolidate.py | contrôles relancés : 0 échec ; verify_m00.py : 91 échecs préexistants | — |
+
+**Restent ouverts** : A33 (critique : aucun fichier n'est lu), A43 (critique : 17 entrées non obtenues), L4.11, L5.08, périmètre CFTC.
+

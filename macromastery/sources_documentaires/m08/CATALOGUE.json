@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-24",
+  "date": "2026-11-27",
   "note": "Catalogue généré le 23/11/2026 ; statuts mis à jour par tools/fetch_sources_m08.py et tools/annotate_sources_m08.py (24/11/2026). « Téléchargé » ne veut pas dire « lu intégralement ».",
   "entries": [
     {
@@ -98,10 +98,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-24 : hôte non autorisé dans l'environnement (403 du proxy)",
-      "failure_cause": "hôte non autorisé dans l'environnement (403 du proxy)"
+      "local_file": "fichiers/S-BOS-01.html",
+      "sha256": "beffe92442b2e517594c49aa08ec1afbc5c2bac463cda8dc018eeb52c113af1c",
+      "status": "téléchargé le 2026-11-27, non lu",
+      "bytes": 123074,
+      "content_type": "text/html",
+      "downloaded": "2026-11-27T05:42:50Z",
+      "controle": "HTML, titre « How Firms’ Perceptions of Geopolitical Risk Affect Investment - Federal Reserve Bank of Boston », 1874 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-BST-01",
@@ -419,8 +422,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable",
-      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable"
+      "status": "échec le 2026-11-27 : hôte autorisé ; le serveur ferme la connexion sans réponse (3 tentatives, 24 et 27/11/2026) : refus côté serveur probable",
+      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (3 tentatives, 24 et 27/11/2026) : refus côté serveur probable"
     },
     {
       "id": "S-FED-29",
@@ -480,10 +483,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-24 : hôte non autorisé dans l'environnement (403 du proxy)",
-      "failure_cause": "hôte non autorisé dans l'environnement (403 du proxy)"
+      "local_file": "fichiers/S-FED-31.html",
+      "sha256": "cfbe096707843599b0a815b0af39f3aea6ff87d167eafb233a5d4b0548627c1b",
+      "status": "téléchargé le 2026-11-27, non lu",
+      "bytes": 82488,
+      "content_type": "text/html",
+      "downloaded": "2026-11-27T05:42:50Z",
+      "controle": "HTML, titre « Federal Reserve Board - Federal Reserve issues FOMC statement », 1517 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-FED-32",
@@ -652,7 +658,7 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-24 : hôte autorisé, mais le serveur redirige (HTTP 302) vers unblock.federalregister.gov (page anti-robot), hôte non autorisé dans l'environnement",
+      "status": "échec le 2026-11-27 : hôte autorisé, mais le serveur redirige (HTTP 302) vers unblock.federalregister.gov (page anti-robot), hôte non autorisé dans l'environnement",
       "failure_cause": "hôte autorisé, mais le serveur redirige (HTTP 302) vers unblock.federalregister.gov (page anti-robot), hôte non autorisé dans l'environnement"
     },
     {
@@ -794,10 +800,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-24 : hôte non autorisé dans l'environnement (403 du proxy)",
-      "failure_cause": "hôte non autorisé dans l'environnement (403 du proxy)"
+      "local_file": "fichiers/S-GPR-02.html",
+      "sha256": "006c875ec404e66bca4f67ab8b40d541b08c9fda4f426e419fc4254d9ed85139",
+      "status": "téléchargé le 2026-11-27, non lu — SUSPECT",
+      "bytes": 84208,
+      "content_type": "text/html",
+      "downloaded": "2026-11-27T05:42:50Z",
+      "controle": "suspect : page de présentation de l'IFDP 1222 (titre conforme) ; l'article intégral est un PDF lié depuis la page (ifdp1222r1.pdf), absent du catalogue et non téléchargé (HTML, titre « The Fed - Measuring Geopolitical Risk », 1317 mots hors balises ; pas une page d'erreur ni de consentement)"
     },
     {
       "id": "S-IMF-03",
@@ -816,7 +825,7 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
+      "status": "échec le 2026-11-27 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
       "failure_cause": "hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)"
     },
     {
@@ -835,7 +844,7 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
+      "status": "échec le 2026-11-27 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
       "failure_cause": "hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)"
     },
     {
@@ -854,7 +863,7 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
+      "status": "échec le 2026-11-27 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
       "failure_cause": "hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)"
     },
     {
@@ -873,8 +882,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-24 : hôte non autorisé dans l'environnement (403 du proxy)",
-      "failure_cause": "hôte non autorisé dans l'environnement (403 du proxy)"
+      "status": "échec le 2026-11-27 : hôte autorisé le 27/11/2026 ; le serveur répond HTTP 403 (refus côté serveur ; l'URL de sources.md contient des espaces et peut ne pas désigner une page existante)",
+      "failure_cause": "hôte autorisé le 27/11/2026 ; le serveur répond HTTP 403 (refus côté serveur ; l'URL de sources.md contient des espaces et peut ne pas désigner une page existante)"
     },
     {
       "id": "S-IMF-07",
@@ -892,7 +901,7 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
+      "status": "échec le 2026-11-27 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
       "failure_cause": "hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)"
     },
     {
@@ -911,7 +920,7 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
+      "status": "échec le 2026-11-27 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
       "failure_cause": "hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)"
     },
     {
@@ -1439,10 +1448,13 @@
       "limits": [
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-24 : hôte non autorisé dans l'environnement (403 du proxy)",
-      "failure_cause": "hôte non autorisé dans l'environnement (403 du proxy)"
+      "local_file": "fichiers/S-WB-01.html",
+      "sha256": "7c4b6ab04c16ba74d2d865319b1cc102dd5146b6e2c32bd0216eac92add2d195",
+      "status": "téléchargé le 2026-11-27, non lu",
+      "bytes": 26923,
+      "content_type": "text/html",
+      "downloaded": "2026-11-27T05:42:50Z",
+      "controle": "HTML, titre « Commodity Prices Set to Increase by 23% in 2026 as Global Shocks Mount », 1078 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-WB-02",
@@ -1477,10 +1489,13 @@
         "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-24 : hôte non autorisé dans l'environnement (403 du proxy)",
-      "failure_cause": "hôte non autorisé dans l'environnement (403 du proxy)"
+      "local_file": "fichiers/S-WGC-22.html",
+      "sha256": "d78a9b6397a1fc85ed3fed0b08d1c5f2d86d04a8cebbb6eb12480f4cb9bb83b9",
+      "status": "téléchargé le 2026-11-27, non lu",
+      "bytes": 89278,
+      "content_type": "text/html",
+      "downloaded": "2026-11-27T05:42:50Z",
+      "controle": "HTML, titre « Gold Market Commentary February 2022 | World Gold Council », 2695 mots hors balises ; pas une page d'erreur ni de consentement"
     },
     {
       "id": "S-WGC-23",
@@ -1706,10 +1721,13 @@
         "source secondaire : à remplacer par une source primaire ou à garder étiquetée",
         "niveau de lecture actuel : résumé automatique (aucune lecture intégrale, anomalie A33)"
       ],
-      "local_file": null,
-      "sha256": null,
-      "status": "échec le 2026-11-24 : hôte non autorisé dans l'environnement (403 du proxy)",
-      "failure_cause": "hôte non autorisé dans l'environnement (403 du proxy)"
+      "local_file": "fichiers/S-WGC-34.html",
+      "sha256": "635549c2c27eb2de22b0a752ffa7fe2372fd05098aaa3de3de8d29a8297adf28",
+      "status": "téléchargé le 2026-11-27, non lu",
+      "bytes": 93696,
+      "content_type": "text/html",
+      "downloaded": "2026-11-27T05:42:50Z",
+      "controle": "HTML, titre « Gold Market Commentary Outlooks and Insights | Goldhub », 2719 mots hors balises ; pas une page d'erreur ni de consentement ; titre de page générique (« Gold Market Commentary Outlooks and Insights »), mais la page contient « Quarter in review » et « all-time-high in sight » (titre du catalogue)"
     },
     {
       "id": "S-WIKI-01",
@@ -1786,8 +1804,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable",
-      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable"
+      "status": "échec le 2026-11-27 : hôte autorisé ; le serveur ferme la connexion sans réponse (3 tentatives, 24 et 27/11/2026) : refus côté serveur probable",
+      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (3 tentatives, 24 et 27/11/2026) : refus côté serveur probable"
     },
     {
       "id": "SER-FRED-DCOILWTICO",
@@ -1804,8 +1822,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable",
-      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable"
+      "status": "échec le 2026-11-27 : hôte autorisé ; le serveur ferme la connexion sans réponse (3 tentatives, 24 et 27/11/2026) : refus côté serveur probable",
+      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (3 tentatives, 24 et 27/11/2026) : refus côté serveur probable"
     },
     {
       "id": "SER-FRED-DGS10",
@@ -1822,8 +1840,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable",
-      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable"
+      "status": "échec le 2026-11-27 : hôte autorisé ; le serveur ferme la connexion sans réponse (3 tentatives, 24 et 27/11/2026) : refus côté serveur probable",
+      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (3 tentatives, 24 et 27/11/2026) : refus côté serveur probable"
     },
     {
       "id": "SER-FRED-DFII10",
@@ -1840,8 +1858,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable",
-      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable"
+      "status": "échec le 2026-11-27 : hôte autorisé ; le serveur ferme la connexion sans réponse (3 tentatives, 24 et 27/11/2026) : refus côté serveur probable",
+      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (3 tentatives, 24 et 27/11/2026) : refus côté serveur probable"
     },
     {
       "id": "SER-FRED-DTWEXBGS",
@@ -1858,8 +1876,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable",
-      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable"
+      "status": "échec le 2026-11-27 : hôte autorisé ; le serveur ferme la connexion sans réponse (3 tentatives, 24 et 27/11/2026) : refus côté serveur probable",
+      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (3 tentatives, 24 et 27/11/2026) : refus côté serveur probable"
     },
     {
       "id": "SER-FRED-VIXCLS",
@@ -1876,8 +1894,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable",
-      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable"
+      "status": "échec le 2026-11-27 : hôte autorisé ; le serveur ferme la connexion sans réponse (3 tentatives, 24 et 27/11/2026) : refus côté serveur probable",
+      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (3 tentatives, 24 et 27/11/2026) : refus côté serveur probable"
     },
     {
       "id": "SER-FRED-SP500",
@@ -1894,8 +1912,8 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable",
-      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable"
+      "status": "échec le 2026-11-27 : hôte autorisé ; le serveur ferme la connexion sans réponse (3 tentatives, 24 et 27/11/2026) : refus côté serveur probable",
+      "failure_cause": "hôte autorisé ; le serveur ferme la connexion sans réponse (3 tentatives, 24 et 27/11/2026) : refus côté serveur probable"
     },
     {
       "id": "SER-LBMA-GOLD-PM",
@@ -1912,7 +1930,7 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
+      "status": "échec le 2026-11-27 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
       "failure_cause": "hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)"
     },
     {
@@ -1930,7 +1948,7 @@
       ],
       "local_file": null,
       "sha256": null,
-      "status": "échec le 2026-11-24 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
+      "status": "échec le 2026-11-27 : hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
       "failure_cause": "hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)"
     }
   ]

@@ -423,3 +423,6 @@ Invitation au relecteur indépendant (registry/relecture_aveugle_m08/INVITATION_
 
 ## Module 8 — décision 7 : téléchargement des sources (24/11/2026)
 Priorités 1 à 3 : 26 fichiers obtenus sur 49 (P1 12/14, P2 13/23, P3 1/12), SHA-256 dans sources_documentaires/m08/REGISTRE_TELECHARGEMENTS.md ; 2 fichiers suspects signalés (S-BIS-12, S-LBMA-05) ; 23 échecs (hôtes non autorisés, refus du FMI, de la LBMA et de stlouisfed.org). Aucun fichier lu ; aucun contenu modifié. A33 et A43 restent ouvertes, ainsi que L4.11, L5.08 et le périmètre CFTC. Détail : registry/M8_PREPARATION_JOURNAL.md, entrées 38 à 40.
+
+## Module 8 — décision 7 : relance des téléchargements (27/11/2026)
+5 hôtes ajoutés à l'environnement (www.gold.org, federalreserve.gov, data.imf.org, www.bostonfed.org, www.worldbank.org) ; 23 échecs relancés : 6 fichiers obtenus, total 32 sur 49 (P1 13/14, P2 16/23, P3 3/12) ; 17 refus côté serveur (FMI, LBMA, stlouisfed.org, page anti-robot du Federal Register) ; 3 fichiers suspects signalés (S-BIS-12, S-LBMA-05, S-GPR-02). Aucun fichier lu ; aucun contenu modifié. A33, A43, L4.11, L5.08 et le périmètre CFTC restent ouverts. Détail : registry/M8_PREPARATION_JOURNAL.md, entrées 41 et 42.

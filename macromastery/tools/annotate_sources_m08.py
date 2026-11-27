@@ -6,29 +6,35 @@
   les statuts à « non téléchargé ») ;
 - ajoute au registre REGISTRE_TELECHARGEMENTS.md une section « Contrôle des fichiers ».
 Contrôle technique seulement : aucun contenu n'est déclaré lu, aucune donnée n'est extraite. Bibliothèque standard
-et pdftotext (déjà présent) ; n'écrit aucun fichier dans fichiers/. Usage : python3 -I tools/annotate_sources_m08.py
+et pdftotext (déjà présent) ; n'écrit aucun fichier dans fichiers/. Usage : python3 -I tools/annotate_sources_m08.py [AAAA-MM-JJ]
 """
 import datetime as dt, hashlib, html, json, os, re, subprocess
 
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 base = f'{root}/sources_documentaires/m08'; cat_p = f'{base}/CATALOGUE.json'; log_p = f'{base}/REGISTRE_TELECHARGEMENTS.md'
-DAY = '2026-11-24'
+import sys
+DAY = sys.argv[1] if len(sys.argv) > 1 else '2026-11-24'  # date de la passe (2026-11-24 : première ; 2026-11-27 : relance des échecs)
 # Hôtes autorisés dans l'environnement « Yclean (sources officielles M8) » le 24/11/2026 (get_environment).
 ALLOWED = {'ofac.treasury.gov', 'content.govdelivery.com', 'www.govinfo.gov', 'www.federalregister.gov', 'www.federalreserve.gov',
            'www.ecb.europa.eu', 'www.bis.org', 'www.imf.org', 'imf.org', 'fraser.stlouisfed.org', 'fred.stlouisfed.org', 'www.eia.gov',
            'www.wto.org', 'cdn.cboe.com', 'www.finma.ch', 'www.archives.gov', 'www.federalreservehistory.org', 'prices.lbma.org.uk', 'www.lbma.org.uk'}
-# Observations faites le 24/11/2026 (sorties consignées dans le journal M8, entrée 38).
+if DAY >= '2026-11-27':  # 5 hôtes ajoutés le 27/11/2026 à la demande de l'utilisateur
+    ALLOWED |= {'www.gold.org', 'federalreserve.gov', 'data.imf.org', 'www.bostonfed.org', 'www.worldbank.org'}
+# Observations faites le 24/11/2026 et le 27/11/2026 (journal M8, entrées 38 à 41).
 REMARQUES = {
     'S-BIS-12': "suspect : l'URL annonce un PDF, le serveur a renvoyé une page HTML (titre « Verbatim of the remarks at the Global Investment Conference », 26 July 2012) ; la page peut ne contenir qu'un résumé et un lien : texte intégral non vérifié",
     'S-LBMA-05': "suspect : page d'article du site LBMA (titre conforme) ; on ne sait pas si elle contient le rapport complet ou seulement sa présentation",
     'S-FEDH-01': "PDF d'une page web (impression de la page Federal Reserve History) ; texte extractible",
+    'S-GPR-02': "suspect : page de présentation de l'IFDP 1222 (titre conforme) ; l'article intégral est un PDF lié depuis la page (ifdp1222r1.pdf), absent du catalogue et non téléchargé",
+    'S-WGC-34': "titre de page générique (« Gold Market Commentary Outlooks and Insights »), mais la page contient « Quarter in review » et « all-time-high in sight » (titre du catalogue)",
     'S-FED-32': "page courte (4 098 octets, 251 mots) mais titre conforme (communiqué du 17/09/2001)",
 }
 CAUSES_SERVEUR = {
     'S-FR-01': "hôte autorisé, mais le serveur redirige (HTTP 302) vers unblock.federalregister.gov (page anti-robot), hôte non autorisé dans l'environnement",
-    'fraser.stlouisfed.org': "hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable",
-    'fred.stlouisfed.org': "hôte autorisé ; le serveur ferme la connexion sans réponse (2 tentatives, 24/11/2026) : refus côté serveur probable",
+    'fraser.stlouisfed.org': "hôte autorisé ; le serveur ferme la connexion sans réponse (3 tentatives, 24 et 27/11/2026) : refus côté serveur probable",
+    'fred.stlouisfed.org': "hôte autorisé ; le serveur ferme la connexion sans réponse (3 tentatives, 24 et 27/11/2026) : refus côté serveur probable",
     'www.imf.org': "hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
+    'data.imf.org': "hôte autorisé le 27/11/2026 ; le serveur répond HTTP 403 (refus côté serveur ; l'URL de sources.md contient des espaces et peut ne pas désigner une page existante)",
     'imf.org': "hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
     'prices.lbma.org.uk': "hôte autorisé ; le serveur répond HTTP 403 (refus côté serveur)",
 }
@@ -59,6 +65,7 @@ for e in C['entries']:
         c = controle(p); r = REMARQUES.get(e['id'])
         if r: c = f'{c} ; {r}' if not r.startswith('suspect') else f'{r} ({c})'
         e['controle'] = c; e['status'] = f"téléchargé le {e['downloaded'][:10]}, non lu" + (' — SUSPECT' if c.startswith('suspect') else '')
+        e.pop('failure_cause', None)
         rows.append((e['id'], e['local_file'], e['bytes'], c))
     elif st.startswith('échec'):
         h = e['host']
